@@ -72,7 +72,7 @@ export class MoodModal {
   }
 
   assetPath(path: string) {
-    return '/assets/' + path;
+    return 'assets/' + path;
   }
 
   @Output() selectCharacter = new EventEmitter<Character>();

@@ -55,7 +55,7 @@ export class CharacterModal {
   }
 
   assetPath(path: string) {
-    return '/assets/' + path;
+    return 'assets/' + path;
   }
 
   isIOS(): boolean {
