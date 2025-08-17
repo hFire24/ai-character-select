@@ -1,0 +1,10 @@
+.mood-buttons-row {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.mood-btn {
+	display: inline-block;
+}

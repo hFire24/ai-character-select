@@ -1,0 +1,11 @@
+[
+  { "name": "Practical", "emoji": "🤔", "arg": "serious", "description": "Got a question or problem? These characters are straighforward and/or helpful." },
+  { "name": "Chaotic", "emoji": "🤪", "arg": "chaos", "color":"#e74c3c", "description": "Whether they're casual, wacky, or have funny reactions, these characters are fun to talk to." },
+  { "name": "Happy", "emoji": "😀", "arg": "joy", "color":"#2ecc71", "description": "If you're happy and you know it, chat with these characters!" },
+  { "name": "Unhappy", "emoji": "☹️", "arg": "sad", "color":"#95a5a6", "description": "These characters often don't feel joy." },
+  { "name": "Male", "emoji": "♂️", "arg": "male", "color":"#2980b9", "description": "The boys are back in town!" },
+  { "name": "Female", "emoji": "♀️", "arg": "female", "color":"#9b59b6", "description": "Girls just want to have fun!" },
+  { "name": "Not Moe", "emoji": "🚫🩷", "arg": "moe0", "color":"#7f8c8d", "description": "Characters who are not cute in the moe sense." },
+  { "name": "Moe", "emoji": "🩷", "arg": "moe", "color":"pink", "description": "Characters who are so cute in the moe sense." },
+  { "name": "All", "emoji": "❓", "arg": "none", "description": "Click on the random button to go to a random character. Anyone can be selected." }
+]

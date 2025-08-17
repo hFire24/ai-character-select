@@ -1,0 +1,9 @@
+<div class="mood-buttons-row">
+  <button
+    *ngFor="let m of moods"
+    title={{m.name}}
+    [ngStyle]="{'background-color': m.color || '#3498db'}"
+    class="mood-btn"
+    (click)="selectMood.emit(m)"
+  >{{m.emoji}}</button>
+</div>

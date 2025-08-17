@@ -27,14 +27,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
               "src/styles.scss"
-            ]
+            ],
+            "outputPath": "dist"
           },
           "configurations": {
             "production": {
+              "baseHref": "/ai-character-select/",
               "budgets": [
                 {
                   "type": "initial",
@@ -85,6 +92,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [

@@ -1,0 +1,16 @@
+<main id="character">
+  <div
+    class="character"
+    *ngFor="let c of filteredCharacters"
+    [ngClass]="genClass(c.generation)"
+    (click)="selectCharacter.emit(c)"
+  >
+    <ng-container *ngIf="c.img; else noImg">
+      <img [src]="assetPath(c.img)" [alt]="c.shortName" />
+    </ng-container>
+    <ng-template #noImg>
+      <div class="question-mark">?</div>
+    </ng-template>
+    <h2>{{ c.shortName }}</h2>
+  </div>
+</main>

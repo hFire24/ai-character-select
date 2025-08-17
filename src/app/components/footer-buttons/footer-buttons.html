@@ -1,0 +1,4 @@
+<footer>
+  <button *ngIf="!isIOS()" (click)="screenshot('character')">Screenshot All Characters</button>
+  <button (click)="toggleMore.emit()">More Characters</button>
+</footer>

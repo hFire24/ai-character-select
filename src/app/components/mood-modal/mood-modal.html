@@ -1,0 +1,30 @@
+<div id="moodModal">
+  <button id="closeModal" (click)="close.emit()">&times;</button>
+  <div class="modalHeader">
+    <h2 id="moodName">
+      <ng-container *ngIf="mood.emoji !== '♀️' && mood.emoji !== '♂️'">{{mood.emoji}}</ng-container>{{mood.name}}
+    </h2>
+    <h2 id="moodDescription">{{mood.description}}</h2>
+  </div>
+  <div>
+    <div 
+      id="characterList"
+      *ngFor="let c of filteredCharacters"
+    >
+    <div>
+      <ng-container *ngIf="c.img; else noImg">
+      <img [src]="assetPath(c.img)" [alt]="c.name" />
+      </ng-container>
+      <ng-template #noImg>
+        <div class="question-mark">?</div>
+      </ng-template>
+      <strong>{{ c.name }}</strong>
+      <span class="details-link" (click)="selectCharacter.emit(c)" (click)="close.emit()">Details</span>
+      <a class="chat-link" href="{{c.link}}" target="_blank">Chat</a>
+    </div>
+    </div>
+    <div id="modalFooter">
+      <a id="modalLink" (click)="selectRandomCharacter()">Random Character 🔀</a><span *ngIf="!isIOS()"> | </span><span *ngIf="!isIOS()" id="modalScreenshot" (click)="screenshot('moodModal')">Copy List 📷</span>
+    </div>
+  </div>
+</div>

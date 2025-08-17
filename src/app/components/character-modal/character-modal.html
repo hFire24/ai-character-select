@@ -1,0 +1,40 @@
+<div id="characterModal">
+  <button id="closeModal" (click)="close.emit()">&times;</button>
+  <div class="modalHeader">
+    <ng-container *ngIf="character.img; else noImg">
+      <img class="modalImg" [src]="assetPath(character.img)" [alt]="character.name" />
+    </ng-container>
+    <ng-template #noImg>
+      <div id="modalQuestionMark" class="question-mark">?</div>
+    </ng-template>
+    <h2 id="modalName">
+      {{ character.name || 'Unknown Character' }}
+    </h2>
+    <div class="flags">
+      <span *ngIf="character.serious">🤔</span>
+      <span *ngIf="character.chaos">🤪</span>
+      <span *ngIf="character.emotion?.includes('joy')">😀</span>
+      <span *ngIf="character.emotion?.includes('shy')">🫣</span>
+      <span *ngIf="character.emotion?.includes('calm')">😌</span>
+      <span *ngIf="character.emotion?.includes('strict')">😤</span>
+      <span *ngIf="character.emotion?.includes('sad')">☹️</span>
+      <span *ngIf="character.emotion?.includes('angry')">😠</span>
+      <span *ngIf="character.emotion?.includes('edgy')">😈</span>
+      <span *ngIf="character.moe >= 7">🩷</span>
+      <span *ngIf="character.musicEnjoyer">🎵</span>
+    </div>
+    <ng-container class="retired" *ngIf="character.type === 'retired'">
+      <h3 class="retired-banner">Retired</h3>
+      <span class="retired-note">{{character.retirementReason}}</span>
+    </ng-container>
+  </div>
+  <div>
+    <div id="modalInterests"><strong>Interests</strong>: {{character.interests}}</div>
+    <div id="modalPeeves"><strong>Pet Peeves</strong>: {{character.peeves || "None"}}</div>
+    <div id="modalBestFor"><strong>Best For</strong>: {{character.bestFor}}</div>
+    <div id="modalFact"><strong>Fun Fact</strong>: {{character.funFact}}</div>
+    <div id="modalFooter">
+      <a id="modalLink" href="{{character.link}}" target="_blank">Chat 🗣️</a><span *ngIf="!isIOS()"> | </span><span *ngIf="!isIOS()" id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
+    </div>
+  </div>
+</div>
