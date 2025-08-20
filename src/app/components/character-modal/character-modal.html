@@ -25,7 +25,6 @@
     </div>
     <ng-container class="retired" *ngIf="character.type === 'retired'">
       <h3 class="retired-banner">Retired</h3>
-      <span class="retired-note">{{character.retirementReason}}</span>
     </ng-container>
   </div>
   <div>
@@ -33,8 +32,9 @@
     <div id="modalPeeves"><strong>Pet Peeves</strong>: {{character.peeves || "None"}}</div>
     <div id="modalBestFor"><strong>Best For</strong>: {{character.bestFor}}</div>
     <div id="modalFact"><strong>Fun Fact</strong>: {{character.funFact}}</div>
+    <div id="modalRetirement" *ngIf="character.type === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
     <div id="modalFooter">
-      <a id="modalLink" href="{{character.link}}" target="_blank">Chat 🗣️</a><span *ngIf="!isIOS()"> | </span><span *ngIf="!isIOS()" id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
+      <a id="modalLink" href="{{character.link}}" target="_blank">Chat 🗣️</a> | <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
     </div>
   </div>
 </div>

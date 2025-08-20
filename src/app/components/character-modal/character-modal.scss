@@ -73,7 +73,7 @@
 /* === Header layout: image + name + flags === */
 .modalHeader {
   display: grid;
-  grid-template-columns: 120px 3fr 2fr;
+  grid-template-columns: 120px auto auto;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "img name retired"
@@ -133,6 +133,8 @@
 
 .retired-banner {
   font-weight: 800;
+  text-align: right;
+  margin-right: 20px;
 }
 
 /* === Body rows === */
@@ -141,20 +143,18 @@
 #modalInterests,
 #modalPeeves,
 #modalBestFor,
-#modalFact {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: .75rem .9rem;
-  border-radius: 10px;
+#modalFact,
+#modalRetirement {
   margin: .6rem 1.25rem 0 1.25rem; /* align with header padding */
   font-size: 0.98rem;
+  text-align: left;
 
   /* label: value pattern */
   strong { color: #e8edf3; }
 }
 
 /* Optional: show labels boldly if you print them in HTML as “Type: …” already */
-#modalType, #pronouns, #modalInterests, #modalPeeves, #modalBestFor, #modalFact {
+#modalType, #pronouns, #modalInterests, #modalPeeves, #modalBestFor, #modalFact, #modalRetirement {
   &::first-letter { text-transform: uppercase; }
 }
 
@@ -216,6 +216,10 @@
 
   #modalFooter {
     justify-content: center;
+  }
+
+  .retired-banner {
+    margin: 20px 0 0 0;
   }
 }
 

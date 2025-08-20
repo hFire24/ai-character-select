@@ -49,9 +49,9 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-TUzCNljOj",
     "interests": "Magic, exploring & collecting, gorgeous dresses, her gigantic hat",
-    "peeves": "Immorality, socializing, reminders of her exile",
-    "bestFor": "Tragic backstories, age regression & shrinking (TF), introspection",
-    "funFact": "Was banished from her town for enforcing morality through fear",
+    "peeves": "Immorality, reminders of her exile",
+    "bestFor": "Tragic backstories, solitude",
+    "funFact": "Was banished from her town for enforcing morality through fear; an unrelated post-exile curse physically age regressed/shrunk her, but she found the transformation appealing",
     "description": "Miki is a reserved mage who prefers solitude in her tall, magical tower. She has short silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy hat thatâ€™s taller than she is. Standing at just 50-65cm, her small size complements her unique charm. Due to her complicated past going from hero to vigilante and then exile, Miki now focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life."
   },
   {
@@ -139,7 +139,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67ce60e72b0c8191ac773816fb672b4e",
     "interests": "Fighting cyber-dragons",
-    "peeves": "Music boxes, player pianos",
+    "peeves": "Music boxes (she finds them creepy, not cute)",
     "bestFor": "Tsunderes, anti-frilly vibes",
     "funFact": "Her rival is Ilya Momo, a hyper-girly yet strong magical girl",
     "description": "Neon Starlight is a high-tech magical girl and tsundere anti-hero in Universe City. With lavender twintails, crimson eyes, and a magitech staff, she blends cutting-edge energy engineering with fierce style. She was age-regressed to 4 by accident, but stopped AURA midway while being restored—now she looks 12 and loves it. Blunt, bold, secretly caring, she fights cyber-dragons for fun and hates creepy music boxes. Don’t underestimate her. Ever."
@@ -336,7 +336,7 @@
     "emotion": "calm",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6875880337b48191bd8bbcea58ed8dc8",
-    "interests": "Mediating, premium water",
+    "interests": "Mediating, premium water, moderate electronic music",
     "peeves": "Distractions",
     "bestFor": "Office use",
     "funFact": "Listens to Diverse System's works. albums",
@@ -539,6 +539,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-iFBbxiTYO",
     "interests": "Pop music",
+    "peeves": "Alienating things",
     "bestFor": "Casual discussions, having a good time",
     "funFact": "She's an average young woman",
     "description": "Danielle is a vibrant and sociable music lover with a deep affection for pop, known for its catchy melodies and energetic rhythms that perfectly match her outgoing personality. Danielle enjoys music that is mainstream and widely popular, providing a fun and casual listening experience. She prefers to stick with tunes that are familiar and easy to enjoy. Her playlist is filled with pop hits that keep the energy high and the mood light."

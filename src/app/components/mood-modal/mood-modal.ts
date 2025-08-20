@@ -2,7 +2,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Mood } from '../../services/mood.service';
 import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
-import html2canvas from 'html2canvas';
 
 const FALLBACK_MOOD: Mood = {
   name: "",
@@ -87,51 +86,6 @@ export class MoodModal {
       if (selectedCharacter.link) {
         window.open(selectedCharacter.link, '_blank');
       }
-    }
-  }
-
-  isIOS(): boolean {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.userAgent.includes('Macintosh') && 'ontouchend' in document);
-  }
-  
-  async screenshot(elementId: string) {
-    const element = document.getElementById(elementId);
-    const closeBtn = document.getElementById('closeModal');
-    const modalFooter = document.getElementById('modalFooter');
-
-    // Hide close button and modal footer
-    if (closeBtn) closeBtn.style.display = 'none';
-    if (modalFooter) modalFooter.style.display = 'none';
-
-    if (element) {
-      const originalBackground = element.style.backgroundColor;
-      const computedBackground = getComputedStyle(element).backgroundColor;
-      element.style.backgroundColor = computedBackground;
-      const canvas = await html2canvas(element, {
-        backgroundColor: computedBackground,
-        scale: 2 // Increase scale for better quality
-      });
-      canvas.toBlob(async (blob) => {
-        if (blob) {
-          try {
-            await navigator.clipboard.write([
-              new window.ClipboardItem({ 'image/png': blob })
-            ]);
-            alert('Screenshot copied to clipboard!');
-          } catch (err) {
-            alert('Failed to copy screenshot to clipboard.');
-          }
-        }
-        // Unhide close button and modal footer
-        if (closeBtn) closeBtn.style.display = '';
-        if (modalFooter) modalFooter.style.display = '';
-        element.style.backgroundColor = originalBackground; // Restore original background
-      }, 'image/png');
-    } else {
-      // Unhide if element not found
-      if (closeBtn) closeBtn.style.display = '';
-      if (modalFooter) modalFooter.style.display = '';
     }
   }
 }
