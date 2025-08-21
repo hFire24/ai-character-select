@@ -1,0 +1,28 @@
+<div class="tier-settings-modal">
+  <button id="closeSettings" (click)="onCancel()">&times;</button>
+  <div class="tier-settings-form">
+    <div class="tier-settings-color">
+      <h3>{{tierName}}</h3>
+      <div class="color-picker-grid">
+        <button *ngFor="let color of colorOptions"
+          class="color-swatch"
+          [style.background]="color.value"
+          [class.selected]="editedColor === color.value"
+          (click)="onColorChange(color)"
+          [title]="color.name">
+      </button>
+    </div>
+  </div>
+  <div class="tier-settings-new">
+		<button title="New Tier Above" (click)="onNewTierAbove()">
+			<span class="material-icons">arrow_upward</span> New Tier
+		</button>
+		<button title="New Tier Below" (click)="onNewTierBelow()">
+			<span class="material-icons">arrow_downward</span> New Tier
+		</button>
+	</div>
+  <div class="tier-settings-actions">
+    <button title="Save Changes" (click)="onDelete()" class="red" [disabled]="tierCount === 1">
+      <span class="material-icons">delete</span> Delete Tier
+    </button>
+	</div>

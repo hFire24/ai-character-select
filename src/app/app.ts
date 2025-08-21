@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
-import { CharacterGrid } from "./components/character-grid/character-grid";
-import { HeaderButtons } from './components/header-buttons/header-buttons';
-import { CharacterModal } from './components/character-modal/character-modal';
-import { MoodModal } from './components/mood-modal/mood-modal';
-import { FooterButtons } from './components/footer-buttons/footer-buttons';
 import { CommonModule } from '@angular/common';
 import { Character } from './services/character.service';
 import { Mood } from './services/mood.service';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CharacterGrid, HeaderButtons, CharacterModal, MoodModal, FooterButtons, CommonModule],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
@@ -26,5 +22,9 @@ export class App {
 
   displayCharacter() {
     this.selectedCharacter = this.selectedCharacter; // Trigger modal display
+  }
+
+  openTierList() {
+    // Logic to open the tier list modal
   }
 }
