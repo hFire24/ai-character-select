@@ -10,4 +10,8 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterButtons {
   @Output() toggleMore = new EventEmitter<void>();
+  isIOS(): boolean {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.userAgent.includes('Macintosh') && 'ontouchend' in document);
+  }
 }

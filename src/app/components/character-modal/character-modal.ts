@@ -57,11 +57,6 @@ export class CharacterModal {
     return 'assets/' + path;
   }
 
-  /*isIOS(): boolean {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-    (navigator.userAgent.includes('Macintosh') && 'ontouchend' in document);
-  }*/
-
   async screenshot(_: string) {
     const c = this.displayedCharacter ?? this.character;
     const name = c?.name || 'Unknown Character';

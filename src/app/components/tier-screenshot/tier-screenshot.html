@@ -1,6 +1,6 @@
 <div *ngIf="screenshotDataUrl; else noScreenshot">
   <h1>Screenshot</h1>
-	<img [src]="screenshotDataUrl" alt="Tier List Screenshot" style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px #0002;" />
+	<img [src]="screenshotDataUrl" alt="Tier List Screenshot" style="max-width:100%;box-shadow:0 2px 8px #0002;" />
 </div>
 <ng-template #noScreenshot>
 	<p>No screenshot available.</p>

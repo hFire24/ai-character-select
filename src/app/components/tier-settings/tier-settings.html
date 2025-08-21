@@ -22,7 +22,7 @@
 		</button>
 	</div>
   <div class="tier-settings-actions">
-    <button title="Save Changes" (click)="onDelete()" class="red" [disabled]="tierCount === 1">
+    <button *ngIf="tierCount > 1" title="Delete Tier" (click)="onDelete()" class="red">
       <span class="material-icons">delete</span> Delete Tier
     </button>
 	</div>

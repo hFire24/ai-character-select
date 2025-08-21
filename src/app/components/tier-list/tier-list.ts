@@ -12,13 +12,9 @@ import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 })
 export class TierList {
   screenshotDataUrl: string | null = null;
-
-  confirmRoster() {
-    if (confirm('Are you sure you want to view the roster? All changes will be lost.')) {
-      window.location.href = '/';
-    }
-  }
   characterFilter: string = 'all';
+  splitTwins: boolean = false;
+
   onPoolDrop(event: DragEvent) {
     event.preventDefault();
     if (this.draggedTierIdx !== null && this.draggedCharIdx !== null) {
@@ -270,6 +266,40 @@ export class TierList {
     }
   ];
 
+  onSplitTwinsChange(event: any) {
+    this.splitTwins = event.target.checked;
+    const celestiaIdx = this.allCharacters.findIndex(c => c.name === 'Celestia');
+    const markIdx = this.allCharacters.findIndex(c => c.name === 'Mark');
+    if (celestiaIdx !== -1 && markIdx !== -1) {
+      // Remove any existing "Liam", "Kieran", or "Liam & Kieran"
+      // Remove "Liam", "Kieran", and "Liam & Kieran" from allCharacters
+      this.allCharacters = this.allCharacters.filter(
+        c => c.name !== 'Liam' && c.name !== 'Kieran' && c.name !== 'Liam & Kieran'
+      );
+      // Also remove them from all tiers
+      for (const tier of this.tiers) {
+        tier.characters = tier.characters.filter(
+          c => c.name !== 'Liam' && c.name !== 'Kieran' && c.name !== 'Liam & Kieran'
+        );
+      }
+      const insertIdx = celestiaIdx < markIdx ? celestiaIdx + 1 : markIdx;
+      if (this.splitTwins) {
+        // Insert "Liam" and "Kieran" separately
+        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
+        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
+        this.allCharacters.splice(insertIdx, 0, liam, kieran);
+      } else {
+        // Insert "Liam & Kieran" together
+        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
+        this.allCharacters.splice(insertIdx, 0, liamKieran);
+      }
+    }
+  }
+
+  clear() {
+    this.tiers.forEach(tier => tier.characters = []);
+  }
+
   reset() {
     this.tiers = [
       {
@@ -295,7 +325,18 @@ export class TierList {
     const html2canvas = (await import('html2canvas')).default;
     const tierListEl = document.querySelector('.tier-list') as HTMLElement;
     if (!tierListEl) return;
+    // Hide all tier-settings areas before taking the screenshot
+    const settingsEls = tierListEl.querySelectorAll('.tier-settings') as NodeListOf<HTMLElement>;
+    const prevDisplays: string[] = [];
+    settingsEls.forEach(el => {
+      prevDisplays.push(el.style.display);
+      el.style.display = 'none';
+    });
     const canvas = await html2canvas(tierListEl, { backgroundColor: '#181a1b' });
+    // Restore the tier-settings areas
+    settingsEls.forEach((el, i) => {
+      el.style.display = prevDisplays[i] ?? '';
+    });
     this.screenshotDataUrl = canvas.toDataURL('image/png');
   }
 }

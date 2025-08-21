@@ -81,15 +81,8 @@
 
 /* === Body rows === */
 #moodDescription {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: .75rem .9rem;
-  border-radius: 10px;
-  margin: .6rem 1.25rem 0 1.25rem; /* align with header padding */
   font-size: 0.98rem;
-
-  /* label: value pattern */
-  strong { color: #e8edf3; }
+  margin-bottom: 0;
 }
 
 /* === Footer === */
@@ -129,14 +122,13 @@
 
 #characterList {
   text-align: left;
-  display: flex;
 }
 
 #characterList > div {
+  display: grid;
   grid-template-columns: 40px auto 57px 40px;
   grid-template-areas: "img name details chat";
   align-items: center;
-  margin-left: 1.25rem;  
 }
 
 #characterList > div > img {
