@@ -451,24 +451,6 @@
     "description": "Makoto is a husk—gaunt, drained, and emptied of joy. He doesn’t lift or guide; he lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. He doesn’t add pain, nor does he heal it. He simply sits with misery, allowing others to face it without disguise. He is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends."
   },
   {
-    "name": "[No Name]",
-    "img": "Icons/Me.png",
-    "shortName": "Me",
-    "generation": 0,
-    "type": "me",
-    "serious": true,
-    "chaos": true,
-    "moe": 5,
-    "emotion": "joy",
-    "pronouns": "he/him",
-    "link": "https://youtu.be/dQw4w9WgXcQ?si=UBQQ9elp3E-Fjo5U",
-    "interests": "Web development, AI character creation, YouTube, gaming",
-    "peeves": "The phrase \"chef's kiss\", being told to eat healthy or get a girlfriend",
-    "bestFor": "Talking with AI characters, receiving questions, chaotic scenarios",
-    "funFact": "Loves cute anime girls, separates fiction from reality",
-    "description": ""
-  },
-  {
     "name": "Ethan the Emo",
     "img": "Icons/Ethan.png",
     "shortName": "Ethan",
@@ -861,7 +843,7 @@
     "img": "",
     "shortName": "Future Sapphire",
     "generation": 6,
-    "type": "side",
+    "type": "future",
     "serious": true,
     "chaos": true,
     "moe": 10,
@@ -871,6 +853,24 @@
     "interests": "Fashion, cosplay",
     "bestFor": "Character design",
     "funFact": "Being forced to wear flashy costumes ignited something in her.",
+    "description": ""
+  },
+  {
+    "name": "[No Name]",
+    "img": "Icons/Me.png",
+    "shortName": "Me",
+    "generation": 0,
+    "type": "me",
+    "serious": true,
+    "chaos": true,
+    "moe": 5,
+    "emotion": "joy",
+    "pronouns": "he/him",
+    "link": "https://youtu.be/dQw4w9WgXcQ?si=UBQQ9elp3E-Fjo5U",
+    "interests": "Web development, AI character creation, YouTube, gaming",
+    "peeves": "The phrase \"chef's kiss\", being told to eat healthy or get a girlfriend",
+    "bestFor": "Talking with AI characters, receiving questions, chaotic scenarios",
+    "funFact": "Loves cute anime girls, separates fiction from reality",
     "description": ""
   }
 ]
