@@ -106,8 +106,8 @@
   <input type="checkbox" id="splitTwins" (change)="onSplitTwinsChange($event)">
 </div>
 <footer>
-  <button (click)="clear()" [style.background]="'#DD3333'">Clear</button>
-  <button (click)="reset()" [style.background]="'#DD3333'">Reset</button>
-  <button (click)="export()">Export</button>
+  <button (click)="clear()" [style.background]="'#DD3333'" title="Clear all character selections">Clear</button>
+  <button (click)="reset()" [style.background]="'#DD3333'" title="Reset all changes">Reset</button>
+  <button (click)="export()" title="Export current tier list">Export</button>
 </footer>
 <app-tier-screenshot [screenshotDataUrl]="screenshotDataUrl"></app-tier-screenshot>

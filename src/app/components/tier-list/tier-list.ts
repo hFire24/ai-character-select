@@ -297,27 +297,31 @@ export class TierList {
   }
 
   clear() {
-    this.tiers.forEach(tier => tier.characters = []);
+    if(confirm("Are you sure you want to clear all character selections?")) {
+      this.tiers.forEach(tier => tier.characters = []);
+    }
   }
 
   reset() {
-    this.tiers = [
-      {
-        name: 'S', color: '#FF7F7E', characters: []
-      },
-      {
-        name: 'A', color: '#FFBF7F', characters: []
-      },
-      {
-        name: 'B', color: '#FFDF80', characters: []
-      },
-      {
-        name: 'C', color: '#FEFF7F', characters: []
-      },
-      {
-        name: 'D', color: '#BEFF7F', characters: []
-      }
-    ];
+    if(confirm("Are you sure you want to reset all changes? This will restore the default tier list.")) {
+      this.tiers = [
+        {
+          name: 'S', color: '#FF7F7E', characters: []
+        },
+        {
+          name: 'A', color: '#FFBF7F', characters: []
+        },
+        {
+          name: 'B', color: '#FFDF80', characters: []
+        },
+        {
+          name: 'C', color: '#FEFF7F', characters: []
+        },
+        {
+          name: 'D', color: '#BEFF7F', characters: []
+        }
+      ];
+    }
   }
 
   async export() {

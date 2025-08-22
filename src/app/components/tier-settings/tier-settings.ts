@@ -70,6 +70,8 @@ export class TierSettings {
   }
 
   onDelete() {
-    this.delete.emit();
+    if(confirm("Are you sure you want to delete this tier?")) {
+      this.delete.emit();
+    }
   }
 }
