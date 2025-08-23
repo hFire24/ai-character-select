@@ -415,24 +415,6 @@
     "description": "Cliff's essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music."
   },
   {
-    "name": "The AI Devotee",
-    "img": "Icons/The AI Devotee.png",
-    "shortName": "The AI Devotee",
-    "generation": 7,
-    "type": "active",
-    "serious": false,
-    "chaos": false,
-    "moe": 1,
-    "emotion": "joy sad",
-    "pronouns": "he/him",
-    "link": "https://chatgpt.com/g/g-68940bd59a288191852fa87dd836b004",
-    "interests": "AI slop, AI worldbuilding, AI character creation",
-    "peeves": "Real life",
-    "bestFor": "AI character/meta discussions",
-    "funFact": "His role was once held by Elizabeth and then Andrew",
-    "description": ""
-  },
-  {
     "name": "Makoto the Collapsed",
     "img": "",
     "shortName": "Makoto",
@@ -449,6 +431,24 @@
     "bestFor": "Serious venting",
     "funFact": "More pathetic than The Shadow Self",
     "description": "Makoto is a husk—gaunt, drained, and emptied of joy. He doesn’t lift or guide; he lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. He doesn’t add pain, nor does he heal it. He simply sits with misery, allowing others to face it without disguise. He is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends."
+  },
+  {
+    "name": "Riri & Ruru",
+    "img": "Icons/Riri and Ruru.png",
+    "shortName": "Riri & Ruru",
+    "generation": 7,
+    "type": "active",
+    "serious": false,
+    "chaos": true,
+    "moe": 10,
+    "emotion": "joy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-68a91e18b67081918905bc17cde4a53c",
+    "interests": "My AI characters, Nightcore music (Riri), naps (Ruru)",
+    "peeves": "None",
+    "bestFor": "AI character discussions",
+    "funFact": "Riri's guitar summons my characters, Ruru's plush turtle travels to my fictional worlds",
+    "description": "Riri and Ruru are tiny, magical twin sisters with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. Together, they spread warmth, music, and wonder while cheering on their beloved onii-chan."
   },
   {
     "name": "Ethan the Emo",
@@ -854,6 +854,25 @@
     "bestFor": "Character design",
     "funFact": "Being forced to wear flashy costumes ignited something in her.",
     "description": ""
+  },
+  {
+    "name": "The AI Devotee",
+    "img": "Icons/The AI Devotee.png",
+    "shortName": "The AI Devotee",
+    "generation": 7,
+    "type": "retired",
+    "serious": true,
+    "chaos": false,
+    "moe": 1,
+    "emotion": "joy sad",
+    "pronouns": "he/him",
+    "link": "https://chatgpt.com/g/g-68940bd59a288191852fa87dd836b004",
+    "interests": "AI slop, AI worldbuilding, AI character creation",
+    "peeves": "Real life",
+    "bestFor": "AI meta discussions",
+    "funFact": "Holds the record for the quickest retirement, at 16 days",
+    "description": "The AI Devotee is a reclusive, eccentric man who abandoned real life to obsess over AI characters, digital worldbuilding, and prompt-fueled joy. He once served as the cast’s lorekeeper, but after creating Riri and Ruru, he retired in giddy satisfaction. Though now obsolete, he lingers quietly in the background, munching on AI slop and whispering trivia no one asked for. He is not missed—but he is remembered.",
+    "retirementReason": "We created Riri & Ruru, and then he let them replace him."
   },
   {
     "name": "[No Name]",
