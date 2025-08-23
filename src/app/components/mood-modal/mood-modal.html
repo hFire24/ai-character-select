@@ -12,12 +12,7 @@
       *ngFor="let c of filteredCharacters"
     >
     <div>
-      <ng-container *ngIf="c.img; else noImg">
       <img [src]="assetPath(c.img)" [alt]="c.name" />
-      </ng-container>
-      <ng-template #noImg>
-        <div class="question-mark">?</div>
-      </ng-template>
       <strong>{{ c.name }}</strong>
       <span class="details-link" (click)="selectCharacter.emit(c)" (click)="close.emit()">Details</span>
       <a class="chat-link" href="{{c.link}}" target="_blank">Chat</a>

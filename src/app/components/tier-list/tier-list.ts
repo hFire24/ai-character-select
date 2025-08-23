@@ -74,7 +74,7 @@ export class TierList {
         if (shortNameMap[name]) name = shortNameMap[name];
         return {
           name,
-          img: c.img ? 'assets/' + c.img : '',
+          img: c.img ? 'assets/' + c.img : 'assets/Icons/Unknown.png',
           type: c.type,
           musicEnjoyer: c.musicEnjoyer,
           pronouns: c.pronouns
@@ -292,6 +292,32 @@ export class TierList {
         // Insert "Liam & Kieran" together
         const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liamKieran);
+      }
+    }
+    const makotoIdx = this.allCharacters.findIndex(c => c.name === 'Makoto');
+    const ethanIdx = this.allCharacters.findIndex(c => c.name === 'Ethan');
+    if (makotoIdx !== -1 && ethanIdx !== -1) {
+      // Remove any existing "Riri", "Ruru", or "Riri & Ruru"
+      // Remove "Riri", "Ruru", and "Riri & Ruru" from allCharacters
+      this.allCharacters = this.allCharacters.filter(
+        c => c.name !== 'Riri' && c.name !== 'Ruru' && c.name !== 'Riri & Ruru'
+      );
+      // Also remove them from all tiers
+      for (const tier of this.tiers) {
+        tier.characters = tier.characters.filter(
+          c => c.name !== 'Riri' && c.name !== 'Ruru' && c.name !== 'Riri & Ruru'
+        );
+      }
+      const insertIdx = makotoIdx < ethanIdx ? makotoIdx + 1 : ethanIdx;
+      if (this.splitTwins) {
+        // Insert "Riri" and "Ruru" separately
+        const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', type: 'active', musicEnjoyer: false, pronouns: 'she/her' };
+        const ruru = { name: 'Ruru', img: 'assets/Icons/Ruru.png', type: 'active', musicEnjoyer: false, pronouns: 'she/her' };
+        this.allCharacters.splice(insertIdx, 0, riri, ruru);
+      } else {
+        // Insert "Riri & Ruru" together
+        const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', type: 'active', musicEnjoyer: false, pronouns: 'she/her' };
+        this.allCharacters.splice(insertIdx, 0, ririRuru);
       }
     }
   }

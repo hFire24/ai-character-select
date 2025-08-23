@@ -31,12 +31,7 @@
           (dragstart)="onDragStart($event, i, j)"
           (dragover)="onDragOver($event)"
           (drop)="onCharacterDrop($event, i, j)">
-          <ng-container *ngIf="char.img; else noImg">
-            <img [src]="char.img" [alt]="char.name" class="character-img" />
-          </ng-container>
-          <ng-template #noImg>
-            <div class="character-img no-img">?</div>
-          </ng-template>
+          <img [src]="char.img" [alt]="char.name" class="character-img" />
           <div class="character-name">{{ char.name }}</div>
         </div>
       </ng-container>

@@ -71,7 +71,8 @@ export class MoodModal {
   }
 
   assetPath(path: string) {
-    return 'assets/' + path;
+    const assetUrl = 'assets/' + path;
+    return path ? assetUrl : 'assets/Icons/Unknown-Mood.png';
   }
 
   @Output() selectCharacter = new EventEmitter<Character>();
