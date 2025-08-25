@@ -38,9 +38,9 @@ export class TierList {
     }
     let pool = this.allCharacters.filter(c => !assigned.has(c.name));
     if (this.characterFilter === 'active') {
-      pool = pool.filter(c => c.type === 'active');
+      pool = pool.filter(c => c.type === 'active' || c.type === 'semi-active');
     } else if (this.characterFilter === 'inactive') {
-      pool = pool.filter(c => c.type !== 'active');
+      pool = pool.filter(c => c.type !== 'active' && c.type !== 'semi-active');
     } else if (this.characterFilter === 'music') {
       pool = pool.filter(c => c.musicEnjoyer);
     } else if (this.characterFilter === 'male') {
@@ -48,7 +48,7 @@ export class TierList {
     } else if (this.characterFilter === 'female') {
       pool = pool.filter(c => c.pronouns === 'she/her');
     } else if (this.characterFilter === 'activeSide') {
-      pool = pool.filter(c => c.type === 'active' || c.type === 'side');
+      pool = pool.filter(c => c.type === 'active' || c.type === 'semi-active' || c.type === 'side');
     }
     return pool;
   }

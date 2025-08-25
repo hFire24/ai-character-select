@@ -24,7 +24,7 @@ export class MoodModal {
 
   constructor(private characterService: CharacterService) {
     this.characterService.getCharacters().subscribe(data => {
-      this.characters = data.filter(c => c.type === 'active');
+      this.characters = data.filter(c => c.type === 'active' || c.type === 'semi-active');
     });
   }
 

@@ -70,11 +70,6 @@ button.red {
   background-color: #DD3333;
 }
 
-button.red:disabled {
-  background-color: darken(#DD3333, 20%);
-  cursor: not-allowed;
-}
-
 .material-icons {
   font-family: 'Material Icons';
   font-style: normal;
