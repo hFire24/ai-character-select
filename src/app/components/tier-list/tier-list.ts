@@ -47,8 +47,6 @@ export class TierList {
       pool = pool.filter(c => c.pronouns === 'he/him');
     } else if (this.characterFilter === 'female') {
       pool = pool.filter(c => c.pronouns === 'she/her');
-    } else if (this.characterFilter === 'activeSide') {
-      pool = pool.filter(c => c.type === 'active' || c.type === 'semi-active' || c.type === 'side');
     }
     return pool;
   }

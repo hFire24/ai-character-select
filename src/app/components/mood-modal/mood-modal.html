@@ -19,6 +19,9 @@
     </div>
     </div>
     <div id="modalFooter">
+      <button *ngIf="mood.name === 'All'" routerLink="spin-the-wheel" 
+      routerLinkActive="active" 
+      style="background-color: #4CAF50;">Character Picker</button>
       <a id="modalLink" (click)="selectRandomCharacter()">Random Character 🔀</a>
     </div>
   </div>

@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Mood } from '../../services/mood.service';
 import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
+import { RouterLink } from '@angular/router';
 
 const FALLBACK_MOOD: Mood = {
   name: "",
@@ -13,7 +14,7 @@ const FALLBACK_MOOD: Mood = {
 @Component({
   selector: 'app-mood-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './mood-modal.html',
   styleUrl: './mood-modal.scss'
 })

@@ -1,0 +1,34 @@
+<div class="panel-container">
+		<h2>Random Character Picker</h2>
+		<div class="panel-filters">
+			<label for="panelFilter">Filter:</label>
+			<select id="panelFilter" [(ngModel)]="selectedFilter">
+				<option value="all">All characters</option>
+				<option value="active">Active characters</option>
+				<option value="active-semi">A + semi-active characters</option>
+				<option value="active-semi-retired">Above + retired characters</option>
+				<option value="active-semi-retired-side">Above + side characters</option>
+			</select>
+		</div>
+    <div class="panel-grid-wrapper">
+      <div class="panel-grid">
+        <div
+          class="panel"
+          *ngFor="let character of filteredCharacters; let i = index"
+          [class.spotlight]="i === spotlightIndex"
+          [class.selected]="selectedCharacter && selectedCharacter === character"
+        >
+          <div class="panel-name">{{ character.shortName }}</div>
+        </div>
+      </div>
+    </div>
+		<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : 'Spin' }}</button>
+			<div *ngIf="selectedCharacter" class="result">
+				<h3>Selected Character:</h3>
+	      <img [src]="'assets/' + selectedCharacter.img" [alt]="selectedCharacter.name"
+	      width="128" height="128"
+	      (error)="selectedCharacter.img = 'Icons/Unknown.png'" />
+				<p>{{ selectedCharacter.name }}</p>
+        <a id="chat" [href]="selectedCharacter.link" target="_blank">Chat</a>
+			</div>
+</div>
