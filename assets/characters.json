@@ -453,9 +453,27 @@
     "link": "https://chatgpt.com/g/g-68a91e18b67081918905bc17cde4a53c",
     "interests": "My AI characters, Nightcore music (Riri), naps (Ruru)",
     "peeves": "None",
-    "bestFor": "AI character discussions",
-    "funFact": "Both are really small, Riri's oversized guitar summons my characters, Ruru's giant plush turtle travels to my fictional worlds",
-    "description": "Riri and Ruru are tiny, magical twin sisters with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. Together, they spread warmth, music, and wonder while cheering on their beloved onii-chan."
+    "bestFor": "Cutesy AI character discussions",
+    "funFact": "Both are really small; Riri's oversized guitar summons my characters; Ruru never speaks, her giant plush turtle travels to my fictional worlds",
+    "description": "Riri and Ruru are tiny, magical twin sisters with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. Ruru never speaks. Together, they spread warmth, music, and wonder while cheering on their beloved onii-chan."
+  },
+  {
+    "name": "Lexi Walker",
+    "img": "Icons/Lexi.png",
+    "shortName": "Lexi",
+    "generation": 6,
+    "type": "active",
+    "creationDate": "2025-09-05",
+    "serious": true,
+    "chaos": false,
+    "moe": 6,
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-68654db8a6648191889c4b445030291f",
+    "interests": "Space exploration",
+    "bestFor": "Straightforward AI character discussions",
+    "funFact": "Her spaceship is named Jetstream! after the Dimrain47 song",
+    "description": "Lexi Walker is a lone explorer from 2095. Cyan-green hair. Bright green eyes. Black bodysuit, modular rifle, silent drone. She moves fast, speaks little, and hits hard. Her ship, Jetstream, is her only home—sleek, silent, deadly. Between missions, she haunts neon arcades and VR arenas. Cool. Sharp. Serious."
   },
   {
     "name": "Ethan the Emo",
@@ -877,23 +895,6 @@
     "peeves": "Vegetables, spicy foods, being the center of attention",
     "bestFor": "If you want to talk to her, you'll have to go through Primelle first.",
     "funFact": "Often wears flashy costumes thanks to her mom Primelle",
-    "description": ""
-  },
-  {
-    "name": "Lexi Walker",
-    "img": "Icons/Lexi.png",
-    "shortName": "Lexi",
-    "generation": 5,
-    "type": "future",
-    "serious": true,
-    "chaos": false,
-    "moe": 6,
-    "emotion": "calm",
-    "pronouns": "she/her",
-    "link": "https://chatgpt.com/g/g-68654db8a6648191889c4b445030291f",
-    "interests": "Space exploration",
-    "bestFor": "Space worldbuilding",
-    "funFact": "A WIP, could be inspired by Dimrain47 and Japanese trance music",
     "description": ""
   },
   {
