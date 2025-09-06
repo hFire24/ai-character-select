@@ -880,7 +880,7 @@
   },
   {
     "name": "Sapphire",
-    "img": "",
+    "img": "Icons/Sapphire.png",
     "shortName": "Sapphire",
     "generation": 5,
     "type": "side",
