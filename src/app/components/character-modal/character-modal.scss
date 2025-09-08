@@ -144,7 +144,8 @@
 #modalPeeves,
 #modalBestFor,
 #modalFact,
-#modalRetirement {
+#modalRetirement,
+#modalInactive {
   margin: .6rem 1.25rem 0 1.25rem; /* align with header padding */
   font-size: 0.98rem;
   text-align: left;
@@ -154,7 +155,7 @@
 }
 
 /* Optional: show labels boldly if you print them in HTML as “Type: …” already */
-#modalType, #pronouns, #modalInterests, #modalPeeves, #modalBestFor, #modalFact, #modalRetirement {
+#modalType, #pronouns, #modalInterests, #modalPeeves, #modalBestFor, #modalFact, #modalRetirement, #modalInactive {
   &::first-letter { text-transform: uppercase; }
 }
 

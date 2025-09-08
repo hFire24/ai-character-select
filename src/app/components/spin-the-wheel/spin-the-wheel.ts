@@ -50,10 +50,10 @@ export class SpinTheWheel {
         this.filteredCharacters = this.characters.filter(c => c.type === 'active' || c.type === 'semi-active');
         break;
       case 'active-semi-retired':
-        this.filteredCharacters = this.characters.filter(c => ['active', 'semi-active', 'retired'].includes(c.type));
+        this.filteredCharacters = this.characters.filter(c => ['active', 'semi-active', 'retired', 'inactive'].includes(c.type));
         break;
       case 'active-semi-retired-side':
-        this.filteredCharacters = this.characters.filter(c => ['active', 'semi-active', 'retired', 'side'].includes(c.type));
+        this.filteredCharacters = this.characters.filter(c => ['active', 'semi-active', 'retired', 'inactive', 'side'].includes(c.type));
         break;
       default:
         this.filteredCharacters = this.characters.filter(c => c.type !== 'me');

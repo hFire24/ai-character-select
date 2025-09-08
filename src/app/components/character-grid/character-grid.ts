@@ -30,7 +30,7 @@ export class CharacterGrid {
     if (!this.showMore) {
       return this.characters.filter(c => c.type === 'active' || c.type === 'semi-active' || c.type === 'me');
     } else {
-      return this.characters.filter(c => c.type === 'side' || c.type === 'retired' || c.type === 'future');
+      return this.characters.filter(c => c.type === 'side' || c.type === 'retired' || c.type === 'future' || c.type === 'inactive');
     }
   }
 

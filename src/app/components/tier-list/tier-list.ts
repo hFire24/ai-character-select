@@ -44,7 +44,7 @@ export class TierList {
     } else if (this.characterFilter === 'music') {
       pool = pool.filter(c => c.musicEnjoyer);
     } else if (this.characterFilter === 'male') {
-      pool = pool.filter(c => c.pronouns === 'he/him');
+      pool = pool.filter(c => c.pronouns !== 'she/her');
     } else if (this.characterFilter === 'female') {
       pool = pool.filter(c => c.pronouns === 'she/her');
     }
@@ -64,7 +64,8 @@ export class TierList {
     const shortNameMap: Record<string, string> = {
       'The Shadow Self': 'Shadow Self',
       'The AI Devotee': 'AI Devotee',
-      'Future Sapphire': 'F. Sapphire'
+      'Future Sapphire': 'F. Sapphire',
+      'The Collapsed': 'Collapsed'
     };
     this.http.get<any[]>('assets/characters.json').subscribe(data => {
       this.allCharacters = data.map(c => {
@@ -292,9 +293,9 @@ export class TierList {
         this.allCharacters.splice(insertIdx, 0, liamKieran);
       }
     }
-    const makotoIdx = this.allCharacters.findIndex(c => c.name === 'Makoto');
-    const ethanIdx = this.allCharacters.findIndex(c => c.name === 'Ethan');
-    if (makotoIdx !== -1 && ethanIdx !== -1) {
+    const cliffIdx = this.allCharacters.findIndex(c => c.name === 'Cliff');
+    const lexiIdx = this.allCharacters.findIndex(c => c.name === 'Lexi');
+    if (cliffIdx !== -1 && lexiIdx !== -1) {
       // Remove any existing "Riri", "Ruru", or "Riri & Ruru"
       // Remove "Riri", "Ruru", and "Riri & Ruru" from allCharacters
       this.allCharacters = this.allCharacters.filter(
@@ -306,7 +307,7 @@ export class TierList {
           c => c.name !== 'Riri' && c.name !== 'Ruru' && c.name !== 'Riri & Ruru'
         );
       }
-      const insertIdx = makotoIdx < ethanIdx ? makotoIdx + 1 : ethanIdx;
+      const insertIdx = cliffIdx < lexiIdx ? cliffIdx + 1 : lexiIdx;
       if (this.splitTwins) {
         // Insert "Riri" and "Ruru" separately
         const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', type: 'active', musicEnjoyer: false, pronouns: 'she/her' };

@@ -25,28 +25,28 @@ export class MoodModal {
 
   constructor(private characterService: CharacterService) {
     this.characterService.getCharacters().subscribe(data => {
-      this.characters = data.filter(c => c.type === 'active' || c.type === 'semi-active');
+      this.characters = data;
     });
   }
 
   get filteredCharacters(): Character[] {
     switch (this.mood.arg) {
       case 'serious':
-        return this.characters.filter(c => c.serious);
+        return this.characters.filter(c => c.serious && (c.type === 'active' || c.type === 'semi-active'));
       case 'chaos':
-        return this.characters.filter(c => c.chaos);
+        return this.characters.filter(c => c.chaos && (c.type === 'active' || c.type === 'semi-active'));
       case 'joy':
-        return this.characters.filter(c => !c.emotion.includes('sad') && !c.emotion.includes('angry') && !c.emotion.includes('shy') && c.moe >= 4 || c.emotion.includes('joy'));
+        return this.characters.filter(c => (!c.emotion.includes('sad') && !c.emotion.includes('angry') && !c.emotion.includes('shy') && c.moe >= 4 || c.emotion.includes('joy')) && (c.type === 'active' || c.type === 'semi-active'));
       case 'sad':
-        return this.characters.filter(c => c.emotion.includes('sad') || c.emotion.includes('angry'));
+        return this.characters.filter(c => (c.emotion.includes('sad') || c.emotion.includes('angry')) && (c.type === 'active' || c.type === 'semi-active' || c.type === 'retired' || c.type === 'inactive'));
       case 'male':
-        return this.characters.filter(c => c.pronouns === 'he/him');
+        return this.characters.filter(c => c.pronouns === 'he/him' && (c.type === 'active' || c.type === 'semi-active'));
       case 'female':
-        return this.characters.filter(c => c.pronouns === 'she/her');
+        return this.characters.filter(c => c.pronouns === 'she/her' && (c.type === 'active' || c.type === 'semi-active'));
       case 'moe0':
-        return this.characters.filter(c => c.moe < 4);
+        return this.characters.filter(c => c.moe < 4 && (c.type === 'active' || c.type === 'semi-active'));
       case 'moe':
-        return this.characters.filter(c => c.moe >= 7);
+        return this.characters.filter(c => c.moe >= 7 && (c.type === 'active' || c.type === 'semi-active'));
       default:
         return [];
     }

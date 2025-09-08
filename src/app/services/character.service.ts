@@ -22,6 +22,7 @@ export type Character = {
   funFact: string;
   description: string;
   retirementReason?: string; // Optional field for retirement reason
+  inactiveReason?: string; // Optional field for inactive reason
 }
 
 @Injectable({ providedIn: 'root' })

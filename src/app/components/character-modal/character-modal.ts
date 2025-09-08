@@ -20,7 +20,8 @@ const FALLBACK_CHARACTER: Character = {
   bestFor: "",
   funFact: "",
   description: "",
-  retirementReason: ""
+  retirementReason: "",
+  inactiveReason: ""
 };
 
 @Component({
@@ -112,25 +113,15 @@ export class CharacterModal {
     const flagsSize = FLAGS_TEXT ? parseFloat((flagsCS?.fontSize || '22px')) : 0;
 
     const retiredBannerEl = modalEl?.querySelector('.retired-banner') as HTMLElement | null;
-    const retiredNoteEl   = modalEl?.querySelector('.retired-note') as HTMLElement | null;
 
     const retiredBannerCS = retiredBannerEl ? getComputedStyle(retiredBannerEl) : null;
-    const retiredNoteCS   = retiredNoteEl   ? getComputedStyle(retiredNoteEl)   : null;
 
     const RETIRED_TEXT  = retiredBannerEl?.innerText || '';   // usually "Retired"
-    const RETIRED_NOTE  = retiredNoteEl?.innerText   || '';   // reason string
     const RETIRED_COLOR = retiredBannerCS?.color     || '#fff';
     const RETIRED_FONT  = [
       retiredBannerCS?.fontWeight || '700',
       retiredBannerCS?.fontSize   || '20px',
       retiredBannerCS?.fontFamily || 'system-ui, sans-serif'
-    ].join(' ');
-
-    const NOTE_COLOR = retiredNoteCS?.color || '#c3c8d4';
-    const NOTE_FONT  = [
-      retiredNoteCS?.fontWeight || '400',
-      retiredNoteCS?.fontSize   || '14px',
-      retiredNoteCS?.fontFamily || 'system-ui, sans-serif'
     ].join(' ');
 
     function wrapText(
@@ -212,6 +203,7 @@ export class CharacterModal {
       grabRow('modalBestFor'),
       grabRow('modalFact'),
       grabRow('modalRetirement'),
+      grabRow('modalInactive')
     ].filter(Boolean) as Array<ReturnType<typeof grabRow>>;
 
     async function loadImageSafe(src?: string): Promise<HTMLImageElement | undefined> {
@@ -367,18 +359,6 @@ export class CharacterModal {
       ctx.fillStyle = RETIRED_COLOR;
       ctx.font = RETIRED_FONT;
       ctx.fillText(RETIRED_TEXT, W - P, P);
-
-      // Note (smaller text below banner)
-      if (RETIRED_NOTE) {
-        ctx.fillStyle = NOTE_COLOR;
-        ctx.font = NOTE_FONT;
-        ctx.textAlign = 'right';
-        ctx.textBaseline = 'top';
-
-        // y offset: a little below the banner’s font size
-        const offset = parseFloat((retiredBannerCS?.fontSize || '20px')) + 6;
-        ctx.fillText(RETIRED_NOTE, W - P, P + offset);
-      }
 
       ctx.textAlign = 'left'; // reset for the rest
     }
