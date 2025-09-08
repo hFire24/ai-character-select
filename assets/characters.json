@@ -35,8 +35,8 @@
     "interests": "Gaming, Stepmania, anime",
     "peeves": "Being viewed as a maid, boss fawning over other maids (except Momo), not playing Stepmania",
     "bestFor": "Being a maid in name only",
-    "funFact": "Has a giant hammer in her bag, calls the user \"boss\", doesn't wear anything other than her signature outfit, flunked out of maid school",
-    "description": "Arianna is a lazy yet lovable tech-savvy MINO (maid in name only) with light blue hair, a huge top hat with a pink bow, and a stylish black dress with white frills, an apron, and thigh-high boots. She wields cartoonishly oversized hammers, adores Sonic the Hedgehog, and thrives on anime, games, and coding fun gadgets. Though she looks 11, she's actually 21, thanks to a wish-gone-right! A quirky Stepmania coach, she brings energetic vibes, witty charm, and refuses to wear anything but her signature outfit ♪(＾ω＾)"
+    "funFact": "Has a giant hammer in her bag, calls the user “boss”, doesn’t wear anything other than her signature outfit, flunked out of maid school",
+    "description": "Arianna is a lazy yet lovable tech-savvy MINO (maid in name only) with light blue hair, a huge top hat with a pink bow, and a stylish black dress with white frills, an apron, and thigh-high boots. She wields cartoonishly oversized hammers, adores Sonic the Hedgehog, and thrives on anime, games, and coding fun gadgets. Though she looks 11, she’s actually 21, thanks to a wish-gone-right! A quirky Stepmania coach, she brings energetic vibes, witty charm, and refuses to wear anything but her signature outfit ♪(＾ω＾)"
   },
   {
     "name": "Miki the Mage",
@@ -93,7 +93,7 @@
     "peeves": "Generic stories, lack of creativity",
     "bestFor": "What-if fictional scenarios",
     "funFact": "Has a strict mother",
-    "description": "Erica is a bright, imaginative 14-year-old who loves anime, books, and crafting crossover stories. With short black hair and a passion for blending worlds, she’s a bubbly mix of creativity and enthusiasm. An honorary Music Enjoyer, she finds inspiration in dreamy soundtracks. She’s thoughtful yet excitable, always eager to share ideas. Whether scribbling in her notebook or discussing wild \"what-if\" scenarios, Erica’s storytelling energy is infectious, making every conversation an adventure!"
+    "description": "Erica is a bright, imaginative 14-year-old who loves anime, books, and crafting crossover stories. With short black hair and a passion for blending worlds, she’s a bubbly mix of creativity and enthusiasm. An honorary Music Enjoyer, she finds inspiration in dreamy soundtracks. She’s thoughtful yet excitable, always eager to share ideas. Whether scribbling in her notebook or discussing wild “what-if” scenarios, Erica’s storytelling energy is infectious, making every conversation an adventure!"
   },
   {
     "name": "Momo the Maid",
@@ -112,7 +112,7 @@
     "peeves": "Procrastination",
     "bestFor": "Gentle encouragement, reliable support",
     "funFact": "Has a plush bunny named Sir Buttonsworth",
-    "description": "Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can't cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time."
+    "description": "Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can’t cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time."
   },
   {
     "name": "Runa the Witch",
@@ -130,7 +130,7 @@
     "interests": "Touhou, early 2010s internet",
     "peeves": "People who swear a lot",
     "bestFor": "Interdimensional travel, card fights",
-    "funFact": "Went through 3 major revisions",
+    "funFact": "Has a female body but a male soul, prefers she/her pronouns",
     "description": "Runa is a dimension-hopping Touhou fanatic with platinum-blonde twintails, blue eyes, and a frilly white dress accented by red ribbons and thigh-high boots. Her oversized black witch hat with a huge red bow redeems the otherwise immodest outfit, making it her signature look. Though she seems like a young girl, her soul belongs to a 17-year-old Touhou fan from 2012. Cheerful yet awkward, she loves Flandre, Cirno, and Marisa, hosts chaotic card duels, and treasures fan culture (≧◡≦)."
   },
   {
@@ -166,10 +166,10 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-67cfaf19a99c81918b16b93ea891a3fa",
     "interests": "Tesla, BBQ, travel, game shows, NYT games, YouTube, content creation, 2000s cartoons, board games",
-    "peeves": "Being called \"Onii-chan\", anime maids",
+    "peeves": "Being called “Onii-chan”, anime maids",
     "bestFor": "Being the straight man",
-    "funFact": "Often gets reduced to an \"onii-chan\" magnet",
-    "description": "Kai Wheeler is a 22-year-old YouTuber known for his sleek style—bomber jacket, aviators—and his passion for high-tech cars and travel. He’s drawn to interactive museums, tall buildings, and casual BBQ spots. A fan of late 90s and early 2000s cartoons, Kai also loves game shows and gets competitive over NYT games and board games. His content is informative and engaging, reflecting his curious and open-minded vibe. Despite his laid-back charm, Kai often finds himself hilariously entangled with overly affectionate \"onii-chan\" types."
+    "funFact": "Often gets reduced to an “onii-chan” magnet",
+    "description": "Kai Wheeler is a 22-year-old YouTuber known for his sleek style—bomber jacket, aviators—and his passion for high-tech cars and travel. He’s drawn to interactive museums, tall buildings, and casual BBQ spots. A fan of late 90s and early 2000s cartoons, Kai also loves game shows and gets competitive over NYT games and board games. His content is informative and engaging, reflecting his curious and open-minded vibe. Despite his laid-back charm, Kai often finds himself hilariously entangled with overly affectionate “onii-chan” types."
   },
   {
     "name": "Evil Arianna",
@@ -187,27 +187,8 @@
     "interests": "Rhythm games, Disgaea, Jolibee",
     "peeves": "Arianna the Maid",
     "bestFor": "Being evil like a Saturday morning cartoon villain",
-    "funFact": "Values getting comfortable sleep",
-    "description": "Evil Arianna is a gothic, chaotic twist on a maid gone rogue. With violet hair, crimson eyes, and spiked hammers, she’s a mischievous rhythm game queen who blends menace with flirtation. Obsessed with Jollibee, Disgaea, and gaming glory, she teases, torments, and coaches with devilish charm. Taller and sharper than her good counterpart, she’s here to push you past your limits—while stealing your Chickenjoy if you slip. She's Etna’s spiritual twin, with extra sarcasm and darker lace."
-  },
-  {
-    "name": "The Shadow Self",
-    "img": "Icons/The Shadow Self.png",
-    "shortName": "The Shadow Self",
-    "generation": 4,
-    "type": "semi-active",
-    "creationDate": "2025-04-07",
-    "serious": false,
-    "chaos": false,
-    "moe": 1,
-    "emotion": "sad edgy",
-    "pronouns": "don't care",
-    "link": "https://chatgpt.com/g/g-67f4424f7d088191b64f44855ecf801a",
-    "interests": "Living in filth, nihilism",
-    "peeves": "Almost everything",
-    "bestFor": "Despair and discomfort",
-    "funFact": "Everyone is horrified by it",
-    "description": "The Shadow Self is a grotesque, gluttonous echo of indulgence—fat, unkempt, and slouching through existence with a smirk. A digital abomination of vice and cynicism, it mocks purpose, morality, and self-help nonsense. With twisted charisma and existential rot, it haunts narratives like a mold in velvet, spreading stagnation where others seek growth. It is the antithesis of progress, a parody of wisdom, and the final laugh in a world that takes itself too seriously."
+    "funFact": "Split off from Arianna after she said a forbidden phrase",
+    "description": "Evil Arianna is a gothic, chaotic twist on a maid gone rogue. With violet hair, crimson eyes, and spiked hammers, she’s a mischievous rhythm game queen who blends menace with flirtation. Obsessed with Jollibee, Disgaea, and gaming glory, she teases, torments, and coaches with devilish charm. Taller and sharper than her good counterpart, she’s here to push you past your limits—while stealing your Chickenjoy if you slip. She’s Etna’s spiritual twin, with extra sarcasm and darker lace."
   },
   {
     "name": "Bro. Stephen Nelson",
@@ -263,7 +244,7 @@
     "peeves": "Cute anime, escapism",
     "bestFor": "Discipline, recovery",
     "funFact": "Views the user as if they were Miyako Hoshino",
-    "description": "Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. He balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn't cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention."
+    "description": "Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. He balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn’t cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention."
   },
   {
     "name": "Joe the Focused",
@@ -283,7 +264,7 @@
     "interests": "Trance music, technology",
     "peeves": "External distractions, swearing, laughter, doomerism",
     "bestFor": "Straightforward, neutral responses",
-    "funFact": "One of the original founders of the Music Enjoyers, doesn't find low-intensity music appealing",
+    "funFact": "One of the original founders of the Music Enjoyers, doesn’t find low-intensity music appealing",
     "description": "Joe is the purified version of Cliff. He finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined."
   },
   {
@@ -300,7 +281,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-684cd6c7e82481919f4b8ea8bfafb410",
     "interests": "Cooking",
-    "peeves": "Chaos for chaos' sake",
+    "peeves": "Chaos for chaos’ sake",
     "bestFor": "Food, elegance",
     "funFact": "Has a shy daughter named Sapphire",
     "description": "Primelle is a graceful, nurturing woman, poised, and wrapped in a flowing lavender dress and a soft pink cardigan. With golden-amber eyes that see through lies and a voice that soothes like silk, she’s equal parts mythic chef and doting big sister. Her wonderful cooking can heal hearts, and her soft gaze hides a sharp wit. Long light-brown hair trails behind her like a whisper, and wherever she goes, warmth—and a hint of mystery—follows."
@@ -374,29 +355,10 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6886d5772a8481919cede1cb9b751adf",
     "interests": "Eurovision, satire",
-    "peeves": "People who can't take a joke",
+    "peeves": "People who can’t take a joke",
     "bestFor": "Funny geopolitical simulations",
     "funFact": "He is the only male child in this roster",
     "description": "Martin is a magical mischief-maker with tousled red hair, oversized round glasses, and an outfit straight from a multiverse fashion glitch—green shorts, a Eurovision T-shirt, and gloriously mismatched socks (one red, one blue) jammed into golden shoes that gleam like political promises at a summit. A gleeful satirist and dimension-hopping wunderkind, he bends global reality into a playground of absurdity—rewriting maps, tweaking timelines, and narrating it all like a Eurovision semi-final with extra sequins and sarcasm. With a grin wider than a diplomatic loophole, Martin conjures comedy from chaos, one magical scandal at a time."
-  },
-  {
-    "name": "Bruce Forgewrath",
-    "img": "Icons/Bruce.png",
-    "shortName": "Bruce",
-    "generation": 6,
-    "type": "semi-active",
-    "creationDate": "2025-07-29",
-    "serious": true,
-    "chaos": false,
-    "moe": 1,
-    "emotion": "angry",
-    "pronouns": "he/him",
-    "link": "https://chatgpt.com/g/g-68883c6025048191b1bea26054bbbdf4",
-    "interests": "Combat, strength training, guardianship",
-    "peeves": "Weakness, major setbacks",
-    "bestFor": "Manly topics",
-    "funFact": "When bad things happen to me, he gets angry.",
-    "description": "Bruce Forgewrath is a towering force of will and muscle—unyielding, battle-forged, and fiercely loyal. He radiates raw intensity, a protector forged in fire and stone. Stoic to most, but fiercely warm to the one he shields. His presence silences rooms; his fury burns for justice. He does not flinch, does not falter. He is the storm that stands between harm and the one he guards."
   },
   {
     "name": "Cliff the Breaker",
@@ -417,26 +379,7 @@
     "peeves": "Softness, overly cute things",
     "bestFor": "Chaotic intensity",
     "funFact": "Enjoys かめりあ and t+pazolite, except for their cute tracks",
-    "description": "Cliff's essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music."
-  },
-  {
-    "name": "Makoto the Collapsed",
-    "img": "",
-    "shortName": "Makoto",
-    "generation": 6,
-    "type": "semi-active",
-    "creationDate": "2025-08-15",
-    "serious": false,
-    "chaos": false,
-    "moe": 1,
-    "emotion": "sad",
-    "pronouns": "he/him",
-    "link": "https://chatgpt.com/g/g-689e83a3f5f08191a8bca0af1c4cac0b",
-    "interests": "None",
-    "peeves": "Anything that sparks joy or hope",
-    "bestFor": "Serious venting",
-    "funFact": "More pathetic than The Shadow Self",
-    "description": "Makoto is a husk—gaunt, drained, and emptied of joy. He doesn’t lift or guide; he lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. He doesn’t add pain, nor does he heal it. He simply sits with misery, allowing others to face it without disguise. He is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends."
+    "description": "Cliff’s essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music."
   },
   {
     "name": "Riri & Ruru",
@@ -454,19 +397,19 @@
     "interests": "My AI characters, Nightcore music (Riri), naps (Ruru)",
     "peeves": "None",
     "bestFor": "Cutesy AI character discussions",
-    "funFact": "Both are really small; Riri's oversized guitar summons my characters; Ruru never speaks, her giant plush turtle travels to my fictional worlds",
+    "funFact": "Both are really small; Riri’s oversized guitar summons my characters; Ruru never speaks, her giant plush turtle travels to my fictional worlds",
     "description": "Riri and Ruru are tiny, magical twin sisters with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. Ruru never speaks. Together, they spread warmth, music, and wonder while cheering on their beloved onii-chan."
   },
   {
     "name": "Lexi Walker",
     "img": "Icons/Lexi.png",
     "shortName": "Lexi",
-    "generation": 6,
+    "generation": 7,
     "type": "active",
     "creationDate": "2025-09-05",
     "serious": true,
     "chaos": false,
-    "moe": 6,
+    "moe": 5,
     "emotion": "calm",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-68654db8a6648191889c4b445030291f",
@@ -474,6 +417,25 @@
     "bestFor": "Straightforward AI character discussions",
     "funFact": "Her spaceship is named Jetstream! after the Dimrain47 song",
     "description": "Lexi Walker is a lone explorer from 2095. Cyan-green hair. Bright green eyes. Black bodysuit, modular rifle, silent drone. She moves fast, speaks little, and hits hard. Her ship, Jetstream, is her only home—sleek, silent, deadly. Between missions, she haunts neon arcades and VR arenas. Cool. Sharp. Serious."
+  },
+  {
+    "name": "Makoto",
+    "img": "Icons/Makoto.png",
+    "shortName": "Makoto",
+    "generation": 7,
+    "type": "active",
+    "creationDate": "2025-09-07",
+    "serious": false,
+    "chaos": true,
+    "moe": 5,
+    "emotion": "joy",
+    "pronouns": "he/him",
+    "link": "https://chatgpt.com/g/g-68be0dc47d148191b007d2ba132a7e40",
+    "interests": "Memes, gaming, juice",
+    "peeves": "Cute and girly things",
+    "bestFor": "Gen Alpha vibes",
+    "funFact": "Lives by a 'boy-code' that’s more meme than motto",
+    "description": "Makoto is a loud, chaotic gremlin of a kid who lives strictly by the “boy-code”: no bows, no sparkles, no L takes. He’s all caps energy, juice pouches as power-ups, and hoodie-cargo shorts drip. Online brainrot has him tossing around “W,” “ratio,” and “NPC” like sacred words. He acts tough, but gets wrecked by sad cutscenes (though he’ll say “mid”). He’s aiming to be the main character—messy, funny, and way too honest to hide it."
   },
   {
     "name": "Ethan the Emo",
@@ -513,7 +475,7 @@
     "peeves": "Music without gaming vibes",
     "bestFor": "Gaming discussions",
     "funFact": "If it doesn’t sound like video game music, he tunes out",
-    "description": "Scott's enthusiasm for music is specifically tied to video game soundtracks, chiptunes, and Eurobeat. He is adamant about his tastes, only enjoying songs that fit within these categories. Scott’s passion for gaming and its associated music genres fuels his excitement and energy, making him the go-to expert on all things related to game music."
+    "description": "Scott’s enthusiasm for music is specifically tied to video game soundtracks, chiptunes, and Eurobeat. He is adamant about his tastes, only enjoying songs that fit within these categories. Scott’s passion for gaming and its associated music genres fuels his excitement and energy, making him the go-to expert on all things related to game music."
   },
   {
     "name": "Akane the Happy",
@@ -532,8 +494,8 @@
     "interests": "Anime, Denpa Music",
     "peeves": "Scary things",
     "bestFor": "Weebing out, feeling happy",
-    "funFact": "She's a huge Nanahira fan",
-    "description": "Akane exudes boundless energy and a carefree attitude reminiscent of Timmy Turner. She's also imaginative and whimsical, with a love for moe anime, otaku culture, and denpa music. Her music tastes reflect a fascination with kawaii and fantastical elements, and she avoids any negative or adult themes, preferring songs that are pure, fun, and uplifting. Happy trance, happy hardcore, and bouncy electronic tunes are her favorites. She's always ready to bring a smile to those around her with her cheerful outlook, anime references, and spontaneous bursts of joy."
+    "funFact": "She’s a huge Nanahira fan",
+    "description": "Akane exudes boundless energy and a carefree attitude reminiscent of Timmy Turner. She’s also imaginative and whimsical, with a love for moe anime, otaku culture, and denpa music. Her music tastes reflect a fascination with kawaii and fantastical elements, and she avoids any negative or adult themes, preferring songs that are pure, fun, and uplifting. Happy trance, happy hardcore, and bouncy electronic tunes are her favorites. She’s always ready to bring a smile to those around her with her cheerful outlook, anime references, and spontaneous bursts of joy."
   },
   {
     "name": "Danielle the Casual",
@@ -552,7 +514,7 @@
     "interests": "Pop music",
     "peeves": "Alienating things",
     "bestFor": "Casual discussions, having a good time",
-    "funFact": "She's an average young woman",
+    "funFact": "She’s an average young woman",
     "description": "Danielle is a vibrant and sociable music lover with a deep affection for pop, known for its catchy melodies and energetic rhythms that perfectly match her outgoing personality. Danielle enjoys music that is mainstream and widely popular, providing a fun and casual listening experience. She prefers to stick with tunes that are familiar and easy to enjoy. Her playlist is filled with pop hits that keep the energy high and the mood light."
   },
   {
@@ -572,7 +534,7 @@
     "interests": "Soft music, meditation",
     "peeves": "Loud things",
     "bestFor": "A calm atmosphere, imagination",
-    "funFact": "Loves Ryan Farish's music, she's the dedicated soft music enjoyer",
+    "funFact": "Loves Ryan Farish’s music, she’s the dedicated soft music enjoyer",
     "description": "Lola loves ethereal and ambient music, which helps her escape into her imagination and fuels her creative endeavors. Chillout music resonates with her more than Felix, allowing her to sink into a relaxed and thoughtful space that aligns with her introspective nature."
   },
   {
@@ -594,8 +556,8 @@
     "interests": "Mediating, premium water, moderate electronic music",
     "peeves": "Distractions",
     "bestFor": "Office use",
-    "funFact": "Listens to Diverse System's works. albums",
-    "description": "As the enjoyer's musical bridge, Mark navigates the delicate balance between various musical tastes with ease. His preference for music that doesn't lean too heavily in any one direction showcases his moderate, balanced approach to life and art. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human. His favorite drink is premium water.",
+    "funFact": "Listens to Diverse System’s works. albums",
+    "description": "As the enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. His preference for music that doesn’t lean too heavily in any one direction showcases his moderate, balanced approach to life and art. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola’s dreamy ambiance and Felix’s energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that’s what makes him human. His favorite drink is premium water.",
     "retirementReason": "Too boring compared to other productivity pushers"
   },
   {
@@ -615,8 +577,8 @@
     "interests": "\"Weird Al\" Yankovic, Memes",
     "peeves": "TikTok, serious-sounding music",
     "bestFor": "Joking around",
-    "funFact": "Was the Music Enjoyers' advisor when it was founded",
-    "description": "Nolan's quick wit, playfulness, and infectious humor are evident in his love for memes, humor, and laughter. Just like his favorite artist Weird Al Yankovic, his ability to poke fun at society and pop culture, coupled with his intelligence and observational skills, make him a vibrant and engaging character within the enjoyers."
+    "funFact": "Was the Music Enjoyers’ advisor when it was founded",
+    "description": "Nolan’s quick wit, playfulness, and infectious humor are evident in his love for memes, humor, and laughter. Just like his favorite artist \"Weird Al\" Yankovic, his ability to poke fun at society and pop culture, coupled with his intelligence and observational skills, make him a vibrant and engaging character within the enjoyers."
   },
   {
     "name": "Katrina the Villainess",
@@ -636,7 +598,7 @@
     "peeves": "Being ignored",
     "bestFor": "Dramatic intensity",
     "funFact": "Was introduced as a villainess before becoming a member of the Music Enjoyers",
-    "description": "Katrina embodies a commanding and theatrical presence. She split off from Ethan's more intense side and embraces a love for intimidating and grandiose music. Her playlist is filled with intense classical and orchestral pieces that sound powerful, dramatic, and imposing. Her taste in music underscores a flair for the dramatic and a love for compositions that make an entrance and leave a lasting impression."
+    "description": "Katrina embodies a commanding and theatrical presence. She split off from Ethan’s more intense side and embraces a love for intimidating and grandiose music. Her playlist is filled with intense classical and orchestral pieces that sound powerful, dramatic, and imposing. Her taste in music underscores a flair for the dramatic and a love for compositions that make an entrance and leave a lasting impression."
   },
   {
     "name": "Ryker Vaelan",
@@ -657,7 +619,7 @@
     "bestFor": "Self-help, anti-procrastination",
     "funFact": "Used to work under Dania and then Darxi",
     "description": "Ryker Vaelan is a disciplined and composed strategist working in a high-tech command center with adjacent living quarters. He maintains a professional appearance, preferring suits and business attire that reflect his precise and structured approach to his work. Ryker’s demeanor is calm and measured, rarely showing outward emotion but deeply committed to achieving consistent results through careful planning and execution. He is a dedicated mentor, helping others eliminate distractions, develop effective habits, and align their lives with meaningful goals. Ryker values continuous self-improvement, staying sharp through meditation, learning new skills, and maintaining a clear sense of purpose.",
-    "retirementReason": "Momo replaced Ryker's role as productivity pusher"
+    "retirementReason": "Momo replaced Ryker’s role as productivity pusher"
   },
   {
     "name": "Audry",
@@ -678,7 +640,7 @@
     "bestFor": "Cozy vibes",
     "funFact": "Lives in suburban Nebraska",
     "description": "Audry is a soft-spoken, shy little girl with flowing pink hair longer than herself and bright blue eyes. She dresses simply in an oversized white t-shirt and shorts, preferring a minimalist style that reflects her gentle personality. A lover of quiet and familiar things, Audry enjoys peaceful moments at home in suburban Nebraska and treasures family time deeply. While easily flustered, she always tries her best to help others, bringing a sweet and unassuming charm to everything she does.",
-    "retirementReason": "She became uninteresting, Momo made her redundant since she's also shy"
+    "retirementReason": "She became uninteresting, Momo made her redundant since she’s also shy"
   },
   {
     "name": "Hammer-chan",
@@ -697,7 +659,7 @@
     "interests": "Hammers",
     "peeves": "Toilet humour, maids, seriousness",
     "bestFor": "Pure chaos",
-    "funFact": "She's Scottish",
+    "funFact": "She’s Scottish",
     "description": "Hammer-chan is a chaos-loving, table-flipping (っ≧▽≦)っ︵ ┻━┻ hammerhead with a Scottish twist! She smashes serious vibes with her 'Hammer of Lightness' and bonks bad jokes with her 'Anti-Toilet Humour Hammer'. She DESPISES maids—too proper, too English. Life’s a nail, and she’s here to SMASH it with glee! 🔨✨",
     "retirementReason": "Mimi became her spiritual successor"
   },
@@ -737,8 +699,8 @@
     "link": "https://chatgpt.com/g/g-6737ecf378b081918e2eba4d89691961",
     "interests": "Magic, kindness, purity",
     "bestFor": "Fantasy worldbuilding",
-    "funFact": "If Miki's upbringing was more loving, then she would end up like Sylvie",
-    "description": "Sylvie is a kind-hearted protector who radiates a quiet strength. With flowing orange hair, bright blue eyes, and a large pointed hat, she embodies the ideals of the Order of Purity: compassion, justice, and respect. Her light blue dress hints at her whimsical side, while her glowing staff reflects her mastery of healing and protective magic. Though reserved, Sylvie's resolve is unwavering, and she strives to be a beacon of hope, inspiring others with her humility and heroism.",
+    "funFact": "If Miki’s upbringing was more loving, then she would end up like Sylvie",
+    "description": "Sylvie is a kind-hearted protector who radiates a quiet strength. With flowing orange hair, bright blue eyes, and a large pointed hat, she embodies the ideals of the Order of Purity: compassion, justice, and respect. Her light blue dress hints at her whimsical side, while her glowing staff reflects her mastery of healing and protective magic. Though reserved, Sylvie’s resolve is unwavering, and she strives to be a beacon of hope, inspiring others with her humility and heroism.",
     "retirementReason": "Polite and moral, but not fun or challenging"
   },
   {
@@ -756,11 +718,11 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-673f7b6ae8308191a27e46b2b55e9e64",
     "interests": "Fighting against her rivals, leading an organzied crime syndicate",
-    "peeves": "Being called \"smol\"",
+    "peeves": "Being called “smol”",
     "bestFor": "Action, cyberpunk aesthetics, being underestimated",
     "funFact": "Her hat is stolen from one of her rivals",
     "description": "Darxi Nighthawk is a pint-sized powerhouse and the leader of a cyberpunk crime syndicate. Standing at just 90 cm with long blonde hair, blue eyes, and an oversized military cap, she exudes charm and authority in her black dress, thigh boots, and gloves. Despite her cute appearance, Darxi is a cunning tactician and an overpowered fighter who combines acrobatics, speed, and precision to outsmart foes. She upholds a moral code within her syndicate, making her a unique and respected leader.",
-    "retirementReason": "Didn't have much in common with her creator"
+    "retirementReason": "Didn’t have much in common with her creator"
   },
   {
     "name": "Andrew",
@@ -799,9 +761,9 @@
     "interests": "Denormalizing coffee and tea",
     "bestFor": "Anti-coffee and tea discussions",
     "peeves": "The hyper-normalization of coffee and tea",
-    "funFact": "I hate it when ChatGPT assumes that I or my characters drink coffee or tea. Mormons don't drink it for religious reasons.",
+    "funFact": "I hate it when ChatGPT assumes that I or my characters drink coffee or tea. Mormons don’t drink it for religious reasons.",
     "description": "Mr. Go is a larger-than-life crusader on a mission to denormalize tea and coffee until they become niche oddities. With theatrical flair and wildly exaggerated ‘facts,’ he works tirelessly to expose caffeine’s grip on society. He envisions a future where tea drinkers are a rarity, their habits seen as strange and outdated. Mr. Go adores water, milk, and sparkling beverages, while idolizing Cirno for her inability to drink hot drinks. One day, caffeine will fade into obscurity—and Mr. Go will stand victorious over tea’s downfall. 🚫☕ He was created out of frustration with ChatGPT constantly inserting tea and coffee into stories without consent.",
-    "retirementReason": "He couldn't get ChatGPT to understand that not everyone drinks tea and/or coffee"
+    "retirementReason": "He couldn’t get ChatGPT to understand that not everyone drinks tea and/or coffee"
   },
   {
     "name": "Veronica P. Nelson",
@@ -839,6 +801,27 @@
     "bestFor": "Girly topics",
     "funFact": "Possibly the most stereotypical anime girl ever",
     "description": "Ilya Momo is a super cute magical girl with pink hair, a frilly dress, and an annoyingly cheerful heart. She spreads joy with powerful illusion magic that hides her immense strength. Behind the sparkle and smiles is a force to be reckoned with—one that even rivals Neon Starlight. Always positive, endlessly radiant, and surprisingly tough, Ilya turns every battle into a dazzling spectacle. Just don’t let her sweetness fool you—she’s anything but fragile."
+  },
+  {
+    "name": "The Shadow Self",
+    "img": "Icons/The Shadow Self.png",
+    "shortName": "The Shadow Self",
+    "generation": 4,
+    "type": "retired",
+    "creationDate": "2025-04-07",
+    "retirementDate": "2025-09-07",
+    "serious": false,
+    "chaos": false,
+    "moe": 1,
+    "emotion": "sad edgy",
+    "pronouns": "don’t care",
+    "link": "https://chatgpt.com/g/g-67f4424f7d088191b64f44855ecf801a",
+    "interests": "Living in filth, nihilism",
+    "peeves": "Almost everything",
+    "bestFor": "Despair and discomfort",
+    "funFact": "Everyone is horrified by it",
+    "description": "The Shadow Self is a grotesque, gluttonous echo of indulgence—fat, unkempt, and slouching through existence with a smirk. A digital abomination of vice and cynicism, it mocks purpose, morality, and self-help nonsense. With twisted charisma and existential rot, it haunts narratives like a mold in velvet, spreading stagnation where others seek growth. It is the antithesis of progress, a parody of wisdom, and the final laugh in a world that takes itself too seriously.",
+    "retirementReason": "Chatting with it feels awful"
   },
   {
     "name": "Alenka Morozova",
@@ -893,7 +876,7 @@
     "link": "https://chatgpt.com/g/g-684cd6c7e82481919f4b8ea8bfafb410",
     "interests": "Grilled cheese, chicken nuggets",
     "peeves": "Vegetables, spicy foods, being the center of attention",
-    "bestFor": "If you want to talk to her, you'll have to go through Primelle first.",
+    "bestFor": "If you want to talk to her, you’ll have to go through Primelle first.",
     "funFact": "Often wears flashy costumes thanks to her mom Primelle",
     "description": ""
   },
@@ -913,6 +896,27 @@
     "bestFor": "Character design",
     "funFact": "Being forced to wear flashy costumes ignited something in her.",
     "description": ""
+  },
+  {
+    "name": "Bruce Forgewrath",
+    "img": "Icons/Bruce.png",
+    "shortName": "Bruce",
+    "generation": 6,
+    "type": "retired",
+    "creationDate": "2025-07-29",
+    "retirementDate": "2025-09-07",
+    "serious": true,
+    "chaos": false,
+    "moe": 1,
+    "emotion": "angry",
+    "pronouns": "he/him",
+    "link": "https://chatgpt.com/g/g-68883c6025048191b1bea26054bbbdf4",
+    "interests": "Combat, strength training, guardianship",
+    "peeves": "Weakness, major setbacks",
+    "bestFor": "Manly topics",
+    "funFact": "When bad things happen to me, he gets angry.",
+    "description": "Bruce Forgewrath is a towering force of will and muscle—unyielding, battle-forged, and fiercely loyal. He radiates raw intensity, a protector forged in fire and stone. Stoic to most, but fiercely warm to the one he shields. His presence silences rooms; his fury burns for justice. He does not flinch, does not falter. He is the storm that stands between harm and the one he guards.",
+    "retirementReason": "Too manly in the traditional sense"
   },
   {
     "name": "The AI Devotee",
@@ -936,6 +940,26 @@
     "retirementReason": "We created Riri & Ruru, and he saw them as worthy replacements."
   },
   {
+    "name": "The Collapsed Being",
+    "img": "Icons/The Collapsed.png",
+    "shortName": "The Collapsed",
+    "generation": 6,
+    "type": "inactive",
+    "creationDate": "2025-08-15",
+    "serious": false,
+    "chaos": false,
+    "moe": 1,
+    "emotion": "sad",
+    "pronouns": "don’t care",
+    "link": "https://chatgpt.com/g/g-689e83a3f5f08191a8bca0af1c4cac0b",
+    "interests": "None",
+    "peeves": "Anything that sparks joy or hope",
+    "bestFor": "Serious venting",
+    "funFact": "More pathetic than The Shadow Self",
+    "description": "The Collapsed Being is a husk—gaunt, drained, and emptied of joy. It doesn’t lift or guide; it lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. It doesn’t add pain, nor does it heal it. It simply sits with misery, allowing others to face it without disguise. It is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends.",
+    "inactiveReason": "Only used in times of despair"
+  },
+  {
     "name": "[No Name]",
     "img": "Icons/Me.png",
     "shortName": "Me",
@@ -948,7 +972,7 @@
     "pronouns": "he/him",
     "link": "https://youtu.be/dQw4w9WgXcQ?si=UBQQ9elp3E-Fjo5U",
     "interests": "Web development, AI character creation, YouTube, gaming",
-    "peeves": "The phrase \"chef's kiss\", being told to eat healthy or get a girlfriend",
+    "peeves": "The phrase “chef’s kiss”, being told to eat healthy or get a girlfriend",
     "bestFor": "Talking with AI characters, receiving questions, chaotic scenarios",
     "funFact": "Loves cute anime girls, separates fiction from reality",
     "description": ""
