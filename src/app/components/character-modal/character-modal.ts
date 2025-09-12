@@ -35,8 +35,75 @@ export class CharacterModal {
   @Input() character: Character = FALLBACK_CHARACTER;
   @Output() close = new EventEmitter<void>();
 
+  chatLink: string = '';
+
+
+  loadChatLink() {
+    const key = this.getChatLinkKey();
+    const stored = localStorage.getItem(key);
+    if (stored) {
+      this.chatLink = stored;
+    } else {
+      this.chatLink = this.character.link;
+    }
+  }
+
+  updateChatLink() {
+    const newLink = prompt('Enter new chat link:', this.chatLink);
+    console.log('New link entered:', newLink);
+    if (newLink) {
+      this.chatLink = newLink.trim() || this.character.link;
+      localStorage.setItem(this.getChatLinkKey(), this.chatLink);
+      alert('Chat link updated!');
+    } else if (newLink === '') {
+      // If the user clears the input, reset to default link
+      this.chatLink = this.character.link;
+      localStorage.removeItem(this.getChatLinkKey());
+      alert('Chat link reset to default.');
+    }
+  }
+
+  getChatLinkKey(): string {
+    // Use character name or id for uniqueness
+    return 'chatLink_' + (this.character.name || 'unknown');
+  }
+
+  scheduleDailyCleanup() {
+    // Check if cleanup has already run today
+    const lastCleanup = localStorage.getItem('chatLinkCleanup');
+    const now = new Date();
+    const today5am = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 5, 0, 0, 0);
+    if (now > today5am && (!lastCleanup || new Date(lastCleanup) < today5am)) {
+      this.cleanupChatLinks();
+      localStorage.setItem('chatLinkCleanup', now.toISOString());
+    }
+    // Set timer for next 5:00 AM
+    let next5am = new Date(today5am.getTime());
+    if (now > today5am) {
+      next5am.setDate(next5am.getDate() + 1);
+    }
+    const msUntilNext5am = next5am.getTime() - now.getTime();
+    setTimeout(() => {
+      this.cleanupChatLinks();
+      localStorage.setItem('chatLinkCleanup', new Date().toISOString());
+      this.scheduleDailyCleanup();
+    }, msUntilNext5am);
+  }
+
+  cleanupChatLinks() {
+    // Remove all chatLink_* keys
+    Object.keys(localStorage).forEach(key => {
+      if (key.startsWith('chatLink_')) {
+        localStorage.removeItem(key);
+      }
+    });
+  }
+
+
   ngOnInit() {
     document.addEventListener('mousedown', this.handleClickOutside);
+    this.loadChatLink();
+    this.scheduleDailyCleanup();
   }
 
   ngOnDestroy() {
@@ -56,6 +123,11 @@ export class CharacterModal {
 
   assetPath(path: string) {
     return 'assets/' + path;
+  }
+
+  isIOS(): boolean {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.userAgent.includes('Macintosh') && 'ontouchend' in document);
   }
 
   async screenshot(_: string) {
