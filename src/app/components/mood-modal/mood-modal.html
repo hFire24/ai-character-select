@@ -15,7 +15,7 @@
       <img [src]="assetPath(c.img)" [alt]="c.name" />
       <strong>{{ c.name }}</strong>
       <span class="details-link" (click)="selectCharacter.emit(c)" (click)="close.emit()">Details</span>
-      <a class="chat-link" href="{{c.link}}" target="_blank">Chat</a>
+      <a class="chat-link" [href]="getChatLink(c)" target="_blank">Chat</a>
     </div>
     </div>
     <div id="modalFooter">

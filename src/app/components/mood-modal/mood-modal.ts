@@ -81,13 +81,20 @@ export class MoodModal {
   selectRandomCharacter() {
     const sourceCharacters = (this.filteredCharacters && this.filteredCharacters.length > 0)
       ? this.filteredCharacters
-      : this.characters;
+      : this.characters.filter(c => c.type !== 'me' && (c.type === 'active' || c.type === 'semi-active'));
     if (sourceCharacters && sourceCharacters.length > 0) {
       const idx = Math.floor(Math.random() * sourceCharacters.length);
       const selectedCharacter = sourceCharacters[idx];
-      if (selectedCharacter.link) {
-        window.open(selectedCharacter.link, '_blank');
+      const chatLink = this.getChatLink(selectedCharacter);
+      if (chatLink) {
+        window.open(chatLink, '_blank');
       }
     }
+  }
+
+  getChatLink(character: Character): string {
+    const key = 'chatLink_' + (character.name || 'unknown');
+    const stored = localStorage.getItem(key);
+    return stored ? stored : character.link;
   }
 }

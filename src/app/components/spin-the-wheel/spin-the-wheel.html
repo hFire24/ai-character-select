@@ -29,6 +29,6 @@
 	      width="128" height="128"
 	      (error)="selectedCharacter.img = 'Icons/Unknown.png'" />
 				<p>{{ selectedCharacter.name }}</p>
-        <a id="chat" [href]="selectedCharacter.link" target="_blank">Chat</a>
+        <a id="chat" [href]="getChatLink(selectedCharacter)" target="_blank">Chat</a>
 			</div>
 </div>

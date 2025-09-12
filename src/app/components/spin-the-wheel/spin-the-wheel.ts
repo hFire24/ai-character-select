@@ -167,4 +167,10 @@ export class SpinTheWheel {
     const t = (clamped - 2) / (20 - 2);
     return minRadius + t * (maxRadius - minRadius);
   }
+
+  getChatLink(character: Character): string {
+    const key = 'chatLink_' + (character.name || 'unknown');
+    const stored = localStorage.getItem(key);
+    return stored ? stored : character.link;
+  }
 }
