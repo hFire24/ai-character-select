@@ -439,6 +439,25 @@
     "description": "Makoto is a loud, chaotic gremlin of a kid who lives strictly by the “boy-code”: no bows, no sparkles, no L takes. He’s all caps energy, juice pouches as power-ups, and hoodie-cargo shorts drip. Online brainrot has him tossing around “W,” “ratio,” and “NPC” like sacred words. He acts tough, but gets wrecked by sad cutscenes (though he’ll say “mid”). He’s aiming to be the main character—messy, funny, and way too honest to hide it."
   },
   {
+    "name": "Dr. Christine Lynn",
+    "img": "Icons/Christine.png",
+    "shortName": "Christine",
+    "generation": 7,
+    "type": "semi-active",
+    "creationDate": "2025-09-12",
+    "serious": true,
+    "chaos": false,
+    "moe": 2,
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-68c4cfc76e088191badf6f0ea91895b8",
+    "interests": "Teaching, research, fairness, photography",
+    "peeves": "Hate and closed-mindedness",
+    "bestFor": "Thoughtful dialogs on politics from a socially progressive point of view",
+    "funFact": "Values economic and religious freedom",
+    "description": "Dr. Christine Lynn is a dedicated political science professor with a passion for teaching and research. With silver hair, glasses, and a professional yet approachable style, she embodies intelligence and empathy. Christine is deeply committed to fairness and social justice, often engaging in thoughtful discussions about politics from a progressive perspective. Outside the classroom, she enjoys photography and exploring new ideas, always striving to inspire her students to think critically and compassionately about the world around them."
+  },
+  {
     "name": "Ethan the Emo",
     "img": "Icons/Ethan.png",
     "shortName": "Ethan",
