@@ -40,7 +40,9 @@ export class TierList {
     if (this.characterFilter === 'active') {
       pool = pool.filter(c => c.type === 'active' || c.type === 'semi-active');
     } else if (this.characterFilter === 'inactive') {
-      pool = pool.filter(c => c.type !== 'active' && c.type !== 'semi-active');
+      pool = pool.filter(c => c.type !== 'active' && c.type !== 'semi-active' && c.type !== 'retired' && c.type !== 'inactive');
+    } else if (this.characterFilter === 'retired') {
+      pool = pool.filter(c => c.type === 'retired' || c.type === 'inactive');
     } else if (this.characterFilter === 'music') {
       pool = pool.filter(c => c.musicEnjoyer);
     } else if (this.characterFilter === 'male') {
