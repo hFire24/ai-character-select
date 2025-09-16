@@ -18,11 +18,12 @@ export type Character = {
   link: string;
   interests: string;
   peeves?: string; // Optional field for pet peeves
-  bestFor: string;
+  purpose: string;
   funFact: string;
   description: string;
   retirementReason?: string; // Optional field for retirement reason
   inactiveReason?: string; // Optional field for inactive reason
+  alternatives?: string; // Optional field for alternatives
 }
 
 @Injectable({ providedIn: 'root' })

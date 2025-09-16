@@ -142,9 +142,10 @@
 #pronouns,
 #modalInterests,
 #modalPeeves,
-#modalBestFor,
+#modalPurpose,
 #modalFact,
 #modalRetirement,
+#modalAlternatives,
 #modalInactive {
   margin: .6rem 1.25rem 0 1.25rem; /* align with header padding */
   font-size: 0.98rem;
@@ -155,7 +156,7 @@
 }
 
 /* Optional: show labels boldly if you print them in HTML as “Type: …” already */
-#modalType, #pronouns, #modalInterests, #modalPeeves, #modalBestFor, #modalFact, #modalRetirement, #modalInactive {
+#modalType, #pronouns, #modalInterests, #modalPeeves, #modalPurpose, #modalFact, #modalRetirement, #modalAlternatives, #modalInactive {
   &::first-letter { text-transform: uppercase; }
 }
 

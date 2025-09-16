@@ -17,11 +17,12 @@ const FALLBACK_CHARACTER: Character = {
   link: "",
   interests: "",
   peeves: "",
-  bestFor: "",
+  purpose: "",
   funFact: "",
   description: "",
   retirementReason: "",
-  inactiveReason: ""
+  inactiveReason: "",
+  alternatives: ""
 };
 
 @Component({
@@ -272,10 +273,11 @@ export class CharacterModal {
     const rows = [
       grabRow('modalInterests'),
       grabRow('modalPeeves'),
-      grabRow('modalBestFor'),
+      grabRow('modalPurpose'),
       grabRow('modalFact'),
       grabRow('modalRetirement'),
-      grabRow('modalInactive')
+      grabRow('modalInactive'),
+      grabRow('modalAlternatives'),
     ].filter(Boolean) as Array<ReturnType<typeof grabRow>>;
 
     async function loadImageSafe(src?: string): Promise<HTMLImageElement | undefined> {

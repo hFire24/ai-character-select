@@ -33,10 +33,11 @@
   <div>
     <div id="modalInterests"><strong>Interests</strong>: {{character.interests}}</div>
     <div id="modalPeeves"><strong>Pet Peeves</strong>: {{character.peeves || "None"}}</div>
-    <div id="modalBestFor"><strong>Purpose</strong>: {{character.bestFor}}</div>
+    <div id="modalPurpose"><strong>Purpose</strong>: {{character.purpose}}</div>
     <div id="modalFact"><strong>Fun Fact</strong>: {{character.funFact}}</div>
     <div id="modalRetirement" *ngIf="character.type === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
     <div id="modalInactive" *ngIf="character.type === 'inactive'"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
+    <div id="modalAlternatives" *ngIf="character.alternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
     <div id="modalFooter">
       <a id="modalLink" [href]="chatLink" target="_blank">Chat 🗣️</a> |
       <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
