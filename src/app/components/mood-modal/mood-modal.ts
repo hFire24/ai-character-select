@@ -32,7 +32,7 @@ export class MoodModal {
   get filteredCharacters(): Character[] {
     switch (this.mood.arg) {
       case 'serious':
-        return this.characters.filter(c => c.serious && (c.type === 'active' || c.type === 'semi-active'));
+        return this.characters.filter(c => (c.serious || c.emotion.includes('straightforward')) && (c.type === 'active' || c.type === 'semi-active'));
       case 'chaos':
         return this.characters.filter(c => c.chaos && (c.type === 'active' || c.type === 'semi-active'));
       case 'joy':
