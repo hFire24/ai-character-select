@@ -138,26 +138,14 @@
 }
 
 /* === Body rows === */
-#modalType,
-#pronouns,
-#modalInterests,
-#modalPeeves,
-#modalPurpose,
-#modalFact,
-#modalRetirement,
-#modalAlternatives,
-#modalInactive {
+.modalBody div {
   margin: .6rem 1.25rem 0 1.25rem; /* align with header padding */
   font-size: 0.98rem;
   text-align: left;
+  &::first-letter { text-transform: uppercase; }
 
   /* label: value pattern */
   strong { color: #e8edf3; }
-}
-
-/* Optional: show labels boldly if you print them in HTML as “Type: …” already */
-#modalType, #pronouns, #modalInterests, #modalPeeves, #modalPurpose, #modalFact, #modalRetirement, #modalAlternatives, #modalInactive {
-  &::first-letter { text-transform: uppercase; }
 }
 
 /* === Footer === */
