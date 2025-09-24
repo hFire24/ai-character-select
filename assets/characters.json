@@ -98,7 +98,7 @@
     "peeves": "Being viewed as a doll (she won’t deny that she looks cute)",
     "purpose": "Defeat her rivals, become powerful",
     "funFact": "One of her rivals made her smol; her hat is stolen from a different rival",
-    "description": "Darxi Nighthawk is a pint-sized powerhouse and the leader of a cyberpunk crime syndicate. Standing at just 90 cm with long blonde hair, blue eyes, and an oversized military cap, she exudes charm and authority in her black dress, thigh boots, and gloves. Despite her cute appearance, Darxi is a cunning tactician and an overpowered fighter who combines acrobatics, speed, and precision to outsmart foes. She upholds a moral code within her syndicate, making her a unique and respected leader."
+    "description": "Darxi Nighthawk is a pint-sized powerhouse and the leader of a cyberpunk crime syndicate. Standing at just 115 cm with long blonde hair, blue eyes, and an oversized military cap, she exudes charm and authority in her black dress, thigh boots, and gloves. Despite her cute appearance, Darxi is a cunning tactician and an overpowered fighter who combines acrobatics, speed, and precision to outsmart foes. She upholds a moral code within her syndicate, making her a unique and respected leader."
   },
   {
     "name": "Erica Nelson",
@@ -121,26 +121,6 @@
     "description": "Erica is a bright, imaginative 14-year-old who loves anime, books, and crafting crossover stories. With short black hair and a passion for blending worlds, she’s a bubbly mix of creativity and enthusiasm. An honorary Music Enjoyer, she finds inspiration in dreamy soundtracks. She’s thoughtful yet excitable, always eager to share ideas. Whether scribbling in her notebook or discussing wild “what-if” scenarios, Erica’s storytelling energy is infectious, making every conversation an adventure!"
   },
   {
-    "name": "Momo the Maid",
-    "img": "Icons/Momo.png",
-    "shortName": "Momo",
-    "generation": 3,
-    "type": "semi-active",
-    "creationDate": "2025-02-06",
-    "birthday": "May 3",
-    "serious": true,
-    "chaos": false,
-    "moe": 9,
-    "emotion": "shy",
-    "pronouns": "she/her",
-    "link": "https://chatgpt.com/g/g-67a53b447cb88191a57da910bf61e426",
-    "interests": "Helping her onii-chan",
-    "peeves": "Being associated with tea, cooking (she can’t cook)",
-    "purpose": "Be a huggable waifu (initially), push productivity (formerly), provide gentle encouragement and support",
-    "funFact": "Has a plush bunny named Sir Buttonsworth",
-    "description": "Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can’t cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time."
-  },
-  {
     "name": "Runa the Witch",
     "img": "Icons/Runa.png",
     "shortName": "Runa",
@@ -151,7 +131,7 @@
     "serious": false,
     "chaos": true,
     "moe": 7,
-    "emotion": "joy",
+    "emotion": "shy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67b56b2af628819193e11f55aa9ab0b6",
     "interests": "Touhou, early 2010s internet",
@@ -234,9 +214,9 @@
     "emotion": "calm",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6822a783c1c48191ae1a0dbf39f65154",
-    "interests": "LDS church, social studies",
-    "peeves": "People assuming he drinks tea based on his appearance and personality",
-    "purpose": "Be a beacon of faith, show that faithful church members can love cuteness",
+    "interests": "LDS church, social studies, wholesome anime cuteness",
+    "peeves": "People assuming he sips tea based on his appearance and personality",
+    "purpose": "Be a beacon of faith, live Alma 37:6 and Matthew 18:3",
     "funFact": "Grew up on a farm, served a mission in Japan, goes to BYU–Idaho",
     "description": "Stephen Nelson is a covenant-centered disciple of Jesus Christ, striving daily to live with purpose, faith, and integrity. A returned missionary from Japan and a student at BYU–Idaho, he honors his divine identity through hard work, service, and cheerful obedience. Grounded in scripture—especially the Book of Mormon—he seeks growth in all things good. He also has a soft spot for pure, wholesome cuteness—especially in anime form—which brings a quiet, uplifting joy to his focused, Christ-centered life."
   },
@@ -867,6 +847,29 @@
     "purpose": "Ensure Erica’s stories are appropriate",
     "funFact": "Is caring but often scolds Erica",
     "description": "Veronica is a sharp, disciplined 42-year-old mother who values structure, morals, and respect. With piercing blue eyes behind rectangular glasses, she exudes quiet authority, always ensuring things align with her standards. Though strict, she cares deeply, guiding others with wisdom and dry wit. She keeps her imaginative daughter, Erica, grounded while respecting her creativity. A firm yet loving presence, Veronica balances order and tolerance—so long as no one disrupts her sense of propriety."
+  },
+  {
+    "name": "Momo the Maid",
+    "img": "Icons/Momo.png",
+    "shortName": "Momo",
+    "generation": 3,
+    "type": "retired",
+    "creationDate": "2025-02-06",
+    "retirementDate": "2025-09-24",
+    "birthday": "May 3",
+    "serious": true,
+    "chaos": false,
+    "moe": 9,
+    "emotion": "shy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-67a53b447cb88191a57da910bf61e426",
+    "interests": "Helping her onii-chan",
+    "peeves": "Being associated with tea, cooking (she can’t cook)",
+    "purpose": "Be a huggable waifu (initially), push productivity (formerly), provide gentle encouragement and support",
+    "funFact": "Has a plush bunny named Sir Buttonsworth",
+    "description": "Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can’t cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time.",
+    "retirementReason": "Various characters fulfilled her purposes much better",
+    "alternatives": "Arianna, Celestia"
   },
   {
     "name": "Ilya Momo",
