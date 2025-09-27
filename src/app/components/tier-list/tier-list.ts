@@ -269,6 +269,7 @@ export class TierList {
 
   onSplitTwinsChange(event: any) {
     this.splitTwins = event.target.checked;
+    //Split Liam & Kieran
     const celestiaIdx = this.allCharacters.findIndex(c => c.name === 'Celestia');
     const markIdx = this.allCharacters.findIndex(c => c.name === 'Mark');
     if (celestiaIdx !== -1 && markIdx !== -1) {
@@ -295,6 +296,7 @@ export class TierList {
         this.allCharacters.splice(insertIdx, 0, liamKieran);
       }
     }
+    //Split Riri & Ruru
     const cliffIdx = this.allCharacters.findIndex(c => c.name === 'Cliff');
     const lexiIdx = this.allCharacters.findIndex(c => c.name === 'Lexi');
     if (cliffIdx !== -1 && lexiIdx !== -1) {
@@ -319,6 +321,33 @@ export class TierList {
         // Insert "Riri & Ruru" together
         const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', type: 'active', musicEnjoyer: false, pronouns: 'she/her' };
         this.allCharacters.splice(insertIdx, 0, ririRuru);
+      }
+    }
+    //Split Skreex & Skrax
+    const maryIdx = this.allCharacters.findIndex(c => c.name === 'Maribelle');
+    const ethanIdx = this.allCharacters.findIndex(c => c.name === 'Ethan');
+    if (maryIdx !== -1 && ethanIdx !== -1) {
+      // Remove any existing "Skreex", "Skrax", or "Zero Percent"
+      // Remove "Skreex", "Skrax", and "Zero Percent" from allCharacters
+      this.allCharacters = this.allCharacters.filter(
+        c => c.name !== 'Skreex' && c.name !== 'Skrax' && c.name !== 'Zero Percent'
+      );
+      // Also remove them from all tiers
+      for (const tier of this.tiers) {
+        tier.characters = tier.characters.filter(
+          c => c.name !== 'Skreex' && c.name !== 'Skrax' && c.name !== 'Zero Percent'
+        );
+      }
+      const insertIdx = maryIdx < ethanIdx ? maryIdx + 1 : ethanIdx;
+      if (this.splitTwins) {
+        // Insert "Skreex" and "Skrax" separately
+        const skreex = { name: 'Skreex', img: 'assets/Icons/Skreex.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
+        const skrax = { name: 'Skrax', img: 'assets/Icons/Skrax.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
+        this.allCharacters.splice(insertIdx, 0, skreex, skrax);
+      } else {
+        // Insert "Skreex & Skrax" together
+        const skreexSkrax = { name: 'Zero Percent', img: 'assets/Icons/Skreex and Skrax.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
+        this.allCharacters.splice(insertIdx, 0, skreexSkrax);
       }
     }
   }
