@@ -37,6 +37,10 @@ export class MoodModal {
         return this.characters.filter(c => c.chaos && (c.type === 'active' || c.type === 'semi-active'));
       case 'joy':
         return this.characters.filter(c => (!c.emotion.includes('sad') && !c.emotion.includes('angry') && !c.emotion.includes('shy') && c.moe >= 6 || c.emotion.includes('joy')) && (c.type === 'active' || c.type === 'semi-active'));
+      case 'edgy':
+        return this.characters.filter(c => (c.emotion.includes('edgy') && (c.type === 'active' || c.type === 'semi-active' || c.type === 'retired')));
+      case 'quiet':
+        return this.characters.filter(c => (c.emotion.includes('shy') || c.emotion.includes('calm')) && (c.type === 'active' || c.type === 'semi-active'));
       case 'sad':
         return this.characters.filter(c => (c.emotion.includes('sad') || c.emotion.includes('angry')) && (c.type === 'active' || c.type === 'semi-active' || c.type === 'retired' || c.type === 'inactive'));
       case 'male':
