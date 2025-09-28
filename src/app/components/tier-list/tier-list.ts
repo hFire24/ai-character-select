@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { CharacterService } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
 import { TierSettings } from "../tier-settings/tier-settings";
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
@@ -57,19 +57,14 @@ export class TierList {
     this.characterFilter = event.target.value;
   }
 
-
-  constructor(private http: HttpClient) {
-    this.loadCharacters();
-  }
-
-  loadCharacters() {
+  constructor(private characterService: CharacterService) {
     const shortNameMap: Record<string, string> = {
       'The Shadow Self': 'Shadow Self',
       'The AI Devotee': 'AI Devotee',
       'Future Sapphire': 'F. Sapphire',
       'The Collapsed': 'Collapsed'
     };
-    this.http.get<any[]>('assets/characters.json').subscribe(data => {
+    this.characterService.getCharacters().subscribe(data => {
       this.allCharacters = data.map(c => {
         let name = c.shortName || c.name;
         if (shortNameMap[name]) name = shortNameMap[name];
