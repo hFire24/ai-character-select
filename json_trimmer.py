@@ -25,11 +25,34 @@ def trim_characters_json():
         for field in fields_to_remove:
           data[character_key].pop(field, None)
   
-  # Write to new file
-  with open('characters.json', 'w', encoding='utf-8') as file:
-    json.dump(data, file, indent=2, ensure_ascii=False)
+  # Convert to TXT format
+  txt_content = []
   
-  print("characters.json created successfully")
+  if isinstance(data, list):
+    for character in data:
+      for key, value in character.items():
+        if key.lower() == 'name':
+          txt_content.append(f"Name: {value}")
+        else:
+            # Convert camelCase to Title Case with spaces
+            formatted_key = ''.join([' ' + c if c.isupper() else c for c in key]).strip().title()
+            txt_content.append(f"{formatted_key}: {value}")
+      txt_content.append("")  # Empty line between characters
+  elif isinstance(data, dict):
+    for character_key, character_data in data.items():
+      if isinstance(character_data, dict):
+        for key, value in character_data.items():
+          if key.lower() == 'name':
+            txt_content.append(f"Name: {value}")
+          else:
+            txt_content.append(f"{key}: {value}")
+        txt_content.append("")  # Empty line between characters
+  
+  # Write to TXT file
+  with open('characters.txt', 'w', encoding='utf-8') as file:
+    file.write('\n'.join(txt_content))
+  
+  print("characters.txt created successfully")
 
 if __name__ == "__main__":
   trim_characters_json()

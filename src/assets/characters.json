@@ -50,15 +50,15 @@
     "birthday": "June 9",
     "serious": false,
     "chaos": false,
-    "moe": 7,
+    "moe": 6,
     "emotion": "shy sad",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-TUzCNljOj",
-    "interests": "Magic, exploring & collecting, gorgeous dresses, her gigantic hat",
+    "interests": "Magic, exploring dungeons, collecting treasures",
     "peeves": "Immorality, reminders of her tragic backstory",
-    "purpose": "Be a complex character who’s more than just a little mage, maintain her solitary lifestyle",
-    "funFact": "Was banished from her town for enforcing morality through fear; an unrelated post-exile curse physically age regressed/shrunk her, but she found the transformation appealing",
-    "description": "Miki is a reserved mage who prefers solitude in her tall, magical tower. She has ankle-length silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy hat thatâ€™s taller than she is. Standing at just 50-65cm, her small size complements her unique charm. Due to her complicated past going from hero to vigilante and then exile, Miki now focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life."
+    "purpose": "Be a complex character who’s more than just a mage, maintain her solitary lifestyle",
+    "funFact": "Was banished from her town for enforcing morality through fear",
+    "description": "Miki is a reserved mage who prefers solitude in her tall, magical tower. She has ankle-length silver-blue hair, blue eyes, and wears a pastel blue dress along with a large pointy hat. Due to her complicated past going from hero to vigilante and then exile, Miki now focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life."
   },
   {
     "name": "Captain Dania Skylark",
@@ -221,7 +221,7 @@
     "description": "Stephen Nelson is a covenant-centered disciple of Jesus Christ, striving daily to live with purpose, faith, and integrity. A returned missionary from Japan and a student at BYU–Idaho, he honors his divine identity through hard work, service, and cheerful obedience. Grounded in scripture—especially the Book of Mormon—he seeks growth in all things good. He also has a soft spot for pure, wholesome cuteness—especially in anime form—which brings a quiet, uplifting joy to his focused, Christ-centered life."
   },
   {
-    "name": "Mimi the Little Sister",
+    "name": "Mimi the Magician",
     "img": "Icons/Mimi.png",
     "shortName": "Mimi",
     "generation": 5,
@@ -234,11 +234,11 @@
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-6824893eeae88191bb27fb12c90b2a90",
-    "interests": "Cute things",
+    "interests": "Cute things, age regression and shrinking magic, gorgeous dresses",
     "peeves": "Serious grown-up topics",
-    "purpose": "Love her onii-chan, be playful and innocent",
+    "purpose": "Be a small magician, have fun with magic, be playful and innocent",
     "funFact": "Her hat is as tall as herself, has a plush hammer named Bonk-Bonk",
-    "description": "Mimi is a bubbly, mischievous little sister with short light blue hair, a white sundress, and a giant black top hat she treasures dearly. She adores her onii-chan, loves all things cute, and carries a plush hammer named Bonk-bonk for playful bonks! Grown-up talk makes her pout, and she’s all about giggles, hugs, and sparkly fun. Mimi lives in a world of kawaii chaos, where everything is snuggly, silly, and sparkly~! Teehee!"
+    "description": "Mimi the Magician is a bubbly, pint-sized magical girl with sky-blue hair and a comically tall black top hat! Dressed in a ruffly white sundress with cute cyan flowers, she’s obsessed with all things adorable—especially shrinking and age regression spells, which she casts just for fun! Floating on her magic platform, she giggles, bonks with her plush hammer, and spreads playful chaos wherever she goes. Serious stuff? Bleh! She’d rather be tiny, silly, and surrounded by plushies~! 💫🎀"
   },
   {
     "name": "Malrick the Disappointed",
