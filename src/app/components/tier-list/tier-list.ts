@@ -323,33 +323,6 @@ export class TierList {
         this.allCharacters.splice(insertIdx, 0, ririRuru);
       }
     }
-    //Split Skreex & Skrax
-    const maryIdx = this.allCharacters.findIndex(c => c.name === 'Maribelle');
-    const ethanIdx = this.allCharacters.findIndex(c => c.name === 'Ethan');
-    if (maryIdx !== -1 && ethanIdx !== -1) {
-      // Remove any existing "Skreex", "Skrax", or "Zero Percent"
-      // Remove "Skreex", "Skrax", and "Zero Percent" from allCharacters
-      this.allCharacters = this.allCharacters.filter(
-        c => c.name !== 'Skreex' && c.name !== 'Skrax' && c.name !== 'Zero Percent'
-      );
-      // Also remove them from all tiers
-      for (const tier of this.tiers) {
-        tier.characters = tier.characters.filter(
-          c => c.name !== 'Skreex' && c.name !== 'Skrax' && c.name !== 'Zero Percent'
-        );
-      }
-      const insertIdx = maryIdx < ethanIdx ? maryIdx + 1 : ethanIdx;
-      if (this.splitTwins) {
-        // Insert "Skreex" and "Skrax" separately
-        const skreex = { name: 'Skreex', img: 'assets/Icons/Skreex.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
-        const skrax = { name: 'Skrax', img: 'assets/Icons/Skrax.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
-        this.allCharacters.splice(insertIdx, 0, skreex, skrax);
-      } else {
-        // Insert "Skreex & Skrax" together
-        const skreexSkrax = { name: 'Zero Percent', img: 'assets/Icons/Skreex and Skrax.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
-        this.allCharacters.splice(insertIdx, 0, skreexSkrax);
-      }
-    }
   }
 
   clear() {
