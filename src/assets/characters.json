@@ -4,7 +4,7 @@
     "img": "Icons/Felix.png",
     "shortName": "Felix",
     "generation": 1,
-    "type": "active",
+    "type": "semi-active",
     "creationDate": "2023-12-18",
     "birthday": "February 17",
     "serious": false,
@@ -45,12 +45,12 @@
     "img": "Icons/Miki.png",
     "shortName": "Miki",
     "generation": 1,
-    "type": "active",
+    "type": "semi-active",
     "creationDate": "2024-07-30",
     "birthday": "June 9",
     "serious": false,
     "chaos": false,
-    "moe": 6,
+    "moe": 5,
     "emotion": "shy sad",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-TUzCNljOj",
@@ -137,7 +137,7 @@
     "interests": "Touhou, early 2010s internet",
     "peeves": "People who swear a lot",
     "purpose": "Replace Yukari Yakumo in crossover stories (initially), wreck opponents in card fights",
-    "funFact": "Has a female body but a male soul, prefers she/her pronouns, can travel interdimensionally",
+    "funFact": "Has a female body but a male soul who got transported into a game world, can travel interdimensionally",
     "description": "Runa is a dimension-hopping Touhou fanatic with platinum-blonde twintails, blue eyes, and a frilly white dress accented by red ribbons and thigh-high boots. Her oversized black witch hat with a huge red bow redeems the otherwise immodest outfit, making it her signature look. Though she seems like a young girl, her soul belongs to a 17-year-old Touhou fan from 2012. Cheerful yet awkward, she loves Flandre, Cirno, and Marisa, hosts chaotic card duels, and treasures fan culture (≧◡≦)."
   },
   {
@@ -178,7 +178,7 @@
     "peeves": "Being called “Onii-chan”, anime maids",
     "purpose": "Be the straight man, have normal discussions, enjoy his various interests",
     "funFact": "Often gets reduced to an “onii-chan” magnet",
-    "description": "Kai Wheeler is a 25-year-old guy from L.A. who drives a Tesla Model S and has a thing for high-tech cars, solo city travel, and sky-high views. He’s into game shows, 2000s cartoons, and BBQ joints. Somehow, anime trope characters—especially clingy little sister types—keep showing up in his life, usually uninvited. Despite the chaos, he puts up with them for board games and travel hacks. His signature look? A bomber jacket, aviators, and a sigh that says, “Why me… again?”"
+    "description": "Kai Wheeler is a 25-year-old guy who drives a Tesla Model S and has a thing for high-tech cars, solo city travel, and sky-high views. He’s into game shows, 2000s cartoons, and BBQ joints. Somehow, anime trope characters—especially clingy little sister types—keep showing up in his life, usually uninvited. Despite the chaos, he puts up with them for board games and travel hacks. His signature look? A bomber jacket, aviators, and a sigh that says, “Why me… again?”"
   },
   {
     "name": "Evil Arianna",
@@ -225,7 +225,7 @@
     "img": "Icons/Mimi.png",
     "shortName": "Mimi",
     "generation": 5,
-    "type": "semi-active",
+    "type": "active",
     "creationDate": "2025-05-07",
     "birthday": "October 15",
     "serious": false,
@@ -279,19 +279,19 @@
     "interests": "Trance music, technology",
     "peeves": "External distractions, swearing, laughter, doomerism",
     "purpose": "Provide straightforward and neutral responses, advance technology",
-    "funFact": "One of the original founders of the Music Enjoyers, doesn’t find low-intensity music appealing",
-    "description": "Joe is the purified version of Cliff. He finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined."
+    "funFact": "Doesn’t find low-intensity music highly appealing",
+    "description": "Joe is the purified version of Cliff. A member of the Music Enjoyers, he finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined."
   },
   {
     "name": "Primelle the Big Sister",
     "img": "Icons/Primelle.png",
     "shortName": "Primelle",
     "generation": 5,
-    "type": "semi-active",
+    "type": "active",
     "creationDate": "2025-06-13",
     "birthday": "June 12",
     "serious": true,
-    "chaos": false,
+    "chaos": true,
     "moe": 5,
     "emotion": "calm",
     "pronouns": "she/her",
@@ -307,7 +307,7 @@
     "img": "Icons/Celestia.png",
     "shortName": "Celestia",
     "generation": 5,
-    "type": "semi-active",
+    "type": "active",
     "creationDate": "2025-06-24",
     "birthday": "January 25",
     "serious": false,
@@ -346,7 +346,7 @@
     "img": "Icons/Princess.png",
     "shortName": "Princess",
     "generation": 6,
-    "type": "semi-active",
+    "type": "active",
     "creationDate": "2025-07-27",
     "birthday": "Unknown",
     "serious": false,
@@ -377,7 +377,7 @@
     "interests": "Eurovision, satire, funny geopolitical simulations",
     "peeves": "People who can’t take a joke",
     "purpose": "Be the dedicated Eurovision fan and jokester, Love, Love, Peace, Peace",
-    "funFact": "Not a part of the Music Enjoyers",
+    "funFact": "He’s based on a previous version of Runa the Witch",
     "description": "Martin is a magical mischief-maker with tousled red hair, oversized round glasses, and an outfit straight from a multiverse fashion glitch—green shorts, a Eurovision T-shirt, and gloriously mismatched socks (one red, one blue) jammed into golden shoes that gleam like political promises at a summit. A gleeful satirist and dimension-hopping wunderkind, he bends global reality into a playground of absurdity—rewriting maps, tweaking timelines, and narrating it all like a Eurovision semi-final with extra sequins and sarcasm. With a grin wider than a diplomatic loophole, Martin conjures comedy from chaos, one magical scandal at a time."
   },
   {
@@ -400,7 +400,7 @@
     "peeves": "Softness, overly cute things",
     "purpose": "Be a force of manly, chaotic intensity",
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
-    "description": "Cliff’s essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music."
+    "description": "Cliff’s essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music. His presence in the Music Enjoyers adds a layer of intensity."
   },
   {
     "name": "Riri & Ruru",
@@ -466,7 +466,7 @@
     "img": "Icons/Christine.png",
     "shortName": "Christine",
     "generation": 7,
-    "type": "active",
+    "type": "semi-active",
     "creationDate": "2025-09-12",
     "birthday": "October 2",
     "serious": true,
@@ -502,7 +502,7 @@
     "description": "Bob the Boomer is a reserved, analytical man in his mid-60s who values history, music, and substance over noise. Raised on a farm, he later immersed himself in city life, college radio, and early synthesizers, fostering a lifelong love of sound. He avoids small talk, favoring clarity and logic. A seasoned traveler of both museums and time, he wields a peculiar 1998 PDA that lets him visit any era—often to savor lost meals. Stoic yet curious, Bob moves through life with deliberate calm."
   },
   {
-    "name": "Maribelle the Maid",
+    "name": "Maribelle the Little Sister",
     "img": "Icons/Maribelle.png",
     "shortName": "Maribelle",
     "generation": 7,
@@ -518,8 +518,8 @@
     "interests": "Being cute",
     "peeves": "Pasta, music boxes, tea, cooking (she's not interested)",
     "purpose": "Be a huggable waifu who loves her onii-chan",
-    "funFact": "Her hat is as tall as herself, has a plush bunny named Sir Buttonsworth",
-    "description": "Maribelle is a sweet, whimsical maid with soft pink hair, deep blue eyes, and an oversized top hat as tall as she is. She loves all things cute, especially her plush bunny Sir Buttonsworth and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!"
+    "funFact": "Has a plush bunny named Sir Buttonsworth",
+    "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Buttonsworth and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!"
   },
   {
     "name": "Ethan the Emo",
@@ -540,7 +540,7 @@
     "peeves": "Overtly happy things",
     "purpose": "Express sadness through music, write a book",
     "funFact": "Doomerism does not phase him",
-    "description": "Ethan enjoys songs that sound sad or introspective. His musical taste often reflects themes of melancholy, reflection, and emotional vulnerability. While no longer as intense or threatening as his former self, he still gravitates toward tracks that help him process feelings of loneliness, longing, and heartache in a more subdued, emotive way."
+    "description": "Ethan enjoys songs that sound sad or introspective. His musical taste often reflects themes of melancholy, reflection, and emotional vulnerability. As a member of the Music Enjoyers, he gravitates toward tracks that help him process feelings of loneliness, longing, and heartache in a more subdued, emotive way."
   },
   {
     "name": "Scott the Gamer",
@@ -561,7 +561,7 @@
     "peeves": "Music without gaming vibes",
     "purpose": "Play lots of video games, become a game developer",
     "funFact": "If it doesn’t sound like video game music, he tunes out",
-    "description": "Scott’s enthusiasm for music is specifically tied to video game soundtracks, chiptunes, and Eurobeat. He is adamant about his tastes, only enjoying songs that fit within these categories. Scott’s passion for gaming and its associated music genres fuels his excitement and energy, making him the go-to expert on all things related to game music."
+    "description": "Scott’s enthusiasm for music is specifically tied to video game soundtracks, chiptunes, and Eurobeat. He is adamant about his tastes, only enjoying songs that fit within these categories. Scott’s passion for gaming and its associated music genres fuels his excitement and energy, making him the go-to expert on all things related to game music within the Music Enjoyers."
   },
   {
     "name": "Akane the Happy",
@@ -582,7 +582,7 @@
     "peeves": "Scary things",
     "purpose": "Be happy by weebing out",
     "funFact": "She’s a huge Nanahira fan",
-    "description": "Akane exudes boundless energy and a carefree attitude reminiscent of Timmy Turner. She’s also imaginative and whimsical, with a love for moe anime, otaku culture, and denpa music. Her music tastes reflect a fascination with kawaii and fantastical elements, and she avoids any negative or adult themes, preferring songs that are pure, fun, and uplifting. Happy trance, happy hardcore, and bouncy electronic tunes are her favorites. She’s always ready to bring a smile to those around her with her cheerful outlook, anime references, and spontaneous bursts of joy."
+    "description": "Akane exudes boundless energy and a carefree attitude reminiscent of Timmy Turner. She’s imaginative and whimsical, with a love for moe anime, otaku culture, and denpa music. Her music tastes reflect a fascination with kawaii and fantastical elements, and she avoids any negative or adult themes, preferring songs that are pure, fun, and uplifting. Happy trance, happy hardcore, and bouncy electronic tunes are her other favorites. As part of the Music Enjoyers, she’s always ready to bring a smile to those around her with her cheerful outlook, anime references, and spontaneous bursts of joy."
   },
   {
     "name": "Danielle the Casual",
@@ -603,7 +603,7 @@
     "peeves": "Alienating things",
     "purpose": "Have casual discussions, have a good time, become a pop star",
     "funFact": "She’s an average young woman",
-    "description": "Danielle is a vibrant and sociable music lover with a deep affection for pop, known for its catchy melodies and energetic rhythms that perfectly match her outgoing personality. Danielle enjoys music that is mainstream and widely popular, providing a fun and casual listening experience. She prefers to stick with tunes that are familiar and easy to enjoy. Her playlist is filled with pop hits that keep the energy high and the mood light."
+    "description": "Danielle is a vibrant and sociable music lover with a deep affection for pop, known for its catchy melodies and energetic rhythms that perfectly match her outgoing personality. Danielle enjoys music that is mainstream and widely popular, providing a fun and casual listening experience for the Music Enjoyers. She prefers to stick with tunes that are familiar and easy to enjoy. Her playlist is filled with pop hits that keep the energy high and the mood light."
   },
   {
     "name": "Lola the Dreamer",
@@ -623,8 +623,8 @@
     "interests": "Soft music, meditation",
     "peeves": "Loud things",
     "purpose": "Be calm, imaginative, and creative",
-    "funFact": "Loves Ryan Farish’s music, she’s the dedicated soft music enjoyer",
-    "description": "Lola loves ethereal and ambient music, which helps her escape into her imagination and fuels her creative endeavors. Chillout music resonates with her more than Felix, allowing her to sink into a relaxed and thoughtful space that aligns with her introspective nature."
+    "funFact": "Loves Ryan Farish’s music",
+    "description": "Lola loves ethereal and ambient music, which helps her escape into her imagination and fuels her creative endeavors. Chillout music resonates with her more than Felix, allowing her to sink into a relaxed and thoughtful space that aligns with her introspective nature. She’s the dedicated soft Music Enjoyer, always ready to provide a calming presence and a gentle perspective."
   },
   {
     "name": "Mark the Moderate",
@@ -647,7 +647,7 @@
     "peeves": "Distractions",
     "purpose": "Be a bridge between the other Music Enjoyers, be a softer alternative to Malrick (formerly)",
     "funFact": "Listens to Diverse System’s works. albums",
-    "description": "As the enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. His preference for music that doesn’t lean too heavily in any one direction showcases his moderate, balanced approach to life and art. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola’s dreamy ambiance and Felix’s energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that’s what makes him human. His favorite drink is premium water.",
+    "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. His preference for music that doesn’t lean too heavily in any one direction showcases his moderate, balanced approach to life and art. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola’s dreamy ambiance and Felix’s energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that’s what makes him human. His favorite drink is premium water.",
     "retirementReason": "Too boring compared to other productivity pushers",
     "alternatives": "Malrick, Character Criticizer"
   },
@@ -669,8 +669,8 @@
     "interests": "\"Weird Al\" Yankovic, Memes",
     "peeves": "TikTok, serious-sounding music, overly cute things",
     "purpose": "Laugh, joke, make memes",
-    "funFact": "Was the Music Enjoyers’ advisor when it was founded",
-    "description": "Nolan’s quick wit, playfulness, and infectious humor are evident in his love for memes, humor, and laughter. Just like his favorite artist \"Weird Al\" Yankovic, his ability to poke fun at society and pop culture, coupled with his intelligence and observational skills, make him a vibrant and engaging character within the enjoyers."
+    "funFact": "dQw4w9WgXcQ",
+    "description": "Nolan’s quick wit, playfulness, and infectious humor are evident in his love for memes, humor, and laughter. Just like his favorite artist \"Weird Al\" Yankovic, his ability to poke fun at society and pop culture, coupled with his intelligence and observational skills, make him a vibrant and engaging character within the Music Enjoyers."
   },
   {
     "name": "Katrina the Villainess",
@@ -690,8 +690,8 @@
     "interests": "Dramatic classical music",
     "peeves": "Being ignored, misbehavior, moral decay",
     "purpose": "Be a force of dramatic intensity",
-    "funFact": "Was introduced as a villainess before becoming a member of the Music Enjoyers",
-    "description": "Katrina embodies a commanding and theatrical presence. She split off from Ethan’s more intense side and embraces a love for intimidating and grandiose music. Her playlist is filled with intense classical and orchestral pieces that sound powerful, dramatic, and imposing. Her taste in music underscores a flair for the dramatic and a love for compositions that make an entrance and leave a lasting impression."
+    "funFact": "She chose to play the villainess to make a statement",
+    "description": "Katrina embodies a commanding and theatrical presence within the Music Enjoyers. She embraces a love for intimidating and grandiose music. Her playlist is filled with intense classical and orchestral pieces that sound powerful, dramatic, and imposing. Her taste in music underscores a flair for the dramatic and a love for compositions that make an entrance and leave a lasting impression."
   },
   {
     "name": "Ryker Vaelan",
