@@ -11,6 +11,7 @@ import { CharacterService, Character } from '../../services/character.service';
 })
 export class CharacterGrid {
   @Input() showMore = false;
+  @Input() showRetired = false;
   characters: Character[] = [];
 
   constructor(private characterService: CharacterService) {
@@ -28,9 +29,11 @@ export class CharacterGrid {
 
   get filteredCharacters(): Character[] {
     if (!this.showMore) {
-      return this.characters.filter(c => c.type === 'active' || c.type === 'semi-active' || c.type === 'me');
+      return this.characters.filter(c => c.importance >= 6);
+    } else if(!this.showRetired) {
+      return this.characters.filter(c => c.importance <= 5 && !c.type.includes('retired') && !c.type.includes('inactive'));
     } else {
-      return this.characters.filter(c => c.type === 'side' || c.type === 'retired' || c.type === 'future' || c.type === 'inactive');
+      return this.characters.filter(c => c.importance <= 5);
     }
   }
 

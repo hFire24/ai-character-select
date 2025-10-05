@@ -18,10 +18,15 @@ export class Roster {
   showMoreCharacters = false;
   selectedCharacter: Character | null = null;
   selectedMood: Mood | null = null;
+  showRetiredCharacters = false;
 
   toggleCharacters() {
     this.showMoreCharacters = !this.showMoreCharacters;
     window.scrollTo({ top: 0 });
+  }
+
+  toggleRetiredCharacters() {
+    this.showRetiredCharacters = !this.showRetiredCharacters;
   }
 
   displayCharacter() {

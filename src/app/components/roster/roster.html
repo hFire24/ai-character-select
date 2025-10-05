@@ -1,10 +1,13 @@
 <header>
   <h1>
-    {{ showMoreCharacters ? 'Side Characters and Retired Characters' : 'Choose Your Character!' }}
+    {{ showMoreCharacters ? 'More Characters' : 'Choose Your Character!' }}
   </h1>
   <app-header-buttons *ngIf="!showMoreCharacters" (selectMood)="selectedMood = $event"></app-header-buttons>
+  <button *ngIf="showMoreCharacters" (click)="toggleRetiredCharacters()" class="toggle-retired-btn">
+    {{ showRetiredCharacters ? 'Hide Retired' : 'Show Retired' }}
+  </button>
 </header>
-<app-character-grid [showMore]="showMoreCharacters" (selectCharacter)="selectedCharacter = $event"></app-character-grid>
+<app-character-grid [showMore]="showMoreCharacters" [showRetired]="showRetiredCharacters" (selectCharacter)="selectedCharacter = $event"></app-character-grid>
 <app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>
 <app-mood-modal *ngIf="selectedMood" [mood]="selectedMood" (close)="selectedMood = null" (selectCharacter)="selectedCharacter = $event"></app-mood-modal>
 <app-footer-buttons (toggleMore)="toggleCharacters()"></app-footer-buttons>

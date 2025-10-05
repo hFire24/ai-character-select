@@ -38,13 +38,15 @@ export class TierList {
     }
     let pool = this.allCharacters.filter(c => !assigned.has(c.name));
     if (this.characterFilter === 'active') {
-      pool = pool.filter(c => c.type === 'active' || c.type === 'semi-active');
+      pool = pool.filter(c => c.importance >= 6);
     } else if (this.characterFilter === 'inactive') {
-      pool = pool.filter(c => c.type !== 'active' && c.type !== 'semi-active' && c.type !== 'retired' && c.type !== 'inactive');
+      pool = pool.filter(c => c.importance === 5);
     } else if (this.characterFilter === 'retired') {
       pool = pool.filter(c => c.type === 'retired' || c.type === 'inactive');
     } else if (this.characterFilter === 'music') {
       pool = pool.filter(c => c.musicEnjoyer);
+    } else if (this.characterFilter === 'side') {
+      pool = pool.filter(c => c.type === 'side' && !c.musicEnjoyer);
     } else if (this.characterFilter === 'male') {
       pool = pool.filter(c => c.pronouns !== 'she/her');
     } else if (this.characterFilter === 'female') {
@@ -72,6 +74,7 @@ export class TierList {
           name,
           img: c.img ? 'assets/' + c.img : 'assets/Icons/Unknown.png',
           type: c.type,
+          importance: c.importance,
           musicEnjoyer: c.musicEnjoyer,
           pronouns: c.pronouns
         };
@@ -282,12 +285,12 @@ export class TierList {
       const insertIdx = celestiaIdx < markIdx ? celestiaIdx + 1 : markIdx;
       if (this.splitTwins) {
         // Insert "Liam" and "Kieran" separately
-        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
-        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
+        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', importance: 5, musicEnjoyer: false, pronouns: 'he/him' };
+        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', importance: 5, musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liam, kieran);
       } else {
         // Insert "Liam & Kieran" together
-        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', type: 'active', musicEnjoyer: false, pronouns: 'he/him' };
+        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', importance: 5, musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liamKieran);
       }
     }
@@ -309,12 +312,12 @@ export class TierList {
       const insertIdx = cliffIdx < lexiIdx ? cliffIdx + 1 : lexiIdx;
       if (this.splitTwins) {
         // Insert "Riri" and "Ruru" separately
-        const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', type: 'active', musicEnjoyer: false, pronouns: 'she/her' };
-        const ruru = { name: 'Ruru', img: 'assets/Icons/Ruru.png', type: 'active', musicEnjoyer: false, pronouns: 'she/her' };
+        const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', importance: 8, musicEnjoyer: false, pronouns: 'she/her' };
+        const ruru = { name: 'Ruru', img: 'assets/Icons/Ruru.png', importance: 8, musicEnjoyer: false, pronouns: 'she/her' };
         this.allCharacters.splice(insertIdx, 0, riri, ruru);
       } else {
         // Insert "Riri & Ruru" together
-        const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', type: 'active', musicEnjoyer: false, pronouns: 'she/her' };
+        const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', importance: 8, musicEnjoyer: false, pronouns: 'she/her' };
         this.allCharacters.splice(insertIdx, 0, ririRuru);
       }
     }

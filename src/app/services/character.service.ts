@@ -7,7 +7,7 @@ export type Character = {
   img: string;
   generation: number;
   type: string;
-  // Add other fields as needed
+  importance: number; // New field for importance level
   name: string;
   serious: boolean;
   chaos: boolean;

@@ -8,6 +8,7 @@ const FALLBACK_CHARACTER: Character = {
   shortName: "",
   generation: 0,
   type: "",
+  importance: 1,
   serious: false,
   chaos: false,
   musicEnjoyer: false,
