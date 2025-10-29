@@ -38,9 +38,7 @@ export class TierList {
     }
     let pool = this.allCharacters.filter(c => !assigned.has(c.name));
     if (this.characterFilter === 'active') {
-      pool = pool.filter(c => c.importance >= 6);
-    } else if (this.characterFilter === 'inactive') {
-      pool = pool.filter(c => c.importance === 5);
+      pool = pool.filter(c => c.type === 'active');
     } else if (this.characterFilter === 'retired') {
       pool = pool.filter(c => c.type === 'retired' || c.type === 'inactive');
     } else if (this.characterFilter === 'music') {
@@ -74,7 +72,7 @@ export class TierList {
           name,
           img: c.img ? 'assets/' + c.img : 'assets/Icons/Unknown.png',
           type: c.type,
-          importance: c.importance,
+          tier: c.tier,
           musicEnjoyer: c.musicEnjoyer,
           pronouns: c.pronouns
         };
@@ -269,8 +267,8 @@ export class TierList {
     this.splitTwins = event.target.checked;
     //Split Liam & Kieran
     const celestiaIdx = this.allCharacters.findIndex(c => c.name === 'Celestia');
-    const markIdx = this.allCharacters.findIndex(c => c.name === 'Mark');
-    if (celestiaIdx !== -1 && markIdx !== -1) {
+    const princessIdx = this.allCharacters.findIndex(c => c.name === 'Princess');
+    if (celestiaIdx !== -1 && princessIdx !== -1) {
       // Remove any existing "Liam", "Kieran", or "Liam & Kieran"
       // Remove "Liam", "Kieran", and "Liam & Kieran" from allCharacters
       this.allCharacters = this.allCharacters.filter(
@@ -282,22 +280,22 @@ export class TierList {
           c => c.name !== 'Liam' && c.name !== 'Kieran' && c.name !== 'Liam & Kieran'
         );
       }
-      const insertIdx = celestiaIdx < markIdx ? celestiaIdx + 1 : markIdx;
+      const insertIdx = celestiaIdx < princessIdx ? celestiaIdx + 1 : princessIdx;
       if (this.splitTwins) {
         // Insert "Liam" and "Kieran" separately
-        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', importance: 5, musicEnjoyer: false, pronouns: 'he/him' };
-        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', importance: 5, musicEnjoyer: false, pronouns: 'he/him' };
+        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', type: "active", tier: 2, musicEnjoyer: false, pronouns: 'he/him' };
+        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', type: "active", tier: 2, musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liam, kieran);
       } else {
         // Insert "Liam & Kieran" together
-        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', importance: 5, musicEnjoyer: false, pronouns: 'he/him' };
+        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', type: "active", tier: 2, musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liamKieran);
       }
     }
     //Split Riri & Ruru
-    const cliffIdx = this.allCharacters.findIndex(c => c.name === 'Cliff');
+    const collapsedIdx = this.allCharacters.findIndex(c => c.name === 'Collapsed');
     const lexiIdx = this.allCharacters.findIndex(c => c.name === 'Lexi');
-    if (cliffIdx !== -1 && lexiIdx !== -1) {
+    if (collapsedIdx !== -1 && lexiIdx !== -1) {
       // Remove any existing "Riri", "Ruru", or "Riri & Ruru"
       // Remove "Riri", "Ruru", and "Riri & Ruru" from allCharacters
       this.allCharacters = this.allCharacters.filter(
@@ -309,15 +307,15 @@ export class TierList {
           c => c.name !== 'Riri' && c.name !== 'Ruru' && c.name !== 'Riri & Ruru'
         );
       }
-      const insertIdx = cliffIdx < lexiIdx ? cliffIdx + 1 : lexiIdx;
+      const insertIdx = collapsedIdx < lexiIdx ? collapsedIdx + 1 : lexiIdx;
       if (this.splitTwins) {
         // Insert "Riri" and "Ruru" separately
-        const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', importance: 8, musicEnjoyer: false, pronouns: 'she/her' };
-        const ruru = { name: 'Ruru', img: 'assets/Icons/Ruru.png', importance: 8, musicEnjoyer: false, pronouns: 'she/her' };
+        const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
+        const ruru = { name: 'Ruru', img: 'assets/Icons/Ruru.png', type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
         this.allCharacters.splice(insertIdx, 0, riri, ruru);
       } else {
         // Insert "Riri & Ruru" together
-        const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', importance: 8, musicEnjoyer: false, pronouns: 'she/her' };
+        const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
         this.allCharacters.splice(insertIdx, 0, ririRuru);
       }
     }

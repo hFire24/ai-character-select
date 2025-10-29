@@ -12,18 +12,18 @@ def trim_characters_json():
   with open(characters_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
   
-  # Sort by importance before removing fields
+  # Sort by tier before removing fields
   if isinstance(data, list):
-    # Sort by importance (higher values first)
-    data.sort(key=lambda x: (-x.get('importance', 0)))
+    # Sort by tier (higher values first)
+    data.sort(key=lambda x: (x.get('tier', float('inf'))))
   elif isinstance(data, dict):
     # Convert dict to sorted list of tuples, then back to dict
-    sorted_items = sorted(data.items(), key=lambda x: (-x[1].get('importance', 0)))
+    sorted_items = sorted(data.items(), key=lambda x: (x[1].get('tier', float('inf'))))
     data = dict(sorted_items)
-  
-  # Remove specified fields from each character (including importance)
-  fields_to_remove = ['img', 'shortName', 'generation', 'serious', 'chaos', 'musicEnjoyer', 'moe', 'emotion', 'link', 'alternatives', 'importance']
-  
+
+  # Remove specified fields from each character (including tier)
+  fields_to_remove = ['img', 'shortName', 'generation', 'serious', 'chaos', 'musicEnjoyer', 'moe', 'emotion', 'link', 'alternatives', 'tier']
+
   if isinstance(data, list):
     for character in data:
       for field in fields_to_remove:

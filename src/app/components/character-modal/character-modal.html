@@ -14,11 +14,11 @@
       <span *ngIf="character.serious">🤔</span>
       <span *ngIf="character.chaos">🤪</span>
       <span *ngIf="character.emotion?.includes('joy')">😀</span>
+      <span *ngIf="character.emotion?.includes('strict')">😤</span>
+      <span *ngIf="character.emotion?.includes('angry')">😠</span>
       <span *ngIf="character.emotion?.includes('shy')">🫣</span>
       <span *ngIf="character.emotion?.includes('calm')">😌</span>
-      <span *ngIf="character.emotion?.includes('strict')">😤</span>
       <span *ngIf="character.emotion?.includes('sad')">☹️</span>
-      <span *ngIf="character.emotion?.includes('angry')">😠</span>
       <span *ngIf="character.emotion?.includes('edgy')">😈</span>
       <span *ngIf="character.emotion?.includes('straightforward')">🎯</span>
       <span *ngIf="character.moe >= 7">🩷</span>

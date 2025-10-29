@@ -29,11 +29,11 @@ export class CharacterGrid {
 
   get filteredCharacters(): Character[] {
     if (!this.showMore) {
-      return this.characters.filter(c => c.importance >= 6);
+      return this.characters.filter(c => c.tier <= 3);
     } else if(!this.showRetired) {
-      return this.characters.filter(c => c.importance <= 5 && !c.type.includes('retired') && !c.type.includes('inactive'));
+      return this.characters.filter(c => c.tier > 3 && !c.type.includes('retired') && !c.type.includes('inactive'));
     } else {
-      return this.characters.filter(c => c.importance <= 5);
+      return this.characters.filter(c => c.tier > 3);
     }
   }
 

@@ -32,25 +32,25 @@ export class MoodModal {
   get filteredCharacters(): Character[] {
     switch (this.mood.arg) {
       case 'serious':
-        return this.characters.filter(c => (c.serious || c.emotion.includes('straightforward')) && c.importance >= 6);
+        return this.characters.filter(c => (c.serious || c.emotion.includes('straightforward')) && c.tier <= 3);
       case 'chaos':
-        return this.characters.filter(c => c.chaos && c.importance >= 6);
+        return this.characters.filter(c => c.chaos && c.tier <= 3);
       case 'joy':
-        return this.characters.filter(c => (!c.emotion.includes('sad') && !c.emotion.includes('angry') && !c.emotion.includes('shy') && c.moe >= 6 || c.emotion.includes('joy')) && c.importance >= 6);
+        return this.characters.filter(c => (!c.emotion.includes('sad') && !c.emotion.includes('angry') && !c.emotion.includes('shy') && c.moe >= 6 || c.emotion.includes('joy')) && c.tier <= 3);
       case 'edgy':
         return this.characters.filter(c => (c.emotion.includes('edgy') && c.type !== 'side'));
       case 'quiet':
-        return this.characters.filter(c => (c.emotion.includes('shy') || c.emotion.includes('calm')) && c.importance >= 6);
+        return this.characters.filter(c => (c.emotion.includes('shy') || c.emotion.includes('calm')) && c.tier <= 3);
       case 'sad':
         return this.characters.filter(c => (c.emotion.includes('sad') || c.emotion.includes('angry')) && (c.type !== 'side'));
       case 'male':
-        return this.characters.filter(c => c.pronouns === 'he/him' && c.importance >= 6);
+        return this.characters.filter(c => c.pronouns === 'he/him' && c.tier <= 3);
       case 'female':
-        return this.characters.filter(c => c.pronouns === 'she/her' && c.importance >= 6);
+        return this.characters.filter(c => c.pronouns === 'she/her' && c.tier <= 3);
       case 'moe0':
-        return this.characters.filter(c => c.moe < 4 && c.importance >= 6);
+        return this.characters.filter(c => c.moe < 4 && c.tier <= 3);
       case 'moe':
-        return this.characters.filter(c => c.moe >= 7 && c.importance >= 6);
+        return this.characters.filter(c => c.moe >= 7 && c.tier <= 3);
       default:
         return [];
     }
