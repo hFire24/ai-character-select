@@ -86,9 +86,25 @@ export class MoodModal {
     const sourceCharacters = (this.filteredCharacters && this.filteredCharacters.length > 0)
       ? this.filteredCharacters
       : this.characters.filter(c => c.type !== 'me' && (c.type === 'active' || c.type === 'semi-active'));
-    if (sourceCharacters && sourceCharacters.length > 0) {
-      const idx = Math.floor(Math.random() * sourceCharacters.length);
-      const selectedCharacter = sourceCharacters[idx];
+    // Create weighted array based on tier
+    const weightedCharacters: Character[] = [];
+    sourceCharacters.forEach(character => {
+      let weight = 1; // Default weight for tier 3
+      if (character.tier === 1) {
+        weight = 3;
+      } else if (character.tier === 2) {
+        weight = 2;
+      }
+      
+      for (let i = 0; i < weight; i++) {
+        weightedCharacters.push(character);
+      }
+    });
+
+    const sourceToUse = weightedCharacters.length > 0 ? weightedCharacters : sourceCharacters;
+    if (sourceToUse && sourceToUse.length > 0) {
+      const idx = Math.floor(Math.random() * sourceToUse.length);
+      const selectedCharacter = sourceToUse[idx];
       const chatLink = this.getChatLink(selectedCharacter);
       if (chatLink) {
         window.open(chatLink, '_blank');
