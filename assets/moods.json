@@ -9,5 +9,6 @@
   { "name": "Female", "emoji": "♀️", "arg": "female", "color":"#9b59b6", "description": "Girls just want to have fun!" },
   { "name": "Not Moe", "emoji": "🚫🩷", "arg": "moe0", "color":"#7f8c8d", "description": "Characters who are not cute in the moe sense." },
   { "name": "Moe", "emoji": "🩷", "arg": "moe", "color":"pink", "description": "Characters who are so cute in the moe sense." },
+  { "name": "Favorites", "emoji": "⭐", "arg": "favorites", "color":"#2ecc71", "description": "" },
   { "name": "All", "emoji": "❓", "arg": "none", "description": "Click on the random button to go to a random character. Anyone can be selected." }
 ]
