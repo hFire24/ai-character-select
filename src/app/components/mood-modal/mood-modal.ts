@@ -51,6 +51,8 @@ export class MoodModal {
         return this.characters.filter(c => c.moe < 4 && c.tier <= 3);
       case 'moe':
         return this.characters.filter(c => c.moe >= 7 && c.tier <= 3);
+      case 'favorites':
+        return this.characters.filter(c => c.tier <= 2).sort((a, b) => a.tier - b.tier);
       default:
         return [];
     }
