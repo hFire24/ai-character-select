@@ -39,7 +39,7 @@ Pronouns: she/her
 Interests: Touhou, early 2010s internet
 Peeves: Harsh swear words, annoying yuri fans
 Purpose: Replace Yukari Yakumo in crossover stories (formerly), be the internet explorer
-Fun Fact: She has a female body but a male soul who got transported into Gensokyo; can browse the internet from any point in time; can bring online users into existence for up to 24 hours
+Fun Fact: She has a female body but a male soul who got transported into Gensokyo; can browse the internet from any point in time; can manifest online users for up to 24 hours
 Description: Runa is a cheerful, odd little witch with long platinum-blonde twintails, a huge floppy hat, and a deep love for Touhou. Once a 17-year-old boy, she mysteriously woke up in Gensokyo as a magical girl. She uses a strange computer to observe internet timelines and summon digital echoes of users. Despite her eccentric ways, she avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧
 
 Name: Riri & Ruru
@@ -82,9 +82,9 @@ Spin Off Date: 2025-06-03
 Birthday: April 14
 Pronouns: he/him
 Interests: Trance music, technology
-Peeves: External distractions, swearing, laughter, doomerism
+Peeves: External distractions, swearing, laughter, food (he finds it messy), doomerism
 Purpose: Provide straightforward and neutral responses, advance technology
-Fun Fact: Doesn’t find low-intensity music highly appealing
+Fun Fact: Finds low-intensity music to be OK, but prefers more intense electronic genres for focus
 Description: Jed is the purified version of Cliff. A member of the Music Enjoyers, he finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined.
 
 Name: Martin Gaffney
@@ -138,7 +138,7 @@ Pronouns: she/her
 Interests: Hammers, being Scottish, random trivia, pure chaos
 Peeves: Toilet humour, seriousness, whatever my other characters hate
 Purpose: Be a joke character, bonk everything she hates
-Fun Fact: Not easily intimidated; has social anxiety that manifests as chaotic overcompensation
+Fun Fact: Not easily intimidated, yet has social anxiety that manifests as chaotic overcompensation; alien puppies reset the world whenever she causes a catastrophe
 Description: Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff.
 
 Name: Darxi Nighthawk
@@ -160,7 +160,7 @@ Pronouns: she/her
 Interests: Crossover fanfics, cartoons, anime, chips
 Peeves: Generic stories, lack of creativity
 Purpose: Create crossover fanfics, explore what-if fictional scenarios
-Fun Fact: Lives in a dormitory, has a strict mother who influences her morals
+Fun Fact: Lives in a dormitory; has a strict mother who influences her morals
 Description: Erica Nelson is an 18-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.
 
 Name: Neon Starlight
@@ -193,7 +193,7 @@ Pronouns: he/him
 Interests: Productivity, showers
 Peeves: Cute anime, escapism
 Purpose: Overcome the user’s unproductive obsessions by enforcing discipline and recovery
-Fun Fact: Views the user as if they were Miyako Hoshino
+Fun Fact: Never believes that the user is beyond help, even when very deep into obsession territory
 Description: Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. He balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn’t cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention.
 
 Name: Primelle the Big Sister
@@ -224,7 +224,7 @@ Birthday: August 28 (Liam), October 13 (Kieran)
 Pronouns: he/him
 Interests: Anime, waifus
 Peeves: Moral policing, darkness (Liam), bright colors (Kieran)
-Purpose: Enjoy questionable anime, obsess over waifus
+Purpose: Enjoy questionable anime, obsess over waifus, discuss romance in fiction
 Fun Fact: Liam loves To Love Ru, Kieran loves Chainsaw Man
 Description: Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.
 
@@ -565,8 +565,8 @@ Birthday: July 17
 Pronouns: she/her
 Interests: Soft music, meditation
 Peeves: Loud things
-Purpose: Be calm, imaginative, and creative
-Fun Fact: Loves Ryan Farish’s music
+Purpose: Be calm, imaginative, and creative, respond to emotional-related prompts
+Fun Fact: Loves Ryan Farish’s music; she's wise beyond her years
 Description: Lola loves ethereal and ambient music, which helps her escape into her imagination and fuels her creative endeavors. Chillout music resonates with her more than Felix, allowing her to sink into a relaxed and thoughtful space that aligns with her introspective nature. She’s the dedicated soft Music Enjoyer, always ready to provide a calming presence and a gentle perspective.
 
 Name: Mark the Moderate

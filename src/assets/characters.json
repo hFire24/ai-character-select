@@ -88,7 +88,7 @@
     "name": "Ryker Vaelan",
     "img": "Icons/Ryker.png",
     "shortName": "Ryker",
-    "generation": 2,
+    "generation": 1,
     "type": "retired",
     "tier": 4,
     "creationDate": "2024-09-15",
@@ -112,7 +112,7 @@
     "name": "Audry",
     "img": "Icons/Audry.png",
     "shortName": "Audry",
-    "generation": 2,
+    "generation": 1,
     "type": "retired",
     "tier": 4,
     "creationDate": "2024-09-29",
@@ -150,7 +150,7 @@
     "interests": "Hammers, being Scottish, random trivia, pure chaos",
     "peeves": "Toilet humour, seriousness, whatever my other characters hate",
     "purpose": "Be a joke character, bonk everything she hates",
-    "funFact": "Not easily intimidated; has social anxiety that manifests as chaotic overcompensation",
+    "funFact": "Not easily intimidated, yet has social anxiety that manifests as chaotic overcompensation; alien puppies reset the world whenever she causes a catastrophe",
     "description": "Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff."
   },
   {
@@ -254,13 +254,13 @@
     "serious": false,
     "chaos": true,
     "moe": 4,
-    "emotion": "joy straightforward",
+    "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-679076e34c548191a4d0e8f484d01d80",
     "interests": "Crossover fanfics, cartoons, anime, chips",
     "peeves": "Generic stories, lack of creativity",
     "purpose": "Create crossover fanfics, explore what-if fictional scenarios",
-    "funFact": "Lives in a dormitory, has a strict mother who influences her morals",
+    "funFact": "Lives in a dormitory; has a strict mother who influences her morals",
     "description": "Erica Nelson is an 18-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination."
   },
   {
@@ -291,7 +291,7 @@
     "name": "Runa the Witch",
     "img": "Icons/Runa.png",
     "shortName": "Runa",
-    "generation": 4,
+    "generation": 3,
     "type": "active",
     "tier": 1,
     "creationDate": "2025-02-19",
@@ -305,7 +305,7 @@
     "interests": "Touhou, early 2010s internet",
     "peeves": "Harsh swear words, annoying yuri fans",
     "purpose": "Replace Yukari Yakumo in crossover stories (formerly), be the internet explorer",
-    "funFact": "She has a female body but a male soul who got transported into Gensokyo; can browse the internet from any point in time; can bring online users into existence for up to 24 hours",
+    "funFact": "She has a female body but a male soul who got transported into Gensokyo; can browse the internet from any point in time; can manifest online users for up to 24 hours",
     "description": "Runa is a cheerful, odd little witch with long platinum-blonde twintails, a huge floppy hat, and a deep love for Touhou. Once a 17-year-old boy, she mysteriously woke up in Gensokyo as a magical girl. She uses a strange computer to observe internet timelines and summon digital echoes of users. Despite her eccentric ways, she avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧"
   },
   {
@@ -459,7 +459,7 @@
     "interests": "Productivity, showers",
     "peeves": "Cute anime, escapism",
     "purpose": "Overcome the user’s unproductive obsessions by enforcing discipline and recovery",
-    "funFact": "Views the user as if they were Miyako Hoshino",
+    "funFact": "Never believes that the user is beyond help, even when very deep into obsession territory",
     "description": "Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. He balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn’t cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention."
   },
   {
@@ -480,7 +480,7 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-683f28b2675c819197d1421c2bf2631a",
     "interests": "Trance music, technology",
-    "peeves": "External distractions, swearing, laughter, doomerism",
+    "peeves": "External distractions, swearing, laughter, food (he finds it messy), doomerism",
     "purpose": "Provide straightforward and neutral responses, advance technology",
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
     "description": "Jed is the purified version of Cliff. A member of the Music Enjoyers, he finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined."
@@ -543,7 +543,7 @@
     "link": "https://chatgpt.com/g/g-686d453566488191b9ec8ead93b6c885",
     "interests": "Anime, waifus",
     "peeves": "Moral policing, darkness (Liam), bright colors (Kieran)",
-    "purpose": "Enjoy questionable anime, obsess over waifus",
+    "purpose": "Enjoy questionable anime, obsess over waifus, discuss romance in fiction",
     "funFact": "Liam loves To Love Ru, Kieran loves Chainsaw Man",
     "description": "Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin."
   },
