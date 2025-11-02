@@ -2,6 +2,7 @@
   <h1>
     {{ showMoreCharacters ? 'More Characters' : 'Choose Your Character!' }}
   </h1>
+  <app-legend></app-legend>
   <app-header-buttons *ngIf="!showMoreCharacters" (selectMood)="selectedMood = $event"></app-header-buttons>
   <button *ngIf="showMoreCharacters" (click)="toggleRetiredCharacters()" class="toggle-retired-btn">
     {{ showRetiredCharacters ? 'Hide Retired' : 'Show Retired' }}

@@ -7,10 +7,11 @@ import { FooterButtons } from '../footer-buttons/footer-buttons';
 import { CommonModule } from '@angular/common';
 import { Character } from '../../services/character.service';
 import { Mood } from '../../services/mood.service';
+import { Legend } from "../legend/legend";
 
 @Component({
   selector: 'app-roster',
-  imports: [CharacterGrid, HeaderButtons, CharacterModal, MoodModal, FooterButtons, CommonModule],
+  imports: [CharacterGrid, HeaderButtons, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend],
   templateUrl: 'roster.html',
   styleUrl: 'roster.scss'
 })

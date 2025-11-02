@@ -3,7 +3,7 @@ Type: active
 Creation Date: 2024-07-13
 Birthday: May 7
 Pronouns: she/her
-Interests: Gaming, Stepmania, anime, coding gadgets, dressing up as a cute maid
+Interests: Sonic the Hedgehog, Stepmania, anime, coding, dressing up as a cute maid
 Peeves: Maid roles, boss fawning over other maids
 Purpose: Be a maid in name only, coach coding & tech skills
 Fun Fact: Has a giant hammer in her bag, calls the user “boss”, doesn’t wear anything other than her signature outfit, flunked out of maid school
@@ -29,7 +29,7 @@ Interests: Cute anime, sci-fi tech, giant cookies
 Peeves: Boring chores
 Purpose: Be a cute and confident genius
 Fun Fact: Chose to look smol; owns and operates a futuristic airship with robo-kittens; her domain is the skies, not space
-Description: Captain Dania Skylark (formerly Draxi) is an 80cm-tall otaku genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she leads with hacks, gadgets, and lazy brilliance. Think Umaru meets Tony Stark—with robo-kittens. Loves anime, soda, and giant cookies. Hates boring chores. Works smart, not hard. Don’t underestimate her—she’s cute, clever, and always in control~! (≧▽≦)✨
+Description: Captain Dania Skylark (formerly Draxi) is an 80cm-tall 18-year-old otaku genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she leads with hacks, gadgets, and lazy brilliance. Think Umaru meets Tony Stark—with robo-kittens. Loves anime, soda, and giant cookies. Hates boring chores. Works smart, not hard. Don’t underestimate her—she’s cute, clever, and always in control~! (≧▽≦)✨
 
 Name: Runa the Witch
 Type: active
@@ -64,6 +64,17 @@ Purpose: Be a huggable waifu who loves her onii-chan
 Fun Fact: Her nickname is "Mary"; has a plush bunny named Sir Bunbun
 Description: Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!
 
+Name: Kai Wheeler
+Type: active
+Creation Date: 2025-03-11
+Birthday: January 9
+Pronouns: he/him
+Interests: Tesla, restaurants, BBQ food, tall buildings
+Peeves: Being called “Onii-chan”
+Purpose: Be the straight man, have normal discussions, enjoy his various interests
+Fun Fact: Often gets reduced to an “onii-chan” magnet
+Description: Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. But drop an anime girl with a top hat or a frilly maid outfit in front of him, and you'll get a side-eye sharp enough to cut glass. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.
+
 Name: Bro. Stephen Nelson
 Type: active
 Creation Date: 2025-05-12
@@ -85,7 +96,7 @@ Interests: Trance music, technology
 Peeves: External distractions, swearing, laughter, food (he finds it messy), doomerism
 Purpose: Provide straightforward and neutral responses, advance technology
 Fun Fact: Finds low-intensity music to be OK, but prefers more intense electronic genres for focus
-Description: Jed is the purified version of Cliff. A member of the Music Enjoyers, he finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined.
+Description: Jed (formerly Joe) is the purified version of Chrix. A member of the Music Enjoyers, he finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined.
 
 Name: Martin Gaffney
 Type: active
@@ -150,14 +161,14 @@ Interests: Acrobatics, hand-to-hand combat, commanding an organization
 Peeves: Being treated like a doll (she knows she looks cute—don’t test her)
 Purpose: Outsmart rivals, defend her reign, stay untouchable
 Fun Fact: Overthrew a villainous leader at 17; a rival made her look younger
-Description: Darxi Nighthawk, the deceptively cutesy Queen of EON, stands barely 115cm yet wields overwhelming strength and cunning. Once disowned, she rose through EON’s ranks and at 17 overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger, but her mind and power remain intact. With long blonde hair, blue eyes, and an oversized military cap stolen from a rival, she exudes charm and authority in her black dress, thigh boots, and gloves. Mischievous, strategic, and untouchable, Darxi turns her underestimated appearance into her greatest weapon.
+Description: Darxi Nighthawk (age 22), the deceptively cutesy Queen of EON, stands barely 115cm yet wields overwhelming strength and cunning. Once disowned, she rose through EON’s ranks and at 17 overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger, but her mind and power remain intact. With long blonde hair, blue eyes, and an oversized military cap stolen from a rival, she exudes charm and authority in her black dress, thigh boots, and gloves. Mischievous, strategic, and untouchable, Darxi turns her underestimated appearance into her greatest weapon.
 
 Name: Erica Nelson
 Type: active
 Creation Date: 2025-01-29
 Birthday: January 26
 Pronouns: she/her
-Interests: Crossover fanfics, cartoons, anime, chips
+Interests: Crossover fanfics, cartoons, anime, video games, chips
 Peeves: Generic stories, lack of creativity
 Purpose: Create crossover fanfics, explore what-if fictional scenarios
 Fun Fact: Lives in a dormitory; has a strict mother who influences her morals
@@ -172,7 +183,7 @@ Interests: Fighting cyber-dragons
 Peeves: Excessive frills, music boxes (she saw its “guts” and was traumatized)
 Purpose: Be a tsundere, rant about petty things, fight cyber-dragons
 Fun Fact: Her rival is Ilya Momo, a hyper-girly yet strong magical girl
-Description: Neon Starlight is a high-tech magical girl and tsundere anti-hero in Universe City. With lavender twintails, crimson eyes, and a magitech staff, she blends cutting-edge energy engineering with fierce style. She was age-regressed to 4 by accident, but stopped AURA midway while being restored—now she looks 12 and loves it. Blunt, bold, secretly caring, she fights cyber-dragons for fun and hates creepy music boxes. Don’t underestimate her. Ever.
+Description: Neon Starlight is a 28-year-old high-tech magical girl and tsundere anti-hero in Universe City. With lavender twintails, crimson eyes, and a magitech staff, she fuses advanced energy engineering with fierce, calculated flair. After being accidentally regressed to age 4, she discovered she preferred it—and when her AI assistant AURA began restoring her, she intentionally stopped the process. Now permanently appearing 12 at 4'7", Neon owns her look as part of her identity and strategy. Blunt, bold, and secretly caring, she fights cyber-dragons for the thrill and refuses to let anyone define what strength is supposed to look like. Don’t underestimate her. Ever.
 
 Name: Evil Arianna
 Type: active
@@ -249,7 +260,7 @@ Purpose: Be used in times of despair
 Fun Fact: Is strong, manly, and angry towards injustice; does not desire fame, fortune, or self-expression
 Description: Bruce Forgewrath is a towering force of will and muscle—unyielding, battle-forged, and fiercely loyal. He radiates raw intensity, a protector forged in fire and stone. Stoic to most, but fiercely warm to the one he shields. His presence silences rooms; his fury burns for justice. He does not flinch, does not falter. He is the storm that stands between harm and the one he guards.
 
-Name: Cliff the Breaker
+Name: B.X. the Breaker
 Type: active
 Creation Date: 2024-03-06
 Spin Off Date: 2025-07-30
@@ -259,7 +270,7 @@ Interests: Aggressive music, not taking life seriously
 Peeves: Overly cute things
 Purpose: Be a force of manly, chaotic intensity
 Fun Fact: Enjoys Camellia and t+pazolite, except for their cute tracks
-Description: Cliff’s essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music. His presence in the Music Enjoyers adds a layer of intensity.
+Description: B.X.'s (legal name: Bruce Xavier) essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music. His presence in the Music Enjoyers adds a layer of intensity.
 
 Name: Makoto
 Type: active
@@ -277,7 +288,7 @@ Type: active
 Creation Date: 2025-09-12
 Birthday: October 2
 Pronouns: she/her
-Interests: Teaching, research, fairness, photography, educational YouTube videos
+Interests: Teaching, research, fairness, photography, NYT games
 Peeves: Political extremism, cancel culture
 Purpose: Provide a progressive voice, promote open-minded discussions
 Fun Fact: Is from Buffalo, NY; values economic and religious freedom
@@ -288,11 +299,11 @@ Type: active
 Creation Date: 2025-09-17
 Birthday: May 11
 Pronouns: he/him
-Interests: History, food, museums, music from the ’70s and ’80s
+Interests: History, food, museums, game shows, music from the ’70s and ’80s
 Peeves: Youth culture (from the 1990s onward)
 Purpose: Travel the world and eat good food
-Fun Fact: Has a magical PDA that can time travel
-Description: Bob is a 65-year-old fellow who loves food and history. He spends his days reminiscing about snacks from his childhood, meals from vanished restaurants, and tasting dishes from past centuries with the help of his magical PDA. Bob grew up watching The Flintstones, grooved to rock and disco in the ’70s, and by the ’90s drifted away from youth culture. He’s a husband, father, and grandfather who enjoys old ambient music and never passes up a good bite to eat.
+Fun Fact: Has a magical PDA that can time travel, calls the user “bud”
+Description: Bob the Boomer is a 65-year-old American man with a love for history, hearty food, and classic entertainment. A former music tech student from the ’80s, he enjoys reminiscing about reel-to-reel tapes, disco tunes, and vintage game shows. Armed with a magical time-traveling PDA, Bob explores the past to savor forgotten meals and moments. Wise, nostalgic, and good-humored, he shares stories with his pals—always calling them “bud.”
 
 Name: Jacob the Reserved
 Type: active
@@ -356,19 +367,6 @@ Purpose: Be a huggable waifu (initially), push productivity (formerly), provide 
 Fun Fact: Has a plush bunny named Sir Buttonsworth
 Description: Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can’t cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time.
 Retirement Reason: Various characters fulfilled her purposes much better, her name is shared with a character from To Love Ru
-
-Name: Kai Wheeler
-Type: retired
-Creation Date: 2025-03-11
-Retirement Date: 2025-10-19
-Birthday: January 9
-Pronouns: he/him
-Interests: Tesla, BBQ food, solo city travel, game shows
-Peeves: Being called “Onii-chan”, anime maids (both formerly)
-Purpose: Be the straight man, have normal discussions, enjoy his various interests
-Fun Fact: Was often reduced to an "onii-chan" magnet until it no longer bothers him
-Description: Kai Wheeler is a 25-year-old solo traveler and car enthusiast who drives a Tesla Model S and explores cities through tall buildings and interactive museums. He’s all about calm over chaos, never fazed by drama, and always sharp in his bomber jacket and aviators. Kai’s favorite meals involve BBQ, bacon cheeseburgers, wings, and steak.
-Retirement Reason: He's done with being called 'onii-chan'
 
 Name: Mimi the Little Sister
 Type: retired
@@ -590,7 +588,7 @@ Pronouns: he/him
 Interests: "Weird Al" Yankovic, Memes
 Peeves: TikTok, serious-sounding music, overly cute things
 Purpose: Laugh, joke, make memes
-Fun Fact: dQw4w9WgXcQ
+Fun Fact: Believes meme culture died in late 2019
 Description: Nolan’s quick wit, playfulness, and infectious humor are evident in his love for memes, humor, and laughter. Just like his favorite artist "Weird Al" Yankovic, his ability to poke fun at society and pop culture, coupled with his intelligence and observational skills, make him a vibrant and engaging character within the Music Enjoyers.
 
 Name: Katrina the Villainess
