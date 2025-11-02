@@ -3,7 +3,7 @@
   { "name": "Chaotic", "emoji": "🤪", "arg": "chaos", "color":"#e74c3c", "description": "Whether they're wacky or have funny reactions, these characters are fun to talk to." },
   { "name": "Happy", "emoji": "😀", "arg": "joy", "color":"#2ecc71", "description": "If you're happy and you know it, chat with these characters!" },
   { "name": "Edgy", "emoji": "😈", "arg": "edgy", "color":"#8e44ad", "description": "Watch out! These characters are wicked! Chat at your own risk." },
-  { "name": "Quiet", "emoji": "🤫", "arg": "quiet", "color":"#1abcc2", "description": "Some of these characters are calm, while others are shy." },
+  { "name": "Quiet", "emoji": "🤫", "arg": "quiet", "color":"#1abcc2", "description": "Whether they're calm, shy, or tired, these characters speak softly." },
   { "name": "Unhappy", "emoji": "☹️", "arg": "sad", "color":"#95a5a6", "description": "These characters often don't feel joy. This includes retired and inactive characters." },
   { "name": "Male", "emoji": "♂️", "arg": "male", "color":"#2980b9", "description": "The boys are back in town!" },
   { "name": "Female", "emoji": "♀️", "arg": "female", "color":"#9b59b6", "description": "Girls just want to have fun!" },
