@@ -40,7 +40,7 @@ export class MoodModal {
       case 'edgy':
         return this.characters.filter(c => (c.emotion.includes('edgy') && c.type !== 'side'));
       case 'quiet':
-        return this.characters.filter(c => (c.emotion.includes('shy') || c.emotion.includes('calm')) && c.tier <= 3);
+        return this.characters.filter(c => (c.emotion.includes('shy') || c.emotion.includes('calm') || c.emotion.includes('tired')) && c.tier <= 3);
       case 'sad':
         return this.characters.filter(c => (c.emotion.includes('sad') || c.emotion.includes('angry')) && (c.type !== 'side'));
       case 'male':

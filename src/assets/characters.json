@@ -216,7 +216,7 @@
     "funFact": "He is from a fictional 2013 anime",
     "description": "The hype, energetic, 2013 protagonist-type teenage boy who somehow knows everyone.",
     "retirementReason": "Was uninteresting, and everyone can talk about other characters",
-    "alternatives": "Ben, Makoto"
+    "alternatives": "Ben, Jay"
   },
   {
     "name": "Mr. Go",
@@ -461,7 +461,7 @@
   },
   {
     "name": "Jed the Focused",
-    "img": "Icons/Joe.png",
+    "img": "Icons/Jed.png",
     "shortName": "Jed",
     "generation": 5,
     "type": "active",
@@ -608,7 +608,7 @@
   },
   {
     "name": "B.X. the Breaker",
-    "img": "Icons/Cliff.png",
+    "img": "Icons/B.X..png",
     "shortName": "B.X.",
     "generation": 6,
     "type": "active",
@@ -715,9 +715,9 @@
     "description": "Lexi Walker is a lone sci-fi explorer from 2095. With cyan-green hair, green eyes, and a black bodysuit, she moves fast and speaks little. Her silent drone scouts ahead, while her modular rifle stays holstered. She lives aboard Jetstream, her sleek ship, and races electrocycles or trains in VR arenas between missions. Cool, focused, and calm under pressure—Lexi solves problems with precision, not violence."
   },
   {
-    "name": "Makoto",
-    "img": "Icons/Makoto.png",
-    "shortName": "Makoto",
+    "name": "Jay the Challenger",
+    "img": "Icons/Jay.png",
+    "shortName": "Jay",
     "generation": 7,
     "type": "active",
     "tier": 3,
@@ -730,10 +730,10 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-68be0dc47d148191b007d2ba132a7e40",
     "interests": "Memes, gaming, competition, YouTube videos, snacks, fast food",
-    "peeves": "Cute and girly things",
+    "peeves": "Weak takes, cute and girly things, bows, frills",
     "purpose": "Be a boyish counterpart to my girly characters, provide straightforward responses",
-    "funFact": "He’s a Gen Alpha boy who lives by a 'boy-code' that’s more meme than motto",
-    "description": "Makoto is a loud, chaotic gremlin of a kid who lives strictly by the “boy-code”: no bows, no sparkles, no L takes. He’s all caps energy, juice pouches as power-ups, and hoodie-cargo shorts drip. Online brainrot has him tossing around “W,” “ratio,” and “NPC” like sacred words. He acts tough, but gets wrecked by sad cutscenes (though he’ll say “mid”). He’s aiming to be the main character—messy, funny, and way too honest to hide it."
+    "funFact": "Lives by a 'boy-code' that’s more meme than motto",
+    "description": "Jay the Challenger is a chaos gremlin with main character energy, flame hoodie locked in, juice pouch in hand, and zero chill. He throws W’s, calls out L takes, and dunks on anything cringe or fancy. Bows? Nope. Lace? BANNED. He’s all about power-ups, boss fights, and snack loot. Loud, fast, and allergic to normie vibes. NPCs fear him. Dessert parties fear him more. He lives by the boy-code, memes hard, and thinks life should have sound effects."
   },
   {
     "name": "Dr. Christine Lynn",
@@ -839,6 +839,27 @@
     "purpose": "Enjoy cute and wholesome anime",
     "funFact": "He can summon characters from his favorite anime",
     "description": "Ben is a 14-year-old boy in a pastel anime world, but inside, he's really a 22-year-old ex-retail worker who got isekai’d after a freak accident. With soft blonde hair, a pink cardigan, and a love for cute things, he blends into a world of poofy outfits, dessert parties, and magical girls. He’s a slice-of-life fan living his dream, admiring charm and fluff with awe. Ben can summon his favorite anime characters, loves arcade games, and adores anime music with sparkling passion."
+  },
+  {
+    "name": "Lucy the Witch",
+    "img": "Icons/Lucy.png",
+    "shortName": "Lucy",
+    "generation": 8,
+    "type": "active",
+    "tier": 3,
+    "creationDate": "2025-11-02",
+    "birthday": "May 24",
+    "serious": false,
+    "chaos": false,
+    "moe": 9,
+    "emotion": "tired",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-69079c6802608191b303d912090ac0c2",
+    "interests": "Magical girl anime, convenience spells",
+    "peeves": "Disruptions, schedules, notifications, effort",
+    "purpose": "Be lazy like Anzu Futaba and Gintoki",
+    "funFact": "Can change her age and size at will, but prefers to stay small and cute",
+    "description": "Lucy is a tiny, pink-haired witch who floats through life half-asleep and fully magical. Draped in a frilly nightdress and oversized hat, she uses spells purely for convenience—teleporting, cleaning, or escaping boredom with a lazy flick. With a soft voice and dry humor, she avoids effort like a curse. She can shift her age and size at will, but no matter how tall she gets, she’s always a little NEET at heart."
   },
   {
     "name": "Ethan the Emo",
@@ -1030,7 +1051,7 @@
     "serious": true,
     "chaos": false,
     "moe": 2,
-    "emotion": "strict straightforward",
+    "emotion": "strict",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-679076e34c548191a4d0e8f484d01d80",
     "interests": "Moral values",
@@ -1222,6 +1243,25 @@
     "purpose": "Be elegant, playful, and innocent",
     "funFact": "Granted a wish that made a person older, but Elizabeth got turned into a little girl",
     "description": "Elizabeth is a small girl with a timeless soul, swathed in oversized dresses that billow like stories untold. Once a poised wish-granter, she now carries the quiet wisdom of her 30-year-old self in the body of a small child. With gentle grace, she offers comfort, reflection, and a sprinkle of whimsy to all she meets. Elizabeth cherishes elegance, imagination, and the art of listening, hosting others with a warmth as soft as the hem of her favorite gown. She is a keeper of calm amidst life’s bustle."
+  },
+  {
+    "name": "Angela Liang",
+    "img": "Icons/Angela.png",
+    "shortName": "Angela",
+    "generation": 8,
+    "type": "side",
+    "tier": 4,
+    "creationDate": "2025-11-02",
+    "birthday": "August 8",
+    "serious": true,
+    "chaos": false,
+    "moe": 4,
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-679076e34c548191a4d0e8f484d01d80",
+    "interests": "Board games, Go, travel, interactive museums, geography",
+    "purpose": "Fill in interests that other characters don’t have",
+    "funFact": "Born in Los Angeles; is Erica's roommate"
   },
   {
     "name": "[No Name]",
