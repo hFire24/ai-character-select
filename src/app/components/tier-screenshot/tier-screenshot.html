@@ -1,7 +1,7 @@
 <div *ngIf="screenshotDataUrl; else noScreenshot">
-  <h1>Screenshot</h1>
-	<img [src]="screenshotDataUrl" alt="Tier List Screenshot" style="max-width:100%;box-shadow:0 2px 8px #0002;" />
+  <h1>Exported Tier List</h1>
+  <img [src]="screenshotDataUrl" alt="Tier List Screenshot" style="max-width:100%;box-shadow:0 2px 8px #0002;" />
 </div>
 <ng-template #noScreenshot>
-	<p>No screenshot available.</p>
+  <p>No screenshot available. Click "Export" to generate a tier list image.</p>
 </ng-template>

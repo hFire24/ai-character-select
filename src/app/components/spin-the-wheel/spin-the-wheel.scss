@@ -44,11 +44,9 @@ label {
 	border: 2px solid transparent;
 }
 
-.panel img {
-	width: 64px;
-	height: 64px;
-	object-fit: cover;
-	margin-bottom: 0.5rem;
+.panel:hover, .panel.disabled:hover {
+	transform: scale(1.05);
+	background: #ff9999;
 }
 
 .panel-name {
@@ -64,11 +62,28 @@ label {
 	border-color: #ffd54f;
 }
 
+.panel.disabled, .panel.disabled {
+	background: #e24a4a;
+	text-decoration: line-through;
+}
+
 .panel.selected {
 	background: #4a90e2;
 	color: #fff;
 	border-color: #357ab8;
 	box-shadow: 0 0 0 4px #4a90e2;
+}
+
+.panel.selected.disabled {
+	background: #e24a4a;
+	border-color: #b83535;
+	box-shadow: 0 0 0 4px #e24a4a;
+}
+
+.panel.selected:hover {
+	background: #4c4ae2;
+	border-color: #3735b8;
+	box-shadow: 0 0 0 4px #4c4ae2;
 }
 
 .result {

@@ -47,6 +47,10 @@ export class MoodModal {
         return this.characters.filter(c => c.pronouns === 'he/him' && c.tier <= 3);
       case 'female':
         return this.characters.filter(c => c.pronouns === 'she/her' && c.tier <= 3);
+      case 'futuristic':
+        return this.characters.filter(c => c.futuristic >= 7 && c.tier <= 3);
+      case 'traditional':
+        return this.characters.filter(c => c.futuristic <= 4 && c.tier <= 3);
       case 'moe0':
         return this.characters.filter(c => c.moe < 4 && c.tier <= 3);
       case 'moe':

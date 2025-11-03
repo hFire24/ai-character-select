@@ -71,6 +71,7 @@ export class TierList {
         return {
           name,
           img: c.img ? 'assets/' + c.img : 'assets/Icons/Unknown.png',
+          id: c.id,
           type: c.type,
           tier: c.tier,
           musicEnjoyer: c.musicEnjoyer,
@@ -246,7 +247,7 @@ export class TierList {
   tiers = [
     {
       name: 'S', color: '#FF7F7E', characters: [
-        { name: 'Me', img: 'assets/Icons/Me.png' }
+        { name: 'Me', img: 'assets/Icons/Me.png', id: 0 }
       ]
     },
     {
@@ -283,12 +284,12 @@ export class TierList {
       const insertIdx = celestiaIdx < princessIdx ? celestiaIdx + 1 : princessIdx;
       if (this.splitTwins) {
         // Insert "Liam" and "Kieran" separately
-        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', type: "active", tier: 2, musicEnjoyer: false, pronouns: 'he/him' };
-        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', type: "active", tier: 2, musicEnjoyer: false, pronouns: 'he/him' };
+        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', id: 44, type: "active", tier: 3, musicEnjoyer: false, pronouns: 'he/him' };
+        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', id: 45, type: "active", tier: 3, musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liam, kieran);
       } else {
         // Insert "Liam & Kieran" together
-        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', type: "active", tier: 2, musicEnjoyer: false, pronouns: 'he/him' };
+        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', id: 43, type: "active", tier: 3, musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liamKieran);
       }
     }
@@ -310,12 +311,12 @@ export class TierList {
       const insertIdx = collapsedIdx < lexiIdx ? collapsedIdx + 1 : lexiIdx;
       if (this.splitTwins) {
         // Insert "Riri" and "Ruru" separately
-        const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
-        const ruru = { name: 'Ruru', img: 'assets/Icons/Ruru.png', type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
+        const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', id: 52, type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
+        const ruru = { name: 'Ruru', img: 'assets/Icons/Ruru.png', id: 53, type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
         this.allCharacters.splice(insertIdx, 0, riri, ruru);
       } else {
         // Insert "Riri & Ruru" together
-        const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
+        const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', id: 51, type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
         this.allCharacters.splice(insertIdx, 0, ririRuru);
       }
     }
@@ -349,6 +350,111 @@ export class TierList {
     }
   }
 
+  async import() {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.json,application/json';
+    input.onchange = async (event) => {
+      const file = (event.target as HTMLInputElement).files?.[0];
+      if (!file) return;
+
+      if (!file.name.toLowerCase().endsWith('.json')) {
+        alert('Please select a JSON file.');
+        return;
+      }
+
+      try {
+        const text = await file.text();
+        const metadata = JSON.parse(text);
+        await this.restoreTierListFromMetadata(metadata);
+      } catch (error) {
+        alert('Error importing tier list: Invalid JSON file. ' + error);
+      }
+    };
+    input.click();
+  }
+
+  private findAndAddCharactersToTier(tierIndex: number, charactersMetadata: any[]) {
+    charactersMetadata.forEach((charMeta: any) => {
+      let character = this.allCharacters.find(c => c.id === charMeta.id);
+      if (!character) {
+        // Fallback to name matching if ID not found
+        character = this.allCharacters.find(c => c.name === charMeta.name);
+      }
+      if (character) {
+        this.tiers[tierIndex].characters.push(character);
+      }
+    });
+  }
+
+  private async restoreTierListFromMetadata(metadata: any) {
+    if (!metadata || !metadata.tiers) {
+      alert('Invalid tier list file format.');
+      return;
+    }
+
+    if (confirm('This will replace your current tier list with the imported one. Continue?')) {
+      // Restore settings if available
+      if (metadata.characterFilter) {
+        const filterSelect = document.querySelector('select') as HTMLSelectElement;
+        if (filterSelect) {
+          // Get valid filter options from the select element
+          const validFilters = Array.from(filterSelect.options).map(option => option.value);
+          if (validFilters.includes(metadata.characterFilter)) {
+            this.characterFilter = metadata.characterFilter;
+            filterSelect.value = this.characterFilter;
+          } else {
+            this.characterFilter = 'all';
+            filterSelect.value = 'all';
+          }
+        } else {
+          this.characterFilter = metadata.characterFilter;
+        }
+      }
+      if (metadata.splitTwins !== undefined) {
+        this.splitTwins = metadata.splitTwins;
+        // Trigger the twins splitting/combining logic
+        // Update the checkbox state in the UI
+        const splitTwinsCheckbox = document.querySelector('input[type="checkbox"]') as HTMLInputElement;
+        if (splitTwinsCheckbox) {
+          splitTwinsCheckbox.checked = this.splitTwins;
+        }
+        // Trigger the twins splitting/combining logic
+        this.onSplitTwinsChange({ target: { checked: this.splitTwins } });
+      }
+
+      // Clear current tiers
+      this.tiers.forEach(tier => tier.characters = []);
+      
+      // Restore tiers from metadata
+      metadata.tiers.forEach((tierMeta: any, index: number) => {
+        if (index < this.tiers.length) {
+          this.tiers[index].name = tierMeta.name;
+          this.tiers[index].color = tierMeta.color;
+          
+          // Find characters by ID or name and add them to the tier
+          if (tierMeta.characters) {
+            this.findAndAddCharactersToTier(index, tierMeta.characters);
+          }
+        } else {
+          // Add new tier if more tiers in import than current
+          this.tiers.push({
+            name: tierMeta.name,
+            color: tierMeta.color,
+            characters: []
+          });
+          const newTierIndex = this.tiers.length - 1;
+          
+          if (tierMeta.characters) {
+            this.findAndAddCharactersToTier(newTierIndex, tierMeta.characters);
+          }
+        }
+      });
+
+      alert('Tier list imported successfully!');
+    }
+  }
+
   async export() {
     // Dynamically import html2canvas if not already available
     const html2canvas = (await import('html2canvas')).default;
@@ -367,5 +473,32 @@ export class TierList {
       el.style.display = prevDisplays[i] ?? '';
     });
     this.screenshotDataUrl = canvas.toDataURL('image/png');
+  }
+
+  saveMetadataJSON() {
+    const metadata = {
+      exportDate: new Date().toISOString(),
+      characterFilter: this.characterFilter,
+      splitTwins: this.splitTwins,
+      tiers: this.tiers.map(tier => ({
+        name: tier.name,
+        color: tier.color,
+        characters: tier.characters.map(char => ({
+          id: (char as any).id,
+          name: char.name
+        }))
+      }))
+    };
+
+    const jsonString = JSON.stringify(metadata, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    
+    const link = document.createElement('a');
+    link.download = `tier-list-data-${new Date().toISOString().slice(0, 19).replace(/:/g, '-')}.json`;
+    link.href = url;
+    link.click();
+    
+    URL.revokeObjectURL(url);
   }
 }

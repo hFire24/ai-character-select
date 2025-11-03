@@ -103,6 +103,8 @@
 <footer>
   <button (click)="clear()" [style.background]="'#DD3333'" title="Clear all character selections">Clear</button>
   <button (click)="reset()" [style.background]="'#DD3333'" title="Reset all changes">Reset</button>
-  <button (click)="export()" title="Export current tier list">Export</button>
+  <button (click)="import()" title="Import a tier list from JSON file">Import</button>
+  <button (click)="export()" title="Export current tier list as image">Export</button>
+  <button (click)="saveMetadataJSON()" title="Export tier list data as JSON">Export JSON</button>
 </footer>
 <app-tier-screenshot [screenshotDataUrl]="screenshotDataUrl"></app-tier-screenshot>

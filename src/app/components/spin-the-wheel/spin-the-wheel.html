@@ -1,33 +1,37 @@
 <div class="panel-container">
-		<h2>Random Character Picker</h2>
-		<div class="panel-filters">
-			<label for="panelFilter">Filter:</label>
-			<select id="panelFilter" [(ngModel)]="selectedFilter">
-				<option value="all">All Characters</option>
-				<option value="tier1">Favorite Characters</option>
-				<option value="tier3">Active Characters</option>
-				<option value="active-retired">Active + Retired Characters</option>
-			</select>
-		</div>
-    <div class="panel-grid-wrapper">
-      <div class="panel-grid">
-        <div
-          class="panel"
-          *ngFor="let character of filteredCharacters; let i = index"
-          [class.spotlight]="i === spotlightIndex"
-          [class.selected]="selectedCharacter && selectedCharacter === character"
-        >
-          <div class="panel-name">{{ character.shortName }}</div>
-        </div>
-      </div>
-    </div>
-		<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : 'Spin' }}</button>
-			<div *ngIf="selectedCharacter" class="result">
-				<h3>Selected Character:</h3>
-	      <img [src]="'assets/' + selectedCharacter.img" [alt]="selectedCharacter.name"
-	      width="128" height="128"
-	      (error)="selectedCharacter.img = 'Icons/Unknown.png'" />
-				<p>{{ selectedCharacter.name }}</p>
-        <a id="chat" [href]="getChatLink(selectedCharacter)" target="_blank">Chat</a>
+	<h2>Random Character Picker</h2>
+	<div class="panel-filters">
+		<label for="panelFilter">Filter:</label>
+		<select id="panelFilter" [(ngModel)]="selectedFilter">
+			<option value="all">All Characters</option>
+			<option value="tier1">Favorite Characters</option>
+			<option value="tier3">Active Characters</option>
+			<option value="active-retired">Active + Retired Characters</option>
+		</select>
+	</div>
+	<div class="panel-grid-wrapper">
+		<div class="panel-grid">
+			<div
+				class="panel"
+				*ngFor="let character of filteredCharacters; let i = index"
+				[class.spotlight]="i === spotlightIndex"
+				[class.selected]="selectedCharacter && selectedCharacter === character"
+				[class.disabled]="excludedCharacters.includes(character)"
+				(click)="disable(character)"
+			>
+				<div class="panel-name">{{ character.shortName }}</div>
 			</div>
+		</div>
+	</div>
+	<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : 'Spin' }}</button>
+	<div *ngIf="selectedCharacter" class="result">
+		<h3>Selected Character:</h3>
+		<img [src]="'assets/' + selectedCharacter.img" [alt]="selectedCharacter.name"
+		width="128" height="128"
+		(error)="selectedCharacter.img = 'Icons/Unknown.png'" 
+		(click)="showCard = true"/>
+		<p>{{ selectedCharacter.name }}</p>
+		<a id="chat" [href]="getChatLink(selectedCharacter)" target="_blank">Chat</a>
+	</div>
+	<app-character-modal *ngIf="selectedCharacter && showCard" [character]="selectedCharacter" (close)="showCard = false"></app-character-modal>
 </div>

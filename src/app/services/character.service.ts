@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 export type Character = {
   shortName: string;
   img: string;
+  id: number;
   generation: number;
   type: string;
   tier: number; // New field for tier level
@@ -13,6 +14,7 @@ export type Character = {
   chaos: boolean;
   musicEnjoyer?: boolean; // Optional field for music enjoyment
   moe: number;
+  futuristic: number; // New field for futuristic level
   emotion: string;
   pronouns: string;
   link: string;
