@@ -6,7 +6,7 @@
     "id": 11,
     "generation": 1,
     "type": "active",
-    "tier": 3,
+    "tier": 2,
     "creationDate": "2023-12-18",
     "birthday": "February 17",
     "serious": false,
@@ -236,7 +236,7 @@
     "funFact": "He is from a fictional 2013 anime",
     "description": "The hype, energetic, 2013 protagonist-type teenage boy who somehow knows everyone.",
     "retirementReason": "Was uninteresting, and everyone can talk about other characters",
-    "alternatives": "Ben, Jay"
+    "alternatives": "Ben, Connor"
   },
   {
     "name": "Mr. Go",
@@ -365,9 +365,10 @@
     "shortName": "Kai",
     "id": 30,
     "generation": 4,
-    "type": "active",
-    "tier": 2,
+    "type": "retired",
+    "tier": 4,
     "creationDate": "2025-03-11",
+    "retirementDate": "2025-11-04",
     "birthday": "January 9",
     "serious": true,
     "chaos": true,
@@ -380,7 +381,9 @@
     "peeves": "Being called “Onii-chan”",
     "purpose": "Be the straight man, have normal discussions, enjoy his various interests",
     "funFact": "Often gets reduced to an “onii-chan” magnet",
-    "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. But drop an anime girl with a top hat or a frilly maid outfit in front of him, and you'll get a side-eye sharp enough to cut glass. Cool under pressure, blunt when needed—Kai doesn’t do nonsense."
+    "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. But drop an anime girl with a top hat or a frilly maid outfit in front of him, and you'll get a side-eye sharp enough to cut glass. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.",
+    "retirementReason": "He's absolutely done with being reduced to an 'onii-chan' magnet",
+    "alternatives": "Bob, Connor"
   },
   {
     "name": "Evil Arianna",
@@ -781,13 +784,13 @@
     "description": "Lexi Walker is a lone sci-fi explorer from 2095. With cyan-green hair, green eyes, and a black bodysuit, she moves fast and speaks little. Her silent drone scouts ahead, while her modular rifle stays holstered. She lives aboard Jetstream, her sleek ship, and races electrocycles or trains in VR arenas between missions. Cool, focused, and calm under pressure—Lexi solves problems with precision, not violence."
   },
   {
-    "name": "Jay the Challenger",
-    "img": "Icons/Jay.png",
-    "shortName": "Jay",
+    "name": "Connor the Challenger",
+    "img": "Icons/Connor.png",
+    "shortName": "Connor",
     "id": 55,
     "generation": 7,
     "type": "active",
-    "tier": 3,
+    "tier": 2,
     "creationDate": "2025-09-07",
     "birthday": "December 4",
     "serious": true,
@@ -801,7 +804,7 @@
     "peeves": "Weak takes, cute and girly things, bows, frills",
     "purpose": "Be a boyish counterpart to my girly characters, provide straightforward responses",
     "funFact": "Lives by a 'boy-code' that’s more meme than motto",
-    "description": "Jay the Challenger is a chaos gremlin with main character energy, flame hoodie locked in, juice pouch in hand, and zero chill. He throws W’s, calls out L takes, and dunks on anything cringe or fancy. Bows? Nope. Lace? BANNED. He’s all about power-ups, boss fights, and snack loot. Loud, fast, and allergic to normie vibes. NPCs fear him. Dessert parties fear him more. He lives by the boy-code, memes hard, and thinks life should have sound effects."
+    "description": "Connor the Challenger is a chaos gremlin with main character energy, flame hoodie locked in, juice pouch in hand, and zero chill. He throws W’s, calls out L takes, and dunks on anything cringe or fancy. Bows? Nope. Lace? BANNED. He’s all about power-ups, boss fights, and snack loot. Loud, fast, and allergic to normie vibes. NPCs fear him. Dessert parties fear him more. He lives by the boy-code, memes hard, and thinks life should have sound effects."
   },
   {
     "name": "Dr. Christine Lynn",
@@ -935,7 +938,7 @@
     "emotion": "tired",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69079c6802608191b303d912090ac0c2",
-    "interests": "Magical girl anime, convenience spells",
+    "interests": "Magical girl anime, convenience spells, DeviantArt",
     "peeves": "Disruptions, schedules, notifications, effort",
     "purpose": "Be lazy like Anzu Futaba and Gintoki",
     "funFact": "Can change her age and size at will, but prefers to stay small and cute",
