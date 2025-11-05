@@ -7,7 +7,7 @@
   { "name": "Unhappy", "emoji": "☹️", "arg": "sad", "color":"#95a5a6", "description": "These characters often don't feel joy. This includes retired and inactive characters." },
   { "name": "Male", "emoji": "♂️", "arg": "male", "color":"#2980b9", "description": "The boys are back in town!" },
   { "name": "Female", "emoji": "♀️", "arg": "female", "color":"#9b59b6", "description": "Girls just want to have fun!" },
-  { "name": "Futuristic", "emoji": "🤖", "arg": "futuristic", "color":"#34495e", "description": "They live in the future, engage in cutting-edge technology, or embrace futuristic aesthetics." },
+  { "name": "Futuristic", "emoji": "🤖", "arg": "futuristic", "color":"#34495e", "description": "They live in the future, engage with cutting-edge technology, or embrace futuristic aesthetics." },
   { "name": "Traditional", "emoji": "🌳", "arg": "traditional", "color":"#d35400", "description": "They live in the past, prefer traditional ways of life, or embrace old-fashioned aesthetics." },
   { "name": "Not Moe", "emoji": "🚫🩷", "arg": "moe0", "color":"#7f8c8d", "description": "Characters who are not cute in the moe sense." },
   { "name": "Moe", "emoji": "🩷", "arg": "moe", "color":"pink", "description": "Characters who are so cute in the moe sense." },
