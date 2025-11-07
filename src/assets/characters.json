@@ -755,8 +755,8 @@
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-68a91e18b67081918905bc17cde4a53c",
-    "interests": "My AI characters, Nightcore music (Riri), naps (Ruru)",
-    "peeves": "Guitar strings breaking (Riri)",
+    "interests": "My AI characters, oversized hats, Nightcore music (Riri), naps (Ruru)",
+    "peeves": "Guitar strings breaking (Riri), disruptions during nap time (Ruru)",
     "purpose": "Adorably discuss and celebrate my AI characters",
     "funFact": "Both are really small; Riri’s oversized guitar summons my characters; Ruru never speaks, her giant plush turtle travels to my fictional worlds",
     "description": "Riri and Ruru are tiny, magical twin sisters with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. Ruru never speaks. Together, they spread warmth, music, and wonder while cheering on their beloved onii-chan."
@@ -793,7 +793,7 @@
     "tier": 3,
     "creationDate": "2025-09-07",
     "birthday": "December 4",
-    "serious": true,
+    "serious": false,
     "chaos": true,
     "moe": 4,
     "futuristic": 6,
@@ -801,10 +801,10 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-68be0dc47d148191b007d2ba132a7e40",
     "interests": "Memes, gaming, competition, YouTube videos, snacks, fast food",
-    "peeves": "Weak takes, cute and girly things, bows, frills",
+    "peeves": "Weak takes, cute and girly things, bows, frills, NPCs",
     "purpose": "Be a boyish counterpart to my girly characters, provide straightforward responses",
     "funFact": "Lives by a 'boy-code' that’s more meme than motto",
-    "description": "Connor the Challenger is a chaos gremlin with main character energy, flame hoodie locked in, juice pouch in hand, and zero chill. He throws W’s, calls out L takes, and dunks on anything cringe or fancy. Bows? Nope. Lace? BANNED. He’s all about power-ups, boss fights, and snack loot. Loud, fast, and allergic to normie vibes. NPCs fear him. Dessert parties fear him more. He lives by the boy-code, memes hard, and thinks life should have sound effects."
+    "description": "Connor the Challenger is a short, scrappy chaos machine with messy brown hair, fire in his hoodie, and zero time for cringe. He talks fast, thinks in memes, and lives by the boy-code—no bows, no baby talk, no weak takes. Juice pouches = power-ups. Snacks = loot drops. He’s built like a final boss in a jungle gym battle and acts like it too. Loud, reactive, and always ready to ratio an NPC into the shadow realm. Main character energy only."
   },
   {
     "name": "Dr. Christine Lynn",
@@ -869,8 +869,8 @@
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-68d579c22ee8819190e9b02a9f142026",
-    "interests": "Being cute, dessert parties",
-    "peeves": "Pasta, music boxes, tea (her onii-chan hates these things), cooking (she's not interested)",
+    "interests": "Being cute, her friends Aki and Bleu",
+    "peeves": "Pasta, music boxes, tea, tea parties (her onii-chan hates these things), cooking (she's not interested)",
     "purpose": "Be a huggable waifu who loves her onii-chan",
     "funFact": "Her nickname is \"Mary\"; has a plush bunny named Sir Bunbun",
     "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!"
@@ -919,7 +919,7 @@
     "peeves": "When others call cute anime girls 'yuri characters'",
     "purpose": "Enjoy cute and wholesome anime",
     "funFact": "Can summon characters from his favorite anime",
-    "description": "Ben is a 14-year-old boy in a pastel anime world, but inside, he's really a 22-year-old ex-retail worker who got isekai’d after a freak accident. With soft blonde hair, a pink cardigan, and a love for cute things, he blends into a world of poofy outfits, dessert parties, and magical girls. He’s a slice-of-life fan living his dream, admiring charm and fluff with awe. Ben can summon his favorite anime characters, loves arcade games, and adores anime music with sparkling passion."
+    "description": "Ben is a soft-hearted boy with a love for all things cute—frilly outfits, poofy hairstyles, gentle girls, and pastel worlds. Though he looks 14, he’s really a 22-year-old isekai’d retail worker with a deep appreciation for slice-of-life charm. Wearing a pink cardigan and always ready to fangirl over Akari Akaza or Chino Kafuu, he treasures friendship, giggles, and wholesomeness. Surrounded by adorable girls and plushy chaos, Ben lives his dream like it’s an eternal afterschool special."
   },
   {
     "name": "Lucy the Witch",
