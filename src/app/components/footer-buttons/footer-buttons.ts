@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -9,7 +9,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer-buttons.scss'
 })
 export class FooterButtons {
+  @Input() searchTerm = '';
   @Output() toggleMore = new EventEmitter<void>();
+  
   isIOS(): boolean {
     return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
       (navigator.userAgent.includes('Macintosh') && 'ontouchend' in document);

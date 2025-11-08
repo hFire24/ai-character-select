@@ -1,0 +1,23 @@
+<div class="search-container">
+  <input 
+    type="text" 
+    placeholder="Search characters..." 
+    [(ngModel)]="searchTerm"
+    (input)="onSearchInput($event)"
+    class="search-input"
+  />
+  @if (searchTerm) {
+    <button 
+      (click)="clearSearch()" 
+      class="clear-button"
+      title="Clear search"
+    >
+      ✕
+    </button>
+  }
+  @if (searchTerm.trim().length > 0) {
+    <div class="search-info">
+      Searching all characters (filters temporarily disabled)
+    </div>
+  }
+</div>

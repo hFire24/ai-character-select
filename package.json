@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "python id_checker.py && python json_trimmer.py && ng build --configuration production && npx angular-cli-ghpages --dir=dist/browser"
   },
   "prettier": {
     "printWidth": 100,

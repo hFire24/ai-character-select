@@ -8,10 +8,11 @@ import { CommonModule } from '@angular/common';
 import { Character } from '../../services/character.service';
 import { Mood } from '../../services/mood.service';
 import { Legend } from "../legend/legend";
+import { SearchBar } from "../search-bar/search-bar";
 
 @Component({
   selector: 'app-roster',
-  imports: [CharacterGrid, HeaderButtons, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend],
+  imports: [CharacterGrid, HeaderButtons, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend, SearchBar],
   templateUrl: 'roster.html',
   styleUrl: 'roster.scss'
 })
@@ -20,6 +21,7 @@ export class Roster {
   selectedCharacter: Character | null = null;
   selectedMood: Mood | null = null;
   showRetiredCharacters = false;
+  searchTerm = '';
 
   toggleCharacters() {
     this.showMoreCharacters = !this.showMoreCharacters;
@@ -36,5 +38,9 @@ export class Roster {
 
   openTierList() {
     // Logic to open the tier list modal
+  }
+
+  onSearchChange(searchTerm: string) {
+    this.searchTerm = searchTerm;
   }
 }

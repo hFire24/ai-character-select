@@ -2,13 +2,24 @@
   <h1>
     {{ showMoreCharacters ? 'More Characters' : 'Choose Your Character!' }}
   </h1>
+  <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
   <app-legend></app-legend>
   <app-header-buttons *ngIf="!showMoreCharacters" (selectMood)="selectedMood = $event"></app-header-buttons>
-  <button *ngIf="showMoreCharacters" (click)="toggleRetiredCharacters()" class="toggle-retired-btn">
-    {{ showRetiredCharacters ? 'Hide Retired' : 'Show Retired' }}
-  </button>
+  @if (showMoreCharacters) {
+    <button 
+      (click)="toggleRetiredCharacters()" 
+      class="toggle-retired-btn"
+      [disabled]="searchTerm.trim().length > 0"
+      [class.disabled]="searchTerm.trim().length > 0"
+    >
+      {{ showRetiredCharacters ? 'Hide Retired' : 'Show Retired' }}
+      @if (searchTerm.trim().length > 0) {
+        <span class="filter-disabled-text">(Search active)</span>
+      }
+    </button>
+  }
 </header>
-<app-character-grid [showMore]="showMoreCharacters" [showRetired]="showRetiredCharacters" (selectCharacter)="selectedCharacter = $event"></app-character-grid>
+<app-character-grid [showMore]="showMoreCharacters" [showRetired]="showRetiredCharacters" [searchTerm]="searchTerm" (selectCharacter)="selectedCharacter = $event"></app-character-grid>
 <app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>
 <app-mood-modal *ngIf="selectedMood" [mood]="selectedMood" (close)="selectedMood = null" (selectCharacter)="selectedCharacter = $event"></app-mood-modal>
-<app-footer-buttons (toggleMore)="toggleCharacters()"></app-footer-buttons>
+<app-footer-buttons [searchTerm]="searchTerm" (toggleMore)="toggleCharacters()"></app-footer-buttons>

@@ -1,5 +1,14 @@
 <footer>
-  <button (click)="toggleMore.emit()">More Characters</button>
+  <button 
+    (click)="toggleMore.emit()"
+    [disabled]="searchTerm.trim().length > 0"
+    [class.disabled]="searchTerm.trim().length > 0"
+  >
+    More Characters
+    @if (searchTerm.trim().length > 0) {
+      <span class="filter-disabled-text">(Search active)</span>
+    }
+  </button>
   <button 
     *ngIf="!isIOS()" 
     routerLink="tier-list" 

@@ -12,6 +12,7 @@ import { CharacterService, Character } from '../../services/character.service';
 export class CharacterGrid {
   @Input() showMore = false;
   @Input() showRetired = false;
+  @Input() searchTerm = '';
   characters: Character[] = [];
 
   constructor(private characterService: CharacterService) {
@@ -28,13 +29,27 @@ export class CharacterGrid {
   }
 
   get filteredCharacters(): Character[] {
-    if (!this.showMore) {
-      return this.characters.filter(c => c.tier <= 3);
-    } else if(!this.showRetired) {
-      return this.characters.filter(c => c.tier > 3 && !c.type.includes('retired') && !c.type.includes('inactive'));
+    let baseCharacters: Character[];
+    
+    // If user is actively searching, disable filters and search across all characters
+    if (this.searchTerm && this.searchTerm.trim()) {
+      const searchLower = this.searchTerm.toLowerCase().trim();
+      baseCharacters = this.characters.filter(character => 
+        character.shortName.toLowerCase().includes(searchLower) ||
+        character.name.toLowerCase().includes(searchLower)
+      );
     } else {
-      return this.characters.filter(c => c.tier > 3);
+      // Apply normal filters when not searching
+      if (!this.showMore) {
+        baseCharacters = this.characters.filter(c => c.tier <= 3);
+      } else if(!this.showRetired) {
+        baseCharacters = this.characters.filter(c => c.tier > 3 && !c.type.includes('retired') && !c.type.includes('inactive'));
+      } else {
+        baseCharacters = this.characters.filter(c => c.tier > 3);
+      }
     }
+
+    return baseCharacters;
   }
 
   genClass(g: number) {

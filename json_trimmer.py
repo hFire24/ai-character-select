@@ -1,12 +1,13 @@
 import json
 import os
+import sys
 
 def trim_characters_json():
   # Find characters.json file
   characters_file = 'src/assets/characters.json'
   if not os.path.exists(characters_file):
     print(f"Error: {characters_file} not found")
-    return
+    sys.exit(1)
   
   # Read the original file
   with open(characters_file, 'r', encoding='utf-8') as file:

@@ -1,16 +1,23 @@
 <main id="character">
-  <div
-    class="character"
-    *ngFor="let c of filteredCharacters"
-    [ngClass]="genClass(c.generation)"
-    (click)="selectCharacter.emit(c)"
-  >
-    <ng-container *ngIf="c.img; else noImg">
-      <img [src]="assetPath(c.img)" [alt]="c.shortName" />
-    </ng-container>
-    <ng-template #noImg>
-      <div class="question-mark">?</div>
-    </ng-template>
-    <h2>{{ c.shortName }}</h2>
-  </div>
+  @if (filteredCharacters.length === 0 && searchTerm) {
+    <div class="no-results">
+      <p>No characters found matching "{{ searchTerm }}"</p>
+      <p class="suggestion">Try searching with a different term or check your spelling.</p>
+    </div>
+  } @else {
+    @for (c of filteredCharacters; track c.id) {
+      <div
+        class="character"
+        [ngClass]="genClass(c.generation)"
+        (click)="selectCharacter.emit(c)"
+      >
+        @if (c.img) {
+          <img [src]="assetPath(c.img)" [alt]="c.shortName" />
+        } @else {
+          <div class="question-mark">?</div>
+        }
+        <h2>{{ c.shortName }}</h2>
+      </div>
+    }
+  }
 </main>
