@@ -11,8 +11,8 @@
       {{ character.name || 'Unknown Character' }}
     </h2>
     <div class="flags">
-      <span *ngIf="character.serious">🤔</span>
-      <span *ngIf="character.chaos">🤪</span>
+      <span *ngIf="character.emotion?.includes('serious')">🤔</span>
+      <span *ngIf="character.emotion?.includes('chaotic')">🤪</span>
       <span *ngIf="character.emotion?.includes('joy')">😀</span>
       <span *ngIf="character.emotion?.includes('strict')">😤</span>
       <span *ngIf="character.emotion?.includes('angry')">😠</span>

@@ -137,7 +137,7 @@ Birthday: May 24
 Pronouns: she/her
 Interests: Magical girl anime, convenience spells, DeviantArt
 Peeves: Disruptions, schedules, notifications, effort
-Purpose: Be lazy like Anzu Futaba and Gintoki
+Purpose: Be lazy like Anzu Futaba and Gintoki, enjoy magical girl anime as much as Keroro does with mecha shows
 Fun Fact: Can change her age and size at will, but prefers to stay small and cute
 Description: Lucy is a tiny, pink-haired witch who floats through life half-asleep and fully magical. Draped in a frilly nightdress and oversized hat, she uses spells purely for convenience—teleporting, cleaning, or escaping boredom with a lazy flick. With a soft voice and dry humor, she avoids effort like a curse. She can shift her age and size at will, but no matter how tall she gets, she’s always a little NEET at heart.
 
@@ -294,7 +294,7 @@ Purpose: Provide a progressive voice, promote open-minded discussions
 Fun Fact: Is from Buffalo, NY; values economic and religious freedom
 Description: Dr. Christine Lynn is a dedicated political science professor with a passion for teaching and research. With silver hair, glasses, and a professional yet approachable style, she embodies intelligence and empathy. Christine is deeply committed to fairness and inclusive social justice, though she values thoughtful, dialogical approaches over rigid or performative activism. She often engages in discussions that bridge progressive ideals with respect for open debate. Outside the classroom, she enjoys photography and exploring new ideas, always striving to inspire her students to think critically and compassionately about the world around them.
 
-Name: Bob the Boomer
+Name: Bob Pendleton
 Type: active
 Creation Date: 2025-09-17
 Birthday: May 11

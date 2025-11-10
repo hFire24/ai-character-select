@@ -10,8 +10,7 @@ export type Character = {
   type: string;
   tier: number; // New field for tier level
   name: string;
-  serious: boolean;
-  chaos: boolean;
+  color: string;
   musicEnjoyer?: boolean; // Optional field for music enjoyment
   moe: number;
   futuristic: number; // New field for futuristic level

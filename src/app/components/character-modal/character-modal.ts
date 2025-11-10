@@ -10,8 +10,7 @@ const FALLBACK_CHARACTER: Character = {
   generation: 0,
   type: "",
   tier: 1,
-  serious: false,
-  chaos: false,
+  color: "",
   musicEnjoyer: false,
   moe: 1,
   futuristic: 1,
@@ -57,6 +56,11 @@ export class CharacterModal {
     console.log('New link entered:', newLink);
     if (newLink) {
       this.chatLink = newLink.trim() || this.character.link;
+      // Validate and format the chat link
+      if (newLink && !this.isValidChatLink(newLink)) {
+        alert('Invalid chat link format. Please enter a valid URL starting with https://');
+        return;
+      }
       localStorage.setItem(this.getChatLinkKey(), this.chatLink);
       alert('Chat link updated!');
     } else if (newLink === '') {
@@ -65,6 +69,11 @@ export class CharacterModal {
       localStorage.removeItem(this.getChatLinkKey());
       alert('Chat link reset to default.');
     }
+  }
+  
+  isValidChatLink(newLink: string) {
+    const urlPattern = /^https:\/\/chatgpt\.com\/(g\/[a-zA-Z0-9\-]+\/)?c\/[a-f0-9\-]+$/;
+    return urlPattern.test(newLink.trim());
   }
 
   getChatLinkKey(): string {
