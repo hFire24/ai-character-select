@@ -3,6 +3,7 @@ import { CharacterService } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
 import { TierSettings } from "../tier-settings/tier-settings";
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tier-list',
@@ -14,6 +15,7 @@ export class TierList {
   screenshotDataUrl: string | null = null;
   characterFilter: string = 'all';
   splitTwins: boolean = false;
+  router: any;
 
   onPoolDrop(event: DragEvent) {
     event.preventDefault();
@@ -79,6 +81,7 @@ export class TierList {
         };
       });
     });
+    this.router = new Router();
   }
 
   poolDragIdx: number | null = null;
@@ -348,6 +351,10 @@ export class TierList {
         }
       ];
     }
+  }
+
+  goBackToRoster() {
+    this.router.navigate(['/']);
   }
 
   async import() {

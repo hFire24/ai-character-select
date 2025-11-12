@@ -34,4 +34,7 @@
 		<a id="chat" [href]="getChatLink(selectedCharacter)" target="_blank">Chat</a>
 	</div>
 	<app-character-modal *ngIf="selectedCharacter && showCard" [character]="selectedCharacter" (close)="showCard = false"></app-character-modal>
+	<button [style.background]="'#DD3333'" (click)="goBackToRoster()">
+		← Back to Character Select
+	</button>
 </div>

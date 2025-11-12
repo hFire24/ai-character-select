@@ -107,4 +107,7 @@
   <button (click)="export()" title="Export current tier list as image">Export</button>
   <button (click)="saveMetadataJSON()" title="Export tier list data as JSON">Export JSON</button>
 </footer>
+<button class="back-button" (click)="goBackToRoster()">
+  ← Back to Character Select
+</button>
 <app-tier-screenshot [screenshotDataUrl]="screenshotDataUrl"></app-tier-screenshot>

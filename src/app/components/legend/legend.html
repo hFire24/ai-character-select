@@ -1,6 +1,9 @@
 <div class="legend">
-  <h3 class="legend-title">Legend</h3>
-  <div class="legend-items">
+  <h3 class="legend-title clickable" (click)="toggleCollapse()">
+    Legend 
+    <span class="collapse-icon">{{ isCollapsed ? '▶' : '▼' }}</span>
+  </h3>
+  <div class="legend-items" [class.collapsed]="isCollapsed">
     <span class="legend-item">🤔 Serious</span>
     <span class="legend-item">🤪 Chaotic</span>
     <span class="legend-item">😀 Happy</span>
@@ -16,5 +19,8 @@
     <span class="legend-item">🎵 Music Enjoyer</span>
     <span class="legend-item">⭐ Favorites</span>
     <span class="legend-item">🩶 Lesser Favorites</span>
+  </div>
+  <div class="header-buttons-container" [class.collapsed]="isCollapsed || showMoreCharacters">
+    <app-header-buttons (selectMood)="onMoodSelected($event)"></app-header-buttons>
   </div>
 </div>

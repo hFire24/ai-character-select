@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CharacterGrid } from "../character-grid/character-grid";
-import { HeaderButtons } from '../header-buttons/header-buttons';
 import { CharacterModal } from '../character-modal/character-modal';
 import { MoodModal } from '../mood-modal/mood-modal';
 import { FooterButtons } from '../footer-buttons/footer-buttons';
@@ -12,7 +11,7 @@ import { SearchBar } from "../search-bar/search-bar";
 
 @Component({
   selector: 'app-roster',
-  imports: [CharacterGrid, HeaderButtons, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend, SearchBar],
+  imports: [CharacterGrid, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend, SearchBar],
   templateUrl: 'roster.html',
   styleUrl: 'roster.scss'
 })

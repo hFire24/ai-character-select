@@ -3,8 +3,7 @@
     {{ showMoreCharacters ? 'More Characters' : 'Choose Your Character!' }}
   </h1>
   <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
-  <app-legend></app-legend>
-  <app-header-buttons *ngIf="!showMoreCharacters" (selectMood)="selectedMood = $event"></app-header-buttons>
+  <app-legend [showMoreCharacters]="showMoreCharacters" (selectMood)="selectedMood = $event"></app-legend>
   @if (showMoreCharacters) {
     <button 
       (click)="toggleRetiredCharacters()" 
