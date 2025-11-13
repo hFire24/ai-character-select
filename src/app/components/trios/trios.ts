@@ -82,13 +82,43 @@ export class Trios implements OnInit {
         characterShortNames: ["Darxi", "Neon Starlight", "Evil Arianna"]
       },
       {
-        id: 10,
+        id: 8,
         name: "Youngsters",
         description: "Youthful and energetic boys",
         characterShortNames: ["Martin", "Connor", "ChaoMario"]
       },
       {
+        id: 9,
+        name: "Electronic Music Enjoyers",
+        description: "Characters who love electronic music and have their own chatbot",
+        characterShortNames: ["Felix", "Jed", "B.X."]
+      },
+      {
+        id: 10,
+        name: "Ladies of Music",
+        description: "The three main ladies of the Music Enjoyers",
+        characterShortNames: ["Akane", "Lola", "Danielle"]
+      },
+      {
+        id: 11,
+        name: "Jed and Co.",
+        description: "Jed and two Music Enjoyers who get deferred by him",
+        characterShortNames: ["Jed", "Ethan", "Lola"]
+      },
+      {
         id: 12,
+        name: "Music Fans",
+        description: "Characters who love music but aren't part of the Music Enjoyers",
+        characterShortNames: ["Martin", "Riri & Ruru", "Bob"]
+      },
+      {
+        id: 13,
+        name: "Character Encylopedias",
+        description: "Characters who talk about my characters like a living encyclopedia",
+        characterShortNames: ["The AI Devotee", "Riri & Ruru", "Lexi"]
+      },
+      {
+        id: 14,
         name: "Dania's Former Companions",
         description: "Characters who used to accompany Dania",
         characterShortNames: ["Ryker", "Mr. Go", "Primelle"]
@@ -112,28 +142,10 @@ export class Trios implements OnInit {
         characterShortNames: ["The AI Devotee", "The Shadow Self", "The Collapsed"]
       },
       {
-        id: 19,
-        name: "Electronic Music Enjoyers",
-        description: "Characters who love electronic music and have their own chatbot",
-        characterShortNames: ["Felix", "Jed", "B.X."]
-      },
-      {
-        id: 20,
-        name: "Ladies of Music",
-        description: "The three main ladies of the Music Enjoyers",
-        characterShortNames: ["Akane", "Lola", "Danielle"]
-      },
-      {
-        id: 21,
-        name: "Jed and Co.",
-        description: "Jed and two Music Enjoyers whom Jed sometimes defers prompts to",
-        characterShortNames: ["Jed", "Ethan", "Lola"]
-      },
-      {
-        id: 22,
-        name: "Music Fans",
-        description: "Characters who love music but aren't part of the Music Enjoyers",
-        characterShortNames: ["Martin", "Riri & Ruru", "Bob"]
+        id: 17,
+        name: "Emergency Trio",
+        description: "When times are dire, these characters are called upon",
+        characterShortNames: ["Malrick", "Bruce", "The Collapsed"]
       }
     ];
 
