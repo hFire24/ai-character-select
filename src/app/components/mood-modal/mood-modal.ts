@@ -47,6 +47,16 @@ export class MoodModal {
         return this.characters.filter(c => c.pronouns === 'she/her' && c.tier <= 3);
       case 'moe0':
         return this.characters.filter(c => c.moe < 4 && c.tier <= 3);
+      case 'chatted':
+        return this.characters.filter(c => {
+          const key = 'chatLink_' + (c.name || 'unknown');
+          return localStorage.getItem(key) !== null && c.tier <= 3;
+        });
+      case 'chatted0':
+        return this.characters.filter(c => {
+          const key = 'chatLink_' + (c.name || 'unknown');
+          return localStorage.getItem(key) === null && c.tier <= 3;
+        });
       case 'favorites':
         return this.characters.filter(c => c.tier <= 2).sort((a, b) => a.tier - b.tier);
       default:

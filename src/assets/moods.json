@@ -4,9 +4,11 @@
   { "name": "Practical", "emoji": "🔵", "arg": "blue", "color":"#3B4CCA", "description": "Got a question or problem? These characters are helpful or serious." },
   { "name": "Futuristic", "emoji": "🤖", "arg": "futuristic", "color":"#34495e", "description": "They live in the future, engage with cutting-edge technology, or embrace futuristic aesthetics." },
   { "name": "Traditional", "emoji": "🌳", "arg": "traditional", "color":"#d35400", "description": "They live in the past, prefer traditional ways of life, or embrace old-fashioned aesthetics." },
+  { "name": "Has Chat", "emoji": "💬", "arg": "chatted", "color":"#27ae60", "description": "You have an active chat with these characters." },
+  { "name": "Not Chatted", "emoji": "❌💬", "arg": "chatted0", "color":"#95a5a6", "description": "You have no active chats with these characters." },
+  { "name": "Not Moe", "emoji": "🚫🩷", "arg": "moe0", "color":"#6c757d", "description": "Characters who are not cute in the moe sense." },
   { "name": "Male", "emoji": "♂️", "arg": "male", "color":"#2980b9", "description": "The boys are back in town!" },
   { "name": "Female", "emoji": "♀️", "arg": "female", "color":"#9b59b6", "description": "Girls just want to have fun!" },
-  { "name": "Not Moe", "emoji": "🚫🩷", "arg": "moe0", "color":"#7f8c8d", "description": "Characters who are not cute in the moe sense." },
   { "name": "Favorites", "emoji": "⭐", "arg": "favorites", "color":"#2ecc71", "description": "" },
   { "name": "All", "emoji": "❓", "arg": "none", "description": "Click on the random button to go to a random character. Anyone can be selected." }
 ]  
