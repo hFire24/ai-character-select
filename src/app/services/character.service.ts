@@ -25,6 +25,8 @@ export type Character = {
   retirementReason?: string; // Optional field for retirement reason
   inactiveReason?: string; // Optional field for inactive reason
   alternatives?: string; // Optional field for alternatives
+  birthday?: string; // Optional field for birthday
+  creationDate?: string; // Optional field for creation date
 }
 
 @Injectable({ providedIn: 'root' })

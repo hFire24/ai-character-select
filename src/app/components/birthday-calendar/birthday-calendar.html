@@ -1,0 +1,81 @@
+<div class="birthday-calendar-container">
+  <div class="header">
+    <button class="back-button" (click)="goBackToRoster()">
+      ← Back to Character Select
+    </button>
+    <h1>Character Birthdays</h1>
+    <button 
+      *ngIf="!isSmallMobile()" 
+      class="view-toggle-button" 
+      (click)="toggleView()"
+    >
+      Switch to {{ viewMode === 'calendar' ? 'List' : 'Calendar' }} View
+    </button>
+  </div>
+
+  <!-- Calendar View -->
+  <div *ngIf="viewMode === 'calendar'" class="calendar-view">
+    <div class="calendar-header">
+      <button class="nav-button" (click)="navigateMonth(-1)">‹</button>
+      <h2>{{ monthNames[currentMonth] }} {{ currentYear }}</h2>
+      <button class="nav-button" (click)="navigateMonth(1)">›</button>
+    </div>
+    
+    <div class="calendar-grid">
+      <div class="calendar-day-header">Sun</div>
+      <div class="calendar-day-header">Mon</div>
+      <div class="calendar-day-header">Tue</div>
+      <div class="calendar-day-header">Wed</div>
+      <div class="calendar-day-header">Thu</div>
+      <div class="calendar-day-header">Fri</div>
+      <div class="calendar-day-header">Sat</div>
+      
+      <div 
+        *ngFor="let day of calendarDays" 
+        class="calendar-day"
+        [ngClass]="{
+          'other-month': !day.isCurrentMonth,
+          'today': day.isToday,
+          'has-birthday': day.characters.length > 0
+        }"
+      >
+        <span class="day-number">{{ day.date }}</span>
+        <div *ngIf="day.characters.length > 0" class="birthday-characters">
+          <div 
+            *ngFor="let character of day.characters" 
+            class="birthday-character"
+            (click)="openCharacterModal(character)"
+          >
+            <img [src]="'assets/' + character.img" [alt]="character.shortName" />
+            <span class="character-name">{{ character.shortName }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- List View -->
+  <div *ngIf="viewMode === 'list'" class="list-view">
+    <div class="birthday-list">
+      <div 
+        *ngFor="let birthdayChar of sortedBirthdayCharacters" 
+        class="birthday-list-item"
+        (click)="openCharacterModal(birthdayChar.character)"
+      >
+        <img [src]="'assets/' + birthdayChar.character.img" [alt]="birthdayChar.character.shortName" />
+        <div class="character-info">
+          <h3>{{ birthdayChar.character.shortName }}</h3>
+          <p class="birthday-date">{{ birthdayChar.character.birthday }}</p>
+          <p class="days-until">{{ formatDaysUntilBirthday(birthdayChar.daysUntilBirthday, birthdayChar.character) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Character Modal -->
+  <app-character-modal 
+    *ngIf="selectedCharacter"
+    [character]="selectedCharacter"
+    (close)="closeCharacterModal()"
+  ></app-character-modal>
+</div>

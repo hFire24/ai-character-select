@@ -24,7 +24,9 @@ const FALLBACK_CHARACTER: Character = {
   description: "",
   retirementReason: "",
   inactiveReason: "",
-  alternatives: ""
+  alternatives: "",
+  birthday: "",
+  creationDate: ""
 };
 
 @Component({

@@ -114,6 +114,7 @@ footer {
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 @media (max-width: 800px) {
@@ -121,7 +122,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    column-gap: 10px;
   }
   .character {
     width: 90vw;

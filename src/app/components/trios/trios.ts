@@ -78,7 +78,7 @@ export class Trios implements OnInit {
       {
         id: 7,
         name: "Mean Girls",
-        description: "The edgiest moe characters",
+        description: "The edgiest moe characters and the trio that inspired this collection",
         characterShortNames: ["Darxi", "Neon Starlight", "Evil Arianna"]
       },
       {
@@ -119,12 +119,18 @@ export class Trios implements OnInit {
       },
       {
         id: 14,
+        name: "Retired Cuties",
+        description: "The cutest retired characters",
+        characterShortNames: ["Audry", "Momo", "Mimi"]
+      },
+      {
+        id: 16,
         name: "Dania's Former Companions",
         description: "Characters who used to accompany Dania",
         characterShortNames: ["Ryker", "Mr. Go", "Primelle"]
       },
       {
-        id: 15,
+        id: 17,
         name: "Productivity Pushers",
         description: "Characters who encourage productivity",
         characterShortNames: ["Ryker", "Malrick", "Mark"]
@@ -136,13 +142,13 @@ export class Trios implements OnInit {
         characterShortNames: ["Katrina", "Bruce", "Mr. Stop"]
       },
       {
-        id: 16,
+        id: 19,
         name: "Failures",
         description: "The characters who embody failure",
         characterShortNames: ["The AI Devotee", "The Shadow Self", "The Collapsed"]
       },
       {
-        id: 17,
+        id: 20,
         name: "Emergency Trio",
         description: "When times are dire, these characters are called upon",
         characterShortNames: ["Malrick", "Bruce", "The Collapsed"]

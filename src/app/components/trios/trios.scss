@@ -1,6 +1,5 @@
 .trios-container {
   margin: 0 auto;
-  padding: 20px;
 }
 
 .trios-header {
@@ -133,6 +132,11 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    padding: 0 15px;
+  }
+
+  .trio-header {
+    padding: 0 15px;
   }
   
   .character {
