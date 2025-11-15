@@ -46,6 +46,6 @@
   <div id="modalFooter">
     <a id="modalLink" [href]="chatLink" target="_blank">Chat 🗣️</a> |
     <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
-    <span *ngIf="!isIOS()"> | </span><span *ngIf="!isIOS()"><button id="updateChatLink" (click)="updateChatLink()">Update Chat Link</button></span>
+    <span *ngIf="!isMobile()"> | </span><span *ngIf="!isMobile()"><button id="updateChatLink" (click)="updateChatLink()">Update Chat Link</button></span>
   </div>
 </div>

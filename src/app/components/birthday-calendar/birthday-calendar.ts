@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Character, CharacterService } from '../../services/character.service';
+import { DeviceService } from '../../services/device.service';
 import { CharacterModal } from '../character-modal/character-modal';
 import { CommonModule } from '@angular/common';
 
@@ -42,42 +43,20 @@ export class BirthdayCalendar implements OnInit {
   // List view properties
   sortedBirthdayCharacters: BirthdayCharacter[] = [];
 
-  constructor(private router: Router, private characterService: CharacterService) {
-    this.viewMode = this.isSmallMobile() ? 'list' : 'calendar';
+  constructor(
+    private router: Router, 
+    private characterService: CharacterService,
+    private deviceService: DeviceService
+  ) {
+    this.viewMode = this.deviceService.isPhone() ? 'list' : 'calendar';
   }
 
   ngOnInit() {
     this.loadCharacters();
   }
 
-  isMobile(): boolean {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-      window.innerWidth <= 768;
-  }
-
   isSmallMobile(): boolean {
-    // Detect phones more comprehensively, exclude tablets
-    const userAgent = navigator.userAgent.toLowerCase();
-    const isPhone = /android|webos|iphone|blackberry|iemobile|opera mini/i.test(navigator.userAgent);
-    const isTablet = /ipad|android(?!.*mobile)|tablet/i.test(navigator.userAgent);
-    
-    // If it's specifically identified as a tablet, allow calendar view
-    if (isTablet && !isPhone) {
-      return false;
-    }
-    
-    // For phones, restrict calendar access regardless of orientation (portrait or landscape)
-    // Check screen dimensions - phones have at least one small dimension even in landscape
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    const minDimension = Math.min(screenWidth, screenHeight);
-    const maxDimension = Math.max(screenWidth, screenHeight);
-    
-    // Phone detection: either explicitly identified as phone OR has phone-like dimensions
-    // Even in landscape, phones typically have a narrow dimension (height) < 450px
-    const hasPhoneDimensions = minDimension <= 450 && maxDimension >= 600;
-    
-    return isPhone || hasPhoneDimensions;
+    return this.deviceService.isPhone();
   }
 
   loadCharacters() {
@@ -121,7 +100,7 @@ export class BirthdayCalendar implements OnInit {
 
   toggleView() {
     // Prevent small mobile devices from accessing calendar view
-    if (this.isSmallMobile() && this.viewMode === 'list') {
+    if (this.deviceService.isPhone() && this.viewMode === 'list') {
       return; // Do nothing, stay in list view
     }
     this.viewMode = this.viewMode === 'calendar' ? 'list' : 'calendar';

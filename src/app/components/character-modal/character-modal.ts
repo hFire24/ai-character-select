@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Character } from '../../services/character.service';
+import { DeviceService } from '../../services/device.service';
 import { CommonModule } from '@angular/common';
 
 const FALLBACK_CHARACTER: Character = {
@@ -42,6 +43,7 @@ export class CharacterModal {
 
   chatLink: string = '';
 
+  constructor(private deviceService: DeviceService) {}
 
   loadChatLink() {
     const key = this.getChatLinkKey();
@@ -140,9 +142,8 @@ export class CharacterModal {
     return 'assets/' + path;
   }
 
-  isIOS(): boolean {
-    return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-      (navigator.userAgent.includes('Macintosh') && 'ontouchend' in document);
+  isMobile(): boolean {
+    return this.deviceService.isMobile();
   }
 
   async screenshot(_: string) {
