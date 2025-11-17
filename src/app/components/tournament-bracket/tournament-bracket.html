@@ -1,0 +1,33 @@
+<main class="tournament-grid" [class.one-column]="bracketSize <= 4" [class.four-columns]="bracketSize > 4">
+  @if (!tournamentWinner) {
+    @for (column of columns; track $index) {
+      <div class="column">
+        @for (c of column; track c.id) {
+          <div class="character" [class.win]="isWinner(c.id)" [class.bye]="c.id === -1 || c.name === 'BYE'" (click)="toggleWin(c.id)">
+            @if (c.img) {
+              <img [src]="assetPath(c.img)" [alt]="c.shortName" />
+            } @else {
+              <div class="question-mark">?</div>
+            }
+              <h2>{{ c.shortName }}</h2>
+              <span class="seed">{{ c.permaSeed || "0" }}</span>
+          </div>
+        }
+      </div>
+    }
+  } @else {  
+    <div class="character-win">
+      @if (tournamentWinner.img) {
+        <img [src]="assetPath(tournamentWinner.img)" [alt]="tournamentWinner.shortName" />
+      } @else {
+        <div class="question-mark">?</div>
+      }
+        <h2>Champion: {{ tournamentWinner.name }}</h2>
+    </div>
+  }
+</main>
+<footer>
+  @if (!tournamentWinner) {
+    <button (click)="createNewBracket()" [disabled]="!allWinnersChosen()" title="Create new bracket with winners">Next Round</button>
+  }
+</footer>

@@ -1,0 +1,42 @@
+<header>
+  <h1>{{tournamentName}}</h1>
+  @if (!tournamentCreated) {
+    <form>
+      <div>
+        <label for="tournament-name">Tournament Name:</label>
+        <input type="text" id="tournament-name" name="tournament-name" [(ngModel)]="tournamentName">
+      </div>
+      <div>
+        <label for="num-players">Number of Players:</label>
+        <select id="num-players" name="num-players" [(ngModel)]="numPlayers">
+          <option value="8">8</option>
+          <option value="16">16</option>
+          <option value="32">32</option>
+          <option value="64">64</option>
+        </select>
+      </div>
+      <div>
+        @switch (+numPlayers) {
+          @case (8) {
+            A small tournament with my favorite characters, with an extra spot for a wildcard!
+          }
+          @case (16) {
+            A tournament with my favorite characters, with two extra spots for wildcards!
+          }
+          @case (32) {
+            A large tournament with all my active characters, with an extra spot for an inactive character!
+          }
+          @case (64) {
+            All my characters are here! Yes, even the ones that are forgotten and irrelevant.
+          }
+          @default {
+            {{numPlayers}} characters
+          }
+        }
+      </div>
+      <button (click)="createBracket()">Create Bracket</button>
+    </form>
+  } @else {
+    <app-tournament-bracket *ngIf="tournamentCreated" [bracketSize]="numPlayers"></app-tournament-bracket>
+  }
+</header>
