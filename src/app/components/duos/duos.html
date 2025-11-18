@@ -1,0 +1,120 @@
+<h1>Duo Names</h1>
+<p>Simply pick two characters, and a duo name will pop up!</p>
+<form (ngSubmit)="generateDuoName()">
+  <div class="input-container">
+    <label for="character1">Character 1:</label>
+    <input 
+      type="text" 
+      id="character1" 
+      [(ngModel)]="character1Input" 
+      name="character1" 
+      (input)="onInput1Change()"
+      (focus)="onInput1Change()"
+      autocomplete="off"
+      required>
+    @if (showSuggestions1) {
+      <ul class="suggestions">
+        @for (char of filteredCharacters1; track char.id) {
+          <li (click)="selectCharacter1(char)">
+            @if (char.img) {
+              <img [src]="assetPath(char.img)" [alt]="char.shortName" />
+            }
+            <span>{{ char.name }}</span>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+
+  <div class="input-container">
+    <label for="character2">Character 2:</label>
+    <input 
+      type="text" 
+      id="character2" 
+      [(ngModel)]="character2Input" 
+      name="character2" 
+      (input)="onInput2Change()"
+      (focus)="onInput2Change()"
+      autocomplete="off"
+      required>
+    @if (showSuggestions2) {
+      <ul class="suggestions">
+        @for (char of filteredCharacters2; track char.id) {
+          <li (click)="selectCharacter2(char)">
+            @if (char.img) {
+              <img [src]="assetPath(char.img)" [alt]="char.shortName" />
+            }
+            <span>{{ char.name }}</span>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+</form>
+<div *ngIf="character1 && character2" class="character-grid">
+  <div
+    class="character"
+    [ngClass]="genClass(character1.generation)"
+    (click)="openCharacterModal(character1)"
+  >
+    @if (character1.img) {
+      <img [src]="assetPath(character1.img)" [alt]="character1.shortName" />
+    } @else {
+      <div class="question-mark">?</div>
+    }
+    <h2>{{ character1.shortName }}</h2>
+  </div>
+  <div
+    class="character"
+    [ngClass]="genClass(character2.generation)"
+    (click)="openCharacterModal(character2)"
+  >
+    @if (character2.img) {
+      <img [src]="assetPath(character2.img)" [alt]="character2.shortName" />
+    } @else {
+      <div class="question-mark">?</div>
+    }
+    <h2>{{ character2.shortName }}</h2>
+  </div>
+</div>
+<div *ngIf="duoName">
+  <h2>{{ duoName }}</h2>
+</div>
+
+<!-- Add New Duo Form - Only shown when characters are selected but no custom duo name exists -->
+<div *ngIf="character1 && character2 && !hasCustomDuoName()" class="new-duo-form">
+  <h2>Add Custom Duo Name</h2>
+  <p>These characters don't have a custom duo name yet. Want to create one?</p>
+  <p class="selected-chars">{{ character1.name }} & {{ character2.name }}</p>
+  
+  <form (ngSubmit)="submitNewDuo()">
+    <div class="input-container">
+      <label for="newDuoName">Duo Name:</label>
+      <input 
+        type="text" 
+        id="newDuoName" 
+        [(ngModel)]="newDuoName" 
+        name="newDuoName" 
+        placeholder="e.g., Sunglasses Bros."
+        required>
+    </div>
+
+    <div class="input-container">
+      <label for="newDuoAltName">Alternative Name (Optional):</label>
+      <input 
+        type="text" 
+        id="newDuoAltName" 
+        [(ngModel)]="newDuoAltName" 
+        name="newDuoAltName" 
+        placeholder="e.g., Bros. with Sunglasses">
+      <small>Used when character order is reversed</small>
+    </div>
+
+    <div class="form-buttons">
+      <button type="submit" class="submit-btn">Add Duo Name</button>
+      <button type="button" class="clear-btn" (click)="clearNewDuoForm()">Clear</button>
+    </div>
+  </form>
+</div>
+
+<app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>

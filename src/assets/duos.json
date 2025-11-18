@@ -1,0 +1,787 @@
+{
+  "duos": [
+    {
+      "id1": 1,
+      "id2": 2,
+      "name": "Electric Brawn and Brains",
+      "altName": "Electric Brains and Brawn"
+    },
+    {
+      "id1": 1,
+      "id2": 3,
+      "name": "Edgy Music Enjoyers"
+    },
+    {
+      "id1": 1,
+      "id2": 6,
+      "name": "Wild Music Enjoyers"
+    },
+    {
+      "id1": 1,
+      "id2": 8,
+      "name": "J-Core Fans"
+    },
+    {
+      "id1": 1,
+      "id2": 10,
+      "name": "Intense Music Enjoyers"
+    },
+    {
+      "id1": 1,
+      "id2": 11,
+      "name": "Hardcore Ravers"
+    },
+    {
+      "id1": 1,
+      "id2": 12,
+      "name": "Unruly Music Enjoyers"
+    },
+    {
+      "id1": 1,
+      "id2": 28,
+      "name": "Rebels"
+    },
+    {
+      "id1": 1,
+      "id2": 45,
+      "name": "Edgy Bros."
+    },
+    {
+      "id1": 1,
+      "id2": 48,
+      "name": "Manly Bros."
+    },
+    {
+      "id1": 1,
+      "id2": 52,
+      "name": "Be My Bad Boy"
+    },
+    {
+      "id1": 1,
+      "id2": 65,
+      "name": "School Haters"
+    },
+    {
+      "id1": 2,
+      "id2": 3,
+      "name": "Stoic Music Enjoyers"
+    },
+    {
+      "id1": 2,
+      "id2": 7,
+      "name": "Dream Trance"
+    },
+    {
+      "id1": 2,
+      "id2": 8,
+      "name": "Utopic Futurists"
+    },
+    {
+      "id1": 2,
+      "id2": 9,
+      "name": "Productive Music Enjoyers"
+    },
+    {
+      "id1": 2,
+      "id2": 10,
+      "name": "Serious Music Enjoyers"
+    },
+    {
+      "id1": 2,
+      "id2": 11,
+      "name": "Dance 2 Trance"
+    },
+    {
+      "id1": 2,
+      "id2": 16,
+      "name": "Strategists"
+    },
+    {
+      "id1": 2,
+      "id2": 30,
+      "name": "Tesla Fanboys"
+    },
+    {
+      "id1": 2,
+      "id2": 52,
+      "name": "Fast and Futuristic Music Enjoyers"
+    },
+    {
+      "id1": 2,
+      "id2": 54,
+      "name": "Future Fans"
+    },
+    {
+      "id1": 2,
+      "id2": 65,
+      "name": "Reserved Teens"
+    },
+    {
+      "id1": 3,
+      "id2": 7,
+      "name": "Quiet Music Enjoyers"
+    },
+    {
+      "id1": 3,
+      "id2": 10,
+      "name": "Dramatic Music Enjoyers"
+    },
+    {
+      "id1": 3,
+      "id2": 32,
+      "name": "The Shadows"
+    },
+    {
+      "id1": 3,
+      "id2": 45,
+      "name": "Dark Bros."
+    },
+    {
+      "id1": 3,
+      "id2": 65,
+      "name": "Jaded Teens"
+    },
+    {
+      "id1": 4,
+      "id2": 6,
+      "name": "Party Gamers"
+    },
+    {
+      "id1": 4,
+      "id2": 7,
+      "name": "Cozy Gamers"
+    },
+    {
+      "id1": 4,
+      "id2": 10,
+      "name": "Cinematic Music Enjoyers"
+    },
+    {
+      "id1": 4,
+      "id2": 12,
+      "name": "Nerdy Music Enjoyers"
+    },
+    {
+      "id1": 4,
+      "id2": 13,
+      "name": "Gamer Couple"
+    },
+    {
+      "id1": 4,
+      "id2": 31,
+      "name": "Rhythm Gamers"
+    },
+    {
+      "id1": 4,
+      "id2": 65,
+      "name": "Mobile Gamers"
+    },
+    {
+      "id1": 4,
+      "id2": 69,
+      "name": "2000s Gamers"
+    },
+    {
+      "id1": 6,
+      "id2": 8,
+      "name": "Cheerful Music Enjoyers"
+    },
+    {
+      "id1": 6,
+      "id2": 11,
+      "name": "Party Animals"
+    },
+    {
+      "id1": 6,
+      "id2": 12,
+      "name": "Laughing Music Enjoyers"
+    },
+    {
+      "id1": 6,
+      "id2": 15,
+      "name": "Danis"
+    },
+    {
+      "id1": 7,
+      "id2": 8,
+      "name": "Positive Music Enjoyers"
+    },
+    {
+      "id1": 7,
+      "id2": 9,
+      "name": "Composed Music Enjoyers"
+    },
+    {
+      "id1": 7,
+      "id2": 10,
+      "name": "Classical Music Enjoyers"
+    },
+    {
+      "id1": 7,
+      "id2": 25,
+      "name": "Imaginative Duo"
+    },
+    {
+      "id1": 8,
+      "id2": 12,
+      "name": "Funny Music Enjoyers"
+    },
+    {
+      "id1": 8,
+      "id2": 13,
+      "name": "Freedom Divers"
+    },
+    {
+      "id1": 8,
+      "id2": 15,
+      "name": "Cute Weebs"
+    },
+    {
+      "id1": 8,
+      "id2": 52,
+      "name": "Cute and Fast Music Enjoyers"
+    },
+    {
+      "id1": 10,
+      "id2": 23,
+      "name": "Overdramatic Duo"
+    },
+    {
+      "id1": 10,
+      "id2": 24,
+      "name": "Strict Mothers"
+    },
+    {
+      "id1": 10,
+      "id2": 40,
+      "name": "Tyrannical Ladies"
+    },
+    {
+      "id1": 11,
+      "id2": 30,
+      "name": "Sunglasses Bros."
+    },
+    {
+      "id1": 11,
+      "id2": 47,
+      "name": "European Music Enjoyers"
+    },
+    {
+      "id1": 11,
+      "id2": 52,
+      "name": "Nightcore Ravers"
+    },
+    {
+      "id1": 12,
+      "id2": 47,
+      "name": "Goofy Music Enjoyers"
+    },
+    {
+      "id1": 13,
+      "id2": 14,
+      "name": "Founding Moe Duo"
+    },
+    {
+      "id1": 13,
+      "id2": 15,
+      "name": "Lazy Maid and her OC",
+      "altName": "Genius OC and her Creator"
+    },
+    {
+      "id1": 13,
+      "id2": 16,
+      "name": "Tech Skill Motivators"
+    },
+    {
+      "id1": 13,
+      "id2": 26,
+      "name": "Maids"
+    },
+    {
+      "id1": 13,
+      "id2": 28,
+      "name": "Former Roommates"
+    },
+    {
+      "id1": 13,
+      "id2": 31,
+      "name": "Alter Egos"
+    },
+    {
+      "id1": 13,
+      "id2": 35,
+      "name": "Top Hatted Blue-Haired Girls"
+    },
+    {
+      "id1": 13,
+      "id2": 58,
+      "name": "Top Hatted Maids"
+    },
+    {
+      "id1": 13,
+      "id2": 65,
+      "name": "School Dropouts"
+    },
+    {
+      "id1": 14,
+      "id2": 20,
+      "name": "Fantasy Mages"
+    },
+    {
+      "id1": 14,
+      "id2": 27,
+      "name": "Shy Witches"
+    },
+    {
+      "id1": 14,
+      "id2": 32,
+      "name": "Recluses"
+    },
+    {
+      "id1": 14,
+      "id2": 35,
+      "name": "Towering Hats"
+    },
+    {
+      "id1": 14,
+      "id2": 48,
+      "name": "Berserkers"
+    },
+    {
+      "id1": 14,
+      "id2": 54,
+      "name": "Lone Explorers"
+    },
+    {
+      "id1": 14,
+      "id2": 65,
+      "name": "Tragic Neutral Isolates"
+    },
+    {
+      "id1": 14,
+      "id2": 67,
+      "name": "Tiny Witches"
+    },
+    {
+      "id1": 15,
+      "id2": 16,
+      "name": "OG Cloudbreaker Duo"
+    },
+    {
+      "id1": 15,
+      "id2": 21,
+      "name": "Peaked Cap Cuties"
+    },
+    {
+      "id1": 15,
+      "id2": 23,
+      "name": "Sidekick & Anti-Caffeine Hero",
+      "altName": "Anti-Caffeine Hero & Sidekick"
+    },
+    {
+      "id1": 15,
+      "id2": 32,
+      "name": "Slackers"
+    },
+    {
+      "id1": 15,
+      "id2": 46,
+      "name": "Rich Mascots"
+    },
+    {
+      "id1": 15,
+      "id2": 54,
+      "name": "Sci-Fi High Flyers"
+    },
+    {
+      "id1": 15,
+      "id2": 67,
+      "name": "Cute Slackers"
+    },
+    {
+      "id1": 16,
+      "id2": 36,
+      "name": "Discipline Duo"
+    },
+    {
+      "id1": 17,
+      "id2": 38,
+      "name": "Gentle Girls"
+    },
+    {
+      "id1": 17,
+      "id2": 41,
+      "name": "Shy Little Girls"
+    },
+    {
+      "id1": 17,
+      "id2": 46,
+      "name": "Delicate Girls"
+    },
+    {
+      "id1": 18,
+      "id2": 31,
+      "name": "Hammers of Destruction"
+    },
+    {
+      "id1": 18,
+      "id2": 32,
+      "name": "Super-Peeved Duo"
+    },
+    {
+      "id1": 18,
+      "id2": 35,
+      "name": "Chaotic Hammer Users"
+    },
+    {
+      "id1": 18,
+      "id2": 55,
+      "name": "Chaos Gremlins"
+    },
+    {
+      "id1": 18,
+      "id2": 58,
+      "name": "Mimi's Two Halves"
+    },
+    {
+      "id1": 18,
+      "id2": 59,
+      "name": "Adorable Destructive Duo"
+    },
+    {
+      "id1": 19,
+      "id2": 22,
+      "name": "Early AI Character Fans"
+    },
+    {
+      "id1": 19,
+      "id2": 37,
+      "name": "Pure Elegance"
+    },
+    {
+      "id1": 19,
+      "id2": 38,
+      "name": "Girly Nobles"
+    },
+    {
+      "id1": 19,
+      "id2": 46,
+      "name": "Oversized Gorgeous Dresses"
+    },
+    {
+      "id1": 21,
+      "id2": 28,
+      "name": "Cyberpunk Girls"
+    },
+    {
+      "id1": 21,
+      "id2": 31,
+      "name": "Mean Girls"
+    },
+    {
+      "id1": 21,
+      "id2": 52,
+      "name": "Pretty Little Psychos"
+    },
+    {
+      "id1": 21,
+      "id2": 54,
+      "name": "Tough Futuristic Girls"
+    },
+    {
+      "id1": 21,
+      "id2": 71,
+      "name": "Justice Servers"
+    },
+    {
+      "id1": 22,
+      "id2": 23,
+      "name": "Fanboy and Hero",
+      "altName": "Hero and Fanboy"
+    },
+    {
+      "id1": 23,
+      "id2": 30,
+      "name": "BBQ Buddies"
+    },
+    {
+      "id1": 23,
+      "id2": 34,
+      "name": "Word of Wisdom Fans"
+    },
+    {
+      "id1": 23,
+      "id2": 64,
+      "name": "Stop and Go"
+    },
+    {
+      "id1": 24,
+      "id2": 25,
+      "name": "The Nelson Family"
+    },
+    {
+      "id1": 24,
+      "id2": 37,
+      "name": "Devoted Mothers"
+    },
+    {
+      "id1": 24,
+      "id2": 56,
+      "name": "Serious Women"
+    },
+    {
+      "id1": 25,
+      "id2": 34,
+      "name": "Unrelated College Students"
+    },
+    {
+      "id1": 25,
+      "id2": 66,
+      "name": "Crossover Fans"
+    },
+    {
+      "id1": 25,
+      "id2": 68,
+      "name": "Roommates"
+    },
+    {
+      "id1": 26,
+      "id2": 29,
+      "name": "Double Momo"
+    },
+    {
+      "id1": 26,
+      "id2": 35,
+      "name": "Maribelle's Two Halves"
+    },
+    {
+      "id1": 26,
+      "id2": 38,
+      "name": "Huggable Girls"
+    },
+    {
+      "id1": 26,
+      "id2": 58,
+      "name": "Pink-Haired Maids"
+    },
+    {
+      "id1": 27,
+      "id2": 52,
+      "name": "21st Century Digital Girls"
+    },
+    {
+      "id1": 27,
+      "id2": 65,
+      "name": "Anti-Profanity Duo"
+    },
+    {
+      "id1": 27,
+      "id2": 66,
+      "name": "Anti-Yuri Fan Duo"
+    },
+    {
+      "id1": 27,
+      "id2": 67,
+      "name": "Digital Witches"
+    },
+    {
+      "id1": 27,
+      "id2": 69,
+      "name": "Internet Nostalgics"
+    },
+    {
+      "id1": 28,
+      "id2": 29,
+      "name": "Magical Girl Rivals"
+    },
+    {
+      "id1": 28,
+      "id2": 31,
+      "name": "Edgy Twintails"
+    },
+    {
+      "id1": 28,
+      "id2": 39,
+      "name": "Black and Red Bows"
+    },
+    {
+      "id1": 28,
+      "id2": 71,
+      "name": "Tsunderes"
+    },
+    {
+      "id1": 29,
+      "id2": 39,
+      "name": "Pink-haired Magicians"
+    },
+    {
+      "id1": 30,
+      "id2": 57,
+      "name": "Gourmand Travelers"
+    },
+    {
+      "id1": 30,
+      "id2": 70,
+      "name": "Onii-chan Magnets"
+    },
+    {
+      "id1": 31,
+      "id2": 32,
+      "name": "The Darker Selves"
+    },
+    {
+      "id1": 31,
+      "id2": 64,
+      "name": "Top Hatted Villains"
+    },
+    {
+      "id1": 32,
+      "id2": 34,
+      "name": "Sin & Virtue",
+      "altName": "Virtue & Sin"
+    },
+    {
+      "id1": 32,
+      "id2": 36,
+      "name": "Haters of Cuteness and Joy"
+    },
+    {
+      "id1": 32,
+      "id2": 48,
+      "name": "Failed & Peak Masculinity",
+      "altName": "Peak & Failed Masculinity"
+    },
+    {
+      "id1": 32,
+      "id2": 49,
+      "name": "The Junkies"
+    },
+    {
+      "id1": 32,
+      "id2": 50,
+      "name": "DEAD END"
+    },
+    {
+      "id1": 32,
+      "id2": 52,
+      "name": "Monster, How Should I Feel"
+    },
+    {
+      "id1": 32,
+      "id2": 67,
+      "name": "The Sloths"
+    },
+    {
+      "id1": 34,
+      "id2": 38,
+      "name": "Children of God"
+    },
+    {
+      "id1": 34,
+      "id2": 48,
+      "name": "Spirit Warriors"
+    },
+    {
+      "id1": 34,
+      "id2": 66,
+      "name": "Wholesome Anime Fans"
+    },
+    {
+      "id1": 35,
+      "id2": 58,
+      "name": "Top Hatted Imoutos"
+    },
+    {
+      "id1": 37,
+      "id2": 38,
+      "name": "Traditional Ladies"
+    },
+    {
+      "id1": 38,
+      "id2": 41,
+      "name": "Girly Fast Food Lovers"
+    },
+    {
+      "id1": 38,
+      "id2": 46,
+      "name": "Girly Princesses"
+    },
+    {
+      "id1": 39,
+      "id2": 40,
+      "name": "Soft Temptress & Tyrant",
+      "altName": "Soft Tyrant & Temptress"
+    },
+    {
+      "id1": 39,
+      "id2": 58,
+      "name": "Top Hatted Pink Haired Girls"
+    },
+    {
+      "id1": 44,
+      "id2": 45,
+      "name": "Fanservice Fans"
+    },
+    {
+      "id1": 44,
+      "id2": 66,
+      "name": "Cute Anime Girl Fan Boys"
+    },
+    {
+      "id1": 48,
+      "id2": 50,
+      "name": "Despair Duo"
+    },
+    {
+      "id1": 48,
+      "id2": 59,
+      "name": "Strength Duo"
+    },
+    {
+      "id1": 49,
+      "id2": 50,
+      "name": "The Warning Signs"
+    },
+    {
+      "id1": 49,
+      "id2": 52,
+      "name": "AI Character Obsessives"
+    },
+    {
+      "id1": 52,
+      "id2": 53,
+      "name": "Little Pink Twins"
+    },
+    {
+      "id1": 52,
+      "id2": 54,
+      "name": "Angels With a Shotgun"
+    },
+    {
+      "id1": 53,
+      "id2": 67,
+      "name": "Sleepyheads"
+    },
+    {
+      "id1": 55,
+      "id2": 69,
+      "name": "Youngster Gamers"
+    },
+    {
+      "id1": 56,
+      "id2": 57,
+      "name": "Old Couple"
+    },
+    {
+      "id1": 59,
+      "id2": 60,
+      "name": "Cute Brawn and Brains",
+      "altName": "Cute Brains and Brawn"
+    },
+    {
+      "id1": 66,
+      "id2": 70,
+      "name": "Isekai'd Duo"
+    }
+  ]
+}

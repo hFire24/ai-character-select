@@ -43,3 +43,8 @@ Thumbs.db
 
 # User-specific files
 New Text Document.txt
+
+# Development-only duo management server
+duo-server.js
+proxy.conf.json
+DUOS_README.md

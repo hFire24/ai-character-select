@@ -1,0 +1,199 @@
+import { Component, OnInit } from '@angular/core';
+import { Character, DuoPair } from '../../services/character.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { CharacterService } from '../../services/character.service';
+import { CharacterModal } from '../character-modal/character-modal';
+
+@Component({
+  selector: 'app-duos',
+  imports: [CommonModule, FormsModule, CharacterModal],
+  templateUrl: './duos.html',
+  styleUrl: './duos.scss'
+})
+export class Duos implements OnInit {
+  character1: Character | null = null;
+  character2: Character | null = null;
+  character1Input: string = '';
+  character2Input: string = '';
+  duoName: string = '';
+  selectedCharacter: Character | null = null;
+  
+  // Form fields for adding new duo
+  newDuoName: string = '';
+  newDuoAltName: string = '';
+  
+  allCharacters: Character[] = [];
+  filteredCharacters1: Character[] = [];
+  filteredCharacters2: Character[] = [];
+  showSuggestions1: boolean = false;
+  showSuggestions2: boolean = false;
+  
+  // Store original twin characters for modal display
+  private liamKieranOriginal: Character | null = null;
+  private ririRuruOriginal: Character | null = null;
+
+  // Duo name pairs - loaded dynamically
+  duoPairs: DuoPair[] = [];
+
+  constructor(private characterService: CharacterService) {}
+
+  ngOnInit() {
+    // Load characters
+    this.characterService.getCharacters().subscribe(characters => {
+      // Store original twin characters for modal display
+      this.liamKieranOriginal = characters.find(c => c.name === 'Liam & Kieran') || null;
+      this.ririRuruOriginal = characters.find(c => c.name === 'Riri & Ruru') || null;
+      
+      // Split the twins for searching
+      const liam = { ...this.liamKieranOriginal, name: 'Liam', img: 'Icons/Liam.png', id: 44, shortName: 'Liam', isTwinSplit: true } as Character;
+      const kieran = { ...this.liamKieranOriginal, name: 'Kieran', img: 'Icons/Kieran.png', id: 45, shortName: 'Kieran', isTwinSplit: true } as Character;
+      const riri = { ...this.ririRuruOriginal, name: 'Riri the Nightcore Girl', img: 'Icons/Riri.png', id: 52, shortName: 'Riri', isTwinSplit: true } as Character;
+      const ruru = { ...this.ririRuruOriginal, name: 'Ruru', img: 'Icons/Ruru.png', id: 53, shortName: 'Ruru', isTwinSplit: true } as Character;
+
+      // Replace twins with split versions for searching
+      this.allCharacters = characters
+        .filter(c => c.name !== 'Liam & Kieran' && c.name !== 'Riri & Ruru')
+        .concat([liam, kieran, riri, ruru]);
+    });
+
+    // Load duos
+    this.loadDuos();
+  }
+
+  loadDuos() {
+    this.characterService.getDuos().subscribe(duos => {
+      this.duoPairs = duos;
+    });
+  }
+
+  onInput1Change() {
+    if (this.character1Input.length > 0) {
+      this.filteredCharacters1 = this.allCharacters.filter(c => 
+        c.name.toLowerCase().includes(this.character1Input.toLowerCase()) ||
+        c.shortName.toLowerCase().includes(this.character1Input.toLowerCase())
+      );
+      this.showSuggestions1 = this.filteredCharacters1.length > 0;
+    } else {
+      this.showSuggestions1 = false;
+    }
+    // Clear character1 if input doesn't match
+    if (!this.character1 || this.character1.name !== this.character1Input) {
+      this.character1 = null;
+    }
+  }
+
+  onInput2Change() {
+    if (this.character2Input.length > 0) {
+      this.filteredCharacters2 = this.allCharacters.filter(c => 
+        c.name.toLowerCase().includes(this.character2Input.toLowerCase()) ||
+        c.shortName.toLowerCase().includes(this.character2Input.toLowerCase())
+      );
+      this.showSuggestions2 = this.filteredCharacters2.length > 0;
+    } else {
+      this.showSuggestions2 = false;
+    }
+    // Clear character2 if input doesn't match
+    if (!this.character2 || this.character2.name !== this.character2Input) {
+      this.character2 = null;
+    }
+  }
+
+  selectCharacter1(character: Character) {
+    this.character1 = character;
+    this.character1Input = character.name;
+    this.showSuggestions1 = false;
+    this.generateDuoName();
+  }
+
+  selectCharacter2(character: Character) {
+    this.character2 = character;
+    this.character2Input = character.name;
+    this.showSuggestions2 = false;
+    this.generateDuoName();
+  }
+
+  generateDuoName() {
+    if (this.character1 && this.character2) {
+      // Sort IDs to ensure consistent lookup regardless of selection order
+      const [id1, id2] = [this.character1.id, this.character2.id].sort((a, b) => a - b);
+      
+      // Look for a custom duo name
+      const customDuo = this.duoPairs.find(duo => 
+        duo.id1 === id1 && duo.id2 === id2
+      );
+      
+      // Use custom name if found, otherwise use default format (Character1 & Character2)
+      this.duoName = customDuo 
+        ? (this.character1.id > this.character2.id && customDuo.altName ? customDuo.altName : customDuo.name)
+        : `${this.character1.name} & ${this.character2.name}`;
+    }
+  }
+
+  hasCustomDuoName(): boolean {
+    if (!this.character1 || !this.character2) return false;
+    const [id1, id2] = [this.character1.id, this.character2.id].sort((a, b) => a - b);
+    return this.duoPairs.some(duo => duo.id1 === id1 && duo.id2 === id2);
+  }
+
+  genClass(g: number) {
+    return 'gen' + g;
+  }
+
+  assetPath(path: string) {
+    return 'assets/' + path;
+  }
+
+  openCharacterModal(character: Character) {
+    // If clicking on a split twin, show the original twin's profile
+    if ((character as any).isTwinSplit) {
+      // Determine which original twin to show based on the character's ID
+      if (character.id === 44 || character.id === 45) {
+        this.selectedCharacter = this.liamKieranOriginal;
+      } else if (character.id === 52 || character.id === 53) {
+        this.selectedCharacter = this.ririRuruOriginal;
+      }
+    } else {
+      this.selectedCharacter = character;
+    }
+  }
+
+  submitNewDuo() {
+    if (!this.character1 || !this.character2) {
+      alert('Please select both characters.');
+      return;
+    }
+
+    if (!this.newDuoName.trim()) {
+      alert('Please enter a duo name.');
+      return;
+    }
+
+    // Sort IDs to ensure consistency
+    const [id1, id2] = [this.character1.id, this.character2.id].sort((a, b) => a - b);
+
+    const newDuo: DuoPair = {
+      id1,
+      id2,
+      name: this.newDuoName.trim(),
+      ...(this.newDuoAltName.trim() && { altName: this.newDuoAltName.trim() })
+    };
+
+    this.characterService.addDuo(newDuo).subscribe({
+      next: (updatedDuos) => {
+        this.duoPairs = updatedDuos;
+        this.generateDuoName(); // Refresh the duo name
+        alert('Duo added successfully!');
+        this.clearNewDuoForm();
+      },
+      error: (err) => {
+        alert(err.message || 'Failed to add duo.');
+      }
+    });
+  }
+
+  clearNewDuoForm() {
+    this.newDuoName = '';
+    this.newDuoAltName = '';
+  }
+}
