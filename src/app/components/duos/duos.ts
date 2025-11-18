@@ -29,6 +29,9 @@ export class Duos implements OnInit {
   showSuggestions1: boolean = false;
   showSuggestions2: boolean = false;
   
+  // Check if running in development mode
+  isDevelopment: boolean = false;
+  
   // Store original twin characters for modal display
   private liamKieranOriginal: Character | null = null;
   private ririRuruOriginal: Character | null = null;
@@ -36,7 +39,9 @@ export class Duos implements OnInit {
   // Duo name pairs - loaded dynamically
   duoPairs: DuoPair[] = [];
 
-  constructor(private characterService: CharacterService) {}
+  constructor(private characterService: CharacterService) {
+    this.isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  }
 
   ngOnInit() {
     // Load characters
