@@ -64,7 +64,7 @@
     {
       "id1": 2,
       "id2": 3,
-      "name": "Stoic Music Enjoyers"
+      "name": "Reserved Music Enjoyers"
     },
     {
       "id1": 2,
@@ -178,6 +178,11 @@
     },
     {
       "id1": 4,
+      "id2": 66,
+      "name": "Arcade Buddies"
+    },
+    {
+      "id1": 4,
       "id2": 69,
       "name": "2000s Gamers"
     },
@@ -222,6 +227,11 @@
       "name": "Imaginative Duo"
     },
     {
+      "id1": 7,
+      "id2": 53,
+      "name": "Dreamers"
+    },
+    {
       "id1": 8,
       "id2": 12,
       "name": "Funny Music Enjoyers"
@@ -238,8 +248,19 @@
     },
     {
       "id1": 8,
+      "id2": 35,
+      "name": "Playmates"
+    },
+    {
+      "id1": 8,
       "id2": 52,
       "name": "Cute and Fast Music Enjoyers"
+    },
+    {
+      "id1": 9,
+      "id2": 36,
+      "name": "Employee & Boss",
+      "altName": "Boss & Employee"
     },
     {
       "id1": 10,
@@ -400,8 +421,23 @@
     },
     {
       "id1": 16,
+      "id2": 23,
+      "name": "April Retirees"
+    },
+    {
+      "id1": 16,
       "id2": 36,
       "name": "Discipline Duo"
+    },
+    {
+      "id1": 16,
+      "id2": 37,
+      "name": "Cookie Bakers"
+    },
+    {
+      "id1": 17,
+      "id2": 26,
+      "name": "Shy Pink-Haired Girls"
     },
     {
       "id1": 17,
@@ -417,6 +453,16 @@
       "id1": 17,
       "id2": 46,
       "name": "Delicate Girls"
+    },
+    {
+      "id1": 17,
+      "id2": 66,
+      "name": "Non Non Biyori Fans"
+    },
+    {
+      "id1": 18,
+      "id2": 23,
+      "name": "Caffeine Destroyers"
     },
     {
       "id1": 18,
@@ -469,6 +515,11 @@
       "name": "Oversized Gorgeous Dresses"
     },
     {
+      "id1": 20,
+      "id2": 22,
+      "name": "First Retirees"
+    },
+    {
       "id1": 21,
       "id2": 28,
       "name": "Cyberpunk Girls"
@@ -477,6 +528,12 @@
       "id1": 21,
       "id2": 31,
       "name": "Mean Girls"
+    },
+    {
+      "id1": 21,
+      "id2": 46,
+      "name": "Queen & Princess",
+      "altName": "Princess & Queen"
     },
     {
       "id1": 21,
@@ -494,10 +551,20 @@
       "name": "Justice Servers"
     },
     {
+      "id1": 21,
+      "id2": 72,
+      "name": "Small but Mighty Queens"
+    },
+    {
       "id1": 22,
       "id2": 23,
       "name": "Fanboy and Hero",
       "altName": "Hero and Fanboy"
+    },
+    {
+      "id1": 22,
+      "id2": 66,
+      "name": "Teenage Anime Male Protagonists"
     },
     {
       "id1": 23,
@@ -508,6 +575,11 @@
       "id1": 23,
       "id2": 34,
       "name": "Word of Wisdom Fans"
+    },
+    {
+      "id1": 23,
+      "id2": 37,
+      "name": "Dania's Former Companions"
     },
     {
       "id1": 23,
@@ -546,6 +618,11 @@
     },
     {
       "id1": 26,
+      "id2": 28,
+      "name": "Music Box Haters"
+    },
+    {
+      "id1": 26,
       "id2": 29,
       "name": "Double Momo"
     },
@@ -558,6 +635,11 @@
       "id1": 26,
       "id2": 38,
       "name": "Huggable Girls"
+    },
+    {
+      "id1": 26,
+      "id2": 46,
+      "name": "Talentless Dolls"
     },
     {
       "id1": 26,
@@ -592,7 +674,8 @@
     {
       "id1": 28,
       "id2": 29,
-      "name": "Magical Girl Rivals"
+      "name": "Rival Magical Girls",
+      "altName": "Magical Girl Rivals"
     },
     {
       "id1": 28,
@@ -688,13 +771,33 @@
     },
     {
       "id1": 35,
+      "id2": 46,
+      "name": "Ultra Cute Joke Characters"
+    },
+    {
+      "id1": 35,
       "id2": 58,
       "name": "Top Hatted Imoutos"
+    },
+    {
+      "id1": 36,
+      "id2": 48,
+      "name": "Emergency Duo"
+    },
+    {
+      "id1": 36,
+      "id2": 50,
+      "name": "Avoiders of Cuteness"
     },
     {
       "id1": 37,
       "id2": 38,
       "name": "Traditional Ladies"
+    },
+    {
+      "id1": 37,
+      "id2": 72,
+      "name": "Elegant Duo"
     },
     {
       "id1": 38,
@@ -705,6 +808,11 @@
       "id1": 38,
       "id2": 46,
       "name": "Girly Princesses"
+    },
+    {
+      "id1": 38,
+      "id2": 66,
+      "name": "GochiUsa Fans"
     },
     {
       "id1": 39,
@@ -718,6 +826,11 @@
       "name": "Top Hatted Pink Haired Girls"
     },
     {
+      "id1": 40,
+      "id2": 71,
+      "name": "Anime Girl Enforcers"
+    },
+    {
       "id1": 44,
       "id2": 45,
       "name": "Fanservice Fans"
@@ -726,6 +839,16 @@
       "id1": 44,
       "id2": 66,
       "name": "Cute Anime Girl Fan Boys"
+    },
+    {
+      "id1": 46,
+      "id2": 72,
+      "name": "Huge Crown Wearers"
+    },
+    {
+      "id1": 47,
+      "id2": 56,
+      "name": "Political Discussers"
     },
     {
       "id1": 48,
@@ -746,6 +869,11 @@
       "id1": 49,
       "id2": 52,
       "name": "AI Character Obsessives"
+    },
+    {
+      "id1": 50,
+      "id2": 55,
+      "name": "Former Makotos"
     },
     {
       "id1": 52,
@@ -771,6 +899,11 @@
       "id1": 56,
       "id2": 57,
       "name": "Old Couple"
+    },
+    {
+      "id1": 58,
+      "id2": 67,
+      "name": "Big-Hatted Pink-Haired Little Girls"
     },
     {
       "id1": 59,
