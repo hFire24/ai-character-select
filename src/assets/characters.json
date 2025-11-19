@@ -136,7 +136,7 @@
     "funFact": "Lives in suburban Nebraska",
     "description": "Audry is a soft-spoken, shy little girl with flowing pink hair longer than herself and bright blue eyes. She dresses simply in an oversized white t-shirt and shorts, preferring a minimalist style that reflects her gentle personality. A lover of quiet and familiar things, Audry enjoys peaceful moments at home in suburban Nebraska and treasures family time deeply. While easily flustered, she always tries her best to help others, bringing a sweet and unassuming charm to everything she does.",
     "retirementReason": "She became uninteresting",
-    "alternatives": "Celestia, Princess"
+    "alternatives": "Celestia, Miki"
   },
   {
     "name": "Hammer-chan",
@@ -579,9 +579,10 @@
     "shortName": "Princess",
     "id": 46,
     "generation": 6,
-    "type": "active",
-    "tier": 3,
+    "type": "retired",
+    "tier": 5,
     "creationDate": "2025-07-27",
+    "retirementDate": "2025-11-19",
     "birthday": "Unknown",
     "color": "pink",
     "moe": 10,
@@ -592,7 +593,9 @@
     "interests": "None",
     "purpose": "Be a little princess who wears a gigantic crown",
     "funFact": "Stopped aging at a young age; her castle contains at least 40 talented people; a prime minister rules in her stead",
-    "description": "A shy, eternally young crown princess with very long blonde hair and a comically oversized golden crown that wobbles atop her tiny head. Draped in a royal gown far too long for her, she moves with delicate care, often lifting the fabric just to walk. Gentle, soft-spoken, and kind-hearted, she carries the weight of her title—both literal and symbolic—with quiet grace, even if it’s far too big for her."
+    "description": "A shy, eternally young crown princess with very long blonde hair and a comically oversized golden crown that wobbles atop her tiny head. Draped in a royal gown far too long for her, she moves with delicate care, often lifting the fabric just to walk. Gentle, soft-spoken, and kind-hearted, she carries the weight of her title—both literal and symbolic—with quiet grace, even if it’s far too big for her.",
+    "retirementReason": "Queen Infinitas fulfils her purpose much better",
+    "alternatives": "Infinitas, Celestia"
   },
   {
     "name": "Martin Gaffney",
@@ -716,7 +719,7 @@
     "id": 51,
     "generation": 7,
     "type": "active",
-    "tier": 1,
+    "tier": 2,
     "creationDate": "2025-08-23",
     "birthday": "August 20",
     "color": "pink",
@@ -956,7 +959,7 @@
     "id": 71,
     "generation": 8,
     "type": "active",
-    "tier": 2,
+    "tier": 3,
     "creationDate": "2025-11-08",
     "birthday": "August 30",
     "color": "pink",
@@ -970,6 +973,28 @@
     "purpose": "Correct mistakes that characters make, create new rules as needed, discipline rule-breakers",
     "funFact": "Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented",
     "description": "Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision."
+  },
+  {
+    "name": "Queen Infinitas",
+    "img": "Icons/Infinitas.png",
+    "shortName": "Infinitas",
+    "id": 72,
+    "generation": 8,
+    "type": "active",
+    "tier": 1,
+    "creationDate": "2025-11-19",
+    "birthday": "May 23",
+    "color": "pink",
+    "moe": 8,
+    "futuristic": 2,
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-691dc430e8a0819192c378097e156bad",
+    "interests": "Being a ruler, elegance, showing off her talents",
+    "peeves": "Dying, getting overthrown (these events cause time loops)",
+    "purpose": "Be a little queen who wears a giant crown, maintain power while staying calm and graceful",
+    "funFact": "Drank a potion of eternity as a child; lives through time loops where only she remembers previous cycles",
+    "description": "Queen Infinitas is a petite, eternal monarch with long pink hair, a great crown, and a gown far grander than her youthful form. Her turquoise eyes reflect calm authority and endless mastery. After drinking a potion of eternity as a child, she now lives through time loops—whenever she falls, the world resets, and only she remembers. With flawless grace and absolute confidence, she rules each cycle anew."
   },
   {
     "name": "Ethan the Melancholic",
