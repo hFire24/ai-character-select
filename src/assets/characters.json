@@ -422,7 +422,7 @@
     "id": 34,
     "generation": 5,
     "type": "active",
-    "tier": 2,
+    "tier": 3,
     "creationDate": "2025-05-12",
     "birthday": "April 4",
     "color": "blue",
@@ -1399,7 +1399,7 @@
     "funFact": "Born in Los Angeles; is Erica's roommate"
   },
   {
-    "name": "[No Name]",
+    "name": "Me",
     "img": "Icons/Me.png",
     "shortName": "Me",
     "id": 0,
