@@ -3,11 +3,11 @@ import { CharacterService } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
 import { TierSettings } from "../tier-settings/tier-settings";
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
-import { Router } from '@angular/router';
+import { BackButton } from '../back-button/back-button';
 
 @Component({
   selector: 'app-tier-list',
-  imports: [CommonModule, TierSettings, TierScreenshot],
+  imports: [CommonModule, TierSettings, TierScreenshot, BackButton],
   templateUrl: './tier-list.html',
   styleUrl: './tier-list.scss'
 })
@@ -81,7 +81,6 @@ export class TierList {
         };
       });
     });
-    this.router = new Router();
   }
 
   poolDragIdx: number | null = null;
@@ -351,10 +350,6 @@ export class TierList {
         }
       ];
     }
-  }
-
-  goBackToRoster() {
-    this.router.navigate(['/']);
   }
 
   async import() {

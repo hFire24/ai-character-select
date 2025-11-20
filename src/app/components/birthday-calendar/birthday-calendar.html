@@ -1,17 +1,14 @@
 <div class="birthday-calendar-container">
   <div class="header">
-    <button class="back-button" (click)="goBackToRoster()">
-      ← Back to Character Select
-    </button>
     <h1>Character Birthdays</h1>
-    <button 
-      *ngIf="!isSmallMobile()" 
-      class="view-toggle-button" 
-      (click)="toggleView()"
-    >
-      Switch to {{ viewMode === 'calendar' ? 'List' : 'Calendar' }} View
-    </button>
   </div>
+  <button 
+    *ngIf="!isSmallMobile()" 
+    class="view-toggle-button" 
+    (click)="toggleView()"
+  >
+    Switch to {{ viewMode === 'calendar' ? 'List' : 'Calendar' }} View
+  </button>
 
   <!-- Calendar View -->
   <div *ngIf="viewMode === 'calendar'" class="calendar-view">
@@ -79,3 +76,4 @@
     (close)="closeCharacterModal()"
   ></app-character-modal>
 </div>
+<app-back-button></app-back-button>

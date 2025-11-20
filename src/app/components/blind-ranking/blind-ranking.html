@@ -1,0 +1,65 @@
+@if (!rankingStarted) {
+<h1>{{title}}</h1>
+<section>
+  <p>Type in a title and begin the blind ranking process.</p>
+  <input type="text" [(ngModel)]="title" placeholder="Enter title here" />
+  <button (click)="startRanking()">Start Ranking</button>
+</section>
+} @else {
+<section>
+  <div class="screenshot-area">
+    <h1>{{title}}</h1>
+    
+    @if (!gameComplete) {
+      <div class="current-character">
+        @if (currentCharacter) {
+          <h2>Rank this character (1-5):</h2>
+          <img [src]="'assets/' + currentCharacter.img" [alt]="currentCharacter.name"
+            width="128" height="128"
+            (error)="currentCharacter.img = 'Icons/Unknown.png'"/>
+          <p>{{ currentCharacter.name }}</p>
+        }
+      </div>
+    }
+
+    <div class="ranking-slots">
+      <h3>Rankings:</h3>
+      @for (character of rankedCharacters; track $index) {
+        <div class="rank-slot" 
+             [class.empty]="character === null"
+             [class.filled]="character !== null"
+             [class.clickable]="character === null && currentCharacter && !gameComplete"
+             (click)="placeInRank($index)">
+          <div class="rank-number">{{ $index + 1 }}</div>
+          @if (character) {
+            <img [src]="'assets/' + character.img" [alt]="character.name"
+              width="64" height="64"
+              (error)="character.img = 'Icons/Unknown.png'"/>
+            <p>{{ character.name }}</p>
+          } @else {
+            <p class="empty-text">Click to place</p>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="screenshot-buttons">
+    @if (temporaryPlacement !== null && !gameComplete) {
+      <button (click)="nextCharacter()">Next Character</button>
+    }
+
+    <button (click)="takeScreenshot()">Take Screenshot</button>
+  </div>
+  @if (gameComplete) {
+    <div class="game-complete">
+      <h2 [ngStyle]="{'marginTop': '0'}">Ranking Complete!</h2>
+      <button (click)="playAgain()">Play Again</button>
+    </div>
+  }
+</section>
+}
+<app-back-button></app-back-button>
+@if (screenshotDataUrl) {
+  <app-tier-screenshot [screenshotTitle]="'Blind Ranking Screenshot'" [screenshotDataUrl]="screenshotDataUrl"></app-tier-screenshot>
+}

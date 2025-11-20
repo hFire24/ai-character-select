@@ -117,4 +117,11 @@
   </form>
 </div>
 
+<div>
+  <button (click)="getRandomDuo('named')">Random Duo (Named)</button> &nbsp;
+  <button (click)="getRandomDuo('unnamed')">Random Duo (Unnamed)</button>
+</div>
+
+<app-back-button></app-back-button>
+
 <app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>

@@ -6,7 +6,7 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
@@ -18,8 +18,8 @@
   }
 }
 
-.back-button, .view-toggle-button {
-  background: #DD3333;
+.view-toggle-button {
+  background: #3366DD;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -27,14 +27,7 @@
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
-
-  &:hover {
-    background: #BB2222;
-  }
-}
-
-.view-toggle-button {
-  background: #3366DD;
+  margin-bottom: 20px;
 
   &:hover {
     background: #2244BB;

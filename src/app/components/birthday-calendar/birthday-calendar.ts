@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Character, CharacterService } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
 import { CharacterModal } from '../character-modal/character-modal';
+import { BackButton } from '../back-button/back-button';
 import { CommonModule } from '@angular/common';
 
 interface CalendarDay {
@@ -20,7 +20,7 @@ interface BirthdayCharacter {
 
 @Component({
   selector: 'app-birthday-calendar',
-  imports: [CommonModule, CharacterModal],
+  imports: [CommonModule, CharacterModal, BackButton],
   templateUrl: './birthday-calendar.html',
   styleUrl: './birthday-calendar.scss'
 })
@@ -44,7 +44,6 @@ export class BirthdayCalendar implements OnInit {
   sortedBirthdayCharacters: BirthdayCharacter[] = [];
 
   constructor(
-    private router: Router, 
     private characterService: CharacterService,
     private deviceService: DeviceService
   ) {
@@ -104,10 +103,6 @@ export class BirthdayCalendar implements OnInit {
       return; // Do nothing, stay in list view
     }
     this.viewMode = this.viewMode === 'calendar' ? 'list' : 'calendar';
-  }
-
-  goBackToRoster() {
-    this.router.navigate(['/']);
   }
 
   // Calendar view methods

@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CharacterService } from '../../services/character.service';
 import { CharacterModal } from '../character-modal/character-modal';
+import { BackButton } from '../back-button/back-button';
 
 @Component({
   selector: 'app-duos',
-  imports: [CommonModule, FormsModule, CharacterModal],
+  imports: [CommonModule, FormsModule, CharacterModal, BackButton],
   templateUrl: './duos.html',
   styleUrl: './duos.scss'
 })
@@ -200,5 +201,58 @@ export class Duos implements OnInit {
   clearNewDuoForm() {
     this.newDuoName = '';
     this.newDuoAltName = '';
+  }
+
+  getRandomDuo(type: 'named' | 'unnamed') {
+    if (type === 'named') {
+      // Select a random existing duo
+      if (this.duoPairs.length === 0) {
+      alert('No named duos available.');
+      return;
+      }
+      const randomDuo = this.duoPairs[Math.floor(Math.random() * this.duoPairs.length)];
+      
+      // Find the characters by ID
+      this.character1 = this.allCharacters.find(c => c.id === randomDuo.id1) || null;
+      this.character2 = this.allCharacters.find(c => c.id === randomDuo.id2) || null;
+      
+      if (this.character1 && this.character2) {
+      this.character1Input = this.character1.name;
+      this.character2Input = this.character2.name;
+      this.generateDuoName();
+      }
+    } else {
+      // Select two random characters without an existing duo
+      let attempts = 0;
+      const maxAttempts = (this.allCharacters.length * (this.allCharacters.length - 1));
+      
+      while (attempts < maxAttempts) {
+      const char1 = this.allCharacters[Math.floor(Math.random() * this.allCharacters.length)];
+      const char2 = this.allCharacters[Math.floor(Math.random() * this.allCharacters.length)];
+      
+      // Ensure different characters
+      if (char1.id === char2.id) {
+        attempts++;
+        continue;
+      }
+      
+      // Check if duo already exists
+      const [id1, id2] = [char1.id, char2.id].sort((a, b) => a - b);
+      const hasDuo = this.duoPairs.some(duo => duo.id1 === id1 && duo.id2 === id2);
+      
+      if (!hasDuo) {
+        this.character1 = char1;
+        this.character2 = char2;
+        this.character1Input = char1.name;
+        this.character2Input = char2.name;
+        this.generateDuoName();
+        return;
+      }
+      
+      attempts++;
+      }
+      
+      alert('Could not find an unnamed duo pair.');
+    }
   }
 }

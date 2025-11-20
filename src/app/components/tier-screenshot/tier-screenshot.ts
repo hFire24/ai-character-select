@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TierScreenshot {
 
+  @Input() screenshotTitle: string = "Exported Tier List";
   @Input() screenshotDataUrl: string | null = null;
 
 }

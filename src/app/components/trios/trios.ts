@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 import { CharacterModal } from '../character-modal/character-modal';
+import { BackButton } from '../back-button/back-button';
 import { CharacterService, Character } from '../../services/character.service';
 
 interface Trio {
@@ -13,7 +13,7 @@ interface Trio {
 
 @Component({
   selector: 'app-trios',
-  imports: [CommonModule, CharacterModal],
+  imports: [CommonModule, CharacterModal, BackButton],
   templateUrl: './trios.html',
   styleUrl: './trios.scss'
 })
@@ -24,8 +24,7 @@ export class Trios implements OnInit {
   selectedCharacter: Character | null = null;
 
   constructor(
-    private characterService: CharacterService,
-    private router: Router
+    private characterService: CharacterService
   ) {}
 
   ngOnInit() {
@@ -171,10 +170,6 @@ export class Trios implements OnInit {
 
   genClass(generation: number): string {
     return 'gen' + generation;
-  }
-
-  goBackToRoster() {
-    this.router.navigate(['/']);
   }
 
   onCharacterClick(character: Character) {

@@ -6,9 +6,11 @@ import { Duos } from './components/duos/duos';
 import { Trios } from './components/trios/trios';
 import { BirthdayCalendar } from './components/birthday-calendar/birthday-calendar';
 import { Tournament } from './components/tournament/tournament';
+import { BlindRanking } from './components/blind-ranking/blind-ranking';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
+  { path: 'blind-ranking', component: BlindRanking, title: 'Blind Ranking' },
   { path: 'tier-list', component: TierList, title: 'Create a Tier List' },
   { path: 'spin-the-wheel', component: SpinTheWheel, title: 'Spin the Wheel' },
   { path: 'duos', component: Duos, title: 'Duo Name Generator' },
