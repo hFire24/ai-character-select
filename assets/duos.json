@@ -58,6 +58,11 @@
     },
     {
       "id1": 1,
+      "id2": 32,
+      "name": "Morality Rejecters"
+    },
+    {
+      "id1": 1,
       "id2": 45,
       "name": "Edgy Bros."
     },
@@ -70,6 +75,11 @@
       "id1": 1,
       "id2": 52,
       "name": "Be My Bad Boy"
+    },
+    {
+      "id1": 1,
+      "id2": 55,
+      "name": "Anti-Girly Duo"
     },
     {
       "id1": 1,
@@ -132,6 +142,11 @@
       "name": "Reserved Teens"
     },
     {
+      "id1": 2,
+      "id2": 69,
+      "name": "Newgrounds Music Enjoyers"
+    },
+    {
       "id1": 3,
       "id2": 7,
       "name": "Quiet Music Enjoyers"
@@ -140,6 +155,11 @@
       "id1": 3,
       "id2": 10,
       "name": "Dramatic Music Enjoyers"
+    },
+    {
+      "id1": 3,
+      "id2": 12,
+      "name": "Dark Humor"
     },
     {
       "id1": 3,
@@ -193,6 +213,11 @@
     },
     {
       "id1": 4,
+      "id2": 28,
+      "name": "Neon Gamers"
+    },
+    {
+      "id1": 4,
       "id2": 31,
       "name": "Rhythm Gamers"
     },
@@ -203,6 +228,11 @@
     },
     {
       "id1": 4,
+      "id2": 55,
+      "name": "Competitive Gamers"
+    },
+    {
+      "id1": 4,
       "id2": 65,
       "name": "Mobile Gamers"
     },
@@ -210,6 +240,11 @@
       "id1": 4,
       "id2": 66,
       "name": "Arcade Buddies"
+    },
+    {
+      "id1": 4,
+      "id2": 68,
+      "name": "Board Gamers"
     },
     {
       "id1": 4,
@@ -324,6 +359,11 @@
     },
     {
       "id1": 10,
+      "id2": 31,
+      "name": "Gothic Duo"
+    },
+    {
+      "id1": 10,
       "id2": 40,
       "name": "Tyrannical Ladies"
     },
@@ -391,7 +431,7 @@
     {
       "id1": 13,
       "id2": 31,
-      "name": "Alter Egos"
+      "name": "Mirror Selves"
     },
     {
       "id1": 13,
@@ -427,6 +467,11 @@
       "id1": 14,
       "id2": 35,
       "name": "Towering Hats"
+    },
+    {
+      "id1": 14,
+      "id2": 40,
+      "name": "Morality Enforcers"
     },
     {
       "id1": 14,
@@ -471,8 +516,18 @@
     },
     {
       "id1": 15,
+      "id2": 44,
+      "name": "Romance Anime Fans"
+    },
+    {
+      "id1": 15,
       "id2": 46,
       "name": "Rich Mascots"
+    },
+    {
+      "id1": 15,
+      "id2": 49,
+      "name": "Techno Enhancers"
     },
     {
       "id1": 15,
@@ -491,6 +546,11 @@
     },
     {
       "id1": 16,
+      "id2": 24,
+      "name": "Responsible Parents"
+    },
+    {
+      "id1": 16,
       "id2": 36,
       "name": "Discipline Duo"
     },
@@ -498,6 +558,11 @@
       "id1": 16,
       "id2": 37,
       "name": "Cookie Bakers"
+    },
+    {
+      "id1": 16,
+      "id2": 48,
+      "name": "Strong Men"
     },
     {
       "id1": 16,
@@ -673,6 +738,11 @@
     },
     {
       "id1": 24,
+      "id2": 36,
+      "name": "Concerned Parents"
+    },
+    {
+      "id1": 24,
       "id2": 37,
       "name": "Devoted Mothers"
     },
@@ -683,6 +753,11 @@
     },
     {
       "id1": 25,
+      "id2": 27,
+      "name": "OG Crossover Duo"
+    },
+    {
+      "id1": 25,
       "id2": 34,
       "name": "Unrelated College Students"
     },
@@ -690,6 +765,11 @@
       "id1": 25,
       "id2": 66,
       "name": "Crossover Fans"
+    },
+    {
+      "id1": 25,
+      "id2": 67,
+      "name": "DeviantArt Girls"
     },
     {
       "id1": 25,
