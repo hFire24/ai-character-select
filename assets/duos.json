@@ -1,6 +1,11 @@
 {
   "duos": [
     {
+      "id1": 0,
+      "id2": 22,
+      "name": "Self-Insert Protagonists"
+    },
+    {
       "id1": 1,
       "id2": 2,
       "name": "Electric Brawn and Brains",
@@ -35,6 +40,16 @@
       "id1": 1,
       "id2": 12,
       "name": "Unruly Music Enjoyers"
+    },
+    {
+      "id1": 1,
+      "id2": 18,
+      "name": "Chaotic Breakers"
+    },
+    {
+      "id1": 1,
+      "id2": 21,
+      "name": "Urban Brawlers"
     },
     {
       "id1": 1,
@@ -133,6 +148,11 @@
     },
     {
       "id1": 3,
+      "id2": 36,
+      "name": "Sad Bois"
+    },
+    {
+      "id1": 3,
       "id2": 45,
       "name": "Dark Bros."
     },
@@ -150,6 +170,11 @@
       "id1": 4,
       "id2": 7,
       "name": "Cozy Gamers"
+    },
+    {
+      "id1": 4,
+      "id2": 8,
+      "name": "Kawaii Gamers"
     },
     {
       "id1": 4,
@@ -173,6 +198,11 @@
     },
     {
       "id1": 4,
+      "id2": 44,
+      "name": "No Game No Life Fans"
+    },
+    {
+      "id1": 4,
       "id2": 65,
       "name": "Mobile Gamers"
     },
@@ -185,6 +215,11 @@
       "id1": 4,
       "id2": 69,
       "name": "2000s Gamers"
+    },
+    {
+      "id1": 6,
+      "id2": 7,
+      "name": "Musical Young Ladies"
     },
     {
       "id1": 6,
@@ -244,7 +279,12 @@
     {
       "id1": 8,
       "id2": 15,
-      "name": "Cute Weebs"
+      "name": "Denpa Music Fans"
+    },
+    {
+      "id1": 8,
+      "id2": 18,
+      "name": "Crazy Cuties"
     },
     {
       "id1": 8,
@@ -258,9 +298,19 @@
     },
     {
       "id1": 9,
+      "id2": 23,
+      "name": "Water Drinkers"
+    },
+    {
+      "id1": 9,
       "id2": 36,
       "name": "Employee & Boss",
       "altName": "Boss & Employee"
+    },
+    {
+      "id1": 9,
+      "id2": 71,
+      "name": "Moderators"
     },
     {
       "id1": 10,
@@ -276,6 +326,11 @@
       "id1": 10,
       "id2": 40,
       "name": "Tyrannical Ladies"
+    },
+    {
+      "id1": 10,
+      "id2": 48,
+      "name": "Classical Fury"
     },
     {
       "id1": 11,
@@ -298,6 +353,11 @@
       "name": "Goofy Music Enjoyers"
     },
     {
+      "id1": 12,
+      "id2": 69,
+      "name": "Newgrounds Fans"
+    },
+    {
       "id1": 13,
       "id2": 14,
       "name": "Founding Moe Duo"
@@ -312,6 +372,11 @@
       "id1": 13,
       "id2": 16,
       "name": "Tech Skill Motivators"
+    },
+    {
+      "id1": 13,
+      "id2": 21,
+      "name": "Black Thigh Boots Wearers"
     },
     {
       "id1": 13,
@@ -435,6 +500,11 @@
       "name": "Cookie Bakers"
     },
     {
+      "id1": 16,
+      "id2": 64,
+      "name": "Sharp-Dressed Men"
+    },
+    {
       "id1": 17,
       "id2": 26,
       "name": "Shy Pink-Haired Girls"
@@ -458,6 +528,11 @@
       "id1": 17,
       "id2": 66,
       "name": "Non Non Biyori Fans"
+    },
+    {
+      "id1": 18,
+      "id2": 21,
+      "name": "Mighty Tinies"
     },
     {
       "id1": 18,
@@ -528,6 +603,11 @@
       "id1": 21,
       "id2": 31,
       "name": "Mean Girls"
+    },
+    {
+      "id1": 21,
+      "id2": 35,
+      "name": "Minidress Wearers"
     },
     {
       "id1": 21,
@@ -714,6 +794,12 @@
     },
     {
       "id1": 31,
+      "id2": 38,
+      "name": "Bad Girl, Good Girl",
+      "altName": "Good Girl, Bad Girl"
+    },
+    {
+      "id1": 31,
       "id2": 64,
       "name": "Top Hatted Villains"
     },
@@ -889,6 +975,11 @@
       "id1": 53,
       "id2": 67,
       "name": "Sleepyheads"
+    },
+    {
+      "id1": 54,
+      "id2": 71,
+      "name": "Cool Green-Haired Girls"
     },
     {
       "id1": 55,
