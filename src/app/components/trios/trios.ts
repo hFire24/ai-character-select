@@ -144,7 +144,7 @@ export class Trios implements OnInit {
         id: 19,
         name: "Failures",
         description: "The characters who embody failure",
-        characterShortNames: ["The AI Devotee", "The Shadow Self", "The Collapsed"]
+        characterShortNames: ["The AI Devotee", "??????????", "The Collapsed"]
       },
       {
         id: 20,

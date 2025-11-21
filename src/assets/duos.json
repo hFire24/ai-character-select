@@ -323,6 +323,11 @@
     },
     {
       "id1": 8,
+      "id2": 27,
+      "name": "Doujin Music Enthusiasts"
+    },
+    {
+      "id1": 8,
       "id2": 35,
       "name": "Playmates"
     },
@@ -477,6 +482,11 @@
       "id1": 14,
       "id2": 48,
       "name": "Berserkers"
+    },
+    {
+      "id1": 14,
+      "id2": 50,
+      "name": "Tragic Exiles"
     },
     {
       "id1": 14,
@@ -1025,6 +1035,12 @@
       "id1": 48,
       "id2": 59,
       "name": "Strength Duo"
+    },
+    {
+      "id1": 48,
+      "id2": 66,
+      "name": "Hunk & Pretty Boy",
+      "altName": "Pretty Boy & Hunk"
     },
     {
       "id1": 49,
