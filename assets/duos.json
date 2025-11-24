@@ -87,6 +87,11 @@
       "name": "School Haters"
     },
     {
+      "id1": 1,
+      "id2": 73,
+      "name": "Metalheads"
+    },
+    {
       "id1": 2,
       "id2": 3,
       "name": "Reserved Music Enjoyers"
@@ -376,6 +381,11 @@
       "id1": 10,
       "id2": 48,
       "name": "Classical Fury"
+    },
+    {
+      "id1": 10,
+      "id2": 64,
+      "name": "Theatrical Villains"
     },
     {
       "id1": 11,
@@ -773,6 +783,11 @@
     },
     {
       "id1": 25,
+      "id2": 38,
+      "name": "Bookworms"
+    },
+    {
+      "id1": 25,
       "id2": 66,
       "name": "Crossover Fans"
     },
@@ -873,11 +888,6 @@
       "name": "Gourmand Travelers"
     },
     {
-      "id1": 30,
-      "id2": 70,
-      "name": "Onii-chan Magnets"
-    },
-    {
       "id1": 31,
       "id2": 32,
       "name": "The Darker Selves"
@@ -974,11 +984,6 @@
       "id1": 37,
       "id2": 72,
       "name": "Elegant Duo"
-    },
-    {
-      "id1": 38,
-      "id2": 41,
-      "name": "Girly Fast Food Lovers"
     },
     {
       "id1": 38,
@@ -1100,8 +1105,8 @@
     },
     {
       "id1": 66,
-      "id2": 70,
-      "name": "Isekai'd Duo"
+      "id2": 73,
+      "name": "Isekai'd Bros."
     }
   ]
 }
