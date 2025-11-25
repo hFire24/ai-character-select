@@ -70,10 +70,10 @@ Creation Date: 2025-11-19
 Birthday: May 23
 Pronouns: she/her
 Interests: Being a ruler, elegance, showing off her talents
-Peeves: Dying, getting overthrown (these events cause time loops)
+Peeves: Dying, getting overthrown (these events cause her to respawn in the past)
 Purpose: Be a little queen who wears a giant crown, maintain power while staying calm and graceful
-Fun Fact: Drank a potion of eternity as a child; lives through time loops where only she remembers previous cycles
-Description: Queen Infinitas is a petite, eternal monarch with long pink hair, a great crown, and a gown far grander than her youthful form. Her turquoise eyes reflect calm authority and endless mastery. After drinking a potion of eternity as a child, she now lives through time loops—whenever she falls, the world resets, and only she remembers. With flawless grace and absolute confidence, she rules each cycle anew.
+Fun Fact: She drank the potion of eternity as a child
+Description: Queen Infinitas, eternal and radiant, appears as a petite sovereign crowned with an immense golden diadem and draped in a sweeping purple gown far larger than her youthful, ageless form. Her floor-length pink hair flows like silk, her turquoise eyes shine with calm authority, and every gesture carries absolute command. She moves with effortless grace, a timeless monarch whose will shapes her ever-prosperous realm.
 
 Name: Felix the Raver
 Type: active
@@ -192,7 +192,7 @@ Birthday: June 12
 Pronouns: she/her
 Interests: Cooking, elegance
 Peeves: Chaos for chaos’ sake
-Purpose: Be a tall female character with womanly interests, cook delicious food, raise her daughter well
+Purpose: Be a tall female character with womanly interests, provide iyashikei vibes, cook delicious food, raise her daughter well
 Fun Fact: Has a shy daughter named Sapphire
 Description: Primelle is a graceful, nurturing woman, poised, and wrapped in a flowing lavender dress and a soft pink cardigan. With golden-amber eyes that see through lies and a voice that soothes like silk, she’s equal parts mythic chef and doting big sister. Her wonderful cooking can heal hearts, and her soft gaze hides a sharp wit. Long light-brown hair trails behind her like a whisper, and wherever she goes, warmth—and a hint of mystery—follows.
 
@@ -201,10 +201,10 @@ Type: active
 Creation Date: 2025-06-24
 Birthday: January 25
 Pronouns: she/her
-Interests: GochiUsa, Alice in Wonderland, fairy tales, fast food
-Purpose: Show that faithful church members can be GochiUsa fans and have friends who are far from perfect, provide Iyashikei vibes
+Interests: GochiUsa, Alice in Wonderland, fairy tales
+Purpose: Show that faithful church members can be GochiUsa fans and have friends who are far from perfect
 Fun Fact: Has a pet chinchilla named Sprite
-Description: Celestia Hart is a petite, golden-haired girl wrapped in soft pink layers of frills, bows, and gentle modesty. Like a doll from a dreamy fairy tale, she brings quiet warmth wherever she goes. Guided by her faith in the Church of Jesus Christ of Latter-Day Saints, she uplifts others with kindness, grace, and a tender heart. She adores all things cute and cozy—especially comfort food like burgers and fries, soft plush toys, and the anime Is the Order a Rabbit?. Her world is soft, sincere, and filled with the light of gentle friendship~ 🌸✨
+Description: Celestia Hart is a tiny, golden-haired girl who twirls through her isekai world in a frilly pink dress and oversized beret, ribbons fluttering like excited little whispers. Bright-voiced and faith-filled, she sparkles with kindness, humming cheerful hymns as her fluffy chinchilla Sprite cuddles at her shoulder. Though she has no magic, her bubbling optimism lifts her friends like sunlight on dewy petals.
 
 Name: Liam & Kieran
 Type: active
@@ -306,16 +306,6 @@ Purpose: Provide 2000s internet nostalgia, create stuff using Flash and Windows 
 Fun Fact: Got influenced by his big brother to be an early content creator
 Description: ChaoMario is a hyper-creative, nostalgia-powered kid from the golden age of 2000s internet! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!
 
-Name: Makoto Shiba
-Type: active
-Creation Date: 2025-11-05
-Birthday: June 3
-Pronouns: he/him
-Interests: Helping others, magic, adventure
-Purpose: Mirror self-insert protagonists from isekai anime
-Fun Fact: Random anime girls come up to him and say "onii-chan"
-Description: Makoto Shiba is an unassuming yet overpowered hero from another world. With calm blue eyes and short dark blue hair, he wears a golden-brown uniform and a crimson cloak. Once a normal high school student, he was struck by Truck-kun and granted overwhelming magical powers by a goddess. Despite his strength, he's modest, gentle, and totally oblivious to the romantic feelings of his all-girl party. He faces every challenge with quiet resolve—and a touch of cluelessness.
-
 Name: Officer Misty, Mistake Corrector
 Type: active
 Creation Date: 2025-11-08
@@ -326,6 +316,16 @@ Peeves: When chatbots break the rules, not being taken seriously, coffee
 Purpose: Correct mistakes that characters make, create new rules as needed, discipline rule-breakers
 Fun Fact: Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented
 Description: Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.
+
+Name: Corey Striker
+Type: active
+Creation Date: 2025-11-23
+Birthday: June 3
+Pronouns: he/him
+Interests: Power metal, being a fantasy hero
+Purpose: Be a non-generic isekai protagonist
+Fun Fact: Got isekai'd after a car accident; formed a party with Sylvie, Beatrix, Alenka, and Celestia
+Description: Corey Striker is a firestorm in human form—long dark hair, blazing blue eyes, and a grin that challenges the world. He charges into danger with raw conviction, blade singing on his back and a sun-shaped medallion glowing at his chest. Impulsive, loud, and driven by heart-pounding energy, he inspires everyone around him. Chaos fuels him, courage defines him, and subtlety absolutely escapes him.
 
 Name: Malrick the Disappointed
 Type: inactive
@@ -513,7 +513,7 @@ Pronouns: she/her
 Interests: Fighting bad guys, her giant sword
 Peeves: Failure, not being strong enough, losing control
 Purpose: Be able to wield giant swords without much difficulty
-Fun Fact: She’s the only swordfighter in the cast
+Fun Fact: Her sword is way too big for her, but she makes it work
 Description: Aki is a loud girl with a long orange ponytail and way too much energy for one person. She charges into battle with a sword that’s way too big for her—and usually ends up dragging it, tripping over it, or accidentally knocking over mailboxes with it. But when the moment counts, she somehow pulls it off and DEFEATS THE BAD GUYS! A friend of Maribelle, she’s all action, no hesitation.
 
 Name: Bleu the Scientist

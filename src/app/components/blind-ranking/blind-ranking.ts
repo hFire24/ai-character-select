@@ -142,8 +142,12 @@ export class BlindRanking {
       el.style.display = 'none';
     });
 
+    // Detect color scheme preference
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const backgroundColor = isDarkMode ? '#181a1b' : '#f0f0f0';
+
     const canvas = await html2canvas(screenshotArea, { 
-      backgroundColor: '#181a1b',
+      backgroundColor: backgroundColor,
       scale: 1 // Standard quality
     });
 
