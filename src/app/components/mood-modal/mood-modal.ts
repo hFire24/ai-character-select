@@ -50,7 +50,7 @@ export class MoodModal {
       case 'chatted':
         return this.characters.filter(c => {
           const key = 'chatLink_' + (c.name || 'unknown');
-          return localStorage.getItem(key) !== null && c.tier <= 3;
+          return localStorage.getItem(key) !== null && c.type !== 'side';
         });
       case 'chatted0':
         return this.characters.filter(c => {
