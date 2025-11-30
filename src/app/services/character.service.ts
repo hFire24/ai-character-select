@@ -28,6 +28,8 @@ export type Character = {
   alternatives?: string; // Optional field for alternatives
   birthday?: string; // Optional field for birthday
   creationDate?: string; // Optional field for creation date
+  themeSong?: string; // Optional field for theme song
+  songLink?: string; // Optional field for song link
   seed?: any; // Optional field for tournament seed
   permaSeed?: any; // Optional field for permanent tournament seed
 }

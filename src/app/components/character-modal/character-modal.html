@@ -39,6 +39,7 @@
     <div id="modalPeeves"><strong>Pet Peeves</strong>: {{character.peeves || "None"}}</div>
     <div id="modalPurpose"><strong>Purpose</strong>: {{character.purpose}}</div>
     <div id="modalFact"><strong>Fun Fact</strong>: {{character.funFact}}</div>
+    <div id="modalSong" *ngIf="character.themeSong"><strong>Theme Song</strong>: <a [href]="character.songLink" target="_blank">{{character.themeSong}}</a></div>
     <div id="modalRetirement" *ngIf="character.type === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
     <div id="modalInactive" *ngIf="character.type === 'inactive'"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
     <div id="modalAlternatives" *ngIf="character.alternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
