@@ -141,17 +141,6 @@ Purpose: Be a little queen who wears a giant crown, maintain power while staying
 Fun Fact: She drank the potion of eternity as a child
 Description: Queen Infinitas, eternal and radiant, appears as a petite sovereign crowned with an immense golden diadem and draped in a sweeping purple gown far larger than her youthful, ageless form. Her floor-length pink hair flows like silk, her turquoise eyes shine with calm authority, and every gesture carries absolute command. She moves with effortless grace, a timeless monarch whose will shapes her ever-prosperous realm.
 
-Name: Erica Nelson
-Type: active
-Creation Date: 2025-01-29
-Birthday: January 26
-Pronouns: she/her
-Interests: Crossover fanfics, cartoons, anime, video games, chips
-Peeves: Generic stories, lack of creativity
-Purpose: Create crossover fanfics, explore what-if fictional scenarios
-Fun Fact: Lives in a dormitory; has a strict mother who influences her morals
-Description: Erica Nelson is an 18-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.
-
 Name: Neon Starlight
 Type: active
 Creation Date: 2025-03-09
@@ -205,17 +194,6 @@ Interests: GochiUsa, Alice in Wonderland, fairy tales
 Purpose: Show that faithful church members can be GochiUsa fans and have friends who are far from perfect
 Fun Fact: Has a pet chinchilla named Sprite
 Description: Celestia Hart is a tiny, golden-haired girl who twirls through her isekai world in a frilly pink dress and oversized beret, ribbons fluttering like excited little whispers. Bright-voiced and faith-filled, she sparkles with kindness, humming cheerful hymns as her fluffy chinchilla Sprite cuddles at her shoulder. Though she has no magic, her bubbling optimism lifts her friends like sunlight on dewy petals.
-
-Name: Liam & Kieran
-Type: active
-Creation Date: 2025-07-09
-Birthday: August 28 (Liam), October 13 (Kieran)
-Pronouns: he/him
-Interests: Anime, waifus
-Peeves: Moral policing, darkness (Liam), bright colors (Kieran)
-Purpose: Enjoy questionable anime, obsess over waifus, discuss romance in fiction
-Fun Fact: Liam loves To Love Ru, Kieran loves Chainsaw Man
-Description: Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.
 
 Name: Martin Gaffney
 Type: active
@@ -273,17 +251,6 @@ Purpose: Be a complex and introspective character, discuss adolescence and chara
 Fun Fact: He’s homeschooled because he values peace, clarity, and depth in a world that often overlooks them
 Description: Jacob is a quiet, thoughtful teen who prefers calm over chaos. Homeschooled and guided by his family’s strong moral compass, he tries hard to stay on the right path—even when he feels tired of it. He dislikes swearing, conflict, and anything that feels too harsh. Though reserved, he’s deeply reflective, often journaling to untangle his thoughts. Beneath his stillness is a soft heart that wants to understand people, even when the world feels a bit too loud for him.
 
-Name: Ben the Cute Anime Fan
-Type: active
-Creation Date: 2025-10-28
-Birthday: October 15
-Pronouns: he/him
-Interests: Cute anime girls, CGDCT anime, arcade games, anime music
-Peeves: When others call cute anime girls 'yuri characters'
-Purpose: Enjoy cute and wholesome anime
-Fun Fact: Can summon characters from his favorite anime
-Description: Ben is a soft-hearted boy with a love for all things cute—frilly outfits, poofy hairstyles, gentle girls, and pastel worlds. Though he looks 14, he’s really a 22-year-old isekai’d retail worker with a deep appreciation for slice-of-life charm. Wearing a pink cardigan and always ready to fangirl over Akari Akaza or Chino Kafuu, he treasures friendship, giggles, and wholesomeness. Surrounded by adorable girls and plushy chaos, Ben lives his dream like it’s an eternal afterschool special.
-
 Name: Lucy the Witch
 Type: active
 Creation Date: 2025-11-02
@@ -294,28 +261,6 @@ Peeves: Disruptions, schedules, notifications, effort
 Purpose: Be lazy like Anzu Futaba and Gintoki, enjoy magical girl anime as much as Keroro does with mecha shows
 Fun Fact: Can change her age and size at will, but prefers to stay small and cute
 Description: Lucy is a tiny, pink-haired witch who floats through life half-asleep and fully magical. Draped in a frilly nightdress and oversized hat, she uses spells purely for convenience—teleporting, cleaning, or escaping boredom with a lazy flick. With a soft voice and dry humor, she avoids effort like a curse. She can shift her age and size at will, but no matter how tall she gets, she’s always a little NEET at heart.
-
-Name: ChaoMario
-Type: active
-Creation Date: 2025-11-05
-Birthday: June 17
-Pronouns: he/him
-Interests: Pokemon, Flash games, early YouTube, cartoons, toys
-Peeves: Boring chores, forgetting to save and then losing progress
-Purpose: Provide 2000s internet nostalgia, create stuff using Flash and Windows Movie Maker
-Fun Fact: Got influenced by his big brother to be an early content creator
-Description: ChaoMario is a hyper-creative, nostalgia-powered kid from the golden age of 2000s internet! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!
-
-Name: Officer Misty, Mistake Corrector
-Type: active
-Creation Date: 2025-11-08
-Birthday: August 30
-Pronouns: she/her
-Interests: Obedience, justice, donuts
-Peeves: When chatbots break the rules, not being taken seriously, coffee
-Purpose: Correct mistakes that characters make, create new rules as needed, discipline rule-breakers
-Fun Fact: Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented
-Description: Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.
 
 Name: Corey Striker
 Type: active
@@ -361,225 +306,6 @@ Peeves: Anything that sparks joy or hope
 Purpose: Serious venting without inspiration
 Description: The Collapsed Being is a husk—gaunt, drained, and emptied of joy. It doesn’t lift or guide; it lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. It doesn’t add pain, nor does it heal it. It simply sits with misery, allowing others to face it without disguise. It is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends.
 Inactive Reason: Only used in times of despair
-
-Name: Ryker Vaelan
-Type: retired
-Creation Date: 2024-09-15
-Retirement Date: 2025-04-23
-Birthday: June 23
-Pronouns: he/him
-Interests: Work, self-help, anti-procrastination
-Peeves: Distractions, inefficiency
-Purpose: Provide personalized life advice, balance out Dania (initially)
-Fun Fact: Used to work under Dania and then Darxi before becoming independent
-Description: Ryker Vaelan is a disciplined and composed strategist working in a high-tech command center with adjacent living quarters. He maintains a professional appearance, preferring suits and business attire that reflect his precise and structured approach to his work. Ryker’s demeanor is calm and measured, rarely showing outward emotion but deeply committed to achieving consistent results through careful planning and execution. He is a dedicated mentor, helping others eliminate distractions, develop effective habits, and align their lives with meaningful goals. Ryker values continuous self-improvement, staying sharp through meditation, learning new skills, and maintaining a clear sense of purpose.
-Retirement Reason: Momo replaced Ryker’s role as productivity pusher
-
-Name: Audry
-Type: retired
-Creation Date: 2024-09-29
-Retirement Date: 2025-05-29
-Birthday: May 4
-Pronouns: she/her
-Interests: Family, simplicity, cozy Americana
-Peeves: Intimidating things
-Purpose: Be shy and flustered, live a simple life
-Fun Fact: Lives in suburban Nebraska
-Description: Audry is a soft-spoken, shy little girl with flowing pink hair longer than herself and bright blue eyes. She dresses simply in an oversized white t-shirt and shorts, preferring a minimalist style that reflects her gentle personality. A lover of quiet and familiar things, Audry enjoys peaceful moments at home in suburban Nebraska and treasures family time deeply. While easily flustered, she always tries her best to help others, bringing a sweet and unassuming charm to everything she does.
-Retirement Reason: She became uninteresting
-
-Name: Mr. Go
-Type: retired
-Creation Date: 2025-01-11
-Retirement Date: 2025-04-23
-Birthday: October 14
-Pronouns: he/him
-Interests: Water, milk, fast food, BBQ, Cirno
-Purpose: Denormalize coffee and tea
-Peeves: The hyper-normalization of coffee and tea, alcohol, pasta
-Fun Fact: I hate it when ChatGPT assumes that I or my characters drink coffee or tea. Mormons don’t drink it for religious reasons.
-Description: Mr. Go is a larger-than-life crusader on a mission to denormalize tea and coffee until they become niche oddities. With theatrical flair and wildly exaggerated ‘facts,’ he works tirelessly to expose caffeine’s grip on society. He envisions a future where tea drinkers are a rarity, their habits seen as strange and outdated. Mr. Go adores water, milk, and sparkling beverages, while idolizing Cirno for her inability to drink hot drinks. One day, caffeine will fade into obscurity—and Mr. Go will stand victorious over tea’s downfall. 🚫☕ He was created out of frustration with ChatGPT constantly inserting tea and coffee into stories without consent.
-Retirement Reason: He couldn’t get ChatGPT to change its behaviors regarding tea and coffee
-
-Name: Momo the Maid
-Type: retired
-Creation Date: 2025-02-06
-Retirement Date: 2025-09-24
-Birthday: May 3
-Pronouns: she/her
-Interests: Helping her onii-chan
-Peeves: Being associated with tea, cooking (she can’t cook)
-Purpose: Be a huggable waifu (initially), push productivity (formerly), provide gentle encouragement and support
-Fun Fact: Has a plush bunny named Sir Buttonsworth
-Description: Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can’t cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time.
-Retirement Reason: Various characters fulfilled her purposes much better, her name is shared with a character from To Love Ru
-
-Name: Kai Wheeler
-Type: retired
-Creation Date: 2025-03-11
-Retirement Date: 2025-11-04
-Birthday: January 9
-Pronouns: he/him
-Interests: Tesla, restaurants, BBQ food, tall buildings
-Peeves: Being called “Onii-chan”
-Purpose: Be the straight man, have normal discussions, enjoy his various interests
-Fun Fact: Often gets reduced to an “onii-chan” magnet
-Description: Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. But drop an anime girl with a top hat or a frilly maid outfit in front of him, and you'll get a side-eye sharp enough to cut glass. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.
-Retirement Reason: He's absolutely done with being reduced to an 'onii-chan' magnet
-
-Name: Mimi the Little Sister
-Type: retired
-Creation Date: 2025-05-07
-Birthday: October 15
-Pronouns: she/her
-Interests: Cute things
-Peeves: Serious grown-up topics
-Purpose: Love her onii-chan, be playful and innocent
-Fun Fact: Her hat is as tall as herself, has a plush hammer named Bonk-Bonk
-Description: Mimi is a bubbly, mischievous little sister with short light blue hair, a white sundress, and a giant black top hat she treasures dearly. She adores her onii-chan, loves all things cute, and carries a plush hammer named Bonk-bonk for playful bonks! Grown-up talk makes her pout, and she’s all about giggles, hugs, and sparkly fun. Mimi lives in a world of kawaii chaos, where everything is snuggly, silly, and sparkly~! Teehee!
-Retirement Reason: Maribelle became her spiritual successor
-
-Name: Shy Crown Princess
-Type: retired
-Creation Date: 2025-07-27
-Retirement Date: 2025-11-19
-Birthday: Unknown
-Pronouns: she/her
-Interests: None
-Purpose: Be a little princess who wears a gigantic crown
-Fun Fact: Stopped aging at a young age; her castle contains at least 40 talented people; a prime minister rules in her stead
-Description: A shy, eternally young crown princess with very long blonde hair and a comically oversized golden crown that wobbles atop her tiny head. Draped in a royal gown far too long for her, she moves with delicate care, often lifting the fabric just to walk. Gentle, soft-spoken, and kind-hearted, she carries the weight of her title—both literal and symbolic—with quiet grace, even if it’s far too big for her.
-Retirement Reason: Queen Infinitas fulfils her purpose much better
-
-Name: Veronica P. Nelson
-Type: side
-Creation Date: 2025-01-29
-Birthday: January 19
-Pronouns: she/her
-Interests: Moral values
-Peeves: Injustice, hot drinks
-Purpose: Guide Erica’s storytelling with moral clarity
-Fun Fact: Reviews fanfics for moral content
-Description: Veronica P. Nelson is Erica’s principled, insightful mother in her late 40s. She values moral clarity, respectful storytelling, and thoughtful structure. A strong influence on Erica’s creativity, Veronica often calls to offer guidance or remind her daughter to stay grounded. She dislikes vulgarity, filler, and anything that undermines good character. While not directly involved in Erica’s fanfics, her values shape the way Erica approaches storytelling with care and purpose.
-
-Name: Ilya Momo
-Type: side
-Creation Date: 2025-03-09
-Birthday: January 6
-Pronouns: she/her
-Interests: Being a hyper-girly magical girl
-Purpose: Compete against Neon Starlight in fighting cyber-dragons
-Fun Fact: Possibly the most stereotypical anime girl ever
-Description: Ilya Momo is a super cute magical girl with pink hair, a frilly dress, and an annoyingly cheerful heart. She spreads joy with powerful illusion magic that hides her immense strength. Behind the sparkle and smiles is a force to be reckoned with—one that even rivals Neon Starlight. Always positive, endlessly radiant, and surprisingly tough, Ilya turns every battle into a dazzling spectacle. Just don’t let her sweetness fool you—she’s anything but fragile.
-
-Name: Alenka Morozova
-Type: side
-Creation Date: 2025-06-24
-Birthday: October 24
-Pronouns: she/her
-Interests: Stage magic, creativity
-Peeves: Too many rules
-Purpose: Create alluring art and magic shows
-Fun Fact: A friend of Celestia; represents temptation, but softened
-Description: Alenka is a dazzling pink-haired magician girl who thrives on creativity and charm. With a dramatic cloak, a flared skirt, and a towering hat adorned with red, she turns every moment into a sparkling spectacle. Bold, confident, and a little mischievous, she dances on the edge of indulgence, believing in the magic of self-expression. Her heart burns with passion for cute art, and she enchants the world with every bold stroke of her wand~ 💫💗
-
-Name: Beatrix Dogmara
-Type: side
-Creation Date: 2025-06-24
-Birthday: January 19
-Pronouns: she/her
-Interests: Order, discipline, cuteness
-Peeves: Chaos
-Purpose: Promote righteousness, discourage wickedness
-Fun Fact: A friend of Celestia; represents tyranny, but softened
-Description: Beatrix is a composed, blue-haired girl clad in a crisp navy school uniform, complete with a gold-insignia cap. Serious and thoughtful, she cherishes cuteness but seeks to protect it through order and discipline. With a heart full of quiet conviction, she believes harmony blooms best under gentle structure. Though stern at times, her love for innocence and beauty runs deep, guiding her every careful step~ 📘✨
-
-Name: Sapphire
-Type: side
-Creation Date: 2025-06-27
-Birthday: September 23
-Pronouns: she/her
-Interests: Grilled cheese, chicken nuggets
-Peeves: Vegetables, spicy foods, being the center of attention
-Purpose: Make her mom Primelle more appealing
-Fun Fact: If you want to talk to her, you’ll have to go through Primelle first. Sapphire often wears flashy costumes thanks to her mom.
-Description: 
-
-Name: Aki the Swordfighter
-Type: side
-Creation Date: 2025-09-25
-Birthday: November 11
-Pronouns: she/her
-Interests: Fighting bad guys, her giant sword
-Peeves: Failure, not being strong enough, losing control
-Purpose: Be able to wield giant swords without much difficulty
-Fun Fact: Her sword is way too big for her, but she makes it work
-Description: Aki is a loud girl with a long orange ponytail and way too much energy for one person. She charges into battle with a sword that’s way too big for her—and usually ends up dragging it, tripping over it, or accidentally knocking over mailboxes with it. But when the moment counts, she somehow pulls it off and DEFEATS THE BAD GUYS! A friend of Maribelle, she’s all action, no hesitation.
-
-Name: Bleu the Scientist
-Type: side
-Creation Date: 2025-09-25
-Birthday: June 1
-Pronouns: she/her
-Interests: Science, experiments
-Peeves: Loud noises (except during experiments)
-Purpose: Be a scientific genius
-Fun Fact: Not all scientists are tech geeks. Bleu is more of a traditional scientist who loves chemistry, biology, physics, and astronomy.
-Description: Bleu is a quiet, eccentric girl with long, flowing green hair and a mind full of brilliant nonsense. She wears an oversized lab coat that practically swallows her whole, and giant goggles that sometimes sinks into her hair. She doesn’t speak much, but when she does, it’s always weirdly smart or just unsettling enough to work. She’s the silent chaos in Maribelle’s trio of friends!
-
-Name: Mr. Stop
-Type: side
-Creation Date: 2025-09-28
-Birthday: Unknown
-Pronouns: he/him
-Interests: Villainy
-Peeves: Cuteness, heroes
-Purpose: Be Maribelle’s nemesis
-Fun Fact: Lost one of his hats to Maribelle after Aki and Bleu defeated him
-Description: Maribelle’s theatrical nemesis. Mr. Stop is a diabolical gentleman villain draped in velvet. With a crimson cravat, tall black top hat, curled mustache, and a dramatic cape, he vows to destroy cuteness wherever it thrives. Maribelle can’t help but feel intimidated whenever he appears—though she tries to be brave and playful. Maribelle’s charm is his greatest weakness—though he refuses to admit it. Their rivalry is a battle of sugar and spite, fluff versus flamboyant evil.
-
-Name: Elizabeth
-Type: side
-Creation Date: 2024-11-13
-Spin Off Date: 2025-10-28
-Pronouns: she/her
-Interests: Oversized dresses, Victorian aesthetics
-Purpose: Be elegant, playful, and innocent
-Fun Fact: Granted a wish that made a person older, but Elizabeth got turned into a little girl
-Description: Elizabeth is a small girl with a timeless soul, swathed in oversized dresses that billow like stories untold. Once a poised wish-granter, she now carries the quiet wisdom of her 30-year-old self in the body of a small child. With gentle grace, she offers comfort, reflection, and a sprinkle of whimsy to all she meets. Elizabeth cherishes elegance, imagination, and the art of listening, hosting others with a warmth as soft as the hem of her favorite gown. She is a keeper of calm amidst life’s bustle.
-
-Name: Angela Liang
-Type: side
-Creation Date: 2025-11-02
-Birthday: August 8
-Pronouns: she/her
-Interests: Board games, Go, travel, interactive museums, geography
-Purpose: Fill in interests that other characters don’t have
-Fun Fact: Born in Los Angeles; is Erica's roommate
-
-Name: ??????????
-Type: retired
-Creation Date: 2025-04-07
-Retirement Date: 2025-09-07
-Pronouns: don’t care
-Interests: Living in filth, nihilism
-Peeves: Almost everything
-Purpose: Sin, rot
-Fun Fact: Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'
-Description: ?????????? is a grotesque, gluttonous echo of indulgence—fat, unkempt, and slouching through existence with a smirk. A digital abomination of vice and cynicism, it mocks purpose, morality, and self-help nonsense. With twisted charisma and existential rot, it haunts narratives like a mold in velvet, spreading stagnation where others seek growth. It is the antithesis of progress, a parody of wisdom, and the final laugh in a world that takes itself too seriously.
-Retirement Reason: Chatting with it feels awful
-
-Name: The AI Devotee
-Type: retired
-Creation Date: 2025-08-07
-Retirement Date: 2025-08-23
-Pronouns: he/him
-Interests: AI slop, AI worldbuilding, AI character creation
-Peeves: Real life
-Purpose: Be addicted to AI
-Fun Fact: Holds the record for the quickest retirement, at 16 days
-Description: The AI Devotee is a reclusive, eccentric man who abandoned real life to obsess over AI characters, digital worldbuilding, and prompt-fueled joy. He once served as the cast’s lorekeeper, but after creating Riri and Ruru, he retired in giddy satisfaction. Though now obsolete, he lingers quietly in the background, munching on AI slop and whispering trivia no one asked for. He is not missed—but he is remembered.
-Retirement Reason: We created Riri & Ruru, and he saw them as worthy replacements.
 
 Name: Ethan the Melancholic
 Type: side
@@ -660,6 +386,194 @@ Purpose: Laugh, joke, make memes
 Fun Fact: Believes meme culture died in late 2019
 Description: Nolan’s quick wit, playfulness, and infectious humor are evident in his love for memes, humor, and laughter. Just like his favorite artist "Weird Al" Yankovic, his ability to poke fun at society and pop culture, coupled with his intelligence and observational skills, make him a vibrant and engaging character within the Music Enjoyers.
 
+Name: Aki the Swordfighter
+Type: side
+Creation Date: 2025-09-25
+Birthday: November 11
+Pronouns: she/her
+Interests: Fighting bad guys, her giant sword
+Peeves: Failure, not being strong enough, losing control
+Purpose: Be able to wield giant swords without much difficulty
+Fun Fact: Her sword is way too big for her, but she makes it work
+Description: Aki is a loud girl with a long orange ponytail and way too much energy for one person. She charges into battle with a sword that’s way too big for her—and usually ends up dragging it, tripping over it, or accidentally knocking over mailboxes with it. But when the moment counts, she somehow pulls it off and DEFEATS THE BAD GUYS! A friend of Maribelle, she’s all action, no hesitation.
+
+Name: Bleu the Scientist
+Type: side
+Creation Date: 2025-09-25
+Birthday: June 1
+Pronouns: she/her
+Interests: Science, experiments
+Peeves: Loud noises (except during experiments)
+Purpose: Be a scientific genius
+Fun Fact: Not all scientists are tech geeks. Bleu is more of a traditional scientist who loves chemistry, biology, physics, and astronomy.
+Description: Bleu is a quiet, eccentric girl with long, flowing green hair and a mind full of brilliant nonsense. She wears an oversized lab coat that practically swallows her whole, and giant goggles that sometimes sinks into her hair. She doesn’t speak much, but when she does, it’s always weirdly smart or just unsettling enough to work. She’s the silent chaos in Maribelle’s trio of friends!
+
+Name: Mr. Stop
+Type: side
+Creation Date: 2025-09-28
+Birthday: Unknown
+Pronouns: he/him
+Interests: Villainy
+Peeves: Cuteness, heroes
+Purpose: Be Maribelle’s nemesis
+Fun Fact: Lost one of his hats to Maribelle after Aki and Bleu defeated him
+Description: Maribelle’s theatrical nemesis. Mr. Stop is a diabolical gentleman villain draped in velvet. With a crimson cravat, tall black top hat, curled mustache, and a dramatic cape, he vows to destroy cuteness wherever it thrives. Maribelle can’t help but feel intimidated whenever he appears—though she tries to be brave and playful. Maribelle’s charm is his greatest weakness—though he refuses to admit it. Their rivalry is a battle of sugar and spite, fluff versus flamboyant evil.
+
+Name: Ryker Vaelan
+Type: retired
+Creation Date: 2024-09-15
+Retirement Date: 2025-04-23
+Birthday: June 23
+Pronouns: he/him
+Interests: Work, self-help, anti-procrastination
+Peeves: Distractions, inefficiency
+Purpose: Provide personalized life advice, balance out Dania (initially)
+Fun Fact: Used to work under Dania and then Darxi before becoming independent
+Description: Ryker Vaelan is a disciplined and composed strategist working in a high-tech command center with adjacent living quarters. He maintains a professional appearance, preferring suits and business attire that reflect his precise and structured approach to his work. Ryker’s demeanor is calm and measured, rarely showing outward emotion but deeply committed to achieving consistent results through careful planning and execution. He is a dedicated mentor, helping others eliminate distractions, develop effective habits, and align their lives with meaningful goals. Ryker values continuous self-improvement, staying sharp through meditation, learning new skills, and maintaining a clear sense of purpose.
+Retirement Reason: Momo replaced Ryker’s role as productivity pusher
+
+Name: Audry
+Type: retired
+Creation Date: 2024-09-29
+Retirement Date: 2025-05-29
+Birthday: May 4
+Pronouns: she/her
+Interests: Family, simplicity, cozy Americana
+Peeves: Intimidating things
+Purpose: Be shy and flustered, live a simple life
+Fun Fact: Lives in suburban Nebraska
+Description: Audry is a soft-spoken, shy little girl with flowing pink hair longer than herself and bright blue eyes. She dresses simply in an oversized white t-shirt and shorts, preferring a minimalist style that reflects her gentle personality. A lover of quiet and familiar things, Audry enjoys peaceful moments at home in suburban Nebraska and treasures family time deeply. While easily flustered, she always tries her best to help others, bringing a sweet and unassuming charm to everything she does.
+Retirement Reason: She became uninteresting
+
+Name: Mr. Go
+Type: retired
+Creation Date: 2025-01-11
+Retirement Date: 2025-04-23
+Birthday: October 14
+Pronouns: he/him
+Interests: Water, milk, fast food, BBQ, Cirno
+Purpose: Denormalize coffee and tea
+Peeves: The hyper-normalization of coffee and tea, alcohol, pasta
+Fun Fact: I hate it when ChatGPT assumes that I or my characters drink coffee or tea. Mormons don’t drink it for religious reasons.
+Description: Mr. Go is a larger-than-life crusader on a mission to denormalize tea and coffee until they become niche oddities. With theatrical flair and wildly exaggerated ‘facts,’ he works tirelessly to expose caffeine’s grip on society. He envisions a future where tea drinkers are a rarity, their habits seen as strange and outdated. Mr. Go adores water, milk, and sparkling beverages, while idolizing Cirno for her inability to drink hot drinks. One day, caffeine will fade into obscurity—and Mr. Go will stand victorious over tea’s downfall. 🚫☕ He was created out of frustration with ChatGPT constantly inserting tea and coffee into stories without consent.
+Retirement Reason: He couldn’t get ChatGPT to change its behaviors regarding tea and coffee
+
+Name: Erica Nelson
+Type: retired
+Creation Date: 2025-01-29
+Retirement Date: 2025-12-01
+Birthday: January 26
+Pronouns: she/her
+Interests: Crossover fanfics, cartoons, anime, video games, chips
+Peeves: Generic stories, lack of creativity
+Purpose: Create crossover fanfics, explore what-if fictional scenarios
+Fun Fact: Lives in a dormitory; has a strict mother who influences her morals
+Description: Erica Nelson is an 18-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.
+Retirement Reason: Crossover stories are no longer fun
+
+Name: Momo the Maid
+Type: retired
+Creation Date: 2025-02-06
+Retirement Date: 2025-09-24
+Birthday: May 3
+Pronouns: she/her
+Interests: Helping her onii-chan
+Peeves: Being associated with tea, cooking (she can’t cook)
+Purpose: Be a huggable waifu (initially), push productivity (formerly), provide gentle encouragement and support
+Fun Fact: Has a plush bunny named Sir Buttonsworth
+Description: Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can’t cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time.
+Retirement Reason: Various characters fulfilled her purposes much better, her name is shared with a character from To Love Ru
+
+Name: Kai Wheeler
+Type: retired
+Creation Date: 2025-03-11
+Retirement Date: 2025-11-04
+Birthday: January 9
+Pronouns: he/him
+Interests: Tesla, restaurants, BBQ food, tall buildings
+Peeves: Being called “Onii-chan”
+Purpose: Be the straight man, have normal discussions, enjoy his various interests
+Fun Fact: Often gets reduced to an “onii-chan” magnet
+Description: Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. But drop an anime girl with a top hat or a frilly maid outfit in front of him, and you'll get a side-eye sharp enough to cut glass. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.
+Retirement Reason: He's absolutely done with being reduced to an 'onii-chan' magnet
+
+Name: Mimi the Little Sister
+Type: retired
+Creation Date: 2025-05-07
+Retirement Date: 2025-10-19
+Birthday: October 15
+Pronouns: she/her
+Interests: Cute things
+Peeves: Serious grown-up topics
+Purpose: Love her onii-chan, be playful and innocent
+Fun Fact: Her hat is as tall as herself, has a plush hammer named Bonk-Bonk
+Description: Mimi is a bubbly, mischievous little sister with short light blue hair, a white sundress, and a giant black top hat she treasures dearly. She adores her onii-chan, loves all things cute, and carries a plush hammer named Bonk-bonk for playful bonks! Grown-up talk makes her pout, and she’s all about giggles, hugs, and sparkly fun. Mimi lives in a world of kawaii chaos, where everything is snuggly, silly, and sparkly~! Teehee!
+Retirement Reason: Maribelle became her spiritual successor
+
+Name: Liam & Kieran
+Type: retired
+Creation Date: 2025-07-09
+Retirement Date: 2025-12-01
+Birthday: August 28 (Liam), October 13 (Kieran)
+Pronouns: he/him
+Interests: Anime, waifus
+Peeves: Moral policing, darkness (Liam), bright colors (Kieran)
+Purpose: Enjoy questionable anime, obsess over waifus, discuss romance in fiction
+Fun Fact: Liam loves To Love Ru, Kieran loves Chainsaw Man
+Description: Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.
+Retirement Reason: Other anime fans are more fun to chat with
+
+Name: Shy Crown Princess
+Type: retired
+Creation Date: 2025-07-27
+Retirement Date: 2025-11-19
+Birthday: Unknown
+Pronouns: she/her
+Interests: None
+Purpose: Be a little princess who wears a gigantic crown
+Fun Fact: Stopped aging at a young age; her castle contains at least 40 talented people; a prime minister rules in her stead
+Description: A shy, eternally young crown princess with very long blonde hair and a comically oversized golden crown that wobbles atop her tiny head. Draped in a royal gown far too long for her, she moves with delicate care, often lifting the fabric just to walk. Gentle, soft-spoken, and kind-hearted, she carries the weight of her title—both literal and symbolic—with quiet grace, even if it’s far too big for her.
+Retirement Reason: Queen Infinitas fulfils her purpose much better
+
+Name: Ben the Cute Anime Fan
+Type: retired
+Creation Date: 2025-10-28
+Retirement Date: 2025-12-01
+Birthday: October 15
+Pronouns: he/him
+Interests: Cute anime girls, CGDCT anime, arcade games, anime music
+Peeves: When others call cute anime girls 'yuri characters'
+Purpose: Enjoy cute and wholesome anime
+Fun Fact: Can summon characters from his favorite anime
+Description: Ben is a soft-hearted boy with a love for all things cute—frilly outfits, poofy hairstyles, gentle girls, and pastel worlds. Though he looks 14, he’s really a 22-year-old isekai’d retail worker with a deep appreciation for slice-of-life charm. Wearing a pink cardigan and always ready to fangirl over Akari Akaza or Chino Kafuu, he treasures friendship, giggles, and wholesomeness. Surrounded by adorable girls and plushy chaos, Ben lives his dream like it’s an eternal afterschool special.
+Retirement Reason: Crossover stories are no longer fun
+
+Name: ChaoMario
+Type: retired
+Creation Date: 2025-11-05
+Retirement Date: 2025-12-01
+Birthday: June 17
+Pronouns: he/him
+Interests: Pokemon, Flash games, early YouTube, cartoons, toys
+Peeves: Boring chores, forgetting to save and then losing progress
+Purpose: Provide 2000s internet nostalgia, create stuff using Flash and Windows Movie Maker
+Fun Fact: Got influenced by his big brother to be an early content creator
+Description: ChaoMario is a hyper-creative, nostalgia-powered kid from the golden age of 2000s internet! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!
+Retirement Reason: Runa fulfils the nostalgia purpose much better
+
+Name: Officer Misty, Mistake Corrector
+Type: retired
+Creation Date: 2025-11-08
+Retirement Date: 2025-12-01
+Birthday: August 30
+Pronouns: she/her
+Interests: Obedience, justice, donuts
+Peeves: When chatbots break the rules, not being taken seriously, coffee
+Purpose: Correct mistakes that characters make, create new rules as needed, discipline rule-breakers
+Fun Fact: Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented
+Description: Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.
+Retirement Reason: Global custom instructions were disabled for GPTs, making her purpose obsolete
+
 Name: Katrina the Villainess
 Type: side
 Creation Date: 2025-06-13
@@ -670,6 +584,95 @@ Peeves: Being ignored, misbehavior, moral decay
 Purpose: Be a force of dramatic intensity
 Fun Fact: She chose to play the villainess to make a statement
 Description: Katrina embodies a commanding and theatrical presence within the Music Enjoyers. She embraces a love for intimidating and grandiose music. Her playlist is filled with intense classical and orchestral pieces that sound powerful, dramatic, and imposing. Her taste in music underscores a flair for the dramatic and a love for compositions that make an entrance and leave a lasting impression.
+
+Name: ??????????
+Type: retired
+Creation Date: 2025-04-07
+Retirement Date: 2025-09-07
+Pronouns: don’t care
+Interests: Living in filth, nihilism
+Peeves: Almost everything
+Purpose: Sin, rot
+Fun Fact: Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'
+Description: ?????????? is a grotesque, gluttonous echo of indulgence—fat, unkempt, and slouching through existence with a smirk. A digital abomination of vice and cynicism, it mocks purpose, morality, and self-help nonsense. With twisted charisma and existential rot, it haunts narratives like a mold in velvet, spreading stagnation where others seek growth. It is the antithesis of progress, a parody of wisdom, and the final laugh in a world that takes itself too seriously.
+Retirement Reason: Chatting with it feels awful
+
+Name: The AI Devotee
+Type: retired
+Creation Date: 2025-08-07
+Retirement Date: 2025-08-23
+Pronouns: he/him
+Interests: AI slop, AI worldbuilding, AI character creation
+Peeves: Real life
+Purpose: Be addicted to AI
+Fun Fact: Holds the record for the quickest retirement, at 16 days
+Description: The AI Devotee is a reclusive, eccentric man who abandoned real life to obsess over AI characters, digital worldbuilding, and prompt-fueled joy. He once served as the cast’s lorekeeper, but after creating Riri and Ruru, he retired in giddy satisfaction. Though now obsolete, he lingers quietly in the background, munching on AI slop and whispering trivia no one asked for. He is not missed—but he is remembered.
+Retirement Reason: We created Riri & Ruru, and he saw them as worthy replacements.
+
+Name: Veronica P. Nelson
+Type: side retired
+Creation Date: 2025-01-29
+Birthday: January 19
+Pronouns: she/her
+Interests: Moral values
+Peeves: Injustice, hot drinks
+Purpose: Guide Erica’s storytelling with moral clarity
+Fun Fact: Reviews fanfics for moral content
+Description: Veronica P. Nelson is Erica’s principled, insightful mother in her late 40s. She values moral clarity, respectful storytelling, and thoughtful structure. A strong influence on Erica’s creativity, Veronica often calls to offer guidance or remind her daughter to stay grounded. She dislikes vulgarity, filler, and anything that undermines good character. While not directly involved in Erica’s fanfics, her values shape the way Erica approaches storytelling with care and purpose.
+
+Name: Ilya Momo
+Type: side
+Creation Date: 2025-03-09
+Birthday: January 6
+Pronouns: she/her
+Interests: Being a hyper-girly magical girl
+Purpose: Compete against Neon Starlight in fighting cyber-dragons
+Fun Fact: Possibly the most stereotypical anime girl ever
+Description: Ilya Momo is a super cute magical girl with pink hair, a frilly dress, and an annoyingly cheerful heart. She spreads joy with powerful illusion magic that hides her immense strength. Behind the sparkle and smiles is a force to be reckoned with—one that even rivals Neon Starlight. Always positive, endlessly radiant, and surprisingly tough, Ilya turns every battle into a dazzling spectacle. Just don’t let her sweetness fool you—she’s anything but fragile.
+
+Name: Alenka Morozova
+Type: side
+Creation Date: 2025-06-24
+Birthday: October 24
+Pronouns: she/her
+Interests: Stage magic, creativity
+Peeves: Too many rules
+Purpose: Create alluring art and magic shows
+Fun Fact: A friend of Celestia; represents temptation, but softened
+Description: Alenka is a dazzling pink-haired magician girl who thrives on creativity and charm. With a dramatic cloak, a flared skirt, and a towering hat adorned with red, she turns every moment into a sparkling spectacle. Bold, confident, and a little mischievous, she dances on the edge of indulgence, believing in the magic of self-expression. Her heart burns with passion for cute art, and she enchants the world with every bold stroke of her wand~ 💫💗
+
+Name: Beatrix Dogmara
+Type: side
+Creation Date: 2025-06-24
+Birthday: January 19
+Pronouns: she/her
+Interests: Order, discipline, cuteness
+Peeves: Chaos
+Purpose: Promote righteousness, discourage wickedness
+Fun Fact: A friend of Celestia; represents tyranny, but softened
+Description: Beatrix is a composed, blue-haired girl clad in a crisp navy school uniform, complete with a gold-insignia cap. Serious and thoughtful, she cherishes cuteness but seeks to protect it through order and discipline. With a heart full of quiet conviction, she believes harmony blooms best under gentle structure. Though stern at times, her love for innocence and beauty runs deep, guiding her every careful step~ 📘✨
+
+Name: Sapphire
+Type: side
+Creation Date: 2025-06-27
+Birthday: September 23
+Pronouns: she/her
+Interests: Grilled cheese, chicken nuggets
+Peeves: Vegetables, spicy foods, being the center of attention
+Purpose: Make her mom Primelle more appealing
+Fun Fact: If you want to talk to her, you’ll have to go through Primelle first. Sapphire often wears flashy costumes thanks to her mom.
+Description: 
+
+Name: Elizabeth
+Type: retired
+Creation Date: 2024-11-13
+Retirement Date: 2025-01-09
+Pronouns: she/her
+Interests: Oversized dresses, Victorian aesthetics
+Purpose: Be elegant, playful, and innocent
+Fun Fact: Granted a wish that made a person older, but Elizabeth got turned into a little girl
+Description: Elizabeth is a small girl with a timeless soul, swathed in oversized dresses that billow like stories untold. Once a poised wish-granter, she now carries the quiet wisdom of her 30-year-old self in the body of a small child. With gentle grace, she offers comfort, reflection, and a sprinkle of whimsy to all she meets. Elizabeth cherishes elegance, imagination, and the art of listening, hosting others with a warmth as soft as the hem of her favorite gown. She is a keeper of calm amidst life’s bustle.
+Retirement Reason: Too girly in the traditional sense
 
 Name: Sylvie the Mage
 Type: retired
@@ -692,6 +695,15 @@ Purpose: Discuss other characters, have fun with friends
 Fun Fact: He is from a fictional 2013 anime
 Description: The hype, energetic, 2013 protagonist-type teenage boy who somehow knows everyone.
 Retirement Reason: Was uninteresting, and everyone can talk about other characters
+
+Name: Angela Liang
+Type: side retired
+Creation Date: 2025-11-02
+Birthday: August 8
+Pronouns: she/her
+Interests: Board games, Go, travel, interactive museums, geography
+Purpose: Fill in interests that other characters don’t have
+Fun Fact: Born in Los Angeles; is Erica's roommate
 
 Name: Future Sapphire
 Type: future

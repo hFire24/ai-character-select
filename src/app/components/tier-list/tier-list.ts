@@ -46,7 +46,7 @@ export class TierList {
     } else if (this.characterFilter === 'music') {
       pool = pool.filter(c => c.musicEnjoyer);
     } else if (this.characterFilter === 'side') {
-      pool = pool.filter(c => c.type === 'side' && !c.musicEnjoyer);
+      pool = pool.filter(c => (c.type === 'side' || c.type === 'side retired') && !c.musicEnjoyer);
     } else if (this.characterFilter === 'male') {
       pool = pool.filter(c => c.pronouns !== 'she/her');
     } else if (this.characterFilter === 'female') {
@@ -286,12 +286,12 @@ export class TierList {
       const insertIdx = celestiaIdx < princessIdx ? celestiaIdx + 1 : princessIdx;
       if (this.splitTwins) {
         // Insert "Liam" and "Kieran" separately
-        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', id: 44, type: "active", tier: 3, musicEnjoyer: false, pronouns: 'he/him' };
-        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', id: 45, type: "active", tier: 3, musicEnjoyer: false, pronouns: 'he/him' };
+        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', id: 44, type: "retired", tier: 5, musicEnjoyer: false, pronouns: 'he/him' };
+        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', id: 45, type: "retired", tier: 5, musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liam, kieran);
       } else {
         // Insert "Liam & Kieran" together
-        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', id: 43, type: "active", tier: 3, musicEnjoyer: false, pronouns: 'he/him' };
+        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', id: 43, type: "retired", tier: 5, musicEnjoyer: false, pronouns: 'he/him' };
         this.allCharacters.splice(insertIdx, 0, liamKieran);
       }
     }

@@ -9,42 +9,44 @@
       <span class="filter-disabled-text">(Search active)</span>
     }
   </button>
-  <button 
-    routerLink="blind-ranking" 
-    routerLinkActive="active" 
-    style="background-color: #18a8b3;">
-    Blind Ranking
-  </button>
-  <button 
-    *ngIf="!isMobile()" 
-    routerLink="tier-list" 
-    routerLinkActive="active" 
-    style="background-color: #4CAF50;"
-  >
-    Tier List
-  </button>
-  <button 
-    routerLink="duos" 
-    routerLinkActive="active" 
-    style="background-color: #91bd40;">
-    Duos
-  </button>
-  <button
-    routerLink="trios"
-    routerLinkActive="active"
-    style="background-color: #FF9800;">
-    Hall of Trios
-  </button>
-  <button
-    routerLink="tournament"
-    routerLinkActive="active"
-    style="background-color: #FF6B35;">
-    🏆 Tournament
-  </button>
-  <button
-    routerLink="birthday-calendar"
-    routerLinkActive="active"
-    style="background-color: #E91E63;">
-    🎂 Birthdays
-  </button>
+  <div>
+    <button 
+      routerLink="blind-ranking" 
+      routerLinkActive="active" 
+      style="background-color: #18a8b3;">
+      Blind Ranking
+    </button>
+    <button 
+      *ngIf="!isMobile()" 
+      routerLink="tier-list" 
+      routerLinkActive="active" 
+      style="background-color: #4CAF50;"
+    >
+      Tier List
+    </button>
+    <button 
+      routerLink="duos" 
+      routerLinkActive="active" 
+      style="background-color: #91bd40;">
+      Duos
+    </button>
+    <button
+      routerLink="trios"
+      routerLinkActive="active"
+      style="background-color: #FF9800;">
+      Hall of Trios
+    </button>
+    <button
+      routerLink="tournament"
+      routerLinkActive="active"
+      style="background-color: #FF6B35;">
+      🏆 Tournament
+    </button>
+    <button
+      routerLink="birthday-calendar"
+      routerLinkActive="active"
+      style="background-color: #E91E63;">
+      🎂 Birthdays
+    </button>
+  </div>
 </footer>

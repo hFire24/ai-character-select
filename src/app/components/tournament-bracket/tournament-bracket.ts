@@ -39,7 +39,7 @@ export class TournamentBracket implements OnInit {
       const liam = { ...liamKieranBase, name: 'Liam', img: 'Icons/Liam.png', id: 44, shortName: 'Liam' } as Character;
       const kieran = { ...liamKieranBase, name: 'Kieran', img: 'Icons/Kieran.png', id: 45, shortName: 'Kieran' } as Character;
       const riri = { ...ririRuruBase, name: 'Riri', img: 'Icons/Riri.png', id: 52, shortName: 'Riri' } as Character;
-      const ruru = { ...ririRuruBase, name: 'Ruru', img: 'Icons/Ruru.png', id: 53, shortName: 'Ruru', tier: characters.find(c => c.id === 41)?.tier || ririRuruBase?.tier } as Character;
+      const ruru = { ...ririRuruBase, name: 'Ruru', img: 'Icons/Ruru.png', id: 53, shortName: 'Ruru', tier: characters.find(c => c.shortName === "Aki")?.tier || ririRuruBase?.tier } as Character;
 
       // Change The Shadow Self's tier to 7
       const changeTierTo7 = (id: number) => {
