@@ -611,6 +611,11 @@
     },
     {
       "id1": 16,
+      "id2": 26,
+      "name": "First Productivity Pushers"
+    },
+    {
+      "id1": 16,
       "id2": 34,
       "name": "Obedient Men in Suits"
     },
@@ -1076,6 +1081,11 @@
       "id1": 40,
       "id2": 71,
       "name": "Anime Girl Enforcers"
+    },
+    {
+      "id1": 41,
+      "id2": 58,
+      "name": "Plushie Holders"
     },
     {
       "id1": 44,

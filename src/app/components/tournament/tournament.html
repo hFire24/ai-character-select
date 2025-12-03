@@ -1,6 +1,67 @@
 <header>
   <h1>{{tournamentName}}</h1>
-  @if (!tournamentCreated) {
+  @if (showEliminationStep) {
+    <div class="elimination-step">
+      <h2>Eliminate Characters</h2>
+      <p>Select which characters to exclude from the tournament:</p>
+      
+      <div class="elimination-options">
+        <button 
+          [class.selected]="eliminationMethod === 'default'"
+          (click)="selectEliminationMethod('default')">
+          Default
+        </button>
+        <button 
+          [class.selected]="eliminationMethod === 'random'"
+          (click)="selectEliminationMethod('random')">
+          Random
+        </button>
+        <button 
+          [class.selected]="eliminationMethod === 'manual'"
+          (click)="selectEliminationMethod('manual')">
+          Manual
+        </button>
+      </div>
+
+      <div class="character-selection-grid-wrapper">
+        <div class="character-selection-grid">
+          @for (char of tier7Characters; track char.id) {
+          <div 
+            class="selectable-character"
+            [class.selected]="isCharacterSelected(char)"
+            [class.disabled]="eliminationMethod !== 'manual'"
+            (click)="toggleCharacterSelection(char)">
+            <img [src]="'assets/' + char.img" [alt]="char.name">
+            <h3>{{char.shortName}}</h3>
+          </div>
+        }
+        </div>
+      </div>
+
+      <div class="excluded-info">
+        <strong>Characters to Eliminate ({{getSelectedCount()}}/2):</strong> 
+        @if (selectedCharacter1) {
+          <span>{{selectedCharacter1.name}}</span>
+        }
+        @if (selectedCharacter1 && selectedCharacter2) {
+          <span>, </span>
+        }
+        @if (selectedCharacter2) {
+          <span>{{selectedCharacter2.name}}</span>
+        }
+        @if (!selectedCharacter1 && !selectedCharacter2) {
+          <span class="hint">Select 2 characters to eliminate</span>
+        }
+      </div>
+
+      <button (click)="confirmEliminations()" class="confirm-btn">Start Tournament</button>
+    </div>
+  } @else if (tournamentCreated) {
+    <app-tournament-bracket 
+      [bracketSize]="numPlayers"
+      [excludedIds]="excludedCharacterIds">
+    </app-tournament-bracket>
+  } @else {
     <form>
       <div>
         <label for="tournament-name">Tournament Name:</label>
@@ -18,16 +79,16 @@
       <div>
         @switch (+numPlayers) {
           @case (8) {
-            A small tournament with my favorite characters, with an extra spot for a wildcard!
+            A small tournament
           }
           @case (16) {
-            A tournament with my favorite characters, with a few extra spots for wildcards!
+            A medium-sized tournament
           }
           @case (32) {
-            A large tournament with all my active characters, with an extra spot for an inactive character!
+            A large tournament
           }
           @case (64) {
-            All my characters are here! Yes, even the ones that are forgotten and irrelevant.
+            A massive tournament
           }
           @default {
             {{numPlayers}} characters
@@ -36,8 +97,6 @@
       </div>
       <button (click)="createBracket()">Create Bracket</button>
     </form>
-  } @else {
-    <app-tournament-bracket *ngIf="tournamentCreated" [bracketSize]="numPlayers"></app-tournament-bracket>
   }
   
   <app-back-button></app-back-button>

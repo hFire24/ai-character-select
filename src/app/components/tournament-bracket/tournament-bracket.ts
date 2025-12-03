@@ -10,6 +10,7 @@ import { Character, CharacterService } from '../../services/character.service';
 })
 export class TournamentBracket implements OnInit {
   @Input() bracketSize: number = 8;
+  @Input() excludedIds: number[] = [];
   
   constructor(private characterService: CharacterService) {}
   players: Character[] = [];
@@ -52,10 +53,10 @@ export class TournamentBracket implements OnInit {
       const tier7Ids = [32, 50];
       tier7Ids.forEach(id => changeTierTo7(id));
 
-      // Group characters by tier (excluding highest tier)
+      // Group characters by tier (excluding highest tier and excluded IDs)
       const charactersByTier = characters
-        .filter(a => a.tier !== highestTier && a.name !== 'Liam & Kieran' && a.name !== 'Riri & Ruru')
-        .concat([liam, kieran, riri, ruru])
+        .filter(a => a.tier !== highestTier && a.name !== 'Liam & Kieran' && a.name !== 'Riri & Ruru' && !this.excludedIds.includes(a.id))
+        .concat([liam, kieran, riri, ruru].filter(char => !this.excludedIds.includes(char.id)))
         .reduce((acc, char) => {
           if (!acc[char.tier]) acc[char.tier] = [];
           acc[char.tier].push(char);
