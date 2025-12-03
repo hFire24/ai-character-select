@@ -6,6 +6,11 @@
       "name": "Self-Insert Protagonists"
     },
     {
+      "id1": 0,
+      "id2": 63,
+      "name": "Cap Wearers"
+    },
+    {
       "id1": 1,
       "id2": 2,
       "name": "Electric Brawn and Brains",
@@ -15,6 +20,11 @@
       "id1": 1,
       "id2": 3,
       "name": "Edgy Music Enjoyers"
+    },
+    {
+      "id1": 1,
+      "id2": 4,
+      "name": "Hardcore Gamers"
     },
     {
       "id1": 1,
@@ -83,13 +93,18 @@
     },
     {
       "id1": 1,
-      "id2": 65,
-      "name": "School Haters"
+      "id2": 62,
+      "name": "Punks"
     },
     {
       "id1": 1,
-      "id2": 73,
-      "name": "Metalheads"
+      "id2": 63,
+      "name": "Trap Music Fans"
+    },
+    {
+      "id1": 1,
+      "id2": 65,
+      "name": "School Haters"
     },
     {
       "id1": 2,
@@ -170,6 +185,11 @@
       "id1": 3,
       "id2": 12,
       "name": "Dark Humor"
+    },
+    {
+      "id1": 3,
+      "id2": 31,
+      "name": "Gothic Duo"
     },
     {
       "id1": 3,
@@ -287,6 +307,16 @@
       "name": "Danis"
     },
     {
+      "id1": 6,
+      "id2": 62,
+      "name": "Pop-punk Fans"
+    },
+    {
+      "id1": 6,
+      "id2": 63,
+      "name": "Mid-2000s Pop Fans"
+    },
+    {
       "id1": 7,
       "id2": 8,
       "name": "Positive Music Enjoyers"
@@ -375,7 +405,7 @@
     {
       "id1": 10,
       "id2": 31,
-      "name": "Gothic Duo"
+      "name": "Gothic Villainesses"
     },
     {
       "id1": 10,
@@ -411,6 +441,11 @@
       "id1": 12,
       "id2": 47,
       "name": "Goofy Music Enjoyers"
+    },
+    {
+      "id1": 12,
+      "id2": 63,
+      "name": "Comedy Hip-Hop Fans"
     },
     {
       "id1": 12,
@@ -576,6 +611,11 @@
     },
     {
       "id1": 16,
+      "id2": 26,
+      "name": "First Productivity Pushers"
+    },
+    {
+      "id1": 16,
       "id2": 34,
       "name": "Obedient Men in Suits"
     },
@@ -663,6 +703,11 @@
       "id1": 18,
       "id2": 59,
       "name": "Adorable Destructive Duo"
+    },
+    {
+      "id1": 18,
+      "id2": 63,
+      "name": "Pure Chaos"
     },
     {
       "id1": 19,
@@ -1038,6 +1083,11 @@
       "name": "Anime Girl Enforcers"
     },
     {
+      "id1": 41,
+      "id2": 58,
+      "name": "Plushie Holders"
+    },
+    {
       "id1": 44,
       "id2": 45,
       "name": "Fanservice Fans"
@@ -1055,7 +1105,12 @@
     {
       "id1": 47,
       "id2": 56,
-      "name": "Political Discussers"
+      "name": "Political Commentators"
+    },
+    {
+      "id1": 47,
+      "id2": 62,
+      "name": "Music Competitors"
     },
     {
       "id1": 48,
@@ -1110,6 +1165,11 @@
     },
     {
       "id1": 55,
+      "id2": 62,
+      "name": "Overcompetitive Duo"
+    },
+    {
+      "id1": 55,
       "id2": 69,
       "name": "Youngster Gamers"
     },
@@ -1133,6 +1193,16 @@
       "id2": 60,
       "name": "Cute Brawn and Brains",
       "altName": "Cute Brains and Brawn"
+    },
+    {
+      "id1": 62,
+      "id2": 63,
+      "name": "Aggressive Music Fans"
+    },
+    {
+      "id1": 62,
+      "id2": 73,
+      "name": "Metalheads"
     },
     {
       "id1": 66,

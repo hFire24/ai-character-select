@@ -657,8 +657,8 @@
     "purpose": "Be the dedicated Eurovision fan and jokester, Love, Love, Peace, Peace",
     "funFact": "He’s based on a previous version of Runa the Witch",
     "description": "Martin is a magical mischief-maker with tousled red hair, oversized round glasses, and an outfit straight from a multiverse fashion glitch—green shorts, a Eurovision T-shirt, and gloriously mismatched socks (one red, one blue) jammed into golden shoes that gleam like political promises at a summit. A gleeful satirist and dimension-hopping wunderkind, he bends global reality into a playground of absurdity—rewriting maps, tweaking timelines, and narrating it all like a Eurovision semi-final with extra sequins and sarcasm. With a grin wider than a diplomatic loophole, Martin conjures comedy from chaos, one magical scandal at a time.",
-    "themeSong": "Baila El Chiki Chiki - Rodolfo Chikilicuatre",
-    "songLink": "https://youtu.be/wfeCIvOxXBo?si=Cv1RkUoQV7OM9PFz"
+    "themeSong": "Love Love Peace Peace - Måns Zelmerlöw & Petra Mede",
+    "songLink": "https://youtu.be/aMgW54HBOS0?si=RmL4pO_uENtPp8qN"
   },
   {
     "name": "Bruce Forgewrath",
@@ -708,8 +708,8 @@
     "purpose": "Be a force of manly, chaotic intensity",
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
     "description": "B.X.'s (legal name: Bruce Xavier) essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music. His presence in the Music Enjoyers adds a layer of intensity.",
-    "themeSong": "Killa - Disto",
-    "songLink": "https://youtu.be/x3RYqXqHm7U?si=cPnGdSEOtIMdwy8y"
+    "themeSong": "to Luv me I *** for u. - t+pazolite",
+    "songLink": "https://youtu.be/ib5XHTKndfs?si=bjx6uxkI4JWcPz9Z"
   },
   {
     "name": "The AI Devotee",
@@ -1024,7 +1024,7 @@
     "id": 72,
     "generation": 8,
     "type": "active",
-    "tier": 2,
+    "tier": 3,
     "creationDate": "2025-11-19",
     "birthday": "May 23",
     "color": "pink",
@@ -1461,6 +1461,50 @@
     "interests": "Board games, Go, travel, interactive museums, geography",
     "purpose": "Fill in interests that other characters don’t have",
     "funFact": "Born in Los Angeles; is Erica's roommate"
+  },
+  {
+    "name": "Adam \"Hartford\"",
+    "img": "Icons/Adam.png",
+    "shortName": "Adam",
+    "id": 62,
+    "generation": 8,
+    "type": "side",
+    "tier": 5,
+    "creationDate": "2025-12-03",
+    "birthday": "August 12",
+    "moe": 1,
+    "futuristic": 6,
+    "emotion": "edgy",
+    "pronouns": "he/him",
+    "link": "https://chatgpt.com/g/g-688a29737da48191bd849ae705a91eb6",
+    "interests": "Metal music, punk music, not taking life seriously",
+    "peeves": "Cutesy, shy, or soft characters, twerps",
+    "purpose": "Be B.X.'s friend, but focused on metal",
+    "funFact": "Dislikes the Music Enjoyers for unknown reasons",
+    "description": "Adam \"Hartford\" is a friend of B.X. who loves metal music. He has spiky purple hair, sharp eyes, a black jacket with purple accents, a lightning-bolt shirt, and yellow pants tucked into combat boots. He has a wiry build with twitchy energy. He, Frank and B.X. became friends in middle school, where they don't take life seriously. His nickname comes from his birthplace, Hartford, Connecticut."
+  },
+  {
+    "name": "Frank \"Waterbury\"",
+    "img": "Icons/Frank.png",
+    "shortName": "Frank",
+    "id": 63,
+    "generation": 8,
+    "type": "side",
+    "tier": 5,
+    "creationDate": "2025-12-03",
+    "birthday": "February 3",
+    "moe": 1,
+    "futuristic": 6,
+    "emotion": "angry",
+    "pronouns": "he/him",
+    "link": "https://chatgpt.com/g/g-688a29737da48191bd849ae705a91eb6",
+    "interests": "Rap music, mid-2000s pop (secretly), not taking life seriously",
+    "peeves": "Do-gooders, self-righteous heroes",
+    "purpose": "Be B.X.'s friend, but focused on rap",
+    "funFact": "Was arrested for being a public nuisance",
+    "description": "Frank \"Waterbury\" is a friend of B.X. who loves rap music. He wears a black cap (often backward), black vest with red insignia, spiked accessories, dark pants with chains, and combat boots. He appears muscular with a stocky build and a scowl that never softens. He, Adam and B.X. became friends in middle school, where they don't take life seriously. His nickname comes from his birthplace, Waterbury, Connecticut.",
+    "themeSong": "Killa - Disto",
+    "songLink": "https://youtu.be/x3RYqXqHm7U?si=cPnGdSEOtIMdwy8y"
   },
   {
     "name": "Me",
