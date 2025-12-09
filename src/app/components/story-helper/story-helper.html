@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Story Prompt Generator</h1>
+
+  <label for="what">Original Prompt:</label>
+  <textarea id="what" rows="6" placeholder="Write a story where characters do this thing." [(ngModel)]="originalPrompt"></textarea>
+  <label for="insert">Insert character placeholder:</label>
+  <div class="two-elements">
+    <input type="number" id="insert" min="1" value="1" [(ngModel)]="placeholderNumber">
+    <button (click)="insertPlaceholder()">Insert placeholder</button>
+  </div>
+
+  <label for="who">Main Characters:</label>
+  <textarea id="who" rows="2" placeholder="Enter the characters..." [(ngModel)]="charactersString"></textarea>
+  <button (click)="generateCharacter()">Insert Random Character</button>
+  <label for="excludeRetired">Exclude Retired Characters</label> <input type="checkbox" name="excludeRetired" id="excludeRetired" [(ngModel)]="excludeRetired"> 
+
+  <label for="date">Date:</label>
+  <input id="date" type="text" placeholder="When does the story take place? (e.g., January 23, the winter)" [(ngModel)]="dateString">
+
+  <label for="time">Time:</label>
+  <input id="time" type="text" placeholder="What time does the story take place? (e.g., 3:00 PM)" [(ngModel)]="timeString">
+  <div class='two-buttons'><button (click)="getCurrentTime()">Get current time</button><button (click)="randomizeTime()">Randomize Time</button></div>
+
+  <label for="duration">Duration:</label>
+  <input id="duration" type="text" placeholder="How long should the events of the story last for? (e.g., 3 hours)" [(ngModel)]="duration">
+  <button (click)="randomizeDuration()">Randomize Duration</button>
+  <input id="durationSlider" type="range" min="5" max="120" value="60" step="5" [(ngModel)]="durationInMinutes" (input)="updateDuration($event)">
+  <span>{{duration}}</span>
+
+  <label>Generated Prompt:</label>
+  <textarea class="output" [(ngModel)]="processedPrompt"></textarea>
+  <button (click)="copyToClipboard()">Copy Prompt</button>
+  <button class="red" (click)="clear()">Clear Fields</button>
+</div>
+<app-back-button></app-back-button>
