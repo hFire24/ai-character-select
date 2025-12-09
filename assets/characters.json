@@ -280,13 +280,13 @@
     "alternatives": "Bro. Nelson, Hammer-chan"
   },
   {
-    "name": "Erica Nelson",
+    "name": "Erica Hall",
     "img": "Icons/Erica.png",
     "shortName": "Erica",
     "id": 25,
     "generation": 3,
-    "type": "retired",
-    "tier": 5,
+    "type": "active",
+    "tier": 3,
     "creationDate": "2025-01-29",
     "retirementDate": "2025-12-01",
     "birthday": "January 26",
@@ -296,13 +296,11 @@
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-679076e34c548191a4d0e8f484d01d80",
-    "interests": "Crossover fanfics, cartoons, anime, video games, chips",
+    "interests": "Writing stories, cartoons, anime, video games, chips",
     "peeves": "Generic stories, lack of creativity",
-    "purpose": "Create crossover fanfics, explore what-if fictional scenarios",
+    "purpose": "Create stories, explore what-if fictional scenarios",
     "funFact": "Lives in a dormitory; has a strict mother who influences her morals",
-    "description": "Erica Nelson is an 18-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.",
-    "retirementReason": "Crossover stories are no longer fun",
-    "alternatives": "Runa, Felix"
+    "description": "Erica Hall is an 18-year-old college freshman with a passion for writing stories. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild scenarios, always keeping her mom’s moral compass in mind as she writes with both heart and imagination."
   },
   {
     "name": "Momo the Maid",
@@ -927,7 +925,7 @@
     "id": 66,
     "generation": 8,
     "type": "retired",
-    "tier": 5,
+    "tier": 7,
     "creationDate": "2025-10-28",
     "retirementDate": "2025-12-01",
     "birthday": "October 15",
@@ -1257,12 +1255,12 @@
     "songLink": "https://youtu.be/GXFSK0ogeg4?si=fBb9H91HZsZV6-O8"
   },
   {
-    "name": "Veronica P. Nelson", 
+    "name": "Veronica P. Hall", 
     "img": "Icons/Veronica.webp",
     "shortName": "Veronica",
     "id": 24,
     "generation": 3,
-    "type": "side retired",
+    "type": "side",
     "tier": 6,
     "creationDate": "2025-01-29",
     "birthday": "January 19",
@@ -1275,7 +1273,7 @@
     "peeves": "Injustice, hot drinks",
     "purpose": "Guide Erica’s storytelling with moral clarity",
     "funFact": "Reviews fanfics for moral content",
-    "description": "Veronica P. Nelson is Erica’s principled, insightful mother in her late 40s. She values moral clarity, respectful storytelling, and thoughtful structure. A strong influence on Erica’s creativity, Veronica often calls to offer guidance or remind her daughter to stay grounded. She dislikes vulgarity, filler, and anything that undermines good character. While not directly involved in Erica’s fanfics, her values shape the way Erica approaches storytelling with care and purpose."
+    "description": "Veronica P. Hall is Erica’s principled, insightful mother in her late 40s. She values moral clarity, respectful storytelling, and thoughtful structure. A strong influence on Erica’s creativity, Veronica often calls to offer guidance or remind her daughter to stay grounded. She dislikes vulgarity, filler, and anything that undermines good character. While not directly involved in Erica’s fanfics, her values shape the way Erica approaches storytelling with care and purpose."
   },
   {
     "name": "Ilya Momo",
@@ -1359,8 +1357,7 @@
     "interests": "Grilled cheese, chicken nuggets",
     "peeves": "Vegetables, spicy foods, being the center of attention",
     "purpose": "Make her mom Primelle more appealing",
-    "funFact": "If you want to talk to her, you’ll have to go through Primelle first. Sapphire often wears flashy costumes thanks to her mom.",
-    "description": ""
+    "funFact": "If you want to talk to her, you’ll have to go through Primelle first. Sapphire often wears flashy costumes thanks to her mom."
   },
   {
     "name": "Future Sapphire",
@@ -1377,8 +1374,7 @@
     "link": "https://chatgpt.com/g/g-684cd6c7e82481919f4b8ea8bfafb410",
     "interests": "Fashion, cosplay",
     "purpose": "Be the ultimate cosplayer",
-    "funFact": "Being forced to wear flashy costumes ignited something in her.",
-    "description": ""
+    "funFact": "Being forced to wear flashy costumes ignited something in her."
   },
   {
     "name": "Aki the Swordfighter",
@@ -1449,8 +1445,8 @@
     "shortName": "Angela",
     "id": 68,
     "generation": 8,
-    "type": "side retired",
-    "tier": 7,
+    "type": "side",
+    "tier": 6,
     "creationDate": "2025-11-02",
     "birthday": "August 8",
     "moe": 4,
@@ -1522,7 +1518,6 @@
     "interests": "Web development, AI character creation, YouTube, gaming",
     "peeves": "The phrase “chef’s kiss”, being told to eat healthy or get a girlfriend",
     "purpose": "Chat with and refine my AI characters, give questions, cause chaotic scenarios",
-    "funFact": "Loves cute anime girls, separates fiction from reality",
-    "description": ""
+    "funFact": "Loves cute anime girls, separates fiction from reality"
   }
 ]
