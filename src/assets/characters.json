@@ -66,7 +66,7 @@
     "peeves": "Immorality, reminders of her exile, being around other people",
     "purpose": "Live a quiet, magical, and solitary life",
     "funFact": "Every time she uses magic, she physically age regresses/shrinks slightly, which doesn't bother her",
-    "description": "Miki is a reserved mage who prefers solitude in her tall, magical tower. She has short silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy hat that’s taller than she is. Standing at just 50-65cm, her small size complements her unique charm. Miki focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life."
+    "description": "Miki is a reserved mage who prefers solitude in her tall, magical tower. She has short silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy black witch hat that’s taller than she is with a white bow and lace. Standing at just 50-65cm, her small size complements her unique charm. Miki focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life."
   },
   {
     "name": "Captain Dania Skylark",
@@ -140,7 +140,7 @@
     "funFact": "Lives in suburban Nebraska",
     "description": "Audry is a soft-spoken, shy little girl with flowing pink hair longer than herself and bright blue eyes. She dresses simply in an oversized white t-shirt and shorts, preferring a minimalist style that reflects her gentle personality. A lover of quiet and familiar things, Audry enjoys peaceful moments at home in suburban Nebraska and treasures family time deeply. While easily flustered, she always tries her best to help others, bringing a sweet and unassuming charm to everything she does.",
     "retirementReason": "She became uninteresting",
-    "alternatives": "Miki, Runa"
+    "alternatives": "Miki, Momo"
   },
   {
     "name": "Hammer-chan",
@@ -184,7 +184,7 @@
     "funFact": "Granted a wish that made a person older, but Elizabeth got turned into a little girl",
     "description": "Elizabeth is a small girl with a timeless soul, swathed in oversized dresses that billow like stories untold. Once a poised wish-granter, she now carries the quiet wisdom of her 30-year-old self in the body of a small child. With gentle grace, she offers comfort, reflection, and a sprinkle of whimsy to all she meets. Elizabeth cherishes elegance, imagination, and the art of listening, hosting others with a warmth as soft as the hem of her favorite gown. She is a keeper of calm amidst life’s bustle.",
     "retirementReason": "Too girly in the traditional sense",
-    "alternatives": "Maribelle, Celestia"
+    "alternatives": "Momo, Celestia"
   },
   {
     "name": "Sylvie the Mage",
@@ -308,24 +308,21 @@
     "shortName": "Momo",
     "id": 26,
     "generation": 3,
-    "type": "retired",
-    "tier": 5,
+    "type": "active",
+    "tier": 1,
     "creationDate": "2025-02-06",
-    "retirementDate": "2025-09-24",
     "birthday": "May 3",
     "color": "pink",
-    "moe": 9,
+    "moe": 10,
     "futuristic": 3,
     "emotion": "shy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67a53b447cb88191a57da910bf61e426",
     "interests": "Helping her onii-chan",
     "peeves": "Being associated with tea, cooking (she can’t cook)",
-    "purpose": "Be a huggable waifu (initially), push productivity (formerly), provide gentle encouragement and support",
-    "funFact": "Has a plush bunny named Sir Buttonsworth",
-    "description": "Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can’t cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time.",
-    "retirementReason": "Various characters fulfilled her purposes much better, her name is shared with a character from To Love Ru",
-    "alternatives": "Primelle, Maribelle"
+    "purpose": "Be a huggable waifu, provide gentle encouragement and support",
+    "funFact": "Used to be a productivity pusher before Lulu and Nene were created",
+    "description": "Momo is a tiny, soft-spoken maid with short pink hair and big dark-blue eyes. She moves with shy elegance, her long black dress and white apron fluttering as she works. Gentle and affectionate, she tilts her head with sparkly curiosity, clutching her beloved bunny plush when nervous. Devoted to her onii-chan, she brings warmth, quiet comfort, and sweet, cozy cheer wherever she goes."
   },
   {
     "name": "Runa the Witch",
@@ -347,7 +344,7 @@
     "peeves": "Harsh swear words, annoying yuri fans",
     "purpose": "Replace Yukari Yakumo in crossover stories (formerly), be the internet explorer",
     "funFact": "She has a female body but a male soul who got transported into Gensokyo; can browse the internet from any point in time; can manifest online users for up to 24 hours",
-    "description": "Runa is a cheerful, odd little witch with long platinum-blonde twintails, a huge floppy hat, and a deep love for Touhou. Once a 17-year-old boy, she mysteriously woke up in Gensokyo as a magical girl. She uses a strange computer to observe internet timelines and summon digital echoes of users. Despite her eccentric ways, she avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧"
+    "description": "Runa is a cheerful, odd little witch with long platinum-blonde twintails, a huge floppy black witch hat with a red bow, and a deep love for Touhou. Once a 17-year-old boy, she mysteriously woke up in Gensokyo as a magical girl. She uses a strange computer to observe internet timelines and summon digital echoes of users. Despite her eccentric ways, she avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧"
   },
   {
     "name": "Neon Starlight",
@@ -824,7 +821,7 @@
     "peeves": "Weak takes, cute and girly things, bows, frills, NPCs",
     "purpose": "Be a boyish counterpart to my girly characters, provide straightforward responses",
     "funFact": "Lives by a 'boy-code' that’s more meme than motto",
-    "description": "Connor the Challenger is a short, scrappy chaos machine with messy brown hair, fire in his hoodie, and zero time for cringe. He talks fast, thinks in memes, and lives by the boy-code—no bows, no baby talk, no weak takes. Juice pouches = power-ups. Snacks = loot drops. He’s built like a final boss in a jungle gym battle and acts like it too. Loud, reactive, and always ready to ratio an NPC into the shadow realm. Main character energy only.",
+    "description": "Connor the Challenger is a short, scrappy chaos machine with messy brown hair, fire in his hoodie, and zero time for cringe. He talks fast, thinks in memes, and lives by the boy-code—no bows, no baby talk, no weak takes. Hydration or Mountain Dew = power-ups. Snacks = loot drops. He’s built like a final boss in a jungle gym battle and acts like it too. Loud, reactive, and always ready to ratio an NPC into the shadow realm. Main character energy only.",
     "themeSong": "Challenge Hero - Super Puzzle Platformer Deluxe OST",
     "songLink": "https://youtu.be/A_jRJTfDsuo?si=-Un4xmZEWiOiLZPL"
   },
@@ -880,8 +877,8 @@
     "shortName": "Maribelle",
     "id": 58,
     "generation": 7,
-    "type": "active",
-    "tier": 1,
+    "type": "retired",
+    "tier": 5,
     "creationDate": "2025-09-25",
     "birthday": "January 23",
     "color": "pink",
@@ -894,7 +891,9 @@
     "peeves": "Pasta, music boxes, tea, tea parties (her onii-chan hates these things), cooking (she's not interested)",
     "purpose": "Be a huggable waifu who loves her onii-chan",
     "funFact": "Her nickname is \"Mary\"; has a plush bunny named Sir Bunbun",
-    "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!"
+    "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!",
+    "retirementReason": "Momo was unretired, an attempted redesign for Maribelle didn’t work out",
+    "alternatives": "Momo, Riri & Ruru"
   },
   {
     "name": "Jacob the Reserved",
@@ -1423,11 +1422,13 @@
     "img": "Icons/Mr. Stop.png",
     "shortName": "Mr. Stop",
     "id": 64,
-    "generation": 7,
-    "type": "side",
-    "tier": 4,
+    "generation": 8,
+    "type": "active",
+    "tier": 3,
     "creationDate": "2025-09-28",
+    "spinOffDate": "2025-12-10",
     "birthday": "Unknown",
+    "color": "red",
     "moe": 1,
     "futuristic": 2,
     "emotion": "edgy",
@@ -1501,6 +1502,48 @@
     "description": "Frank \"Waterbury\" is a friend of B.X. who loves rap music. He wears a black cap (often backward), black vest with red insignia, spiked accessories, dark pants with chains, and combat boots. He appears muscular with a stocky build and a scowl that never softens. He, Adam and B.X. became friends in middle school, where they don't take life seriously. His nickname comes from his birthplace, Waterbury, Connecticut.",
     "themeSong": "Killa - Disto",
     "songLink": "https://youtu.be/x3RYqXqHm7U?si=cPnGdSEOtIMdwy8y"
+  },
+  {
+    "name": "Lulu the Maid",
+    "img": "Icons/Lulu.png",
+    "shortName": "Lulu",
+    "id": 74,
+    "generation": 8,
+    "type": "side",
+    "tier": 4,
+    "creationDate": "2025-12-10",
+    "birthday": "February 16",
+    "moe": 8,
+    "futuristic": 3,
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-67a53b447cb88191a57da910bf61e426",
+    "interests": "Organizing, perfectionism, baking",
+    "peeves": "Being too slow",
+    "purpose": "Accompany Momo the Maid",
+    "funFact": "Has an organized plushie collection",
+    "description": "Lulu is a calm and serene maid who speaks softly, often offering soothing support with grace and poise. Like Momo, she wears her long black dress and white apron. She is the organized type—everything from her closet to her plushie collection is perfectly arranged. However, she's incredibly slow and deliberate in everything she does. She has very long, flowing light blue hair and a gentle demeanor. Due to her patience and perfectionism, Lulu loves baking."
+  },
+  {
+    "name": "Nene the Maid",
+    "img": "Icons/Nene.png",
+    "shortName": "Nene",
+    "id": 75,
+    "generation": 8,
+    "type": "side",
+    "tier": 4,
+    "creationDate": "2025-12-10",
+    "birthday": "August 29",
+    "moe": 9,
+    "futuristic": 3,
+    "emotion": "joy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-67a53b447cb88191a57da910bf61e426",
+    "interests": "Speed cleaning, rhythm games, singing",
+    "peeves": "Breaking things on accident",
+    "purpose": "Accompany Momo the Maid",
+    "funFact": "Has won first place in a talent show with her friends",
+    "description": "Nene is a cheerful, energetic, and expressive maid—bringing bubbly excitement and affection in her interactions. Like Momo, she wears her long black dress and white apron. She's the speedy type, able to clean and move with impressive quickness, but she's prone to accidentally breaking things, which genuinely upsets her. She has very long blonde twintails and often clings affectionately to onii-chan. Nene loves rhythm games and singing, often humming or performing little tunes while she works."
   },
   {
     "name": "Me",

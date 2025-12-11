@@ -59,6 +59,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Maribelle", "Aki", "Bleu"]
       },
       {
+        name: "Momo and Friends",
+        description: "Momo with her closest companions",
+        characterShortNames: ["Momo", "Lulu", "Nene"]
+      },
+      {
         name: "Top Hat Girls",
         description: "Girls who wear top hats",
         characterShortNames: ["Arianna", "Evil Arianna", "Maribelle"]
@@ -112,11 +117,6 @@ export class Trios implements OnInit {
         name: "Character Encylopedias",
         description: "Characters who talk about my characters like a living encyclopedia",
         characterShortNames: ["The AI Devotee", "Riri & Ruru", "Lexi"]
-      },
-      {
-        name: "Retired Cuties",
-        description: "The cutest retired characters",
-        characterShortNames: ["Momo", "Mimi", "Princess"]
       },
       {
         name: "Dania's Former Companions",

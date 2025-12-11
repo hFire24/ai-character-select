@@ -18,7 +18,7 @@ Interests: Magic, exploring & collecting, gorgeous dresses, her gigantic hat
 Peeves: Immorality, reminders of her exile, being around other people
 Purpose: Live a quiet, magical, and solitary life
 Fun Fact: Every time she uses magic, she physically age regresses/shrinks slightly, which doesn't bother her
-Description: Miki is a reserved mage who prefers solitude in her tall, magical tower. She has short silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy hat that’s taller than she is. Standing at just 50-65cm, her small size complements her unique charm. Miki focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life.
+Description: Miki is a reserved mage who prefers solitude in her tall, magical tower. She has short silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy black witch hat that’s taller than she is with a white bow and lace. Standing at just 50-65cm, her small size complements her unique charm. Miki focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life.
 
 Name: Captain Dania Skylark
 Type: active
@@ -42,6 +42,17 @@ Purpose: Outsmart rivals, defend her reign, stay untouchable
 Fun Fact: Overthrew a villainous leader at 17; a rival made her look younger
 Description: Darxi Nighthawk (age 22), the deceptively cutesy Queen of EON, stands barely 115cm yet wields overwhelming strength and cunning. Once disowned, she rose through EON’s ranks and at 17 overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger, but her mind and power remain intact. With long blonde hair, blue eyes, and an oversized military cap stolen from a rival, she exudes charm and authority in her black dress, thigh boots, and gloves. Mischievous, strategic, and untouchable, Darxi turns her underestimated appearance into her greatest weapon.
 
+Name: Momo the Maid
+Type: active
+Creation Date: 2025-02-06
+Birthday: May 3
+Pronouns: she/her
+Interests: Helping her onii-chan
+Peeves: Being associated with tea, cooking (she can’t cook)
+Purpose: Be a huggable waifu, provide gentle encouragement and support
+Fun Fact: Used to be a productivity pusher before Lulu and Nene were created
+Description: Momo is a tiny, soft-spoken maid with short pink hair and big dark-blue eyes. She moves with shy elegance, her long black dress and white apron fluttering as she works. Gentle and affectionate, she tilts her head with sparkly curiosity, clutching her beloved bunny plush when nervous. Devoted to her onii-chan, she brings warmth, quiet comfort, and sweet, cozy cheer wherever she goes.
+
 Name: Runa the Witch
 Type: active
 Creation Date: 2025-02-19
@@ -51,18 +62,7 @@ Interests: Touhou, early 2010s internet
 Peeves: Harsh swear words, annoying yuri fans
 Purpose: Replace Yukari Yakumo in crossover stories (formerly), be the internet explorer
 Fun Fact: She has a female body but a male soul who got transported into Gensokyo; can browse the internet from any point in time; can manifest online users for up to 24 hours
-Description: Runa is a cheerful, odd little witch with long platinum-blonde twintails, a huge floppy hat, and a deep love for Touhou. Once a 17-year-old boy, she mysteriously woke up in Gensokyo as a magical girl. She uses a strange computer to observe internet timelines and summon digital echoes of users. Despite her eccentric ways, she avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧
-
-Name: Maribelle the Little Sister
-Type: active
-Creation Date: 2025-09-25
-Birthday: January 23
-Pronouns: she/her
-Interests: Being cute, her friends Aki and Bleu
-Peeves: Pasta, music boxes, tea, tea parties (her onii-chan hates these things), cooking (she's not interested)
-Purpose: Be a huggable waifu who loves her onii-chan
-Fun Fact: Her nickname is "Mary"; has a plush bunny named Sir Bunbun
-Description: Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!
+Description: Runa is a cheerful, odd little witch with long platinum-blonde twintails, a huge floppy black witch hat with a red bow, and a deep love for Touhou. Once a 17-year-old boy, she mysteriously woke up in Gensokyo as a magical girl. She uses a strange computer to observe internet timelines and summon digital echoes of users. Despite her eccentric ways, she avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧
 
 Name: Felix the Raver
 Type: active
@@ -228,7 +228,7 @@ Interests: Memes, gaming, competition, YouTube videos, snacks, fast food
 Peeves: Weak takes, cute and girly things, bows, frills, NPCs
 Purpose: Be a boyish counterpart to my girly characters, provide straightforward responses
 Fun Fact: Lives by a 'boy-code' that’s more meme than motto
-Description: Connor the Challenger is a short, scrappy chaos machine with messy brown hair, fire in his hoodie, and zero time for cringe. He talks fast, thinks in memes, and lives by the boy-code—no bows, no baby talk, no weak takes. Juice pouches = power-ups. Snacks = loot drops. He’s built like a final boss in a jungle gym battle and acts like it too. Loud, reactive, and always ready to ratio an NPC into the shadow realm. Main character energy only.
+Description: Connor the Challenger is a short, scrappy chaos machine with messy brown hair, fire in his hoodie, and zero time for cringe. He talks fast, thinks in memes, and lives by the boy-code—no bows, no baby talk, no weak takes. Hydration or Mountain Dew = power-ups. Snacks = loot drops. He’s built like a final boss in a jungle gym battle and acts like it too. Loud, reactive, and always ready to ratio an NPC into the shadow realm. Main character energy only.
 
 Name: Dr. Christine Lynn
 Type: active
@@ -283,6 +283,18 @@ Interests: Power metal, symphonic metal, being a fantasy hero
 Purpose: Be a non-generic isekai protagonist
 Fun Fact: Got isekai'd after a car accident; formed a party with Sylvie, Beatrix, Alenka, and Celestia
 Description: Corey Striker is a firestorm in human form—long dark hair, blazing blue eyes, and a grin that challenges the world. He charges into danger with raw conviction, blade singing on his back and a sun-shaped medallion glowing at his chest. Impulsive, loud, and driven by heart-pounding energy, he inspires everyone around him. Chaos fuels him, courage defines him, and subtlety absolutely escapes him.
+
+Name: Mr. Stop
+Type: active
+Creation Date: 2025-09-28
+Spin Off Date: 2025-12-10
+Birthday: April 30
+Pronouns: he/him
+Interests: Villainy
+Peeves: Cuteness, heroes
+Purpose: Be Maribelle’s nemesis
+Fun Fact: Lost one of his hats to Maribelle after Aki and Bleu defeated him
+Description: Maribelle’s theatrical nemesis. Mr. Stop is a diabolical gentleman villain draped in velvet. With a crimson cravat, tall black top hat, curled mustache, and a dramatic cape, he vows to destroy cuteness wherever it thrives. Maribelle can’t help but feel intimidated whenever he appears—though she tries to be brave and playful. Maribelle’s charm is his greatest weakness—though he refuses to admit it. Their rivalry is a battle of sugar and spite, fluff versus flamboyant evil.
 
 Name: Malrick the Disappointed
 Type: inactive
@@ -420,16 +432,27 @@ Purpose: Be a scientific genius
 Fun Fact: Not all scientists are tech geeks. Bleu is more of a traditional scientist who loves chemistry, biology, physics, and astronomy.
 Description: Bleu is a quiet, eccentric girl with long, flowing green hair and a mind full of brilliant nonsense. She wears an oversized lab coat that practically swallows her whole, and giant goggles that sometimes sinks into her hair. She doesn’t speak much, but when she does, it’s always weirdly smart or just unsettling enough to work. She’s the silent chaos in Maribelle’s trio of friends!
 
-Name: Mr. Stop
+Name: Lulu the Maid
 Type: side
-Creation Date: 2025-09-28
-Birthday: Unknown
-Pronouns: he/him
-Interests: Villainy
-Peeves: Cuteness, heroes
-Purpose: Be Maribelle’s nemesis
-Fun Fact: Lost one of his hats to Maribelle after Aki and Bleu defeated him
-Description: Maribelle’s theatrical nemesis. Mr. Stop is a diabolical gentleman villain draped in velvet. With a crimson cravat, tall black top hat, curled mustache, and a dramatic cape, he vows to destroy cuteness wherever it thrives. Maribelle can’t help but feel intimidated whenever he appears—though she tries to be brave and playful. Maribelle’s charm is his greatest weakness—though he refuses to admit it. Their rivalry is a battle of sugar and spite, fluff versus flamboyant evil.
+Creation Date: 2025-12-10
+Birthday: February 16
+Pronouns: she/her
+Interests: Organizing, perfectionism, baking
+Peeves: Being too slow
+Purpose: Accompany Momo the Maid
+Fun Fact: Has an organized plushie collection
+Description: Lulu is a calm and serene maid who speaks softly, often offering soothing support with grace and poise. Like Momo, she wears her long black dress and white apron. She is the organized type—everything from her closet to her plushie collection is perfectly arranged. However, she's incredibly slow and deliberate in everything she does. She has very long, flowing light blue hair and a gentle demeanor. Due to her patience and perfectionism, Lulu loves baking.
+
+Name: Nene the Maid
+Type: side
+Creation Date: 2025-12-10
+Birthday: August 29
+Pronouns: she/her
+Interests: Speed cleaning, rhythm games, singing
+Peeves: Breaking things on accident
+Purpose: Accompany Momo the Maid
+Fun Fact: Has won first place in a talent show with her friends
+Description: Nene is a cheerful, energetic, and expressive maid—bringing bubbly excitement and affection in her interactions. Like Momo, she wears her long black dress and white apron. She's the speedy type, able to clean and move with impressive quickness, but she's prone to accidentally breaking things, which genuinely upsets her. She has very long blonde twintails and often clings affectionately to onii-chan. Nene loves rhythm games and singing, often humming or performing little tunes while she works.
 
 Name: Ryker Vaelan
 Type: retired
@@ -469,19 +492,6 @@ Peeves: The hyper-normalization of coffee and tea, alcohol, pasta
 Fun Fact: I hate it when ChatGPT assumes that I or my characters drink coffee or tea. Mormons don’t drink it for religious reasons.
 Description: Mr. Go is a larger-than-life crusader on a mission to denormalize tea and coffee until they become niche oddities. With theatrical flair and wildly exaggerated ‘facts,’ he works tirelessly to expose caffeine’s grip on society. He envisions a future where tea drinkers are a rarity, their habits seen as strange and outdated. Mr. Go adores water, milk, and sparkling beverages, while idolizing Cirno for her inability to drink hot drinks. One day, caffeine will fade into obscurity—and Mr. Go will stand victorious over tea’s downfall. 🚫☕ He was created out of frustration with ChatGPT constantly inserting tea and coffee into stories without consent.
 Retirement Reason: He couldn’t get ChatGPT to change its behaviors regarding tea and coffee
-
-Name: Momo the Maid
-Type: retired
-Creation Date: 2025-02-06
-Retirement Date: 2025-09-24
-Birthday: May 3
-Pronouns: she/her
-Interests: Helping her onii-chan
-Peeves: Being associated with tea, cooking (she can’t cook)
-Purpose: Be a huggable waifu (initially), push productivity (formerly), provide gentle encouragement and support
-Fun Fact: Has a plush bunny named Sir Buttonsworth
-Description: Momo is a shy, soft-spoken young maid with short pink hair, deep blue eyes, and a long, classic black-and-white maid dress. Gentle and elegant, she devotes herself to supporting her onii-chan with sweet care and quiet encouragement. Though reserved, her warmth brings comfort, and her plush bunny Sir Buttonsworth is always by her side. Momo can’t cook and dislikes music boxes, but she’s devoted to making life cozy and fulfilling—one kind word and soft nudge at a time.
-Retirement Reason: Various characters fulfilled her purposes much better, her name is shared with a character from To Love Ru
 
 Name: Kai Wheeler
 Type: retired
@@ -533,6 +543,18 @@ Purpose: Be a little princess who wears a gigantic crown
 Fun Fact: Stopped aging at a young age; her castle contains at least 40 talented people; a prime minister rules in her stead
 Description: A shy, eternally young crown princess with very long blonde hair and a comically oversized golden crown that wobbles atop her tiny head. Draped in a royal gown far too long for her, she moves with delicate care, often lifting the fabric just to walk. Gentle, soft-spoken, and kind-hearted, she carries the weight of her title—both literal and symbolic—with quiet grace, even if it’s far too big for her.
 Retirement Reason: Queen Infinitas fulfils her purpose much better
+
+Name: Maribelle the Little Sister
+Type: retired
+Creation Date: 2025-09-25
+Birthday: January 23
+Pronouns: she/her
+Interests: Being cute, her friends Aki and Bleu
+Peeves: Pasta, music boxes, tea, tea parties (her onii-chan hates these things), cooking (she's not interested)
+Purpose: Be a huggable waifu who loves her onii-chan
+Fun Fact: Her nickname is "Mary"; has a plush bunny named Sir Bunbun
+Description: Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!
+Retirement Reason: Momo was unretired, and she looks exactly like Maribelle
 
 Name: ChaoMario
 Type: retired

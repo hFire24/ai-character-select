@@ -104,8 +104,6 @@ export class StoryHelper {
     // Apply weighted selection based on tier
     const weights = filteredCharacters.map(c => {
       if (c.shortName === 'Angela') return 5;
-      if ((c.tier || 0) === 1) return 3;
-      if ((c.tier || 0) === 2) return 2;
       return 1;
     });
 

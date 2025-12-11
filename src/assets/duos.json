@@ -504,6 +504,11 @@
       "name": "School Dropouts"
     },
     {
+      "id1": 13,
+      "id2": 75,
+      "name": "Rhythm Gaming Maids"
+    },
+    {
       "id1": 14,
       "id2": 20,
       "name": "Fantasy Mages"
@@ -835,11 +840,6 @@
       "id1": 25,
       "id2": 27,
       "name": "OG Crossover Duo"
-    },
-    {
-      "id1": 25,
-      "id2": 34,
-      "name": "Unrelated College Students"
     },
     {
       "id1": 25,
