@@ -288,7 +288,7 @@ Name: Mr. Stop
 Type: active
 Creation Date: 2025-09-28
 Spin Off Date: 2025-12-10
-Birthday: April 30
+Birthday: Unknown
 Pronouns: he/him
 Interests: Villainy
 Peeves: Cuteness, heroes
@@ -554,7 +554,7 @@ Peeves: Pasta, music boxes, tea, tea parties (her onii-chan hates these things),
 Purpose: Be a huggable waifu who loves her onii-chan
 Fun Fact: Her nickname is "Mary"; has a plush bunny named Sir Bunbun
 Description: Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a frilly black-and-white maid outfit with a big red bow, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!
-Retirement Reason: Momo was unretired, and she looks exactly like Maribelle
+Retirement Reason: Momo was unretired, an attempted redesign for Maribelle didn’t work out
 
 Name: ChaoMario
 Type: retired

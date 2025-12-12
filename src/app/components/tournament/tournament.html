@@ -39,18 +39,30 @@
       </div>
 
       <div class="excluded-info">
-        <strong>Characters to Eliminate ({{getSelectedCount()}}/2):</strong> 
+        <strong>Characters to Eliminate ({{getSelectedCount()}}/4):</strong> 
         @if (selectedCharacter1) {
           <span>{{selectedCharacter1.name}}</span>
         }
-        @if (selectedCharacter1 && selectedCharacter2) {
+        @if (selectedCharacter1 && (selectedCharacter2 || selectedCharacter3 || selectedCharacter4)) {
           <span>, </span>
         }
         @if (selectedCharacter2) {
           <span>{{selectedCharacter2.name}}</span>
         }
-        @if (!selectedCharacter1 && !selectedCharacter2) {
-          <span class="hint">Select 2 characters to eliminate</span>
+        @if (selectedCharacter2 && (selectedCharacter3 || selectedCharacter4)) {
+          <span>, </span>
+        }
+        @if (selectedCharacter3) {
+          <span>{{selectedCharacter3.name}}</span>
+        }
+        @if (selectedCharacter3 && selectedCharacter4) {
+          <span>, </span>
+        }
+        @if (selectedCharacter4) {
+          <span>{{selectedCharacter4.name}}</span>
+        }
+        @if (!selectedCharacter1 && !selectedCharacter2 && !selectedCharacter3 && !selectedCharacter4) {
+          <span class="hint">Select 4 characters to eliminate</span>
         }
       </div>
 

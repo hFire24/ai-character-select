@@ -16,11 +16,13 @@ export class Tournament implements OnInit {
   tournamentCreated: boolean = false;
   tournamentName: string = 'Tournament';
   showEliminationStep: boolean = false;
-  excludedCharacterIds: number[] = [32, 50];
+  excludedCharacterIds: number[] = [32, 50, 0, 0];
   eliminationMethod: 'default' | 'manual' | 'random' = 'default';
   tier7Characters: Character[] = [];
   selectedCharacter1: Character | null = null;
   selectedCharacter2: Character | null = null;
+  selectedCharacter3: Character | null = null;
+  selectedCharacter4: Character | null = null;
 
   constructor(private characterService: CharacterService) {}
 
@@ -43,9 +45,11 @@ export class Tournament implements OnInit {
         this.tier7Characters.push(char50);
       }
       
-      // Set default selections to ?????????? and The Collapsed
+      // Set default selections to 4 characters from the second-lowest tier
       this.selectedCharacter1 = char32 || this.tier7Characters[0];
       this.selectedCharacter2 = char50 || this.tier7Characters[1];
+      this.selectedCharacter3 = this.tier7Characters[2] || null;
+      this.selectedCharacter4 = this.tier7Characters[3] || null;
       this.updateExcludedIds();
     });
   }
@@ -63,10 +67,12 @@ export class Tournament implements OnInit {
     if (method === 'random') {
       this.randomizeExclusions();
     } else if (method === 'default') {
-      // Default always uses IDs 32 and 50 regardless of tier
+      // Default uses first 4 characters from second-lowest tier
       this.characterService.getCharacters().subscribe(characters => {
         this.selectedCharacter1 = characters.find(c => c.id === 32) || this.tier7Characters[0];
         this.selectedCharacter2 = characters.find(c => c.id === 50) || this.tier7Characters[1];
+        this.selectedCharacter3 = this.tier7Characters[2] || null;
+        this.selectedCharacter4 = this.tier7Characters[3] || null;
         this.updateExcludedIds();
       });
     }
@@ -74,16 +80,20 @@ export class Tournament implements OnInit {
 
   updateExcludedIds() {
     this.excludedCharacterIds = [
-      this.selectedCharacter1?.id || 32,
-      this.selectedCharacter2?.id || 50
-    ];
+      this.selectedCharacter1?.id,
+      this.selectedCharacter2?.id,
+      this.selectedCharacter3?.id,
+      this.selectedCharacter4?.id
+    ].filter((id): id is number => id !== undefined);
   }
 
   randomizeExclusions() {
-    // Randomly select 2 characters from second-lowest tier (including IDs 32 & 50)
+    // Randomly select 4 characters from second-lowest tier (including IDs 32 & 50)
     const shuffled = [...this.tier7Characters].sort(() => Math.random() - 0.5);
     this.selectedCharacter1 = shuffled[0];
     this.selectedCharacter2 = shuffled[1];
+    this.selectedCharacter3 = shuffled[2];
+    this.selectedCharacter4 = shuffled[3];
     this.updateExcludedIds();
   }
 
@@ -98,14 +108,22 @@ export class Tournament implements OnInit {
       this.selectedCharacter1 = null;
     } else if (this.selectedCharacter2?.id === char.id) {
       this.selectedCharacter2 = null;
+    } else if (this.selectedCharacter3?.id === char.id) {
+      this.selectedCharacter3 = null;
+    } else if (this.selectedCharacter4?.id === char.id) {
+      this.selectedCharacter4 = null;
     } else {
       // Add to first available slot
       if (!this.selectedCharacter1) {
         this.selectedCharacter1 = char;
       } else if (!this.selectedCharacter2) {
         this.selectedCharacter2 = char;
+      } else if (!this.selectedCharacter3) {
+        this.selectedCharacter3 = char;
+      } else if (!this.selectedCharacter4) {
+        this.selectedCharacter4 = char;
       } else {
-        // Both slots full, replace the first one
+        // All slots full, replace the first one
         this.selectedCharacter1 = char;
       }
     }
@@ -113,16 +131,22 @@ export class Tournament implements OnInit {
   }
 
   isCharacterSelected(char: Character): boolean {
-    return this.selectedCharacter1?.id === char.id || this.selectedCharacter2?.id === char.id;
+    return this.selectedCharacter1?.id === char.id || 
+           this.selectedCharacter2?.id === char.id ||
+           this.selectedCharacter3?.id === char.id ||
+           this.selectedCharacter4?.id === char.id;
   }
 
   getSelectedCount(): number {
-    return (this.selectedCharacter1 ? 1 : 0) + (this.selectedCharacter2 ? 1 : 0);
+    return (this.selectedCharacter1 ? 1 : 0) + 
+           (this.selectedCharacter2 ? 1 : 0) + 
+           (this.selectedCharacter3 ? 1 : 0) + 
+           (this.selectedCharacter4 ? 1 : 0);
   }
 
   confirmEliminations() {
-    if (this.getSelectedCount() !== 2) {
-      alert('Please select exactly 2 characters to eliminate.');
+    if (this.getSelectedCount() !== 4) {
+      alert('Please select exactly 4 characters to eliminate.');
       return;
     }
     this.showEliminationStep = false;
