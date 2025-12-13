@@ -480,6 +480,11 @@
     },
     {
       "id1": 13,
+      "id2": 27,
+      "name": "Twin-tailed Tech Geeks"
+    },
+    {
+      "id1": 13,
       "id2": 28,
       "name": "Former Roommates"
     },
@@ -492,11 +497,6 @@
       "id1": 13,
       "id2": 35,
       "name": "Top Hatted Blue-Haired Girls"
-    },
-    {
-      "id1": 13,
-      "id2": 58,
-      "name": "Top Hatted Maids"
     },
     {
       "id1": 13,
@@ -598,6 +598,11 @@
       "id1": 15,
       "id2": 54,
       "name": "Sci-Fi High Flyers"
+    },
+    {
+      "id1": 15,
+      "id2": 66,
+      "name": "Cute Anime Fans"
     },
     {
       "id1": 15,
@@ -745,6 +750,21 @@
       "name": "Missionary Duo"
     },
     {
+      "id1": 20,
+      "id2": 37,
+      "name": "Traditional Ladies"
+    },
+    {
+      "id1": 20,
+      "id2": 48,
+      "name": "Fighters of Justice"
+    },
+    {
+      "id1": 20,
+      "id2": 73,
+      "name": "Heroic Adventurers"
+    },
+    {
       "id1": 21,
       "id2": 28,
       "name": "Cyberpunk Girls"
@@ -758,6 +778,11 @@
       "id1": 21,
       "id2": 35,
       "name": "Minidress Wearers"
+    },
+    {
+      "id1": 21,
+      "id2": 40,
+      "name": "Peaked Cap Tyrants"
     },
     {
       "id1": 21,
@@ -889,7 +914,7 @@
     {
       "id1": 26,
       "id2": 58,
-      "name": "Pink-Haired Maids"
+      "name": "Pink-Haired Imoutos"
     },
     {
       "id1": 27,
@@ -934,6 +959,11 @@
     },
     {
       "id1": 28,
+      "id2": 52,
+      "name": "Nightcore Duo"
+    },
+    {
+      "id1": 28,
       "id2": 71,
       "name": "Chaotic and Lawful Tsunderes",
       "altName": "Lawful and Chaotic Tsunderes"
@@ -941,7 +971,12 @@
     {
       "id1": 29,
       "id2": 39,
-      "name": "Pink-haired Magicians"
+      "name": "Pink-Haired Magicians"
+    },
+    {
+      "id1": 29,
+      "id2": 67,
+      "name": "Pink-Haired Magical Girls"
     },
     {
       "id1": 30,
@@ -1044,12 +1079,7 @@
     {
       "id1": 36,
       "id2": 50,
-      "name": "Avoiders of Cuteness"
-    },
-    {
-      "id1": 37,
-      "id2": 38,
-      "name": "Traditional Ladies"
+      "name": "Joyless Duo"
     },
     {
       "id1": 37,
@@ -1076,6 +1106,11 @@
       "id1": 39,
       "id2": 58,
       "name": "Top Hatted Pink Haired Girls"
+    },
+    {
+      "id1": 40,
+      "id2": 48,
+      "name": "Defenders of Justice"
     },
     {
       "id1": 40,
@@ -1113,6 +1148,11 @@
       "name": "Music Competitors"
     },
     {
+      "id1": 47,
+      "id2": 64,
+      "name": "Showmen"
+    },
+    {
       "id1": 48,
       "id2": 50,
       "name": "Despair Duo"
@@ -1129,6 +1169,11 @@
       "altName": "Pretty Boy & Hunk"
     },
     {
+      "id1": 48,
+      "id2": 73,
+      "name": "Warriors"
+    },
+    {
       "id1": 49,
       "id2": 50,
       "name": "The Warning Signs"
@@ -1137,11 +1182,6 @@
       "id1": 49,
       "id2": 52,
       "name": "AI Character Obsessives"
-    },
-    {
-      "id1": 50,
-      "id2": 55,
-      "name": "Former Makotos"
     },
     {
       "id1": 52,
@@ -1157,6 +1197,16 @@
       "id1": 53,
       "id2": 67,
       "name": "Sleepyheads"
+    },
+    {
+      "id1": 53,
+      "id2": 74,
+      "name": "Same Japanese Name"
+    },
+    {
+      "id1": 54,
+      "id2": 60,
+      "name": "Astronomers"
     },
     {
       "id1": 54,
@@ -1195,6 +1245,11 @@
       "altName": "Cute Brains and Brawn"
     },
     {
+      "id1": 59,
+      "id2": 73,
+      "name": "Swordfighters"
+    },
+    {
       "id1": 62,
       "id2": 63,
       "name": "Aggressive Music Fans"
@@ -1208,6 +1263,11 @@
       "id1": 66,
       "id2": 73,
       "name": "Isekai'd Bros."
+    },
+    {
+      "id1": 74,
+      "id2": 75,
+      "name": "Two-Speed Maids"
     }
   ]
 }
