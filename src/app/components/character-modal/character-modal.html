@@ -24,8 +24,9 @@
       <span *ngIf="character.emotion?.includes('straightforward')">🎯</span>
       <span *ngIf="character.moe >= 7">🩷</span>
       <span *ngIf="character.musicEnjoyer">🎵</span>
-      <span *ngIf="character.tier === 1">⭐</span>
+      <span *ngIf="character.tier === 1">💛</span>
       <span *ngIf="character.tier === 2">🩶</span>
+      <span *ngIf="character.tier === 3">🤎</span>
     </div>
     <ng-container class="retired" *ngIf="character.type === 'retired'">
       <h3 class="retired-banner">Retired</h3>

@@ -20,6 +20,7 @@ const FALLBACK_MOOD: Mood = {
 })
 export class MoodModal {
   @Input() mood: Mood = FALLBACK_MOOD;
+  @Input() showInactive: boolean = false;
   @Output() close = new EventEmitter<void>();
   characters: Character[] = [];
 
@@ -29,24 +30,28 @@ export class MoodModal {
     });
   }
 
+  private allowsInactive(c: Character): boolean {
+    return this.showInactive || !(c.type?.includes('inactive'));
+  }
+
   get filteredCharacters(): Character[] {
     switch (this.mood.arg) {
       case 'moe':
-        return this.characters.filter(c => (c.moe >= 7 || c.color === 'pink') && c.tier <= 3);
+        return this.characters.filter(c => (c.moe >= 7 || c.color === 'pink') && c.tier <= 4);
       case 'red':
-        return this.characters.filter(c => c.color === 'red' && c.tier <= 3);
+        return this.characters.filter(c => c.color === 'red' && c.tier <= 4 && this.allowsInactive(c));
       case 'blue':
-        return this.characters.filter(c => c.color === 'blue' && c.tier <= 3);
+        return this.characters.filter(c => c.color === 'blue' && c.tier <= 4 && this.allowsInactive(c));
       case 'futuristic':
-        return this.characters.filter(c => c.futuristic >= 7 && c.tier <= 3);
+        return this.characters.filter(c => c.futuristic >= 7 && c.tier <= 4 && this.allowsInactive(c));
       case 'traditional':
-        return this.characters.filter(c => c.futuristic <= 4 && c.tier <= 3);
+        return this.characters.filter(c => c.futuristic <= 4 && c.tier <= 4 && this.allowsInactive(c));
       case 'male':
-        return this.characters.filter(c => c.pronouns === 'he/him' && c.tier <= 3);
+        return this.characters.filter(c => c.pronouns === 'he/him' && c.tier <= 4 && this.allowsInactive(c));
       case 'female':
-        return this.characters.filter(c => c.pronouns === 'she/her' && c.tier <= 3);
+        return this.characters.filter(c => c.pronouns === 'she/her' && c.tier <= 4 && this.allowsInactive(c));
       case 'moe0':
-        return this.characters.filter(c => c.moe < 4 && c.tier <= 3);
+        return this.characters.filter(c => c.moe < 4 && c.tier <= 4 && this.allowsInactive(c));
       case 'chatted':
         return this.characters.filter(c => {
           const key = 'chatLink_' + (c.name || 'unknown');
@@ -55,10 +60,10 @@ export class MoodModal {
       case 'chatted0':
         return this.characters.filter(c => {
           const key = 'chatLink_' + (c.name || 'unknown');
-          return localStorage.getItem(key) === null && c.tier <= 3;
+          return localStorage.getItem(key) === null && c.tier <= 4 && this.allowsInactive(c);
         });
       case 'favorites':
-        return this.characters.filter(c => c.tier <= 2).sort((a, b) => a.tier - b.tier);
+        return this.characters.filter(c => c.tier <= 3).sort((a, b) => a.tier - b.tier);
       default:
         return [];
     }
@@ -93,17 +98,18 @@ export class MoodModal {
   selectRandomCharacter() {
     const sourceCharacters = (this.filteredCharacters && this.filteredCharacters.length > 0)
       ? this.filteredCharacters
-      : this.characters.filter(c => c.type !== 'me' && (c.type === 'active' || c.type === 'semi-active'));
+      : this.characters.filter(c => c.type === 'active' || this.allowsInactive(c));
     // Create weighted array based on tier
     const weightedCharacters: Character[] = [];
     sourceCharacters.forEach(character => {
-      let weight = 1; // Default weight for tier 3
+      let weight = 1; // Default weight for tier 4
       if (character.tier === 1) {
-        weight = 3;
+        weight = 4;
       } else if (character.tier === 2) {
+        weight = 3;
+      } else if (character.tier === 3) {
         weight = 2;
       }
-      
       for (let i = 0; i < weight; i++) {
         weightedCharacters.push(character);
       }

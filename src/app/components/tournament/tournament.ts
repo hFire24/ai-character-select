@@ -16,137 +16,99 @@ export class Tournament implements OnInit {
   tournamentCreated: boolean = false;
   tournamentName: string = 'Tournament';
   showEliminationStep: boolean = false;
-  excludedCharacterIds: number[] = [32, 50, 0, 0];
-  eliminationMethod: 'default' | 'manual' | 'random' = 'default';
-  tier7Characters: Character[] = [];
+  eliminationMethod: 'manual' | 'random' = 'random';
+  includedCharacterIds: number[] = [];
+  selectableCharacters: Character[] = [];
   selectedCharacter1: Character | null = null;
   selectedCharacter2: Character | null = null;
-  selectedCharacter3: Character | null = null;
-  selectedCharacter4: Character | null = null;
+  private allCharacters: Character[] = [];
 
   constructor(private characterService: CharacterService) {}
 
   ngOnInit() {
     this.characterService.getCharacters().subscribe(characters => {
-      // Find the second-lowest tier (excluding highest tier)
-      const tiers = [...new Set(characters.map(c => c.tier))].sort((a, b) => b - a);
-      const secondLowestTier = tiers.length >= 2 ? tiers[1] : tiers[0];
-      
-      // Filter characters by second-lowest tier, plus always include IDs 32 and 50
-      const char32 = characters.find(c => c.id === 32);
-      const char50 = characters.find(c => c.id === 50);
-      this.tier7Characters = characters.filter(c => c.tier === secondLowestTier);
-      
-      // Add IDs 32 and 50 if they're not already in the list
-      if (char32 && !this.tier7Characters.find(c => c.id === 32)) {
-        this.tier7Characters.push(char32);
-      }
-      if (char50 && !this.tier7Characters.find(c => c.id === 50)) {
-        this.tier7Characters.push(char50);
-      }
-      
-      // Set default selections to 4 characters from the second-lowest tier
-      this.selectedCharacter1 = char32 || this.tier7Characters[0];
-      this.selectedCharacter2 = char50 || this.tier7Characters[1];
-      this.selectedCharacter3 = this.tier7Characters[2] || null;
-      this.selectedCharacter4 = this.tier7Characters[3] || null;
-      this.updateExcludedIds();
+      this.allCharacters = characters;
+      this.updateSelectableCharacters();
+      this.selectedCharacter1 = null;
+      this.selectedCharacter2 = null;
+      this.updateIncludedIds();
+      // Random is the default selection method
+      this.randomizeExclusions();
     });
   }
 
   createBracket() {
-    if (+this.numPlayers === 64) {
+    if (+this.numPlayers === 32 || +this.numPlayers === 64) {
+      this.updateSelectableCharacters();
+      // If Random is the current mode, ensure we (re)pick two now
+      if (this.eliminationMethod === 'random') {
+        this.randomizeExclusions();
+      }
       this.showEliminationStep = true;
     } else {
       this.tournamentCreated = true;
     }
   }
 
-  selectEliminationMethod(method: 'default' | 'manual' | 'random') {
+  selectEliminationMethod(method: 'manual' | 'random') {
     this.eliminationMethod = method;
     if (method === 'random') {
       this.randomizeExclusions();
-    } else if (method === 'default') {
-      // Default uses first 4 characters from second-lowest tier
-      this.characterService.getCharacters().subscribe(characters => {
-        this.selectedCharacter1 = characters.find(c => c.id === 32) || this.tier7Characters[0];
-        this.selectedCharacter2 = characters.find(c => c.id === 50) || this.tier7Characters[1];
-        this.selectedCharacter3 = this.tier7Characters[2] || null;
-        this.selectedCharacter4 = this.tier7Characters[3] || null;
-        this.updateExcludedIds();
-      });
     }
   }
 
-  updateExcludedIds() {
-    this.excludedCharacterIds = [
-      this.selectedCharacter1?.id,
-      this.selectedCharacter2?.id,
-      this.selectedCharacter3?.id,
-      this.selectedCharacter4?.id
-    ].filter((id): id is number => id !== undefined);
+  updateIncludedIds() {
+    const targetTier = this.getTargetTier();
+    // When selecting tier 7, treat IDs 32 and 50 as tier 7
+    const isTierMember = (c: Character) => {
+      if (targetTier === 7) {
+        return c.tier === 7 || c.id === 32 || c.id === 50;
+      }
+      return c.tier === targetTier;
+    };
+    const tierIds = this.allCharacters.filter(isTierMember).map(c => c.id);
+    const included = [this.selectedCharacter1?.id, this.selectedCharacter2?.id].filter((id): id is number => typeof id === 'number');
+    this.includedCharacterIds = tierIds.filter(id => !included.includes(id));
   }
 
   randomizeExclusions() {
-    // Randomly select 4 characters from second-lowest tier (including IDs 32 & 50)
-    const shuffled = [...this.tier7Characters].sort(() => Math.random() - 0.5);
+    const shuffled = [...this.selectableCharacters].sort(() => Math.random() - 0.5);
     this.selectedCharacter1 = shuffled[0];
     this.selectedCharacter2 = shuffled[1];
-    this.selectedCharacter3 = shuffled[2];
-    this.selectedCharacter4 = shuffled[3];
-    this.updateExcludedIds();
+    this.updateIncludedIds();
   }
 
   toggleCharacterSelection(char: Character) {
-    // Only allow manual selection in manual mode
     if (this.eliminationMethod !== 'manual') {
       return;
     }
-
-    // Check if character is already selected
     if (this.selectedCharacter1?.id === char.id) {
       this.selectedCharacter1 = null;
     } else if (this.selectedCharacter2?.id === char.id) {
       this.selectedCharacter2 = null;
-    } else if (this.selectedCharacter3?.id === char.id) {
-      this.selectedCharacter3 = null;
-    } else if (this.selectedCharacter4?.id === char.id) {
-      this.selectedCharacter4 = null;
     } else {
-      // Add to first available slot
       if (!this.selectedCharacter1) {
         this.selectedCharacter1 = char;
       } else if (!this.selectedCharacter2) {
         this.selectedCharacter2 = char;
-      } else if (!this.selectedCharacter3) {
-        this.selectedCharacter3 = char;
-      } else if (!this.selectedCharacter4) {
-        this.selectedCharacter4 = char;
       } else {
-        // All slots full, replace the first one
         this.selectedCharacter1 = char;
       }
     }
-    this.updateExcludedIds();
+    this.updateIncludedIds();
   }
 
   isCharacterSelected(char: Character): boolean {
-    return this.selectedCharacter1?.id === char.id || 
-           this.selectedCharacter2?.id === char.id ||
-           this.selectedCharacter3?.id === char.id ||
-           this.selectedCharacter4?.id === char.id;
+    return this.selectedCharacter1?.id === char.id || this.selectedCharacter2?.id === char.id;
   }
 
   getSelectedCount(): number {
-    return (this.selectedCharacter1 ? 1 : 0) + 
-           (this.selectedCharacter2 ? 1 : 0) + 
-           (this.selectedCharacter3 ? 1 : 0) + 
-           (this.selectedCharacter4 ? 1 : 0);
+    return (this.selectedCharacter1 ? 1 : 0) + (this.selectedCharacter2 ? 1 : 0);
   }
 
   confirmEliminations() {
-    if (this.getSelectedCount() !== 4) {
-      alert('Please select exactly 4 characters to eliminate.');
+    if (this.getSelectedCount() !== 2) {
+      alert('Please select exactly 2 characters to include.');
       return;
     }
     this.showEliminationStep = false;
@@ -156,5 +118,30 @@ export class Tournament implements OnInit {
   backToElimination() {
     this.showEliminationStep = true;
     this.tournamentCreated = false;
+  }
+
+  private getTargetTier(): number {
+    return +this.numPlayers === 64 ? 7 : (+this.numPlayers === 32 ? 5 : 0);
+  }
+
+  private updateSelectableCharacters() {
+    const targetTier = this.getTargetTier();
+    if (targetTier === 0) {
+      this.selectableCharacters = [];
+      return;
+    }
+    // When selecting tier 7, treat IDs 32 and 50 as tier 7
+    if (targetTier === 7) {
+      const tierMembers = this.allCharacters.filter(c => c.tier === 7 || c.id === 32 || c.id === 50);
+      // De-duplicate in case 32/50 already have tier 7
+      const seen = new Set<number>();
+      this.selectableCharacters = tierMembers.filter(c => {
+        if (seen.has(c.id)) return false;
+        seen.add(c.id);
+        return true;
+      });
+    } else {
+      this.selectableCharacters = this.allCharacters.filter(c => c.tier === targetTier);
+    }
   }
 }

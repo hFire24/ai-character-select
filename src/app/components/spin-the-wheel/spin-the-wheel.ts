@@ -45,10 +45,10 @@ export class SpinTheWheel {
   applyFilter() {
     switch (this.selectedFilter) {
       case 'tier1':
-        this.filteredCharacters = this.characters.filter(c => c.tier <= 2);
+        this.filteredCharacters = this.characters.filter(c => c.tier <= 3);
         break;
       case 'tier3':
-        this.filteredCharacters = this.characters.filter(c => c.tier <= 3);
+        this.filteredCharacters = this.characters.filter(c => c.tier <= 4);
         break;
       case 'active-retired':
         this.filteredCharacters = this.characters.filter(c => ['active', 'retired', 'inactive'].includes(c.type));

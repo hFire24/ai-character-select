@@ -70,7 +70,7 @@ form {
 
   .character-selection-grid {
     display: inline-grid;
-    grid-template-columns: repeat(3, 120px);
+    grid-template-columns: repeat(5, 120px);
     gap: 15px;
     padding: 20px;
 
@@ -91,9 +91,9 @@ form {
       }
 
       &.selected {
-        border-color: #f44336;
-        background: #ffebee;
-        box-shadow: 0 0 10px rgba(244, 67, 54, 0.3);
+        border-color: #43f436;
+        background: #f5ffeb;
+        box-shadow: 0 0 10px rgba(86, 244, 54, 0.3);
       }
 
       &.disabled {
@@ -187,9 +187,9 @@ form {
         }
 
         &.selected {
-          border-color: #f44336;
-          background: #3d2525;
-          box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+          border-color: #43f436;
+          background: #253d26;
+          box-shadow: 0 0 10px rgba(86, 244, 54, 0.5);
         }
 
         h3 {
