@@ -53,6 +53,12 @@ export class CharacterService {
   constructor(private http: HttpClient) {}
 
   getCharacters(): Observable<Character[]> {
+    return this.http.get<Character[]>('assets/characters.json').pipe(
+      map(characters => characters.filter(char => char.id !== 52))
+    );
+  }
+
+  getCharactersPlusCriticizer(): Observable<Character[]> {
     return this.http.get<Character[]>('assets/characters.json');
   }
 

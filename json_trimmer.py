@@ -13,6 +13,10 @@ def trim_characters_json():
   with open(characters_file, 'r', encoding='utf-8') as file:
     data = json.load(file)
   
+  # Remove character with id 52
+  if isinstance(data, list):
+    data = [char for char in data if char.get('id') != 52]
+  
   # Sort by tier before removing fields
   if isinstance(data, list):
     # Sort by tier (higher values first)

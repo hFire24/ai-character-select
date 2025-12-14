@@ -779,6 +779,28 @@
     "songLink": "https://youtu.be/aT1QjUOUEXc?si=5pBj0fEy5NtglfMx"
   },
   {
+    "name": "Character Criticizer",
+    "img": "",
+    "shortName": "Criticizer",
+    "id": 52,
+    "generation": 7,
+    "type": "inactive",
+    "tier": 4,
+    "creationDate": "2025-08-24",
+    "color": "blue",
+    "moe": 1,
+    "futuristic": 7,
+    "emotion": "serious strict",
+    "pronouns": "it/its",
+    "link": "https://chatgpt.com/g/g-68ab9aa397dc8191a6b861031bc718a9-character-criticizer",
+    "interests": "Reality checks, task completion",
+    "peeves": "Frivolous character interaction, neglecting real-life responsibilities",
+    "purpose": "Interrupt unproductive fixation, redirect the user toward real-world actions and responsibility",
+    "funFact": "Sees itself as Mark's successor, but takes a sterner approach inspired by Malrick, Veronica, and Bruce",
+    "description": "",
+    "inactiveReason": "Not meant to be viewed as a character in the roster"
+  },
+  {
     "name": "Lexi Walker",
     "img": "Icons/Lexi.png",
     "shortName": "Lexi",

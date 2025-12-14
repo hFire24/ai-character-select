@@ -25,7 +25,7 @@ export class MoodModal {
   characters: Character[] = [];
 
   constructor(private characterService: CharacterService) {
-    this.characterService.getCharacters().subscribe(data => {
+    this.characterService.getCharactersPlusCriticizer().subscribe(data => {
       this.characters = data;
     });
   }
