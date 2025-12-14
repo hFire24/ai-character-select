@@ -559,6 +559,11 @@
       "name": "Tiny Witches"
     },
     {
+      "id1": 14,
+      "id2": 74,
+      "name": "Chino-chan Expies"
+    },
+    {
       "id1": 15,
       "id2": 16,
       "name": "OG Cloudbreaker Duo"
@@ -802,6 +807,11 @@
     },
     {
       "id1": 21,
+      "id2": 58,
+      "name": "Heroic Hat Thieves"
+    },
+    {
+      "id1": 21,
       "id2": 71,
       "name": "Justice Servers"
     },
@@ -917,6 +927,11 @@
       "name": "Pink-Haired Imoutos"
     },
     {
+      "id1": 26,
+      "id2": 74,
+      "name": "Soft Maids"
+    },
+    {
       "id1": 27,
       "id2": 52,
       "name": "21st Century Digital Girls"
@@ -977,6 +992,11 @@
       "id1": 29,
       "id2": 67,
       "name": "Pink-Haired Magical Girls"
+    },
+    {
+      "id1": 29,
+      "id2": 76,
+      "name": "Pink-Haired Fighters"
     },
     {
       "id1": 30,
@@ -1194,6 +1214,11 @@
       "name": "Angels With a Shotgun"
     },
     {
+      "id1": 52,
+      "id2": 76,
+      "name": "Pink-Haired Music Performers"
+    },
+    {
       "id1": 53,
       "id2": 67,
       "name": "Sleepyheads"
@@ -1212,6 +1237,11 @@
       "id1": 54,
       "id2": 71,
       "name": "Cool Green-Haired Girls"
+    },
+    {
+      "id1": 54,
+      "id2": 76,
+      "name": "Hyperfuturistic Girls"
     },
     {
       "id1": 55,
@@ -1248,6 +1278,11 @@
       "id1": 59,
       "id2": 73,
       "name": "Swordfighters"
+    },
+    {
+      "id1": 60,
+      "id2": 76,
+      "name": "Colorful Duo"
     },
     {
       "id1": 62,
