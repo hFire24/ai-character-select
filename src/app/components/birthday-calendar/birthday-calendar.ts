@@ -59,39 +59,8 @@ export class BirthdayCalendar implements OnInit {
   }
 
   loadCharacters() {
-    this.characterService.getCharacters().subscribe(characters => {
-      // Store original characters for modal display
-      this.originalCharacters = characters;
-      
-      // Process characters and split Liam & Kieran
-      const processedCharacters: Character[] = [];
-      
-      characters.forEach(char => {
-        if (char.shortName === 'Liam & Kieran') {
-          // Split into two separate characters
-          const liamChar: Character = {
-            ...char,
-            name: 'Liam',
-            shortName: 'Liam',
-            birthday: 'August 28',
-            img: "Icons/Liam.png"
-          };
-          
-          const kieranChar: Character = {
-            ...char,
-            name: 'Kieran',
-            shortName: 'Kieran',
-            birthday: 'October 13',
-            img: "Icons/Kieran.png"
-          };
-          
-          processedCharacters.push(liamChar, kieranChar);
-        } else {
-          processedCharacters.push(char);
-        }
-      });
-      
-      this.characters = processedCharacters.filter(char => char.birthday && char.birthday.toLowerCase() !== 'unknown');
+    this.characterService.getCharactersSplitTwins().subscribe(characters => {     
+      this.characters = characters.filter(char => char.birthday && char.birthday.toLowerCase() !== 'unknown');
       this.generateCalendar();
       this.generateSortedList();
     });

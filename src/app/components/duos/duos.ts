@@ -46,21 +46,8 @@ export class Duos implements OnInit {
 
   ngOnInit() {
     // Load characters
-    this.characterService.getCharacters().subscribe(characters => {
-      // Store original twin characters for modal display
-      this.liamKieranOriginal = characters.find(c => c.name === 'Liam & Kieran') || null;
-      this.ririRuruOriginal = characters.find(c => c.name === 'Riri & Ruru') || null;
-      
-      // Split the twins for searching
-      const liam = { ...this.liamKieranOriginal, name: 'Liam', img: 'Icons/Liam.png', id: 44, shortName: 'Liam', isTwinSplit: true } as Character;
-      const kieran = { ...this.liamKieranOriginal, name: 'Kieran', img: 'Icons/Kieran.png', id: 45, shortName: 'Kieran', isTwinSplit: true } as Character;
-      const riri = { ...this.ririRuruOriginal, name: 'Riri the Nightcore Girl', img: 'Icons/Riri.png', id: 52, shortName: 'Riri', isTwinSplit: true } as Character;
-      const ruru = { ...this.ririRuruOriginal, name: 'Ruru', img: 'Icons/Ruru.png', id: 53, shortName: 'Ruru', isTwinSplit: true } as Character;
-
-      // Replace twins with split versions for searching
-      this.allCharacters = characters
-        .filter(c => c.name !== 'Liam & Kieran' && c.name !== 'Riri & Ruru')
-        .concat([liam, kieran, riri, ruru]);
+    this.characterService.getCharactersSplitTwins().subscribe(characters => {
+      this.allCharacters = characters;
     });
 
     // Load duos

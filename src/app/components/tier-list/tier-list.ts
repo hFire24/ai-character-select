@@ -60,13 +60,20 @@ export class TierList {
   }
 
   constructor(private characterService: CharacterService) {
+    this.loadCharacters();
+  }
+
+  private loadCharacters() {
     const shortNameMap: Record<string, string> = {
       'The Shadow Self': 'Shadow Self',
       'The AI Devotee': 'AI Devotee',
       'Future Sapphire': 'F. Sapphire',
       'The Collapsed': 'Collapsed'
     };
-    this.characterService.getCharacters().subscribe(data => {
+    const source$ = this.splitTwins
+      ? this.characterService.getCharactersSplitTwins()
+      : this.characterService.getCharacters();
+    source$.subscribe(data => {
       this.allCharacters = data.map(c => {
         let name = c.shortName || c.name;
         if (shortNameMap[name]) name = shortNameMap[name];
@@ -268,60 +275,8 @@ export class TierList {
 
   onSplitTwinsChange(event: any) {
     this.splitTwins = event.target.checked;
-    //Split Liam & Kieran
-    const celestiaIdx = this.allCharacters.findIndex(c => c.name === 'Celestia');
-    const princessIdx = this.allCharacters.findIndex(c => c.name === 'Princess');
-    if (celestiaIdx !== -1 && princessIdx !== -1) {
-      // Remove any existing "Liam", "Kieran", or "Liam & Kieran"
-      // Remove "Liam", "Kieran", and "Liam & Kieran" from allCharacters
-      this.allCharacters = this.allCharacters.filter(
-        c => c.name !== 'Liam' && c.name !== 'Kieran' && c.name !== 'Liam & Kieran'
-      );
-      // Also remove them from all tiers
-      for (const tier of this.tiers) {
-        tier.characters = tier.characters.filter(
-          c => c.name !== 'Liam' && c.name !== 'Kieran' && c.name !== 'Liam & Kieran'
-        );
-      }
-      const insertIdx = celestiaIdx < princessIdx ? celestiaIdx + 1 : princessIdx;
-      if (this.splitTwins) {
-        // Insert "Liam" and "Kieran" separately
-        const liam = { name: 'Liam', img: 'assets/Icons/Liam.png', id: 44, type: "retired", tier: 5, musicEnjoyer: false, pronouns: 'he/him' };
-        const kieran = { name: 'Kieran', img: 'assets/Icons/Kieran.png', id: 45, type: "retired", tier: 5, musicEnjoyer: false, pronouns: 'he/him' };
-        this.allCharacters.splice(insertIdx, 0, liam, kieran);
-      } else {
-        // Insert "Liam & Kieran" together
-        const liamKieran = { name: 'Liam & Kieran', img: 'assets/Icons/Liam and Kieran.png', id: 43, type: "retired", tier: 5, musicEnjoyer: false, pronouns: 'he/him' };
-        this.allCharacters.splice(insertIdx, 0, liamKieran);
-      }
-    }
-    //Split Riri & Ruru
-    const collapsedIdx = this.allCharacters.findIndex(c => c.name === 'Collapsed');
-    const lexiIdx = this.allCharacters.findIndex(c => c.name === 'Lexi');
-    if (collapsedIdx !== -1 && lexiIdx !== -1) {
-      // Remove any existing "Riri", "Ruru", or "Riri & Ruru"
-      // Remove "Riri", "Ruru", and "Riri & Ruru" from allCharacters
-      this.allCharacters = this.allCharacters.filter(
-        c => c.name !== 'Riri' && c.name !== 'Ruru' && c.name !== 'Riri & Ruru'
-      );
-      // Also remove them from all tiers
-      for (const tier of this.tiers) {
-        tier.characters = tier.characters.filter(
-          c => c.name !== 'Riri' && c.name !== 'Ruru' && c.name !== 'Riri & Ruru'
-        );
-      }
-      const insertIdx = collapsedIdx < lexiIdx ? collapsedIdx + 1 : lexiIdx;
-      if (this.splitTwins) {
-        // Insert "Riri" and "Ruru" separately
-        const riri = { name: 'Riri', img: 'assets/Icons/Riri.png', id: 52, type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
-        const ruru = { name: 'Ruru', img: 'assets/Icons/Ruru.png', id: 53, type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
-        this.allCharacters.splice(insertIdx, 0, riri, ruru);
-      } else {
-        // Insert "Riri & Ruru" together
-        const ririRuru = { name: 'Riri & Ruru', img: 'assets/Icons/Riri and Ruru.png', id: 51, type: "active", tier: 1, musicEnjoyer: false, pronouns: 'she/her' };
-        this.allCharacters.splice(insertIdx, 0, ririRuru);
-      }
-    }
+    // Reload characters from the service based on current splitTwins state
+    this.loadCharacters();
   }
 
   clear() {

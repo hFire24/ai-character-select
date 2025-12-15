@@ -30,17 +30,8 @@ export class TournamentBracket implements OnInit {
 
   ngOnInit() {
     // Inject the character service to get characters
-    this.characterService.getCharacters().subscribe(characters => {
+    this.characterService.getCharactersSplitTwins().subscribe(characters => {
       const highestTier = Math.max(...characters.map(c => c.tier));
-
-      //Split Liam & Kieran and Riri & Ruru before continuing
-      const liamKieranBase = characters.find(c => c.name === 'Liam & Kieran');
-      const ririRuruBase = characters.find(c => c.name === 'Riri & Ruru');
-      
-      const liam = { ...liamKieranBase, name: 'Liam', img: 'Icons/Liam.png', id: 44, shortName: 'Liam' } as Character;
-      const kieran = { ...liamKieranBase, name: 'Kieran', img: 'Icons/Kieran.png', id: 45, shortName: 'Kieran' } as Character;
-      const riri = { ...ririRuruBase, name: 'Riri', img: 'Icons/Riri.png', id: 52, shortName: 'Riri' } as Character;
-      const ruru = { ...ririRuruBase, name: 'Ruru', img: 'Icons/Ruru.png', id: 53, shortName: 'Ruru', tier: characters.find(c => c.shortName === "Aki")?.tier || ririRuruBase?.tier } as Character;
 
       // Change The Shadow Self's tier to 7
       const changeTierTo7 = (id: number) => {
@@ -55,8 +46,7 @@ export class TournamentBracket implements OnInit {
 
       // Group characters by tier (excluding highest tier and included IDs)
       const charactersByTier = characters
-        .filter(a => a.tier !== highestTier && a.name !== 'Liam & Kieran' && a.name !== 'Riri & Ruru' && !this.includedIds.includes(a.id))
-        .concat([liam, kieran, riri, ruru].filter(char => !this.includedIds.includes(char.id)))
+        .filter(a => a.tier !== highestTier && !this.includedIds.includes(a.id))
         .reduce((acc, char) => {
           if (!acc[char.tier]) acc[char.tier] = [];
           acc[char.tier].push(char);

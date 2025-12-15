@@ -2,7 +2,7 @@
   <h1>{{tournamentName}}</h1>
   @if (showEliminationStep) {
     <div class="elimination-step">
-      <h2>Select 2 Characters to Include</h2>
+      <h2>Select {{getTotalCount()}} Character{{(+numPlayers === 64) ? '' : 's'}} to Include</h2>
       <p>The rest of the characters will be excluded from the tournament.</p>
       
       <div class="elimination-options">
@@ -34,7 +34,7 @@
       </div>
 
       <div class="excluded-info">
-        <strong>Characters to Include ({{getSelectedCount()}}/2):</strong> 
+        <strong>Characters to Include ({{getSelectedCount()}}/{{getTotalCount()}}):</strong> 
         @if (selectedCharacter1) {
           <span>{{selectedCharacter1.name}}</span>
         }
@@ -45,7 +45,7 @@
           <span>{{selectedCharacter2.name}}</span>
         }
         @if (!selectedCharacter1 && !selectedCharacter2) {
-          <span class="hint">Select 2 characters to include</span>
+          <span class="hint">Select {{getTotalCount()}} character{{(+numPlayers === 64) ? '' : 's'}} to include</span>
         }
       </div>
 

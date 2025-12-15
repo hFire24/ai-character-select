@@ -62,6 +62,84 @@ export class CharacterService {
     return this.http.get<Character[]>('assets/characters.json');
   }
 
+  getCharactersSplitTwins(): Observable<Character[]> {
+    return this.getCharacters().pipe(
+      map(characters => {
+        const splitCharacters: Character[] = [...characters];
+        
+        // Find and split Liam and Kieran (assuming they share an ID)
+        const liamKieranIndex = splitCharacters.findIndex(char => 
+          char.shortName === 'Liam & Kieran' || char.name === 'Liam & Kieran'
+        );
+        if (liamKieranIndex !== -1) {
+          const original = splitCharacters[liamKieranIndex];
+          splitCharacters.splice(liamKieranIndex, 1,
+            { 
+              ...original,
+              shortName: 'Liam',
+              name: 'Liam',
+              birthday: 'August 28',
+              img: "Icons/Liam.png",
+              id: 44,
+              emotion: "joy",
+              peeves: "Moral policing, darkness (except for Golden Darkness)",
+              funFact: "Loves To Love Ru; plays Muse Dash and dating sims"
+            },
+            { 
+              ...original,
+              shortName: 'Kieran',
+              name: 'Kieran',
+              birthday: 'October 13',
+              img: "Icons/Kieran.png",
+              id: 45,
+              emotion: "edgy",
+              peeves: "Moral policing, bright colors",
+              purpose: "Enjoy questionable anime, obsess over waifus, discuss suspense in fiction",
+              funFact: "Loves Chainsaw Man; compares Kurumi to a Dodge Viper",
+              alternatives: "Evil Arianna, B.X."
+            }
+          );
+        }
+        
+        // Find and split Riri and Ruru
+        const ririRuruIndex = splitCharacters.findIndex(char => 
+          char.shortName === 'Riri & Ruru' || char.name === 'Riri & Ruru'
+        );
+        if (ririRuruIndex !== -1) {
+          const original = splitCharacters[ririRuruIndex];
+          splitCharacters.splice(ririRuruIndex, 1,
+            {
+              ...original,
+              shortName: 'Riri',
+              name: 'Riri the Nightcore Girl',
+              img: "Icons/Riri.png",
+              id: 52,
+              interests: "My AI characters, Nightcore music",
+              peeves: "Guitar strings breaking",
+              funFact: "She is really small (85cm); her oversized guitar summons my characters"
+            },
+            { 
+              ...original,
+              shortName: 'Ruru',
+              name: 'Ruru',
+              img: "Icons/Ruru.png",
+              id: 53,
+              tier: 5,
+              emotion: "tired",
+              interests: "My AI characters, naps",
+              peeves: "Disruptions during nap time",
+              purpose: "Adorably discuss and celebrate my AI characters",
+              funFact: "She is really small (85cm) and rarely speaks; her giant plush turtle travels to my fictional worlds",
+              themeSong: "",
+              songLink: ""
+            }
+          );
+        }
+        return splitCharacters;
+      })
+    );
+  }
+
   getDuos(): Observable<DuoPair[]> {
     // In development, try to use the local API server
     if (this.isDevelopment) {

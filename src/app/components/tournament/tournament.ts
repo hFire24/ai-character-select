@@ -26,7 +26,7 @@ export class Tournament implements OnInit {
   constructor(private characterService: CharacterService) {}
 
   ngOnInit() {
-    this.characterService.getCharacters().subscribe(characters => {
+    this.characterService.getCharactersSplitTwins().subscribe(characters => {
       this.allCharacters = characters;
       this.updateSelectableCharacters();
       this.selectedCharacter1 = null;
@@ -74,7 +74,7 @@ export class Tournament implements OnInit {
   randomizeExclusions() {
     const shuffled = [...this.selectableCharacters].sort(() => Math.random() - 0.5);
     this.selectedCharacter1 = shuffled[0];
-    this.selectedCharacter2 = shuffled[1];
+    this.selectedCharacter2 = +this.numPlayers === 64 ? null : shuffled[1];
     this.updateIncludedIds();
   }
 
@@ -82,6 +82,7 @@ export class Tournament implements OnInit {
     if (this.eliminationMethod !== 'manual') {
       return;
     }
+    const maxSelections = +this.numPlayers === 64 ? 1 : 2;
     if (this.selectedCharacter1?.id === char.id) {
       this.selectedCharacter1 = null;
     } else if (this.selectedCharacter2?.id === char.id) {
@@ -89,10 +90,13 @@ export class Tournament implements OnInit {
     } else {
       if (!this.selectedCharacter1) {
         this.selectedCharacter1 = char;
-      } else if (!this.selectedCharacter2) {
+      } else if (maxSelections === 2 && !this.selectedCharacter2) {
         this.selectedCharacter2 = char;
       } else {
         this.selectedCharacter1 = char;
+        if (maxSelections === 1) {
+          this.selectedCharacter2 = null;
+        }
       }
     }
     this.updateIncludedIds();
@@ -106,9 +110,14 @@ export class Tournament implements OnInit {
     return (this.selectedCharacter1 ? 1 : 0) + (this.selectedCharacter2 ? 1 : 0);
   }
 
+  getTotalCount(): number {
+    return +this.numPlayers === 64 ? 1 : 2;
+  }
+
   confirmEliminations() {
-    if (this.getSelectedCount() !== 2) {
-      alert('Please select exactly 2 characters to include.');
+    const expected = +this.numPlayers === 64 ? 1 : 2;
+    if (this.getSelectedCount() !== expected) {
+      alert(`Please select exactly ${expected} character${expected === 1 ? '' : 's'} to include.`);
       return;
     }
     this.showEliminationStep = false;

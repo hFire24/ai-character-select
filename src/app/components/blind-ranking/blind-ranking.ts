@@ -25,24 +25,9 @@ export class BlindRanking {
   private characterService = inject(CharacterService);
 
   constructor() {
-    this.characterService.getCharacters().subscribe((characters: Character[]) => {
-      this.allCharacters = this.separateTwins(characters);
+    this.characterService.getCharactersSplitTwins().subscribe((characters: Character[]) => {
+      this.allCharacters = characters.filter(c => c.name !== 'Future Sapphire');
     });
-  }
-
-  private separateTwins(characters: Character[]): Character[] {
-    // Split Liam & Kieran and Riri & Ruru
-    const liamKieranBase = characters.find(c => c.name === 'Liam & Kieran');
-    const ririRuruBase = characters.find(c => c.name === 'Riri & Ruru');
-    
-    const liam = { ...liamKieranBase, name: 'Liam', img: 'Icons/Liam.png', id: 44, shortName: 'Liam' } as Character;
-    const kieran = { ...liamKieranBase, name: 'Kieran', img: 'Icons/Kieran.png', id: 45, shortName: 'Kieran' } as Character;
-    const riri = { ...ririRuruBase, name: 'Riri the Nightcore Girl', img: 'Icons/Riri.png', id: 52, shortName: 'Riri' } as Character;
-    const ruru = { ...ririRuruBase, name: 'Ruru', img: 'Icons/Ruru.png', id: 53, shortName: 'Ruru' } as Character;
-
-    return characters
-      .filter(c => c.name !== 'Liam & Kieran' && c.name !== 'Riri & Ruru' && c.name !== 'Future Sapphire')
-      .concat([liam, kieran, riri, ruru]);
   }
 
   startRanking() {
