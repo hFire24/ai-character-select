@@ -7,6 +7,16 @@
     },
     {
       "id1": 0,
+      "id2": 32,
+      "name": "My Future: Bad Ending"
+    },
+    {
+      "id1": 0,
+      "id2": 34,
+      "name": "My Future: Blessed Ending"
+    },
+    {
+      "id1": 0,
       "id2": 63,
       "name": "Cap Wearers"
     },
@@ -854,7 +864,7 @@
     {
       "id1": 24,
       "id2": 25,
-      "name": "The Nelson Family"
+      "name": "The Hall Family"
     },
     {
       "id1": 24,
@@ -996,7 +1006,7 @@
     {
       "id1": 29,
       "id2": 76,
-      "name": "Pink-Haired Fighters"
+      "name": "Pink-Haired Action Girls"
     },
     {
       "id1": 30,

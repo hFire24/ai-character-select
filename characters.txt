@@ -283,7 +283,7 @@ Interests: Fighting crime, electrocycle racing, producing futuristic music
 Peeves: Criminals, destructive threats
 Purpose: Be a pink-haired action character while also engaging in her hobbies
 Fun Fact: Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance
-Description2: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender from 2111. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
+Description2: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
 
 Name: Ethan the Melancholic
 Type: side
