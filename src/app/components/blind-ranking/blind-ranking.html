@@ -16,7 +16,7 @@
           <h2>Rank this character (1-5):</h2>
           <img [src]="'assets/' + currentCharacter.img" [alt]="currentCharacter.name"
             width="128" height="128"
-            (error)="currentCharacter.img = 'Icons/Unknown.png'"/>
+            (error)="currentCharacter.img = 'Icons/extended/Unknown.png'"/>
           <p>{{ currentCharacter.name }}</p>
         }
       </div>
@@ -34,7 +34,7 @@
           @if (character) {
             <img [src]="'assets/' + character.img" [alt]="character.name"
               width="64" height="64"
-              (error)="character.img = 'Icons/Unknown.png'"/>
+              (error)="character.img = 'Icons/extended/Unknown.png'"/>
             <p>{{ character.name }}</p>
           } @else {
             <p class="empty-text">Click to place</p>

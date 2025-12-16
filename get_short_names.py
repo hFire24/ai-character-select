@@ -4,7 +4,7 @@ import sys
 
 def trim_characters_json():
   # Find characters.json file
-  characters_file = 'src/assets/characters.json'
+  characters_file = 'src/assets/data/characters.json'
   if not os.path.exists(characters_file):
     print(f"Error: {characters_file} not found")
     sys.exit(1)

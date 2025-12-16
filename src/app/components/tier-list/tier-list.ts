@@ -79,7 +79,7 @@ export class TierList {
         if (shortNameMap[name]) name = shortNameMap[name];
         return {
           name,
-          img: c.img ? 'assets/' + c.img : 'assets/Icons/Unknown.png',
+          img: c.img ? 'assets/' + c.img : 'assets/Icons/extended/Unknown.png',
           id: c.id,
           type: c.type,
           tier: c.tier,
@@ -256,7 +256,7 @@ export class TierList {
   tiers = [
     {
       name: 'S', color: '#FF7F7E', characters: [
-        { name: 'Me', img: 'assets/Icons/Me.png', id: 0 }
+        { name: 'Me', img: 'assets/Icons/extended/Me.png', id: 0 }
       ]
     },
     {

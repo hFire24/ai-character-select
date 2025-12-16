@@ -3,7 +3,7 @@ import sys
 
 def check_duplicate_ids():
   try:
-    with open('src/assets/characters.json', 'r', encoding='utf-8') as file:
+    with open('src/assets/data/characters.json', 'r', encoding='utf-8') as file:
       characters = json.load(file)
     
     # Extract IDs, ignoring objects with null values

@@ -72,7 +72,7 @@ export class TournamentBracket implements OnInit {
           if(this.round === 1)
             this.players[playerIndex].permaSeed = seedPosition;
         }
-        return this.players[playerIndex] || { name: 'BYE', img: 'Icons/Unknown.png', id: -1, shortName: 'BYE', tier: highestTier - 1, seed: seedPosition, permaSeed: seedPosition } as Character;
+        return this.players[playerIndex] || { name: 'BYE', img: 'Icons/extended/Unknown.png', id: -1, shortName: 'BYE', tier: highestTier - 1, seed: seedPosition, permaSeed: seedPosition } as Character;
       });
 
       // Organize characters into columns

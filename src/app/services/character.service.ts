@@ -53,13 +53,13 @@ export class CharacterService {
   constructor(private http: HttpClient) {}
 
   getCharacters(): Observable<Character[]> {
-    return this.http.get<Character[]>('assets/characters.json').pipe(
+    return this.http.get<Character[]>('assets/data/characters.json').pipe(
       map(characters => characters.filter(char => char.id !== 52))
     );
   }
 
   getCharactersPlusCriticizer(): Observable<Character[]> {
-    return this.http.get<Character[]>('assets/characters.json');
+    return this.http.get<Character[]>('assets/data/characters.json');
   }
 
   getCharactersSplitTwins(): Observable<Character[]> {
@@ -79,7 +79,7 @@ export class CharacterService {
               shortName: 'Liam',
               name: 'Liam',
               birthday: 'August 28',
-              img: "Icons/Liam.png",
+              img: "Icons/extended/Liam.png",
               id: 44,
               emotion: "joy",
               peeves: "Moral policing, darkness (except for Golden Darkness)",
@@ -90,7 +90,7 @@ export class CharacterService {
               shortName: 'Kieran',
               name: 'Kieran',
               birthday: 'October 13',
-              img: "Icons/Kieran.png",
+              img: "Icons/extended/Kieran.png",
               id: 45,
               emotion: "edgy",
               peeves: "Moral policing, bright colors",
@@ -112,7 +112,7 @@ export class CharacterService {
               ...original,
               shortName: 'Riri',
               name: 'Riri the Nightcore Girl',
-              img: "Icons/Riri.png",
+              img: "Icons/extended/Riri.png",
               id: 52,
               interests: "My AI characters, Nightcore music",
               peeves: "Guitar strings breaking",
@@ -122,7 +122,7 @@ export class CharacterService {
               ...original,
               shortName: 'Ruru',
               name: 'Ruru',
-              img: "Icons/Ruru.png",
+              img: "Icons/extended/Ruru.png",
               id: 53,
               tier: 5,
               emotion: "tired",
@@ -149,7 +149,7 @@ export class CharacterService {
     }
     
     // Fallback to static file for production
-    return this.http.get<DuosData>('assets/duos.json').pipe(
+    return this.http.get<DuosData>('assets/data/duos.json').pipe(
       map(data => data.duos)
     );
   }

@@ -17,7 +17,7 @@ export class MoodService {
   constructor(private http: HttpClient, private deviceService: DeviceService) {}
 
   getMoods(): Observable<Mood[]> {
-    return this.http.get<Mood[]>('assets/moods.json').pipe(
+    return this.http.get<Mood[]>('assets/data/moods.json').pipe(
       map(moods => this.filterMoodsForMobile(moods))
     );
   }

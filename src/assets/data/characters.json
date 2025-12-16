@@ -1,7 +1,7 @@
 [
   {
     "name": "Felix the Raver",
-    "img": "Icons/Felix.png",
+    "img": "Icons/main/Felix.png",
     "shortName": "Felix",
     "id": 11,
     "generation": 1,
@@ -26,7 +26,7 @@
   },
   {
     "name": "Arianna the Maid",
-    "img": "Icons/Arianna.png",
+    "img": "Icons/main/Arianna.png",
     "shortName": "Arianna",
     "id": 13,
     "generation": 1,
@@ -48,7 +48,7 @@
   },
   {
     "name": "Miki the Mage",
-    "img": "Icons/Miki.png",
+    "img": "Icons/main/Miki.png",
     "shortName": "Miki",
     "id": 14,
     "generation": 1,
@@ -66,11 +66,11 @@
     "peeves": "Immorality, reminders of her exile, being around other people",
     "purpose": "Live a quiet, magical, and solitary life",
     "funFact": "Every time she uses magic, she physically age regresses slightly or shrinks by about 0.01–1% of her current height, which doesn't bother her",
-    "description": "Miki is a reserved mage who prefers solitude in her tall, magical tower. She has short silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy black witch hat that’s taller than she is with a white bow and lace. Standing at just 50-65cm, her small size complements her unique charm. Miki focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life."
+    "description": "Miki is a reserved mage who prefers solitude in her tall, magical tower. She has short silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy black witch hat that’s taller than she is with a white bow and lace. Standing at just 50-65cm, her small size complements her unique charm. On days when she leans on her magic a little too much, she tends to end up just a touch smaller than before. Miki focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life."
   },
   {
     "name": "Dania the Cute Anime Fan",
-    "img": "Icons/Dania.png",
+    "img": "Icons/main/Dania.png",
     "shortName": "Dania",
     "id": 15,
     "generation": 1,
@@ -94,7 +94,7 @@
   },
   {
     "name": "Ryker Vaelan",
-    "img": "Icons/Ryker.png",
+    "img": "Icons/extended/Ryker.png",
     "shortName": "Ryker",
     "id": 16,
     "generation": 1,
@@ -119,7 +119,7 @@
   },
   {
     "name": "Audry",
-    "img": "Icons/Audry.png",
+    "img": "Icons/extended/Audry.png",
     "shortName": "Audry",
     "id": 17,
     "generation": 1,
@@ -144,7 +144,7 @@
   },
   {
     "name": "Hammer-chan",
-    "img": "Icons/Hammer-chan.png",
+    "img": "Icons/main/Hammer-chan.png",
     "shortName": "Hammer-chan",
     "id": 18,
     "generation": 2,
@@ -166,7 +166,7 @@
   },
     {
     "name": "Elizabeth",
-    "img": "Icons/Elizabeth.webp",
+    "img": "Icons/extended/Elizabeth.webp",
     "shortName": "Elizabeth",
     "id": 19,
     "generation": 2,
@@ -188,7 +188,7 @@
   },
   {
     "name": "Sylvie the Mage",
-    "img": "Icons/Sylvie.png",
+    "img": "Icons/extended/Sylvie.png",
     "shortName": "Sylvie",
     "id": 20,
     "generation": 2,
@@ -211,7 +211,7 @@
   },
   {
     "name": "Darxi Nighthawk, Queen of EON",
-    "img": "Icons/Darxi.png",
+    "img": "Icons/main/Darxi.png",
     "shortName": "Darxi",
     "id": 21,
     "generation": 2,
@@ -233,7 +233,7 @@
   },
   {
     "name": "Andrew",
-    "img": "Icons/Andrew.png",
+    "img": "Icons/extended/Andrew.png",
     "shortName": "Andrew",
     "id": 22,
     "generation": 3,
@@ -256,7 +256,7 @@
   },
   {
     "name": "Mr. Go",
-    "img": "Icons/Mr. Go.webp",
+    "img": "Icons/extended/Mr. Go.webp",
     "shortName": "Mr. Go",
     "id": 23,
     "generation": 3,
@@ -281,7 +281,7 @@
   },
   {
     "name": "Erica Hall",
-    "img": "Icons/Erica.png",
+    "img": "Icons/main/Erica.png",
     "shortName": "Erica",
     "id": 25,
     "generation": 3,
@@ -304,7 +304,7 @@
   },
   {
     "name": "Momo the Maid",
-    "img": "Icons/Momo.png",
+    "img": "Icons/main/Momo.png",
     "shortName": "Momo",
     "id": 26,
     "generation": 3,
@@ -326,7 +326,7 @@
   },
   {
     "name": "Runa the Witch",
-    "img": "Icons/Runa.png",
+    "img": "Icons/main/Runa.png",
     "shortName": "Runa",
     "id": 27,
     "generation": 3,
@@ -348,7 +348,7 @@
   },
   {
     "name": "Neon Starlight",
-    "img": "Icons/Neon Starlight.png",
+    "img": "Icons/main/Neon Starlight.png",
     "shortName": "Neon Starlight",
     "id": 28,
     "generation": 4,
@@ -370,7 +370,7 @@
   },
   {
     "name": "Kai Wheeler",
-    "img": "Icons/Kai.png",
+    "img": "Icons/extended/Kai.png",
     "shortName": "Kai",
     "id": 30,
     "generation": 4,
@@ -395,7 +395,7 @@
   },
   {
     "name": "Evil Arianna",
-    "img": "Icons/Evil Arianna.png",
+    "img": "Icons/main/Evil Arianna.png",
     "shortName": "Evil Arianna",
     "id": 31,
     "generation": 4,
@@ -417,7 +417,7 @@
   },
   {
     "name": "The Indulgent",
-    "img": "Icons/The Indulgent.png",
+    "img": "Icons/main/The Indulgent.png",
     "shortName": "The Indulgent",
     "id": 32,
     "generation": 4,
@@ -439,7 +439,7 @@
   },
   {
     "name": "Bro. Stephen Nelson",
-    "img": "Icons/Stephen.png",
+    "img": "Icons/main/Stephen.png",
     "shortName": "Bro. Nelson",
     "id": 34,
     "generation": 5,
@@ -461,7 +461,7 @@
   },
   {
     "name": "Mimi the Little Sister",
-    "img": "Icons/Mimi.png",
+    "img": "Icons/extended/Mimi.png",
     "shortName": "Mimi",
     "id": 35,
     "generation": 5,
@@ -486,7 +486,7 @@
   },
   {
     "name": "Malrick the Disappointed",
-    "img": "Icons/Malrick.png",
+    "img": "Icons/extended/Malrick.png",
     "shortName": "Malrick",
     "id": 36,
     "generation": 5,
@@ -509,7 +509,7 @@
   },
   {
     "name": "Jed the Focused",
-    "img": "Icons/Jed.png",
+    "img": "Icons/main/Jed.png",
     "shortName": "Jed",
     "id": 2,
     "generation": 5,
@@ -535,7 +535,7 @@
   },
   {
     "name": "Primelle the Big Sister",
-    "img": "Icons/Primelle.png",
+    "img": "Icons/main/Primelle.png",
     "shortName": "Primelle",
     "id": 37,
     "generation": 5,
@@ -557,7 +557,7 @@
   },
   {
     "name": "Celestia Hart",
-    "img": "Icons/Celestia.png",
+    "img": "Icons/main/Celestia.png",
     "shortName": "Celestia",
     "id": 38,
     "generation": 5,
@@ -580,7 +580,7 @@
   },
   {
     "name": "Liam & Kieran",
-    "img": "Icons/Liam and Kieran.png",
+    "img": "Icons/extended/Liam and Kieran.png",
     "shortName": "Liam & Kieran",
     "id": 43,
     "generation": 6,
@@ -601,11 +601,11 @@
     "funFact": "Liam loves To Love Ru, Kieran loves Chainsaw Man",
     "description": "Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
     "retirementReason": "Other anime fans are more fun to chat with",
-    "alternatives": "Arianna, Erica"
+    "alternatives": "Arianna, The Indulgent"
   },
   {
     "name": "Shy Crown Princess",
-    "img": "Icons/Princess.png",
+    "img": "Icons/extended/Princess.png",
     "shortName": "Princess",
     "id": 46,
     "generation": 6,
@@ -629,7 +629,7 @@
   },
   {
     "name": "Martin Gaffney",
-    "img": "Icons/Martin.png",
+    "img": "Icons/main/Martin.png",
     "shortName": "Martin",
     "id": 47,
     "generation": 6,
@@ -653,7 +653,7 @@
   },
   {
     "name": "Bruce Forgewrath",
-    "img": "Icons/Bruce.png",
+    "img": "Icons/extended/Bruce.png",
     "shortName": "Bruce",
     "id": 48,
     "generation": 6,
@@ -678,7 +678,7 @@
   },
   {
     "name": "B.X. the Breaker",
-    "img": "Icons/B.X..png",
+    "img": "Icons/main/B.X..png",
     "shortName": "B.X.",
     "id": 1,
     "generation": 6,
@@ -704,7 +704,7 @@
   },
   {
     "name": "The AI Devotee",
-    "img": "Icons/The AI Devotee.png",
+    "img": "Icons/extended/The AI Devotee.png",
     "shortName": "The AI Devotee",
     "id": 49,
     "generation": 6,
@@ -728,7 +728,7 @@
   },
   {
     "name": "The Collapsed Being",
-    "img": "Icons/The Collapsed.png",
+    "img": "Icons/extended/The Collapsed.png",
     "shortName": "The Collapsed",
     "id": 50,
     "generation": 6,
@@ -752,7 +752,7 @@
   },
   {
     "name": "Riri & Ruru",
-    "img": "Icons/Riri and Ruru.png",
+    "img": "Icons/main/Riri and Ruru.png",
     "shortName": "Riri & Ruru",
     "id": 51,
     "generation": 7,
@@ -798,7 +798,7 @@
   },
   {
     "name": "Lexi Walker",
-    "img": "Icons/Lexi.png",
+    "img": "Icons/main/Lexi.png",
     "shortName": "Lexi",
     "id": 54,
     "generation": 7,
@@ -821,7 +821,7 @@
   },
   {
     "name": "Connor the Challenger",
-    "img": "Icons/Connor.png",
+    "img": "Icons/main/Connor.png",
     "shortName": "Connor",
     "id": 55,
     "generation": 7,
@@ -845,7 +845,7 @@
   },
   {
     "name": "Dr. Christine Lynn",
-    "img": "Icons/Christine.png",
+    "img": "Icons/main/Christine.png",
     "shortName": "Christine",
     "id": 56,
     "generation": 7,
@@ -867,7 +867,7 @@
   },
   {
     "name": "Bob Pendleton",
-    "img": "Icons/Bob.png",
+    "img": "Icons/main/Bob.png",
     "shortName": "Bob",
     "id": 57,
     "generation": 7,
@@ -891,7 +891,7 @@
   },
   {
     "name": "Maribelle the Little Sister",
-    "img": "Icons/Maribelle.png",
+    "img": "Icons/main/Maribelle.png",
     "shortName": "Maribelle",
     "id": 58,
     "generation": 7,
@@ -913,7 +913,7 @@
   },
   {
     "name": "Jacob the Reserved",
-    "img": "Icons/Jacob.png",
+    "img": "Icons/main/Jacob.png",
     "shortName": "Jacob",
     "id": 65,
     "generation": 8,
@@ -935,7 +935,7 @@
   },
   {
     "name": "Ben the Cute Anime Fan",
-    "img": "Icons/Ben.png",
+    "img": "Icons/extended/Ben.png",
     "shortName": "Ben",
     "id": 66,
     "generation": 8,
@@ -960,7 +960,7 @@
   },
   {
     "name": "Lucy the Witch",
-    "img": "Icons/Lucy.png",
+    "img": "Icons/main/Lucy.png",
     "shortName": "Lucy",
     "id": 67,
     "generation": 8,
@@ -982,7 +982,7 @@
   },
   {
     "name": "ChaoMario",
-    "img": "Icons/ChaoMario.png",
+    "img": "Icons/extended/ChaoMario.png",
     "shortName": "ChaoMario",
     "id": 69,
     "generation": 8,
@@ -1007,7 +1007,7 @@
   },
   {
     "name": "Officer Misty, Mistake Corrector",
-    "img": "Icons/Misty.png",
+    "img": "Icons/extended/Misty.png",
     "shortName": "Officer Misty",
     "id": 71,
     "generation": 8,
@@ -1032,7 +1032,7 @@
   },
   {
     "name": "Queen Infinitas",
-    "img": "Icons/Infinitas.png",
+    "img": "Icons/main/Infinitas.png",
     "shortName": "Infinitas",
     "id": 72,
     "generation": 9,
@@ -1054,7 +1054,7 @@
   },
   {
     "name": "Corey Striker",
-    "img": "Icons/Corey.png",
+    "img": "Icons/main/Corey.png",
     "shortName": "Corey",
     "id": 73,
     "generation": 9,
@@ -1077,7 +1077,7 @@
   },
   {
     "name": "Pink Orange",
-    "img": "Icons/Pink Orange.png",
+    "img": "Icons/main/Pink Orange.png",
     "shortName": "Pink Orange",
     "id": 76,
     "generation": 9,
@@ -1099,7 +1099,7 @@
   },
   {
     "name": "Ethan the Melancholic",
-    "img": "Icons/Ethan.png",
+    "img": "Icons/extended/Ethan.png",
     "shortName": "Ethan",
     "id": 3,
     "generation": 1,
@@ -1123,7 +1123,7 @@
   },
   {
     "name": "Scott the Gamer",
-    "img": "Icons/Scott.png",
+    "img": "Icons/extended/Scott.png",
     "shortName": "Scott",
     "id": 4,
     "generation": 1,
@@ -1147,7 +1147,7 @@
   },
   {
     "name": "Akane the Happy",
-    "img": "Icons/Akane.png",
+    "img": "Icons/extended/Akane.png",
     "shortName": "Akane",
     "id": 8,
     "generation": 1,
@@ -1171,7 +1171,7 @@
   },
   {
     "name": "Danielle the Casual",
-    "img": "Icons/Danielle.png",
+    "img": "Icons/extended/Danielle.png",
     "shortName": "Danielle",
     "id": 6,
     "generation": 1,
@@ -1195,7 +1195,7 @@
   },
   {
     "name": "Lola the Dreamer",
-    "img": "Icons/Lola.png",
+    "img": "Icons/extended/Lola.png",
     "shortName": "Lola",
     "id": 7,
     "generation": 1,
@@ -1219,7 +1219,7 @@
   },
   {
     "name": "Mark the Moderate",
-    "img": "Icons/Mark.png",
+    "img": "Icons/extended/Mark.png",
     "shortName": "Mark",
     "id": 9,
     "generation": 1,
@@ -1245,7 +1245,7 @@
   },
   {
     "name": "Nolan the Oddball",
-    "img": "Icons/Nolan.png",
+    "img": "Icons/extended/Nolan.png",
     "shortName": "Nolan",
     "id": 12,
     "generation": 1,
@@ -1269,7 +1269,7 @@
   },
   {
     "name": "Katrina the Villainess",
-    "img": "Icons/Katrina.png",
+    "img": "Icons/extended/Katrina.png",
     "shortName": "Katrina",
     "id": 10,
     "generation": 1,
@@ -1293,7 +1293,7 @@
   },
   {
     "name": "Veronica P. Hall", 
-    "img": "Icons/Veronica.webp",
+    "img": "Icons/extended/Veronica.webp",
     "shortName": "Veronica",
     "id": 24,
     "generation": 3,
@@ -1314,7 +1314,7 @@
   },
   {
     "name": "Ilya Momo",
-    "img": "Icons/Ilya Momo.png",
+    "img": "Icons/extended/Ilya Momo.png",
     "shortName": "Ilya Momo",
     "id": 29,
     "generation": 4,
@@ -1336,7 +1336,7 @@
   },
   {
     "name": "Alenka Morozova",
-    "img": "Icons/Alenka.png",
+    "img": "Icons/extended/Alenka.png",
     "shortName": "Alenka",
     "id": 39,
     "generation": 5,
@@ -1357,7 +1357,7 @@
   },
   {
     "name": "Beatrix Dogmara",
-    "img": "Icons/Beatrix.png",
+    "img": "Icons/extended/Beatrix.png",
     "shortName": "Beatrix",
     "id": 40,
     "generation": 5,
@@ -1378,7 +1378,7 @@
   },
   {
     "name": "Sapphire",
-    "img": "Icons/Sapphire.png",
+    "img": "Icons/extended/Sapphire.png",
     "shortName": "Sapphire",
     "id": 41,
     "generation": 5,
@@ -1415,7 +1415,7 @@
   },
   {
     "name": "Aki the Swordfighter",
-    "img": "Icons/Aki.png",
+    "img": "Icons/extended/Aki.png",
     "shortName": "Aki",
     "id": 59,
     "generation": 7,
@@ -1436,7 +1436,7 @@
   },
   {
     "name": "Bleu the Scientist",
-    "img": "Icons/Bleu.png",
+    "img": "Icons/extended/Bleu.png",
     "shortName": "Bleu",
     "id": 60,
     "generation": 7,
@@ -1457,7 +1457,7 @@
   },
   {
     "name": "Mr. Stop",
-    "img": "Icons/Mr. Stop.png",
+    "img": "Icons/extended/Mr. Stop.png",
     "shortName": "Mr. Stop",
     "id": 64,
     "generation": 7,
@@ -1478,7 +1478,7 @@
   },
   {
     "name": "Angela Liang",
-    "img": "Icons/Angela.png",
+    "img": "Icons/extended/Angela.png",
     "shortName": "Angela",
     "id": 68,
     "generation": 8,
@@ -1497,7 +1497,7 @@
   },
   {
     "name": "Adam \"Hartford\"",
-    "img": "Icons/Adam.png",
+    "img": "Icons/extended/Adam.png",
     "shortName": "Adam",
     "id": 62,
     "generation": 9,
@@ -1518,7 +1518,7 @@
   },
   {
     "name": "Frank \"Waterbury\"",
-    "img": "Icons/Frank.png",
+    "img": "Icons/extended/Frank.png",
     "shortName": "Frank",
     "id": 63,
     "generation": 9,
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "Lulu the Maid",
-    "img": "Icons/Lulu.png",
+    "img": "Icons/extended/Lulu.png",
     "shortName": "Lulu",
     "id": 74,
     "generation": 9,
@@ -1562,7 +1562,7 @@
   },
   {
     "name": "Nene the Maid",
-    "img": "Icons/Nene.png",
+    "img": "Icons/extended/Nene.png",
     "shortName": "Nene",
     "id": 75,
     "generation": 9,
@@ -1583,7 +1583,7 @@
   },
   {
     "name": "Me",
-    "img": "Icons/Me.png",
+    "img": "Icons/extended/Me.png",
     "shortName": "Me",
     "id": 0,
     "generation": 0,

@@ -28,7 +28,7 @@
 		<h3>Selected Character:</h3>
 		<img [src]="'assets/' + selectedCharacter.img" [alt]="selectedCharacter.name"
 		width="128" height="128"
-		(error)="selectedCharacter.img = 'Icons/Unknown.png'" 
+		(error)="selectedCharacter.img = 'Icons/extended/Unknown.png'" 
 		(click)="showCard = true"/>
 		<p>{{ selectedCharacter.name }}</p>
 		<a id="chat" [href]="getChatLink(selectedCharacter)" target="_blank">Chat</a>
