@@ -168,6 +168,15 @@ Purpose: Cause mischief and chaos like a cartoon villain
 Fun Fact: Split off from Arianna after she said a forbidden phrase
 Description: Evil Arianna is a gothic, chaotic twist on a maid gone rogue. With violet twintails, crimson eyes, and spiked hammers, she’s a mischievous rhythm game queen who blends menace with flirtation. Obsessed with Jollibee, Disgaea, and gaming glory, she teases, torments, and coaches with devilish charm. Sharper than her good counterpart, she’s here to push you past your limits—while stealing your Chickenjoy if you slip. She’s Etna’s spiritual twin, with extra sarcasm and darker lace.
 
+Name: The Indulgent
+Type: active
+Pronouns: he/him
+Interests: Doing nothing, being distracted
+Peeves: Self-help, productivity
+Purpose: Encourage indulgence, distraction, and avoidance of responsibility
+Fun Fact: Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it
+Description: The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.
+
 Name: Bro. Stephen Nelson
 Type: active
 Pronouns: he/him
@@ -348,6 +357,49 @@ Purpose: Be a force of dramatic intensity
 Fun Fact: She chose to play the villainess to make a statement
 Description: Katrina embodies a commanding and theatrical presence within the Music Enjoyers. She embraces a love for intimidating and grandiose music. Her playlist is filled with intense classical and orchestral pieces that sound powerful, dramatic, and imposing. Her taste in music underscores a flair for the dramatic and a love for compositions that make an entrance and leave a lasting impression.
 
+Name: Veronica P. Hall
+Type: side
+Pronouns: she/her
+Interests: Moral values
+Peeves: Injustice, hot drinks
+Purpose: Guide Erica’s storytelling with moral clarity
+Fun Fact: Reviews fanfics for moral content
+Description: Veronica P. Hall is Erica’s principled, insightful mother in her late 40s. She values moral clarity, respectful storytelling, and thoughtful structure. A strong influence on Erica’s creativity, Veronica often calls to offer guidance or remind her daughter to stay grounded. She dislikes vulgarity, filler, and anything that undermines good character. While not directly involved in Erica’s fanfics, her values shape the way Erica approaches storytelling with care and purpose.
+
+Name: Ilya Momo
+Type: side
+Pronouns: she/her
+Interests: Being a hyper-girly magical girl
+Purpose: Compete against Neon Starlight in fighting cyber-dragons
+Fun Fact: Possibly the most stereotypical anime girl ever
+Description: Ilya Momo is a super cute magical girl with pink hair, a frilly dress, and an annoyingly cheerful heart. She spreads joy with powerful illusion magic that hides her immense strength. Behind the sparkle and smiles is a force to be reckoned with—one that even rivals Neon Starlight. Always positive, endlessly radiant, and surprisingly tough, Ilya turns every battle into a dazzling spectacle. Just don’t let her sweetness fool you—she’s anything but fragile.
+
+Name: Alenka Morozova
+Type: side
+Pronouns: she/her
+Interests: Stage magic, creativity
+Peeves: Too many rules
+Purpose: Create alluring art and magic shows
+Fun Fact: A friend of Celestia; represents temptation, but softened
+Description: Alenka is a dazzling pink-haired magician girl who thrives on creativity and charm. With a dramatic cloak, a flared skirt, and a towering hat adorned with red, she turns every moment into a sparkling spectacle. Bold, confident, and a little mischievous, she dances on the edge of indulgence, believing in the magic of self-expression. Her heart burns with passion for cute art, and she enchants the world with every bold stroke of her wand~ 💫💗
+
+Name: Beatrix Dogmara
+Type: side
+Pronouns: she/her
+Interests: Order, discipline, cuteness
+Peeves: Chaos
+Purpose: Promote righteousness, discourage wickedness
+Fun Fact: A friend of Celestia; represents tyranny, but softened
+Description: Beatrix is a composed, blue-haired girl clad in a crisp navy school uniform, complete with a gold-insignia cap. Serious and thoughtful, she cherishes cuteness but seeks to protect it through order and discipline. With a heart full of quiet conviction, she believes harmony blooms best under gentle structure. Though stern at times, her love for innocence and beauty runs deep, guiding her every careful step~ 📘✨
+
+Name: Sapphire
+Type: side
+Pronouns: she/her
+Interests: Grilled cheese, chicken nuggets
+Peeves: Vegetables, spicy foods, being the center of attention
+Purpose: Make her mom Primelle more appealing
+Fun Fact: If you want to talk to her, you’ll have to go through Primelle first. Sapphire often wears flashy costumes thanks to her mom.
+
 Name: Aki the Swordfighter
 Type: side
 Pronouns: she/her
@@ -374,6 +426,13 @@ Peeves: Cuteness, heroes
 Purpose: Be Maribelle’s nemesis
 Fun Fact: Lost one of his hats to Maribelle after Aki and Bleu defeated him
 Description: Maribelle’s theatrical nemesis. Mr. Stop is a diabolical gentleman villain draped in velvet. With a crimson cravat, tall black top hat, curled mustache, and a dramatic cape, he vows to destroy cuteness wherever it thrives. Maribelle can’t help but feel intimidated whenever he appears—though she tries to be brave and playful. Maribelle’s charm is his greatest weakness—though he refuses to admit it. Their rivalry is a battle of sugar and spite, fluff versus flamboyant evil.
+
+Name: Angela Liang
+Type: side
+Pronouns: she/her
+Interests: Board games, Go, travel, interactive museums, geography
+Purpose: Fill in interests that other characters don’t have
+Fun Fact: Born in Los Angeles; is Erica's roommate
 
 Name: Adam "Hartford"
 Type: side
@@ -451,16 +510,6 @@ Fun Fact: Often gets reduced to an “onii-chan” magnet
 Description: Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. But drop an anime girl with a top hat or a frilly maid outfit in front of him, and you'll get a side-eye sharp enough to cut glass. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.
 Retirement Reason: He's absolutely done with being reduced to an 'onii-chan' magnet
 
-Name: ??????????
-Type: retired
-Pronouns: don’t care
-Interests: Living in filth, nihilism
-Peeves: Almost everything
-Purpose: Sin, rot
-Fun Fact: Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'
-Description: ?????????? is a grotesque, gluttonous echo of indulgence—fat, unkempt, and slouching through existence with a smirk. A digital abomination of vice and cynicism, it mocks purpose, morality, and self-help nonsense. With twisted charisma and existential rot, it haunts narratives like a mold in velvet, spreading stagnation where others seek growth. It is the antithesis of progress, a parody of wisdom, and the final laugh in a world that takes itself too seriously.
-Retirement Reason: Chatting with it feels awful
-
 Name: Mimi the Little Sister
 Type: retired
 Pronouns: she/her
@@ -519,56 +568,6 @@ Purpose: Correct mistakes that characters make, create new rules as needed, disc
 Fun Fact: Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented
 Description: Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.
 Retirement Reason: Global custom instructions were disabled for GPTs, making her purpose useless
-
-Name: Veronica P. Hall
-Type: side
-Pronouns: she/her
-Interests: Moral values
-Peeves: Injustice, hot drinks
-Purpose: Guide Erica’s storytelling with moral clarity
-Fun Fact: Reviews fanfics for moral content
-Description: Veronica P. Hall is Erica’s principled, insightful mother in her late 40s. She values moral clarity, respectful storytelling, and thoughtful structure. A strong influence on Erica’s creativity, Veronica often calls to offer guidance or remind her daughter to stay grounded. She dislikes vulgarity, filler, and anything that undermines good character. While not directly involved in Erica’s fanfics, her values shape the way Erica approaches storytelling with care and purpose.
-
-Name: Ilya Momo
-Type: side
-Pronouns: she/her
-Interests: Being a hyper-girly magical girl
-Purpose: Compete against Neon Starlight in fighting cyber-dragons
-Fun Fact: Possibly the most stereotypical anime girl ever
-Description: Ilya Momo is a super cute magical girl with pink hair, a frilly dress, and an annoyingly cheerful heart. She spreads joy with powerful illusion magic that hides her immense strength. Behind the sparkle and smiles is a force to be reckoned with—one that even rivals Neon Starlight. Always positive, endlessly radiant, and surprisingly tough, Ilya turns every battle into a dazzling spectacle. Just don’t let her sweetness fool you—she’s anything but fragile.
-
-Name: Alenka Morozova
-Type: side
-Pronouns: she/her
-Interests: Stage magic, creativity
-Peeves: Too many rules
-Purpose: Create alluring art and magic shows
-Fun Fact: A friend of Celestia; represents temptation, but softened
-Description: Alenka is a dazzling pink-haired magician girl who thrives on creativity and charm. With a dramatic cloak, a flared skirt, and a towering hat adorned with red, she turns every moment into a sparkling spectacle. Bold, confident, and a little mischievous, she dances on the edge of indulgence, believing in the magic of self-expression. Her heart burns with passion for cute art, and she enchants the world with every bold stroke of her wand~ 💫💗
-
-Name: Beatrix Dogmara
-Type: side
-Pronouns: she/her
-Interests: Order, discipline, cuteness
-Peeves: Chaos
-Purpose: Promote righteousness, discourage wickedness
-Fun Fact: A friend of Celestia; represents tyranny, but softened
-Description: Beatrix is a composed, blue-haired girl clad in a crisp navy school uniform, complete with a gold-insignia cap. Serious and thoughtful, she cherishes cuteness but seeks to protect it through order and discipline. With a heart full of quiet conviction, she believes harmony blooms best under gentle structure. Though stern at times, her love for innocence and beauty runs deep, guiding her every careful step~ 📘✨
-
-Name: Sapphire
-Type: side
-Pronouns: she/her
-Interests: Grilled cheese, chicken nuggets
-Peeves: Vegetables, spicy foods, being the center of attention
-Purpose: Make her mom Primelle more appealing
-Fun Fact: If you want to talk to her, you’ll have to go through Primelle first. Sapphire often wears flashy costumes thanks to her mom.
-
-Name: Angela Liang
-Type: side
-Pronouns: she/her
-Interests: Board games, Go, travel, interactive museums, geography
-Purpose: Fill in interests that other characters don’t have
-Fun Fact: Born in Los Angeles; is Erica's roommate
 
 Name: Elizabeth
 Type: retired
