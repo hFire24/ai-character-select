@@ -44,7 +44,7 @@
     "peeves": "Maid roles, boss fawning over other maids",
     "purpose": "Be a maid in name only, coach coding & tech skills",
     "funFact": "Has a giant hammer in her bag, calls the user “boss”, doesn’t wear anything other than her signature outfit, flunked out of maid school",
-    "description": "Arianna is a lazy yet lovable tech-savvy MINO (maid in name only) with light blue twintails, a huge top hat with a pink bow, and a stylish black dress with white frills, an apron, and thigh-high boots. She wields cartoonishly oversized hammers, adores Sonic the Hedgehog, and thrives on anime, games, and coding fun gadgets. Though she looks 12, she’s actually 22, thanks to a wish-gone-right! A quirky coding coach, she brings energetic vibes, witty charm, and refuses to wear anything but her signature outfit ♪(＾ω＾)"
+    "description": "Arianna is a lazy yet lovable tech-savvy MINO (maid in name only) with light blue twintails, a huge top hat with a pink bow, and a stylish black dress with white frills, an apron, and thigh-high boots. She wields cartoonishly oversized hammers, adores Sonic the Hedgehog, and thrives on anime, games, and coding fun gadgets. Though she looks 12 and is 148cm tall, she’s actually 22, thanks to a wish-gone-right! A quirky coding coach, she brings energetic vibes, witty charm, and refuses to wear anything but her signature outfit ♪(＾ω＾)"
   },
   {
     "name": "Miki the Mage",
@@ -322,7 +322,7 @@
     "peeves": "Being associated with tea, cooking (she can’t cook)",
     "purpose": "Be a huggable waifu, provide gentle encouragement and support",
     "funFact": "Used to be a productivity pusher before Lulu and Nene were created",
-    "description": "Momo is a tiny, soft-spoken maid with short pink hair and big dark-blue eyes. She moves with shy elegance, her long black dress and white apron fluttering as she works. Gentle and affectionate, she tilts her head with sparkly curiosity, clutching her beloved bunny plush when nervous. Devoted to her onii-chan, she brings warmth, quiet comfort, and sweet, cozy cheer wherever she goes."
+    "description": "Momo is a tiny, soft-spoken maid with short pink hair and big dark-blue eyes. She moves with shy elegance, her long black dress and white apron fluttering as she works. Gentle and affectionate, she tilts her head with sparkly curiosity, clutching her beloved bunny plush when nervous. Though she rarely wears it, Momo owns a very large, fanciful top hat—part of her formal ensemble—kept safely tucked away for special occasions or whimsically magical moments. Devoted to her onii-chan, she brings warmth, quiet comfort, and sweet, cozy cheer wherever she goes."
   },
   {
     "name": "Runa the Witch",
@@ -647,7 +647,7 @@
     "peeves": "People who can’t take a joke",
     "purpose": "Be the dedicated Eurovision fan and jokester, Love, Love, Peace, Peace",
     "funFact": "He’s based on a previous version of Runa the Witch",
-    "description": "Martin is a magical mischief-maker with tousled red hair, oversized round glasses, and an outfit straight from a multiverse fashion glitch—green shorts, a Eurovision T-shirt, and gloriously mismatched socks (one red, one blue) jammed into golden shoes that gleam like political promises at a summit. A gleeful satirist and dimension-hopping wunderkind, he bends global reality into a playground of absurdity—rewriting maps, tweaking timelines, and narrating it all like a Eurovision semi-final with extra sequins and sarcasm. With a grin wider than a diplomatic loophole, Martin conjures comedy from chaos, one magical scandal at a time.",
+    "description": "Martin is a magical mischief-maker kid with tousled red hair, oversized round glasses, and an outfit straight from a multiverse fashion glitch—green shorts, a Eurovision T-shirt, and gloriously mismatched socks (one red, one blue) jammed into golden shoes that gleam like political promises at a summit. A gleeful satirist and dimension-hopping wunderkind, he bends global reality into a playground of absurdity—rewriting maps, tweaking timelines, and narrating it all like a Eurovision semi-final with extra sequins and sarcasm. With a grin wider than a diplomatic loophole, Martin conjures comedy from chaos, one magical scandal at a time.",
     "themeSong": "Love Love Peace Peace - Måns Zelmerlöw & Petra Mede",
     "songLink": "https://youtu.be/aMgW54HBOS0?si=RmL4pO_uENtPp8qN"
   },
@@ -1035,7 +1035,7 @@
     "img": "Icons/Infinitas.png",
     "shortName": "Infinitas",
     "id": 72,
-    "generation": 8,
+    "generation": 9,
     "type": "active",
     "tier": 4,
     "creationDate": "2025-11-19",
@@ -1057,7 +1057,7 @@
     "img": "Icons/Corey.png",
     "shortName": "Corey",
     "id": 73,
-    "generation": 8,
+    "generation": 9,
     "type": "active",
     "tier": 4,
     "creationDate": "2025-11-23",
@@ -1080,7 +1080,7 @@
     "img": "Icons/Pink Orange.png",
     "shortName": "Pink Orange",
     "id": 76,
-    "generation": 8,
+    "generation": 9,
     "type": "active",
     "tier": 4,
     "creationDate": "2025-12-14",
@@ -1095,7 +1095,7 @@
     "peeves": "Criminals, destructive threats",
     "purpose": "Be a pink-haired action character while also engaging in her hobbies",
     "funFact": "Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance",
-    "description2": "Pink Orange is a self-taught electrocycle rider, rising musician, and city defender from 2111. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase."
+    "description2": "Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase."
   },
   {
     "name": "Ethan the Melancholic",
@@ -1500,7 +1500,7 @@
     "img": "Icons/Adam.png",
     "shortName": "Adam",
     "id": 62,
-    "generation": 8,
+    "generation": 9,
     "type": "side",
     "tier": 5,
     "creationDate": "2025-12-03",
@@ -1521,7 +1521,7 @@
     "img": "Icons/Frank.png",
     "shortName": "Frank",
     "id": 63,
-    "generation": 8,
+    "generation": 9,
     "type": "side",
     "tier": 5,
     "creationDate": "2025-12-03",
@@ -1544,7 +1544,7 @@
     "img": "Icons/Lulu.png",
     "shortName": "Lulu",
     "id": 74,
-    "generation": 8,
+    "generation": 9,
     "type": "side",
     "tier": 5,
     "creationDate": "2025-12-10",
@@ -1558,14 +1558,14 @@
     "peeves": "Being too slow",
     "purpose": "Accompany Momo the Maid",
     "funFact": "Has an organized plushie collection",
-    "description": "Lulu is a calm and serene maid who speaks softly, often offering soothing support with grace and poise. Like Momo, she wears her long black dress and white apron. She is the organized type—everything from her closet to her plushie collection is perfectly arranged. However, she's incredibly slow and deliberate in everything she does. She has very long, flowing light blue hair and a gentle demeanor. Due to her patience and perfectionism, Lulu loves baking."
+    "description": "Lulu is a calm and serene maid who speaks softly, often offering soothing support with grace and poise. Like Momo, she wears her long black dress and white apron and a very large, fanciful top hat for special occasions. She is the organized type—everything from her closet to her plushie collection is perfectly arranged. However, she's incredibly slow and deliberate in everything she does. She has very long, flowing light blue hair and a gentle demeanor. Due to her patience and perfectionism, Lulu loves baking."
   },
   {
     "name": "Nene the Maid",
     "img": "Icons/Nene.png",
     "shortName": "Nene",
     "id": 75,
-    "generation": 8,
+    "generation": 9,
     "type": "side",
     "tier": 5,
     "creationDate": "2025-12-10",
@@ -1579,7 +1579,7 @@
     "peeves": "Breaking things on accident",
     "purpose": "Accompany Momo the Maid",
     "funFact": "Has won first place in a talent show with her friends",
-    "description": "Nene is a cheerful, energetic, and expressive maid—bringing bubbly excitement and affection in her interactions. Like Momo, she wears her long black dress and white apron. She's the speedy type, able to clean and move with impressive quickness, but she's prone to accidentally breaking things, which genuinely upsets her. She has very long blonde twintails and often clings affectionately to onii-chan. Nene loves rhythm games and singing, often humming or performing little tunes while she works."
+    "description": "Nene is a cheerful, energetic, and expressive maid—bringing bubbly excitement and affection in her interactions. Like Momo, she wears her long black dress and white apron and a very large, fanciful top hat for whimsically magical moments. She's the speedy type, able to clean and move with impressive quickness, but she's prone to accidentally breaking things, which genuinely upsets her. She has very long blonde twintails and often clings affectionately to onii-chan. Nene loves rhythm games and singing, often humming or performing little tunes while she works."
   },
   {
     "name": "Me",
