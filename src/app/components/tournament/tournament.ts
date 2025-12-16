@@ -38,9 +38,17 @@ export class Tournament implements OnInit {
   }
 
   createBracket() {
-    if (+this.numPlayers === 32 || +this.numPlayers === 64) {
+    if (+this.numPlayers === 64) {
+      // Skip selection for 64-player tournaments
+      this.includedCharacterIds = [];
+      this.showEliminationStep = false;
+      this.tournamentCreated = true;
+      return;
+    }
+
+    if (+this.numPlayers === 32) {
       this.updateSelectableCharacters();
-      // If Random is the current mode, ensure we (re)pick two now
+      // If Random is the current mode, ensure we (re)pick now
       if (this.eliminationMethod === 'random') {
         this.randomizeExclusions();
       }
@@ -59,10 +67,10 @@ export class Tournament implements OnInit {
 
   updateIncludedIds() {
     const targetTier = this.getTargetTier();
-    // When selecting tier 7, treat IDs 32 and 50 as tier 7
+    // When selecting tier 7, treat ID 50 as tier 7
     const isTierMember = (c: Character) => {
       if (targetTier === 7) {
-        return c.tier === 7 || c.id === 32 || c.id === 50;
+        return c.tier === 7 || c.id === 50;
       }
       return c.tier === targetTier;
     };
@@ -74,7 +82,7 @@ export class Tournament implements OnInit {
   randomizeExclusions() {
     const shuffled = [...this.selectableCharacters].sort(() => Math.random() - 0.5);
     this.selectedCharacter1 = shuffled[0];
-    this.selectedCharacter2 = +this.numPlayers === 64 ? null : shuffled[1];
+    this.selectedCharacter2 = (+this.numPlayers === 64 || +this.numPlayers === 32) ? null : shuffled[1];
     this.updateIncludedIds();
   }
 
@@ -82,7 +90,7 @@ export class Tournament implements OnInit {
     if (this.eliminationMethod !== 'manual') {
       return;
     }
-    const maxSelections = +this.numPlayers === 64 ? 1 : 2;
+    const maxSelections = (+this.numPlayers === 64 || +this.numPlayers === 32) ? 1 : 2;
     if (this.selectedCharacter1?.id === char.id) {
       this.selectedCharacter1 = null;
     } else if (this.selectedCharacter2?.id === char.id) {
@@ -111,11 +119,11 @@ export class Tournament implements OnInit {
   }
 
   getTotalCount(): number {
-    return +this.numPlayers === 64 ? 1 : 2;
+    return (+this.numPlayers === 64 || +this.numPlayers === 32) ? 1 : 2;
   }
 
   confirmEliminations() {
-    const expected = +this.numPlayers === 64 ? 1 : 2;
+    const expected = (+this.numPlayers === 64 || +this.numPlayers === 32) ? 1 : 2;
     if (this.getSelectedCount() !== expected) {
       alert(`Please select exactly ${expected} character${expected === 1 ? '' : 's'} to include.`);
       return;
@@ -139,10 +147,10 @@ export class Tournament implements OnInit {
       this.selectableCharacters = [];
       return;
     }
-    // When selecting tier 7, treat IDs 32 and 50 as tier 7
+    // When selecting tier 7, treat ID 50 as tier 7
     if (targetTier === 7) {
-      const tierMembers = this.allCharacters.filter(c => c.tier === 7 || c.id === 32 || c.id === 50);
-      // De-duplicate in case 32/50 already have tier 7
+      const tierMembers = this.allCharacters.filter(c => c.tier === 7 || c.id === 50);
+      // De-duplicate in case 50 already have tier 7
       const seen = new Set<number>();
       this.selectableCharacters = tierMembers.filter(c => {
         if (seen.has(c.id)) return false;

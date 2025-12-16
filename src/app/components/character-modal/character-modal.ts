@@ -146,6 +146,10 @@ export class CharacterModal {
     return this.deviceService.isMobile();
   }
 
+  hasLink(): boolean {
+    return !!this.displayedCharacter.link;
+  }
+
   async screenshot(_: string) {
     const c = this.displayedCharacter ?? this.character;
     const name = c?.name || 'Unknown Character';

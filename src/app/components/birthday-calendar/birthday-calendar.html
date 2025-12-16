@@ -63,12 +63,12 @@
         <div class="character-info">
           <h3>
             {{
-              birthdayChar.character.type?.includes('side')
+              birthdayChar.character.type.includes('side')
                 ? '*'
-                : (birthdayChar.character.type?.includes('retired'))
+                : (birthdayChar.character.type.includes('retired'))
                   ? '!'
                   : ''
-            }}<span [ngClass]="birthdayChar.character.type?.includes('retired') ? 'retired-name' : ''">{{ birthdayChar.character.shortName }}</span>
+            }}<span [ngClass]="birthdayChar.character.type.includes('retired') ? 'retired-name' : ''">{{ birthdayChar.character.shortName }}</span>
           </h3>
           <p class="birthday-date">{{ birthdayChar.character.birthday }}</p>
           <p class="days-until">{{ formatDaysUntilBirthday(birthdayChar.daysUntilBirthday, birthdayChar.character) }}</p>

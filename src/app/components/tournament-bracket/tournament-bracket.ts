@@ -41,7 +41,7 @@ export class TournamentBracket implements OnInit {
         }
       };
 
-      const tier7Ids = [32, 50];
+      const tier7Ids = [50];
       tier7Ids.forEach(id => changeTierTo7(id));
 
       // Group characters by tier (excluding highest tier and included IDs)
