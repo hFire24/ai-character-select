@@ -194,7 +194,7 @@
     {
       "id1": 3,
       "id2": 32,
-      "name": "The Shadows"
+      "name": "Dark Introverts"
     },
     {
       "id1": 3,
@@ -696,13 +696,13 @@
     },
     {
       "id1": 18,
-      "id2": 32,
-      "name": "Super-Peeved Duo"
+      "id2": 35,
+      "name": "Chaotic Hammer Users"
     },
     {
       "id1": 18,
-      "id2": 35,
-      "name": "Chaotic Hammer Users"
+      "id2": 50,
+      "name": "Super-Peeved Duo"
     },
     {
       "id1": 18,
@@ -1027,8 +1027,8 @@
     },
     {
       "id1": 32,
-      "id2": 36,
-      "name": "Haters of Cuteness and Joy"
+      "id2": 44,
+      "name": "Cuteness Connoisseurs"
     },
     {
       "id1": 32,
@@ -1099,7 +1099,7 @@
     {
       "id1": 36,
       "id2": 50,
-      "name": "Joyless Duo"
+      "name": "Haters of Cuteness and Joy"
     },
     {
       "id1": 37,
