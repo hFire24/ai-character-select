@@ -86,7 +86,7 @@ export class StoryHelper {
     this.fillDate();
     this.characterService.getCharacters().subscribe(chars => {
       const maxTier = Math.max(...chars.map(c => c.tier || 0));
-      this.characters = chars.filter(c => (c.tier || 0) < maxTier);
+      this.characters = chars.filter(c => (c.tier || 0) < maxTier && c.id !== 71);
     });
   }
 
