@@ -10,7 +10,7 @@ import { Character, CharacterService } from '../../services/character.service';
 })
 export class TournamentBracket implements OnInit {
   @Input() bracketSize: number = 8;
-  @Input() includedIds: number[] = [];
+  @Input() selectedIds: number[] = [];
   
   constructor(private characterService: CharacterService) {}
   players: Character[] = [];
@@ -44,19 +44,32 @@ export class TournamentBracket implements OnInit {
       const tier7Ids = [50];
       tier7Ids.forEach(id => changeTierTo7(id));
 
-      // Group characters by tier (excluding highest tier and included IDs)
+      // Group characters by tier (excluding highest tier and selected IDs)
       const charactersByTier = characters
-        .filter(a => a.tier !== highestTier && !this.includedIds.includes(a.id))
+        .filter(a => a.tier !== highestTier && !this.selectedIds.includes(a.id))
         .reduce((acc, char) => {
           if (!acc[char.tier]) acc[char.tier] = [];
           acc[char.tier].push(char);
           return acc;
-        }, {} as Record<number, Character[]>);
+        }, {} as Record<string | number, Character[]>);
 
-      // Shuffle characters within each tier and flatten
-      const shuffledCharacters = Object.values(charactersByTier)
-        .flatMap(tierCharacters => 
-          tierCharacters.sort(() => Math.random() - 0.5)
+      // Split Tier 4 into active and inactive
+      if (charactersByTier[4]) {
+        const tier4Active = charactersByTier[4].filter(c => c.type !== 'inactive');
+        const tier4Inactive = charactersByTier[4].filter(c => c.type === 'inactive');
+        delete charactersByTier[4];
+        charactersByTier['4a'] = tier4Active;
+        charactersByTier['4i'] = tier4Inactive;
+      }
+
+      // Define tier order: 1, 2, 3, 4 Active, 4 Inactive, 5, 6, 7
+      const tierOrder: (string | number)[] = ['1', '2', '3', '4a', '4i', '5', '6', '7'];
+
+      // Shuffle characters within each tier and flatten in proper order
+      const shuffledCharacters = tierOrder
+        .filter(tier => charactersByTier[tier])
+        .flatMap(tier => 
+          charactersByTier[tier].sort(() => Math.random() - 0.5)
         );
 
       this.players = shuffledCharacters.slice(0, this.bracketSize);

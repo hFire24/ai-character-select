@@ -2,8 +2,8 @@
   <h1>{{tournamentName}}</h1>
   @if (showEliminationStep) {
     <div class="elimination-step">
-      <h2>Select {{getTotalCount()}} Character{{(+numPlayers === 64) ? '' : 's'}} to Include</h2>
-      <p>The rest of the characters will be excluded from the tournament.</p>
+      <h2>Select {{getTotalCount()}} Character{{(+numPlayers === 64) ? '' : 's'}} to {{(+numPlayers === 64) ? 'Exclude' : 'Include'}}</h2>
+      <p>{{(+numPlayers === 64) ? 'The rest of the characters will be included in the tournament.' : 'The rest of the characters will be excluded from the tournament.'}}</p>
       
       <div class="elimination-options">
         <button 
@@ -34,7 +34,7 @@
       </div>
 
       <div class="excluded-info">
-        <strong>Characters to Include ({{getSelectedCount()}}/{{getTotalCount()}}):</strong> 
+        <strong>Character{{(+numPlayers === 64) ? '' : 's'}} to {{(+numPlayers === 64) ? 'Exclude' : 'Include'}} ({{getSelectedCount()}}/{{getTotalCount()}}):</strong> 
         @if (selectedCharacter1) {
           <span>{{selectedCharacter1.name}}</span>
         }
@@ -45,7 +45,7 @@
           <span>{{selectedCharacter2.name}}</span>
         }
         @if (!selectedCharacter1 && !selectedCharacter2) {
-          <span class="hint">Select {{getTotalCount()}} character{{(+numPlayers === 64) ? '' : 's'}} to include</span>
+          <span class="hint">Select {{getTotalCount()}} character{{(+numPlayers === 64) ? '' : 's'}} to {{(+numPlayers === 64) ? 'exclude' : 'include'}}</span>
         }
       </div>
 
@@ -54,7 +54,7 @@
   } @else if (tournamentCreated) {
     <app-tournament-bracket 
       [bracketSize]="numPlayers"
-      [includedIds]="includedCharacterIds">
+      [selectedIds]="includedCharacterIds">
     </app-tournament-bracket>
   } @else {
     <form>

@@ -38,19 +38,24 @@ export class Tournament implements OnInit {
   }
 
   createBracket() {
-    if (+this.numPlayers === 64) {
-      // Skip selection for 64-player tournaments
+    if (+this.numPlayers === 32) {
+      // Skip selection for 32-player tournaments - include all characters
       this.includedCharacterIds = [];
       this.showEliminationStep = false;
       this.tournamentCreated = true;
       return;
     }
 
-    if (+this.numPlayers === 32) {
+    if (+this.numPlayers === 64) {
       this.updateSelectableCharacters();
       // If Random is the current mode, ensure we (re)pick now
       if (this.eliminationMethod === 'random') {
         this.randomizeExclusions();
+      } else {
+        // In manual mode, initialize with no selection
+        this.selectedCharacter1 = null;
+        this.selectedCharacter2 = null;
+        this.updateIncludedIds();
       }
       this.showEliminationStep = true;
     } else {
@@ -75,8 +80,16 @@ export class Tournament implements OnInit {
       return c.tier === targetTier;
     };
     const tierIds = this.allCharacters.filter(isTierMember).map(c => c.id);
-    const included = [this.selectedCharacter1?.id, this.selectedCharacter2?.id].filter((id): id is number => typeof id === 'number');
-    this.includedCharacterIds = tierIds.filter(id => !included.includes(id));
+    const selected = [this.selectedCharacter1?.id, this.selectedCharacter2?.id].filter((id): id is number => typeof id === 'number');
+    
+    // For tier 6 (64 players): includedCharacterIds is actually used as EXCLUSION list by bracket
+    // So we put only the selected character ID to exclude
+    if (targetTier === 6) {
+      this.includedCharacterIds = selected;
+    } else {
+      // For other tiers: select to INCLUDE (so exclude the unselected ones from that tier)
+      this.includedCharacterIds = tierIds.filter(id => !selected.includes(id));
+    }
   }
 
   randomizeExclusions() {
@@ -125,7 +138,8 @@ export class Tournament implements OnInit {
   confirmEliminations() {
     const expected = (+this.numPlayers === 64 || +this.numPlayers === 32) ? 1 : 2;
     if (this.getSelectedCount() !== expected) {
-      alert(`Please select exactly ${expected} character${expected === 1 ? '' : 's'} to include.`);
+      const action = +this.numPlayers === 64 ? 'exclude' : 'include';
+      alert(`Please select exactly ${expected} character${expected === 1 ? '' : 's'} to ${action}.`);
       return;
     }
     this.showEliminationStep = false;
@@ -138,7 +152,7 @@ export class Tournament implements OnInit {
   }
 
   private getTargetTier(): number {
-    return +this.numPlayers === 64 ? 7 : (+this.numPlayers === 32 ? 5 : 0);
+    return +this.numPlayers === 64 ? 6 : (+this.numPlayers === 32 ? 5 : 0);
   }
 
   private updateSelectableCharacters() {

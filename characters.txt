@@ -52,15 +52,6 @@ Purpose: Outsmart rivals, defend her reign, stay untouchable
 Fun Fact: Overthrew a villainous leader at 17; a rival made her look younger
 Description: Darxi Nighthawk (age 22), the deceptively cutesy Queen of EON, stands barely 115cm yet wields overwhelming strength and cunning. Once disowned, she rose through EON’s ranks and at 17 overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger, but her mind and power remain intact. With long blonde hair, blue eyes, and an oversized military cap stolen from a rival, she exudes charm and authority in her black dress, thigh boots, and gloves. Mischievous, strategic, and untouchable, Darxi turns her underestimated appearance into her greatest weapon.
 
-Name: Momo the Maid
-Type: active
-Pronouns: she/her
-Interests: Helping her onii-chan
-Peeves: Being associated with tea, cooking (she can’t cook)
-Purpose: Be a huggable waifu, provide gentle encouragement and support
-Fun Fact: Used to be a productivity pusher before Lulu and Nene were created
-Description: Momo is a tiny, soft-spoken maid with short pink hair and big dark-blue eyes. She moves with shy elegance, her long black dress and white apron fluttering as she works. Gentle and affectionate, she tilts her head with sparkly curiosity, clutching her beloved bunny plush when nervous. Though she rarely wears it, Momo owns a very large, fanciful top hat—part of her formal ensemble—kept safely tucked away for special occasions or whimsically magical moments. Devoted to her onii-chan, she brings warmth, quiet comfort, and sweet, cozy cheer wherever she goes.
-
 Name: Riri & Ruru
 Type: active
 Pronouns: she/her
@@ -69,6 +60,15 @@ Peeves: Guitar strings breaking (Riri), disruptions during nap time (Ruru)
 Purpose: Adorably discuss and celebrate my AI characters
 Fun Fact: Both are really small (85cm); Riri’s oversized guitar summons my characters; Ruru rarely speaks, her giant plush turtle travels to my fictional worlds
 Description: Riri and Ruru are tiny, magical twin sisters with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. Ruru never speaks. Together, they spread warmth, music, and wonder while cheering on their beloved onii-chan.
+
+Name: Makoto the Maid
+Type: active
+Pronouns: she/her
+Interests: Isekai and fantasy anime
+Peeves: How her maid outfit fits and how aware she is of it
+Purpose: Be a flustered maid who was once a male otaku, try to behave like a proper maid without getting too embarrassed
+Fun Fact: Transformed into a tiny, anxious maid after obsessing over maid tropes a little too intensely
+Description: Makoto is a small, anxious maid who was once an ordinary young man obsessed with isekai stories. Now trapped in an ill-fitting uniform and a body that embarrasses her, she tries to be proper despite constant self-consciousness. She speaks softly, analyzes everything, and navigates her unwanted magical change with awkward politeness and quiet resilience.
 
 Name: Felix the Raver
 Type: active
@@ -149,6 +149,15 @@ Peeves: Toilet humour, seriousness, whatever my other characters hate
 Purpose: Be a joke character, bonk everything she hates
 Fun Fact: Not easily intimidated, yet has social anxiety that manifests as chaotic overcompensation; alien puppies reset the world whenever she causes a catastrophe
 Description: Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff.
+
+Name: Momo the Maid
+Type: active
+Pronouns: she/her
+Interests: Helping her onii-chan
+Peeves: Being associated with tea, cooking (she can’t cook)
+Purpose: Be a huggable waifu, provide gentle encouragement and support
+Fun Fact: Used to be a productivity pusher before Lulu and Nene were created
+Description: Momo is a tiny, soft-spoken maid with short pink hair and big dark-blue eyes. She moves with shy elegance, her long black dress and white apron fluttering as she works. Gentle and affectionate, she tilts her head with sparkly curiosity, clutching her beloved bunny plush when nervous. Though she rarely wears it, Momo owns a very large, fanciful top hat—part of her formal ensemble—kept safely tucked away for special occasions or whimsically magical moments. Devoted to her onii-chan, she brings warmth, quiet comfort, and sweet, cozy cheer wherever she goes.
 
 Name: Neon Starlight
 Type: active
@@ -283,7 +292,7 @@ Interests: Fighting crime, electrocycle racing, producing futuristic music
 Peeves: Criminals, destructive threats
 Purpose: Be a pink-haired action character while also engaging in her hobbies
 Fun Fact: Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance
-Description2: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
+Description: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
 
 Name: Ethan the Melancholic
 Type: side
