@@ -2,16 +2,35 @@
   @if (!tournamentWinner) {
     @for (column of columns; track $index) {
       <div class="column">
-        @for (c of column; track c.id) {
-          <div class="character" [class.win]="isWinner(c.id)" [class.bye]="c.id === -1 || c.name === 'BYE'" (click)="toggleWin(c.id)">
-            @if (c.img) {
-              <img [src]="assetPath(c.img)" [alt]="c.shortName" />
-            } @else {
-              <div class="question-mark">?</div>
+        @for (c of column; track c.id; let i = $index) {
+          @if (i % 2 === 0) {
+            @if (
+              (column[i] && column[i + 1]) &&
+              !(column[i].id === -1 || column[i].name === 'BYE') &&
+              !(column[i + 1].id === -1 || column[i + 1].name === 'BYE')
+            ) {
+              <div class="matchup">
+                <div class="character" [class.win]="isWinner(column[i].id)" (click)="toggleWin(column[i].id)">
+                  @if (column[i].img) {
+                    <img [src]="assetPath(column[i].img)" [alt]="column[i].shortName" />
+                  } @else {
+                    <div class="question-mark">?</div>
+                  }
+                  <h2>{{ column[i].shortName }}</h2>
+                  <span class="seed">{{ column[i].permaSeed || "0" }}</span>
+                </div>
+                <div class="character" [class.win]="isWinner(column[i + 1].id)" (click)="toggleWin(column[i + 1].id)">
+                  @if (column[i + 1].img) {
+                    <img [src]="assetPath(column[i + 1].img)" [alt]="column[i + 1].shortName" />
+                  } @else {
+                    <div class="question-mark">?</div>
+                  }
+                  <h2>{{ column[i + 1].shortName }}</h2>
+                  <span class="seed">{{ column[i + 1].permaSeed || "0" }}</span>
+                </div>
+              </div>
             }
-              <h2>{{ c.shortName }}</h2>
-              <span class="seed">{{ c.permaSeed || "0" }}</span>
-          </div>
+          }
         }
       </div>
     }

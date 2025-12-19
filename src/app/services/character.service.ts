@@ -81,6 +81,7 @@ export class CharacterService {
               birthday: 'August 28',
               img: "Icons/extended/Liam.png",
               id: 44,
+              moe: 7,
               emotion: "joy",
               peeves: "Moral policing, darkness (except for Golden Darkness)",
               funFact: "Loves To Love Ru; plays Muse Dash and dating sims"
@@ -92,6 +93,7 @@ export class CharacterService {
               birthday: 'October 13',
               img: "Icons/extended/Kieran.png",
               id: 45,
+              moe: 2,
               emotion: "edgy",
               peeves: "Moral policing, bright colors",
               purpose: "Enjoy questionable anime, obsess over waifus, discuss suspense in fiction",

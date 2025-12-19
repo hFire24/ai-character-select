@@ -1,60 +1,10 @@
 <header>
   <h1>{{tournamentName}}</h1>
-  @if (showEliminationStep) {
-    <div class="elimination-step">
-      <h2>Select {{getTotalCount()}} Character{{(+numPlayers === 64) ? '' : 's'}} to {{(+numPlayers === 64) ? 'Exclude' : 'Include'}}</h2>
-      <p>{{(+numPlayers === 64) ? 'The rest of the characters will be included in the tournament.' : 'The rest of the characters will be excluded from the tournament.'}}</p>
-      
-      <div class="elimination-options">
-        <button 
-          [class.selected]="eliminationMethod === 'random'"
-          (click)="selectEliminationMethod('random')">
-          Random
-        </button>
-        <button 
-          [class.selected]="eliminationMethod === 'manual'"
-          (click)="selectEliminationMethod('manual')">
-          Manual
-        </button>
-      </div>
-
-      <div class="character-selection-grid-wrapper">
-        <div class="character-selection-grid">
-          @for (char of selectableCharacters; track char.id) {
-          <div 
-            class="selectable-character"
-            [class.selected]="isCharacterSelected(char)"
-            [class.disabled]="eliminationMethod !== 'manual'"
-            (click)="toggleCharacterSelection(char)">
-            <img [src]="'assets/' + char.img" [alt]="char.name">
-            <h3>{{char.shortName}}</h3>
-          </div>
-        }
-        </div>
-      </div>
-
-      <div class="excluded-info">
-        <strong>Character{{(+numPlayers === 64) ? '' : 's'}} to {{(+numPlayers === 64) ? 'Exclude' : 'Include'}} ({{getSelectedCount()}}/{{getTotalCount()}}):</strong> 
-        @if (selectedCharacter1) {
-          <span>{{selectedCharacter1.name}}</span>
-        }
-        @if (selectedCharacter1 && selectedCharacter2) {
-          <span>, </span>
-        }
-        @if (selectedCharacter2) {
-          <span>{{selectedCharacter2.name}}</span>
-        }
-        @if (!selectedCharacter1 && !selectedCharacter2) {
-          <span class="hint">Select {{getTotalCount()}} character{{(+numPlayers === 64) ? '' : 's'}} to {{(+numPlayers === 64) ? 'exclude' : 'include'}}</span>
-        }
-      </div>
-
-      <button (click)="confirmEliminations()" class="confirm-btn">Start Tournament</button>
-    </div>
-  } @else if (tournamentCreated) {
+  @if (tournamentCreated) {
     <app-tournament-bracket 
       [bracketSize]="numPlayers"
-      [selectedIds]="includedCharacterIds">
+      [selectedIds]="includedCharacterIds"
+      [seedPreference]="seedPreference">
     </app-tournament-bracket>
   } @else {
     <form>
@@ -65,25 +15,28 @@
       <div>
         <label for="num-players">Number of Players:</label>
         <select id="num-players" name="num-players" [(ngModel)]="numPlayers">
-          <option value="8">8</option>
-          <option value="16">16</option>
-          <option value="32">32</option>
           <option value="64">64</option>
+          <option value="128">128</option>
         </select>
+      </div>
+      <div class="seeding-pref">
+        <label>Who should win?</label>
+        <label>
+          <input type="radio" name="seed-pref" value="high" [(ngModel)]="seedPreference">
+          Cute characters
+        </label>
+        <label>
+          <input type="radio" name="seed-pref" value="low" [(ngModel)]="seedPreference">
+          Non-cute characters
+        </label>
       </div>
       <div>
         @switch (+numPlayers) {
-          @case (8) {
-            A small tournament
-          }
-          @case (16) {
-            A medium-sized tournament
-          }
-          @case (32) {
-            A large tournament
-          }
           @case (64) {
             A massive tournament
+          }
+          @case (128) {
+            A gargantuan tournament
           }
           @default {
             {{numPlayers}} characters

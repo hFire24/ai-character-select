@@ -9,8 +9,9 @@ import { Character, CharacterService } from '../../services/character.service';
   styleUrl: './tournament-bracket.scss'
 })
 export class TournamentBracket implements OnInit {
-  @Input() bracketSize: number = 8;
+  @Input() bracketSize: number = 64;
   @Input() selectedIds: number[] = [];
+  @Input() seedPreference: 'high' | 'low' = 'high';
   
   constructor(private characterService: CharacterService) {}
   players: Character[] = [];
@@ -20,77 +21,113 @@ export class TournamentBracket implements OnInit {
   round: number = 1;
   tournamentWinner: Character | null = null;
   
-  // Standard tournament seeding order for 64 player bracket
-  private readonly seedingOrder: number[] = [
-    1, 64, 32, 33, 16, 49, 17, 48, 8, 57, 25, 40, 9, 56, 24, 41,
-    4, 61, 29, 36, 13, 52, 20, 45, 5, 60, 28, 37, 12, 53, 21, 44,
-    2, 63, 31, 34, 15, 50, 18, 47, 7, 58, 26, 39, 10, 55, 23, 42,
-    3, 62, 30, 35, 14, 51, 19, 46, 6, 59, 27, 38, 11, 54, 22, 43
-  ];
-
   ngOnInit() {
     // Inject the character service to get characters
     this.characterService.getCharactersSplitTwins().subscribe(characters => {
-      const highestTier = Math.max(...characters.map(c => c.tier));
-
-      // Change The Shadow Self's tier to 7
-      const changeTierTo7 = (id: number) => {
-        const characterIndex = characters.findIndex(c => c.id === id);
-        if (characterIndex !== -1) {
-          characters[characterIndex] = { ...characters[characterIndex], tier: 7 };
-        }
-      };
-
-      const tier7Ids = [50];
-      tier7Ids.forEach(id => changeTierTo7(id));
-
-      // Group characters by tier (excluding highest tier and selected IDs)
-      const charactersByTier = characters
-        .filter(a => a.tier !== highestTier && !this.selectedIds.includes(a.id))
-        .reduce((acc, char) => {
-          if (!acc[char.tier]) acc[char.tier] = [];
-          acc[char.tier].push(char);
-          return acc;
-        }, {} as Record<string | number, Character[]>);
-
-      // Split Tier 4 into active and inactive
-      if (charactersByTier[4]) {
-        const tier4Active = charactersByTier[4].filter(c => c.type !== 'inactive');
-        const tier4Inactive = charactersByTier[4].filter(c => c.type === 'inactive');
-        delete charactersByTier[4];
-        charactersByTier['4a'] = tier4Active;
-        charactersByTier['4i'] = tier4Inactive;
-      }
-
-      // Define tier order: 1, 2, 3, 4 Active, 4 Inactive, 5, 6, 7
-      const tierOrder: (string | number)[] = ['1', '2', '3', '4a', '4i', '5', '6', '7'];
-
-      // Shuffle characters within each tier and flatten in proper order
-      const shuffledCharacters = tierOrder
-        .filter(tier => charactersByTier[tier])
-        .flatMap(tier => 
-          charactersByTier[tier].sort(() => Math.random() - 0.5)
-        );
-
-      this.players = shuffledCharacters.slice(0, this.bracketSize);
-
-      // Filter seeding order based on bracket size
-      const filteredSeedingOrder = this.seedingOrder.filter(x => x <= this.bracketSize);
-
-      // Rearrange players based on seeding order
-      this.tournamentSeeds = filteredSeedingOrder.map(seedPosition => {
-        const playerIndex = seedPosition - 1; // Convert to 0-based index
-        if(this.players[playerIndex] && this.round === 1) {
-          this.players[playerIndex].seed = seedPosition;
-          if(this.round === 1)
-            this.players[playerIndex].permaSeed = seedPosition;
-        }
-        return this.players[playerIndex] || { name: 'BYE', img: 'Icons/extended/Unknown.png', id: -1, shortName: 'BYE', tier: highestTier - 1, seed: seedPosition, permaSeed: seedPosition } as Character;
-      });
-
-      // Organize characters into columns
-      this.organizeColumns();
+      const normalizedCharacters = this.normalizeShadowSelfTier([...characters]);
+      this.buildBracket(normalizedCharacters);
     });
+  }
+
+  private buildBracket(characters: Character[]) {
+    const highestTier = Math.max(...characters.map(c => c.tier));
+    const fallbackTier = highestTier;
+
+    // Filter out highest-tier characters and any excluded IDs, then sort by moe (high-to-low or low-to-high)
+    const available = characters
+      .filter(c => c.tier !== highestTier)
+      .filter(c => !this.selectedIds.includes(c.id));
+    // Group by moe value and shuffle within each group, order groups by moe
+    const moeGroups = new Map<number, Character[]>();
+    for (const c of available) {
+      const key = c.moe;
+      const arr = moeGroups.get(key) || [];
+      arr.push(c);
+      moeGroups.set(key, arr);
+    }
+
+    const moeKeys = Array.from(moeGroups.keys()).sort((a, b) =>
+      this.seedPreference === 'high' ? b - a : a - b
+    );
+
+    const sortedByMoe: Character[] = [];
+    for (const key of moeKeys) {
+      const group = moeGroups.get(key)!;
+      const shuffledGroup = [...group].sort(() => Math.random() - 0.5);
+      sortedByMoe.push(...shuffledGroup);
+    }
+
+    // Assign seeds based on moe ranking
+    this.players = sortedByMoe.slice(0, this.bracketSize).map((char, index) => ({
+      ...char,
+      seed: index + 1,
+      permaSeed: index + 1
+    }));
+
+    const playersBySeed = new Map<number, Character>();
+    this.players.forEach(p => playersBySeed.set(p.seed as number, p));
+
+    const seedingLayout = this.generateSeedingLayout(this.bracketSize);
+
+    // Place players into bracket positions following the seeding layout
+    this.tournamentSeeds = seedingLayout.map(seedNumber => {
+      const player = playersBySeed.get(seedNumber);
+      return player || {
+        name: 'BYE',
+        img: 'Icons/extended/Unknown.png',
+        id: -1,
+        shortName: 'BYE',
+        tier: fallbackTier,
+        seed: seedNumber,
+        permaSeed: seedNumber
+      } as Character;
+    });
+
+    // Auto-assign winners for BYE matchups
+    this.assignByeWins();
+
+    this.organizeColumns();
+  }
+
+  private isBye(char: Character | undefined): boolean {
+    return !char || char.id === -1 || char.name === 'BYE';
+  }
+
+  private assignByeWins(): void {
+    for (let i = 0; i < this.tournamentSeeds.length; i += 2) {
+      const left = this.tournamentSeeds[i];
+      const right = this.tournamentSeeds[i + 1];
+      const leftBye = this.isBye(left);
+      const rightBye = this.isBye(right);
+      if (leftBye && !rightBye) {
+        this.winners.add(right.id);
+      } else if (rightBye && !leftBye) {
+        this.winners.add(left.id);
+      }
+    }
+  }
+
+  private normalizeShadowSelfTier(characters: Character[]): Character[] {
+    const shadowSelfId = 50;
+    const index = characters.findIndex(c => c.id === shadowSelfId);
+    if (index !== -1) {
+      characters[index] = { ...characters[index], tier: 7 };
+    }
+    return characters;
+  }
+
+  private generateSeedingLayout(size: number): number[] {
+    if (size < 2) return [1];
+    let seeds = [1, 2];
+    while (seeds.length < size) {
+      const max = seeds.length * 2;
+      const next: number[] = [];
+      for (const seed of seeds) {
+        next.push(seed, max - seed + 1);
+      }
+      seeds = next;
+    }
+    return seeds.slice(0, size);
   }
 
   organizeColumns(): void {
@@ -204,6 +241,7 @@ export class TournamentBracket implements OnInit {
   }
 
   allWinnersChosen(): boolean {
+    // Total expected winners = half the bracket size (includes auto-advanced BYE wins)
     const expectedWinners = this.bracketSize / 2;
     return this.winners.size === expectedWinners;
   }
