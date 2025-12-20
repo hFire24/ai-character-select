@@ -101,25 +101,10 @@ export class StoryHelper {
     if (this.characters.length === 0) return;
     const filteredCharacters = this.excludeRetired ? this.characters.filter(c => !c.type.includes('retired')) : this.characters;
     if (filteredCharacters.length === 0) return;
-    // Apply weighted selection based on tier
-    const weights = filteredCharacters.map(c => {
-      if (c.shortName === 'Angela') return 5;
-      return 1;
-    });
 
-    const totalWeight = weights.reduce((sum, w) => sum + w, 0);
-    let random = Math.random() * totalWeight;
+    let random = Math.floor(Math.random() * filteredCharacters.length);
 
-    let selectedIndex = 0;
-    for (let i = 0; i < weights.length; i++) {
-      random -= weights[i];
-      if (random <= 0) {
-        selectedIndex = i;
-        break;
-      }
-    }
-
-    const character = filteredCharacters[selectedIndex];
+    const character = filteredCharacters[random];
     this.characterList.push(character.shortName);
     this.charactersString = this.characterList.join(', ');
   }
