@@ -8,10 +8,11 @@ import { Character } from '../../services/character.service';
 import { Mood } from '../../services/mood.service';
 import { Legend } from "../legend/legend";
 import { SearchBar } from "../search-bar/search-bar";
+import { Activities } from "../activities/activities";
 
 @Component({
   selector: 'app-roster',
-  imports: [CharacterGrid, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend, SearchBar],
+  imports: [CharacterGrid, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend, SearchBar, Activities],
   templateUrl: 'roster.html',
   styleUrl: 'roster.scss'
 })

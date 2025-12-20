@@ -9,10 +9,7 @@ import { DeviceService } from '../../services/device.service';
   templateUrl: './footer-buttons.html',
   styleUrl: './footer-buttons.scss'
 })
-export class FooterButtons {
-  @Input() searchTerm = '';
-  @Output() toggleMore = new EventEmitter<void>();
-  
+export class FooterButtons {  
   constructor(private deviceService: DeviceService) {}
   
   isMobile(): boolean {

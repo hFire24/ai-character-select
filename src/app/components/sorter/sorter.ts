@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { CharacterService } from '../../services/character.service';
 import { Character } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
+import { BackButton } from '../back-button/back-button';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-sorter',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, BackButton],
   templateUrl: './sorter.html',
   styleUrl: './sorter.scss'
 })
@@ -423,12 +425,44 @@ export class Sorter implements OnInit, OnDestroy {
         return false;
       }
       if (this.characterTypeFilter === 'activeSide') {
-        if (char.type !== 'active' && char.type !== 'side' && char.type !== 'side retired') {
+        if (char.type !== 'active' && char.type !== 'side') {
           return false;
         }
       }
 
       return true;
     });
+  }
+
+  async takeScreenshot(): Promise<void> {
+    const rankingList = document.querySelector('.ranking-list') as HTMLElement;
+    if (!rankingList) {
+      alert('Could not find ranking list to screenshot.');
+      return;
+    }
+
+    try {
+      const canvas = await html2canvas(rankingList, {
+        backgroundColor: '#ffffff',
+        scale: 2,
+        logging: false,
+        useCORS: true
+      });
+
+      // Convert canvas to blob and download
+      canvas.toBlob((blob) => {
+        if (blob) {
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.download = `character-rankings-${new Date().getTime()}.png`;
+          link.href = url;
+          link.click();
+          URL.revokeObjectURL(url);
+        }
+      }, 'image/png');
+    } catch (error) {
+      console.error('Error taking screenshot:', error);
+      alert('Failed to take screenshot. Please try again.');
+    }
   }
 }

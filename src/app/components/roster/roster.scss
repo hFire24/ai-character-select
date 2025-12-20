@@ -1,4 +1,10 @@
-.toggle-retired-btn {
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.toggle-more-btn, .toggle-retired-btn {
   &.disabled {
     opacity: 0.6;
     cursor: not-allowed;
@@ -11,5 +17,12 @@
     font-style: italic;
     display: block;
     margin-top: 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
   }
 }

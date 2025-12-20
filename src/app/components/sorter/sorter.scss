@@ -19,11 +19,18 @@ body {
   margin: 1rem auto;
   padding: 0.75rem 2rem;
   font-size: 1.1rem;
-  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.start-button {
+  background-color: #4CAF50;
+}
+
+.restart-button {
+  background-color: #DD3333;
 }
 
 .filters {
@@ -35,7 +42,7 @@ body {
 .filter-group {
   background: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 0.75rem 1rem;
 }
 
@@ -69,18 +76,8 @@ body {
 
 .sorting {
   max-width: 600px;
-  margin: 2rem auto;
-  padding: 1rem;
-}
-
-.progress {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  font-weight: 600;
+  margin: 0 auto 1rem;
+  padding: 0;
 }
 
 .comparison {
@@ -88,7 +85,7 @@ body {
   align-items: center;
   justify-content: space-around;
   gap: 0.5rem;
-  margin: 2rem 0;
+  margin-top: 1rem;
 }
 
 .character-option {
@@ -96,8 +93,8 @@ body {
   min-width: 0;
   text-align: center;
   padding: 30px;
-  border: 3px solid #ccc;
-  border-radius: 12px;
+  border: 1px solid #888;
+  border-radius: 8px;
   cursor: pointer;
 
   img {
@@ -148,8 +145,7 @@ body {
 
 .results {
   max-width: 600px;
-  margin: 2rem auto;
-  padding: 1rem;
+  margin: 0 auto;
   font-size: 1.1rem;
   flex: 1;
 
@@ -160,17 +156,23 @@ body {
 
   .ranking-list {
     list-style: decimal;
-    padding-left: 1.5rem;
-    margin: 2rem 0;
+    padding-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
 
     .ranking-item {
       display: flex;
       align-items: center;
       gap: 1rem;
-      padding: 0.85rem;
-      margin-bottom: 0.5rem;
+      padding: 0.25rem;
       background-color: #f5f5f5;
-      border-radius: 8px;
+      border: 1px solid black;
+      border-bottom: none;
+
+      &:last-child {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid black;
+      }
 
       .rank {
         font-size: 1.3rem;
@@ -212,10 +214,6 @@ body {
 
   h2 {
     font-size: 1.2rem;
-  }
-
-  .progress {
-    font-size: 1rem;
   }
 
   .character-option {
@@ -272,8 +270,7 @@ body {
     color: #d5d8dc;
   }
 
-  .start-button,
-  .restart-button {
+  .start-button {
     background-color: #3aa76d;
   }
 
@@ -283,7 +280,7 @@ body {
     background: transparent;
   }
 
-  .progress {
+  h2 {
     color: #cfd3da;
   }
 
@@ -301,12 +298,15 @@ body {
 
   .results .ranking-list {
     list-style: decimal;
-    padding-left: 1.5rem;
   }
   .results .ranking-list .ranking-item {
     background-color: #161a22;
     border: 1px solid #2a2f3a;
+    border-bottom: none;
     color: #e6e8ea;
+    &:last-child {
+      border-bottom: 1px solid #2a2f3a;
+    }
   }
   .results .ranking-list .ranking-item .rank {
     color: #cfd3da;

@@ -2,8 +2,6 @@
 
 <!-- Setup Phase -->
 <div *ngIf="!isSorting && sortedCharacters.length === 0" class="setup">
-  <button (click)="start()" class="start-button">Start Sorting</button>
-
   <div class="filters">
     <div class="filter-group">
       <h3>Gender</h3>
@@ -41,13 +39,12 @@
       </div>
     </div>
   </div>
+  <button (click)="start()" class="start-button">Start Sorting</button>
 </div>
 
 <!-- Sorting Phase -->
 <div *ngIf="isSorting && currentPair" class="sorting">
-  <div class="progress">
-    <h2>Round {{progress + 1}}</h2>
-  </div>
+  <h2>Round {{progress + 1}}</h2>
 
   <div class="comparison">
     <div class="character-option" (click)="choose(currentPair[0])">
@@ -57,7 +54,7 @@
 
     <div class="tie-option">
       <button (click)="chooseTie()" class="tie-button">Tie</button>
-      <button class="back-button" (click)="back()" [disabled]="!canGoBack()">Back</button>
+      <button class="back-button" (click)="back()" [disabled]="!canGoBack()">Undo</button>
     </div>
 
     <div class="character-option" (click)="choose(currentPair[1])">
@@ -69,14 +66,16 @@
 
 <!-- Results Phase -->
 <div *ngIf="!isSorting && sortedCharacters.length > 0" class="results">
-  <h2>Your Rankings</h2>
-  <button (click)="sortedCharacters = []" class="restart-button">Start Over</button>
-  
+  <h2>Your Rankings</h2>  
   <ol class="ranking-list">
     <li *ngFor="let char of sortedCharacters; let i = index" class="ranking-item">
       <span class="rank">{{getDisplayRank(i, char)}}</span>
-      <img [src]="'assets/' + char.img" [alt]="char.name">
+      <img *ngIf="i < 3" [src]="'assets/' + char.img" [alt]="char.name">
       <span class="name">{{char.shortName || char.name}}</span>
     </li>
   </ol>
+  <button (click)="takeScreenshot()" class="screenshot-button">📷 Download Screenshot</button>
+  <button (click)="sortedCharacters = []" class="restart-button">Start Over</button>
 </div>
+
+<app-back-button></app-back-button>

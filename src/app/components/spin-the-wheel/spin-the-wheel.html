@@ -1,14 +1,38 @@
 <div class="panel-container">
 	<h2>Random Character Picker</h2>
-	<div class="panel-filters">
-		<label for="panelFilter">Filter:</label>
-		<select id="panelFilter" [(ngModel)]="selectedFilter">
-			<option value="all">All Characters</option>
-			<option value="tier1">Favorite Characters</option>
-			<option value="tier3">Active Characters</option>
-			<option value="active-retired">Active + Retired Characters</option>
-		</select>
+	<div class="panel-filters" *ngIf="!spinning">
+		<div class="filter-checkboxes">
+			<label>
+				<input type="checkbox" [(ngModel)]="includeFavorite" [disabled]="includeActive" />
+				Favorite Characters
+			</label>
+			<label>
+				<input type="checkbox" [(ngModel)]="includeActive" (ngModelChange)="onActiveChange()" />
+				Active Characters
+			</label>
+			<label>
+				<input type="checkbox" [(ngModel)]="includeInactive" />
+				Inactive Characters
+			</label>
+			<label>
+				<input type="checkbox" [(ngModel)]="includeSide" />
+				Side Characters
+			</label>
+			<label>
+				<input type="checkbox" [(ngModel)]="includeRetired" />
+				Retired Characters
+			</label>
+			<label>
+				<input type="checkbox" [(ngModel)]="includeMe" />
+				Me
+			</label>
+		</div>
+		<label [ngStyle]="{display: 'block', marginTop: '1rem'}">
+			<input type="checkbox" [(ngModel)]="skipAnimation" />
+			Skip Animation
+		</label>
 	</div>
+	<button *ngIf="isMobile()" (click)="spinWheel()" [disabled]="spinning" [ngStyle]="{marginBottom: '1rem'}">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
 	<div class="panel-grid-wrapper">
 		<div class="panel-grid">
 			<div
@@ -23,13 +47,14 @@
 			</div>
 		</div>
 	</div>
-	<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : 'Spin' }}</button>
+	<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
 	<div *ngIf="selectedCharacter" class="result">
 		<h3>Selected Character:</h3>
 		<img [src]="'assets/' + selectedCharacter.img" [alt]="selectedCharacter.name"
 		width="128" height="128"
 		(error)="selectedCharacter.img = 'Icons/extended/Unknown.png'" 
-		(click)="showCard = true"/>
+		(click)="showCard = true"
+		[ngStyle]="{cursor: 'pointer'}"/>
 		<p>{{ selectedCharacter.name }}</p>
 		<a id="chat" [href]="getChatLink(selectedCharacter)" target="_blank">Chat</a>
 	</div>

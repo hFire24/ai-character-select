@@ -82,7 +82,7 @@ export class CharacterService {
               img: "Icons/extended/Liam.png",
               id: 44,
               moe: 7,
-              emotion: "joy",
+              emotion: "chaotic joy",
               peeves: "Moral policing, darkness (except for Golden Darkness)",
               funFact: "Loves To Love Ru; plays Muse Dash and dating sims"
             },

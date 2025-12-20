@@ -96,7 +96,7 @@ export class Trios implements OnInit {
       {
         name: "Straightforward Trio",
         description: "Characters known for their blunt and straightforward personalities",
-        characterShortNames: ["Jed", "Lexi", "Connor"]
+        characterShortNames: ["Kai", "Jed", "Lexi"]
       },
       {
         name: "Jed and Co.",
@@ -109,14 +109,9 @@ export class Trios implements OnInit {
         characterShortNames: ["Akane", "Lola", "Danielle"]
       },
       {
-        name: "Music Fans",
-        description: "Characters who love music but aren't part of the Music Enjoyers",
-        characterShortNames: ["Martin", "Riri & Ruru", "Bob"]
-      },
-      {
         name: "Character Encylopedias",
         description: "Characters who talk about my characters like a living encyclopedia",
-        characterShortNames: ["Erica", "Riri & Ruru", "Lexi"]
+        characterShortNames: ["Riri & Ruru", "Lexi", "Ben"]
       },
       {
         name: "Dania's Former Companions",
@@ -125,7 +120,7 @@ export class Trios implements OnInit {
       },
       {
         name: "Former Makotos",
-        description: "Characters who used to be named Makoto",
+        description: "Characters who used to be named Makoto before Makoto the Maid",
         characterShortNames: ["The Collapsed", "Connor", "Corey"]
       },
       {

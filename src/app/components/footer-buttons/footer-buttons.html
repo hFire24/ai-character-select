@@ -1,14 +1,4 @@
 <footer>
-  <button 
-    (click)="toggleMore.emit()"
-    [disabled]="searchTerm.trim().length > 0"
-    [class.disabled]="searchTerm.trim().length > 0"
-  >
-    More Characters
-    @if (searchTerm.trim().length > 0) {
-      <span class="filter-disabled-text">(Search active)</span>
-    }
-  </button>
   <div>
     <button 
       routerLink="blind-ranking" 
@@ -47,19 +37,19 @@
       routerLink="tournament"
       routerLinkActive="active"
       style="background-color: #FF6B35;">
-      🏆 Tournament
+       Tournament
     </button>
     <button
       routerLink="birthday-calendar"
       routerLinkActive="active"
       style="background-color: #E91E63;">
-      🎂 Birthdays
+       Birthdays
     </button>
     <button
       routerLink="story-helper"
       routerLinkActive="active"
       style="background-color: #9C27B0;">
-      ✍️ Story Helper
+       Story Helper
     </button>
   </div>
 </footer>

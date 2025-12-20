@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { CharacterService, Character } from '../../services/character.service';
-import { CharacterModal } from '../character-modal/character-modal';
-import { Router } from '@angular/router';
+import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
+import { CharacterService, Character } from "../../services/character.service";
+import { CharacterModal } from "../character-modal/character-modal";
+import { Router } from "@angular/router";
+import { DeviceService } from "../../services/device.service";
 
 @Component({
-  selector: 'app-spin-the-wheel',
-  templateUrl: './spin-the-wheel.html',
-  styleUrl: './spin-the-wheel.scss',
+  selector: "app-spin-the-wheel",
+  templateUrl: "./spin-the-wheel.html",
+  styleUrl: "./spin-the-wheel.scss",
   imports: [CommonModule, FormsModule, CharacterModal],
   standalone: true
 })
@@ -17,21 +18,29 @@ export class SpinTheWheel {
   characters: Character[] = [];
   filteredCharacters: Character[] = [];
   excludedCharacters: Character[] = [];
-  selectedFilter: string = 'all';
   spinning = false;
   selectedCharacter: Character | null = null;
   showCard = false;
+  includeFavorite: boolean = true;
+  includeActive: boolean = true;
+  includeInactive: boolean = true;
+  includeSide: boolean = true;
+  includeRetired: boolean = true;
+  includeMe: boolean = false;
+  skipAnimation: boolean = false;
 
   constructor(
     private characterService: CharacterService,
-    private router: Router
+    private router: Router,
+    private deviceService: DeviceService
   ) {}
 
   ngOnInit() {
-    this.characterService.getCharacters().subscribe(chars => {
+    this.characterService.getCharactersPlusCriticizer().subscribe(chars => {
       this.characters = chars;
       this.applyFilter();
     });
+    this.skipAnimation = this.isMobile();
   }
 
   ngOnChanges() {
@@ -42,19 +51,29 @@ export class SpinTheWheel {
     this.applyFilter();
   }
 
+  isMobile(): boolean {
+    return this.deviceService.isMobile();
+  }
+
   applyFilter() {
-    switch (this.selectedFilter) {
-      case 'tier1':
-        this.filteredCharacters = this.characters.filter(c => c.tier <= 3);
-        break;
-      case 'tier3':
-        this.filteredCharacters = this.characters.filter(c => c.tier <= 4);
-        break;
-      case 'active-retired':
-        this.filteredCharacters = this.characters.filter(c => ['active', 'retired', 'inactive'].includes(c.type));
-        break;
-      default:
-        this.filteredCharacters = this.characters.filter(c => c.type !== 'me');
+    let baseCharacters = this.characters;
+    
+    // Apply checkbox filters
+    this.filteredCharacters = baseCharacters.filter(c => {
+      const matchesFavorite = this.includeFavorite && c.tier >= 1 && c.tier <= 3;
+      const matchesActive = this.includeActive && c.type === "active";
+      const matchesInactive = this.includeInactive && c.type === "inactive";
+      const matchesSide = this.includeSide && c.type === "side";
+      const matchesRetired = this.includeRetired && c.type === "retired";
+      const matchesMe = this.includeMe && c.type === "me";
+      
+      return matchesFavorite || matchesActive || matchesInactive || matchesSide || matchesRetired || matchesMe;
+    });
+  }
+
+  onActiveChange() {
+    if (this.includeActive) {
+      this.includeFavorite = true;
     }
   }
 
@@ -72,14 +91,16 @@ export class SpinTheWheel {
     const availableCharacters = this.filteredCharacters.filter(char => !this.excludedCharacters.includes(char));
     if (this.spinning) return;
     if (availableCharacters.length === 0) {
-      alert('Silly goose! You disabled all the characters! You need to enable at least one character to spin.');
+      alert("Please include at least one character to spin.");
       return;
     }
-    if (availableCharacters.length === 1) {
-      this.selectedCharacter = availableCharacters[0];
+    if (availableCharacters.length === 1 || this.skipAnimation) {
+      this.selectedCharacter = availableCharacters[Math.floor(Math.random() * availableCharacters.length)];
+      this.scrollToResult();
       return;
     }
     this.spinning = true;
+    this.scrollToBottom();
     this.selectedCharacter = null;
     this.spotlightIndex = null;
     const total = availableCharacters.length;
@@ -90,7 +111,6 @@ export class SpinTheWheel {
     for (let i = 0; i < rounds; i++) {
       indices.push(Math.floor(Math.random() * total));
     }
-    // Final index to select
     const finalIndex = Math.floor(Math.random() * total);
     indices.push(finalIndex);
 
@@ -100,24 +120,43 @@ export class SpinTheWheel {
         const selectedChar = availableCharacters[availableIndex];
         this.spotlightIndex = this.filteredCharacters.findIndex(char => char === selectedChar);
         current++;
-        interval = Math.min(300, interval + 20); // slow down
+        interval = Math.min(300, interval + 20);
         setTimeout(spotlightStep, interval);
       } else {
         this.selectedCharacter = availableCharacters[finalIndex];
         this.spotlightIndex = null;
         this.spinning = false;
+        this.scrollToResult();
       }
     };
     spotlightStep();
   }
 
   getChatLink(character: Character): string {
-    const key = 'chatLink_' + (character.name || 'unknown');
+    const key = "chatLink_" + (character.name || "unknown");
     const stored = localStorage.getItem(key);
     return stored ? stored : character.link;
   }
 
   goBackToRoster() {
-    this.router.navigate(['/']);
+    this.router.navigate(["/"]);
+  }
+
+  scrollToResult() {
+    setTimeout(() => {
+      const resultElement = document.querySelector('.result');
+      if (resultElement) {
+        resultElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        // If result doesn't exist yet, scroll to bottom
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }
+    }, 100);
+  }
+
+  scrollToBottom() {
+    setTimeout(() => {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }, 100);
   }
 }

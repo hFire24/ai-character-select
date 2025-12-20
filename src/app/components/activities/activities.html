@@ -1,0 +1,73 @@
+<div class="activities-container">
+  <h3 class="activities-title clickable" (click)="toggleCollapse()">
+    Activities 
+    <span class="collapse-icon">{{ isCollapsed ? '▶' : '▼' }}</span>
+  </h3>
+  <div class="activities-buttons-container" [class.collapsed]="isCollapsed">
+    <div class="activities-group">
+      <h4>Ranking Methods</h4>
+      <button
+        *ngIf="!isIOS()"
+        routerLink="tier-list"
+        routerLinkActive="active"
+        title="Create and customize tier rankings with drag-and-drop functionality">
+        Tier List
+      </button>
+      <button
+        routerLink="sorter"
+        routerLinkActive="active"
+        title="Compare characters pairwise to determine your rankings">
+        Comparison
+      </button>
+      <button
+        routerLink="tournament"
+        routerLinkActive="active"
+        title="Run a bracket-style tournament to find your favorite character">
+        Tournament
+      </button>
+      <button 
+        routerLink="blind-ranking" 
+        routerLinkActive="active"
+        title="Rank characters without knowing who comes next">
+        Blind Ranking
+      </button>
+    </div>
+    <div class="activities-group">
+      <h4>Dynamics</h4>
+      <button
+        routerLink="duos"
+        routerLinkActive="active"
+        title="Find out which pair of characters have duo names">
+        Duos
+      </button>
+      <button
+        routerLink="trios"
+        routerLinkActive="active"
+        title="View groups of three characters with special connections">
+        Trios
+      </button>
+      <button
+        routerLink="birthday-calendar"
+        routerLinkActive="active"
+        title="See character birthdays organized by month">
+        Birthdays
+      </button>
+    </div>
+    <div class="activities-group">
+      <h4>Other Activities</h4>
+      <button
+        routerLink="story-helper"
+        routerLinkActive="active"
+        title="Enhance your story prompts with this tool">
+        Story Helper
+      </button>
+      <button
+        routerLink="spin-the-wheel"
+        routerLinkActive="active"
+        title="Randomly select a character from the roster">
+        Random Picker
+      </button>
+      <button disabled title="Coming soon - Personality Quizzes">Quizzes</button>
+    </div>
+  </div>
+</div>
