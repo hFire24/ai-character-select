@@ -17,6 +17,11 @@
     },
     {
       "id1": 0,
+      "id2": 60,
+      "name": "Chaotic & Practical"
+    },
+    {
+      "id1": 0,
       "id2": 63,
       "name": "Cap Wearers"
     },
@@ -275,11 +280,6 @@
       "id1": 4,
       "id2": 65,
       "name": "Mobile Gamers"
-    },
-    {
-      "id1": 4,
-      "id2": 66,
-      "name": "Arcade Buddies"
     },
     {
       "id1": 4,
@@ -586,13 +586,22 @@
     {
       "id1": 15,
       "id2": 23,
-      "name": "Sidekick & Anti-Caffeine Hero",
-      "altName": "Anti-Caffeine Hero & Sidekick"
+      "name": "Anti-Caffeine Heroes"
     },
     {
       "id1": 15,
       "id2": 32,
       "name": "Slackers"
+    },
+    {
+      "id1": 15,
+      "id2": 38,
+      "name": "Fluffy Anime Fans"
+    },
+    {
+      "id1": 15,
+      "id2": 42,
+      "name": "Cosplayers"
     },
     {
       "id1": 15,
@@ -947,6 +956,11 @@
       "name": "Soft Maids"
     },
     {
+      "id1": 26,
+      "id2": 77,
+      "name": "Shy Maids"
+    },
+    {
       "id1": 27,
       "id2": 52,
       "name": "21st Century Digital Girls"
@@ -964,7 +978,7 @@
     {
       "id1": 27,
       "id2": 67,
-      "name": "Digital Witches"
+      "name": "Online Witches"
     },
     {
       "id1": 27,
@@ -1015,6 +1029,11 @@
     },
     {
       "id1": 30,
+      "id2": 55,
+      "name": "Straightforward Food Enjoyers"
+    },
+    {
+      "id1": 30,
       "id2": 57,
       "name": "Gourmand Travelers"
     },
@@ -1043,7 +1062,7 @@
     {
       "id1": 32,
       "id2": 44,
-      "name": "Cuteness Connoisseurs"
+      "name": "Cuteness Consumers"
     },
     {
       "id1": 32,
@@ -1114,12 +1133,27 @@
     {
       "id1": 36,
       "id2": 50,
-      "name": "Haters of Cuteness and Joy"
+      "name": "Cuteness Evaders"
+    },
+    {
+      "id1": 36,
+      "id2": 64,
+      "name": "Cuteness Haters"
+    },
+    {
+      "id1": 37,
+      "id2": 38,
+      "name": "Gentle Ladies"
     },
     {
       "id1": 37,
       "id2": 72,
       "name": "Elegant Duo"
+    },
+    {
+      "id1": 37,
+      "id2": 74,
+      "name": "Competent Cooks"
     },
     {
       "id1": 38,
