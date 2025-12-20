@@ -97,4 +97,10 @@ export class DeviceService {
     if (this.isTablet()) return 'tablet';
     return 'desktop';
   }
+
+  /** Detect iOS devices (iPhone, iPad, iPod) */
+  isIOS(): boolean {
+    if (typeof navigator === 'undefined') return false;
+    return /iphone|ipad|ipod/i.test(navigator.userAgent);
+  }
 }

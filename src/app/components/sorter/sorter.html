@@ -1,0 +1,82 @@
+<h1>Character Sorter</h1>
+
+<!-- Setup Phase -->
+<div *ngIf="!isSorting && sortedCharacters.length === 0" class="setup">
+  <button (click)="start()" class="start-button">Start Sorting</button>
+
+  <div class="filters">
+    <div class="filter-group">
+      <h3>Gender</h3>
+      <div class="filter-section">
+        <label>
+          <input type="radio" name="filter" [(ngModel)]="genderFilter" value="all">
+          {{genderAllLabel}}
+        </label>
+        <label>
+          <input type="radio" name="filter" [(ngModel)]="genderFilter" value="boys">
+          {{genderBoysLabel}}
+        </label>
+        <label>
+          <input type="radio" name="filter" [(ngModel)]="genderFilter" value="girls">
+          {{genderGirlsLabel}}
+        </label>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Character Status</h3>
+      <div class="filter-section">
+        <label>
+          <input type="radio" name="characterType" [(ngModel)]="characterTypeFilter" value="active">
+          💛 Active Only
+        </label>
+        <label>
+          <input type="radio" name="characterType" [(ngModel)]="characterTypeFilter" value="activeSide">
+          💛🩶 Active + Side
+        </label>
+        <label>
+          <input type="radio" name="characterType" [(ngModel)]="characterTypeFilter" value="all">
+          💛🩶🖤 All Characters
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sorting Phase -->
+<div *ngIf="isSorting && currentPair" class="sorting">
+  <div class="progress">
+    <h2>Round {{progress + 1}}</h2>
+  </div>
+
+  <div class="comparison">
+    <div class="character-option" (click)="choose(currentPair[0])">
+      <img [src]="'assets/' + currentPair[0].img" [alt]="currentPair[0].name">
+      <h3>{{currentPair[0].shortName || currentPair[0].name}}</h3>
+    </div>
+
+    <div class="tie-option">
+      <button (click)="chooseTie()" class="tie-button">Tie</button>
+      <button class="back-button" (click)="back()" [disabled]="!canGoBack()">Back</button>
+    </div>
+
+    <div class="character-option" (click)="choose(currentPair[1])">
+      <img [src]="'assets/' + currentPair[1].img" [alt]="currentPair[1].name">
+      <h3>{{currentPair[1].shortName || currentPair[1].name}}</h3>
+    </div>
+  </div>
+</div>
+
+<!-- Results Phase -->
+<div *ngIf="!isSorting && sortedCharacters.length > 0" class="results">
+  <h2>Your Rankings</h2>
+  <button (click)="sortedCharacters = []" class="restart-button">Start Over</button>
+  
+  <ol class="ranking-list">
+    <li *ngFor="let char of sortedCharacters; let i = index" class="ranking-item">
+      <span class="rank">{{getDisplayRank(i, char)}}</span>
+      <img [src]="'assets/' + char.img" [alt]="char.name">
+      <span class="name">{{char.shortName || char.name}}</span>
+    </li>
+  </ol>
+</div>
