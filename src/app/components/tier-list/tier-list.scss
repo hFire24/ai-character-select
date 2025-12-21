@@ -38,6 +38,13 @@
 	align-items: center;
 	cursor: grab;
 	min-width: 80px;
+	transition: transform 0.2s, opacity 0.2s;
+
+	&.selected {
+		transform: scale(0.9);
+		opacity: 0.6;
+		filter: brightness(0.85);
+	}
 }
 
 .character-img {
@@ -51,7 +58,8 @@
 
 .character-name {
 	font-size: 0.95rem;
-  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Archivo Narrow', 'Arial Narrow', sans-serif;
+	font-weight: 400;
 	text-align: center;
 	margin-bottom: 0.1rem;
 	color: #e0e0e0;
@@ -119,6 +127,16 @@
 	flex-wrap: wrap;
 	gap: 1rem;
 	margin: 0.5rem 0;
+}
+
+.character-pool-list .tier-character {
+	cursor: pointer;
+
+	&.selected {
+		transform: scale(0.9);
+		opacity: 0.6;
+		filter: brightness(0.85);
+	}
 }
 
 .filter-section {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { DeviceService } from '../../services/device.service';
@@ -9,15 +9,10 @@ import { DeviceService } from '../../services/device.service';
   templateUrl: './activities.html',
   styleUrl: './activities.scss'
 })
-export class Activities implements OnInit {
-  isCollapsed = false;
+export class Activities {
+  isCollapsed = true;
 
-  constructor(private deviceService: DeviceService) {}
-
-  ngOnInit() {
-    // Check if device is mobile and collapse activities by default
-    this.isCollapsed = this.deviceService.isPhone();
-  }
+  constructor(private deviceService: DeviceService) {}  
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;

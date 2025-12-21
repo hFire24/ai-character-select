@@ -1,4 +1,4 @@
-<h1>Characters Tier List Maker</h1>
+<h1>Tier List Maker</h1>
 <div class="tier-list">
   <div *ngFor="let tier of tiers; let i = index" class="tier-row"
     (dragover)="onDragOver($event)" (drop)="onDrop($event, i)">
@@ -19,7 +19,8 @@
     <!-- Section 2: Tier Characters -->
     <div class="tier-characters"
       (dragover)="onDragOver($event)"
-      (drop)="onCharacterDrop($event, i, 0)">
+      (drop)="onCharacterDrop($event, i, 0)"
+      (click)="(selectedPoolCharIdx !== null || selectedTierCharIdx !== null) && placeSelectedCharacterInTier(i)">
       <ng-container *ngIf="tier.characters.length === 0">
         <div class="tier-empty-placeholder">
           Drop here
@@ -27,10 +28,12 @@
       </ng-container>
       <ng-container *ngFor="let char of tier.characters; let j = index">
         <div class="tier-character"
+          [class.selected]="selectedTierCharIdx?.tierIdx === i && selectedTierCharIdx?.charIdx === j"
           draggable="true"
           (dragstart)="onDragStart($event, i, j)"
           (dragover)="onDragOver($event)"
-          (drop)="onCharacterDrop($event, i, j)">
+          (drop)="onCharacterDrop($event, i, j)"
+          (click)="(selectedPoolCharIdx !== null || selectedTierCharIdx !== null) ? placeSelectedCharacterInTierAtIndex(i, j) : toggleTierCharacterSelection(i, j); $event.stopPropagation()">
           <img [src]="char.img" [alt]="char.name" class="character-img" />
           <div class="character-name">{{ char.name }}</div>
         </div>
@@ -73,8 +76,10 @@
   <h2>Character Pool</h2>
   <div class="character-pool-list">
     <div *ngFor="let char of characterPool; let j = index" class="tier-character"
+      [class.selected]="selectedPoolCharIdx === j"
       draggable="true"
-      (dragstart)="onPoolDragStart($event, j)">
+      (dragstart)="onPoolDragStart($event, j)"
+      (click)="selectedTierCharIdx !== null ? moveSelectedTierCharacterToPool(j) : togglePoolCharacterSelection(j)">
       <ng-container *ngIf="char.img; else noImg">
         <img [src]="char.img" [alt]="char.name" class="character-img" />
       </ng-container>

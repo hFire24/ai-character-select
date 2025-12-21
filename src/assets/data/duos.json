@@ -625,6 +625,11 @@
     },
     {
       "id1": 15,
+      "id2": 55,
+      "name": "Elite Snackers"
+    },
+    {
+      "id1": 15,
       "id2": 66,
       "name": "Cute Anime Fans"
     },
@@ -802,6 +807,11 @@
       "id1": 21,
       "id2": 35,
       "name": "Minidress Wearers"
+    },
+    {
+      "id1": 21,
+      "id2": 38,
+      "name": "Blonde Look-alikes"
     },
     {
       "id1": 21,
@@ -984,6 +994,11 @@
       "id1": 27,
       "id2": 69,
       "name": "Internet Nostalgics"
+    },
+    {
+      "id1": 27,
+      "id2": 77,
+      "name": "TG AR'd Duo"
     },
     {
       "id1": 28,

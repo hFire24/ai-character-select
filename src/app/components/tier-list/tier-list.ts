@@ -16,6 +16,8 @@ export class TierList {
   characterFilter: string = 'all';
   splitTwins: boolean = false;
   router: any;
+  selectedPoolCharIdx: number | null = null;
+  selectedTierCharIdx: { tierIdx: number; charIdx: number } | null = null;
 
   onPoolDrop(event: DragEvent) {
     event.preventDefault();
@@ -97,6 +99,84 @@ export class TierList {
     event.dataTransfer?.setData('text/plain', '');
     this.draggedTierIdx = null;
     this.draggedCharIdx = null;
+  }
+
+  togglePoolCharacterSelection(idx: number) {
+    if (this.selectedPoolCharIdx === idx) {
+      this.selectedPoolCharIdx = null;
+    } else {
+      this.selectedPoolCharIdx = idx;
+      this.selectedTierCharIdx = null;
+    }
+  }
+
+  moveSelectedTierCharacterToPool(poolCharIdx: number) {
+    // Only allow moving tier characters to pool
+    if (this.selectedTierCharIdx === null) return;
+
+    const sourceTierIdx = this.selectedTierCharIdx.tierIdx;
+    const sourceCharIdx = this.selectedTierCharIdx.charIdx;
+    
+    // Remove character from tier
+    this.tiers[sourceTierIdx].characters.splice(sourceCharIdx, 1);
+    
+    this.selectedTierCharIdx = null;
+  }
+
+  toggleTierCharacterSelection(tierIdx: number, charIdx: number) {
+    if (
+      this.selectedTierCharIdx?.tierIdx === tierIdx &&
+      this.selectedTierCharIdx?.charIdx === charIdx
+    ) {
+      this.selectedTierCharIdx = null;
+    } else {
+      this.selectedTierCharIdx = { tierIdx, charIdx };
+      this.selectedPoolCharIdx = null;
+    }
+  }
+
+  placeSelectedCharacterInTierAtIndex(tierIdx: number, insertIdx: number) {
+    let char: any = null;
+
+    if (this.selectedPoolCharIdx !== null) {
+      char = this.characterPool[this.selectedPoolCharIdx];
+      this.tiers[tierIdx].characters.splice(insertIdx, 0, char);
+      this.selectedPoolCharIdx = null;
+    } else if (this.selectedTierCharIdx !== null) {
+      const sourceTierIdx = this.selectedTierCharIdx.tierIdx;
+      const sourceCharIdx = this.selectedTierCharIdx.charIdx;
+      char = this.tiers[sourceTierIdx].characters[sourceCharIdx];
+      
+      if (sourceTierIdx === tierIdx) {
+        // Moving within the same tier
+        // Don't move if clicking the same character
+        if (sourceCharIdx === insertIdx) {
+          this.selectedTierCharIdx = null;
+          return;
+        }
+        
+        // Remove from source
+        this.tiers[sourceTierIdx].characters.splice(sourceCharIdx, 1);
+        
+        // Adjust insert index if we removed from before the insert point
+        const adjustedIdx = sourceCharIdx < insertIdx ? insertIdx - 1 : insertIdx;
+        
+        // Insert at new position
+        this.tiers[tierIdx].characters.splice(adjustedIdx, 0, char);
+      } else {
+        // Moving from different tier
+        this.tiers[sourceTierIdx].characters.splice(sourceCharIdx, 1);
+        this.tiers[tierIdx].characters.splice(insertIdx, 0, char);
+      }
+      
+      this.selectedTierCharIdx = null;
+    }
+  }
+
+  placeSelectedCharacterInTier(tierIdx: number) {
+    // Append to the end if clicking the tier container
+    const insertIdx = this.tiers[tierIdx].characters.length;
+    this.placeSelectedCharacterInTierAtIndex(tierIdx, insertIdx);
   }
   onCharacterDrop(event: DragEvent, targetTierIdx: number, targetCharIdx: number) {
     event.preventDefault();
