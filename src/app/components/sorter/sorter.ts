@@ -429,7 +429,11 @@ export class Sorter implements OnInit, OnDestroy {
           return false;
         }
       }
-
+      if (this.characterTypeFilter === 'activeRetired') {
+        if (char.type !== 'active' && char.type !== 'retired') {
+          return false;
+        }
+      }
       return true;
     });
   }
