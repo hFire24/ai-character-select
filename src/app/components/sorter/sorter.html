@@ -22,23 +22,27 @@
     </div>
 
     <div class="filter-group">
-      <h3>Character Status</h3>
+      <h3>Character Types</h3>
       <div class="filter-section">
         <label>
-          <input type="radio" name="characterType" [(ngModel)]="characterTypeFilter" value="active">
-          💛 Active Only
+          <input type="checkbox" [(ngModel)]="includeActive">
+          Active Characters
         </label>
         <label>
-          <input type="radio" name="characterType" [(ngModel)]="characterTypeFilter" value="activeSide">
-          💛🩶 Active + Side
+          <input type="checkbox" [(ngModel)]="includeInactive">
+          Inactive Characters
         </label>
         <label>
-          <input type="radio" name="characterType" [(ngModel)]="characterTypeFilter" value="activeRetired">
-          💛🖤 Active + Retired
+          <input type="checkbox" [(ngModel)]="includeSide">
+          Side Characters
         </label>
         <label>
-          <input type="radio" name="characterType" [(ngModel)]="characterTypeFilter" value="all">
-          💛🩶🖤 All Characters
+          <input type="checkbox" [(ngModel)]="includeRetired">
+          Retired Characters
+        </label>
+        <label>
+          <input type="checkbox" [(ngModel)]="includeMe">
+          Me
         </label>
       </div>
     </div>

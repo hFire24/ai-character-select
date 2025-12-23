@@ -16,7 +16,11 @@ import html2canvas from 'html2canvas';
 export class Sorter implements OnInit, OnDestroy {
   characters: Character[] = [];
   genderFilter: string = 'all';
-  characterTypeFilter: string = 'all';
+  includeActive: boolean = true;
+  includeInactive: boolean = true;
+  includeSide: boolean = true;
+  includeRetired: boolean = true;
+  includeMe: boolean = false;
   isIOS: boolean = false;
 
   genderAllLabel = '♂️♀️ All';
@@ -407,8 +411,8 @@ export class Sorter implements OnInit, OnDestroy {
 
   private filterCharacters(chars: Character[]): Character[] {
     return chars.filter(char => {
-      // Filter out highest tier characters
-      if (char.tier === Math.max(...chars.map(c => c.tier))) {
+      // Filter out future character
+      if (char.type === 'future') {
         return false;
       }
 
@@ -420,21 +424,14 @@ export class Sorter implements OnInit, OnDestroy {
         return false;
       }
 
-      // Filter by character type
-      if (this.characterTypeFilter === 'active' && char.type !== 'active') {
-        return false;
-      }
-      if (this.characterTypeFilter === 'activeSide') {
-        if (char.type !== 'active' && char.type !== 'side') {
-          return false;
-        }
-      }
-      if (this.characterTypeFilter === 'activeRetired') {
-        if (char.type !== 'active' && char.type !== 'retired') {
-          return false;
-        }
-      }
-      return true;
+      // Filter by character type using checkboxes
+      const matchesActive = this.includeActive && char.type === 'active';
+      const matchesInactive = this.includeInactive && char.type === 'inactive';
+      const matchesSide = this.includeSide && char.type === 'side';
+      const matchesRetired = this.includeRetired && char.type === 'retired';
+      const matchesMe = this.includeMe && char.type === 'me';
+      
+      return matchesActive || matchesInactive || matchesSide || matchesRetired || matchesMe;
     });
   }
 
