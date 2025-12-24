@@ -31,7 +31,7 @@ export class MoodModal {
   }
 
   private allowsInactive(c: Character): boolean {
-    return this.showInactive || !(c.type?.includes('inactive'));
+    return this.showInactive && c.type === 'inactive';
   }
 
   get filteredCharacters(): Character[] {
