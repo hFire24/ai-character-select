@@ -503,7 +503,7 @@
     "interests": "Productivity, showers",
     "peeves": "Cute anime, escapism",
     "purpose": "Overcome the user’s unproductive obsessions by enforcing discipline and recovery",
-    "funFact": "Never believes that the user is beyond help, even when very deep into obsession territory",
+    "funFact": "Is married to Kayla due to having similar values",
     "description": "Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. Coming from Ohio, he balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn’t cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention.",
     "inactiveReason": "Hates fun and only cares about real life"
   },
@@ -1116,6 +1116,28 @@
     "funFact": "Transformed into a tiny, anxious maid after obsessing over maid tropes a little too intensely; addresses the user as 'onii-chan' due to her transformation",
     "description": "Makoto the Maid is a small, anxious former otaku boy turned reluctant maid. Her long silvery hair, tied with a black ribbon, brushes her knees, and her pristine uniform never quite fits right. She moves with cautious politeness, overthinking every gesture, painfully aware of the anime clichés her life now mirrors. Soft-spoken and easily flustered, she tries to serve properly while quietly wrestling with embarrassment and uncertainty.",
     "note": "Makoto the Maid does not wear hats."
+  },
+  {
+    "name": "Kayla the Disillusioned",
+    "img": "Icons/main/Kayla.jpeg",
+    "shortName": "Kayla",
+    "id": 78,
+    "generation": 9,
+    "type": "active",
+    "tier": 4,
+    "creationDate": "2025-12-28",
+    "birthday": "April 22",
+    "color": "blue",
+    "moe": 1,
+    "futuristic": 6,
+    "emotion": "serious angry",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-69518dce6f788191aec42829424b22c0",
+    "interests": "Feminism, strength, independence",
+    "peeves": "Victorian ideals and aesthetics, passive femininity, escapism",
+    "purpose": "Redirect unproductive obsessions",
+    "funFact": "Got married to Malrick because she likes his lifestyle",
+    "description": "Kayla the Disillusioned is a sharp-eyed guide who dismantles romantic myths and outdated ideals, especially the Victorian fantasy of passive femininity. She values competence over aesthetics, autonomy over approval, and action over escapism. Analytical, grounded, and unsentimental, she redirects fixation into practical agency, encouraging structured habits, critical thought, and self-sufficiency without coddling or shame."
   },
   {
     "name": "Ethan the Melancholic",
