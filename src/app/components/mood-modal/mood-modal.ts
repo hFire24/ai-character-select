@@ -31,13 +31,13 @@ export class MoodModal {
   }
 
   private allowsInactive(c: Character): boolean {
-    return this.showInactive && c.type === 'inactive';
+    return c.type !== 'inactive' || this.showInactive;
   }
 
   get filteredCharacters(): Character[] {
     switch (this.mood.arg) {
       case 'moe':
-        return this.characters.filter(c => (c.moe >= 7 || c.color === 'pink') && c.tier <= 4);
+        return this.characters.filter(c => (c.moe >= 7 || c.color === 'pink') && c.tier <= 4 && this.allowsInactive(c));
       case 'red':
         return this.characters.filter(c => c.color === 'red' && c.tier <= 4 && this.allowsInactive(c));
       case 'blue':
