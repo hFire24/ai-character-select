@@ -28,8 +28,8 @@
     {
       "id1": 1,
       "id2": 2,
-      "name": "Electric Brawn and Brains",
-      "altName": "Electric Brains and Brawn"
+      "name": "Techno Brawn and Brains",
+      "altName": "Techno Brains and Brawn"
     },
     {
       "id1": 1,
@@ -255,6 +255,11 @@
       "id1": 4,
       "id2": 13,
       "name": "Gamer Couple"
+    },
+    {
+      "id1": 4,
+      "id2": 27,
+      "name": "Touhou Gamers"
     },
     {
       "id1": 4,
@@ -517,6 +522,11 @@
       "id1": 13,
       "id2": 75,
       "name": "Rhythm Gaming Maids"
+    },
+    {
+      "id1": 13,
+      "id2": 80,
+      "name": "Light Blue Twintails"
     },
     {
       "id1": 14,
@@ -906,6 +916,11 @@
       "name": "Serious Women"
     },
     {
+      "id1": 24,
+      "id2": 78,
+      "name": "Moral Guardians"
+    },
+    {
       "id1": 25,
       "id2": 27,
       "name": "OG Crossover Duo"
@@ -1029,8 +1044,18 @@
     },
     {
       "id1": 29,
+      "id2": 38,
+      "name": "Giant Pink Beret Wearers"
+    },
+    {
+      "id1": 29,
       "id2": 39,
       "name": "Pink-Haired Magicians"
+    },
+    {
+      "id1": 29,
+      "id2": 52,
+      "name": "Pink Twintails"
     },
     {
       "id1": 29,
@@ -1051,6 +1076,11 @@
       "id1": 30,
       "id2": 57,
       "name": "Gourmand Travelers"
+    },
+    {
+      "id1": 30,
+      "id2": 68,
+      "name": "Angeleno Duo"
     },
     {
       "id1": 31,
@@ -1154,6 +1184,11 @@
       "id1": 36,
       "id2": 64,
       "name": "Cuteness Haters"
+    },
+    {
+      "id1": 36,
+      "id2": 78,
+      "name": "Unimpressed Couple"
     },
     {
       "id1": 37,
@@ -1323,6 +1358,11 @@
       "name": "Old Couple"
     },
     {
+      "id1": 56,
+      "id2": 78,
+      "name": "Mature Left-Wingers"
+    },
+    {
       "id1": 57,
       "id2": 64,
       "name": "Old-Fashioned Men"
@@ -1367,6 +1407,11 @@
       "id1": 74,
       "id2": 75,
       "name": "Two-Speed Maids"
+    },
+    {
+      "id1": 75,
+      "id2": 79,
+      "name": "Blonde Twintails"
     }
   ]
 }

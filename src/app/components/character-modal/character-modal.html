@@ -22,7 +22,9 @@
       <span *ngIf="character.emotion?.includes('sad')">☹️</span>
       <span *ngIf="character.emotion?.includes('edgy')">😈</span>
       <span *ngIf="character.emotion?.includes('straightforward')">🎯</span>
-      <span *ngIf="character.moe >= 7">🩷</span>
+      <span *ngIf="character.moe >= 7 && character.shortName !== 'Sasha' && character.shortName !== 'Misha'">🩷</span>
+      <span *ngIf="character.shortName === 'Sasha'">☀️</span>
+      <span *ngIf="character.shortName === 'Misha'">❄️</span>
       <span *ngIf="character.musicEnjoyer">🎵</span>
       <span *ngIf="character.tier === 1">💛</span>
       <span *ngIf="character.tier === 2">🩶</span>
