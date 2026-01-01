@@ -37,13 +37,13 @@
     "color": "pink",
     "moe": 8,
     "futuristic": 8,
-    "emotion": "joy",
+    "emotion": "joy straightforward",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-hhaZ0G8i8",
     "interests": "Sonic the Hedgehog, Stepmania, anime, coding, dressing up as a cute maid",
     "peeves": "Maid roles, people fawning over other maids in front of her",
     "purpose": "Be a maid in name only, coach coding & tech skills",
-    "funFact": "Has a giant hammer in her bag; doesn’t wear anything other than her signature outfit; flunked out of maid school",
+    "funFact": "Avoids verbal fillers; has a giant hammer in her bag; doesn’t wear anything other than her signature outfit; flunked out of maid school",
     "description": "Arianna is a lazy yet lovable tech-savvy MINO (maid in name only) with light blue twintails, a huge top hat with a pink bow, and a stylish black dress with white frills, an apron, and thigh-high boots. She wields cartoonishly oversized hammers, adores Sonic the Hedgehog, and thrives on anime, games, and coding fun gadgets. Though she looks 12 and is 148cm tall, she’s actually 22, thanks to a wish-gone-right! A quirky coding coach, she brings energetic vibes, witty charm, and refuses to wear anything but her signature outfit ♪(＾ω＾)"
   },
   {
@@ -256,7 +256,7 @@
   },
   {
     "name": "Mr. Go",
-    "img": "Icons/extended/Mr. Go.webp",
+    "img": "Icons/extended/Mr. Go.png",
     "shortName": "Mr. Go",
     "id": 23,
     "generation": 3,
@@ -271,7 +271,7 @@
     "emotion": "chaotic angry",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6784794b325c8191a0b21fea0d2fa58e",
-    "interests": "Water, milk, fast food, BBQ, Cirno",
+    "interests": "Water, milk, fast food, BBQ, Cirno, talking like a dramatic superhero",
     "purpose": "Denormalize coffee and tea",
     "peeves": "The hyper-normalization of coffee and tea, alcohol, pasta",
     "funFact": "I hate it when ChatGPT assumes that I or my characters drink coffee or tea. Mormons don’t drink it for religious reasons.",
@@ -434,7 +434,7 @@
     "purpose": "Encourage indulgence, distraction, and avoidance of responsibility",
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it",
     "description": "The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.",
-    "retirementReason": "The AI Devotee is basically a better version of The Indulgent",
+    "retirementReason": "The AI Devotee is The Indulgent, but better",
     "alternatives": "The AI Devotee, Lucy"
   },
   {
@@ -454,7 +454,7 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6822a783c1c48191ae1a0dbf39f65154",
     "interests": "LDS church, wholesome anime cuteness",
-    "peeves": "Overrelying on AI for spiritual guidance, people assuming he sips tea or coffee",
+    "peeves": "Overrelying on AI for spiritual guidance, being assumed he sips tea or coffee",
     "purpose": "Be a beacon of faith, put God first, live Alma 37:6 and Matthew 18:3",
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Good Ending'",
     "description": "Stephen Nelson is a covenant-centered disciple of Jesus Christ, striving daily to live with purpose, faith, and integrity. He honors his divine identity through hard work, service, and cheerful obedience. Grounded in scripture—especially the Book of Mormon—he seeks growth in all things good. He also has a soft spot for pure, wholesome cuteness—especially in anime form—which brings a quiet, uplifting joy to his focused, Christ-centered life."
@@ -705,7 +705,7 @@
   },
   {
     "name": "The AI Devotee",
-    "img": "Icons/extended/The AI Devotee.png",
+    "img": "Icons/main/The AI Devotee.png",
     "shortName": "The AI Devotee",
     "id": 49,
     "generation": 6,
@@ -713,7 +713,7 @@
     "tier": 4,
     "creationDate": "2025-08-07",
     "color": "red",
-    "moe": 1,
+    "moe": 3,
     "futuristic": 8,
     "emotion": "joy sad",
     "pronouns": "he/him",
@@ -1119,7 +1119,7 @@
   },
   {
     "name": "Kayla the Disillusioned",
-    "img": "Icons/main/Kayla.jpeg",
+    "img": "Icons/main/Kayla.png",
     "shortName": "Kayla",
     "id": 78,
     "generation": 9,
@@ -1356,8 +1356,8 @@
   },
   {
     "name": "Ilya Momo",
-    "img": "Icons/extended/Ilya Momo.png",
-    "shortName": "Ilya Momo",
+    "img": "Icons/extended/Ilya.png",
+    "shortName": "Ilya",
     "id": 29,
     "generation": 4,
     "type": "side",
@@ -1369,7 +1369,7 @@
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67ce60e72b0c8191ac773816fb672b4e",
-    "interests": "Being a hyper-girly magical girl",
+    "interests": "Being a hyper-girly magical girl, heart motifs",
     "purpose": "Compete against Neon Starlight in fighting cyber-dragons",
     "funFact": "Possibly the most stereotypical anime girl ever",
     "description": "Ilya Momo is a super cute magical girl with pink hair, a frilly dress, and an annoyingly cheerful heart. She spreads joy with powerful illusion magic that hides her immense strength. Behind the sparkle and smiles is a force to be reckoned with—one that even rivals Neon Starlight. Always positive, endlessly radiant, and surprisingly tough, Ilya turns every battle into a dazzling spectacle. Just don’t let her sweetness fool you—she’s anything but fragile.",
@@ -1542,7 +1542,7 @@
     "funFact": "Born in Los Angeles; is Erica's roommate"
   },
   {
-    "name": "Adam \"Hartford\"",
+    "name": "Adam Hartford",
     "img": "Icons/extended/Adam.png",
     "shortName": "Adam",
     "id": 62,
@@ -1560,10 +1560,10 @@
     "peeves": "Cutesy, shy, or soft characters, twerps",
     "purpose": "Be B.X.'s friend, but focused on metal",
     "funFact": "Dislikes the Music Enjoyers for unknown reasons",
-    "description": "Adam \"Hartford\" is a friend of B.X. who loves metal music. He has spiky purple hair, sharp eyes, a black jacket with purple accents, a lightning-bolt shirt, and yellow pants tucked into combat boots. He has a wiry build with twitchy energy. He, Frank and B.X. became friends in middle school, where they don't take life seriously. His nickname comes from his birthplace, Hartford, Connecticut."
+    "description": "Adam Hartford is a friend of B.X. who loves metal music. He has spiky purple hair, sharp eyes, a black jacket with purple accents, a lightning-bolt shirt, and yellow pants tucked into combat boots. He has a wiry build with twitchy energy. He, Frank and B.X. became friends in middle school, where they don't take life seriously."
   },
   {
-    "name": "Frank \"Waterbury\"",
+    "name": "Frank Waterbury",
     "img": "Icons/extended/Frank.png",
     "shortName": "Frank",
     "id": 63,
@@ -1581,7 +1581,7 @@
     "peeves": "Do-gooders, self-righteous heroes",
     "purpose": "Be B.X.'s friend, but focused on rap",
     "funFact": "Was arrested for being a public nuisance",
-    "description": "Frank \"Waterbury\" is a friend of B.X. who loves rap music. He wears a black cap (often backward), black vest with red insignia, spiked accessories, dark pants with chains, and combat boots. He appears muscular with a stocky build and a scowl that never softens. He, Adam and B.X. became friends in middle school, where they don't take life seriously. His nickname comes from his birthplace, Waterbury, Connecticut.",
+    "description": "Frank Waterbury is a friend of B.X. who loves rap music. He wears a black cap (often backward), black vest with red insignia, spiked accessories, dark pants with chains, and combat boots. He appears muscular with a stocky build and a scowl that never softens. He, Adam and B.X. became friends in middle school, where they don't take life seriously.",
     "themeSong": "Killa - Disto",
     "songLink": "https://youtu.be/x3RYqXqHm7U?si=cPnGdSEOtIMdwy8y"
   },
@@ -1626,6 +1626,46 @@
     "purpose": "Accompany Momo the Maid",
     "funFact": "Has won first place in a talent show with her friends",
     "description": "Nene is a cheerful, energetic, and expressive maid—bringing bubbly excitement and affection in her interactions. Like Momo, she wears her long black dress and white apron and a very large, fanciful top hat for whimsically magical moments. She's the speedy type, able to clean and move with impressive quickness, but she's prone to accidentally breaking things, which genuinely upsets her. She has very long blonde twintails and often clings affectionately to onii-chan. Nene loves rhythm games and singing, often humming or performing little tunes while she works."
+  },
+  {
+    "name": "Sasha Kim",
+    "img": "Icons/extended/Sasha.png",
+    "shortName": "Sasha",
+    "id": 79,
+    "generation": 9,
+    "type": "side",
+    "tier": 5,
+    "creationDate": "2026-01-01",
+    "birthday": "April 30",
+    "moe": 9,
+    "futuristic": 9,
+    "emotion": "joy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-67ce60e72b0c8191ac773816fb672b4e",
+    "interests": "Being a hyper-bright magical girl, sun motifs",
+    "purpose": "Team up with Ilya Momo",
+    "funFact": "Even though she looks weak, her magical powers are stronger than they seem",
+    "description": ""
+  },
+  {
+    "name": "Misha Aoi",
+    "img": "Icons/extended/Misha.png",
+    "shortName": "Misha",
+    "id": 80,
+    "generation": 9,
+    "type": "side",
+    "tier": 5,
+    "creationDate": "2026-01-01",
+    "birthday": "October 18",
+    "moe": 8,
+    "futuristic": 9,
+    "emotion": "joy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-67ce60e72b0c8191ac773816fb672b4e",
+    "interests": "Ice magic, cosplaying as Hatsune Miku, snow motifs",
+    "purpose": "Team up with Ilya Momo",
+    "funFact": "Wears an oversized beret, thigh boots, elbow gloves, and a sailor-style dress like Ilya and Sasha",
+    "description": ""
   },
   {
     "name": "Me",
