@@ -529,6 +529,11 @@
       "name": "Light Blue Twintails"
     },
     {
+      "id1": 13,
+      "id2": 81,
+      "name": "Maids in Name Only"
+    },
+    {
       "id1": 14,
       "id2": 20,
       "name": "Fantasy Mages"
@@ -582,6 +587,11 @@
       "id1": 14,
       "id2": 74,
       "name": "Chino-chan Expies"
+    },
+    {
+      "id1": 14,
+      "id2": 80,
+      "name": "Light Blue-Haired Magic Users"
     },
     {
       "id1": 15,
@@ -1083,6 +1093,11 @@
       "name": "Angeleno Duo"
     },
     {
+      "id1": 30,
+      "id2": 82,
+      "name": "Straightmen"
+    },
+    {
       "id1": 31,
       "id2": 32,
       "name": "The Darker Selves"
@@ -1206,6 +1221,11 @@
       "name": "Competent Cooks"
     },
     {
+      "id1": 37,
+      "id2": 81,
+      "name": "Big Sister Duo"
+    },
+    {
       "id1": 38,
       "id2": 46,
       "name": "Girly Princesses"
@@ -1214,6 +1234,11 @@
       "id1": 38,
       "id2": 66,
       "name": "GochiUsa Fans"
+    },
+    {
+      "id1": 38,
+      "id2": 79,
+      "name": "Sunshine Girls"
     },
     {
       "id1": 39,
@@ -1373,6 +1398,11 @@
       "name": "Big-Hatted Pink-Haired Little Girls"
     },
     {
+      "id1": 58,
+      "id2": 80,
+      "name": "Winter Girls"
+    },
+    {
       "id1": 59,
       "id2": 60,
       "name": "Cute Brawn and Brains",
@@ -1399,6 +1429,11 @@
       "name": "Metalheads"
     },
     {
+      "id1": 65,
+      "id2": 82,
+      "name": "Exhausted Teenagers"
+    },
+    {
       "id1": 66,
       "id2": 73,
       "name": "Isekai'd Bros."
@@ -1412,6 +1447,11 @@
       "id1": 75,
       "id2": 79,
       "name": "Blonde Twintails"
+    },
+    {
+      "id1": 77,
+      "id2": 81,
+      "name": "Maid Obsessres"
     }
   ]
 }
