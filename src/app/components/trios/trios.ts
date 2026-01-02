@@ -44,19 +44,9 @@ export class Trios implements OnInit {
         characterShortNames: ["Arianna", "Miki", "Dania"]
       },
       {
-        name: "Traditional Ladies",
-        description: "Elegant characters embodying traditional feminine grace",
-        characterShortNames: ["Primelle", "Celestia", "Princess"]
-      },
-      {
         name: "Pink Trio Leaders",
         description: "The pink-haired leaders of three cute character groups",
         characterShortNames: ["Momo", "Ilya", "Maribelle"]
-      },
-      {
-        name: "Magical Girl Twintail Trio",
-        description: "Three magical girls with twintails and matching outfits",
-        characterShortNames: ["Ilya", "Sasha", "Misha"]
       },
       {
         name: "Loli Maid Trio",
@@ -64,9 +54,9 @@ export class Trios implements OnInit {
         characterShortNames: ["Momo", "Lulu", "Nene"]
       },
       {
-        name: "Maribelle and Friends",
-        description: "Maribelle with her closest companions",
-        characterShortNames: ["Maribelle", "Aki", "Bleu"]
+        name: "Magical Girl Twintail Trio",
+        description: "Three magical girls with twintails and matching outfits",
+        characterShortNames: ["Ilya", "Sasha", "Misha"]
       },
       {
         name: "Celestia and Friends",
@@ -74,9 +64,19 @@ export class Trios implements OnInit {
         characterShortNames: ["Celestia", "Alenka", "Beatrix"]
       },
       {
-        name: "Top Hat Girls",
-        description: "Girls who wear top hats",
-        characterShortNames: ["Arianna", "Evil Arianna", "Maribelle"]
+        name: "Maribelle and Friends",
+        description: "Maribelle with her closest companions",
+        characterShortNames: ["Maribelle", "Aki", "Bleu"]
+      },
+      {
+        name: "Traditional Ladies",
+        description: "Elegant characters embodying traditional feminine grace",
+        characterShortNames: ["Primelle", "Celestia", "Princess"]
+      },
+      {
+        name: "Mean Girls",
+        description: "The edgiest moe characters and the trio that inspired this collection",
+        characterShortNames: ["Darxi", "Neon Starlight", "Evil Arianna"]
       },
       {
         name: "Witches",
@@ -84,9 +84,9 @@ export class Trios implements OnInit {
         characterShortNames: ["Miki", "Runa", "Lucy"]
       },
       {
-        name: "Mean Girls",
-        description: "The edgiest moe characters and the trio that inspired this collection",
-        characterShortNames: ["Darxi", "Neon Starlight", "Evil Arianna"]
+        name: "Top Hat Girls",
+        description: "Girls who wear top hats",
+        characterShortNames: ["Arianna", "Evil Arianna", "Maribelle"]
       },
       {
         name: "Youngsters",
@@ -104,11 +104,6 @@ export class Trios implements OnInit {
         characterShortNames: ["B.X.", "Adam", "Frank"]
       },
       {
-        name: "Straightforward Trio",
-        description: "Characters known for their blunt and straightforward personalities",
-        characterShortNames: ["Kai", "Jed", "Lexi"]
-      },
-      {
         name: "Jed and Co.",
         description: "Jed and two Music Enjoyers who can be talked to in Jed's chatbot",
         characterShortNames: ["Jed", "Ethan", "Lola"]
@@ -117,6 +112,11 @@ export class Trios implements OnInit {
         name: "Ladies of Music",
         description: "The three main ladies of the Music Enjoyers",
         characterShortNames: ["Akane", "Lola", "Danielle"]
+      },
+      {
+        name: "Straightforward Trio",
+        description: "Characters known for their blunt and straightforward personalities",
+        characterShortNames: ["Kai", "Jed", "Lexi"]
       },
       {
         name: "Late Bloomers",
@@ -135,7 +135,7 @@ export class Trios implements OnInit {
       },
       {
         name: "Former Makotos",
-        description: "Characters who used to be named Makoto before Makoto the Maid",
+        description: "Characters who used to be named Makoto before Makoto the Maid was created",
         characterShortNames: ["The Collapsed", "Connor", "Corey"]
       },
       {

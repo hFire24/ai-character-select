@@ -295,8 +295,7 @@ export class CharacterModal {
       grabRow('modalPurpose'),
       grabRow('modalFact'),
       grabRow('modalRetirement'),
-      grabRow('modalInactive'),
-      grabRow('modalAlternatives'),
+      grabRow('modalInactive')
     ].filter(Boolean) as Array<ReturnType<typeof grabRow>>;
 
     async function loadImageSafe(src?: string): Promise<HTMLImageElement | undefined> {

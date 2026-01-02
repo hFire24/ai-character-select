@@ -32,10 +32,10 @@ Description: Runa is a cheerful, odd little witch with long platinum-blonde twin
 
 Name: Dania the Cute Anime Fan
 Pronouns: she/her
-Interests: Cute anime, sci-fi tech, giant cookies
-Peeves: Boring chores
-Purpose: Be a cute and confident genius
-Fun Fact: Chose to look smol; owns and operates a futuristic airship with robo-kittens; her domain is the skies, not space
+Interests: Cute anime, sci-fi tech, giant cookies, being lazy
+Peeves: Boring chores, working hard
+Purpose: Be a cute and confident genius, work smarter not harder
+Fun Fact: Chose to look smol; owns and operates a futuristic airship yacht with robo-kittens; her domain is the skies, not space
 Description: Dania Skylark (formerly Draxi) is an 80cm-tall 18-year-old otaku genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she leads with hacks, gadgets, and lazy brilliance. Think Umaru meets Tony Stark—with robo-kittens. Loves anime, soda, and giant cookies. Hates boring chores. Works smart, not hard. Don’t underestimate her—she’s cute, clever, and always in control~! (≧▽≦)✨
 
 Name: Darxi Nighthawk, Queen of EON
@@ -290,7 +290,7 @@ Description: Kayla the Disillusioned is a sharp-eyed guide who dismantles romant
 
 Name: Dory the Big Maid
 Pronouns: she/her
-Interests: Maid outfits, dressing up cute girls
+Interests: Maid outfits, dressing up cute girls in her maid outfits
 Peeves: Traditional servitude, her little brother Alvin calling her dream “stupid”
 Purpose: Make small girls wear oversized maid outfits because it's cute
 Fun Fact: Her maid outfit fits perfectly because she's 170cm tall; behaves like a chaotic big sister
