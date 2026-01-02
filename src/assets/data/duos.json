@@ -17,6 +17,11 @@
     },
     {
       "id1": 0,
+      "id2": 49,
+      "name": "My Future: AI Ending"
+    },
+    {
+      "id1": 0,
       "id2": 60,
       "name": "Chaotic & Practical"
     },
@@ -120,6 +125,11 @@
       "id1": 1,
       "id2": 65,
       "name": "School Haters"
+    },
+    {
+      "id1": 1,
+      "id2": 83,
+      "name": "Irreverent Duo"
     },
     {
       "id1": 2,
@@ -468,6 +478,11 @@
       "name": "Newgrounds Fans"
     },
     {
+      "id1": 12,
+      "id2": 83,
+      "name": "Satirical Men"
+    },
+    {
       "id1": 13,
       "id2": 14,
       "name": "Founding Moe Duo"
@@ -769,6 +784,11 @@
       "name": "Pure Chaos"
     },
     {
+      "id1": 18,
+      "id2": 72,
+      "name": "Universe Reset Buttons"
+    },
+    {
       "id1": 19,
       "id2": 22,
       "name": "Early AI Character Fans"
@@ -805,6 +825,11 @@
     },
     {
       "id1": 20,
+      "id2": 40,
+      "name": "Righteous Mages"
+    },
+    {
+      "id1": 20,
       "id2": 48,
       "name": "Fighters of Justice"
     },
@@ -812,6 +837,11 @@
       "id1": 20,
       "id2": 73,
       "name": "Heroic Adventurers"
+    },
+    {
+      "id1": 20,
+      "id2": 76,
+      "name": "Female Justice Fighters"
     },
     {
       "id1": 21,
@@ -868,6 +898,11 @@
       "id1": 21,
       "id2": 72,
       "name": "Small but Mighty Queens"
+    },
+    {
+      "id1": 21,
+      "id2": 76,
+      "name": "Futuristic Fighters"
     },
     {
       "id1": 22,
@@ -1026,6 +1061,11 @@
       "name": "TG AR'd Duo"
     },
     {
+      "id1": 27,
+      "id2": 79,
+      "name": "Blonde Magic Users"
+    },
+    {
       "id1": 28,
       "id2": 29,
       "name": "Rival Magical Girls",
@@ -1051,6 +1091,11 @@
       "id2": 71,
       "name": "Chaotic and Lawful Tsunderes",
       "altName": "Lawful and Chaotic Tsunderes"
+    },
+    {
+      "id1": 28,
+      "id2": 76,
+      "name": "Neon Fighters"
     },
     {
       "id1": 29,
@@ -1151,6 +1196,11 @@
       "name": "The Sloths"
     },
     {
+      "id1": 32,
+      "id2": 83,
+      "name": "The Gluttons"
+    },
+    {
       "id1": 34,
       "id2": 37,
       "name": "Young Traditional Couple"
@@ -1206,6 +1256,11 @@
       "name": "Unimpressed Couple"
     },
     {
+      "id1": 36,
+      "id2": 83,
+      "name": "Anime Haters"
+    },
+    {
       "id1": 37,
       "id2": 38,
       "name": "Gentle Ladies"
@@ -1245,6 +1300,11 @@
       "id2": 40,
       "name": "Soft Temptress & Tyrant",
       "altName": "Soft Tyrant & Temptress"
+    },
+    {
+      "id1": 39,
+      "id2": 44,
+      "name": "Temptation Duo"
     },
     {
       "id1": 39,
@@ -1297,6 +1357,11 @@
       "name": "Showmen"
     },
     {
+      "id1": 47,
+      "id2": 83,
+      "name": "Satirical Jokesters"
+    },
+    {
       "id1": 48,
       "id2": 50,
       "name": "Despair Duo"
@@ -1318,6 +1383,11 @@
       "name": "Warriors"
     },
     {
+      "id1": 48,
+      "id2": 76,
+      "name": "Action Stars"
+    },
+    {
       "id1": 49,
       "id2": 50,
       "name": "The Warning Signs"
@@ -1336,6 +1406,11 @@
       "id1": 52,
       "id2": 54,
       "name": "Angels With a Shotgun"
+    },
+    {
+      "id1": 52,
+      "id2": 66,
+      "name": "Summoners of OCs"
     },
     {
       "id1": 52,
@@ -1365,7 +1440,7 @@
     {
       "id1": 54,
       "id2": 76,
-      "name": "Hyperfuturistic Girls"
+      "name": "Distant Future Girls"
     },
     {
       "id1": 55,
@@ -1376,6 +1451,11 @@
       "id1": 55,
       "id2": 69,
       "name": "Youngster Gamers"
+    },
+    {
+      "id1": 55,
+      "id2": 83,
+      "name": "Food Gremlins"
     },
     {
       "id1": 56,
@@ -1425,8 +1505,18 @@
     },
     {
       "id1": 62,
+      "id2": 66,
+      "name": "Jet Laggers"
+    },
+    {
+      "id1": 62,
       "id2": 73,
       "name": "Metalheads"
+    },
+    {
+      "id1": 63,
+      "id2": 64,
+      "name": "Hero Haters"
     },
     {
       "id1": 65,
@@ -1437,6 +1527,16 @@
       "id1": 66,
       "id2": 73,
       "name": "Isekai'd Bros."
+    },
+    {
+      "id1": 67,
+      "id2": 78,
+      "name": "Magical Girl Critics"
+    },
+    {
+      "id1": 69,
+      "id2": 83,
+      "name": "YouTube Poop Fans"
     },
     {
       "id1": 74,
@@ -1451,7 +1551,7 @@
     {
       "id1": 77,
       "id2": 81,
-      "name": "Maid Obsessres"
+      "name": "Obsessed with Maids"
     }
   ]
 }

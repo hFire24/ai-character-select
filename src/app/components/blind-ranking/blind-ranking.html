@@ -11,7 +11,7 @@
     <h1>{{title}}</h1>
     
     @if (!gameComplete) {
-      <div class="current-character">
+      <div class="current-character" (click)="revealCharacterModal()">
         @if (currentCharacter) {
           <h2>Rank this character (1-5):</h2>
           <img [src]="'assets/' + currentCharacter.img" [alt]="currentCharacter.name"
@@ -59,6 +59,7 @@
   }
 </section>
 }
+<app-character-modal *ngIf="currentCharacter && showCard" [character]="currentCharacter" (close)="showCard = false"></app-character-modal>
 <app-back-button></app-back-button>
 @if (screenshotDataUrl) {
   <app-tier-screenshot [screenshotTitle]="'Blind Ranking Screenshot'" [screenshotDataUrl]="screenshotDataUrl"></app-tier-screenshot>

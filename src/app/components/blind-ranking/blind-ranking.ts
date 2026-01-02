@@ -4,10 +4,11 @@ import { CharacterService, Character } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 import { BackButton } from '../back-button/back-button';
+import { CharacterModal } from '../character-modal/character-modal';
 
 @Component({
   selector: 'app-blind-ranking',
-  imports: [FormsModule, CommonModule, TierScreenshot, BackButton],
+  imports: [FormsModule, CommonModule, TierScreenshot, BackButton, CharacterModal],
   templateUrl: './blind-ranking.html',
   styleUrl: './blind-ranking.scss'
 })
@@ -23,6 +24,7 @@ export class BlindRanking {
   screenshotDataUrl: string | null = null;
   
   private characterService = inject(CharacterService);
+  showCard: boolean = false;
 
   constructor() {
     this.characterService.getCharactersSplitTwins().subscribe((characters: Character[]) => {
@@ -35,6 +37,10 @@ export class BlindRanking {
     this.rankingStarted = true;
     this.resetGame();
     this.showNextCharacter();
+  }
+
+  revealCharacterModal() {
+    this.showCard = true;
   }
 
   private resetGame() {
