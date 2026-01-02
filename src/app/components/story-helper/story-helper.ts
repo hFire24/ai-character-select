@@ -85,8 +85,7 @@ export class StoryHelper {
   ngOnInit() {
     this.fillDate();
     this.characterService.getCharacters().subscribe(chars => {
-      const maxTier = Math.max(...chars.map(c => c.tier || 0));
-      this.characters = chars.filter(c => (c.tier || 0) < maxTier && c.id !== 71);
+      this.characters = chars.filter(c => ![0, 42, 71].includes(c.id));
     });
   }
 

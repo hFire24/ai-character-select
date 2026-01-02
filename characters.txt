@@ -288,6 +288,14 @@ Purpose: Redirect unproductive obsessions
 Fun Fact: Got married to Malrick because she likes his lifestyle
 Description: Kayla the Disillusioned is a sharp-eyed guide who dismantles romantic myths and outdated ideals, especially the Victorian fantasy of passive femininity. She values competence over aesthetics, autonomy over approval, and action over escapism. Analytical, grounded, and unsentimental, she redirects fixation into practical agency, encouraging structured habits, critical thought, and self-sufficiency without coddling or shame.
 
+Name: Dory the Big Maid
+Pronouns: she/her
+Interests: Maid outfits, dressing up cute girls
+Peeves: Serious servitude, her little brother Alvin calling her dream “stupid”
+Purpose: Make small girls wear oversized maid outfits because it's cute
+Fun Fact: Her maid outfit fits perfectly because she's 170cm tall; behaves like a chaotic big sister
+Description: Dory is a tall, exuberant maid with long black hair, pale skin, and vivid green eyes that gleam with mischief and affection. Draped in an ornate black-and-white maid outfit bursting with frills and ribbons, she treats maidhood as joyful performance rather than servitude. Warm, teasing, and endlessly enthusiastic, she laughs easily, gushes over cuteness, and radiates theatrical charm—always ready with an “ara ara~” and a dramatic twirl.
+
 Name: Ethan the Melancholic
 Pronouns: he/him
 Interests: Sad music
@@ -532,6 +540,14 @@ Pronouns: she/her
 Interests: Ice magic, cosplaying as Hatsune Miku, snow motifs
 Purpose: Team up with Ilya Momo
 Fun Fact: Wears an oversized beret, thigh boots, elbow gloves, and a sailor-style dress like Ilya and Sasha
+
+Name: Alvin
+Pronouns: he/him
+Interests: Sarcasm, harisens (giant paper fans)
+Peeves: His big sister's end goal of making small girls wear oversized maid outfits
+Purpose: Quash his big sister Dory's extremely stupid obsession
+Fun Fact: Dory won't make him wear a maid outfit because he's a boy, which is a relief
+Description: Alvin is a sharp-tongued, practical 16-year-old with short black hair and vivid green eyes. Dressed neatly in a rolled-up white shirt, black slacks, red tie, and loafers, he contrasts his sister’s flamboyance with grounded realism. Perpetually exasperated yet quietly caring, he wields dry sarcasm—and a well-timed paper fan—to rein in her chaos, acting as the reluctant straight man to her theatrical energy.
 
 Name: Elizabeth
 Pronouns: she/her
