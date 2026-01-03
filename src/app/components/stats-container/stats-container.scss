@@ -1,0 +1,62 @@
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  
+  .active & { color: #22c55e; }
+  .inactive & { color: #6b7280; }
+  .side & { color: #06b6d4; }
+  .retired & { color: #ef4444; }
+  .misc & { color: #f59e0b; }
+  .total & { color: #3b82f6; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-card {
+    background: #2c2f31;
+    
+    .stat-label {
+      color: #aaa;
+    }
+
+    .stat-value {
+      color: #e0e0e0;
+    }
+
+    &.active .stat-value { color: #3ddc5c; }
+    &.inactive .stat-value { color: #9ca3af; }
+    &.side .stat-value { color: #22d3ee; }
+    &.retired .stat-value { color: #f87171; }
+    &.misc .stat-value { color: #fbbf24; }
+    &.total .stat-value { color: #60a5fa; }
+  }
+}

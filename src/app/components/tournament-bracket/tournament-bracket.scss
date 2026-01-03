@@ -25,8 +25,8 @@
     max-width: 1400px;
     margin: 0 auto;
     
-    // On smaller viewports, force 2x2 grid layout instead of 4 columns
-    @media (max-width: 1365px) and (min-width: 700px) {
+    // Force 2 columns when 3 would otherwise appear (between 2-col and 4-col breakpoints)
+    @media (max-width: 1380px) and (min-width: 700px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
@@ -45,6 +45,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
     max-width: 350px;
+    margin: 0 auto;
+    justify-items: center;
     
     .column:nth-child(1) { grid-row: 1; } // Column 1: first
     .column:nth-child(2) { grid-row: 2; } // Column 2: second
@@ -57,6 +59,7 @@
     display: flex;
     flex-direction: column;
     min-width: 300px;
+    max-width: 350px; // Prevent columns from getting too wide
   }
 }
 

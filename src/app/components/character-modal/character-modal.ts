@@ -66,11 +66,20 @@ export class CharacterModal {
         return;
       }
       localStorage.setItem(this.getChatLinkKey(), this.chatLink);
+      
+      // Update timestamp when chat link is changed (not reset to default)
+      if (this.chatLink !== this.character.link) {
+        const timestampKey = this.getChatLinkTimestampKey();
+        const now = new Date().toISOString();
+        localStorage.setItem(timestampKey, now);
+      }
+      
       alert('Chat link updated!');
     } else if (newLink === '') {
       // If the user clears the input, reset to default link
       this.chatLink = this.character.link;
       localStorage.removeItem(this.getChatLinkKey());
+      // Don't update timestamp when resetting to default
       alert('Chat link reset to default.');
     }
   }
@@ -83,6 +92,16 @@ export class CharacterModal {
   getChatLinkKey(): string {
     // Use character name or id for uniqueness
     return 'chatLink_' + (this.character.name || 'unknown');
+  }
+
+  getChatLinkTimestampKey(): string {
+    // Use character name or id for uniqueness
+    return 'chatLinkTimestamp_' + (this.character.name || 'unknown');
+  }
+
+  getChatLinkTimestamp(): string | null {
+    const key = this.getChatLinkTimestampKey();
+    return localStorage.getItem(key);
   }
 
   scheduleDailyCleanup() {
@@ -108,9 +127,9 @@ export class CharacterModal {
   }
 
   cleanupChatLinks() {
-    // Remove all chatLink_* keys
+    // Remove all chatLink_* keys but preserve chatLinkTimestamp_* keys
     Object.keys(localStorage).forEach(key => {
-      if (key.startsWith('chatLink_')) {
+      if (key.startsWith('chatLink_') && !key.startsWith('chatLinkTimestamp_')) {
         localStorage.removeItem(key);
       }
     });

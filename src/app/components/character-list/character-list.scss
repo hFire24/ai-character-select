@@ -1,0 +1,120 @@
+.last-chatted-section,
+.never-chatted-section {
+  margin-top: 40px;
+  padding: 20px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+}
+
+.last-chatted-list, .never-chatted-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.chat-character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.character-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.chat-date {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 400;
+  text-align: left;
+}
+
+.chat-item {
+  width: 90vw;
+  max-width: 300px;
+  height: 70px;
+  vertical-align: top;
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  .character-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+}
+
+.never-chat-item {
+  width: 90vw;
+  max-width: 300px;
+  height: 70px;
+  vertical-align: top;
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  .character-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 12px;
+    object-fit: cover;
+    border: none;
+    flex-shrink: 0;
+  }
+
+  .character-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .last-chatted-section h2,
+  .never-chatted-section h2 {
+    color: #e0e0e0;
+  }
+
+  .chat-item,
+  .never-chat-item {
+    background-color: #23272a;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  }
+
+  .character-name {
+    color: #e0e0e0;
+  }
+
+  .chat-date {
+    color: #aaa;
+  }
+}

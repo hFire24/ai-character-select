@@ -1,0 +1,30 @@
+@if (isDesktop && lastChattedCharacters.length > 0) {
+  <div class="last-chatted-section">
+    <h2>Last Chatted</h2>
+    <div class="last-chatted-list">
+      @for (item of lastChattedCharacters; track item.character.id) {
+        <div class="chat-item" (click)="onCharacterClick(item.character)">
+          <img [src]="'assets/' + item.character.img" [alt]="item.character.shortName" class="character-avatar">
+          <div class="chat-character">
+            <span class="character-name">{{ item.character.shortName }}</span>
+            <span class="chat-date">{{ formatDate(item.timestamp) }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+}
+
+@if (isDesktop && neverChattedCharacters.length > 0) {
+  <div class="never-chatted-section">
+    <h2>Never Chatted (Active)</h2>
+    <div class="never-chatted-list">
+      @for (character of neverChattedCharacters; track character.id) {
+        <div class="never-chat-item" (click)="onCharacterClick(character)">
+          <img [src]="'assets/' + character.img" [alt]="character.shortName" class="character-avatar">
+          <span class="character-name">{{ character.shortName }}</span>
+        </div>
+      }
+    </div>
+  </div>
+}
