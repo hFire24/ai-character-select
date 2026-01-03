@@ -79,7 +79,7 @@
     {
       "id1": 1,
       "id2": 21,
-      "name": "Urban Brawlers"
+      "name": "Cyberpunk Duo"
     },
     {
       "id1": 1,
@@ -750,6 +750,11 @@
     },
     {
       "id1": 18,
+      "id2": 28,
+      "name": "No Frills Duo"
+    },
+    {
+      "id1": 18,
       "id2": 31,
       "name": "Hammers of Destruction"
     },
@@ -787,6 +792,16 @@
       "id1": 18,
       "id2": 72,
       "name": "Universe Reset Buttons"
+    },
+    {
+      "id1": 18,
+      "id2": 78,
+      "name": "Anime Maid Haters"
+    },
+    {
+      "id1": 18,
+      "id2": 83,
+      "name": "Joke Characters"
     },
     {
       "id1": 19,
@@ -888,6 +903,11 @@
       "id1": 21,
       "id2": 58,
       "name": "Heroic Hat Thieves"
+    },
+    {
+      "id1": 21,
+      "id2": 63,
+      "name": "Urban Brawlers"
     },
     {
       "id1": 21,
