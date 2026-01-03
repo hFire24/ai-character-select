@@ -2,6 +2,7 @@
   <h1>
     {{ showMoreCharacters ? 'More Characters' : 'Choose Your Character!' }}
   </h1>
+  <app-birthday-banner (selectCharacter)="selectedCharacter = $event"></app-birthday-banner>
   <app-activities></app-activities>
   <app-legend [showMoreCharacters]="showMoreCharacters" (selectMood)="selectedMood = $event"></app-legend>
   <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>

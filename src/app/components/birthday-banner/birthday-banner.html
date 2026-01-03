@@ -1,0 +1,22 @@
+@if (showBanner) {
+  <div class="birthday-banner">
+    <div class="banner-content">
+      <span class="birthday-message">
+        🎉 It's 
+        @for (char of birthdayCharacters; track char.id; let i = $index; let last = $last) {
+          <span class="character-name" (click)="onCharacterClick(char)" [title]="'View ' + char.shortName + &quot;'s card&quot;">{{ char.shortName }}</span>@if (!last) {
+            @if (birthdayCharacters.length === 2) { and } @else { @if (i === birthdayCharacters.length - 2) {, and } @else {, } }
+          }
+        }'s birthday today!
+      </span>
+      <button class="close-btn" (click)="toggleDismissOptions()" title="Dismiss">✕</button>
+    </div>
+    
+    @if (showDismissOptions) {
+      <div class="dismiss-options">
+        <button class="dismiss-option" (click)="remindLater()">Remind me later</button>
+        <button class="dismiss-option" (click)="dismissForToday()">Don't show again today</button>
+      </div>
+    }
+  </div>
+}

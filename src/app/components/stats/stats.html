@@ -1,0 +1,43 @@
+<div class="stats-page">
+  <app-back-button></app-back-button>
+  
+  <h1>Character Statistics</h1>
+  
+  <div class="stats-container">
+    <div class="stat-card active">
+      <div class="stat-icon">✨</div>
+      <div class="stat-label">Active Characters</div>
+      <div class="stat-value">{{ stats.active }}</div>
+    </div>
+
+    <div class="stat-card inactive">
+      <div class="stat-icon">💤</div>
+      <div class="stat-label">Inactive Characters</div>
+      <div class="stat-value">{{ stats.inactive }}</div>
+    </div>
+
+    <div class="stat-card side">
+      <div class="stat-icon">👥</div>
+      <div class="stat-label">Side Characters</div>
+      <div class="stat-value">{{ stats.side }}</div>
+    </div>
+
+    <div class="stat-card retired">
+      <div class="stat-icon">🏖️</div>
+      <div class="stat-label">Retired Characters</div>
+      <div class="stat-value">{{ stats.retired }}</div>
+    </div>
+
+    <div class="stat-card misc">
+      <div class="stat-icon">🎭</div>
+      <div class="stat-label">Misc. Characters</div>
+      <div class="stat-value">{{ stats.misc }}</div>
+    </div>
+
+    <div class="stat-card total">
+      <div class="stat-icon">📊</div>
+      <div class="stat-label">Total Characters</div>
+      <div class="stat-value">{{ stats.total }}</div>
+    </div>
+  </div>
+</div>

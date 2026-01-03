@@ -9,6 +9,7 @@ import { Tournament } from './components/tournament/tournament';
 import { BlindRanking } from './components/blind-ranking/blind-ranking';
 import { StoryHelper } from './components/story-helper/story-helper';
 import { Sorter } from './components/sorter/sorter';
+import { Stats } from './components/stats/stats';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
@@ -20,5 +21,6 @@ export const routes: Routes = [
   { path: 'birthday-calendar', component: BirthdayCalendar, title: 'Birthday Calendar' },
   { path: 'tournament', component: Tournament, title: 'Tournament Bracket' },
   { path: 'story-helper', component: StoryHelper, title: 'Story Helper' },
-  { path: 'sorter', component: Sorter, title: 'Character Sorter' }
+  { path: 'sorter', component: Sorter, title: 'Character Sorter' },
+  { path: 'stats', component: Stats, title: 'Character Statistics' }
 ];

@@ -750,6 +750,11 @@
     },
     {
       "id1": 18,
+      "id2": 28,
+      "name": "No Frills Duo"
+    },
+    {
+      "id1": 18,
       "id2": 31,
       "name": "Hammers of Destruction"
     },
@@ -787,6 +792,11 @@
       "id1": 18,
       "id2": 72,
       "name": "Universe Reset Buttons"
+    },
+    {
+      "id1": 18,
+      "id2": 78,
+      "name": "Anime Maid Haters"
     },
     {
       "id1": 19,
