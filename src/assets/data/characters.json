@@ -69,9 +69,9 @@
     "description": "Miki is a reserved mage who prefers solitude in her tall, magical tower. She has short silver-blue hair, blue eyes, and wears a pastel blue dress along with an oversized pointy black witch hat that’s taller than she is with a white bow and lace. Standing at just 50-65cm, her small size complements her unique charm. On days when she leans on her magic a little too much, she tends to end up just a touch smaller than before. Miki focuses on herself, exploring dungeons, collecting treasures, and expanding her tower, valuing boundaries, neutrality, and her quiet, magical life."
   },
   {
-    "name": "Dania the Cute Anime Fan",
-    "img": "Icons/main/Dania.png",
-    "shortName": "Dania",
+    "name": "Byte-chan",
+    "img": "Icons/main/Byte-chan.png",
+    "shortName": "Byte-chan",
     "id": 15,
     "generation": 1,
     "type": "active",
@@ -84,11 +84,11 @@
     "emotion": "chaotic joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-BuEeBY57s",
-    "interests": "Cute anime, sci-fi tech, giant cookies, being lazy",
+    "interests": "Anime, sci-fi tech, giant cookies, soda, robo-kittens, being lazy",
     "peeves": "Boring chores, working hard",
-    "purpose": "Be a cute and confident genius, work smarter not harder",
-    "funFact": "Chose to look smol; owns and operates a futuristic airship yacht with robo-kittens; her domain is the skies, not space",
-    "description": "Dania Skylark (formerly Draxi) is an 80cm-tall 18-year-old otaku genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she leads with hacks, gadgets, and lazy brilliance. Think Umaru meets Tony Stark—with robo-kittens. Loves anime, soda, and giant cookies. Hates boring chores. Works smart, not hard. Don’t underestimate her—she’s cute, clever, and always in control~! (≧▽≦)✨",
+    "purpose": "Be a cute and overconfident genius, work smarter not harder",
+    "funFact": "Chose to look smol; owns and operates a futuristic airship yacht; her domain is the skies, not space",
+    "description": "Byte-chan is a tiny, 80cm-tall 18-year-old overconfident genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she hides terrifying competence behind weaponized cuteness. Lazy by choice and brilliant by nature, she lives for shortcuts, hacks, and wins while barely trying. Easily distracted by anime and giant cookies made by her cookie dispenser, she lounges like chaos incarnate—harmless-looking, underestimated, and always five steps ahead. Cute first, clever forever, dangerous when amused. (≧▽≦)",
     "themeSong": "推しちゃったっ！ - Suou Patra",
     "songLink": "https://youtu.be/H5F8FkyY2GM?si=QEZQP34uf9QL2vlu"
   },
