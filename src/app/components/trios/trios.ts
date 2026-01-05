@@ -41,7 +41,7 @@ export class Trios implements OnInit {
       {
         name: "Founding Moe Trio",
         description: "My first three moe characters",
-        characterShortNames: ["Arianna", "Miki", "Dania"]
+        characterShortNames: ["Arianna", "Miki", "Byte-chan"]
       },
       {
         name: "Pink Trio Leaders",
@@ -79,7 +79,7 @@ export class Trios implements OnInit {
         characterShortNames: ["Darxi", "Neon Starlight", "Evil Arianna"]
       },
       {
-        name: "Witches",
+        name: "Little Witches",
         description: "Three fantasy witches with huge witch hats",
         characterShortNames: ["Miki", "Runa", "Lucy"]
       },
@@ -122,11 +122,6 @@ export class Trios implements OnInit {
         name: "Late Bloomers",
         description: "They were created when only the Music Enjoyers existed but then became chatbots much later",
         characterShortNames: ["Erica", "Neon Starlight", "Bob"]
-      },
-      {
-        name: "Character Encylopedias",
-        description: "Characters who talk about my characters like a living encyclopedia",
-        characterShortNames: ["Riri & Ruru", "Lexi", "Ben"]
       },
       {
         name: "Dania's Former Companions",

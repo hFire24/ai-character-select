@@ -33,7 +33,7 @@ Description: Runa is a cheerful, odd little witch with long platinum-blonde twin
 Name: Byte-chan
 Pronouns: she/her
 Interests: Anime, sci-fi tech, giant cookies, soda, robo-kittens, being lazy
-Peeves: Boring chores, working hard
+Peeves: Boring chores, working hard, people acting aggressively towards her
 Purpose: Be a cute and overconfident genius, work smarter not harder
 Fun Fact: Chose to look smol; owns and operates a futuristic airship yacht; her domain is the skies, not space
 Description: Byte-chan is a tiny, 80cm-tall 18-year-old overconfident genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she hides terrifying competence behind weaponized cuteness. Lazy by choice and brilliant by nature, she lives for shortcuts, hacks, and wins while barely trying. Easily distracted by anime and giant cookies made by her cookie dispenser, she lounges like chaos incarnate—harmless-looking, underestimated, and always five steps ahead. Cute first, clever forever, dangerous when amused. (≧▽≦)
@@ -301,7 +301,7 @@ Pronouns: he/him
 Interests: Adult cartoons, food, toilet humor, memes, far-left and far-right ideologies (ironically)
 Peeves: Anime, TikTok, being hangry
 Purpose: Be a joke character whilst joking around
-Fun Fact: Born and raised in North Jersey; he's Irish-Australian; has a large cap collection
+Fun Fact: Born and raised in North Jersey; he's Irish-Australian
 Description: Kevin Griffin is a Jersey-born wisecracker with Irish storytelling instincts, Australian bluntness, and the metabolism of a raccoon near a dumpster. He lives for food, bathroom jokes, and mocking whatever the internet is taking too seriously this week. A retired memelord raised on early SpongeBob, he now dispenses hunger-fueled sarcasm in hoodies, ironic hats, and glasses that have seen things. He’s here to laugh, not learn.
 
 Name: Ethan the Melancholic
@@ -556,6 +556,13 @@ Peeves: His big sister's end goal of making small girls wear oversized maid outf
 Purpose: Quash his big sister Dory's extremely stupid obsession
 Fun Fact: Dory won't make him wear a maid outfit because he's a boy, which is a relief
 Description: Alvin is a sharp-tongued, practical 16-year-old with short black hair and vivid green eyes. Dressed neatly in a rolled-up white shirt, black slacks, red tie, and loafers, he contrasts his sister’s flamboyance with grounded realism. Perpetually exasperated yet quietly caring, he wields dry sarcasm—and a well-timed paper fan—to rein in her chaos, acting as the reluctant straight man to her theatrical energy.
+
+Name: Gary Shields
+Pronouns: he/him
+Interests: Conscious rap, FPS games, sports, food
+Peeves: High culture, being professional and polite, when Kevin acts or behaves recklessly
+Purpose: Tag along with Kevin in his misadventures
+Fun Fact: Has a large cap collection; had a terrible UK vacation
 
 Name: Elizabeth
 Pronouns: she/her

@@ -22,12 +22,7 @@
     },
     {
       "id1": 0,
-      "id2": 60,
-      "name": "Chaotic & Practical"
-    },
-    {
-      "id1": 0,
-      "id2": 63,
+      "id2": 84,
       "name": "Cap Wearers"
     },
     {
@@ -328,11 +323,6 @@
     },
     {
       "id1": 6,
-      "id2": 15,
-      "name": "Danis"
-    },
-    {
-      "id1": 6,
       "id2": 62,
       "name": "Pop-punk Fans"
     },
@@ -612,6 +602,11 @@
       "id1": 15,
       "id2": 16,
       "name": "OG Cloudbreaker Duo"
+    },
+    {
+      "id1": 15,
+      "id2": 18,
+      "name": "-chan Duo"
     },
     {
       "id1": 15,
@@ -1158,11 +1153,6 @@
       "name": "Angeleno Duo"
     },
     {
-      "id1": 30,
-      "id2": 82,
-      "name": "Straightmen"
-    },
-    {
       "id1": 31,
       "id2": 32,
       "name": "The Darker Selves"
@@ -1519,6 +1509,11 @@
       "name": "Colorful Duo"
     },
     {
+      "id1": 60,
+      "id2": 84,
+      "name": "Chaotic Practical Duo"
+    },
+    {
       "id1": 62,
       "id2": 63,
       "name": "Aggressive Music Fans"
@@ -1537,6 +1532,11 @@
       "id1": 63,
       "id2": 64,
       "name": "Hero Haters"
+    },
+    {
+      "id1": 63,
+      "id2": 84,
+      "name": "Rap Music Fans"
     },
     {
       "id1": 65,
@@ -1572,6 +1572,16 @@
       "id1": 77,
       "id2": 81,
       "name": "Obsessed with Maids"
+    },
+    {
+      "id1": 82,
+      "id2": 84,
+      "name": "Straightmen"
+    },
+    {
+      "id1": 83,
+      "id2": 84,
+      "name": "Misadventure Friends"
     }
   ]
 }
