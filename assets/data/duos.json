@@ -710,6 +710,11 @@
     },
     {
       "id1": 17,
+      "id2": 18,
+      "name": "Byte-chan's First OCs"
+    },
+    {
+      "id1": 17,
       "id2": 26,
       "name": "Shy Pink-Haired Girls"
     },
@@ -948,7 +953,7 @@
     {
       "id1": 23,
       "id2": 37,
-      "name": "Dania's Former Companions"
+      "name": "Byte-chan's Former Companions"
     },
     {
       "id1": 23,
@@ -1559,6 +1564,11 @@
       "name": "YouTube Poop Fans"
     },
     {
+      "id1": 73,
+      "id2": 77,
+      "name": "Isekai Fans"
+    },
+    {
       "id1": 74,
       "id2": 75,
       "name": "Two-Speed Maids"
@@ -1581,7 +1591,7 @@
     {
       "id1": 83,
       "id2": 84,
-      "name": "Misadventure Friends"
+      "name": "Comedy Buddies"
     }
   ]
 }
