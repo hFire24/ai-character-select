@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Character, DuoPair } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -40,7 +41,7 @@ export class Duos implements OnInit {
   // Duo name pairs - loaded dynamically
   duoPairs: DuoPair[] = [];
 
-  constructor(private characterService: CharacterService) {
+  constructor(private characterService: CharacterService, private router: Router) {
     this.isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
   }
 
@@ -241,5 +242,9 @@ export class Duos implements OnInit {
       
       alert('Could not find an unnamed duo pair.');
     }
+  }
+
+  viewDuos() {
+    this.router.navigate(['/duos-2']);
   }
 }

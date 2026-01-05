@@ -124,8 +124,8 @@ export class Trios implements OnInit {
         characterShortNames: ["Erica", "Neon Starlight", "Bob"]
       },
       {
-        name: "Dania's Former Companions",
-        description: "Characters who used to accompany Dania",
+        name: "Byte's Former Companions",
+        description: "Characters who used to accompany Byte-chan",
         characterShortNames: ["Ryker", "Mr. Go", "Primelle"]
       },
       {

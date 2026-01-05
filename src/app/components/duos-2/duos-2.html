@@ -1,0 +1,56 @@
+<div class="duos-container">
+  <header class="duos-header">
+    <h1>View Duos</h1>
+    <p class="subtitle">Discover iconic character pairings</p>
+    <app-back-button></app-back-button>
+  </header>
+
+  @if (loading) {
+    <div class="loading">Loading duos...</div>
+  } @else {
+    <main class="duos-grid">
+      @for (duo of duos; track duo.id) {
+        <div class="duo-card">
+          <div class="duo-header">
+            <h2>{{ duo.id - 1 }}. {{ duo.name }}</h2>
+            @if (duo.description) {
+              <p class="duo-description">{{ duo.description }}</p>
+            }
+          </div>
+          
+          <div class="duo-characters">
+            @for (character of duo.characters; track character.id) {
+              <div 
+                class="character" 
+                [ngClass]="genClass(character.generation)"
+                (click)="onCharacterClick(character)"
+                title="Click to view {{ character.shortName }}"
+              >
+                @if (character.img) {
+                  <img [src]="assetPath(character.img)" [alt]="character.shortName" />
+                } @else {
+                  <div class="question-mark">?</div>
+                }
+                <h3>{{ character.shortName }}</h3>
+              </div>
+            }
+          </div>
+          
+          @if (duo.characters.length === 0) {
+            <div class="empty-duo">
+              <p>No characters found for this duo</p>
+            </div>
+          }
+        </div>
+      }
+    </main>
+
+    @if (duos.length === 0) {
+      <div class="no-duos">
+        <h2>No duos available</h2>
+        <p>Check back later for exciting character pairings!</p>
+      </div>
+    }
+  }
+</div>
+<app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>

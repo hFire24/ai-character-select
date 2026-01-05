@@ -81,6 +81,12 @@
   <h2>{{ duoName }}</h2>
 </div>
 
+<div>
+  <button (click)="getRandomDuo('named')">Random Duo (Named)</button> &nbsp;
+  <button (click)="getRandomDuo('unnamed')">Random Duo (Unnamed)</button> &nbsp;
+  <button (click)="viewDuos()">View Duos</button>
+</div>
+
 <!-- Add New Duo Form - Only shown in development when characters are selected but no custom duo name exists -->
 <div *ngIf="isDevelopment && character1 && character2 && !hasCustomDuoName()" class="new-duo-form">
   <h2>Add Custom Duo Name</h2>
@@ -115,11 +121,6 @@
       <button type="button" class="clear-btn" (click)="clearNewDuoForm()">Clear</button>
     </div>
   </form>
-</div>
-
-<div>
-  <button (click)="getRandomDuo('named')">Random Duo (Named)</button> &nbsp;
-  <button (click)="getRandomDuo('unnamed')">Random Duo (Unnamed)</button>
 </div>
 
 <app-back-button></app-back-button>
