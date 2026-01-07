@@ -3,11 +3,12 @@ import { CharacterService } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
 import { TierSettings } from "../tier-settings/tier-settings";
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
+import { TextViewer } from '../text-viewer/text-viewer';
 import { BackButton } from '../back-button/back-button';
 
 @Component({
   selector: 'app-tier-list',
-  imports: [CommonModule, TierSettings, TierScreenshot, BackButton],
+  imports: [CommonModule, TierSettings, TierScreenshot, TextViewer, BackButton],
   templateUrl: './tier-list.html',
   styleUrl: './tier-list.scss'
 })
@@ -18,6 +19,15 @@ export class TierList {
   router: any;
   selectedPoolCharIdx: number | null = null;
   selectedTierCharIdx: { tierIdx: number; charIdx: number } | null = null;
+
+  get textViewerContent(): string {
+    let text = '';
+    this.tiers.forEach(tier => {
+      const characterNames = tier.characters.map(char => char.name).join(', ');
+      text += `${tier.name}: ${characterNames}\n`;
+    });
+    return text.trim();
+  }
 
   onPoolDrop(event: DragEvent) {
     event.preventDefault();
