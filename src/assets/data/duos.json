@@ -553,6 +553,11 @@
       "name": "Maids in Name Only"
     },
     {
+      "id1": 13,
+      "id2": 85,
+      "name": "Maids with Weapons"
+    },
+    {
       "id1": 14,
       "id2": 20,
       "name": "Fantasy Mages"
@@ -881,6 +886,11 @@
       "id1": 20,
       "id2": 76,
       "name": "Female Justice Fighters"
+    },
+    {
+      "id1": 20,
+      "id2": 85,
+      "name": "Calm Protectors"
     },
     {
       "id1": 21,
@@ -1421,6 +1431,11 @@
       "name": "Satirical Jokesters"
     },
     {
+      "id1": 47,
+      "id2": 85,
+      "name": "Redheads"
+    },
+    {
       "id1": 48,
       "id2": 50,
       "name": "Despair Duo"
@@ -1445,6 +1460,11 @@
       "id1": 48,
       "id2": 76,
       "name": "Action Stars"
+    },
+    {
+      "id1": 48,
+      "id2": 85,
+      "name": "Brave Protectors"
     },
     {
       "id1": 49,
@@ -1553,6 +1573,11 @@
       "name": "Swordfighters"
     },
     {
+      "id1": 59,
+      "id2": 85,
+      "name": "Armed Maidens"
+    },
+    {
       "id1": 60,
       "id2": 76,
       "name": "Colorful Duo"
@@ -1621,6 +1646,11 @@
       "id1": 74,
       "id2": 75,
       "name": "Two-Speed Maids"
+    },
+    {
+      "id1": 74,
+      "id2": 85,
+      "name": "Calm Maids"
     },
     {
       "id1": 75,

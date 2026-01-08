@@ -54,6 +54,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Momo", "Lulu", "Nene"]
       },
       {
+        name: "More Maids",
+        description: "More maids that were created after the initial trio",
+        characterShortNames: ["Makoto", "Dory", "Kiki"]
+      },
+      {
         name: "Magical Girl Twintail Trio",
         description: "Three magical girls with twintails and matching outfits",
         characterShortNames: ["Ilya", "Sasha", "Misha"]

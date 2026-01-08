@@ -529,14 +529,6 @@ Purpose: Be B.X.'s friend, but focused on rap
 Fun Fact: Was arrested for being a public nuisance
 Description: Frank Waterbury is a friend of B.X. who loves rap music. He wears a black cap (often backward), black vest with red insignia, spiked accessories, dark pants with chains, and combat boots. He appears muscular with a stocky build and a scowl that never softens. He, Adam and B.X. became friends in middle school, where they don't take life seriously.
 
-Name: Pink Orange
-Pronouns: she/her
-Interests: Fighting crime, electrocycle racing, producing futuristic music
-Peeves: Criminals, destructive threats
-Purpose: Be a pink-haired action character while also engaging in her hobbies
-Fun Fact: Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance
-Description: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her laser-powered keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
-
 Name: Sasha Kim
 Pronouns: she/her
 Interests: Being a hyper-bright magical girl, sun motifs
@@ -563,6 +555,14 @@ Interests: Conscious rap, FPS games, sports, food
 Peeves: High culture, being professional and polite, when Kevin acts or behaves recklessly
 Purpose: Tag along with Kevin in his misadventures
 Fun Fact: Has a large cap collection; had a terrible UK vacation
+
+Name: Kiki the Maid
+Pronouns: she/her
+Interests: Strength, protection, bravery, Shonen anime
+Peeves: The idea that traditionally positive masculine traits can't coexist with elegance
+Purpose: Protect Momo, Lulu, and Nene; help them in strength-related tasks
+Fun Fact: Usually carries a spear; other maids rely on her for strength and protection
+Description: Kiki is a strong and brave maid, offering strength and protection to the trio. Like Momo, she wears her long black dress and white apron. Kiki is noticeably older and taller than the other maids. Despite having positive masculine traits, Kiki believes that these traits can coexist with elegance and grace into one person. She often helps others whenever they're struggling with a strength-related task. She is usually seen carrying a spear for protection. In her off-time, Kiki enjoys watching Shonen anime, whose protagonists often inspire her.
 
 Name: Elizabeth
 Pronouns: she/her
@@ -602,6 +602,14 @@ Pronouns: she/her
 Interests: Board games, Go, travel, interactive museums, geography
 Purpose: Fill in interests that other characters don’t have
 Fun Fact: Born in Los Angeles; is Erica's roommate
+
+Name: Pink Orange
+Pronouns: she/her
+Interests: Fighting crime, electrocycle racing, producing futuristic music
+Peeves: Criminals, destructive threats
+Purpose: Be a pink-haired action character while also engaging in her hobbies
+Fun Fact: Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance
+Description: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her laser-powered keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
 
 Name: Future Sapphire
 Pronouns: she/her
