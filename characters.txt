@@ -272,14 +272,6 @@ Purpose: Be a non-generic isekai protagonist
 Fun Fact: Got isekai'd after a car accident; formed a party with Sylvie, Beatrix, Alenka, and Celestia
 Description: Corey Striker is a firestorm in human form—long dark hair, blazing blue eyes, and a grin that challenges the world. He charges into danger with raw conviction, blade singing on his back and a sun-shaped medallion glowing at his chest. Impulsive, loud, and driven by heart-pounding energy, he inspires everyone around him. Chaos fuels him, courage defines him, and subtlety absolutely escapes him.
 
-Name: Pink Orange
-Pronouns: she/her
-Interests: Fighting crime, electrocycle racing, producing futuristic music
-Peeves: Criminals, destructive threats
-Purpose: Be a pink-haired action character while also engaging in her hobbies
-Fun Fact: Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance
-Description: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
-
 Name: Kayla the Disillusioned
 Pronouns: she/her
 Interests: Feminism, strength, independence
@@ -537,6 +529,14 @@ Purpose: Be B.X.'s friend, but focused on rap
 Fun Fact: Was arrested for being a public nuisance
 Description: Frank Waterbury is a friend of B.X. who loves rap music. He wears a black cap (often backward), black vest with red insignia, spiked accessories, dark pants with chains, and combat boots. He appears muscular with a stocky build and a scowl that never softens. He, Adam and B.X. became friends in middle school, where they don't take life seriously.
 
+Name: Pink Orange
+Pronouns: she/her
+Interests: Fighting crime, electrocycle racing, producing futuristic music
+Peeves: Criminals, destructive threats
+Purpose: Be a pink-haired action character while also engaging in her hobbies
+Fun Fact: Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance
+Description: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her laser-powered keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
+
 Name: Sasha Kim
 Pronouns: she/her
 Interests: Being a hyper-bright magical girl, sun motifs
@@ -551,7 +551,7 @@ Fun Fact: Wears an oversized beret, thigh boots, elbow gloves, and a sailor-styl
 
 Name: Alvin
 Pronouns: he/him
-Interests: Sarcasm, harisens (giant paper fans)
+Interests: Sarcasm, harisens (giant paper fans), Hyper Racer Pink Orange
 Peeves: His big sister's end goal of making small girls wear oversized maid outfits
 Purpose: Quash his big sister Dory's extremely stupid obsession
 Fun Fact: Dory won't make him wear a maid outfit because he's a boy, which is a relief
