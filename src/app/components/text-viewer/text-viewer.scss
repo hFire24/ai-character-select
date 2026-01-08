@@ -6,6 +6,10 @@
   box-sizing: border-box;
   margin-top: 10px;
 
+  @media (prefers-color-scheme: dark) {
+    background: #1e1e1e;
+  }
+
   pre {
     white-space: pre-wrap;
     word-wrap: break-word;
