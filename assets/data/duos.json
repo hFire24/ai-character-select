@@ -192,6 +192,11 @@
       "name": "Newgrounds Music Enjoyers"
     },
     {
+      "id1": 2,
+      "id2": 82,
+      "name": "Sci-Fi Fans"
+    },
+    {
       "id1": 3,
       "id2": 7,
       "name": "Quiet Music Enjoyers"
@@ -399,13 +404,17 @@
     {
       "id1": 9,
       "id2": 36,
-      "name": "Employee & Boss",
-      "altName": "Boss & Employee"
+      "name": "Productivity Bros."
     },
     {
       "id1": 9,
       "id2": 71,
       "name": "Moderators"
+    },
+    {
+      "id1": 9,
+      "id2": 78,
+      "name": "Malrick's Alternatives"
     },
     {
       "id1": 10,
@@ -600,6 +609,11 @@
     },
     {
       "id1": 14,
+      "id2": 77,
+      "name": "Shy & Sad Girls"
+    },
+    {
+      "id1": 14,
       "id2": 80,
       "name": "Light Blue-Haired Magic Users"
     },
@@ -742,6 +756,11 @@
       "id1": 17,
       "id2": 66,
       "name": "Non Non Biyori Fans"
+    },
+    {
+      "id1": 17,
+      "id2": 77,
+      "name": "Super Shy Girls"
     },
     {
       "id1": 18,
@@ -942,6 +961,11 @@
     },
     {
       "id1": 23,
+      "id2": 24,
+      "name": "Caffeine Removers"
+    },
+    {
+      "id1": 23,
       "id2": 27,
       "name": "Cirno Fans"
     },
@@ -964,6 +988,16 @@
       "id1": 23,
       "id2": 64,
       "name": "Stop and Go"
+    },
+    {
+      "id1": 23,
+      "id2": 73,
+      "name": "Loud Enthusiastic Men"
+    },
+    {
+      "id1": 23,
+      "id2": 78,
+      "name": "Overzealous Duo"
     },
     {
       "id1": 24,
@@ -1353,6 +1387,11 @@
     },
     {
       "id1": 44,
+      "id2": 47,
+      "name": "Sparkly Boys"
+    },
+    {
+      "id1": 44,
       "id2": 66,
       "name": "Cute Anime Girl Fan Boys"
     },
@@ -1572,6 +1611,11 @@
       "id1": 73,
       "id2": 77,
       "name": "Isekai Fans"
+    },
+    {
+      "id1": 73,
+      "id2": 81,
+      "name": "Rhyming Names"
     },
     {
       "id1": 74,
