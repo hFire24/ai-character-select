@@ -127,6 +127,11 @@
       "name": "Irreverent Duo"
     },
     {
+      "id1": 1,
+      "id2": 87,
+      "name": "Cat Bomb"
+    },
+    {
       "id1": 2,
       "id2": 3,
       "name": "Reserved Music Enjoyers"
@@ -268,11 +273,6 @@
     },
     {
       "id1": 4,
-      "id2": 27,
-      "name": "Touhou Gamers"
-    },
-    {
-      "id1": 4,
       "id2": 28,
       "name": "Neon Gamers"
     },
@@ -305,6 +305,11 @@
       "id1": 4,
       "id2": 69,
       "name": "2000s Gamers"
+    },
+    {
+      "id1": 4,
+      "id2": 86,
+      "name": "Touhou Gamers"
     },
     {
       "id1": 6,
@@ -383,11 +388,6 @@
     },
     {
       "id1": 8,
-      "id2": 27,
-      "name": "Doujin Music Enthusiasts"
-    },
-    {
-      "id1": 8,
       "id2": 35,
       "name": "Playmates"
     },
@@ -395,6 +395,11 @@
       "id1": 8,
       "id2": 52,
       "name": "Cute and Fast Music Enjoyers"
+    },
+    {
+      "id1": 8,
+      "id2": 86,
+      "name": "Doujin Music Enthusiasts"
     },
     {
       "id1": 9,
@@ -514,11 +519,6 @@
     },
     {
       "id1": 13,
-      "id2": 27,
-      "name": "Twin-tailed Tech Geeks"
-    },
-    {
-      "id1": 13,
       "id2": 28,
       "name": "Former Roommates"
     },
@@ -561,11 +561,6 @@
       "id1": 14,
       "id2": 20,
       "name": "Fantasy Mages"
-    },
-    {
-      "id1": 14,
-      "id2": 27,
-      "name": "Shy Witches"
     },
     {
       "id1": 14,
@@ -976,11 +971,6 @@
     },
     {
       "id1": 23,
-      "id2": 27,
-      "name": "Cirno Fans"
-    },
-    {
-      "id1": 23,
       "id2": 30,
       "name": "BBQ Buddies"
     },
@@ -1008,6 +998,11 @@
       "id1": 23,
       "id2": 78,
       "name": "Overzealous Duo"
+    },
+    {
+      "id1": 23,
+      "id2": 86,
+      "name": "Cirno Fans"
     },
     {
       "id1": 24,
@@ -1102,37 +1097,22 @@
     {
       "id1": 27,
       "id2": 52,
-      "name": "21st Century Digital Girls"
+      "name": "Interdimensional Summoners"
     },
     {
       "id1": 27,
-      "id2": 65,
-      "name": "Anti-Profanity Duo"
-    },
-    {
-      "id1": 27,
-      "id2": 66,
-      "name": "Anti-Yuri Fan Duo"
-    },
-    {
-      "id1": 27,
-      "id2": 67,
-      "name": "Online Witches"
-    },
-    {
-      "id1": 27,
-      "id2": 69,
-      "name": "Internet Nostalgics"
-    },
-    {
-      "id1": 27,
-      "id2": 77,
-      "name": "TG AR'd Duo"
+      "id2": 53,
+      "name": "Interdimensional Travelers"
     },
     {
       "id1": 27,
       "id2": 79,
       "name": "Blonde Magic Users"
+    },
+    {
+      "id1": 27,
+      "id2": 86,
+      "name": "Touhou Fans"
     },
     {
       "id1": 28,
@@ -1436,6 +1416,11 @@
       "name": "Redheads"
     },
     {
+      "id1": 47,
+      "id2": 86,
+      "name": "Runa Spinoffs"
+    },
+    {
       "id1": 48,
       "id2": 50,
       "name": "Despair Duo"
@@ -1493,6 +1478,11 @@
     },
     {
       "id1": 52,
+      "id2": 67,
+      "name": "21st Century Digital Girls"
+    },
+    {
+      "id1": 52,
       "id2": 76,
       "name": "Pink-Haired Music Performers"
     },
@@ -1505,6 +1495,11 @@
       "id1": 53,
       "id2": 74,
       "name": "Same Japanese Name"
+    },
+    {
+      "id1": 53,
+      "id2": 87,
+      "name": "Cat Bed"
     },
     {
       "id1": 54,
@@ -1618,9 +1613,19 @@
       "name": "Exhausted Teenagers"
     },
     {
+      "id1": 65,
+      "id2": 86,
+      "name": "Anti-Profanity Duo"
+    },
+    {
       "id1": 66,
       "id2": 73,
       "name": "Isekai'd Bros."
+    },
+    {
+      "id1": 66,
+      "id2": 86,
+      "name": "Anti-Yuri Fan Duo"
     },
     {
       "id1": 67,
@@ -1631,6 +1636,11 @@
       "id1": 69,
       "id2": 83,
       "name": "YouTube Poop Fans"
+    },
+    {
+      "id1": 69,
+      "id2": 86,
+      "name": "Internet Nostalgics"
     },
     {
       "id1": 73,

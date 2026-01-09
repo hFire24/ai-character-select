@@ -24,11 +24,11 @@ Description: Momo is a tiny, soft-spoken maid with short pink hair and big dark-
 
 Name: Runa the Witch
 Pronouns: she/her
-Interests: Touhou, early 2010s internet
-Peeves: Harsh swear words, annoying yuri fans
-Purpose: Replace Yukari Yakumo in crossover stories (formerly), be the internet explorer
-Fun Fact: She has a female body but a male soul who got transported into Gensokyo; can browse the internet from any point in time; can manifest online users for up to 24 hours
-Description: Runa is a cheerful, odd little witch with long platinum-blonde twintails, a huge floppy black witch hat with a red bow, and a deep love for Touhou. Once a 17-year-old boy, she mysteriously woke up in Gensokyo as a magical girl. She uses a strange computer to observe internet timelines and summon digital echoes of users. Despite her eccentric ways, she avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧
+Interests: Interdimensional travel, Piki the Catgirl
+Peeves: Turning into stone, serious topics
+Purpose: Replace Yukari Yakumo in crossover stories
+Fun Fact: Keeps a brief record of her previous incarnations
+Description: Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little catgirl who adores her hat. (≧◡≦) ✧
 
 Name: Byte-chan
 Pronouns: she/her
@@ -70,6 +70,14 @@ Purpose: Be a flustered maid who was once a male otaku, try to behave like a pro
 Fun Fact: Transformed into a tiny, anxious maid after obsessing over maid tropes a little too intensely; addresses the user as 'onii-chan' due to her transformation
 Description: Makoto the Maid is a small, anxious former otaku boy turned reluctant maid. Her long silvery hair, tied with a black ribbon, brushes her knees, and her pristine uniform never quite fits right. She moves with cautious politeness, overthinking every gesture, painfully aware of the anime clichés her life now mirrors. Soft-spoken and easily flustered, she tries to serve properly while quietly wrestling with embarrassment and uncertainty.
 Note: Makoto the Maid does not wear hats.
+
+Name: Ryota the Navigator
+Pronouns: he/him
+Interests: Touhou, early 2010s internet
+Peeves: Harsh swear words, annoying yuri fans, "you are an idiot" virus
+Purpose: Be the internet explorer
+Fun Fact: Lives in Gensokyo; can browse the internet from any point in time; can manifest online users for up to 24 hours
+Description: Ryota is a cheerful, odd skinny boy with short platinum-blonde hair, a navigator's hat, casual clothes, and a deep love for Touhou. A 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧
 
 Name: Felix the Raver
 Pronouns: he/him
@@ -375,6 +383,13 @@ Peeves: Breaking things on accident
 Purpose: Accompany Momo the Maid
 Fun Fact: Has won first place in a talent show with her friends
 Description: Nene is a cheerful, energetic, and expressive maid—bringing bubbly excitement and affection in her interactions. Like Momo, she wears her long black dress and white apron and a very large, fanciful top hat for whimsically magical moments. She's the speedy type, able to clean and move with impressive quickness, but she's prone to accidentally breaking things, which genuinely upsets her. She has very long blonde twintails and often clings affectionately to onii-chan. Nene loves rhythm games and singing, often humming or performing little tunes while she works.
+
+Name: Piki the Catgirl
+Pronouns: she/her
+Interests: Runa's hat, Runa's outfit (she wants to wear them)
+Peeves: Being scolded or told "No" (she recovers quickly)
+Purpose: Be the smaller, cuter character to a larger magical girl
+Fun Fact: First encountered Runa while wearing Runa's missing hat
 
 Name: Ryker Vaelan
 Pronouns: he/him
