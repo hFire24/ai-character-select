@@ -291,6 +291,7 @@ export class CharacterModal {
       const labelCS = strong ? getComputedStyle(strong) : rowCS;
 
       return {
+        id: id,
         label: labelText,
         value: valueText,
         color: rowCS.color || '#e6e9ef',
@@ -314,8 +315,9 @@ export class CharacterModal {
       grabRow('modalPurpose'),
       grabRow('modalFact'),
       grabRow('modalRetirement'),
-      grabRow('modalInactive')
-    ].filter(Boolean) as Array<ReturnType<typeof grabRow>>;
+      grabRow('modalInactive'),
+      grabRow('modalDescription')
+    ].filter(r => r && r.value && r.value.trim().length > 0) as Array<ReturnType<typeof grabRow>>;
 
     async function loadImageSafe(src?: string): Promise<HTMLImageElement | undefined> {
       if (!src) return undefined;
@@ -371,6 +373,19 @@ export class CharacterModal {
     const preparedRows = rows.map(r => {
       if (!r) return null;
 
+      const isDescription = r.id === 'modalDescription';
+
+      // For description: no label, starts from left edge
+      if (isDescription) {
+        measCtx.font = r.valueFont;
+        const maxValueWidth = W - P - P; // Full width minus padding on both sides
+        const valueLines = wrapText(measCtx, r.value || '', maxValueWidth);
+        const lineHeight = parseFloat((r.valueFont.split(' ')[1] || '16px'));
+        const height = valueLines.length * lineHeight + 6;
+        bodyHeight += height;
+        return { ...r, label: '', labelWidth: 0, valueLines, lineHeight, isDescription: true };
+      }
+
       // measure label width using label font
       measCtx.font = r.labelFont;
       const label = r.label ? (r.label + ':') : '';
@@ -384,7 +399,7 @@ export class CharacterModal {
       const height = valueLines.length * lineHeight + 6;
 
       bodyHeight += height;
-      return { ...r, label, labelWidth, valueLines, lineHeight };
+      return { ...r, label, labelWidth, valueLines, lineHeight, isDescription: false };
     });
 
     // text block height (title + gap + flags + gap + rows)
@@ -484,6 +499,19 @@ export class CharacterModal {
 
     for (const r of preparedRows) {
       if (!r) continue;
+      
+      // Special handling for description: no label, starts from left edge
+      if (r.isDescription) {
+        ctx.fillStyle = r.color;
+        ctx.font = r.valueFont;
+        for (let i = 0; i < r.valueLines.length; i++) {
+          ctx.fillText(r.valueLines[i], P, y);
+          y += r.lineHeight;
+        }
+        y += 6;
+        continue;
+      }
+
       // label
       ctx.fillStyle = r.labelColor;
       ctx.font = r.labelFont;

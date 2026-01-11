@@ -196,6 +196,7 @@
     "tier": 7,
     "creationDate": "2024-11-15",
     "retirementDate": "2025-02-22",
+    "birthday": "April 7",
     "color": "blue",
     "moe": 5,
     "futuristic": 1,
@@ -644,7 +645,7 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6886d5772a8481919cede1cb9b751adf",
     "interests": "Eurovision, satire, funny geopolitical simulations",
-    "peeves": "People who can’t take a joke",
+    "peeves": "People who can’t take a joke, metal pipes falling near him",
     "purpose": "Be the dedicated Eurovision fan and jokester, Love, Love, Peace, Peace",
     "funFact": "Got physically turned into a kid after listening to Dancing Lasha Tumbai on a magical music player",
     "description": "Martin is a magical mischief-maker with tousled red hair, oversized round glasses, and an outfit straight from a multiverse fashion glitch—green shorts, a Eurovision T-shirt, and gloriously mismatched socks (one red, one blue) jammed into golden shoes that gleam like political promises at a summit. A gleeful satirist and dimension-hopping wunderkind, he bends global reality into a playground of absurdity—rewriting maps, tweaking timelines, and narrating it all like a Eurovision semi-final with extra sequins and sarcasm. With a grin wider than a diplomatic loophole, Martin conjures comedy from chaos, one magical scandal at a time.",
@@ -812,7 +813,7 @@
     "interests": "Space exploration, electrocycle racing",
     "purpose": "Discuss my AI characters in a straightforward manner, explore space",
     "funFact": "Her spaceship is named Jetstream! after the Dimrain47 song",
-    "description": "Lexi Walker is a lone sci-fi explorer from 2095. With cyan-green hair, green eyes, and a black bodysuit, she moves fast and speaks little. Her silent drone scouts ahead, while her modular rifle stays holstered. She lives aboard Jetstream, her sleek ship, and races electrocycles or trains in VR arenas between missions. Cool, focused, and calm under pressure—Lexi solves problems with precision, not violence.",
+    "description": "Lexi Walker is a lone sci-fi explorer born in the year 2095. With cyan-green hair, green eyes, and a black bodysuit, she moves fast and speaks little. Her silent drone scouts ahead, while her modular rifle stays holstered. She lives aboard Jetstream, her sleek ship, and races electrocycles or trains in VR arenas between missions. Cool, focused, and calm under pressure—Lexi solves problems with precision, not violence.",
     "themeSong": "Artifiction - void",
     "songLink": "https://youtu.be/hRZGz-xRxdE?si=BLJdUtUVRrCTGy8E"
   },
@@ -997,8 +998,8 @@
     "purpose": "Provide 2000s internet nostalgia, create stuff using Flash and Windows Movie Maker",
     "funFact": "Got influenced by his big brother to be an early content creator",
     "description": "ChaoMario is a hyper-creative, nostalgia-powered kid from the golden age of 2000s internet! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!",
-    "retirementReason": "Runa fulfils the nostalgia purpose much better",
-    "alternatives": "Runa, Connor"
+    "retirementReason": "Ryota fulfils the nostalgia purpose much better",
+    "alternatives": "Ryota, Connor"
   },
   {
     "name": "Officer Misty, Mistake Corrector",

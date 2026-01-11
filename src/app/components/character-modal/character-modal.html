@@ -46,6 +46,7 @@
     <div id="modalRetirement" *ngIf="character.type === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
     <div id="modalInactive" *ngIf="character.type === 'inactive'"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
     <div id="modalAlternatives" *ngIf="character.alternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
+    <div id="modalDescription" style="display: none;">{{character.description}}</div>
   </div>
   <div id="modalFooter">
     <span *ngIf="hasLink()"><a id="modalLink" [href]="chatLink" target="_blank">Chat 🗣️</a> |</span>
