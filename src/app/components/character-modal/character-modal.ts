@@ -354,7 +354,7 @@ export class CharacterModal {
     const avatarImg = await loadImageSafe(avatarSrc);
 
     // --- STEP 2: setup canvas ---
-    const W = Math.max(600, Math.ceil(modalEl?.clientWidth || 800));
+    const W = Math.max(600, Math.ceil(modalEl?.clientWidth || 800) + 50);
     const P = 24;
     // text column starts to the right of the avatar
     const textX = P + AVATAR_SIZE + AVATAR_GAP;
@@ -383,23 +383,30 @@ export class CharacterModal {
         const lineHeight = parseFloat((r.valueFont.split(' ')[1] || '16px'));
         const height = valueLines.length * lineHeight + 6;
         bodyHeight += height;
-        return { ...r, label: '', labelWidth: 0, valueLines, lineHeight, isDescription: true };
+        return { ...r, label: '', labelWidth: 0, valueLines, lineHeight, isDescription: true, yPosition: bodyHeight - height };
       }
+
+      // Check if this row will be below the avatar
+      const yPosition = bodyHeight;
+      const rowStartsAtY = P + titleSize + 12 + (FLAGS_TEXT ? flagsSize + 8 : 0) + yPosition;
+      const avatarBottom = P + AVATAR_SIZE;
+      const canMoveLeft = rowStartsAtY >= avatarBottom;
 
       // measure label width using label font
       measCtx.font = r.labelFont;
       const label = r.label ? (r.label + ':') : '';
       const labelWidth = label ? measCtx.measureText(label).width : 0;
 
-      // wrap value using value font
+      // wrap value using value font - use full width if below avatar, otherwise use text column width
       measCtx.font = r.valueFont;
-      const maxValueWidth = Math.max(60, contentWidth - (label ? labelWidth + labelGap : 0));
+      const availableWidth = canMoveLeft ? (W - P - P) : contentWidth;
+      const maxValueWidth = Math.max(60, availableWidth - (label ? labelWidth + labelGap : 0));
       const valueLines = wrapText(measCtx, r.value || '', maxValueWidth);
       const lineHeight = parseFloat((r.valueFont.split(' ')[1] || '16px'));
       const height = valueLines.length * lineHeight + 6;
 
       bodyHeight += height;
-      return { ...r, label, labelWidth, valueLines, lineHeight, isDescription: false };
+      return { ...r, label, labelWidth, valueLines, lineHeight, isDescription: false, yPosition };
     });
 
     // text block height (title + gap + flags + gap + rows)
@@ -512,15 +519,22 @@ export class CharacterModal {
         continue;
       }
 
+      // Check if this row is below the avatar (in blank space to the left)
+      const rowStartsAtY = P + titleSize + 12 + (FLAGS_TEXT ? flagsSize + 8 : 0) + r.yPosition;
+      const avatarBottom = P + AVATAR_SIZE;
+      const canMoveLeft = rowStartsAtY >= avatarBottom;
+
+      const rowX = canMoveLeft ? P : textX;
+
       // label
       ctx.fillStyle = r.labelColor;
       ctx.font = r.labelFont;
-      ctx.fillText(r.label, textX, y);
+      ctx.fillText(r.label, rowX, y);
 
       // value
       ctx.fillStyle = r.color;
       ctx.font = r.valueFont;
-      const startX = textX + (r.label ? r.labelWidth + labelGap : 0);
+      const startX = rowX + (r.label ? r.labelWidth + labelGap : 0);
       for (let i = 0; i < r.valueLines.length; i++) {
         ctx.fillText(r.valueLines[i], startX, y);
         y += r.lineHeight;
