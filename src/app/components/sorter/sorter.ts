@@ -22,6 +22,9 @@ export class Sorter implements OnInit, OnDestroy {
   includeRetired: boolean = true;
   includeMe: boolean = false;
   isIOS: boolean = false;
+  
+  // Mode selection
+  sortMode: 'ranking' | 'kingOfTheHill' = 'ranking';
 
   genderAllLabel = '♂️♀️ All';
   genderBoysLabel = '♂️ Boys';
@@ -41,6 +44,11 @@ export class Sorter implements OnInit, OnDestroy {
   private nextQueue: Character[][] = [];
   private currentMerge: { left: Character[]; right: Character[]; result: Character[] } | null = null;
 
+  // King of the Hill mode
+  kingOfTheHillWinner: Character | null = null;
+  currentKing: Character | null = null;
+  remainingCharacters: Character[] = [];
+
   // History for back/undo
   private history: Array<{
     characters: Character[];
@@ -54,6 +62,10 @@ export class Sorter implements OnInit, OnDestroy {
     sortedCharacters: Character[];
     tieGroups: Set<string>[];
     comparisonHistory: Map<string, Map<string, 'greater' | 'less'>>;
+    // King of the Hill history
+    currentKing: Character | null;
+    remainingCharacters: Character[];
+    kingOfTheHillWinner: Character | null;
   }> = [];
 
   constructor(private characterService: CharacterService, private deviceService: DeviceService) {
@@ -91,19 +103,23 @@ export class Sorter implements OnInit, OnDestroy {
         return;
       }
       
-      // Initialize interactive merge-sort
-      const shuffled = this.shuffleArray([...this.characters]);
-      this.mergeQueue = shuffled.map(c => [c]);
-      this.nextQueue = [];
-      this.currentMerge = null;
-      this.isSorting = true;
-      this.progress = 0;
-      this.totalComparisons = Math.ceil(this.characters.length * Math.log2(this.characters.length));
-      this.history = [];
-      this.tieGroups = [];
-      this.comparisonHistory = new Map();
+      if (this.sortMode === 'kingOfTheHill') {
+        this.startKingOfTheHill();
+      } else {
+        // Initialize interactive merge-sort
+        const shuffled = this.shuffleArray([...this.characters]);
+        this.mergeQueue = shuffled.map(c => [c]);
+        this.nextQueue = [];
+        this.currentMerge = null;
+        this.isSorting = true;
+        this.progress = 0;
+        this.totalComparisons = Math.ceil(this.characters.length * Math.log2(this.characters.length));
+        this.history = [];
+        this.tieGroups = [];
+        this.comparisonHistory = new Map();
 
-      this.prepareNextMerge();
+        this.prepareNextMerge();
+      }
     });
   }
 
@@ -179,6 +195,11 @@ export class Sorter implements OnInit, OnDestroy {
   }
 
   choose(character: Character): void {
+    if (this.sortMode === 'kingOfTheHill') {
+      this.chooseKingOfTheHill(character);
+      return;
+    }
+    
     if (!this.currentPair || !this.currentMerge) return;
     this.pushState();
     const [char1, char2] = this.currentPair;
@@ -268,6 +289,9 @@ export class Sorter implements OnInit, OnDestroy {
     s.comparisonHistory.forEach((inner, k) => {
       this.comparisonHistory.set(k, new Map(inner));
     });
+    this.currentKing = s.currentKing;
+    this.remainingCharacters = [...s.remainingCharacters];
+    this.kingOfTheHillWinner = s.kingOfTheHillWinner;
   }
 
   canGoBack(): boolean {
@@ -406,6 +430,9 @@ export class Sorter implements OnInit, OnDestroy {
       sortedCharacters: [...this.sortedCharacters],
       tieGroups: this.tieGroups.map(g => new Set<string>(g)),
       comparisonHistory: comparisonCopy,
+      currentKing: this.currentKing,
+      remainingCharacters: [...this.remainingCharacters],
+      kingOfTheHillWinner: this.kingOfTheHillWinner,
     });
   }
 
@@ -465,5 +492,63 @@ export class Sorter implements OnInit, OnDestroy {
       console.error('Error taking screenshot:', error);
       alert('Failed to take screenshot. Please try again.');
     }
+  }
+
+  // King of the Hill Methods
+  startKingOfTheHill(): void {
+    const shuffled = this.shuffleArray([...this.characters]);
+    this.currentKing = shuffled[0];
+    this.remainingCharacters = shuffled.slice(1);
+    this.isSorting = true;
+    this.progress = 0;
+    this.totalComparisons = this.characters.length - 1;
+    this.history = [];
+    this.kingOfTheHillWinner = null;
+    
+    if (this.remainingCharacters.length > 0) {
+      this.currentPair = [this.currentKing, this.remainingCharacters[0]];
+    } else {
+      // Only one character total
+      this.kingOfTheHillWinner = this.currentKing;
+      this.isSorting = false;
+    }
+  }
+
+  chooseKingOfTheHill(character: Character): void {
+    if (!this.currentPair) return;
+    this.pushState();
+    
+    const [king, challenger] = this.currentPair;
+    
+    if (character === king) {
+      // King wins, stays as king
+      this.currentKing = king;
+    } else {
+      // Challenger wins, becomes new king
+      this.currentKing = challenger;
+    }
+    
+    // Remove the challenger from remaining characters
+    this.remainingCharacters.shift();
+    this.progress++;
+    
+    // Check if there are more challengers
+    if (this.remainingCharacters.length > 0) {
+      this.currentPair = [this.currentKing, this.remainingCharacters[0]];
+    } else {
+      // No more challengers, current king is the winner
+      this.kingOfTheHillWinner = this.currentKing;
+      this.isSorting = false;
+      this.currentPair = null;
+    }
+  }
+
+  resetKingOfTheHill(): void {
+    this.kingOfTheHillWinner = null;
+    this.currentKing = null;
+    this.remainingCharacters = [];
+    this.isSorting = false;
+    this.currentPair = null;
+    this.sortedCharacters = [];
   }
 }

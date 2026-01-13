@@ -1,10 +1,10 @@
 h1 {
   text-align: center;
   margin-bottom: 1rem;
+  padding-top: 45px;
 }
 
 body {
-  padding: 0;
   max-width: 600px;
 }
 
@@ -31,6 +31,39 @@ body {
 
 .restart-button {
   background-color: #DD3333;
+}
+
+.mode-selection {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.mode-options {
+  display: flex;
+  gap: 2rem;
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    input {
+      margin: 0;
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .filters {
@@ -318,5 +351,20 @@ body {
   input[type="radio"],
   input[type="checkbox"] {
     accent-color: #3aa76d;
+  }
+
+}
+
+// King of the Hill Winner Styling
+.character-win {
+  text-align: center;
+  margin: 2rem auto;
+
+  img {
+    width: 200px;
+  }
+
+  h2 {
+    margin-top: 1rem;
   }
 }

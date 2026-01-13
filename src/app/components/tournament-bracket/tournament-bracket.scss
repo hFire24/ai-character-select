@@ -15,9 +15,16 @@
   &.one-column {
     margin: 0 auto;
     flex-direction: column;
+    align-items: center;
     
     .column {
-      width: 100%;
+      width: auto;
+    }
+    
+    .matchup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 

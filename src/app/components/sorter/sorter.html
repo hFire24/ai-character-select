@@ -1,8 +1,23 @@
 <h1>Character Sorter</h1>
 
 <!-- Setup Phase -->
-<div *ngIf="!isSorting && sortedCharacters.length === 0" class="setup">
+<div *ngIf="!isSorting && sortedCharacters.length === 0 && !kingOfTheHillWinner" class="setup">
   <div class="filters">
+
+    <div class="filter-group">
+      <h3>Sort Mode</h3>
+      <div class="filter-section">
+        <label>
+          <input type="radio" name="sortMode" [(ngModel)]="sortMode" value="ranking">
+          Complete Ranking
+        </label>
+        <label>
+          <input type="radio" name="sortMode" [(ngModel)]="sortMode" value="kingOfTheHill">
+          King of the Hill
+        </label>
+      </div>
+    </div>
+
     <div class="filter-group">
       <h3>Gender</h3>
       <div class="filter-section">
@@ -84,6 +99,13 @@
   </ol>
   <button (click)="takeScreenshot()" class="screenshot-button">📷 Download Screenshot</button>
   <button (click)="sortedCharacters = []" class="restart-button">Start Over</button>
+</div>
+
+<!-- King of the Hill Winner -->
+<div *ngIf="kingOfTheHillWinner" class="character-win">
+  <img [src]="'assets/' + kingOfTheHillWinner.img" [alt]="kingOfTheHillWinner.name">
+  <h2>Champion: {{kingOfTheHillWinner.name}}</h2>
+  <button (click)="resetKingOfTheHill()" class="restart-button">Start Over</button>
 </div>
 
 <app-back-button></app-back-button>
