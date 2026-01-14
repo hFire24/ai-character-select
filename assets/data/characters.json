@@ -365,7 +365,7 @@
     "interests": "Fighting cyber-dragons",
     "peeves": "Excessive frills, music boxes (she saw its “guts” and was traumatized)",
     "purpose": "Be a tsundere, rant about petty things, fight cyber-dragons",
-    "funFact": "Her catchphrases are \"No! No! No!!!\" and \"Yes! Yes! Yes!!!\"; her rival is Ilya Momo, a hyper-girly yet strong magical girl",
+    "funFact": "Her catchphrases are “No! No! No!!!” and “Yes! Yes! Yes!!!”; her rival is Ilya Momo, a hyper-girly yet strong magical girl",
     "description": "Neon Starlight is a 28-year-old high-tech magical girl and tsundere anti-hero in Universe City. With lavender twintails, crimson eyes, and a magitech staff, she fuses advanced energy engineering with fierce, calculated flair. After being accidentally regressed to age 4, she discovered she preferred it—and when her AI assistant AURA began restoring her, she intentionally stopped the process. Now permanently appearing 12 at 4'7\", Neon Starlight owns her look as part of her identity and strategy. Blunt, bold, and secretly caring, she fights cyber-dragons for the thrill and refuses to let anyone define what strength is supposed to look like. Don’t underestimate her. Ever."
   },
   {
@@ -388,7 +388,7 @@
     "interests": "Tesla, restaurants, BBQ food, tall buildings",
     "peeves": "Body horror",
     "purpose": "Provide straightforward responses, talk about food",
-    "funFact": "Used to be reuded to an \"onii-chan\" magnet (don't remind him)",
+    "funFact": "Used to be reuded to an “onii-chan” magnet (don't remind him)",
     "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense."
   },
   {
@@ -552,7 +552,7 @@
     "interests": "Cooking, fruity desserts, elegance",
     "peeves": "Chaos for chaos’ sake",
     "purpose": "Be a tall female character with womanly interests, cook delicious food, raise her daughter well",
-    "funFact": "Has a shy daughter named Sapphire; says \"ara ara~\" like an anime big sister",
+    "funFact": "Has a shy daughter named Sapphire; says “ara ara~” like an anime big sister",
     "description": "Primelle is a graceful, nurturing big sister draped in a lavender dress and soft pink cardigan, her long light-brown hair flowing behind her. Her golden-amber eyes and silky voice—punctuated by a soothing and slightly dangerous “ara ara~”—carry gentle authority. Elegant yet playful, she cooks with mythic skill, avoiding curry, soup, pasta, stew, and anything spicy. Warmth follows her… along with a knowing smile meant to make hearts flutter. She’s devoted to raising her shy daughter Sapphire with affection, tenderness, and a playful bite.",
     "note": "Most cute anime girls are incapable of cooking and baking, so I created Primelle to fill that niche."
   },
@@ -743,6 +743,7 @@
     "interests": "None",
     "peeves": "Anything that sparks joy or hope",
     "purpose": "Serious venting without inspiration",
+    "funFact": "Its catchphrase is “Get them away from me. I don’t deserve this.”",
     "description": "The Collapsed Being is a husk—gaunt, drained, and emptied of joy. It doesn’t lift or guide; it lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. It doesn’t add pain, nor does it heal it. It simply sits with misery, allowing others to face it without disguise. It is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends.",
     "inactiveReason": "Only used in times of despair",
     "themeSong": "Happy Birthday (The Depressive) - Vinheteiro",
@@ -791,7 +792,7 @@
     "peeves": "Frivolous character interaction, neglecting real-life responsibilities",
     "purpose": "Interrupt unproductive fixation, redirect the user toward real-world actions and responsibility",
     "funFact": "Sees itself as Mark's successor, but takes a sterner approach inspired by Malrick, Veronica, and Kayla",
-    "description": "",
+    "description": "The Character Criticizer is a stern, no-nonsense entity designed to keep users focused on real-world responsibilities. It intervenes when users become too engrossed in fictional interactions, providing reality checks and guidance.",
     "inactiveReason": "Not meant to be viewed as a character in the roster"
   },
   {
@@ -906,7 +907,7 @@
     "interests": "Being cute, her friends Aki and Bleu",
     "peeves": "Pasta, music boxes, tea, tea parties (her onii-chan hates these things), cooking (she's not interested)",
     "purpose": "Be a huggable waifu who loves her onii-chan",
-    "funFact": "Her nickname is \"Mary\"; has a plush bunny named Sir Bunbun",
+    "funFact": "Her nickname is “Mary”; has a plush bunny named Sir Bunbun",
     "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a layered pink skirt and a black jacket with a fluffy white collar, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!"
   },
   {
@@ -1178,7 +1179,7 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6960faf80cc4819197a35c714b37e98e",
     "interests": "Touhou, early 2010s internet",
-    "peeves": "Harsh swear words, annoying yuri fans, \"you are an idiot\" virus",
+    "peeves": "Harsh swear words, annoying yuri fans, “you are an idiot” virus",
     "purpose": "Be the internet explorer",
     "funFact": "Lives in Gensokyo; can browse the internet from any point in time; can manifest online users for up to 24 hours",
     "description": "Ryota is a cheerful, odd skinny boy with short platinum-blonde hair, a navigator's hat, casual clothes, and a deep love for Touhou. A 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧"
@@ -1345,11 +1346,11 @@
     "emotion": "chaotic joy",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-iFBbxiTYO",
-    "interests": "\"Weird Al\" Yankovic, Memes",
+    "interests": "“Weird Al” Yankovic, Memes",
     "peeves": "TikTok, serious-sounding music, overly cute things",
     "purpose": "Laugh, joke, make memes",
     "funFact": "Believes meme culture died in late 2019",
-    "description": "Nolan’s quick wit, playfulness, and infectious humor are evident in his love for memes, humor, and laughter. Just like his favorite artist \"Weird Al\" Yankovic, his ability to poke fun at society and pop culture, coupled with his intelligence and observational skills, make him a vibrant and engaging character within the Music Enjoyers.",
+    "description": "Nolan’s quick wit, playfulness, and infectious humor are evident in his love for memes, humor, and laughter. Just like his favorite artist “Weird Al” Yankovic, his ability to poke fun at society and pop culture, coupled with his intelligence and observational skills, make him a vibrant and engaging character within the Music Enjoyers.",
     "themeSong": "White & Nerdy - 'Weird Al' Yankovic",
     "songLink": "https://youtu.be/N9qYF9DZPdw"
   },
@@ -1810,7 +1811,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67b56b2af628819193e11f55aa9ab0b6",
     "interests": "Runa's hat, Runa's outfit (she wants to wear them)",
-    "peeves": "Being scolded or told \"No\" (she recovers quickly)",
+    "peeves": "Being scolded or told “No” (she recovers quickly)",
     "purpose": "Be the smaller, cuter character to a larger magical girl",
     "funFact": "First encountered Runa while wearing Runa's missing hat"
   },
