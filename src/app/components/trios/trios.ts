@@ -28,7 +28,7 @@ export class Trios implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.characterService.getCharacters().subscribe(chars => {
+    this.characterService.getCharactersPlusCriticizer().subscribe(chars => {
       this.characters = chars;
       this.initializeTrios();
       this.loading = false;
@@ -142,6 +142,11 @@ export class Trios implements OnInit {
         name: "Productivity Pushers",
         description: "Characters who encourage productivity",
         characterShortNames: ["Ryker", "Malrick", "Mark"]
+      },
+      {
+        name: "Redirection Trio",
+        description: "Characters who discourage and stop distracting behavior",
+        characterShortNames: ["Mark", "Criticizer", "Kayla"]
       },
       {
         name: "Dramatic Trio",

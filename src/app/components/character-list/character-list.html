@@ -4,7 +4,7 @@
     <div class="last-chatted-list">
       @for (item of lastChattedCharacters; track item.character.id) {
         <div class="chat-item" (click)="onCharacterClick(item.character)">
-          <img [src]="'assets/' + item.character.img" [alt]="item.character.shortName" class="character-avatar">
+          <img [src]="'assets/' + (item.character.img || 'Icons/extended/Unknown.png')" [alt]="item.character.shortName" class="character-avatar">
           <div class="chat-character">
             <span class="character-name">{{ item.character.shortName }}</span>
             <span class="chat-date">{{ formatDate(item.timestamp) }}</span>
@@ -21,7 +21,7 @@
     <div class="never-chatted-list">
       @for (character of neverChattedCharacters; track character.id) {
         <div class="never-chat-item" (click)="onCharacterClick(character)">
-          <img [src]="'assets/' + character.img" [alt]="character.shortName" class="character-avatar">
+          <img [src]="'assets/' + (character.img || 'Icons/extended/Unknown.png')" [alt]="character.shortName" class="character-avatar">
           <span class="character-name">{{ character.shortName }}</span>
         </div>
       }
