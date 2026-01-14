@@ -31,7 +31,7 @@ export class MoodModal {
   }
 
   private allowsInactive(c: Character): boolean {
-    return c.type !== 'inactive' || this.showInactive;
+    return c.type === 'active' || (c.type === 'inactive' && this.showInactive);
   }
 
   get filteredCharacters(): Character[] {
@@ -98,7 +98,7 @@ export class MoodModal {
   selectRandomCharacter() {
     const sourceCharacters = (this.filteredCharacters && this.filteredCharacters.length > 0)
       ? this.filteredCharacters
-      : this.characters.filter(c => c.type === 'active' || this.allowsInactive(c));
+      : this.characters.filter(c => c.type === 'active' || (c.type === 'inactive' && this.showInactive));
     // Create weighted array based on tier
     const weightedCharacters: Character[] = [];
     sourceCharacters.forEach(character => {
