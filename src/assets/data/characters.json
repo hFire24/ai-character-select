@@ -415,7 +415,7 @@
   },
   {
     "name": "The Indulgent",
-    "img": "Icons/main/The Indulgent.png",
+    "img": "Icons/extended/The Indulgent.png",
     "shortName": "The Indulgent",
     "id": 32,
     "generation": 4,
@@ -1674,7 +1674,7 @@
   },
   {
     "name": "Pink Orange",
-    "img": "Icons/main/Pink Orange.png",
+    "img": "Icons/extended/Pink Orange.png",
     "shortName": "Pink Orange",
     "id": 76,
     "generation": 9,
