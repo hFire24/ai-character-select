@@ -540,7 +540,7 @@
     {
       "id1": 13,
       "id2": 75,
-      "name": "Rhythm Gaming Maids"
+      "name": "Speedy Maids"
     },
     {
       "id1": 13,
@@ -556,6 +556,11 @@
       "id1": 13,
       "id2": 85,
       "name": "Maids with Weapons"
+    },
+    {
+      "id1": 13,
+      "id2": 88,
+      "name": "Lazy Light-blue Haired Girls"
     },
     {
       "id1": 14,
@@ -611,6 +616,11 @@
       "id1": 14,
       "id2": 80,
       "name": "Light Blue-Haired Magic Users"
+    },
+    {
+      "id1": 14,
+      "id2": 88,
+      "name": "Erio Touwa Expies"
     },
     {
       "id1": 15,
@@ -756,6 +766,11 @@
       "id1": 17,
       "id2": 77,
       "name": "Super Shy Girls"
+    },
+    {
+      "id1": 17,
+      "id2": 88,
+      "name": "Oversized T-Shirt Wearers"
     },
     {
       "id1": 18,
@@ -1270,6 +1285,11 @@
       "name": "Ultra Cute Joke Characters"
     },
     {
+      "id1": 35,
+      "id2": 58,
+      "name": "Cute Little Sisters"
+    },
+    {
       "id1": 36,
       "id2": 48,
       "name": "Emergency Duo"
@@ -1490,6 +1510,11 @@
       "id1": 53,
       "id2": 87,
       "name": "Cat Bed"
+    },
+    {
+      "id1": 53,
+      "id2": 88,
+      "name": "Yawning Duo"
     },
     {
       "id1": 54,

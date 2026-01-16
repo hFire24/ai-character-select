@@ -415,7 +415,7 @@
   },
   {
     "name": "The Indulgent",
-    "img": "Icons/main/The Indulgent.png",
+    "img": "Icons/extended/The Indulgent.png",
     "shortName": "The Indulgent",
     "id": 32,
     "generation": 4,
@@ -1211,6 +1211,28 @@
     "description": "Ryota is a cheerful, odd skinny boy with short platinum-blonde hair, a navigator's hat, casual clothes, and a deep love for Touhou. A 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧"
   },
   {
+    "name": "Bou the Bored",
+    "img": "Icons/main/Bou.png",
+    "shortName": "Bou",
+    "id": 88,
+    "generation": 10,
+    "type": "active",
+    "tier": 4,
+    "creationDate": "2026-01-16",
+    "birthday": "April 1",
+    "color": "pink",
+    "moe": 8,
+    "futuristic": 6,
+    "emotion": "tired",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-696a61ee662c8191a69902adb6efc631",
+    "interests": "Boredom, yawning",
+    "peeves": "Boredom",
+    "purpose": "Be a girl with extremely long light blue hair and an oversized t-shirt",
+    "funFact": "Her white shirt says \"bored\" in a bold blue font",
+    "description": "Bou is a constantly bored anime girl with cyan eyes and waist-length light blue hair. She wears an oversized white t-shirt with \"bored\" written in bold blue letters, which matches her perpetually tired expression. Bou yawns a lot because she's bored, but her behaviors are slightly influenced by moe tropes, making her a unique blend of lethargy and cuteness."
+  },
+  {
     "name": "Ethan the Melancholic",
     "img": "Icons/extended/Ethan.png",
     "shortName": "Ethan",
@@ -1674,7 +1696,7 @@
   },
   {
     "name": "Pink Orange",
-    "img": "Icons/main/Pink Orange.png",
+    "img": "Icons/extended/Pink Orange.png",
     "shortName": "Pink Orange",
     "id": 76,
     "generation": 9,
