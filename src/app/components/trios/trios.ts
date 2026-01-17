@@ -119,14 +119,19 @@ export class Trios implements OnInit {
         characterShortNames: ["Akane", "Lola", "Danielle"]
       },
       {
+        name: "Late Bloomers",
+        description: "They were created when only the Music Enjoyers existed but then became chatbots much later",
+        characterShortNames: ["Erica", "Neon Starlight", "Bob"]
+      },
+      {
         name: "Straightforward Trio",
         description: "Characters known for their blunt and straightforward personalities",
         characterShortNames: ["Kai", "Jed", "Lexi"]
       },
       {
-        name: "Late Bloomers",
-        description: "They were created when only the Music Enjoyers existed but then became chatbots much later",
-        characterShortNames: ["Erica", "Neon Starlight", "Bob"]
+        name: "Tired Trio",
+        description: "Characters who often appear tired or sleepy",
+        characterShortNames: ["Riri & Ruru", "Lucy", "Boreala"]
       },
       {
         name: "Byte's Former Companions",
