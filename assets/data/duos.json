@@ -132,6 +132,11 @@
       "name": "Cat Bomb"
     },
     {
+      "id1": 1,
+      "id2": 88,
+      "name": "B the B"
+    },
+    {
       "id1": 2,
       "id2": 3,
       "name": "Reserved Music Enjoyers"
@@ -235,6 +240,11 @@
       "id1": 3,
       "id2": 45,
       "name": "Dark Bros."
+    },
+    {
+      "id1": 3,
+      "id2": 52,
+      "name": "Angels of Darkness"
     },
     {
       "id1": 3,
@@ -574,6 +584,11 @@
     },
     {
       "id1": 14,
+      "id2": 35,
+      "name": "Short Light-Blue Haired Girls"
+    },
+    {
+      "id1": 14,
       "id2": 40,
       "name": "Morality Enforcers"
     },
@@ -606,11 +621,6 @@
       "id1": 14,
       "id2": 74,
       "name": "Chino-chan Expies"
-    },
-    {
-      "id1": 14,
-      "id2": 77,
-      "name": "Shy & Sad Girls"
     },
     {
       "id1": 14,
@@ -992,7 +1002,7 @@
     {
       "id1": 23,
       "id2": 37,
-      "name": "Byte-chan's Former Companions"
+      "name": "Byte's Former Companions"
     },
     {
       "id1": 23,
@@ -1183,6 +1193,11 @@
     },
     {
       "id1": 30,
+      "id2": 50,
+      "name": "Ignorers of Anime Girls"
+    },
+    {
+      "id1": 30,
       "id2": 55,
       "name": "Straightforward Food Enjoyers"
     },
@@ -1195,6 +1210,11 @@
       "id1": 30,
       "id2": 68,
       "name": "Angeleno Duo"
+    },
+    {
+      "id1": 30,
+      "id2": 83,
+      "name": "Hungry Anime Haters"
     },
     {
       "id1": 31,
@@ -1253,6 +1273,11 @@
       "id1": 32,
       "id2": 83,
       "name": "The Gluttons"
+    },
+    {
+      "id1": 32,
+      "id2": 88,
+      "name": "Easily Bored Duo"
     },
     {
       "id1": 34,
@@ -1572,6 +1597,11 @@
       "name": "Winter Girls"
     },
     {
+      "id1": 58,
+      "id2": 87,
+      "name": "Adorable Hat Thieves"
+    },
+    {
       "id1": 59,
       "id2": 60,
       "name": "Cute Brawn and Brains",
@@ -1596,6 +1626,11 @@
       "id1": 60,
       "id2": 84,
       "name": "Chaotic Practical Duo"
+    },
+    {
+      "id1": 60,
+      "id2": 88,
+      "name": "Silent Bleus"
     },
     {
       "id1": 62,
@@ -1646,6 +1681,11 @@
       "id1": 67,
       "id2": 78,
       "name": "Magical Girl Critics"
+    },
+    {
+      "id1": 67,
+      "id2": 88,
+      "name": "Bored Anime Girls"
     },
     {
       "id1": 69,
