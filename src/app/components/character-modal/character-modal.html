@@ -49,8 +49,8 @@
     <div id="modalDescription" style="display: none;">{{character.description}}</div>
   </div>
   <div id="modalFooter">
-    <span *ngIf="hasLink()"><a id="modalLink" [href]="chatLink" target="_blank">Chat 🗣️</a> |</span>
+    <span *ngIf="hasLink()"><a id="modalLink" [href]="chatLink" target="_blank">Chat 🗣️</a></span>
     <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
-    <span *ngIf="!isMobile() && hasLink()"> | </span><span *ngIf="!isMobile() && hasLink()"><button id="updateChatLink" (click)="updateChatLink()">Update Chat Link</button></span>
+    <span *ngIf="!isMobile() && hasLink()"><button id="updateChatLink" (click)="updateChatLink()">Update Chat Link</button></span>
   </div>
 </div>
