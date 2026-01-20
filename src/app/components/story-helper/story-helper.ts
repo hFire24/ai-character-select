@@ -84,7 +84,7 @@ export class StoryHelper {
 
   ngOnInit() {
     this.fillDate();
-    this.characterService.getCharacters().subscribe(chars => {
+    this.characterService.getCharactersSplitTwins().subscribe(chars => {
       this.characters = chars.filter(c => ![0, 42, 71].includes(c.id));
     });
   }
@@ -101,9 +101,23 @@ export class StoryHelper {
     const filteredCharacters = this.excludeRetired ? this.characters.filter(c => !c.type.includes('retired')) : this.characters;
     if (filteredCharacters.length === 0) return;
 
-    let random = Math.floor(Math.random() * filteredCharacters.length);
+    // Create weighted array: tier 7 and inactive characters get 0.5 weight, others get 1.0 weight
+    const weights = filteredCharacters.map(c => c.tier === 7 || c.type === 'inactive' ? 0.5 : 1.0);
+    const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+    
+    // Generate random number and select character based on weight
+    let random = Math.random() * totalWeight;
+    let selectedIndex = 0;
+    
+    for (let i = 0; i < weights.length; i++) {
+      random -= weights[i];
+      if (random <= 0) {
+        selectedIndex = i;
+        break;
+      }
+    }
 
-    const character = filteredCharacters[random];
+    const character = filteredCharacters[selectedIndex];
     this.characterList.push(character.shortName);
     this.charactersString = this.characterList.join(', ');
   }

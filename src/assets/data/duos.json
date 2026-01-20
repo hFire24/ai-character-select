@@ -640,7 +640,7 @@
     {
       "id1": 15,
       "id2": 18,
-      "name": "-chan Duo"
+      "name": "Chaotic -chan Duo"
     },
     {
       "id1": 15,
@@ -701,6 +701,11 @@
       "id1": 15,
       "id2": 67,
       "name": "Cute Slackers"
+    },
+    {
+      "id1": 15,
+      "id2": 88,
+      "name": "Lazy -chan Duo"
     },
     {
       "id1": 16,
@@ -846,6 +851,11 @@
       "id1": 18,
       "id2": 83,
       "name": "Joke Characters"
+    },
+    {
+      "id1": 18,
+      "id2": 88,
+      "name": "Opposite -chan Duo"
     },
     {
       "id1": 19,

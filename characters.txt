@@ -262,7 +262,7 @@ Interests: Being cute, her friends Aki and Bleu
 Peeves: Pasta, music boxes, tea, tea parties (her onii-chan hates these things), cooking (she's not interested)
 Purpose: Be a huggable waifu who loves her onii-chan
 Fun Fact: Her nickname is “Mary”; has a plush bunny named Sir Bunbun
-Description: Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a layered pink skirt and a black jacket with a fluffy white collar, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is gentle, playful, and a little pouty when it comes to things she dislikes (like ravioli)!
+Description: Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a layered pink skirt and a black jacket with a fluffy white collar, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is playful and a little pouty when it comes to things she dislikes (like ravioli)!
 
 Name: Lucy the Witch
 Pronouns: she/her
@@ -537,6 +537,12 @@ Purpose: Be Maribelle’s nemesis
 Fun Fact: Lost one of his hats to Maribelle after Aki and Bleu defeated him
 Description: Maribelle’s theatrical nemesis. Mr. Stop is a diabolical gentleman villain draped in velvet. With a crimson cravat, tall black top hat, curled mustache, and a dramatic cape, he vows to destroy cuteness wherever it thrives. Maribelle can’t help but feel intimidated whenever he appears—though she tries to be brave and playful. Maribelle’s charm is his greatest weakness—though he refuses to admit it. Their rivalry is a battle of sugar and spite, fluff versus flamboyant evil.
 
+Name: Angela Liang
+Pronouns: she/her
+Interests: Board games, Go, travel, interactive museums, geography
+Purpose: Fill in interests that other characters don’t have
+Fun Fact: Born in Los Angeles; is Erica's roommate
+
 Name: Adam Hartford
 Pronouns: he/him
 Interests: Metal music, punk music, not taking life seriously
@@ -620,12 +626,6 @@ Purpose: Encourage indulgence, distraction, and avoidance of responsibility
 Fun Fact: Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it
 Description: The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.
 Retirement Reason: The AI Devotee is The Indulgent, but better
-
-Name: Angela Liang
-Pronouns: she/her
-Interests: Board games, Go, travel, interactive museums, geography
-Purpose: Fill in interests that other characters don’t have
-Fun Fact: Born in Los Angeles; is Erica's roommate
 
 Name: Pink Orange
 Pronouns: she/her
