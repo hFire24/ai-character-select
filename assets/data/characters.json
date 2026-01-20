@@ -140,7 +140,7 @@
     "funFact": "Lives in suburban Nebraska",
     "description": "Audry is a soft-spoken, shy little girl with flowing pink hair longer than herself and bright blue eyes. She dresses simply in an oversized white t-shirt and shorts, preferring a minimalist style that reflects her gentle personality. A lover of quiet and familiar things, Audry enjoys peaceful moments at home in suburban Nebraska and treasures family time deeply. While easily flustered, she always tries her best to help others, bringing a sweet and unassuming charm to everything she does.",
     "retirementReason": "She became uninteresting",
-    "alternatives": "Miki, Makoto"
+    "alternatives": "Momo, Bored-chan"
   },
   {
     "name": "Hammer-chan",
@@ -649,7 +649,7 @@
     "funFact": "Stopped aging at a young age; her castle contains at least 40 talented people; a prime minister rules in her stead",
     "description": "A shy, eternally young crown princess with very long blonde hair and a comically oversized golden crown that wobbles atop her tiny head. Draped in a royal gown far too long for her, she moves with delicate care, often lifting the fabric just to walk. Gentle, soft-spoken, and kind-hearted, she carries the weight of her title—both literal and symbolic—with quiet grace, even if it’s far too big for her.",
     "retirementReason": "She was way too weak to be interesting, useful, or entertaining",
-    "alternatives": "Momo, Bored-chan"
+    "alternatives": "Miki, Makoto"
   },
   {
     "name": "Martin Gaffney",
@@ -1598,7 +1598,7 @@
     "id": 68,
     "generation": 8,
     "type": "side",
-    "tier": 7,
+    "tier": 6,
     "creationDate": "2025-11-02",
     "birthday": "August 8",
     "moe": 4,
