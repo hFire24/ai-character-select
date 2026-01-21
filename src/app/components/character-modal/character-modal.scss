@@ -42,8 +42,13 @@
 }
 
 /* spacing inside the card */
-#characterModal > .modalHeader,
-#characterModal > div:not(.modalHeader) {
+#characterModal > .modalHeader {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+#characterModal > .modalBody {
+  padding: 0;
+}
+#characterModal > div:not(.modalHeader):not(.modalBody) {
   padding: 1.25rem 1.25rem 0 1.25rem;
 }
 #characterModal > div:last-child {
@@ -228,11 +233,19 @@
     text-align: center;
   }
 
+  #modalName {
+    text-align: center;
+  }
+
   #characterModal > .modalHeader {
     padding: 1rem 1rem 0 1rem;
   }
 
-  #characterModal > div:not(.modalHeader) {
+  #characterModal > .modalBody {
+    padding: 0;
+  }
+
+  #characterModal > div:not(.modalHeader, .modalBody) {
     padding: 1rem;
   }
 

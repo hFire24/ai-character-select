@@ -13,7 +13,7 @@
       [disabled]="searchTerm.trim().length > 0"
       [class.disabled]="searchTerm.trim().length > 0"
     >
-      More Characters
+      ➕ More Characters
       @if (searchTerm.trim().length > 0) {
         <span class="filter-disabled-text">(Search active)</span>
       }
@@ -25,13 +25,19 @@
       [class.disabled]="searchTerm.trim().length > 0"
     >
       @if (showMoreCharacters) {
-        {{ showRetiredCharacters ? 'Hide Retired' : 'Show Retired' }}
+        🗃️ {{ showRetiredCharacters ? 'Hide Retired' : 'Show Retired' }}
       } @else {
-        {{ showRetiredCharacters ? 'Hide Inactive' : 'Show Inactive' }}
+        🗃️ {{ showRetiredCharacters ? 'Hide Inactive' : 'Show Inactive' }}
       }
       @if (searchTerm.trim().length > 0) {
         <span class="filter-disabled-text">(Search active)</span>
       }
+    </button>
+    <button 
+      (click)="goToStats()" 
+      class="show-stats-btn"
+    >
+      📊 Show Stats
     </button>
   </div>
   
@@ -44,7 +50,7 @@
   class="toggle-more-btn"
   [disabled]="searchTerm.trim().length > 0"
   [class.disabled]="searchTerm.trim().length > 0"
->More Characters
+>➕ More Characters
   @if (searchTerm.trim().length > 0) {
     <span class="filter-disabled-text">(Search active)</span>
   }

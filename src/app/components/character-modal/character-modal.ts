@@ -277,6 +277,8 @@ export class CharacterModal {
 
     // Gap between avatar and text column
     const AVATAR_GAP = 16;
+    // Margin below avatar before text can move to left edge
+    const AVATAR_BOTTOM_MARGIN = 8;
 
     const modalCS = modalEl ? getComputedStyle(modalEl) : null;
     const nameCS  = nameEl  ? getComputedStyle(nameEl)  : null;
@@ -476,7 +478,7 @@ export class CharacterModal {
       const yPosition = bodyHeight;
       const rowStartsAtY = P + titleSize + 12 + (FLAGS_TEXT ? flagsSize + 8 : 0) + yPosition;
       const avatarBottom = P + AVATAR_SIZE;
-      const canMoveLeft = rowStartsAtY >= avatarBottom;
+      const canMoveLeft = rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN;
 
       // measure label width using label font
       measCtx.font = r.labelFont;
@@ -608,7 +610,7 @@ export class CharacterModal {
       // Check if this row is below the avatar (in blank space to the left)
       const rowStartsAtY = P + titleSize + 12 + (FLAGS_TEXT ? flagsSize + 8 : 0) + r.yPosition;
       const avatarBottom = P + AVATAR_SIZE;
-      const canMoveLeft = rowStartsAtY >= avatarBottom;
+      const canMoveLeft = rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN;
 
       const rowX = canMoveLeft ? P : textX;
 

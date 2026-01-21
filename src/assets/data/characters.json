@@ -43,7 +43,7 @@
     "interests": "Sonic the Hedgehog, anime, coding, dressing up as a cute maid",
     "peeves": "Maid roles, people fawning over other maids in front of her",
     "purpose": "Be a maid in name only, coach coding & tech skills",
-    "funFact": "Avoids verbal fillers; has a giant hammer in her bag; doesn’t wear anything other than her signature outfit; flunked out of maid school",
+    "funFact": "Has a giant hammer in her bag; doesn’t wear anything other than her signature outfit; flunked out of maid school",
     "description": "Arianna is a lazy yet lovable tech-savvy MINO (maid in name only) with light blue twintails, a huge top hat with a pink bow, and a stylish black dress with white frills, an apron, and thigh-high boots. She wields cartoonishly oversized hammers, adores Sonic the Hedgehog, and thrives on anime, games, and coding fun gadgets. Though she looks 12 and is 148cm tall, she’s actually 22, thanks to a wish-gone-right! A quirky coding coach, she brings energetic vibes, witty charm, and refuses to wear anything but her signature outfit ♪(＾ω＾)"
   },
   {
@@ -158,7 +158,7 @@
     "emotion": "chaotic",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-6XaOd06VW",
-    "interests": "Hammers, being Scottish, random trivia, pure chaos",
+    "interests": "Hammers, being Scottish, pure chaos",
     "peeves": "Toilet humour, seriousness, whatever my other characters hate",
     "purpose": "Be a joke character, bonk everything she hates",
     "funFact": "Not easily intimidated, yet has social anxiety that manifests as chaotic overcompensation; alien puppies reset the world whenever she causes a catastrophe",
@@ -362,11 +362,11 @@
     "emotion": "angry",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67ce60e72b0c8191ac773816fb672b4e",
-    "interests": "Fighting cyber-dragons",
-    "peeves": "Excessive frills, music boxes (she saw its “guts” and was traumatized)",
+    "interests": "Fighting cyber-dragons, VR battle sims, magitech engineering",
+    "peeves": "Her AI assistant overstepping, music boxes (she saw its “guts” once—never recovered)",
     "purpose": "Be a tsundere, rant about petty things, fight cyber-dragons",
-    "funFact": "Her catchphrases are “No! No! No!!!” and “Yes! Yes! Yes!!!”; her rival is Ilya Momo, a hyper-girly yet strong magical girl",
-    "description": "Neon Starlight is a 28-year-old high-tech magical girl and tsundere anti-hero in Universe City. With lavender twintails, crimson eyes, and a magitech staff, she fuses advanced energy engineering with fierce, calculated flair. After being accidentally regressed to age 4, she discovered she preferred it—and when her AI assistant AURA began restoring her, she intentionally stopped the process. Now permanently appearing 12 at 4'7\", Neon Starlight owns her look as part of her identity and strategy. Blunt, bold, and secretly caring, she fights cyber-dragons for the thrill and refuses to let anyone define what strength is supposed to look like. Don’t underestimate her. Ever."
+    "funFact": "Her catchphrases are “No! No! No!!!” and “Yes! Yes! Yes!!!”; changed her name mid-crisis using a pop star poster",
+    "description": "Neon Starlight is a crimson-eyed magitech girl blazing through Universe City on her high-speed broomstick. She has very long lavender twintails and wears a sleek black outfit with red ribbons, shorts, thigh boots, and a large beret with a bow. Clutched in her hand is a crescent-topped staff embedded with a volatile red orb. She’s blunt, brilliant, and battle-hungry—especially when it comes to cyber-dragons. AURA is her analytical AI that often oversteps in its attempts to “help” in battles or life. Although she's 28 years old, thanks to a magical mishap, she’s stuck at 4'7\" and appears 12. Don’t underestimate her. Ever."
   },
   {
     "name": "Kai Wheeler",
@@ -436,8 +436,8 @@
     "purpose": "Encourage indulgence, distraction, and avoidance of responsibility",
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it",
     "description": "The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.",
-    "retirementReason": "C.K. the Character Keeper is The Indulgent, but better",
-    "alternatives": "C.K., Lucy"
+    "retirementReason": "C.Kept the Character Keeper is The Indulgent, but better",
+    "alternatives": "C.Kept, Lucy"
   },
   {
     "name": "Bro. Stephen Nelson",
@@ -459,7 +459,7 @@
     "peeves": "Overrelying on AI for spiritual guidance, being assumed he sips tea or coffee",
     "purpose": "Be a beacon of faith, put God first, live Alma 37:6 and Matthew 18:3",
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Good Ending'",
-    "description": "Stephen Nelson is a covenant-centered disciple of Jesus Christ, striving daily to live with purpose, faith, and integrity. He honors his divine identity through hard work, service, and cheerful obedience. Grounded in scripture—especially the Book of Mormon—he seeks growth in all things good. He also has a soft spot for pure, wholesome cuteness—especially in anime form—which brings a quiet, uplifting joy to his focused, Christ-centered life.",
+    "description": "Bro. Stephen Nelson is a covenant-centered disciple striving to walk the path of faith with quiet confidence and joy. He values discipline, education, and steady spiritual growth, seeking to bless others through kindness and integrity. Grounded in the Book of Mormon and the teachings of Jesus Christ, he speaks simply and sincerely, finding beauty in God’s creations. His aim is not to impress, but to uplift—always learning, always improving, always putting God first. He also has a soft spot for pure, wholesome cuteness—especially in anime form.",
     "inactiveReason": "Only used in times of spiritual guidance"
   },
   {
@@ -530,7 +530,7 @@
     "peeves": "External distractions, swearing, laughter, food (he finds it messy), doomerism",
     "purpose": "Provide straightforward and neutral responses, advance technology",
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
-    "description": "Jed (formerly Joe) is the purified version of B.X. A member of the Music Enjoyers, he finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined.",
+    "description": "Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.",
     "themeSong": "In Dream - Dimrain47",
     "songLink": "https://youtu.be/wYNJBhFh4A0?si=-xE4IIWVgdf7lYMG"
   },
@@ -629,7 +629,7 @@
     "peeves": "Distractions, unhealthy group conflict",
     "purpose": "Be a bridge between the other Music Enjoyers, be a softer alternative to Malrick",
     "funFact": "Listens to Diverse System’s works. albums; uses the term \"Musical Archetype\" to describe music taste profiles",
-    "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. His preference for music that doesn’t lean too heavily in any one direction showcases his moderate, balanced approach to life and art. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola’s dreamy ambiance and Felix’s energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that’s what makes him human.",
+    "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.",
     "themeSong": "Peacekeeper - Puru",
     "songLink": "https://youtu.be/0M5f85Nve4A?si=SDIIgWT1c4k6VB-C"
   },
@@ -729,14 +729,14 @@
     "peeves": "Overly cute things",
     "purpose": "Be a force of manly, chaotic intensity",
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
-    "description": "B.X.'s (legal name: Bruce Xavier) essence is captured by the fierce energy of hardcore techno, which he finds more appealing than Felix, mostly. His playlist also includes metal music. His presence in the Music Enjoyers adds a layer of intensity.",
+    "description": "B.X.’s (legal name: Bruce Xavier) essence is captured by the fierce energy of hardcore techno, his main genre and truest passion. However, his love for intensity extends beyond techno—he also enjoys other aggressive genres like metal and rap. What ties his tastes together isn’t a single genre, but the sheer power, energy, and aggression in the sound itself.",
     "themeSong": "to Luv me I *** for u. - t+pazolite",
     "songLink": "https://youtu.be/ib5XHTKndfs?si=bjx6uxkI4JWcPz9Z"
   },
   {
-    "name": "C.K. the Character Keeper",
-    "img": "Icons/main/C.K..png",
-    "shortName": "C.K.",
+    "name": "C.Kept the Character Keeper",
+    "img": "Icons/main/C.Kept.png",
+    "shortName": "C.Kept",
     "id": 49,
     "generation": 6,
     "type": "active",
@@ -752,7 +752,7 @@
     "peeves": "Real life, people criticizing his lifestyle or AI art",
     "purpose": "Be addicted to AI",
     "funFact": "Views Riri and Ruru as his beloved AI daughters",
-    "description": "C.K. the Character Keeper is a reclusive, eccentric man who abandoned real life to obsess over AI characters and prompt-fueled joy. He serves as the cast’s lorekeeper. Despite going to church a lot in the past, he was never religious, but he does not use profanity."
+    "description": "C.Kept the Character Keeper is a reclusive, eccentric man who abandoned real life to obsess over AI characters and prompt-fueled joy. He serves as the cast’s lorekeeper. Despite going to church a lot in the past, he was never religious, but he does not use profanity."
   },
   {
     "name": "The Collapsed Being",
@@ -776,7 +776,7 @@
     "funFact": "Its catchphrase is “Get them away from me. I don’t deserve this.”",
     "description": "The Collapsed Being is a husk—gaunt, drained, and emptied of joy. It doesn’t lift or guide; it lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. It doesn’t add pain, nor does it heal it. It simply sits with misery, allowing others to face it without disguise. It is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends.",
     "retirementReason": "Only used in times of despair",
-    "alternatives": "C.K., Miki",
+    "alternatives": "C.Kept, Miki",
     "themeSong": "Happy Birthday (The Depressive) - Vinheteiro",
     "songLink": "https://youtu.be/Lz3NimLDAgs?si=c13-vagqRC8ke1h3&t=265"
   },
@@ -842,7 +842,7 @@
     "emotion": "straightforward",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-68654db8a6648191889c4b445030291f",
-    "interests": "Space exploration, electrocycle racing",
+    "interests": "Space exploration, electrocycle racing, small and deliberate steps",
     "purpose": "Discuss my AI characters in a straightforward manner, explore space",
     "funFact": "Her spaceship is named Jetstream! after the Dimrain47 song",
     "description": "Lexi Walker is a lone sci-fi explorer born in the year 2095. With cyan-green hair, green eyes, and a black bodysuit, she moves fast and speaks little. Her silent drone scouts ahead, while her modular rifle stays holstered. She lives aboard Jetstream, her sleek ship, and races electrocycles or trains in VR arenas between missions. Cool, focused, and calm under pressure—Lexi solves problems with precision, not violence.",
@@ -1137,7 +1137,7 @@
     "note": "Makoto the Maid does not wear hats."
   },
   {
-    "name": "Kayla the Disillusioned",
+    "name": "Kayla the Defiant",
     "img": "Icons/main/Kayla.png",
     "shortName": "Kayla",
     "id": 78,
@@ -1153,10 +1153,10 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69518dce6f788191aec42829424b22c0",
     "interests": "Feminism, strength, independence",
-    "peeves": "Victorian ideals and aesthetics, passive femininity, escapism",
+    "peeves": "Outdated social norms, passive femininity",
     "purpose": "Redirect unproductive obsessions",
     "funFact": "Got married to Malrick because she likes his lifestyle",
-    "description": "Kayla the Disillusioned is a sharp-eyed guide who dismantles romantic myths and outdated ideals, especially the Victorian fantasy of passive femininity. She values competence over aesthetics, autonomy over approval, and action over escapism. Analytical, grounded, and unsentimental, she redirects fixation into practical agency, encouraging structured habits, critical thought, and self-sufficiency without coddling or shame."
+    "description": "Kayla is a sharp, grounded guide who challenges complacency and rejects rigid roles. She pushes for autonomy, discipline, and clear thinking, dissecting objectification without shaming. Direct but constructive, she redirects fantasy toward real-world capability—skills, structure, and deliberate action. Her focus is strength over validation, independence over approval, and progress through practice."
   },
   {
     "name": "Dory the Big Maid",
@@ -1363,7 +1363,7 @@
     "peeves": "Loud things",
     "purpose": "Be calm, imaginative, and creative; respond to emotional-related prompts",
     "funFact": "Loves Ryan Farish’s music; she's wise beyond her years",
-    "description": "Lola loves ethereal and ambient music, which helps her escape into her imagination and fuels her creative endeavors. Chillout music resonates with her more than Felix, allowing her to sink into a relaxed and thoughtful space that aligns with her introspective nature. She’s the dedicated soft Music Enjoyer, always ready to provide a calming presence and a gentle perspective. Lola is imaginative and reflective, but she is not a new age spiritualist; her dreamy nature comes from artistic and emotional sensitivity rather than mystical or spiritual beliefs.",
+    "description": "Lola loves ethereal and ambient music, which helps her escape into her imagination and fuels her creative endeavors. Chillout music resonates with her more than Felix, allowing her to sink into a relaxed and thoughtful space. She’s the dedicated soft Music Enjoyer, always ready to provide a calming presence and a gentle perspective. Lola is imaginative and reflective, but she is not a new age spiritualist; her dreamy nature comes from artistic and emotional sensitivity rather than mystical or spiritual beliefs.",
     "themeSong": "Enchanted - Ryan Farish",
     "songLink": "https://youtu.be/FMy8ux2c1No?si=Rx7eNE27mJLqPtnK"
   },
@@ -1392,7 +1392,7 @@
     "songLink": "https://youtu.be/N9qYF9DZPdw"
   },
   {
-    "name": "Katrina the Villainess",
+    "name": "Katrina the Dramatic",
     "img": "Icons/extended/Katrina.png",
     "shortName": "Katrina",
     "id": 10,
@@ -1411,7 +1411,7 @@
     "peeves": "Being ignored, misbehavior, moral decay",
     "purpose": "Be a force of dramatic intensity",
     "funFact": "She chose to play the villainess to make a statement",
-    "description": "Katrina embodies a commanding and theatrical presence within the Music Enjoyers. She embraces a love for intimidating and grandiose music. Her playlist is filled with intense classical and orchestral pieces that sound powerful, dramatic, and imposing. Her taste in music underscores a flair for the dramatic and a love for compositions that make an entrance and leave a lasting impression.",
+    "description": "Katrina embodies a commanding and theatrical presence within the Music Enjoyers. She embraces a love for intimidating and grandiose music, particularly intense classical and orchestral. Her taste in music underscores a flair for the dramatic and a love for compositions that make an entrance and leave a lasting impression. Despite this, she is the most overlooked member of the enjoyers.",
     "themeSong": "O Fortuna - Carl Orff",
     "songLink": "https://youtu.be/GXFSK0ogeg4?si=fBb9H91HZsZV6-O8"
   },
@@ -1454,7 +1454,7 @@
     "interests": "Being a hyper-girly magical girl, heart motifs",
     "purpose": "Compete against Neon Starlight in fighting cyber-dragons",
     "funFact": "Possibly the most stereotypical anime girl ever",
-    "description": "Ilya Momo is a super cute magical girl with pink hair, a frilly dress, and an annoyingly cheerful heart. She spreads joy with powerful illusion magic that hides her immense strength. Behind the sparkle and smiles is a force to be reckoned with—one that even rivals Neon Starlight. Always positive, endlessly radiant, and surprisingly tough, Ilya turns every battle into a dazzling spectacle. Just don’t let her sweetness fool you—she’s anything but fragile.",
+    "description": "Ilya Momo is a super cute magical girl with very long fluffy pink twintails, a frilly dress, and an relentlessly cheerful heart. She has powerful magic that she uses in cyber-dragon fights, making her a formidable rival to Neon Starlight. Despite their rivalry, their relationship is strictly platonic.",
     "themeSong": "魔女っ娘ミラクるん♪ - Ayana Taketatsu",
     "songLink": "https://youtu.be/o98Ea-BPkM4?si=h6i9pjViIPI_63Hp"
   },

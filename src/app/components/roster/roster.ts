@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CharacterGrid } from "../character-grid/character-grid";
 import { CharacterModal } from '../character-modal/character-modal';
 import { MoodModal } from '../mood-modal/mood-modal';
@@ -24,6 +25,8 @@ export class Roster {
   showRetiredCharacters = false;
   searchTerm = '';
 
+  constructor(private router: Router) {}
+
   toggleCharacters() {
     this.showMoreCharacters = !this.showMoreCharacters;
     window.scrollTo({ top: 0 });
@@ -43,5 +46,9 @@ export class Roster {
 
   onSearchChange(searchTerm: string) {
     this.searchTerm = searchTerm;
+  }
+
+  goToStats() {
+    this.router.navigate(['/stats']);
   }
 }

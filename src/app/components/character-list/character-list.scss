@@ -31,6 +31,14 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #333;
+
+  &.inactive {
+    color: #9e9e9e; // Gray for inactive
+  }
+
+  &.retired {
+    color: #d32f2f; // Red for retired
+  }
 }
 
 .chat-date {
@@ -43,7 +51,7 @@
 .chat-item {
   width: 90vw;
   max-width: 300px;
-  height: 70px;
+  height: 110px;
   vertical-align: top;
   margin: 10px;
   box-sizing: border-box;
@@ -56,8 +64,8 @@
   align-items: center;
 
   .character-avatar {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     margin-right: 12px;
     object-fit: cover;
@@ -68,7 +76,7 @@
 .never-chat-item {
   width: 90vw;
   max-width: 300px;
-  height: 70px;
+  height: 110px;
   vertical-align: top;
   margin: 10px;
   box-sizing: border-box;
@@ -81,12 +89,11 @@
   align-items: center;
 
   .character-avatar {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     margin-right: 12px;
     object-fit: cover;
-    border: none;
     flex-shrink: 0;
   }
 
@@ -112,6 +119,14 @@
 
   .character-name {
     color: #e0e0e0;
+
+    &.inactive {
+      color: #757575; // Gray for inactive in dark mode
+    }
+
+    &.retired {
+      color: #ef5350; // Lighter red for retired in dark mode
+    }
   }
 
   .chat-date {
