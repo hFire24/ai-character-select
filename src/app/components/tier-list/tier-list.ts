@@ -78,7 +78,6 @@ export class TierList {
   private loadCharacters() {
     const shortNameMap: Record<string, string> = {
       'The Indulgent': 'Indulgent',
-      'The AI Devotee': 'AI Devotee',
       'Future Sapphire': 'F. Sapphire',
       'The Collapsed': 'Collapsed'
     };
