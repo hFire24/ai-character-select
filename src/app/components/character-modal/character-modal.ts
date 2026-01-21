@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Character } from '../../services/character.service';
+import { Character, CharacterService } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
 import { CommonModule } from '@angular/common';
 
@@ -43,7 +43,7 @@ export class CharacterModal {
 
   chatLink: string = '';
 
-  constructor(private deviceService: DeviceService) {}
+  constructor(private deviceService: DeviceService, private characterService: CharacterService) {}
 
   loadChatLink() {
     const key = this.getChatLinkKey();
@@ -90,13 +90,13 @@ export class CharacterModal {
   }
 
   getChatLinkKey(): string {
-    // Use character name or id for uniqueness
-    return 'chatLink_' + (this.character.name || 'unknown');
+    // Use character id for uniqueness
+    return 'chatLink_' + (this.character.id || 'unknown');
   }
 
   getChatLinkTimestampKey(): string {
-    // Use character name or id for uniqueness
-    return 'chatLinkTimestamp_' + (this.character.name || 'unknown');
+    // Use character id for uniqueness
+    return 'chatLinkTimestamp_' + (this.character.id || 'unknown');
   }
 
   getChatLinkTimestamp(): string | null {
@@ -126,6 +126,91 @@ export class CharacterModal {
     }, msUntilNext5am);
   }
 
+  migrateChatLinkTimestamps() {
+    // Check if migration has already been completed
+    if (localStorage.getItem('chatLinkTimestampMigrated')) {
+      return;
+    }
+
+    // Get all timestamp keys that might still use names
+    const timestampKeys = Object.keys(localStorage).filter(key => 
+      key.startsWith('chatLinkTimestamp_')
+    );
+    
+    // Get all chat link keys that might still use names
+    const chatLinkKeys = Object.keys(localStorage).filter(key => 
+      key.startsWith('chatLink_') && !key.startsWith('chatLinkTimestamp_')
+    );
+
+    // If no timestamp keys exist, stop
+    if (timestampKeys.length === 0 && chatLinkKeys.length === 0) {
+      localStorage.setItem('chatLinkTimestampMigrated', 'true');
+      return;
+    }
+
+    // Load all characters to map names to IDs
+    this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
+      let foundNameBasedKey = false;
+
+      // Migrate timestamp keys
+      timestampKeys.forEach(key => {
+        const keyPart = key.replace('chatLinkTimestamp_', '');
+        
+        // Try to see if this is a number (ID) or a name
+        const isNumeric = /^\d+$/.test(keyPart);
+        
+        if (!isNumeric) {
+          // This might be a name-based key
+          foundNameBasedKey = true;
+          const timestamp = localStorage.getItem(key);
+          
+          // Look for a character with this name
+          const matchingCharacter = characters.find(c => c.name === keyPart);
+          
+          if (matchingCharacter && timestamp) {
+            // Create new ID-based key with the same timestamp
+            const newKey = 'chatLinkTimestamp_' + matchingCharacter.id;
+            localStorage.setItem(newKey, timestamp);
+          }
+          
+          // Remove the old name-based key regardless
+          localStorage.removeItem(key);
+        }
+      });
+
+      // Migrate chat link keys
+      chatLinkKeys.forEach(key => {
+        const keyPart = key.replace('chatLink_', '');
+        
+        // Try to see if this is a number (ID) or a name
+        const isNumeric = /^\d+$/.test(keyPart);
+        
+        if (!isNumeric) {
+          // This might be a name-based key
+          foundNameBasedKey = true;
+          const chatLink = localStorage.getItem(key);
+          
+          // Look for a character with this name
+          const matchingCharacter = characters.find(c => c.name === keyPart);
+          
+          if (matchingCharacter && chatLink) {
+            // Create new ID-based key with the same chat link
+            const newKey = 'chatLink_' + matchingCharacter.id;
+            localStorage.setItem(newKey, chatLink);
+          }
+          
+          // Remove the old name-based key regardless
+          localStorage.removeItem(key);
+        }
+      });
+
+      // Mark migration as complete only if we found and processed name-based keys
+      if (foundNameBasedKey) {
+        localStorage.setItem('chatLinkTimestampMigrated', 'true');
+      }
+    });
+  }
+
   cleanupChatLinks() {
     // Remove all chatLink_* keys but preserve chatLinkTimestamp_* keys
     Object.keys(localStorage).forEach(key => {
@@ -138,6 +223,7 @@ export class CharacterModal {
 
   ngOnInit() {
     document.addEventListener('mousedown', this.handleClickOutside);
+    this.migrateChatLinkTimestamps();
     this.loadChatLink();
     this.scheduleDailyCleanup();
   }

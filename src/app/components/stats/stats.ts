@@ -61,9 +61,9 @@ export class Stats implements OnInit {
     this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
       this.stats.active = characters.filter(c => c.type === 'active').length;
       this.stats.inactive = characters.filter(c => c.type === 'inactive').length;
-      this.stats.side = characters.filter(c => c.type === 'side').length;
+      this.stats.side = characters.filter(c => c.type.includes('side')).length;
       this.stats.retired = characters.filter(c => c.type === 'retired').length;
-      this.stats.misc = characters.filter(c => !['active', 'inactive', 'side', 'retired'].includes(c.type)).length;
+      this.stats.misc = characters.filter(c => !['active', 'inactive', 'side', 'inactive side', 'retired'].includes(c.type)).length;
       this.stats.total = characters.length;
     });
   }
@@ -74,7 +74,7 @@ export class Stats implements OnInit {
       const neverChatted: Character[] = [];
 
       characters.forEach(character => {
-        const timestampKey = 'chatLinkTimestamp_' + (character.name || 'unknown');
+        const timestampKey = 'chatLinkTimestamp_' + (character.id || 'unknown');
         const timestamp = localStorage.getItem(timestampKey);
         
         if (timestamp) {

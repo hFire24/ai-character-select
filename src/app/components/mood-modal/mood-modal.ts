@@ -35,32 +35,33 @@ export class MoodModal {
   }
 
   get filteredCharacters(): Character[] {
+    const maxTier = 5;
     switch (this.mood.arg) {
       case 'moe':
-        return this.characters.filter(c => (c.moe >= 7 || c.color === 'pink') && c.tier <= 4 && this.allowsInactive(c));
+        return this.characters.filter(c => (c.moe >= 7 || c.color === 'pink') && c.tier <= maxTier && this.allowsInactive(c));
       case 'red':
-        return this.characters.filter(c => c.color === 'red' && c.tier <= 4 && this.allowsInactive(c));
+        return this.characters.filter(c => c.color === 'red' && c.tier <= maxTier && this.allowsInactive(c));
       case 'blue':
-        return this.characters.filter(c => c.color === 'blue' && c.tier <= 4 && this.allowsInactive(c));
+        return this.characters.filter(c => c.color === 'blue' && c.tier <= maxTier && this.allowsInactive(c));
       case 'futuristic':
-        return this.characters.filter(c => c.futuristic >= 7 && c.tier <= 4 && this.allowsInactive(c));
+        return this.characters.filter(c => c.futuristic >= 7 && c.tier <= maxTier && this.allowsInactive(c));
       case 'traditional':
-        return this.characters.filter(c => c.futuristic <= 4 && c.tier <= 4 && this.allowsInactive(c));
+        return this.characters.filter(c => c.futuristic <= 4 && c.tier <= maxTier && this.allowsInactive(c));
       case 'male':
-        return this.characters.filter(c => c.pronouns === 'he/him' && c.tier <= 4 && this.allowsInactive(c));
+        return this.characters.filter(c => c.pronouns === 'he/him' && c.tier <= maxTier && this.allowsInactive(c));
       case 'female':
-        return this.characters.filter(c => c.pronouns === 'she/her' && c.tier <= 4 && this.allowsInactive(c));
+        return this.characters.filter(c => c.pronouns === 'she/her' && c.tier <= maxTier && this.allowsInactive(c));
       case 'moe0':
-        return this.characters.filter(c => c.moe < 4 && c.tier <= 4 && this.allowsInactive(c));
+        return this.characters.filter(c => c.moe < 4 && c.tier <= maxTier && this.allowsInactive(c));
       case 'chatted':
         return this.characters.filter(c => {
-          const key = 'chatLink_' + (c.name || 'unknown');
-          return localStorage.getItem(key) !== null && c.type !== 'side';
+          const key = 'chatLink_' + (c.id || 'unknown');
+          return localStorage.getItem(key) !== null && !c.type.includes('side');
         });
       case 'chatted0':
         return this.characters.filter(c => {
-          const key = 'chatLink_' + (c.name || 'unknown');
-          return localStorage.getItem(key) === null && c.tier <= 4 && this.allowsInactive(c);
+          const key = 'chatLink_' + (c.id || 'unknown');
+          return localStorage.getItem(key) === null && c.tier <= maxTier && this.allowsInactive(c);
         });
       case 'favorites':
         return this.characters.filter(c => c.tier <= 3).sort((a, b) => a.tier - b.tier);
@@ -98,7 +99,7 @@ export class MoodModal {
   selectRandomCharacter() {
     const sourceCharacters = (this.filteredCharacters && this.filteredCharacters.length > 0)
       ? this.filteredCharacters
-      : this.characters.filter(c => c.type === 'active' || (c.type === 'inactive' && this.showInactive));
+      : this.characters.filter(c => this.allowsInactive(c));
     // Create weighted array based on tier
     const weightedCharacters: Character[] = [];
     sourceCharacters.forEach(character => {
@@ -127,7 +128,7 @@ export class MoodModal {
   }
 
   getChatLink(character: Character): string {
-    const key = 'chatLink_' + (character.name || 'unknown');
+    const key = 'chatLink_' + (character.id || 'unknown');
     const stored = localStorage.getItem(key);
     return stored ? stored : character.link;
   }

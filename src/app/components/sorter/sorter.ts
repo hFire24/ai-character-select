@@ -439,7 +439,7 @@ export class Sorter implements OnInit, OnDestroy {
   private filterCharacters(chars: Character[]): Character[] {
     return chars.filter(char => {
       // Filter out future character
-      if (char.type === 'future') {
+      if (char.type.includes('future')) {
         return false;
       }
 
@@ -454,7 +454,7 @@ export class Sorter implements OnInit, OnDestroy {
       // Filter by character type using checkboxes
       const matchesActive = this.includeActive && char.type === 'active';
       const matchesInactive = this.includeInactive && char.type === 'inactive';
-      const matchesSide = this.includeSide && char.type === 'side';
+      const matchesSide = this.includeSide && char.type.includes('side');
       const matchesRetired = this.includeRetired && char.type === 'retired';
       const matchesMe = this.includeMe && char.type === 'me';
       

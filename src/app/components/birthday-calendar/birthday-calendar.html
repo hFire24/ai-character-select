@@ -67,7 +67,7 @@
                 ? '*'
                 : (birthdayChar.character.type.includes('retired'))
                   ? '!'
-                  : ''
+                  : (birthdayChar.character.type.includes('inactive') ? '.' : '')
             }}<span [ngClass]="birthdayChar.character.type.includes('retired') ? 'retired-name' : ''">{{ birthdayChar.character.shortName }}</span>
           </h3>
           <p class="birthday-date">{{ birthdayChar.character.birthday }}</p>

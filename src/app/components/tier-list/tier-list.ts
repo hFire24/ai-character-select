@@ -53,12 +53,14 @@ export class TierList {
     let pool = this.allCharacters.filter(c => !assigned.has(c.name));
     if (this.characterFilter === 'active') {
       pool = pool.filter(c => c.type === 'active');
+    } else if (this.characterFilter === 'inactive') {
+      pool = pool.filter(c => c.type === 'inactive');
     } else if (this.characterFilter === 'retired') {
-      pool = pool.filter(c => c.type === 'retired' || c.type === 'inactive');
+      pool = pool.filter(c => c.type === 'retired');
     } else if (this.characterFilter === 'music') {
       pool = pool.filter(c => c.musicEnjoyer);
     } else if (this.characterFilter === 'side') {
-      pool = pool.filter(c => (c.type === 'side' || c.type === 'side retired') && !c.musicEnjoyer);
+      pool = pool.filter(c => c.type.includes('side') && !c.musicEnjoyer);
     } else if (this.characterFilter === 'male') {
       pool = pool.filter(c => c.pronouns !== 'she/her');
     } else if (this.characterFilter === 'female') {

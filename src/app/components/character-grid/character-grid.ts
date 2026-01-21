@@ -39,15 +39,15 @@ export class CharacterGrid {
         character.name.toLowerCase().includes(searchLower)
       );
     } else {
-      // Apply normal filters when not searching
+      // Apply normal filters when not searching      
       if (!this.showMore && !this.showRetired) {
-        baseCharacters = this.characters.filter(c => c.tier <= 4 && !c.type.includes('inactive'));
+        baseCharacters = this.characters.filter(c => c.type === 'active');
       } else if (!this.showMore && this.showRetired) {
-        baseCharacters = this.characters.filter(c => c.tier <= 4);
-      } else if(!this.showRetired) {
-        baseCharacters = this.characters.filter(c => c.tier > 4 && !c.type.includes('retired') && !c.type.includes('inactive'));
+        baseCharacters = this.characters.filter(c => c.type === 'active' || c.type === 'inactive');
+      } else if (!this.showRetired) {
+        baseCharacters = this.characters.filter(c => !['active', 'retired'].some(type => c.type.includes(type)));
       } else {
-        baseCharacters = this.characters.filter(c => c.tier > 4);
+        baseCharacters = this.characters.filter(c => c.type !== 'active' && c.type !== 'inactive')
       }
     }
 

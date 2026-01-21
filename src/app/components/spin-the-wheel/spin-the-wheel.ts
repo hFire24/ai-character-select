@@ -63,7 +63,7 @@ export class SpinTheWheel {
       const matchesFavorite = this.includeFavorite && c.tier >= 1 && c.tier <= 3;
       const matchesActive = this.includeActive && c.type === "active";
       const matchesInactive = this.includeInactive && c.type === "inactive";
-      const matchesSide = this.includeSide && c.type === "side";
+      const matchesSide = this.includeSide && c.type.includes("side");
       const matchesRetired = this.includeRetired && c.type === "retired";
       const matchesMe = this.includeMe && c.type === "me";
       
@@ -133,7 +133,7 @@ export class SpinTheWheel {
   }
 
   getChatLink(character: Character): string {
-    const key = "chatLink_" + (character.name || "unknown");
+    const key = "chatLink_" + (character.id || "unknown");
     const stored = localStorage.getItem(key);
     return stored ? stored : character.link;
   }
