@@ -141,6 +141,7 @@
             height: 40px;
             border-radius: 50%;
             object-fit: cover;
+            will-change: transform;
           }
 
           .character-name {
@@ -189,6 +190,7 @@
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid #ddd;
+        will-change: transform;
       }
 
       .character-info {
@@ -254,6 +256,7 @@
         img {
           width: 50px;
           height: 50px;
+          will-change: transform;
         }
 
         .character-info {

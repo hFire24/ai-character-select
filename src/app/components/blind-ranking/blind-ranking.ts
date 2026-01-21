@@ -27,8 +27,8 @@ export class BlindRanking {
   showCard: boolean = false;
 
   constructor() {
-    this.characterService.getCharactersSplitTwins().subscribe((characters: Character[]) => {
-      this.allCharacters = characters.filter(c => c.type.includes('future'));
+    this.characterService.getCharactersSplitTwins(false).subscribe((characters: Character[]) => {
+      this.allCharacters = characters.filter(c => !c.type.includes('future'));
     });
   }
 

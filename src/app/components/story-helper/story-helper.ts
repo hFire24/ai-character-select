@@ -84,7 +84,7 @@ export class StoryHelper {
 
   ngOnInit() {
     this.fillDate();
-    this.characterService.getCharactersSplitTwins().subscribe(chars => {
+    this.characterService.getCharactersSplitTwins(false).subscribe(chars => {
       this.characters = chars.filter(c => ![0, 42, 71].includes(c.id));
     });
   }

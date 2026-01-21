@@ -59,7 +59,7 @@ export class BirthdayCalendar implements OnInit {
   }
 
   loadCharacters() {
-    this.characterService.getCharactersSplitTwins().subscribe(characters => {     
+    this.characterService.getCharactersSplitTwins(false).subscribe(characters => {     
       this.characters = characters.filter(char => char.birthday && char.birthday.toLowerCase() !== 'unknown');
       this.generateCalendar();
       this.generateSortedList();

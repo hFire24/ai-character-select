@@ -110,6 +110,7 @@ form {
         border-radius: 8px;
         object-fit: cover;
         margin-bottom: 8px;
+        will-change: transform;
       }
 
       h3 {

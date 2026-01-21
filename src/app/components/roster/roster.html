@@ -33,12 +33,12 @@
         <span class="filter-disabled-text">(Search active)</span>
       }
     </button>
-    <button 
+    @if (!showMoreCharacters) {<button 
       (click)="goToStats()" 
       class="show-stats-btn"
     >
       📊 Show Stats
-    </button>
+    </button>}
   </div>
   
 </header>

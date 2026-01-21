@@ -33,11 +33,11 @@
   color: #333;
 
   &.inactive {
-    color: #9e9e9e; // Gray for inactive
+    color: #6b7280; // Gray for inactive
   }
 
   &.retired {
-    color: #d32f2f; // Red for retired
+    color: #ef4444; // Red for retired
   }
 }
 
@@ -51,7 +51,7 @@
 .chat-item {
   width: 90vw;
   max-width: 300px;
-  height: 110px;
+  height: 74px;
   vertical-align: top;
   margin: 10px;
   box-sizing: border-box;
@@ -64,19 +64,20 @@
   align-items: center;
 
   .character-avatar {
-    width: 100px;
-    height: 100px;
+    width: 64px;
+    height: 64px;
     border-radius: 10px;
     margin-right: 12px;
     object-fit: cover;
     flex-shrink: 0;
+    will-change: transform;
   }
 }
 
 .never-chat-item {
   width: 90vw;
   max-width: 300px;
-  height: 110px;
+  height: 74px;
   vertical-align: top;
   margin: 10px;
   box-sizing: border-box;
@@ -89,12 +90,13 @@
   align-items: center;
 
   .character-avatar {
-    width: 100px;
-    height: 100px;
+    width: 64px;
+    height: 64px;
     border-radius: 10px;
     margin-right: 12px;
     object-fit: cover;
     flex-shrink: 0;
+    will-change: transform;
   }
 
   .character-name {
@@ -121,11 +123,11 @@
     color: #e0e0e0;
 
     &.inactive {
-      color: #757575; // Gray for inactive in dark mode
+      color: #9ca3af; // Gray for inactive in dark mode
     }
 
     &.retired {
-      color: #ef5350; // Lighter red for retired in dark mode
+      color: #f87171; // Lighter red for retired in dark mode
     }
   }
 

@@ -47,7 +47,7 @@ export class Duos implements OnInit {
 
   ngOnInit() {
     // Load characters
-    this.characterService.getCharactersSplitTwins().subscribe(characters => {
+    this.characterService.getCharactersSplitTwins(false).subscribe(characters => {
       this.allCharacters = characters;
     });
 

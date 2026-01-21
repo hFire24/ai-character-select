@@ -52,6 +52,12 @@ export class CharacterService {
 
   constructor(private http: HttpClient) {}
 
+  getCharacter(id: number): Observable<Character> {
+    return this.http.get<Character[]>('assets/data/characters.json').pipe(
+      map(characters => characters.find(char => char.id === id)!)
+    );
+  }
+
   getCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>('assets/data/characters.json').pipe(
       map(characters => characters.filter(char => char.id !== 52))
@@ -62,9 +68,9 @@ export class CharacterService {
     return this.http.get<Character[]>('assets/data/characters.json');
   }
 
-  getCharactersSplitTwins(): Observable<Character[]> {
+  getCharactersSplitTwins(addCriticizer: boolean): Observable<Character[]> {
     return this.getCharacters().pipe(
-      map(characters => {
+      switchMap(characters => {
         const splitCharacters: Character[] = [...characters];
         
         // Find and split Liam and Kieran (assuming they share an ID)
@@ -137,7 +143,19 @@ export class CharacterService {
             }
           );
         }
-        return splitCharacters;
+        
+        if (addCriticizer) {
+          return this.getCharacter(52).pipe(
+            map(criticizer => {
+              if (criticizer) {
+                splitCharacters.push({ ...criticizer, id: 51 });
+              }
+              return splitCharacters;
+            })
+          );
+        }
+        
+        return [splitCharacters];
       })
     );
   }

@@ -31,7 +31,7 @@ export class Duos2 implements OnInit {
 
   ngOnInit() {
     forkJoin({
-      characters: this.characterService.getCharactersSplitTwins(),
+      characters: this.characterService.getCharactersSplitTwins(true),
       duoPairs: this.characterService.getDuos()
     }).subscribe(({ characters, duoPairs }) => {
       this.characters = characters;
@@ -138,6 +138,11 @@ export class Duos2 implements OnInit {
         "name": "Riri & Ruru",
         "description": "Release Date: August 23, 2025",
         "characterIds": [52, 53]
+      },
+      {
+        "name": "Character Archivists",
+        "description": "Release Date: August 24, 2025",
+        "characterIds": [49, 51]
       },
       {
         "name": this.findDuoName(56, 57),

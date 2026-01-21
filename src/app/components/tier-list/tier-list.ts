@@ -84,7 +84,7 @@ export class TierList {
       'The Collapsed': 'Collapsed'
     };
     const source$ = this.splitTwins
-      ? this.characterService.getCharactersSplitTwins()
+      ? this.characterService.getCharactersSplitTwins(false)
       : this.characterService.getCharacters();
     source$.subscribe(data => {
       this.allCharacters = data.map(c => {

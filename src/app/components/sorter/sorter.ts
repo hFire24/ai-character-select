@@ -95,7 +95,7 @@ export class Sorter implements OnInit, OnDestroy {
 
 
   start(): void {
-    this.characterService.getCharactersSplitTwins().subscribe(chars => {
+    this.characterService.getCharactersSplitTwins(false).subscribe(chars => {
       this.characters = this.filterCharacters(chars);
       
       if (this.characters.length < 2) {

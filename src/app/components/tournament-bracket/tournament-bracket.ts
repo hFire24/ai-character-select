@@ -23,7 +23,7 @@ export class TournamentBracket implements OnInit {
   
   ngOnInit() {
     // Inject the character service to get characters
-    this.characterService.getCharactersSplitTwins().subscribe(characters => {
+    this.characterService.getCharactersSplitTwins(false).subscribe(characters => {
       const normalizedCharacters = this.normalizeShadowSelfTier([...characters]);
       this.buildBracket(normalizedCharacters);
     });
