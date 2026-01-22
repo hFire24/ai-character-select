@@ -150,9 +150,14 @@ export class Duos2 implements OnInit {
         "characterIds": [56, 57]
       },
       {
-        "name": "Maribelle Expansion Pack",
+        "name": this.findDuoName(60, 59),
+        "description": "Release Date: September 25, 2025",
+        "characterIds": [60, 59]
+      },
+      {
+        "name": this.findDuoName(58, 64),
         "description": "Release Date: September 28, 2025",
-        "characterIds": [58, 59, 60, 64]
+        "characterIds": [58, 64]
       },
       {
         "name": this.findDuoName(65, 66),
@@ -173,6 +178,11 @@ export class Duos2 implements OnInit {
         "name": this.findDuoName(71, 72),
         "description": "Release Date: November 19, 2025",
         "characterIds": [71, 72]
+      },
+      {
+        "name": "B.X. Expansion Pack",
+        "description": "Release Date: December 3, 2025",
+        "characterIds": [62, 63]
       },
       {
         "name": "Maids Expansion Pack",

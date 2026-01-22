@@ -48,11 +48,8 @@
 #characterModal > .modalBody {
   padding: 0;
 }
-#characterModal > div:not(.modalHeader):not(.modalBody) {
-  padding: 1.25rem 1.25rem 0 1.25rem;
-}
-#characterModal > div:last-child {
-  padding-bottom: 1.25rem;
+#characterModal > #modalFooter {
+  padding-top: 1rem;
 }
 
 /* === Close button (X) === */
@@ -85,7 +82,6 @@
     "img flags retired";
   align-items: center;
   gap: 0rem 1rem;
-  margin-top: .5rem;
 }
 
 .modalImg,
@@ -139,6 +135,10 @@
 .retired-banner {
   font-weight: 800;
   text-align: right;
+}
+
+h3.retired-banner {
+  margin: 0;
   margin-right: 20px;
 }
 
@@ -157,7 +157,7 @@
 
 /* === Footer === */
 #modalFooter {
-  margin: 1rem 1.25rem 1.25rem 1.25rem;
+  margin: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: .75rem 1rem;
@@ -241,20 +241,13 @@
     padding: 1rem 1rem 0 1rem;
   }
 
-  #characterModal > .modalBody {
-    padding: 0;
-  }
-
-  #characterModal > div:not(.modalHeader, .modalBody) {
-    padding: 1rem;
-  }
-
   #modalFooter {
     justify-content: center;
   }
 
-  .retired-banner {
-    margin: 20px 0 0 0;
+  h3.retired-banner {
+    margin: 0;
+    margin-right: 0;
   }
 }
 
