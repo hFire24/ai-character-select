@@ -1,6 +1,6 @@
 <header>
   <h1>
-    {{ showMoreCharacters ? 'More Characters' : 'Choose Your Character!' }}
+    {{ showMoreCharacters ? 'Side Characters' : 'Choose Your Character!' }}
   </h1>
   <app-birthday-banner (selectCharacter)="selectedCharacter = $event"></app-birthday-banner>
   <app-activities></app-activities>
@@ -13,7 +13,7 @@
       [disabled]="searchTerm.trim().length > 0"
       [class.disabled]="searchTerm.trim().length > 0"
     >
-      ➕ More Characters
+      👥 View {{ showMoreCharacters ? 'Main Characters' : 'Side Characters' }}
       @if (searchTerm.trim().length > 0) {
         <span class="filter-disabled-text">(Search active)</span>
       }
@@ -24,11 +24,7 @@
       [disabled]="searchTerm.trim().length > 0"
       [class.disabled]="searchTerm.trim().length > 0"
     >
-      @if (showMoreCharacters) {
-        🗃️ {{ showRetiredCharacters ? 'Hide Retired' : 'Show Retired' }}
-      } @else {
-        🗃️ {{ showRetiredCharacters ? 'Hide Inactive' : 'Show Inactive' }}
-      }
+      {{ showRetiredCharacters ? '➖ Hide More Characters' : ' ➕ Show More Characters' }}
       @if (searchTerm.trim().length > 0) {
         <span class="filter-disabled-text">(Search active)</span>
       }
@@ -50,7 +46,7 @@
   class="toggle-more-btn"
   [disabled]="searchTerm.trim().length > 0"
   [class.disabled]="searchTerm.trim().length > 0"
->➕ More Characters
+>👥 {{ showMoreCharacters ? 'Main Characters' : 'Side Characters' }}
   @if (searchTerm.trim().length > 0) {
     <span class="filter-disabled-text">(Search active)</span>
   }
