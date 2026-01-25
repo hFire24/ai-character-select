@@ -44,9 +44,9 @@ export class Trios implements OnInit {
         characterShortNames: ["Arianna", "Miki", "Byte-chan"]
       },
       {
-        name: "Pink Trio Leaders",
-        description: "The pink-haired leaders of three cute character groups",
-        characterShortNames: ["Momo", "Ilya", "Maribelle"]
+        name: "Anime Little Sister Trio",
+        description: "Moe characters who love their onii-chan",
+        characterShortNames: ["Momo", "Mimi", "Maribelle"]
       },
       {
         name: "Loli Maid Trio",
@@ -64,14 +64,14 @@ export class Trios implements OnInit {
         characterShortNames: ["Ilya", "Sasha", "Misha"]
       },
       {
-        name: "Celestia and Friends",
-        description: "Celestia with her closest companions",
-        characterShortNames: ["Celestia", "Alenka", "Beatrix"]
-      },
-      {
         name: "Maribelle and Friends",
         description: "Maribelle with her closest companions",
         characterShortNames: ["Maribelle", "Aki", "Bleu"]
+      },
+      {
+        name: "Celestia and Friends",
+        description: "Celestia with her closest companions",
+        characterShortNames: ["Celestia", "Alenka", "Beatrix"]
       },
       {
         name: "Traditional Ladies",

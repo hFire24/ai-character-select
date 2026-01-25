@@ -23,6 +23,10 @@
 				Retired Characters
 			</label>
 			<label>
+				<input type="checkbox" [(ngModel)]="splitTwins" (ngModelChange)="onSplitTwinsChange()" />
+				Split Twins
+			</label>
+			<label>
 				<input type="checkbox" [(ngModel)]="includeMe" />
 				Me
 			</label>

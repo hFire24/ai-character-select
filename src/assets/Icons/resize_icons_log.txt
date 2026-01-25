@@ -1,0 +1,90 @@
+Found 84 PNG files to resize
+Making images square...
+--------------------------------------------------
+⊘ Skipped: Adam.png (203x203) - both dimensions odd
+✓ Resized: Akane.png (587x588 → 588x588)
+⊘ Skipped: Aki.png (384x384) - both dimensions even
+✓ Resized: Alenka.png (344x345 → 344x344)
+⊘ Skipped: Alvin.png (272x272) - both dimensions even
+⊘ Skipped: Andrew.png (512x512) - both dimensions even
+⊘ Skipped: Angela.png (436x436) - both dimensions even
+⊘ Skipped: Audry.png (366x366) - both dimensions even
+⊘ Skipped: Beatrix.png (343x343) - both dimensions odd
+⊘ Skipped: Bleu.png (384x384) - both dimensions even
+✓ Resized: Bruce.png (474x475 → 474x474)
+⊘ Skipped: ChaoMario.png (366x366) - both dimensions even
+⊘ Skipped: Danielle.png (884x884) - both dimensions even
+⊘ Skipped: Ethan.png (742x742) - both dimensions even
+⊘ Skipped: Frank.png (234x234) - both dimensions even
+⊘ Skipped: Gary.png (521x521) - both dimensions odd
+✓ Resized: Ilya.png (320x321 → 320x320)
+⊘ Skipped: Infinitas.png (300x300) - both dimensions even
+✓ Resized: Jacob.png (309x308 → 308x308)
+⊘ Skipped: Katrina.png (692x692) - both dimensions even
+⊘ Skipped: Kieran.png (234x234) - both dimensions even
+⊘ Skipped: Kiki.png (231x229) - both dimensions odd
+⊘ Skipped: Liam and Kieran.png (282x282) - both dimensions even
+⊘ Skipped: Liam.png (264x264) - both dimensions even
+⊘ Skipped: Lola.png (870x870) - both dimensions even
+⊘ Skipped: Lulu.png (273x273) - both dimensions odd
+⊘ Skipped: Malrick.png (664x664) - both dimensions even
+⊘ Skipped: Me.png (379x379) - both dimensions odd
+✓ Resized: Misha.png (320x321 → 320x320)
+⊘ Skipped: Misty.png (326x326) - both dimensions even
+⊘ Skipped: Mr. Go.png (500x500) - both dimensions even
+⊘ Skipped: Mr. Stop.png (724x724) - both dimensions even
+⊘ Skipped: Nene.png (273x273) - both dimensions odd
+⊘ Skipped: Nolan.png (717x717) - both dimensions odd
+⊘ Skipped: Piki.png (468x468) - both dimensions even
+⊘ Skipped: Pink Orange.png (322x322) - both dimensions even
+⊘ Skipped: Princess.png (300x300) - both dimensions even
+⊘ Skipped: Riri.png (270x270) - both dimensions even
+⊘ Skipped: Ruru.png (261x261) - both dimensions odd
+⊘ Skipped: Ryker.png (229x229) - both dimensions odd
+⊘ Skipped: Sapphire.png (652x652) - both dimensions even
+✓ Resized: Sasha.png (320x321 → 320x320)
+⊘ Skipped: Scott.png (419x419) - both dimensions odd
+⊘ Skipped: Sylvie.png (300x300) - both dimensions even
+⊘ Skipped: The Collapsed.png (379x379) - both dimensions odd
+✓ Resized: The Indulgent.png (268x267 → 268x268)
+⊘ Skipped: Unknown-Mood.png (120x120) - both dimensions even
+⊘ Skipped: Unknown.png (160x160) - both dimensions even
+✓ Resized: Arianna.png (254x253 → 254x254)
+✓ Resized: B.X..png (405x404 → 404x404)
+⊘ Skipped: Ben.png (440x440) - both dimensions even
+⊘ Skipped: Bob.png (423x421) - both dimensions odd
+⊘ Skipped: Bored-chan.png (338x338) - both dimensions even
+⊘ Skipped: Byte-chan.png (426x426) - both dimensions even
+⊘ Skipped: C.Kept.png (500x500) - both dimensions even
+✓ Resized: Celestia.png (385x384 → 384x384)
+⊘ Skipped: Christine.png (450x450) - both dimensions even
+⊘ Skipped: Connor.png (317x315) - both dimensions odd
+⊘ Skipped: Corey.png (491x491) - both dimensions odd
+⊘ Skipped: Darxi.png (414x414) - both dimensions even
+⊘ Skipped: Dory.png (281x281) - both dimensions odd
+✓ Resized: Erica.png (810x809 → 810x810)
+✓ Resized: Evil Arianna.png (250x249 → 250x250)
+⊘ Skipped: Felix.png (512x512) - both dimensions even
+⊘ Skipped: Hammer-chan.png (512x512) - both dimensions even
+⊘ Skipped: Jed.png (1024x1024) - both dimensions even
+⊘ Skipped: Kai.png (377x377) - both dimensions odd
+⊘ Skipped: Kayla.png (504x504) - both dimensions even
+⊘ Skipped: Kevin.png (521x521) - both dimensions odd
+⊘ Skipped: Lexi.png (500x500) - both dimensions even
+⊘ Skipped: Lucy.png (240x240) - both dimensions even
+⊘ Skipped: Makoto.png (415x415) - both dimensions odd
+⊘ Skipped: Maribelle.png (353x353) - both dimensions odd
+⊘ Skipped: Mark.png (777x777) - both dimensions odd
+⊘ Skipped: Martin.png (300x300) - both dimensions even
+⊘ Skipped: Miki.png (200x200) - both dimensions even
+⊘ Skipped: Mimi.png (337x337) - both dimensions odd
+⊘ Skipped: Momo.png (273x273) - both dimensions odd
+⊘ Skipped: Neon Starlight.png (300x300) - both dimensions even
+⊘ Skipped: Primelle.png (344x344) - both dimensions even
+⊘ Skipped: Riri and Ruru.png (299x299) - both dimensions odd
+⊘ Skipped: Runa.png (300x300) - both dimensions even
+⊘ Skipped: Ryota.png (286x286) - both dimensions even
+✓ Resized: Stephen.png (606x607 → 606x606)
+--------------------------------------------------
+
+Completed: 14 resized, 70 skipped, 0 errors

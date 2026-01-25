@@ -81,9 +81,22 @@
   <h2>{{ duoName }}</h2>
 </div>
 
-<div>
-  <button (click)="getRandomDuo('named')">Random Duo (Named)</button> &nbsp;
-  <button (click)="getRandomDuo('unnamed')">Random Duo (Unnamed)</button> &nbsp;
+<div class="random-duo-controls">
+  <div class="radio-group" [ngStyle]="{display: 'block', marginBottom: '1rem'}">
+    <label>
+      <input type="radio" name="duoMode" [(ngModel)]="duoMode" value="all" />
+      All Duos
+    </label>
+    <label>
+      <input type="radio" name="duoMode" [(ngModel)]="duoMode" value="named" />
+      Named Only
+    </label>
+    <label>
+      <input type="radio" name="duoMode" [(ngModel)]="duoMode" value="unnamed" />
+      Unnamed Only
+    </label>
+  </div>
+  <button (click)="getRandomDuo()">Random Duo</button> &nbsp;
   <button (click)="viewDuos()">View Duos</button>
 </div>
 

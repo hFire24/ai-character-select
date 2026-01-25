@@ -27,6 +27,7 @@ export class SpinTheWheel {
   includeSide: boolean = true;
   includeRetired: boolean = true;
   includeMe: boolean = false;
+  splitTwins: boolean = false;
   skipAnimation: boolean = false;
 
   constructor(
@@ -36,10 +37,7 @@ export class SpinTheWheel {
   ) {}
 
   ngOnInit() {
-    this.characterService.getCharactersPlusCriticizer().subscribe(chars => {
-      this.characters = chars;
-      this.applyFilter();
-    });
+    this.loadCharacters();
     this.skipAnimation = this.isMobile();
   }
 
@@ -75,6 +73,21 @@ export class SpinTheWheel {
     if (this.includeActive) {
       this.includeFavorite = true;
     }
+  }
+
+  onSplitTwinsChange() {
+    this.loadCharacters();
+  }
+
+  loadCharacters() {
+    const observable = this.splitTwins 
+      ? this.characterService.getCharactersSplitTwins(true)
+      : this.characterService.getCharactersPlusCriticizer();
+    
+    observable.subscribe(chars => {
+      this.characters = chars;
+      this.applyFilter();
+    });
   }
 
   disable(character: Character) {

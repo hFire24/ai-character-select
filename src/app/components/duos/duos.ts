@@ -20,6 +20,7 @@ export class Duos implements OnInit {
   character2Input: string = '';
   duoName: string = '';
   selectedCharacter: Character | null = null;
+  duoMode: 'all' | 'named' | 'unnamed' = 'all';
   
   // Form fields for adding new duo
   newDuoName: string = '';
@@ -191,30 +192,12 @@ export class Duos implements OnInit {
     this.newDuoAltName = '';
   }
 
-  getRandomDuo(type: 'named' | 'unnamed') {
-    if (type === 'named') {
-      // Select a random existing duo
-      if (this.duoPairs.length === 0) {
-      alert('No named duos available.');
-      return;
-      }
-      const randomDuo = this.duoPairs[Math.floor(Math.random() * this.duoPairs.length)];
-      
-      // Find the characters by ID
-      this.character1 = this.allCharacters.find(c => c.id === randomDuo.id1) || null;
-      this.character2 = this.allCharacters.find(c => c.id === randomDuo.id2) || null;
-      
-      if (this.character1 && this.character2) {
-      this.character1Input = this.character1.name;
-      this.character2Input = this.character2.name;
-      this.generateDuoName();
-      }
-    } else {
-      // Select two random characters without an existing duo
-      let attempts = 0;
-      const maxAttempts = (this.allCharacters.length * (this.allCharacters.length - 1));
-      
-      while (attempts < maxAttempts) {
+  getRandomDuo() {
+    const maxAttempts = 1000;
+    let attempts = 0;
+    
+    while (attempts < maxAttempts) {
+      // Select two random unique characters
       const char1 = this.allCharacters[Math.floor(Math.random() * this.allCharacters.length)];
       const char2 = this.allCharacters[Math.floor(Math.random() * this.allCharacters.length)];
       
@@ -224,22 +207,34 @@ export class Duos implements OnInit {
         continue;
       }
       
-      // Check if duo already exists
+      // Check if this pair has a named duo
       const [id1, id2] = [char1.id, char2.id].sort((a, b) => a - b);
-      const hasDuo = this.duoPairs.some(duo => duo.id1 === id1 && duo.id2 === id2);
+      const isNamedDuo = this.duoPairs.some(duo => duo.id1 === id1 && duo.id2 === id2);
       
-      if (!hasDuo) {
-        this.character1 = char1;
-        this.character2 = char2;
-        this.character1Input = char1.name;
-        this.character2Input = char2.name;
-        this.generateDuoName();
-        return;
+      // Apply filtering based on mode
+      if (this.duoMode === 'named' && !isNamedDuo) {
+        attempts++;
+        continue; // Need a named duo, but this isn't one
       }
       
-      attempts++;
+      if (this.duoMode === 'unnamed' && isNamedDuo) {
+        attempts++;
+        continue; // Need an unnamed duo, but this is a named one
       }
       
+      // If we get here, the pair meets the criteria
+      this.character1 = char1;
+      this.character2 = char2;
+      this.character1Input = char1.name;
+      this.character2Input = char2.name;
+      this.generateDuoName();
+      return;
+    }
+    
+    // If we couldn't find a valid pair after max attempts
+    if (this.duoMode === 'named') {
+      alert('Could not find a named duo pair.');
+    } else if (this.duoMode === 'unnamed') {
       alert('Could not find an unnamed duo pair.');
     }
   }
