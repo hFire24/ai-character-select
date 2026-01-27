@@ -18,7 +18,7 @@ export class Activities {
     this.isCollapsed = !this.isCollapsed;
   }
   
-  isIOS(): boolean {
-    return this.deviceService.isIOS();
+  isMobile(): boolean {
+    return this.deviceService.isMobile();
   }
 }

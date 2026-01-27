@@ -44,7 +44,7 @@ ol {
 
 .question-mark {
   font-size: 100px;
-  margin-top: 30px;
+  margin-top: 32px;
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
   font-weight:900;
   height: 173px;
@@ -169,6 +169,10 @@ footer div {
     font-weight:900;
     height: 60px;
     width: 60px;
+    line-height: 60px; /* Match the height for vertical centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (prefers-color-scheme: dark) {

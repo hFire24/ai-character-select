@@ -101,6 +101,14 @@ export class DeviceService {
   /** Detect iOS devices (iPhone, iPad, iPod) */
   isIOS(): boolean {
     if (typeof navigator === 'undefined') return false;
-    return /iphone|ipad|ipod/i.test(navigator.userAgent);
+    
+    // Check traditional user agent
+    const isIOSUserAgent = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    
+    // For iPadOS 13+, check for touch support on Mac-like devices
+    const isMacLike = /Macintosh|MacIntel|MacPPC|Mac68K/i.test(navigator.userAgent);
+    const hasTouchPoints = (navigator.maxTouchPoints && navigator.maxTouchPoints > 1) ? true : false;
+    
+    return isIOSUserAgent || (isMacLike && hasTouchPoints);
   }
 }

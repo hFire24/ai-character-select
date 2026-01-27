@@ -64,7 +64,7 @@ export class Stats implements OnInit {
       this.stats.side = characters.filter(c => c.type.includes('side')).length;
       this.stats.retired = characters.filter(c => c.type === 'retired').length;
       this.stats.misc = characters.filter(c => !['active', 'inactive', 'side', 'inactive side', 'retired'].includes(c.type)).length;
-      this.stats.total = characters.length;
+      this.stats.total = characters.length + 1; // +1 for ChatGPT
     });
   }
 
