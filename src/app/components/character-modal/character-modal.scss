@@ -266,3 +266,12 @@ h3.retired-banner {
   from { opacity: 1; transform: translateY(0) scale(1); }
   to   { opacity: 0; transform: translateY(8px) scale(0.98); }
 }
+
+// iOS font fix
+:host-context(body.ios-device) {
+  #modalQuestionMark,
+  #modalName,
+  .retired-banner {
+    font-family: 'Archivo Black', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}

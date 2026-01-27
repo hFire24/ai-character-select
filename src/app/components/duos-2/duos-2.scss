@@ -224,3 +224,10 @@
     }
   }
 }
+
+// iOS font fix
+:host-context(body.ios-device) {
+  .duos-header h1 {
+    font-family: 'Archivo Black', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}

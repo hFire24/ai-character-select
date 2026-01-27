@@ -43,11 +43,8 @@
 
 /* spacing inside the card */
 #moodModal > .modalHeader,
-#moodModal > div:not(.modalHeader) {
-  padding: 1.25rem 1.25rem 0 1.25rem;
-}
-#moodModal > div:last-child {
-  padding-bottom: 1.25rem;
+#moodModal > #modalBody {
+  padding: 1rem 1rem 0 1rem;
 }
 
 /* === Close button (X) === */
@@ -151,6 +148,10 @@
   margin-left:8px;
 }
 
+#modalFooter {
+  justify-content: center;
+}
+
 /* === Responsive: stack header on narrow screens === */
 @media (max-width: 560px) {
   .modalHeader {
@@ -162,15 +163,6 @@
       "flags";
     justify-items: center;
     text-align: center;
-  }
-
-  #moodModal > .modalHeader,
-  #moodModal > div:not(.modalHeader) {
-    padding: 1rem;
-  }
-
-  #modalFooter {
-    justify-content: center;
   }
 }
 
@@ -188,4 +180,9 @@
 @keyframes modalOut {
   from { opacity: 1; transform: translateY(0) scale(1); }
   to   { opacity: 0; transform: translateY(8px) scale(0.98); }
+}
+
+// iOS font fix
+:host-context(body.ios-device) #moodName {
+  font-family: 'Archivo Black', -apple-system, BlinkMacSystemFont, sans-serif;
 }

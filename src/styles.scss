@@ -1,3 +1,18 @@
+/* iOS-specific font fixes */
+body.ios-device {
+  h1,
+  .question-mark,
+  .character .question-mark {
+    font-family: 'Archivo Black', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  }
+  .question-mark {
+    line-height: 60px; /* Match the height for vertical centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 body {
   background-color: #f0f0f0;
   font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
