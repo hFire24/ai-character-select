@@ -27,6 +27,14 @@ export class MoodModal {
   constructor(private characterService: CharacterService) {
     this.characterService.getCharactersPlusCriticizer().subscribe(data => {
       this.characters = data;
+
+      this.characterService.getChatGPT().subscribe(chatGPTCharacter => {
+        if (Array.isArray(chatGPTCharacter)) {
+          this.characters.push(...chatGPTCharacter);
+        } else {
+          this.characters.push(chatGPTCharacter);
+        }
+      });
     });
   }
 
@@ -90,7 +98,11 @@ export class MoodModal {
   }
 
   assetPath(path: string) {
-    const assetUrl = 'assets/' + path;
+    let modifiedPath = path;
+    if (path && path.includes('ChatGPT')) {
+      modifiedPath = path.replace('ChatGPT', 'ChatGPT-Mood');
+    }
+    const assetUrl = 'assets/' + modifiedPath;
     return path ? assetUrl : 'assets/Icons/extended/Unknown-Mood.png';
   }
 

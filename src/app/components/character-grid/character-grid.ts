@@ -18,6 +18,15 @@ export class CharacterGrid {
   constructor(private characterService: CharacterService) {
     this.characterService.getCharactersPlusCriticizer().subscribe(data => {
       this.characters = data;
+      
+      this.characterService.getChatGPT().subscribe(chatGPTCharacter => {
+        if (Array.isArray(chatGPTCharacter)) {
+          this.characters.push(...chatGPTCharacter);
+        } else {
+          this.characters.push(chatGPTCharacter);
+        }
+      });
+      
       // Preload all character images
       this.characters.forEach(character => {
         if (character.img) {

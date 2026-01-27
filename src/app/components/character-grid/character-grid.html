@@ -9,9 +9,11 @@
       <div
         class="character"
         [ngClass]="genClass(c.generation)"
+        [style.background-color]="c.shortName === 'ChatGPT' ? '#10a37f' : null"
+        [style.color]="c.shortName === 'ChatGPT' ? 'white' : null"
         (click)="selectCharacter.emit(c)"
       >
-        @if (c.img) {
+        @if (c.img && c.shortName !== 'ChatGPT') {
           <img [src]="assetPath(c.img)" [alt]="c.shortName" />
         } @else {
           <div class="question-mark">?</div>

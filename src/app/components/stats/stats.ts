@@ -59,7 +59,7 @@ export class Stats implements OnInit {
 
   calculateStats() {
     this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
-      this.stats.active = characters.filter(c => c.type === 'active').length;
+      this.stats.active = characters.filter(c => c.type === 'active').length + 1; // +1 for ChatGPT
       this.stats.inactive = characters.filter(c => c.type === 'inactive').length;
       this.stats.side = characters.filter(c => c.type.includes('side')).length;
       this.stats.retired = characters.filter(c => c.type === 'retired').length;
@@ -72,6 +72,14 @@ export class Stats implements OnInit {
     this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
       const chatsWithTimestamps: LastChattedCharacter[] = [];
       const neverChatted: Character[] = [];
+
+      this.characterService.getChatGPT().subscribe(chatGPTCharacter => {
+        if (Array.isArray(chatGPTCharacter)) {
+          characters.push(...chatGPTCharacter);
+        } else {
+          characters.push(chatGPTCharacter);
+        }
+      });
 
       characters.forEach(character => {
         const timestampKey = 'chatLinkTimestamp_' + (character.id || 'unknown');

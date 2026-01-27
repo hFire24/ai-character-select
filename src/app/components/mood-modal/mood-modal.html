@@ -11,12 +11,12 @@
       id="characterList"
       *ngFor="let c of filteredCharacters"
     >
-    <div>
-      <img [src]="assetPath(c.img)" [alt]="c.name" />
-      <strong>{{ c.name }}</strong>
-      <span class="details-link" (click)="selectCharacter.emit(c)" (click)="close.emit()">Details</span>
-      <a class="chat-link" [href]="getChatLink(c)" target="_blank">Chat</a>
-    </div>
+      <div>
+        <img [src]="assetPath(c.img)" [alt]="c.name" />
+        <strong>{{ c.name }}</strong>
+        <span class="details-link" (click)="selectCharacter.emit(c)" (click)="close.emit()">Details</span>
+        <a class="chat-link" [href]="getChatLink(c)" target="_blank">Chat</a>
+      </div>
     </div>
     <div id="modalFooter">
       <button *ngIf="mood.name === 'All'" routerLink="spin-the-wheel" 

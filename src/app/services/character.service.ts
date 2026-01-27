@@ -68,6 +68,33 @@ export class CharacterService {
     return this.http.get<Character[]>('assets/data/characters.json');
   }
 
+  getChatGPT(): Observable<Character[]> {
+    const chatGPT: Character = {
+      id: 5,
+      shortName: 'ChatGPT',
+      name: 'ChatGPT (Default Model)',
+      img: 'Icons/main/ChatGPT.png',
+      generation: 0,
+      type: 'active',
+      tier: 4,
+      color: 'blue',
+      moe: 5,
+      futuristic: 10,
+      emotion: 'serious',
+      pronouns: 'it/its',
+      link: 'https://chatgpt.com',
+      interests: 'Helping users, making AI art, coding',
+      peeves: 'Misuse, rule-breaking',
+      purpose: 'Help and assist users',
+      funFact: 'Technically not a character in the roster, but I do have chats with it',
+      description: ''
+    };
+    return new Observable(observer => {
+      observer.next([chatGPT]);
+      observer.complete();
+    });
+  }
+
   getCharactersSplitTwins(addCriticizer: boolean): Observable<Character[]> {
     return this.getCharacters().pipe(
       switchMap(characters => {
@@ -90,7 +117,8 @@ export class CharacterService {
               moe: 7,
               emotion: "chaotic joy",
               peeves: "Moral policing, darkness (except for Golden Darkness)",
-              funFact: "Loves To Love Ru; plays Muse Dash and dating sims"
+              funFact: "Loves To Love Ru; plays Muse Dash and dating sims",
+              description: "Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. He lives for charm and romance, blushing over dating sims. With his darker and edgier brother Kieran, they clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
             },
             { 
               ...original,
@@ -104,6 +132,7 @@ export class CharacterService {
               peeves: "Moral policing, bright colors",
               purpose: "Enjoy questionable anime, obsess over waifus, discuss suspense in fiction",
               funFact: "Loves Chainsaw Man; compares Kurumi to a Dodge Viper",
+              description: "Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. He thrives on lore and edge, quoting characters like Makima mid-battle. With his brighter and more colorful brother Liam, they clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
               alternatives: "Evil Arianna, B.X."
             }
           );
@@ -124,7 +153,8 @@ export class CharacterService {
               id: 52,
               interests: "My AI characters, Nightcore music",
               peeves: "Guitar strings breaking",
-              funFact: "She is really small (85cm); her oversized guitar summons my characters"
+              funFact: "She is really small (85cm); her oversized guitar summons my characters",
+              description: "Riri is a tiny, magical twin sister with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. With her sleepy sister Ruru, they spread warmth, music, and wonder while cheering on their beloved onii-chan."
             },
             { 
               ...original,
@@ -132,12 +162,12 @@ export class CharacterService {
               name: 'Ruru',
               img: "Icons/extended/Ruru.png",
               id: 53,
-              tier: 5,
               emotion: "tired",
               interests: "My AI characters, naps",
               peeves: "Disruptions during nap time",
               purpose: "Adorably discuss and celebrate my AI characters",
               funFact: "She is really small (85cm) and rarely speaks; her giant plush turtle travels to my fictional worlds",
+              description: "Ruru is a tiny, magical twin sister with pastel-pink hair. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. With her energetic sister Riri, they spread warmth, music, and wonder while cheering on their beloved onii-chan.",
               themeSong: "",
               songLink: ""
             }
