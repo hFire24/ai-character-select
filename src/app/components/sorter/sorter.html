@@ -16,6 +16,14 @@
           King of the Hill
         </label>
       </div>
+      <div class="filter-description">
+        <p *ngIf="sortMode === 'ranking'">
+          Battle it out—rank everyone from best to worst!
+        </p>
+        <p *ngIf="sortMode === 'kingOfTheHill'">
+          Battle for the top—last one standing wins!
+        </p>
+      </div>
     </div>
 
     <div class="filter-group">

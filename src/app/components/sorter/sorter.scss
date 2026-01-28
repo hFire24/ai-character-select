@@ -79,6 +79,12 @@ body {
   padding: 0.75rem 1rem;
 }
 
+.filter-description {
+  font-style: italic;
+  color: #808080;
+  margin-top: 0.5rem;
+}
+
 .filter-section {
   margin: 1.5rem auto;
   max-width: 600px;
@@ -303,6 +309,10 @@ body {
 
   .filter-section label {
     color: #d5d8dc;
+  }
+
+  .filter-description {
+    color: #999;
   }
 
   .start-button {
