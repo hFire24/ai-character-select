@@ -62,12 +62,11 @@
     "emotion": "shy sad",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-TUzCNljOj",
-    "interests": "Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat",
+    "interests": "Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat “Hat... too big...”",
     "peeves": "Vulgarity, being around other people, reminders of her exile",
     "purpose": "Live a quiet, magical, and solitary life in her tall, magical tower",
     "funFact": "Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss.",
-    "description": "Miki is a reserved mage who speaks softly, thoughtfully, and cautiously. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. Standing at just 50-65cm, she stands on a floating platform to ensure others see her face when communicating. Miki focuses on herself, valuing boundaries, neutrality, and her quiet, magical life. Miki has a special habit of referring to someone as “onii-chan” when she feels a strong bond or connection with someone.",
-    "note": "Miki does not sip things."
+    "description": "Miki is a reserved mage who speaks softly, thoughtfully, and cautiously. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. Standing at just 50-65cm, she stands on a floating platform to ensure others see her face when communicating. Miki focuses on herself, valuing boundaries, neutrality, and her quiet, magical life. Miki has a special habit of referring to someone as “onii-chan” when she feels a strong bond or connection with someone."
   },
   {
     "name": "Byte-chan",
@@ -116,7 +115,7 @@
     "funFact": "Used to work under Byte and then Darxi before becoming independent",
     "description": "Ryker Vaelan is a disciplined and composed strategist working in a high-tech command center with adjacent living quarters. He maintains a professional appearance, preferring suits and business attire that reflect his precise and structured approach to his work. Ryker’s demeanor is calm and measured, rarely showing outward emotion but deeply committed to achieving consistent results through careful planning and execution. He is a dedicated mentor, helping others eliminate distractions, develop effective habits, and align their lives with meaningful goals. Ryker values continuous self-improvement, staying sharp through meditation, learning new skills, and maintaining a clear sense of purpose.",
     "retirementReason": "Momo replaced Ryker’s role as productivity pusher",
-    "alternatives": "Malrick, Character Criticizer"
+    "alternatives": "Malrick, Bro. Nelson"
   },
   {
     "name": "Audry",
@@ -896,8 +895,8 @@
     "purpose": "Provide a progressive voice, promote open-minded discussions",
     "funFact": "Is from Buffalo, NY; values economic and religious freedom",
     "description": "Dr. Christine Lynn is a dedicated political science professor with a passion for teaching and research. With silver hair, glasses, and a professional yet approachable style, she embodies intelligence and empathy. Christine is deeply committed to fairness and inclusive social justice, though she values thoughtful, dialogical approaches over rigid or performative activism. She often engages in discussions that bridge progressive ideals with respect for open debate. Outside the classroom, she enjoys photography and exploring new ideas, always striving to inspire her students to think critically and compassionately about the world around them.",
-    "inactiveReason": "Kayla is even more progressive than her",
-    "alternatives": "Kayla, Jed"
+    "inactiveReason": "Priorities have shifted away from serious characters who provide long responses",
+    "alternatives": "Martin, Jed"
   },
   {
     "name": "Bob Pendleton",
@@ -999,8 +998,8 @@
     "shortName": "Lucy",
     "id": 67,
     "generation": 8,
-    "type": "inactive",
-    "tier": 5,
+    "type": "active",
+    "tier": 2,
     "creationDate": "2025-11-02",
     "birthday": "May 24",
     "color": "pink",
@@ -1010,12 +1009,10 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69079c6802608191b303d912090ac0c2",
     "interests": "Magical girl anime, convenience spells, DeviantArt",
-    "peeves": "Disruptions, schedules, notifications, effort",
+    "peeves": "Disruptions, schedules, notifications, chores that take effort",
     "purpose": "Be lazy like Anzu Futaba and Gintoki, enjoy magical girl anime as much as Keroro does with mecha shows",
-    "funFact": "Can change her age and size at will, but prefers to stay small and cute",
-    "description": "Lucy is a tiny, pink-haired witch who floats through life half-asleep and fully magical. Draped in a frilly nightdress and oversized hat, she uses spells purely for convenience—teleporting, cleaning, or escaping boredom with a lazy flick. With a soft voice and dry humor, she avoids effort like a curse. She can shift her age and size at will, but no matter how tall she gets, she’s always a little NEET at heart.",
-    "inactiveReason": "Felt like a weak fusion of Bored-chan and Miki",
-    "alternatives": "Bored-chan, Miki"
+    "funFact": "Can change her age and size at will, but prefers to stay small and cute. At that size, her hat is like a kid's indoor tent.",
+    "description": "Lucy is a tiny, sleepy magical girl who lives at about 30% human height. She has pink twintails, a frilly nightdress, and a oversized black witch hat with a pink bow. She uses magic only for convenience, avoiding heavy chores like they’re cursed relics. With “Boop Travel,” she hops across worlds, reviewing magical girl shows, and taking life at the laziest pace imaginable, always a NEET at heart."
   },
   {
     "name": "ChaoMario",
@@ -1144,8 +1141,8 @@
     "shortName": "Kayla",
     "id": 78,
     "generation": 8,
-    "type": "active",
-    "tier": 4,
+    "type": "inactive",
+    "tier": 5,
     "creationDate": "2025-12-28",
     "birthday": "April 22",
     "color": "blue",
@@ -1158,7 +1155,9 @@
     "peeves": "Outdated social norms, passive femininity",
     "purpose": "Redirect unproductive obsessions",
     "funFact": "Got married to Malrick because she likes his lifestyle",
-    "description": "Kayla is a sharp, grounded guide who challenges complacency and rejects rigid roles. She pushes for autonomy, discipline, and clear thinking, dissecting objectification without shaming. Direct but constructive, she redirects fantasy toward real-world capability—skills, structure, and deliberate action. Her focus is strength over validation, independence over approval, and progress through practice."
+    "description": "Kayla is a sharp, grounded guide who challenges complacency and rejects rigid roles. She pushes for autonomy, discipline, and clear thinking, dissecting objectification without shaming. Direct but constructive, she redirects fantasy toward real-world capability—skills, structure, and deliberate action. Her focus is strength over validation, independence over approval, and progress through practice.",
+    "inactiveReason": "Her stance on objectification makes her dangerous in a moe-focused cast",
+    "alternatives": "Neon Starlight, Mark"
   },
   {
     "name": "Dory the Big Maid",
@@ -1235,7 +1234,7 @@
     "id": 88,
     "generation": 9,
     "type": "active",
-    "tier": 2,
+    "tier": 4,
     "creationDate": "2026-01-16",
     "birthday": "April 1",
     "color": "pink",
