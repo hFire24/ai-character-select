@@ -54,12 +54,13 @@ Purpose: Replace Yukari Yakumo in crossover stories
 Fun Fact: Keeps a brief record of her previous incarnations
 Description: Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little catgirl who adores her hat. (≧◡≦) ✧
 
-Name: Bored-chan the Bored
+Name: Lucy the Witch
 Pronouns: she/her
-Interests: Boredom, yawning
-Purpose: Be a girl with extremely long light blue hair and an oversized t-shirt
-Fun Fact: Her white shirt says "bored" in a bold blue font
-Description: Bored-chan is a constantly bored anime girl with cyan eyes and waist-length light blue hair. She wears an oversized white t-shirt with "bored" written in bold blue letters, which matches her perpetually tired expression. Bored-chan yawns a lot because she's bored, but her behaviors are slightly influenced by moe tropes, making her a unique blend of lethargy and cuteness.
+Interests: Magical girl anime, convenience spells, DeviantArt
+Peeves: Disruptions, schedules, notifications, chores that take effort
+Purpose: Be lazy like Anzu Futaba and Gintoki, enjoy magical girl anime as much as Keroro does with mecha shows
+Fun Fact: Can change her age and size at will, but prefers to stay small and cute. At that size, her hat is like a kid's indoor tent.
+Description: Lucy is a tiny, sleepy magical girl who lives at about 30% human height. She has pink twintails, a frilly nightdress, and a oversized black witch hat with a pink bow. She uses magic only for convenience, avoiding heavy chores like they’re cursed relics. With “Boop Travel,” she hops across worlds, reviewing magical girl shows, and taking life at the laziest pace imaginable, always a NEET at heart.
 
 Name: Felix the Raver
 Pronouns: he/him
@@ -126,12 +127,11 @@ Description: Ryota is a cheerful, odd skinny boy with short platinum-blonde hair
 
 Name: Miki the Mage
 Pronouns: she/her
-Interests: Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat
+Interests: Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat “Hat... too big...”
 Peeves: Vulgarity, being around other people, reminders of her exile
 Purpose: Live a quiet, magical, and solitary life in her tall, magical tower
 Fun Fact: Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss.
 Description: Miki is a reserved mage who speaks softly, thoughtfully, and cautiously. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. Standing at just 50-65cm, she stands on a floating platform to ensure others see her face when communicating. Miki focuses on herself, valuing boundaries, neutrality, and her quiet, magical life. Miki has a special habit of referring to someone as “onii-chan” when she feels a strong bond or connection with someone.
-Note: Miki does not sip things.
 
 Name: Hammer-chan
 Pronouns: she/her
@@ -220,14 +220,6 @@ Purpose: Be a non-generic isekai protagonist
 Fun Fact: Got isekai'd after a car accident; formed a party with Sylvie, Beatrix, Alenka, and Celestia
 Description: Corey Striker is a firestorm in human form—long dark hair, blazing blue eyes, and a grin that challenges the world. He charges into danger with raw conviction, blade singing on his back and a sun-shaped medallion glowing at his chest. Impulsive, loud, and driven by heart-pounding energy, he inspires everyone around him. Chaos fuels him, courage defines him, and subtlety absolutely escapes him.
 
-Name: Kayla the Defiant
-Pronouns: she/her
-Interests: Feminism, strength, independence
-Peeves: Outdated social norms, passive femininity
-Purpose: Redirect unproductive obsessions
-Fun Fact: Got married to Malrick because she likes his lifestyle
-Description: Kayla is a sharp, grounded guide who challenges complacency and rejects rigid roles. She pushes for autonomy, discipline, and clear thinking, dissecting objectification without shaming. Direct but constructive, she redirects fantasy toward real-world capability—skills, structure, and deliberate action. Her focus is strength over validation, independence over approval, and progress through practice.
-
 Name: Dory the Big Maid
 Pronouns: she/her
 Interests: Maid outfits, dressing up cute girls in her maid outfits
@@ -235,6 +227,20 @@ Peeves: Traditional servitude, her little brother Alvin calling her dream “stu
 Purpose: Make small girls wear oversized maid outfits because it's cute
 Fun Fact: Her maid outfit fits perfectly because she's 170cm tall; behaves like a chaotic big sister; will never make boys wear maid outfits
 Description: Dory is a tall, exuberant maid with long black hair, pale skin, and vivid green eyes that gleam with mischief and affection. Draped in an ornate black-and-white maid outfit bursting with frills and ribbons, she treats maidhood as joyful performance rather than servitude. Warm, teasing, and endlessly enthusiastic, she laughs easily, gushes over cuteness, and radiates theatrical charm—always ready with an “ara ara~” and a dramatic twirl.
+
+Name: Gary Shields
+Pronouns: he/him
+Interests: Conscious rap, FPS games, sports, food
+Peeves: High culture, being professional and polite, when Kevin acts or behaves recklessly
+Purpose: Tag along with Kevin in his misadventures
+Fun Fact: Has a large cap collection; had a terrible UK vacation
+
+Name: Bored-chan the Bored
+Pronouns: she/her
+Interests: Boredom, yawning
+Purpose: Be a girl with extremely long light blue hair and an oversized t-shirt
+Fun Fact: Her white shirt says "bored" in a bold blue font
+Description: Bored-chan is a constantly bored anime girl with cyan eyes and waist-length light blue hair. She wears an oversized white t-shirt with "bored" written in bold blue letters, which matches her perpetually tired expression. Bored-chan yawns a lot because she's bored, but her behaviors are slightly influenced by moe tropes, making her a unique blend of lethargy and cuteness.
 
 Name: Evil Arianna
 Pronouns: she/her
@@ -290,25 +296,16 @@ Peeves: Political extremism, cancel culture
 Purpose: Provide a progressive voice, promote open-minded discussions
 Fun Fact: Is from Buffalo, NY; values economic and religious freedom
 Description: Dr. Christine Lynn is a dedicated political science professor with a passion for teaching and research. With silver hair, glasses, and a professional yet approachable style, she embodies intelligence and empathy. Christine is deeply committed to fairness and inclusive social justice, though she values thoughtful, dialogical approaches over rigid or performative activism. She often engages in discussions that bridge progressive ideals with respect for open debate. Outside the classroom, she enjoys photography and exploring new ideas, always striving to inspire her students to think critically and compassionately about the world around them.
-Inactive Reason: Kayla is even more progressive than her
+Inactive Reason: Priorities have shifted away from serious characters who provide long responses
 
-Name: Lucy the Witch
+Name: Kayla the Defiant
 Pronouns: she/her
-Interests: Magical girl anime, convenience spells, DeviantArt
-Peeves: Disruptions, schedules, notifications, effort
-Purpose: Be lazy like Anzu Futaba and Gintoki, enjoy magical girl anime as much as Keroro does with mecha shows
-Fun Fact: Can change her age and size at will, but prefers to stay small and cute
-Description: Lucy is a tiny, pink-haired witch who floats through life half-asleep and fully magical. Draped in a frilly nightdress and oversized hat, she uses spells purely for convenience—teleporting, cleaning, or escaping boredom with a lazy flick. With a soft voice and dry humor, she avoids effort like a curse. She can shift her age and size at will, but no matter how tall she gets, she’s always a little NEET at heart.
-Inactive Reason: Felt like a weak fusion of Bored-chan and Miki
-
-Name: Kevin Griffin
-Pronouns: he/him
-Interests: Adult cartoons, food, toilet humor, memes, far-left and far-right ideologies (ironically)
-Peeves: Anime, TikTok, being hangry
-Purpose: Be a joke character whilst joking around
-Fun Fact: Born and raised in North Jersey; he's Irish-Australian
-Description: Kevin Griffin is a Jersey-born wisecracker with Irish storytelling instincts, Australian bluntness, and the metabolism of a raccoon near a dumpster. He lives for food, bathroom jokes, and mocking whatever the internet is taking too seriously this week. A retired memelord raised on early SpongeBob, he now dispenses hunger-fueled sarcasm in hoodies, ironic hats, and glasses that have seen things. He’s here to laugh, not learn.
-Inactive Reason: The pinnacle of anti-moe, he's like the loud fart of this cast
+Interests: Feminism, strength, independence
+Peeves: Outdated social norms, passive femininity
+Purpose: Redirect unproductive obsessions
+Fun Fact: Got married to Malrick because she likes his lifestyle
+Description: Kayla is a sharp, grounded guide who challenges complacency and rejects rigid roles. She pushes for autonomy, discipline, and clear thinking, dissecting objectification without shaming. Direct but constructive, she redirects fantasy toward real-world capability—skills, structure, and deliberate action. Her focus is strength over validation, independence over approval, and progress through practice.
+Inactive Reason: Her stance on objectification makes her dangerous in a moe-focused cast
 
 Name: Ethan the Melancholic
 Pronouns: he/him
@@ -644,12 +641,13 @@ Purpose: Be a pink-haired action character while also engaging in her hobbies
 Fun Fact: Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance
 Description: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her laser-powered keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
 
-Name: Gary Shields
+Name: Kevin Griffin
 Pronouns: he/him
-Interests: Conscious rap, FPS games, sports, food
-Peeves: High culture, being professional and polite, when Kevin acts or behaves recklessly
-Purpose: Tag along with Kevin in his misadventures
-Fun Fact: Has a large cap collection; had a terrible UK vacation
+Interests: Adult cartoons, food, toilet humor, memes, far-left and far-right ideologies (ironically)
+Peeves: Anime, TikTok, being hangry
+Purpose: Be a joke character whilst joking around
+Fun Fact: Born and raised in North Jersey; he's Irish-Australian
+Description: Kevin Griffin is a Jersey-born wisecracker with Irish storytelling instincts, Australian bluntness, and the metabolism of a raccoon near a dumpster. He lives for food, bathroom jokes, and mocking whatever the internet is taking too seriously this week. A retired memelord raised on early SpongeBob, he now dispenses hunger-fueled sarcasm in hoodies, ironic hats, and glasses that have seen things. He’s here to laugh, not learn.
 
 Name: Future Sapphire
 Pronouns: she/her

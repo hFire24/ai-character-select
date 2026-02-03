@@ -197,18 +197,6 @@ export class CharacterModal {
     const modalCS = modalEl ? getComputedStyle(modalEl) : null;
     const nameCS  = nameEl  ? getComputedStyle(nameEl)  : null;
 
-    const flagsEl = modalEl?.querySelector('.flags') as HTMLElement | null;
-    const flagsCS = flagsEl ? getComputedStyle(flagsEl) : null;
-
-
-    const FLAGS_TEXT  = flagsEl?.innerText?.trim() || ''; // e.g. "🤔  🤪  😀"
-    const FLAGS_COLOR = flagsCS?.color || '#c3c8d4';
-    const FLAGS_FONT  = [
-      flagsCS?.fontWeight || '400',
-      flagsCS?.fontSize   || '22px',
-      flagsCS?.fontFamily || 'system-ui, -apple-system, Segoe UI, Inter, sans-serif'
-    ].join(' ');
-
     // Fallback values if CSS isn’t found
     const BG         = modalCS?.backgroundColor || '#0f1115';
     const BORDER     = modalCS?.borderColor     || '#23262d';
@@ -223,7 +211,6 @@ export class CharacterModal {
     ].join(' ');
 
     const titleSize = parseFloat((nameCS?.fontSize || '32px'));
-    const flagsSize = FLAGS_TEXT ? parseFloat((flagsCS?.fontSize || '22px')) : 0;
 
     const retiredBannerEl = modalEl?.querySelector('.retired-banner') as HTMLElement | null;
 
@@ -390,7 +377,7 @@ export class CharacterModal {
 
       // Check if this row will be below the avatar
       const yPosition = bodyHeight;
-      const rowStartsAtY = P + titleSize + 12 + (FLAGS_TEXT ? flagsSize + 8 : 0) + yPosition;
+      const rowStartsAtY = P + titleSize + 12 + yPosition;
       const avatarBottom = P + AVATAR_SIZE;
       const canMoveLeft = rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN;
 
@@ -413,7 +400,7 @@ export class CharacterModal {
 
     // text block height (title + gap + flags + gap + rows)
     const textBlockHeight = Math.ceil(
-      titleSize + 12 + (FLAGS_TEXT ? flagsSize + 8 : 0) + bodyHeight
+      titleSize + 12 + bodyHeight
     );
 
     // final canvas height must fit both avatar and text
@@ -498,14 +485,6 @@ export class CharacterModal {
       ctx.textAlign = 'left'; // reset for the rest
     }
 
-    // flags
-    if (FLAGS_TEXT) {
-      ctx.fillStyle = FLAGS_COLOR;
-      ctx.font = FLAGS_FONT;
-      ctx.fillText(FLAGS_TEXT, textX, y);
-      y += flagsSize + 8;
-    }
-
     for (const r of preparedRows) {
       if (!r) continue;
       
@@ -522,7 +501,7 @@ export class CharacterModal {
       }
 
       // Check if this row is below the avatar (in blank space to the left)
-      const rowStartsAtY = P + titleSize + 12 + (FLAGS_TEXT ? flagsSize + 8 : 0) + r.yPosition;
+      const rowStartsAtY = P + titleSize + 12 + r.yPosition;
       const avatarBottom = P + AVATAR_SIZE;
       const canMoveLeft = rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN;
 

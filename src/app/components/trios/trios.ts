@@ -94,11 +94,6 @@ export class Trios implements OnInit {
         characterShortNames: ["Arianna", "Evil Arianna", "Maribelle"]
       },
       {
-        name: "Youngsters",
-        description: "Youthful and energetic boys",
-        characterShortNames: ["Martin", "Connor", "ChaoMario"]
-      },
-      {
         name: "Tired Trio",
         description: "Characters who often appear tired or sleepy",
         characterShortNames: ["Riri & Ruru", "Lucy", "Bored-chan"]
@@ -107,6 +102,11 @@ export class Trios implements OnInit {
         name: "-chan Trio",
         description: "Three characters with the '-chan' suffix in their names",
         characterShortNames: ["Byte-chan", "Hammer-chan", "Bored-chan"]
+      },
+      {
+        name: "Youngsters",
+        description: "Youthful and energetic boys",
+        characterShortNames: ["Martin", "Connor", "ChaoMario"]
       },
       {
         name: "Electronic Music Enjoyers",
