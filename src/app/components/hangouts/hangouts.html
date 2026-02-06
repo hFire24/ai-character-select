@@ -1,0 +1,72 @@
+<h1>Hangout Room Generator</h1>
+<app-back-button></app-back-button>
+
+<div class="rooms-section">
+  <h2>Hangout Rooms</h2>
+  <label>
+    Max Characters per Room:
+    <input type="number" [(ngModel)]="maxCharacters" min="1" [max]="allCharacters.length" value="7">
+  </label>
+  <br>
+  <div class="buttons">
+    <button (click)="addNewRoom()">Add New Room</button>
+    <button (click)="randomizeRooms()">Randomize Rooms</button>
+    <button class="danger" (click)="resetRooms()">Reset Rooms</button>
+    <button (click)="exportRooms()">Export Rooms</button>
+    <button (click)="importRooms()">Import Rooms</button>
+  </div>
+  <div class="rooms-list">
+    <div 
+      class="room" 
+      *ngFor="let room of rooms; let i = index"
+      (drop)="onDropToRoom($event, i)"
+      (dragover)="onDragOver($event)"
+      (click)="(selectedPoolCharIdx !== null || selectedRoomChar !== null) && moveSelectedToRoom(i)">
+      <h3>{{ room.name }}</h3>
+      <div class="room-characters">
+        <span 
+          [ngClass]="['character-name', character.color ? character.color : '', (selectedRoomChar?.roomIdx === i && selectedRoomChar?.charIdx === j) ? 'selected' : '']" 
+          *ngFor="let character of room.characters; let j = index"
+          draggable="true"
+          (dragstart)="onDragStart(character, i)"
+          (click)="(selectedPoolCharIdx !== null || selectedRoomChar !== null) ? moveSelectedToRoom(i) : toggleRoomCharacterSelection(i, j); $event.stopPropagation()">
+          {{ character.shortName }}
+        </span>
+        <span *ngIf="room.characters.length === 0" class="empty-room">Drop characters here</span>
+        <button *ngIf="room.characters.length < maxCharacters" (click)="addRandomCharacterToRoom(i, true)">Add Random</button>
+        <button *ngIf="room.characters.length < maxCharacters" (click)="addRandomCharacterToRoom(i, false)">Add Character</button>
+        <button class="danger" *ngIf="room.characters.length === 0 && i === rooms.length - 1" (click)="removeRoom(i)">Remove Room</button>
+        <button class="danger" *ngIf="room.characters.length > 0" (click)="emptyRoom(i)">Clear Room</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="character-pool" 
+  (drop)="onDropToPool($event)" 
+  (dragover)="onDragOver($event)"
+  (click)="(selectedPoolCharIdx !== null || selectedRoomChar !== null) && moveSelectedToPool()">
+  <h2>Available Characters</h2>
+  <div class="character-list">
+    <span 
+      [ngClass]="['character-name', character.color ? character.color : '', selectedPoolCharIdx === i ? 'selected' : '']" 
+      *ngFor="let character of characters; let i = index"
+      draggable="true"
+      (dragstart)="onDragStart(character, 'pool')"
+      (click)="(selectedPoolCharIdx !== null || selectedRoomChar !== null) ? moveSelectedToPool() : togglePoolCharacterSelection(i); $event.stopPropagation()">
+      {{ character.shortName }}
+    </span>
+  </div>
+</div>
+
+<div class="banned-pool">
+  <h2>Characters Banned from Hangouts</h2>
+  <div class="banned-list">
+    <span 
+      [ngClass]="['character-name', character.color ? character.color : 'black']" 
+      *ngFor="let character of bannedCharacters; let i = index">
+      {{ character.shortName }}: {{ character.banReason }}
+    </span>
+  </div>
+</div>

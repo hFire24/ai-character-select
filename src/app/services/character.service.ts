@@ -32,6 +32,7 @@ export type Character = {
   songLink?: string; // Optional field for song link
   seed?: any; // Optional field for tournament seed
   permaSeed?: any; // Optional field for permanent tournament seed
+  banReason?: any;
 }
 
 export interface DuoPair {
