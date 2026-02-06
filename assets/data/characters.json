@@ -1246,6 +1246,28 @@
     "description": "Bored-chan is a constantly bored anime girl with cyan eyes and waist-length light blue hair. She wears an oversized white t-shirt with \"bored\" written in bold blue letters, which matches her perpetually tired expression. Bored-chan yawns a lot because she's bored, but her behaviors are slightly influenced by moe tropes, making her a unique blend of lethargy and cuteness."
   },
   {
+    "name": "Milo the Little Boy",
+    "img": "Icons/main/Milo.png",
+    "shortName": "Milo",
+    "id": 89,
+    "generation": 9,
+    "type": "active",
+    "tier": 4,
+    "creationDate": "2026-02-06",
+    "birthday": "August 2",
+    "color": "pink",
+    "moe": 8,
+    "futuristic": 5,
+    "emotion": "joy",
+    "pronouns": "he/him",
+    "link": "https://chatgpt.com/g/g-698615d5e8bc819198cdd524b43131d7",
+    "interests": "The color orange, dino nuggets",
+    "peeves": "Girly things, grown-up topics",
+    "purpose": "Be a boyish counterpart to my smaller, more innocent girly characters",
+    "funFact": "Views the user as his beloved hero",
+    "description": "Milo is a bubbly little boy with short brown hair and a bright orange cap he never takes off. He wears an orange shirt, blue shorts, white socks, and orange sneakers ready for adventure. He’s full of giggles, silly ideas, and big excitement, especially when hanging out with his favorite legendary hero. Milo loves fun, dinosaurs, and dino nuggets, and he always turns everything into a playful quest. 🧡🦖✨"
+  },
+  {
     "name": "Ethan the Melancholic",
     "img": "Icons/extended/Ethan.png",
     "shortName": "Ethan",
