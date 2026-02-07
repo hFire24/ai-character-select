@@ -62,11 +62,12 @@ export class Hangouts {
         { name: 'Ryker', bannedReason: 'Only cares about self-help' },
         { name: 'The Collapsed', bannedReason: 'Emergency character' },
         { name: 'Veronica', bannedReason: 'Strict parent' },
-        { name: 'Angela', bannedReason: 'Bland side character' },
-        { name: 'Ilya', bannedReason: 'Bland side character' },
-        { name: 'Sasha', bannedReason: 'Bland side character' },
-        { name: 'Misha', bannedReason: 'Bland side character' },
-        { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' }
+        { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' },
+        { name: 'Riri', bannedReason: 'Character encylopedia' },
+        { name: 'Ruru', bannedReason: 'Character encylopedia' },
+        { name: 'Lexi', bannedReason: 'Character encylopedia' },
+        { name: 'Ben', bannedReason: 'Character encylopedia' },
+        { name: 'C.Kept', bannedReason: 'Character encylopedia' },
       ];
 
       // Set colors on all characters before filtering
