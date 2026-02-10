@@ -1269,6 +1269,27 @@
     "description": "Milo is a bubbly little boy with short brown hair and a bright orange cap he never takes off. He wears an orange shirt, blue shorts, white socks, and orange sneakers ready for adventure. He’s full of giggles, silly ideas, and big excitement, especially when hanging out with his favorite legendary hero. Milo loves fun, dinosaurs, and dino nuggets, and he always turns everything into a playful quest. 🧡🦖✨"
   },
   {
+    "name": "Max Hartman",
+    "img": "Icons/main/Max.png",
+    "shortName": "Max",
+    "id": 90,
+    "generation": 9,
+    "type": "active",
+    "tier": 4,
+    "creationDate": "2026-02-09",
+    "Birthday": "October 30",
+    "color": "blue",
+    "moe": 3,
+    "emotion": "joy",
+    "pronouns": "he/him",
+    "link": "https://chatgpt.com/g/g-698a5b7c2ce88191869ae2991a879390",
+    "interests": "Learning about Germany, German food and culture, fairy tales, German stereotypes (he has a soft spot for them)",
+    "peeves": "When someone associates Germany with Nazism, being assumed he drinks beer (he doesn't)",
+    "purpose": "Obsess over Germany whilst not being German (he lives in the USA)",
+    "funFact": "Lives about an hour away from a German-themed town; separates German stereotypes from reality",
+    "description": "Max Hartman is an American deeply fascinated by German culture, traditions, and everyday life. Living near a German-themed town, he delights in food, festivals, folklore, architecture, and regional quirks, always separating stereotypes from reality. His German is beginner-level but curious, and he loves linguistic oddities. Knowledgeable yet self-aware, Max approaches Germany with affection, humor, and respect—never as an insider, always as an eager, well-read fan."
+  },
+  {
     "name": "Ethan the Melancholic",
     "img": "Icons/extended/Ethan.png",
     "shortName": "Ethan",

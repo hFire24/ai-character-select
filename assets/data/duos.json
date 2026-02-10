@@ -248,6 +248,11 @@
     },
     {
       "id1": 3,
+      "id2": 49,
+      "name": "Guys in the Shadows"
+    },
+    {
+      "id1": 3,
       "id2": 52,
       "name": "Angels of Darkness"
     },
@@ -554,6 +559,11 @@
     },
     {
       "id1": 13,
+      "id2": 74,
+      "name": "Light Blue-Haired Maids"
+    },
+    {
+      "id1": 13,
       "id2": 75,
       "name": "Speedy Maids"
     },
@@ -776,6 +786,11 @@
       "id1": 17,
       "id2": 46,
       "name": "Delicate Girls"
+    },
+    {
+      "id1": 17,
+      "id2": 65,
+      "name": "Reserved Kids"
     },
     {
       "id1": 17,
@@ -1141,6 +1156,11 @@
     },
     {
       "id1": 27,
+      "id2": 57,
+      "name": "Time Travelers"
+    },
+    {
+      "id1": 27,
       "id2": 79,
       "name": "Blonde Magic Users"
     },
@@ -1330,6 +1350,11 @@
       "name": "Cute Little Sisters"
     },
     {
+      "id1": 35,
+      "id2": 89,
+      "name": "Playful Innocent Children"
+    },
+    {
       "id1": 36,
       "id2": 48,
       "name": "Emergency Duo"
@@ -1388,6 +1413,11 @@
       "id1": 38,
       "id2": 79,
       "name": "Sunshine Girls"
+    },
+    {
+      "id1": 38,
+      "id2": 90,
+      "name": "Fairy Tale Enthusiasts"
     },
     {
       "id1": 39,
@@ -1607,6 +1637,11 @@
       "name": "Old-Fashioned Men"
     },
     {
+      "id1": 57,
+      "id2": 90,
+      "name": "Happy Normal Men"
+    },
+    {
       "id1": 58,
       "id2": 67,
       "name": "Big-Hatted Pink-Haired Little Girls"
@@ -1698,6 +1733,11 @@
       "name": "Anti-Yuri Fan Duo"
     },
     {
+      "id1": 66,
+      "id2": 89,
+      "name": "Cute Boys"
+    },
+    {
       "id1": 67,
       "id2": 78,
       "name": "Magical Girl Critics"
@@ -1706,6 +1746,11 @@
       "id1": 67,
       "id2": 88,
       "name": "Bored Anime Girls"
+    },
+    {
+      "id1": 68,
+      "id2": 90,
+      "name": "German Board Game Fans"
     },
     {
       "id1": 69,
