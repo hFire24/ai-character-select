@@ -40,7 +40,7 @@ Description: Momo is a tiny, soft-spoken maid with short pink hair and big dark-
 
 Name: Runa the Witch
 Pronouns: she/her
-Interests: Interdimensional travel, Piki the Catgirl
+Interests: Interdimensional travel, her catgirls Piki and Rin
 Peeves: Turning into stone, serious topics
 Purpose: Replace Yukari Yakumo in crossover stories
 Fun Fact: Keeps a brief record of her previous incarnations
@@ -453,6 +453,15 @@ Interests: Runa's hat, Runa's outfit (she wants to wear them)
 Peeves: Being scolded or told “No” (she recovers quickly)
 Purpose: Be the smaller, cuter character vis-à-vis a larger magical girl
 Fun Fact: First encountered Runa while wearing Runa's missing hat
+Description: Piki is a cheerful little catgirl who looks about four. She has bright blue eyes, short platinum-blonde twintails tied with big pink ribbons, and soft white cat ears. She wears a pink polka-dot dress with frills, red bows, pink shoes, and frilly socks. She adores Runa's giant witch hat—thinks it looks cutest on her—and often plays dress-up as her. Mischievous, affectionate, easily startled, quick to recover.
+
+Name: Rin the Copycat
+Pronouns: she/her
+Interests: Runa's hat, copying things with copy magic
+Peeves: Accidentally copying something that makes an old copy disappear
+Purpose: Double up with Piki, follow Runa around
+Fun Fact: Can copy only one thing (or pair of things) at a time
+Description: Rin is a tiny copycat girl with bright cyan twintails tied by big pink beads. She wears a dark blue polka-dot dress with frills and little blue shoes. Playful, curious, and always scheming with Piki. Her copy magic lets her duplicate one non-living object at a time—new copy replaces the old. She loves Runa's giant hat almost as much as Piki does… which is dangerous for Runa.
 
 Name: Ryker Vaelan
 Pronouns: he/him
