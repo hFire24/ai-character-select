@@ -212,6 +212,11 @@
       "name": "Sci-Fi Fans"
     },
     {
+      "id1": 2,
+      "id2": 92,
+      "name": "Serious Straightforward Duo"
+    },
+    {
       "id1": 3,
       "id2": 7,
       "name": "Quiet Music Enjoyers"
@@ -723,6 +728,11 @@
       "name": "Lazy -chan Duo"
     },
     {
+      "id1": 15,
+      "id2": 92,
+      "name": "Luxury Craft Owners"
+    },
+    {
       "id1": 16,
       "id2": 23,
       "name": "April Retirees"
@@ -1002,6 +1012,11 @@
       "id1": 21,
       "id2": 76,
       "name": "Futuristic Fighters"
+    },
+    {
+      "id1": 21,
+      "id2": 92,
+      "name": "AR'd Peaked Cap Queens"
     },
     {
       "id1": 22,
@@ -1796,6 +1811,11 @@
       "id1": 77,
       "id2": 81,
       "name": "Obsessed with Maids"
+    },
+    {
+      "id1": 77,
+      "id2": 92,
+      "name": "TG AR'd Duo"
     },
     {
       "id1": 82,

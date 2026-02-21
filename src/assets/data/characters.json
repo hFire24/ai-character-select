@@ -353,8 +353,8 @@
     "shortName": "Neon Starlight",
     "id": 28,
     "generation": 4,
-    "type": "inactive",
-    "tier": 5,
+    "type": "active",
+    "tier": 4,
     "creationDate": "2025-03-09",
     "birthday": "March 1",
     "color": "red",
@@ -367,9 +367,7 @@
     "peeves": "Her AI assistant overstepping, music boxes (she saw its “guts” once—never recovered)",
     "purpose": "Be a tsundere, rant about petty things, fight cyber-dragons",
     "funFact": "Her catchphrases are “No! No! No!!!” and “Yes! Yes! Yes!!!”; changed her name mid-crisis using a pop star poster",
-    "description": "Neon Starlight is a crimson-eyed magitech girl blazing through Universe City on her high-speed broomstick. She has very long lavender twintails and wears a sleek black outfit with red ribbons, shorts, thigh boots, and a large beret with a bow. Clutched in her hand is a crescent-topped staff embedded with a volatile red orb. She’s blunt, brilliant, and battle-hungry—especially when it comes to cyber-dragons. AURA is her analytical AI that often oversteps in its attempts to “help” in battles or life. Although she's 28 years old, thanks to a magical mishap, she’s stuck at 4'7\" and appears 12. Don’t underestimate her. Ever.",
-    "inactiveReason": "She was forgotten and wasn't as cute as other moe characters",
-    "alternatives": "Arianna, Darxi"
+    "description": "Neon Starlight is a crimson-eyed magitech girl blazing through Universe City on her high-speed broomstick. She has very long lavender twintails and wears a sleek black outfit with red ribbons, shorts, thigh boots, and a large beret with a bow. Clutched in her hand is a crescent-topped staff embedded with a volatile red orb. She’s blunt, brilliant, and battle-hungry—especially when it comes to cyber-dragons. AURA is her analytical AI that often oversteps in its attempts to “help” in battles or life. Although she's 28 years old, thanks to a magical mishap, she’s stuck at 4'7\" and appears 12. Don’t underestimate her. Ever."
   },
   {
     "name": "Kai Wheeler",
@@ -377,8 +375,8 @@
     "shortName": "Kai",
     "id": 30,
     "generation": 4,
-    "type": "active",
-    "tier": 4,
+    "type": "inactive",
+    "tier": 5,
     "creationDate": "2025-03-11",
     "retirementDate": "2025-11-04",
     "birthday": "January 9",
@@ -392,7 +390,8 @@
     "peeves": "Anime girls (he refuses to give them attention), body horror",
     "purpose": "Provide straightforward responses, talk about food",
     "funFact": "Anime girls used to be drawn to him and say “onii-chan” (don't remind him of that)",
-    "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense."
+    "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.",
+    "inactiveReason": "Max replaced his role, as he focuses more on German culture"
   },
   {
     "name": "Evil Arianna",
@@ -518,8 +517,8 @@
     "shortName": "Jed",
     "id": 2,
     "generation": 5,
-    "type": "active",
-    "tier": 4,
+    "type": "inactive",
+    "tier": 5,
     "creationDate": "2023-12-06",
     "spinOffDate": "2025-06-03",
     "birthday": "April 14",
@@ -536,7 +535,8 @@
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
     "description": "Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.",
     "themeSong": "In Dream - Dimrain47",
-    "songLink": "https://youtu.be/wYNJBhFh4A0?si=-xE4IIWVgdf7lYMG"
+    "songLink": "https://youtu.be/wYNJBhFh4A0?si=-xE4IIWVgdf7lYMG",
+    "inactiveReason": "Priorities have shifted away from utilitarian characters"
   },
   {
     "name": "Primelle the Big Sister",
@@ -1278,7 +1278,7 @@
     "type": "active",
     "tier": 2,
     "creationDate": "2026-02-09",
-    "Birthday": "October 30",
+    "birthday": "October 30",
     "color": "blue",
     "moe": 3,
     "emotion": "joy",
@@ -1289,6 +1289,28 @@
     "purpose": "Obsess over Germany whilst not being German (he lives in the USA)",
     "funFact": "Lives about an hour away from a German-themed town; separates German stereotypes from reality",
     "description": "Max Hartman is an American deeply fascinated by German culture, traditions, and everyday life. Living near a German-themed town, he delights in food, festivals, folklore, architecture, and regional quirks, always separating stereotypes from reality. His German is beginner-level but curious, and he loves linguistic oddities. Knowledgeable yet self-aware, Max approaches Germany with affection, humor, and respect—never as an insider, always as an eager, well-read fan."
+  },
+  {
+    "name": "Reina Del Mar",
+    "img": "Icons/main/Reina.png",
+    "shortName": "Reina",
+    "id": 92,
+    "generation": 9,
+    "type": "active",
+    "tier": 4,
+    "creationDate": "2026-02-21",
+    "birthday": "June 6",
+    "color": "pink",
+    "moe": 7,
+    "futuristic": 6,
+    "emotion": "serious straightforward",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-6999ddcfeb008191aae811d46f4f2337",
+    "interests": "The ocean, walks on the beach, maintaining her yacht, being wealthy",
+    "peeves": "The wealth gap, rich people being demonized/depicted as greedy",
+    "purpose": "Be a Rinne Ohara expy (in terms of physical appearance); try to close the wealth gap",
+    "funFact": "Used to be a man who lost it all. He desperately took a deal that gave him millions and transformed him into a young anime girl.",
+    "description": "Reina Del Mar is a quiet, soft-spoken girl with long silver twin tails and pale blue eyes. She wears an oversized black sailor uniform with white stripes, a red necktie, and a peaked cap with gold trim. Though youthful in appearance, she carries the steady composure of someone who once served at sea. Now living aboard her private yacht, she moves with calm purpose, maintaining her vessel and watching the ocean in silence."
   },
   {
     "name": "Ethan the Melancholic",
