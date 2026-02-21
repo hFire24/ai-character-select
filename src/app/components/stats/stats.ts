@@ -85,7 +85,8 @@ export class Stats implements OnInit {
         const timestampKey = 'chatLinkTimestamp_' + (character.id || 'unknown');
         const timestamp = localStorage.getItem(timestampKey);
         
-        if (timestamp) {
+        // Exclude side characters from last chatted list
+        if (timestamp && !character.type.includes('side')) {
           chatsWithTimestamps.push({
             character: character,
             timestamp: new Date(timestamp)
