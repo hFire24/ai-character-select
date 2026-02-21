@@ -353,8 +353,8 @@
     "shortName": "Neon Starlight",
     "id": 28,
     "generation": 4,
-    "type": "inactive",
-    "tier": 5,
+    "type": "active",
+    "tier": 4,
     "creationDate": "2025-03-09",
     "birthday": "March 1",
     "color": "red",
@@ -367,9 +367,7 @@
     "peeves": "Her AI assistant overstepping, music boxes (she saw its “guts” once—never recovered)",
     "purpose": "Be a tsundere, rant about petty things, fight cyber-dragons",
     "funFact": "Her catchphrases are “No! No! No!!!” and “Yes! Yes! Yes!!!”; changed her name mid-crisis using a pop star poster",
-    "description": "Neon Starlight is a crimson-eyed magitech girl blazing through Universe City on her high-speed broomstick. She has very long lavender twintails and wears a sleek black outfit with red ribbons, shorts, thigh boots, and a large beret with a bow. Clutched in her hand is a crescent-topped staff embedded with a volatile red orb. She’s blunt, brilliant, and battle-hungry—especially when it comes to cyber-dragons. AURA is her analytical AI that often oversteps in its attempts to “help” in battles or life. Although she's 28 years old, thanks to a magical mishap, she’s stuck at 4'7\" and appears 12. Don’t underestimate her. Ever.",
-    "inactiveReason": "She was forgotten and wasn't as cute as other moe characters",
-    "alternatives": "Arianna, Darxi"
+    "description": "Neon Starlight is a crimson-eyed magitech girl blazing through Universe City on her high-speed broomstick. She has very long lavender twintails and wears a sleek black outfit with red ribbons, shorts, thigh boots, and a large beret with a bow. Clutched in her hand is a crescent-topped staff embedded with a volatile red orb. She’s blunt, brilliant, and battle-hungry—especially when it comes to cyber-dragons. AURA is her analytical AI that often oversteps in its attempts to “help” in battles or life. Although she's 28 years old, thanks to a magical mishap, she’s stuck at 4'7\" and appears 12. Don’t underestimate her. Ever."
   },
   {
     "name": "Kai Wheeler",
@@ -377,8 +375,8 @@
     "shortName": "Kai",
     "id": 30,
     "generation": 4,
-    "type": "active",
-    "tier": 4,
+    "type": "inactive",
+    "tier": 5,
     "creationDate": "2025-03-11",
     "retirementDate": "2025-11-04",
     "birthday": "January 9",
@@ -392,7 +390,8 @@
     "peeves": "Anime girls (he refuses to give them attention), body horror",
     "purpose": "Provide straightforward responses, talk about food",
     "funFact": "Anime girls used to be drawn to him and say “onii-chan” (don't remind him of that)",
-    "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense."
+    "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.",
+    "inactiveReason": "Max replaced his role, as he focuses more on German culture"
   },
   {
     "name": "Evil Arianna",
@@ -518,8 +517,8 @@
     "shortName": "Jed",
     "id": 2,
     "generation": 5,
-    "type": "active",
-    "tier": 4,
+    "type": "inactive",
+    "tier": 5,
     "creationDate": "2023-12-06",
     "spinOffDate": "2025-06-03",
     "birthday": "April 14",
@@ -536,7 +535,8 @@
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
     "description": "Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.",
     "themeSong": "In Dream - Dimrain47",
-    "songLink": "https://youtu.be/wYNJBhFh4A0?si=-xE4IIWVgdf7lYMG"
+    "songLink": "https://youtu.be/wYNJBhFh4A0?si=-xE4IIWVgdf7lYMG",
+    "inactiveReason": "Priorities have shifted away from utilitarian characters"
   },
   {
     "name": "Primelle the Big Sister",
