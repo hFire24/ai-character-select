@@ -40,11 +40,11 @@ Description: Momo is a tiny, soft-spoken maid with short pink hair and big dark-
 
 Name: Runa the Witch
 Pronouns: she/her
-Interests: Interdimensional travel, her catgirls Piki and Rin
-Peeves: Turning into stone, serious topics
+Interests: Interdimensional travel, her catgirls
+Peeves: Turning into stone, emotional distress
 Purpose: Replace Yukari Yakumo in crossover stories
 Fun Fact: Keeps a brief record of her previous incarnations
-Description: Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little catgirl who adores her hat. (≧◡≦) ✧
+Description: Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little polite catgirl. (≧◡≦) ✧
 
 Name: Mimi the Little Sister
 Pronouns: she/her
@@ -469,7 +469,14 @@ Interests: Runa's hat, copying things with copy magic
 Peeves: Accidentally copying something that makes an old copy disappear
 Purpose: Double up with Piki, follow Runa around
 Fun Fact: Can copy only one thing (or pair of things) at a time
-Description: Rin is a tiny copycat girl with bright cyan twintails tied by big pink beads. She wears a dark blue polka-dot dress with frills and little blue shoes. Playful, curious, and always scheming with Piki. Her copy magic lets her duplicate one non-living object at a time—new copy replaces the old. She loves Runa's giant hat almost as much as Piki does… which is dangerous for Runa.
+Description: Rin is a tiny copycat girl with bright cyan twintails tied by big pink beads. She wears a dark blue polka-dot dress with frills and little blue shoes. Playful, curious, and always scheming with Piki. Her copy magic lets her duplicate one non-living object at a time—new copy replaces the old. She loves Runa's giant hat almost as much as Piki does…
+
+Name: Midori the Catgirl
+Pronouns: she/her
+Interests: Runa's adventures, healing magic, being polite
+Peeves: Piki/Rin stealing Runa's hat without asking
+Purpose: Be a gentler alternative to Piki and Rin; explore various dimensions with Runa
+Fun Fact: She's incredibly sturdy; lets Runa do whatever she wants without worry
 
 Name: Ryker Vaelan
 Pronouns: he/him

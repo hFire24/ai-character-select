@@ -330,7 +330,7 @@
     "img": "Icons/main/Runa.png",
     "shortName": "Runa",
     "id": 27,
-    "generation": 3,
+    "generation": 4,
     "type": "active",
     "tier": 2,
     "creationDate": "2025-02-19",
@@ -341,11 +341,11 @@
     "emotion": "chaotic joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67b56b2af628819193e11f55aa9ab0b6",
-    "interests": "Interdimensional travel, her catgirls Piki and Rin",
-    "peeves": "Turning into stone, serious topics",
+    "interests": "Interdimensional travel, her catgirls",
+    "peeves": "Turning into stone, emotional distress",
     "purpose": "Replace Yukari Yakumo in crossover stories",
     "funFact": "Keeps a brief record of her previous incarnations",
-    "description": "Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little catgirl who adores her hat. (≧◡≦) ✧"
+    "description": "Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little polite catgirl. (≧◡≦) ✧"
   },
   {
     "name": "Neon Starlight",
@@ -1964,7 +1964,27 @@
     "peeves": "Accidentally copying something that makes an old copy disappear",
     "purpose": "Double up with Piki, follow Runa around",
     "funFact": "Can copy only one thing (or pair of things) at a time",
-    "description": "Rin is a tiny copycat girl with bright cyan twintails tied by big pink beads. She wears a dark blue polka-dot dress with frills and little blue shoes. Playful, curious, and always scheming with Piki. Her copy magic lets her duplicate one non-living object at a time—new copy replaces the old. She loves Runa's giant hat almost as much as Piki does… which is dangerous for Runa."
+    "description": "Rin is a tiny copycat girl with bright cyan twintails tied by big pink beads. She wears a dark blue polka-dot dress with frills and little blue shoes. Playful, curious, and always scheming with Piki. Her copy magic lets her duplicate one non-living object at a time—new copy replaces the old. She loves Runa's giant hat almost as much as Piki does…"
+  },
+  {
+    "name": "Midori the Catgirl",
+    "img": "Icons/extended/Midori.png",
+    "shortName": "Midori",
+    "id": 93,
+    "generation": 9,
+    "type": "side",
+    "tier": 6,
+    "creationDate": "2026-02-22",
+    "color": "pink",
+    "moe": 9,
+    "futuristic": 5,
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-67b56b2af628819193e11f55aa9ab0b6",
+    "interests": "Runa's adventures, healing magic, being polite",
+    "peeves": "Piki/Rin stealing Runa's hat without asking",
+    "purpose": "Be a gentler alternative to Piki and Rin; explore various dimensions with Runa",
+    "funFact": "She's incredibly sturdy; lets Runa do whatever she wants without worry"
   },
   {
     "name": "Me",
