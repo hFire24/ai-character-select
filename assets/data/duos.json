@@ -948,6 +948,11 @@
       "name": "Calm Protectors"
     },
     {
+      "id1": 20,
+      "id2": 93,
+      "name": "Healers"
+    },
+    {
       "id1": 21,
       "id2": 28,
       "name": "Cyberpunk Girls"
@@ -1552,6 +1557,11 @@
       "name": "Brave Protectors"
     },
     {
+      "id1": 48,
+      "id2": 93,
+      "name": "Robust Duo"
+    },
+    {
       "id1": 49,
       "id2": 50,
       "name": "The Warning Signs"
@@ -1830,7 +1840,7 @@
     {
       "id1": 87,
       "id2": 91,
-      "name": "Runa's Little Catgirls"
+      "name": "Runa's Little Hat Thieves"
     }
   ]
 }
