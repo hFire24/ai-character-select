@@ -12,6 +12,7 @@ import { StoryHelper } from './components/story-helper/story-helper';
 import { Sorter } from './components/sorter/sorter';
 import { Stats } from './components/stats/stats';
 import { Hangouts } from './components/hangouts/hangouts';
+import { Groups } from './components/groups/groups';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
@@ -26,5 +27,6 @@ export const routes: Routes = [
   { path: 'story-helper', component: StoryHelper, title: 'Story Helper' },
   { path: 'sorter', component: Sorter, title: 'Character Sorter' },
   { path: 'stats', component: Stats, title: 'Character Statistics' },
-  { path: 'hangouts', component: Hangouts, title: 'Random Hangouts' }
+  { path: 'hangouts', component: Hangouts, title: 'Random Hangouts' },
+  { path: 'groups', component: Groups, title: 'Hall of Groups'}
 ];
