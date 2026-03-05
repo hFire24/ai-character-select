@@ -10,8 +10,12 @@ import { CharacterService, Character } from '../../services/character.service';
   styleUrl: './character-grid.scss'
 })
 export class CharacterGrid {
-  @Input() showMore = false;
-  @Input() showRetired = false;
+  @Input() filters = {
+    active: true,
+    inactive: false,
+    retired: false,
+    side: false
+  };
   @Input() searchTerm = '';
   characters: Character[] = [];
 
@@ -40,7 +44,7 @@ export class CharacterGrid {
   get filteredCharacters(): Character[] {
     let baseCharacters: Character[];
     
-    // If user is actively searching, disable filters and search across all characters
+    // If user is actively searching, show all characters matching the search
     if (this.searchTerm && this.searchTerm.trim()) {
       const searchLower = this.searchTerm.toLowerCase().trim();
       baseCharacters = this.characters.filter(character => 
@@ -48,16 +52,19 @@ export class CharacterGrid {
         character.name.toLowerCase().includes(searchLower)
       );
     } else {
-      // Apply normal filters when not searching      
-      if (!this.showMore && !this.showRetired) {
-        baseCharacters = this.characters.filter(c => c.type === 'active');
-      } else if (!this.showMore && this.showRetired) {
-        baseCharacters = this.characters.filter(c => c.type === 'active' || c.type === 'inactive');
-      } else if (!this.showRetired) {
-        baseCharacters = this.characters.filter(c => !['active', 'retired'].some(type => c.type.includes(type)));
-      } else {
-        baseCharacters = this.characters.filter(c => c.type !== 'active' && c.type !== 'inactive')
-      }
+      // Apply filters based on character type
+      baseCharacters = this.characters.filter(character => {
+        // Check if character's type matches any active filter
+        if (character.type === 'active' && this.filters.active) return true;
+        if (character.type === 'inactive' && this.filters.inactive) return true;
+        if (character.type === 'retired' && this.filters.retired) return true;
+        
+        // Side characters are those that don't have active, inactive, or retired type
+        const isMainCharacter = ['active', 'inactive', 'retired'].includes(character.type);
+        if (!isMainCharacter && this.filters.side) return true;
+        
+        return false;
+      });
     }
 
     return baseCharacters;

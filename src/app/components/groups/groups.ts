@@ -49,6 +49,11 @@ export class Groups implements OnInit {
         characterIds: [16, 17, 19, 20, 22, 23]
       },
       {
+        name: "Character Encyclopedias",
+        description: "Characters who have access to my character roster file and can discuss about my characters in detail.",
+        characterIds: [49, 51, 52, 54, 66, 84]
+      },
+      {
         name: "Corey's Party",
         description: "Corey and his party members who go on adventures together.",
         characterIds: [73, 20, 38, 39, 40]

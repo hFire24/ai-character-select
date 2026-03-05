@@ -19,21 +19,32 @@ import { BirthdayBanner } from "../birthday-banner/birthday-banner";
   styleUrl: 'roster.scss'
 })
 export class Roster {
-  showMoreCharacters = false;
   selectedCharacter: Character | null = null;
   selectedMood: Mood | null = null;
-  showRetiredCharacters = false;
   searchTerm = '';
+  
+  // Character type filters
+  filters = {
+    active: true,
+    inactive: false,
+    retired: false,
+    side: false
+  };
 
   constructor(private router: Router) {}
 
-  toggleCharacters() {
-    this.showMoreCharacters = !this.showMoreCharacters;
-    window.scrollTo({ top: 0 });
+  toggleFilter(filterType: 'active' | 'inactive' | 'retired' | 'side') {
+    this.filters[filterType] = !this.filters[filterType];
+    
+    // Ensure at least one filter is always active
+    const hasActiveFilter = Object.values(this.filters).some(v => v);
+    if (!hasActiveFilter) {
+      this.filters[filterType] = true;
+    }
   }
-
-  toggleRetiredCharacters() {
-    this.showRetiredCharacters = !this.showRetiredCharacters;
+  
+  get showingMainCharacters(): boolean {
+    return this.filters.active || this.filters.inactive || this.filters.retired;
   }
 
   displayCharacter() {

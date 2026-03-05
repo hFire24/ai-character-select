@@ -1,54 +1,64 @@
 <header>
-  <h1>
-    {{ showMoreCharacters ? 'Side Characters' : 'Choose Your Character!' }}
-  </h1>
+  <h1>Choose Your Character!</h1>
   <app-birthday-banner (selectCharacter)="selectedCharacter = $event"></app-birthday-banner>
   <app-activities></app-activities>
-  <app-legend [showMoreCharacters]="showMoreCharacters" (selectMood)="selectedMood = $event"></app-legend>
+  <app-legend [showMoreCharacters]="!showingMainCharacters" (selectMood)="selectedMood = $event"></app-legend>
   <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
+  
+  <div class="filter-section">
+    <div class="filter-label">Show Characters:</div>
+    <div class="filter-chips">
+      <button 
+        class="filter-chip"
+        [class.active]="filters.active"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('active')"
+      >
+        ✓ Active
+      </button>
+      <button 
+        class="filter-chip"
+        [class.active]="filters.inactive"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('inactive')"
+      >
+        ⏸ Inactive
+      </button>
+      <button 
+        class="filter-chip"
+        [class.active]="filters.retired"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('retired')"
+      >
+        🌇 Retired
+      </button>
+      <button 
+        class="filter-chip"
+        [class.active]="filters.side"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('side')"
+      >
+        👥 Side
+      </button>
+    </div>
+    @if (searchTerm.trim().length > 0) {
+      <div class="filter-note">Filters disabled during search</div>
+    }
+  </div>
+
   <div class="button-container">
-    <button 
-      (click)="toggleCharacters()" 
-      class="toggle-more-btn"
-      [disabled]="searchTerm.trim().length > 0"
-      [class.disabled]="searchTerm.trim().length > 0"
-    >
-      👥 View {{ showMoreCharacters ? 'Main Characters' : 'Side Characters' }}
-      @if (searchTerm.trim().length > 0) {
-        <span class="filter-disabled-text">(Search active)</span>
-      }
-    </button>
-    <button 
-      (click)="toggleRetiredCharacters()" 
-      class="toggle-retired-btn"
-      [disabled]="searchTerm.trim().length > 0"
-      [class.disabled]="searchTerm.trim().length > 0"
-    >
-      {{ showRetiredCharacters ? '➖ Hide More Characters' : ' ➕ Show More Characters' }}
-      @if (searchTerm.trim().length > 0) {
-        <span class="filter-disabled-text">(Search active)</span>
-      }
-    </button>
-    @if (!showMoreCharacters) {<button 
-      (click)="goToStats()" 
-      class="show-stats-btn"
-    >
-      📊 Show Stats
-    </button>}
+    @if (showingMainCharacters) {
+      <button 
+        (click)="goToStats()" 
+        class="show-stats-btn"
+      >
+        📊 Show Stats
+      </button>
+    }
   </div>
   
 </header>
-<app-character-grid [showMore]="showMoreCharacters" [showRetired]="showRetiredCharacters" [searchTerm]="searchTerm" (selectCharacter)="selectedCharacter = $event"></app-character-grid>
+<app-character-grid [filters]="filters" [searchTerm]="searchTerm" (selectCharacter)="selectedCharacter = $event"></app-character-grid>
 <app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>
-<app-mood-modal *ngIf="selectedMood" [mood]="selectedMood" [showInactive]="showRetiredCharacters" (close)="selectedMood = null" (selectCharacter)="selectedCharacter = $event"></app-mood-modal>
-<button 
-  (click)="toggleCharacters()" 
-  class="toggle-more-btn"
-  [disabled]="searchTerm.trim().length > 0"
-  [class.disabled]="searchTerm.trim().length > 0"
->👥 {{ showMoreCharacters ? 'Main Characters' : 'Side Characters' }}
-  @if (searchTerm.trim().length > 0) {
-    <span class="filter-disabled-text">(Search active)</span>
-  }
-</button>
+<app-mood-modal *ngIf="selectedMood" [mood]="selectedMood" [showInactive]="filters.inactive || filters.retired" (close)="selectedMood = null" (selectCharacter)="selectedCharacter = $event"></app-mood-modal>
 <app-footer-buttons></app-footer-buttons>

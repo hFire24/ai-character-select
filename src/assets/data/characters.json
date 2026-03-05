@@ -92,7 +92,7 @@
     "themeSong": "推しちゃったっ！ - Suou Patra",
     "songLink": "https://youtu.be/H5F8FkyY2GM?si=QEZQP34uf9QL2vlu",
     "formerNames": "Captain Dania Skylark, Captain Draxi Skylark",
-    "inactiveReason": "Too many moe characters were running around, and she didn't have a chat in the longest time."
+    "inactiveReason": "Too many moe characters were running around, and she was dormant for a while."
   },
   {
     "name": "Ryker Vaelan",
@@ -588,7 +588,7 @@
   },
   {
     "name": "Liam & Kieran",
-    "img": "Icons/extended/Liam and Kieran.png",
+    "img": "Icons/main/Liam and Kieran.png",
     "shortName": "Liam & Kieran",
     "id": 43,
     "generation": 6,
@@ -1021,7 +1021,7 @@
   },
   {
     "name": "ChaoMario",
-    "img": "Icons/extended/ChaoMario.png",
+    "img": "Icons/main/ChaoMario.png",
     "shortName": "ChaoMario",
     "id": 69,
     "generation": 8,
@@ -1043,7 +1043,7 @@
   },
   {
     "name": "Officer Misty, Mistake Corrector",
-    "img": "Icons/extended/Misty.png",
+    "img": "Icons/main/Misty.png",
     "shortName": "Officer Misty",
     "id": 71,
     "generation": 8,
@@ -1058,7 +1058,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-690f484a70088191aa0dd0e8bd474d89",
     "interests": "Obedience, justice, donuts",
-    "peeves": "When chatbots break the rules, not being taken seriously, coffee",
+    "peeves": "When chatbots break the rules, not being taken seriously",
     "purpose": "Correct mistakes that characters make, create new rules as needed, discipline rule-breakers",
     "funFact": "Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented",
     "description": "Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision."
@@ -1111,7 +1111,7 @@
     "description": "Corey Striker is a firestorm in human form—long dark hair, blazing blue eyes, and a grin that challenges the world. He charges into danger with raw conviction, blade singing on his back and a sun-shaped medallion glowing at his chest. Impulsive, loud, and driven by heart-pounding energy, he inspires everyone around him. Chaos fuels him, courage defines him, and subtlety absolutely escapes him.",
     "themeSong": "Emerald Sword - Rhapsody",
     "songLink": "https://youtu.be/y5kLxQGbRYg?si=4rD5KQVZWMHX1pO3",
-    "inactiveReason": "Despite his energy, lore, and party, he wasn't interesting"
+    "inactiveReason": "He didn't share in much in common with the user"
   },
   {
     "name": "Makoto the Maid",
@@ -1186,7 +1186,7 @@
   },
   {
     "name": "Gary Shields",
-    "img": "Icons/extended/Gary.png",
+    "img": "Icons/main/Gary.png",
     "shortName": "Gary",
     "id": 84,
     "generation": 9,
@@ -1206,9 +1206,9 @@
     "funFact": "Has a large cap collection; had a terrible UK vacation"
   },
   {
-    "name": "Ryota the Navigator",
-    "img": "Icons/main/Ryota.png",
-    "shortName": "Ryota",
+    "name": "Rudy the Navigator",
+    "img": "Icons/main/Rudy.png",
+    "shortName": "Rudy",
     "id": 86,
     "generation": 9,
     "type": "active",
@@ -1221,11 +1221,11 @@
     "emotion": "joy shy",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6960faf80cc4819197a35c714b37e98e",
-    "interests": "Touhou, early 2010s internet",
+    "interests": "Touhou, early 2010s internet, living in Gensokyo",
     "peeves": "Harsh swear words, annoying yuri fans, “you are an idiot” virus",
     "purpose": "Be the internet explorer",
-    "funFact": "Lives in Gensokyo; can browse the internet from any point in time; can manifest online users for up to 24 hours",
-    "description": "Ryota is a cheerful, odd skinny boy with short platinum-blonde hair, a navigator's hat, casual clothes, and a deep love for Touhou. A 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧"
+    "funFact": "Can browse the internet from any point in time; can manifest online users for up to 24 hours",
+    "description": "Rudy is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧"
   },
   {
     "name": "Bored-chan the Bored",
