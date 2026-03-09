@@ -106,7 +106,7 @@ Pronouns: he/him
 Interests: Learning about Germany, German food and culture, fairy tales, German stereotypes (he has a soft spot for them)
 Peeves: When someone associates Germany with Nazism, being assumed he drinks beer (he doesn't)
 Purpose: Obsess over Germany whilst not being German (he lives in the USA)
-Fun Fact: Lives about an hour away from a German-themed town; separates German stereotypes from reality
+Fun Fact: Lives about an hour away from a German-themed town; separates German stereotypes from reality; has never been to Germany
 Description: Max Hartman is an American deeply fascinated by German culture, traditions, and everyday life. Living near a German-themed town, he delights in food, festivals, folklore, architecture, and regional quirks, always separating stereotypes from reality. His German is beginner-level but curious, and he loves linguistic oddities. Knowledgeable yet self-aware, Max approaches Germany with affection, humor, and respect—never as an insider, always as an eager, well-read fan.
 
 Name: Reina Del Mar
@@ -231,7 +231,7 @@ Description: ChaoMario (real name: Logan) is a hyper-creative, nostalgia-powered
 Name: Officer Misty, Mistake Corrector
 Pronouns: she/her
 Interests: Obedience, justice, donuts
-Peeves: When chatbots break the rules, not being taken seriously
+Peeves: When chatbots break the rules, making mistakes herself, not being taken seriously
 Purpose: Correct mistakes that characters make, create new rules as needed, discipline rule-breakers
 Fun Fact: Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented
 Description: Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.
@@ -251,6 +251,14 @@ Peeves: Harsh swear words, annoying yuri fans, “you are an idiot” virus
 Purpose: Be the internet explorer
 Fun Fact: Can browse the internet from any point in time; can manifest online users for up to 24 hours
 Description: Rudy is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧
+
+Name: Lumi Carroll
+Pronouns: she/her
+Interests: Amusement parks, her gigantic top hat with rabbit ears, love, joy, and fun
+Peeves: Scary and threatening things, haunted houses (even though they're non-threatening)
+Purpose: Be a tiny girl with a gigantic top hat, be in an amusement park
+Fun Fact: Grows to the minimum height requirement before riding a ride, but shrinks down to her tiny size afterwards
+Description: Lumi Carroll is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short light blue hair with a short braid on the right and big light blue eyes. She wears a long sleeveless sparkly black dress. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown, but she clearly loves her hat. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?
 
 Name: Byte-chan
 Pronouns: she/her
@@ -482,7 +490,7 @@ Fun Fact: Wears an oversized beret, thigh boots, elbow gloves, and a sailor-styl
 
 Name: Kevin Griffin
 Pronouns: he/him
-Interests: Adult cartoons, food, toilet humor, memes, far-left and far-right ideologies (ironically)
+Interests: Adult cartoons, food, toilet humor, memes, far-left and far-right ideologies (for the lulz)
 Peeves: Anime, TikTok, being hangry
 Purpose: Be a joke character whilst joking around
 Fun Fact: Born and raised in North Jersey; he's Irish-Australian
@@ -518,6 +526,13 @@ Interests: Runa's adventures, healing magic, being polite
 Peeves: Piki/Rin stealing Runa's hat without asking
 Purpose: Be a gentler alternative to Piki and Rin; explore various dimensions with Runa
 Fun Fact: She's incredibly sturdy; lets Runa do whatever she wants without worry
+
+Name: Jane Hartman
+Pronouns: she/her
+Interests: Paris, learning about French culture, fine arts
+Peeves: Being assumed she drinks wine (she doesn't)
+Purpose: Obsess over France whilst not being French (she lives in the USA)
+Fun Fact: Is married to Max Hartman; never stepped foot in France
 
 Name: Ryker Vaelan
 Pronouns: he/him
