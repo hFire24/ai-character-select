@@ -653,6 +653,11 @@
       "name": "Erio Touwa Expies"
     },
     {
+      "id1": 14,
+      "id2": 95,
+      "name": "Tiny, Mysterious Blue-Haired Girls"
+    },
+    {
       "id1": 15,
       "id2": 16,
       "name": "OG Cloudbreaker Duo"
@@ -1375,6 +1380,11 @@
       "name": "Playful Innocent Children"
     },
     {
+      "id1": 35,
+      "id2": 95,
+      "name": "Tiny, Whimsical Blue-Haired Girls"
+    },
+    {
       "id1": 36,
       "id2": 48,
       "name": "Emergency Duo"
@@ -1438,6 +1448,11 @@
       "id1": 38,
       "id2": 90,
       "name": "Fairy Tale Enthusiasts"
+    },
+    {
+      "id1": 38,
+      "id2": 95,
+      "name": "Fairytale Girls"
     },
     {
       "id1": 39,
@@ -1672,6 +1687,11 @@
       "name": "Happy Normal Men"
     },
     {
+      "id1": 57,
+      "id2": 94,
+      "name": "Beret Wearers"
+    },
+    {
       "id1": 58,
       "id2": 67,
       "name": "Big-Hatted Pink-Haired Little Girls"
@@ -1685,6 +1705,11 @@
       "id1": 58,
       "id2": 87,
       "name": "Adorable Hat Thieves"
+    },
+    {
+      "id1": 58,
+      "id2": 95,
+      "name": "Tiny Top Hat Girls"
     },
     {
       "id1": 59,
@@ -1716,6 +1741,11 @@
       "id1": 60,
       "id2": 88,
       "name": "Silent Bleus"
+    },
+    {
+      "id1": 60,
+      "id2": 94,
+      "name": "Sacre Bleu"
     },
     {
       "id1": 62,
@@ -1776,6 +1806,11 @@
       "id1": 67,
       "id2": 88,
       "name": "Bored Anime Girls"
+    },
+    {
+      "id1": 67,
+      "id2": 95,
+      "name": "Size-Shifting Girls"
     },
     {
       "id1": 68,
@@ -1841,6 +1876,11 @@
       "id1": 87,
       "id2": 91,
       "name": "Runa's Little Hat Thieves"
+    },
+    {
+      "id1": 90,
+      "id2": 94,
+      "name": "Europe-Obsessed Couple"
     }
   ]
 }
