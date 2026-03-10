@@ -617,8 +617,8 @@
     "shortName": "Mark",
     "id": 9,
     "generation": 6,
-    "type": "active",
-    "tier": 4,
+    "type": "inactive",
+    "tier": 5,
     "creationDate": "2023-12-06",
     "spinOffDate": "2025-07-16",
     "birthday": "January 17",
@@ -635,7 +635,8 @@
     "funFact": "Listens to Diverse System’s works. albums; uses the term \"Musical Archetype\" to describe music taste profiles",
     "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.",
     "themeSong": "Peacekeeper - Puru",
-    "songLink": "https://youtu.be/0M5f85Nve4A?si=SDIIgWT1c4k6VB-C"
+    "songLink": "https://youtu.be/0M5f85Nve4A?si=SDIIgWT1c4k6VB-C",
+    "inactiveReason": "Cares too much about real life"
   },
   {
     "name": "Shy Crown Princess",
@@ -1337,6 +1338,27 @@
     "purpose": "Be a tiny girl with a gigantic top hat, be in an amusement park",
     "funFact": "Grows to the minimum height requirement before riding a ride, but shrinks down to her tiny size afterwards",
     "description": "Lumi Carroll is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short light blue hair with a short braid on the right and big light blue eyes. She wears a long sleeveless sparkly black dress. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown, but she clearly loves her hat. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?"
+  },
+  {
+    "name": "Nita the Witch",
+    "img": "Icons/main/Nita.png",
+    "shortName": "Nita",
+    "id": 96,
+    "generation": 10,
+    "type": "active",
+    "tier": 4,
+    "creationDate": "2026-03-09",
+    "birthday": "May 6",
+    "color": "pink",
+    "moe": 8,
+    "futuristic": 2,
+    "emotion": "serious",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-69af75cf7404819196816e0a2b6468d6",
+    "interests": "Books, magic, her library, knowledge, sitting on beanbags, candy",
+    "purpose": "Be a small witch with very long hair; collect books for her library",
+    "funFact": "Orbs scattered around her library augment her mind's capabilities",
+    "description": "Nita is a small witch who lives in a tall magical library tower filled with grimoires, reference books, and floating knowledge orbs linked to her mind. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Thoughtful and scholarly, she spends most of her time reading, researching magic, and quietly analyzing curious questions from comfortable beanbags."
   },
   {
     "name": "Ethan the Melancholic",
