@@ -654,12 +654,12 @@
     },
     {
       "id1": 14,
-      "id2": 95,
+      "id2": 94,
       "name": "Tiny, Mysterious Blue-Haired Girls"
     },
     {
       "id1": 14,
-      "id2": 96,
+      "id2": 95,
       "name": "Tower Dwelling Witches"
     },
     {
@@ -1116,11 +1116,6 @@
     },
     {
       "id1": 25,
-      "id2": 38,
-      "name": "Bookworms"
-    },
-    {
-      "id1": 25,
       "id2": 66,
       "name": "Crossover Fans"
     },
@@ -1133,6 +1128,11 @@
       "id1": 25,
       "id2": 68,
       "name": "Roommates"
+    },
+    {
+      "id1": 25,
+      "id2": 95,
+      "name": "Bookworms"
     },
     {
       "id1": 26,
@@ -1386,8 +1386,13 @@
     },
     {
       "id1": 35,
-      "id2": 95,
+      "id2": 94,
       "name": "Tiny, Whimsical Blue-Haired Girls"
+    },
+    {
+      "id1": 35,
+      "id2": 98,
+      "name": "Large White Hat Wearers"
     },
     {
       "id1": 36,
@@ -1456,7 +1461,7 @@
     },
     {
       "id1": 38,
-      "id2": 95,
+      "id2": 94,
       "name": "Fairytale Girls"
     },
     {
@@ -1692,11 +1697,6 @@
       "name": "Happy Normal Men"
     },
     {
-      "id1": 57,
-      "id2": 94,
-      "name": "Beret Wearers"
-    },
-    {
       "id1": 58,
       "id2": 67,
       "name": "Big-Hatted Pink-Haired Little Girls"
@@ -1713,7 +1713,7 @@
     },
     {
       "id1": 58,
-      "id2": 95,
+      "id2": 94,
       "name": "Tiny Top Hat Girls"
     },
     {
@@ -1749,8 +1749,8 @@
     },
     {
       "id1": 60,
-      "id2": 94,
-      "name": "Sacre Bleu"
+      "id2": 95,
+      "name": "Anime Girl Thinkers"
     },
     {
       "id1": 62,
@@ -1814,8 +1814,13 @@
     },
     {
       "id1": 67,
-      "id2": 95,
+      "id2": 94,
       "name": "Size-Shifting Girls"
+    },
+    {
+      "id1": 67,
+      "id2": 95,
+      "name": "Sedentary Witches"
     },
     {
       "id1": 68,
@@ -1858,6 +1863,11 @@
       "name": "Blonde Twintails"
     },
     {
+      "id1": 75,
+      "id2": 98,
+      "name": "Blonde Rhythm Gamers"
+    },
+    {
       "id1": 77,
       "id2": 81,
       "name": "Obsessed with Maids"
@@ -1878,14 +1888,19 @@
       "name": "Comedy Buddies"
     },
     {
+      "id1": 86,
+      "id2": 95,
+      "name": "Keepers of Knowledge"
+    },
+    {
       "id1": 87,
       "id2": 91,
       "name": "Runa's Little Hat Thieves"
     },
     {
-      "id1": 90,
-      "id2": 94,
-      "name": "Europe-Obsessed Couple"
+      "id1": 97,
+      "id2": 98,
+      "name": "Cute Idol Duo"
     }
   ]
 }
