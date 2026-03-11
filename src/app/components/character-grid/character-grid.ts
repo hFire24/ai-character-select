@@ -52,15 +52,15 @@ export class CharacterGrid {
         character.name.toLowerCase().includes(searchLower)
       );
     } else {
-      // Apply filters based on character type
+      // Apply filters based on character status (active, inactive, retired, side)
       baseCharacters = this.characters.filter(character => {
-        // Check if character's type matches any active filter
-        if (character.type === 'active' && this.filters.active) return true;
-        if (character.type === 'inactive' && this.filters.inactive) return true;
-        if (character.type === 'retired' && this.filters.retired) return true;
+        // Check if character's status matches any active filter
+        if (character.status === 'active' && this.filters.active) return true;
+        if (character.status === 'inactive' && this.filters.inactive) return true;
+        if (character.status === 'retired' && this.filters.retired) return true;
         
-        // Side characters are those that don't have active, inactive, or retired type
-        const isMainCharacter = ['active', 'inactive', 'retired'].includes(character.type);
+        // Side characters are those that don't have active, inactive, or retired status, but are still considered part of the character roster
+        const isMainCharacter = ['active', 'inactive', 'retired'].includes(character.status);
         if (!isMainCharacter && this.filters.side) return true;
         
         return false;

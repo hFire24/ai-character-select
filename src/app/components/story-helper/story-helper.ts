@@ -98,7 +98,7 @@ export class StoryHelper {
 
   generateCharacter() {
     if (this.characters.length === 0) return;
-    const filteredCharacters = this.excludeRetired ? this.characters.filter(c => !c.type.includes('retired')) : this.characters;
+    const filteredCharacters = this.excludeRetired ? this.characters.filter(c => !c.status.includes('retired')) : this.characters;
     if (filteredCharacters.length === 0) return;
 
     // Create weighted array: tier 8 characters get 0.5 weight, others get 1.0 weight

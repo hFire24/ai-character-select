@@ -39,7 +39,7 @@ export class MoodModal {
   }
 
   private allowsInactive(c: Character): boolean {
-    return c.type === 'active' || (c.type === 'inactive' && this.showInactive);
+    return c.status === 'active' || (c.status === 'inactive' && this.showInactive);
   }
 
   get filteredCharacters(): Character[] {
@@ -64,7 +64,7 @@ export class MoodModal {
       case 'chatted':
         return this.characters.filter(c => {
           const key = 'chatLink_' + (c.id || 'unknown');
-          return localStorage.getItem(key) !== null && !c.type.includes('side');
+          return localStorage.getItem(key) !== null && !c.status.includes('side');
         });
       case 'chatted0':
         return this.characters.filter(c => {

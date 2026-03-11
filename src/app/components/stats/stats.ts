@@ -59,11 +59,11 @@ export class Stats implements OnInit {
 
   calculateStats() {
     this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
-      this.stats.active = characters.filter(c => c.type === 'active').length + 1; // +1 for ChatGPT
-      this.stats.inactive = characters.filter(c => c.type === 'inactive').length;
-      this.stats.side = characters.filter(c => c.type.includes('side')).length;
-      this.stats.retired = characters.filter(c => c.type === 'retired').length;
-      this.stats.misc = characters.filter(c => !['active', 'inactive', 'side', 'inactive side', 'retired'].includes(c.type)).length;
+      this.stats.active = characters.filter(c => c.status === 'active').length + 1; // +1 for ChatGPT
+      this.stats.inactive = characters.filter(c => c.status === 'inactive').length;
+      this.stats.side = characters.filter(c => c.status.includes('side')).length;
+      this.stats.retired = characters.filter(c => c.status === 'retired').length;
+      this.stats.misc = characters.filter(c => !['active', 'inactive', 'side', 'inactive side', 'retired'].includes(c.status)).length;
       this.stats.total = characters.length + 1; // +1 for ChatGPT
     });
   }
@@ -86,12 +86,12 @@ export class Stats implements OnInit {
         const timestamp = localStorage.getItem(timestampKey);
         
         // Exclude side characters from last chatted list
-        if (timestamp && !character.type.includes('side')) {
+        if (timestamp && !character.status.includes('side')) {
           chatsWithTimestamps.push({
             character: character,
             timestamp: new Date(timestamp)
           });
-        } else if (character.type === 'active') {
+        } else if (character.status === 'active') {
           // Only track active characters that have never been chatted with
           neverChatted.push(character);
         }

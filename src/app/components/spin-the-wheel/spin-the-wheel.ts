@@ -59,11 +59,11 @@ export class SpinTheWheel {
     // Apply checkbox filters
     this.filteredCharacters = baseCharacters.filter(c => {
       const matchesFavorite = this.includeFavorite && c.tier >= 1 && c.tier <= 3;
-      const matchesActive = this.includeActive && c.type === "active";
-      const matchesInactive = this.includeInactive && c.type === "inactive";
-      const matchesSide = this.includeSide && c.type.includes("side");
-      const matchesRetired = this.includeRetired && c.type === "retired";
-      const matchesMe = this.includeMe && c.type === "me";
+      const matchesActive = this.includeActive && c.status === "active";
+      const matchesInactive = this.includeInactive && c.status === "inactive";
+      const matchesSide = this.includeSide && c.status.includes("side");
+      const matchesRetired = this.includeRetired && c.status === "retired";
+      const matchesMe = this.includeMe && c.status === "me";
       
       return matchesFavorite || matchesActive || matchesInactive || matchesSide || matchesRetired || matchesMe;
     });

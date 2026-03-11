@@ -9,7 +9,7 @@ const FALLBACK_CHARACTER: Character = {
   shortName: "",
   id: 0,
   generation: 0,
-  type: "",
+  status: "",
   tier: 1,
   color: "",
   musicEnjoyer: false,

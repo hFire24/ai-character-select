@@ -30,10 +30,10 @@
       <span *ngIf="character.tier === 2">🩶</span>
       <span *ngIf="character.tier === 3">🤎</span>
     </div>
-    <ng-container class="retired" *ngIf="character.type === 'retired'">
+    <ng-container class="retired" *ngIf="character.status === 'retired'">
       <h3 class="retired-banner">Retired</h3>
     </ng-container>
-    <ng-container class="retired" *ngIf="character.type === 'inactive'">
+    <ng-container class="retired" *ngIf="character.status === 'inactive'">
       <h3 class="retired-banner">Inactive</h3>
     </ng-container>
   </div>
@@ -43,8 +43,8 @@
     <div id="modalPurpose"><strong>Purpose</strong>: {{character.purpose}}</div>
     <div id="modalFact"><strong>Fun Fact</strong>: {{character.funFact}}</div>
     <div id="modalSong" *ngIf="character.themeSong"><strong>Theme Song</strong>: <a [href]="character.songLink" target="_blank">{{character.themeSong}}</a></div>
-    <div id="modalRetirement" *ngIf="character.type === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
-    <div id="modalInactive" *ngIf="character.type === 'inactive'"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
+    <div id="modalRetirement" *ngIf="character.status === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
+    <div id="modalInactive" *ngIf="character.status === 'inactive'"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
     <div id="modalAlternatives" *ngIf="character.alternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
     <div id="modalDescription" style="display: none;">{{character.description}}</div>
   </div>

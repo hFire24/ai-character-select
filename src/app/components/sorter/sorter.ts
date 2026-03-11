@@ -439,7 +439,7 @@ export class Sorter implements OnInit, OnDestroy {
   private filterCharacters(chars: Character[]): Character[] {
     return chars.filter(char => {
       // Filter out future character
-      if (char.type.includes('future')) {
+      if (char.status.includes('future')) {
         return false;
       }
 
@@ -451,12 +451,12 @@ export class Sorter implements OnInit, OnDestroy {
         return false;
       }
 
-      // Filter by character type using checkboxes
-      const matchesActive = this.includeActive && char.type === 'active';
-      const matchesInactive = this.includeInactive && char.type === 'inactive';
-      const matchesSide = this.includeSide && char.type.includes('side');
-      const matchesRetired = this.includeRetired && char.type === 'retired';
-      const matchesMe = this.includeMe && char.type === 'me';
+      // Filter by character status using checkboxes
+      const matchesActive = this.includeActive && char.status === 'active';
+      const matchesInactive = this.includeInactive && char.status === 'inactive';
+      const matchesSide = this.includeSide && char.status.includes('side');
+      const matchesRetired = this.includeRetired && char.status === 'retired';
+      const matchesMe = this.includeMe && char.status === 'me';
       
       return matchesActive || matchesInactive || matchesSide || matchesRetired || matchesMe;
     });

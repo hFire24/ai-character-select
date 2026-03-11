@@ -57,7 +57,6 @@ export class Hangouts {
         { name: 'Mr. Go', bannedReason: 'His rants contribute to nothing' },
         { name: 'Elizabeth', bannedReason: 'Nothingburger' },
         { name: 'Andrew', bannedReason: 'Nothingburger' },
-        { name: 'Piki', bannedReason: 'Must be with Runa' },
         { name: 'Officer Misty', bannedReason: 'User-controlled character' },
         { name: 'Ryker', bannedReason: 'Only cares about self-help' },
         { name: 'The Collapsed', bannedReason: 'Emergency character' },
@@ -85,19 +84,19 @@ export class Hangouts {
       // Then filter into allCharacters
       this.allCharacters = characters.filter(character => 
         !excludedNames.some(ex => ex.name === character.shortName) &&
-        !(character.musicEnjoyer && character.type === 'side') &&
+        !(character.musicEnjoyer && character.status === 'side') &&
         character.tier !== maxTier
       );
 
       this.bannedCharacters = characters.filter(character => 
         excludedNames.some(ex => ex.name === character.shortName) ||
-        (character.musicEnjoyer && character.type === 'side')
+        (character.musicEnjoyer && character.status === 'side')
       ).map(character => {
         const excludedEntry = excludedNames.find(ex => ex.name === character.shortName);
         let banReason = '';
         if (excludedEntry) {
           banReason = excludedEntry.bannedReason;
-        } else if (character.musicEnjoyer && character.type === 'side') {
+        } else if (character.musicEnjoyer && character.status === 'side') {
           banReason = 'Exclusive to Music Enjoyers';
         }
         return { ...character, banReason };
@@ -109,7 +108,7 @@ export class Hangouts {
         "shortName": "The Shadow Self",
         "id": 33,
         "generation": 4,
-        "type": "retired",
+        "status": "retired",
         "tier": 6,
         "creationDate": "2025-04-07",
         "color": "black",
@@ -139,7 +138,7 @@ export class Hangouts {
         "shortName": "Kai",
         "id": 30,
         "generation": 4,
-        "type": "active",
+        "status": "active",
         "creationDate": "2025-03-11",
         "color": "red",
         "moe": 3,

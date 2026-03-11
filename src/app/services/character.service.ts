@@ -8,7 +8,7 @@ export type Character = {
   img: string;
   id: number;
   generation: number;
-  type: string;
+  status: string;
   tier: number; // New field for tier level
   name: string;
   color: string;
@@ -76,7 +76,7 @@ export class CharacterService {
       name: 'ChatGPT (Default Model)',
       img: 'Icons/main/ChatGPT.png',
       generation: 0,
-      type: 'active',
+      status: 'active',
       tier: 4,
       color: 'blue',
       moe: 5,

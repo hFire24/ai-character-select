@@ -38,7 +38,7 @@ export class BirthdayBanner implements OnInit {
 
     this.characterService.getCharacters().subscribe((characters: Character[]) => {
       this.birthdayCharacters = characters.filter(char => {
-        if (!char.birthday || char.type === 'retired') return false;
+        if (!char.birthday || char.status === 'retired') return false;
         
         const [month, day] = char.birthday.split(' ');
         const charDay = parseInt(day);

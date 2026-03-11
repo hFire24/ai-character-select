@@ -52,15 +52,15 @@ export class TierList {
     }
     let pool = this.allCharacters.filter(c => !assigned.has(c.name));
     if (this.characterFilter === 'active') {
-      pool = pool.filter(c => c.type === 'active');
+      pool = pool.filter(c => c.status === 'active');
     } else if (this.characterFilter === 'inactive') {
-      pool = pool.filter(c => c.type === 'inactive');
+      pool = pool.filter(c => c.status === 'inactive');
     } else if (this.characterFilter === 'retired') {
-      pool = pool.filter(c => c.type === 'retired');
+      pool = pool.filter(c => c.status === 'retired');
     } else if (this.characterFilter === 'music') {
       pool = pool.filter(c => c.musicEnjoyer);
     } else if (this.characterFilter === 'side') {
-      pool = pool.filter(c => c.type.includes('side') && !c.musicEnjoyer);
+      pool = pool.filter(c => (c.status.includes('side') && !c.musicEnjoyer) || c.status === 'future' || c.status === 'me');
     } else if (this.characterFilter === 'male') {
       pool = pool.filter(c => c.pronouns !== 'she/her');
     } else if (this.characterFilter === 'female') {
@@ -77,28 +77,31 @@ export class TierList {
     this.loadCharacters();
   }
 
-  private loadCharacters() {
-    const shortNameMap: Record<string, string> = {
-      'The Indulgent': 'Indulgent',
-      'Future Sapphire': 'F. Sapphire',
-      'The Collapsed': 'Collapsed'
-    };
-    const source$ = this.splitTwins
-      ? this.characterService.getCharactersSplitTwins(false)
-      : this.characterService.getCharacters();
-    source$.subscribe(data => {
-      this.allCharacters = data.map(c => {
-        let name = c.shortName || c.name;
-        if (shortNameMap[name]) name = shortNameMap[name];
-        return {
-          name,
-          img: c.img ? 'assets/' + c.img : 'assets/Icons/extended/Unknown.png',
-          id: c.id,
-          type: c.type,
-          tier: c.tier,
-          musicEnjoyer: c.musicEnjoyer,
-          pronouns: c.pronouns
-        };
+  private loadCharacters(): Promise<void> {
+    return new Promise((resolve) => {
+      const shortNameMap: Record<string, string> = {
+        'The Indulgent': 'Indulgent',
+        'Future Sapphire': 'F. Sapphire',
+        'The Collapsed': 'Collapsed'
+      };
+      const source$ = this.splitTwins
+        ? this.characterService.getCharactersSplitTwins(false)
+        : this.characterService.getCharacters();
+      source$.subscribe(data => {
+        this.allCharacters = data.map(c => {
+          let name = c.shortName || c.name;
+          if (shortNameMap[name]) name = shortNameMap[name];
+          return {
+            name,
+            img: c.img ? 'assets/' + c.img : 'assets/Icons/extended/Unknown.png',
+            id: c.id,
+            status: c.status,
+            tier: c.tier,
+            musicEnjoyer: c.musicEnjoyer,
+            pronouns: c.pronouns
+          };
+        });
+        resolve();
       });
     });
   }
@@ -364,10 +367,16 @@ export class TierList {
     }
   ];
 
-  onSplitTwinsChange(event: any) {
+  async onSplitTwinsChange(event: any) {
     this.splitTwins = event.target.checked;
     // Reload characters from the service based on current splitTwins state
-    this.loadCharacters();
+    await this.loadCharacters();
+    
+    // Remove characters from tiers that no longer exist in allCharacters
+    const validCharacterIds = new Set(this.allCharacters.map(c => c.id));
+    this.tiers.forEach(tier => {
+      tier.characters = tier.characters.filter(char => validCharacterIds.has((char as any).id));
+    });
   }
 
   clear() {
@@ -459,16 +468,21 @@ export class TierList {
           this.characterFilter = metadata.characterFilter;
         }
       }
-      if (metadata.splitTwins !== undefined) {
+      // Check and update Split Twins setting before loading characters
+      let needsCharacterReload = false;
+      if (metadata.splitTwins !== undefined && this.splitTwins !== metadata.splitTwins) {
         this.splitTwins = metadata.splitTwins;
-        // Trigger the twins splitting/combining logic
+        needsCharacterReload = true;
         // Update the checkbox state in the UI
         const splitTwinsCheckbox = document.querySelector('input[type="checkbox"]') as HTMLInputElement;
         if (splitTwinsCheckbox) {
           splitTwinsCheckbox.checked = this.splitTwins;
         }
-        // Trigger the twins splitting/combining logic
-        this.onSplitTwinsChange({ target: { checked: this.splitTwins } });
+      }
+
+      // Reload characters if Split Twins setting changed
+      if (needsCharacterReload) {
+        await this.loadCharacters();
       }
 
       // Clear current tiers
@@ -498,6 +512,11 @@ export class TierList {
           }
         }
       });
+
+      // Remove extra tiers if imported list has fewer tiers than current
+      if (metadata.tiers.length < this.tiers.length) {
+        this.tiers.splice(metadata.tiers.length);
+      }
 
       alert('Tier list imported successfully!');
     }
