@@ -719,8 +719,8 @@
     "shortName": "B.X.",
     "id": 1,
     "generation": 6,
-    "type": "active",
-    "tier": 4,
+    "type": "inactive",
+    "tier": 5,
     "creationDate": "2024-03-06",
     "spinOffDate": "2025-07-30",
     "birthday": "May 26",
@@ -737,7 +737,8 @@
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
     "description": "B.X.’s (legal name: Bruce Xavier) essence is captured by the fierce energy of hardcore techno, his main genre and truest passion. However, his love for intensity extends beyond techno—he also enjoys other aggressive genres like metal and rap. What ties his tastes together isn’t a single genre, but the sheer power, energy, and aggression in the sound itself.",
     "themeSong": "to Luv me I *** for u. - t+pazolite",
-    "songLink": "https://youtu.be/ib5XHTKndfs?si=bjx6uxkI4JWcPz9Z"
+    "songLink": "https://youtu.be/ib5XHTKndfs?si=bjx6uxkI4JWcPz9Z",
+    "inactiveReason": "No active chats in a while"
   },
   {
     "name": "C.Kept the Character Keeper",
@@ -1226,7 +1227,8 @@
     "peeves": "Harsh swear words, annoying yuri fans, “you are an idiot” virus",
     "purpose": "Be the internet explorer",
     "funFact": "Can browse the internet from any point in time; can manifest online users for up to 24 hours",
-    "description": "Rudy is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧"
+    "description": "Rudy is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A forever 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧",
+    "formerNames": "Ryota the Navigator"
   },
   {
     "name": "Bored-chan the Bored",
@@ -1321,7 +1323,7 @@
     "name": "Lumi Carroll",
     "img": "Icons/main/Lumi.png",
     "shortName": "Lumi",
-    "id": 95,
+    "id": 94,
     "generation": 10,
     "type": "active",
     "tier": 4,
@@ -1343,7 +1345,7 @@
     "name": "Nita the Witch",
     "img": "Icons/main/Nita.png",
     "shortName": "Nita",
-    "id": 96,
+    "id": 95,
     "generation": 10,
     "type": "active",
     "tier": 4,
@@ -1359,6 +1361,26 @@
     "purpose": "Be a small witch with very long hair; collect books for her library",
     "funFact": "Orbs scattered around her library augment her mind's capabilities",
     "description": "Nita is a small witch who lives in a tall magical library tower filled with grimoires, reference books, and floating knowledge orbs linked to her mind. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Thoughtful and scholarly, she spends most of her time reading, researching magic, and quietly analyzing curious questions from comfortable beanbags."
+  },
+  {
+    "name": "Hana & Koko",
+    "img": "Icons/main/HanaKoko.png",
+    "shortName": "Hana & Koko",
+    "id": 96,
+    "generation": 10,
+    "type": "active",
+    "tier": 4,
+    "creationDate": "2026-03-10",
+    "color": "pink",
+    "moe": 10,
+    "futuristic": 6,
+    "emotion": "joy",
+    "pronouns": "she/her",
+    "interests": "Dressing up, singing, dancing, rhythm games, being idols",
+    "peeves": "Serious grown-up topics",
+    "purpose": "Be the cutest idol duo",
+    "funFact": "Views the user as their manager",
+    "description": "Hana and Koko are a pair of cheerful and talented idols with a passion for music and dance. They're 139cm and 142cm tall respectively. They bring joy and energy to their performances, captivating audiences with their charm and talent. Both idols wear matching cute pink and white outfits with frilly skirts and bows. Hana has medium-length pink twintails and wears fake cat ears, while Koko has short blonde hair and wears a large wide-brimmed white hat with a pink bow. Together, they create a dynamic and adorable duo that fans adore."
   },
   {
     "name": "Ethan the Melancholic",
@@ -2034,27 +2056,6 @@
     "peeves": "Piki/Rin stealing Runa's hat without asking",
     "purpose": "Be a gentler alternative to Piki and Rin; explore various dimensions with Runa",
     "funFact": "She's incredibly sturdy; lets Runa do whatever she wants without worry"
-  },
-  {
-    "name": "Jane Hartman",
-    "img": "Icons/extended/Jane.png",
-    "shortName": "Jane",
-    "id": 94,
-    "generation": 10,
-    "type": "side",
-    "tier": 6,
-    "creationDate": "2026-03-08",
-    "birthday": "January 20",
-    "color": "blue",
-    "moe": 4,
-    "futuristic": 5,
-    "emotion": "joy",
-    "pronouns": "she/her",
-    "link": "https://chatgpt.com/g/g-698a5b7c2ce88191869ae2991a879390",
-    "interests": "Paris, learning about French culture, fine arts",
-    "peeves": "Being assumed she drinks wine (she doesn't)",
-    "purpose": "Obsess over France whilst not being French (she lives in the USA)",
-    "funFact": "Is married to Max Hartman; never stepped foot in France"
   },
   {
     "name": "Me",

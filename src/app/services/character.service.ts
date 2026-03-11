@@ -174,6 +174,42 @@ export class CharacterService {
             }
           );
         }
+
+        // Find and split Hana and Koko
+        const hanaKokoIndex = splitCharacters.findIndex(char => 
+          char.shortName === 'Hana & Koko' || char.name === 'Hana & Koko'
+        );
+        if (hanaKokoIndex !== -1) {
+          const original = splitCharacters[hanaKokoIndex];
+          splitCharacters.splice(hanaKokoIndex, 1,
+            {
+              ...original,
+              shortName: 'Hana',
+              name: 'Hana the Idol',
+              img: "Icons/extended/Hana.png",
+              id: 97,
+              birthday: "August 31",
+              emotion: "chaotic joy",
+              interests: "Cute poses, energetic dancing, rhythm games, being a cute idol",
+              purpose: "Be part of the cutest idol duo with Koko",
+              funFact: "Frequently makes playful cat-like expressions and gestures",
+              description: "Hana is a cheerful and talented idol with a passion for music and dance. She brings joy and energy to her performances, captivating her audience with her charm and talent. She has medium-length pink twintails and wears a cute pink and white idol outfit with a frilly skirt, bows, and fake cat ears."
+            },
+            { 
+              ...original,
+              shortName: 'Koko',
+              name: 'Koko the Idol',
+              img: "Icons/extended/Koko.png",
+              id: 98,
+              birthday: "December 26",
+              emotion: "joy",
+              interests: "Singing harmonies, fashion coordination, planning performances, being a cute idol",
+              purpose: "Be part of the cutest idol duo with Hana",
+              funFact: "She's sweet, supportive, and a bit more composed than Hana",
+              description: "Koko is a cheerful and talented idol with a passion for music and dance. She brings joy and energy to her performances, captivating her audience with her charm and talent. She has short blonde hair and wears a cute pink and white idol outfit with a frilly skirt, bows, and a large wide-brimmed white hat with a pink bow."
+            }
+          );
+        }
         
         if (addCriticizer) {
           return this.getCharacter(52).pipe(
