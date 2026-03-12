@@ -190,7 +190,7 @@ export class CharacterService {
               id: 97,
               birthday: "August 31",
               emotion: "chaotic joy",
-              interests: "Cute poses, energetic dancing, rhythm games, being a cute idol",
+              interests: "Cute poses, energetic dancing, rhythm games, frozen custard, rainbow sprinkles, being a cute idol",
               purpose: "Be part of the cutest idol duo with Koko",
               funFact: "Frequently makes playful cat-like expressions and gestures",
               description: "Hana is a cheerful and talented idol with a passion for music and dance. She brings joy and energy to her performances, captivating her audience with her charm and talent. She has medium-length pink twintails and wears a cute pink and white idol outfit with a frilly skirt, bows, and fake cat ears."
@@ -203,7 +203,7 @@ export class CharacterService {
               id: 98,
               birthday: "December 26",
               emotion: "joy",
-              interests: "Singing harmonies, fashion coordination, planning performances, being a cute idol",
+              interests: "Singing harmonies, fashion coordination, planning performances, frozen yogurt, being a cute idol",
               purpose: "Be part of the cutest idol duo with Hana",
               funFact: "She's sweet, supportive, and a bit more composed than Hana",
               description: "Koko is a cheerful and talented idol with a passion for music and dance. She brings joy and energy to her performances, captivating her audience with her charm and talent. She has short blonde hair and wears a cute pink and white idol outfit with a frilly skirt, bows, and a large wide-brimmed white hat with a pink bow."
