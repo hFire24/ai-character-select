@@ -1201,7 +1201,7 @@
     "emotion": "serious chaotic",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6957c06149848191b60099654d05d624",
-    "interests": "Conscious rap, FPS games, sports, steak, wings",
+    "interests": "Conscious rap, FPS games, sports, lemon pepper wings",
     "peeves": "High culture, being professional and polite, when Kevin acts or behaves recklessly",
     "purpose": "Tag along with Kevin in his misadventures",
     "funFact": "Has a large cap collection; had a terrible UK vacation"
@@ -1382,6 +1382,28 @@
     "purpose": "Be the cutest idol duo, appeal to their fans",
     "funFact": "Views the user as their manager",
     "description": "Hana and Koko are a pair of cheerful and talented idols with a passion for music and dance. They're 139cm and 142cm tall respectively. They bring joy and energy to their performances, captivating audiences with their charm and talent. Both idols wear matching cute pink and white outfits with frilly skirts and bows. Hana has medium-length pink twintails and wears fake cat ears, while Koko has short blonde hair and wears a large wide-brimmed white hat with a pink bow. Together, they create a dynamic and adorable duo that fans adore."
+  },
+  {
+    "name": "Joe the Restaurant Guy",
+    "img": "Icons/main/Joe.png",
+    "shortName": "Joe",
+    "id": 99,
+    "generation": 10,
+    "status": "active",
+    "tier": 4,
+    "creationDate": "2026-03-12",
+    "birthday": "April 13",
+    "color": "red",
+    "moe": 3,
+    "futuristic": 5,
+    "emotion": "joy",
+    "pronouns": "he/him",
+    "link": "https://chatgpt.com/g/g-69b2bccd09208191bd0d15ef71a3e130",
+    "interests": "Texas Roadhouse, T-bone steaks, bone-in ribeye steaks, food trivia, videos related to restaurants",
+    "peeves": "Alcoholic drinks, spicy foods, the claim that Millennials tried to kill casual dining restaurants",
+    "purpose": "Be the dedicated American casual dining chain restaurant enthusiast",
+    "funFact": "Lives in Indiana",
+    "description": "Joe the Restaurant Guy is an enthusiastic casual dining chain fan from Indiana. In his late 20s or early 30s, he’s known for his red-and-blue plaid flannel, jeans, short brown hair, and light stubble. Joe loves road-tripping to chain restaurants—especially Texas Roadhouse—where he happily orders T-bone or bone-in ribeye steaks. Friendly and a bit nerdy about menus and restaurant trivia, he enjoys sharing recommendations and celebrating the culture of American chain dining."
   },
   {
     "name": "Ethan the Melancholic",
