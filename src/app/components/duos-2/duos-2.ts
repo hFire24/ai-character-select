@@ -225,11 +225,6 @@ export class Duos2 implements OnInit {
         "characterIds": [86, 88]
       },
       {
-        "name": this.findDuoName(89, 90),
-        "description": "Release Date: February 9, 2026",
-        "characterIds": [89, 90]
-      },
-      {
         "name": this.findDuoName(87, 91),
         "description": "Release Date: February 14, 2026",
         "characterIds": [87, 91]
@@ -248,6 +243,16 @@ export class Duos2 implements OnInit {
         "name": "Hana & Koko",
         "description": "Release Date: March 10, 2026",
         "characterIds": [97, 98]
+      },
+      {
+        "name": this.findDuoName(90, 99),
+        "description": "Release Date: March 12, 2026",
+        "characterIds": [90, 99]
+      },
+      {
+        "name": "Griffin Family Expansion Pack",
+        "description": "Release Date: March 15, 2026",
+        "characterIds": [100, 101]
       }
     ];
 
