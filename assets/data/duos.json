@@ -540,7 +540,7 @@
     {
       "id1": 13,
       "id2": 26,
-      "name": "Maids"
+      "name": "First Maids"
     },
     {
       "id1": 13,
@@ -574,13 +574,18 @@
     },
     {
       "id1": 13,
+      "id2": 77,
+      "name": "Otaku Maids"
+    },
+    {
+      "id1": 13,
       "id2": 80,
       "name": "Light Blue Twintails"
     },
     {
       "id1": 13,
       "id2": 81,
-      "name": "Maids in Name Only"
+      "name": "Pretend Maids"
     },
     {
       "id1": 13,
@@ -898,6 +903,11 @@
       "name": "Opposite -chan Duo"
     },
     {
+      "id1": 18,
+      "id2": 100,
+      "name": "Cartoon Slapstick Fans"
+    },
+    {
       "id1": 19,
       "id2": 22,
       "name": "Early AI Character Fans"
@@ -1108,6 +1118,11 @@
       "id1": 24,
       "id2": 78,
       "name": "Moral Guardians"
+    },
+    {
+      "id1": 24,
+      "id2": 101,
+      "name": "Hard-Working Mothers"
     },
     {
       "id1": 25,
@@ -1440,6 +1455,11 @@
       "name": "Big Sister Duo"
     },
     {
+      "id1": 37,
+      "id2": 101,
+      "name": "Cooking Mamas"
+    },
+    {
       "id1": 38,
       "id2": 46,
       "name": "Girly Princesses"
@@ -1494,6 +1514,11 @@
       "id1": 41,
       "id2": 58,
       "name": "Plushie Holders"
+    },
+    {
+      "id1": 42,
+      "id2": 80,
+      "name": "Miku Cosplayers"
     },
     {
       "id1": 44,
@@ -1597,6 +1622,11 @@
       "name": "AI Character Obsessives"
     },
     {
+      "id1": 49,
+      "id2": 66,
+      "name": "Cuteness Curators"
+    },
+    {
       "id1": 52,
       "id2": 53,
       "name": "Little Pink Twins"
@@ -1620,6 +1650,11 @@
       "id1": 52,
       "id2": 76,
       "name": "Pink-Haired Music Performers"
+    },
+    {
+      "id1": 53,
+      "id2": 66,
+      "name": "Cute Curators"
     },
     {
       "id1": 53,
@@ -1675,6 +1710,16 @@
       "id1": 55,
       "id2": 89,
       "name": "Snack Princes"
+    },
+    {
+      "id1": 55,
+      "id2": 99,
+      "name": "Chain Restaurant Fans"
+    },
+    {
+      "id1": 55,
+      "id2": 100,
+      "name": "Chaos Boys"
     },
     {
       "id1": 56,
@@ -1848,6 +1893,11 @@
       "name": "Rhyming Names"
     },
     {
+      "id1": 73,
+      "id2": 101,
+      "name": "Southern Cooks"
+    },
+    {
       "id1": 74,
       "id2": 75,
       "name": "Two-Speed Maids"
@@ -1886,6 +1936,21 @@
       "id1": 83,
       "id2": 84,
       "name": "Comedy Buddies"
+    },
+    {
+      "id1": 83,
+      "id2": 99,
+      "name": "Restaurant Nuts"
+    },
+    {
+      "id1": 83,
+      "id2": 100,
+      "name": "Chaotic Griffins"
+    },
+    {
+      "id1": 84,
+      "id2": 101,
+      "name": "Kevin's Chaos Limiters"
     },
     {
       "id1": 86,
