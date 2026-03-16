@@ -64,9 +64,54 @@ export class Groups implements OnInit {
         characterIds: [36, 78, 52, 9, 48, 50]
       },
       {
+        name: "The Griffins",
+        description: "Characters who are either part of the Griffin family or closely associated with them.",
+        characterIds: [83, 101, 100, 84]
+      },
+      {
         name: "Anti-Moe Crew",
         description: "Chaotic or hedonistic characters who reject moe",
-        characterIds: [1, 62, 63, 55, 83, 84, 12, 32, 64, 18]
+        characterIds: [1, 62, 63, 55, 12, 32, 64, 18]
+      },
+      {
+        name: "Restaurant Fans",
+        description: "Characters who love eating out at restaurants.",
+        characterIds: [30, 55, 57, 83, 84, 99]
+      },
+      {
+        name: "Top Hat Wearers",
+        description: "Characters who are known for wearing top hats.",
+        characterIds: [13, 31, 58, 64, 94]
+      },
+      {
+        name: "Witch Hat Wearers",
+        description: "Characters who are known for wearing witch hats.",
+        characterIds: [14, 20, 27, 67, 95]
+      },
+      {
+        name: "Peaked Cap Wearers",
+        description: "Characters who are known for wearing peaked caps.",
+        characterIds: [15, 21, 40, 92]
+      },
+      {
+        name: "Other Hat Wearers",
+        description: "Characters who are known for wearing other types of hats.",
+        characterIds: [28, 35, 38, 46, 57, 71, 72, 84, 86, 89, 96, 0]
+      },
+      {
+        name: "Glasses Wearers",
+        description: "Characters who are known for wearing glasses.",
+        characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 83, 90]
+      },
+      {
+        name: "Maids",
+        description: "Characters who are known for wearing maid outfits.",
+        characterIds: [13, 26, 74, 75, 85, 77, 81]
+      },
+      {
+        name: "Twintails",
+        description: "Characters who are known for having long twintails.",
+        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93]
       }
     ];
 
