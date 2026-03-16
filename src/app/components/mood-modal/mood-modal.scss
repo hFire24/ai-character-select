@@ -42,9 +42,12 @@
 }
 
 /* spacing inside the card */
-#moodModal > .modalHeader,
-#moodModal > #modalBody {
+#moodModal > .modalHeader {
   padding: 1rem 1rem 0 1rem;
+}
+
+#moodModal > #modalBody {
+  padding: 1rem;
 }
 
 /* === Close button (X) === */
@@ -84,14 +87,14 @@
 
 /* === Footer === */
 #modalFooter {
-  margin: 1rem 1.25rem 1.25rem 1.25rem;
+  margin: 1rem 1.25rem 0 1.25rem;
   display: flex;
   flex-wrap: wrap;
   gap: .75rem 1rem;
   align-items: center;
   justify-content: flex-end;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding-top: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 1rem;
   font-size: 0.95rem;
 }
 

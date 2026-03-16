@@ -5,6 +5,12 @@
       <ng-container *ngIf="mood.emoji !== '♀️' && mood.emoji !== '♂️'">{{mood.emoji}}</ng-container>{{mood.name}}
     </h2>
     <h2 id="moodDescription">{{mood.description}}</h2>
+    <div id="modalFooter">
+      <button *ngIf="mood.name === 'All'" routerLink="spin-the-wheel" 
+      routerLinkActive="active" 
+      style="background-color: #4CAF50;">Character Picker</button>
+      <a id="modalLink" (click)="selectRandomCharacter()">Random Character 🔀</a>
+    </div>
   </div>
   <div id="modalBody">
     <div 
@@ -17,12 +23,6 @@
         <span class="details-link" (click)="selectCharacter.emit(c)" (click)="close.emit()">Details</span>
         <a class="chat-link" [href]="getChatLink(c)" target="_blank">Chat</a>
       </div>
-    </div>
-    <div id="modalFooter">
-      <button *ngIf="mood.name === 'All'" routerLink="spin-the-wheel" 
-      routerLinkActive="active" 
-      style="background-color: #4CAF50;">Character Picker</button>
-      <a id="modalLink" (click)="selectRandomCharacter()">Random Character 🔀</a>
     </div>
   </div>
 </div>

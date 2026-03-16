@@ -60,5 +60,5 @@
 </header>
 <app-character-grid [filters]="filters" [searchTerm]="searchTerm" (selectCharacter)="selectedCharacter = $event"></app-character-grid>
 <app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>
-<app-mood-modal *ngIf="selectedMood" [mood]="selectedMood" [showInactive]="filters.inactive || filters.retired" (close)="selectedMood = null" (selectCharacter)="selectedCharacter = $event"></app-mood-modal>
+<app-mood-modal *ngIf="selectedMood" [mood]="selectedMood" [showInactive]="filters.inactive" [showRetired]="filters.retired" (close)="selectedMood = null" (selectCharacter)="selectedCharacter = $event"></app-mood-modal>
 <app-footer-buttons></app-footer-buttons>

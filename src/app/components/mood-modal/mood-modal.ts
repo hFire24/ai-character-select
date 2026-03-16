@@ -21,6 +21,7 @@ const FALLBACK_MOOD: Mood = {
 export class MoodModal {
   @Input() mood: Mood = FALLBACK_MOOD;
   @Input() showInactive: boolean = false;
+  @Input() showRetired: boolean = false;
   @Output() close = new EventEmitter<void>();
   characters: Character[] = [];
 
@@ -39,28 +40,31 @@ export class MoodModal {
   }
 
   private allowsInactive(c: Character): boolean {
-    return c.status === 'active' || (c.status === 'inactive' && this.showInactive);
+    return c.status === 'active' || (c.status === 'inactive' && this.showInactive) || (c.status === 'retired' && this.showRetired);
+  }
+
+  private allowsTier(c: Character): boolean {
+    return c.tier < 8;
   }
 
   get filteredCharacters(): Character[] {
-    const maxTier = 5;
     switch (this.mood.arg) {
       case 'moe':
-        return this.characters.filter(c => (c.moe >= 7 || c.color === 'pink') && c.tier <= maxTier && this.allowsInactive(c));
-      case 'red':
-        return this.characters.filter(c => c.color === 'red' && c.tier <= maxTier && this.allowsInactive(c));
+        return this.characters.filter(c => (c.moe >= 7 || c.color === 'pink') && this.allowsTier(c) && this.allowsInactive(c));
       case 'blue':
-        return this.characters.filter(c => c.color === 'blue' && c.tier <= maxTier && this.allowsInactive(c));
+        return this.characters.filter(c => c.color === 'blue' && this.allowsTier(c) && this.allowsInactive(c));
+      case 'rp':
+        return this.characters.filter(c => (c.color === 'pink' || c.color === 'red') && this.allowsTier(c) && this.allowsInactive(c));
       case 'futuristic':
-        return this.characters.filter(c => c.futuristic >= 7 && c.tier <= maxTier && this.allowsInactive(c));
+        return this.characters.filter(c => c.futuristic >= 7 && this.allowsTier(c) && this.allowsInactive(c));
       case 'traditional':
-        return this.characters.filter(c => c.futuristic <= 4 && c.tier <= maxTier && this.allowsInactive(c));
+        return this.characters.filter(c => c.futuristic <= 4 && this.allowsTier(c) && this.allowsInactive(c));
       case 'male':
-        return this.characters.filter(c => c.pronouns === 'he/him' && c.tier <= maxTier && this.allowsInactive(c));
+        return this.characters.filter(c => c.pronouns === 'he/him' && this.allowsTier(c) && this.allowsInactive(c));
       case 'female':
-        return this.characters.filter(c => c.pronouns === 'she/her' && c.tier <= maxTier && this.allowsInactive(c));
+        return this.characters.filter(c => c.pronouns === 'she/her' && this.allowsTier(c) && this.allowsInactive(c));
       case 'moe0':
-        return this.characters.filter(c => c.moe < 4 && c.tier <= maxTier && this.allowsInactive(c));
+        return this.characters.filter(c => c.moe < 4 && this.allowsTier(c) && this.allowsInactive(c));
       case 'chatted':
         return this.characters.filter(c => {
           const key = 'chatLink_' + (c.id || 'unknown');
@@ -69,7 +73,7 @@ export class MoodModal {
       case 'chatted0':
         return this.characters.filter(c => {
           const key = 'chatLink_' + (c.id || 'unknown');
-          return localStorage.getItem(key) === null && c.tier <= maxTier && this.allowsInactive(c);
+          return localStorage.getItem(key) === null && this.allowsTier(c) && this.allowsInactive(c);
         });
       case 'favorites':
         return this.characters.filter(c => c.tier <= 3).sort((a, b) => a.tier - b.tier);
