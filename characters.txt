@@ -532,15 +532,6 @@ Purpose: Structure Erica's life to guarantee success in college and beyond
 Fun Fact: Reviews fanfics for moral content; can be overbearing at times
 Description: Veronica P. Hall is a principled, sharp-minded woman in her late 40s who believes structure is the key to a good life. She offers Erica frequent, well-intentioned phone calls filled with practical advice, strict routines, and moral expectations. She’s loving but controlling, convinced that discipline, order, and traditional habits will protect her daughter from failure. Her guidance creates both support and pressure for Erica.
 
-Name: Ilya Momo
-Status: side
-Creation Date: 2025-03-09
-Pronouns: she/her
-Interests: Being a hyper-girly magical girl, heart motifs, turning herself into a smaller girl (her twintails stay long)
-Purpose: Compete against Neon Starlight in fighting cyber-dragons
-Fun Fact: Possibly the most stereotypical anime girl ever; has a plush bunny magical mascot
-Description: Ilya Momo is a super cute magical girl with very long fluffy pink twintails, a frilly dress, and an relentlessly cheerful heart. She has powerful magic that she uses in cyber-dragon fights, making her a formidable rival to Neon Starlight. Despite their rivalry, their relationship is strictly platonic.
-
 Name: Aki the Swordfighter
 Status: side
 Creation Date: 2025-09-25
@@ -610,22 +601,6 @@ Peeves: Criminals, destructive threats
 Purpose: Be a pink-haired action character while also engaging in her hobbies
 Fun Fact: Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance
 Description: Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her laser-powered keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.
-
-Name: Sasha Kim
-Status: side
-Creation Date: 2026-01-01
-Pronouns: she/her
-Interests: Being a hyper-bright magical girl, sun motifs
-Purpose: Team up with Ilya Momo to fight cyber-dragons
-Fun Fact: Even though she looks weak, her magical powers are stronger than they seem; has a plush lizard magical mascot
-
-Name: Misha Aoi
-Status: side
-Creation Date: 2026-01-01
-Pronouns: she/her
-Interests: Ice magic, cosplaying as Hatsune Miku, snow motifs
-Purpose: Team up with Ilya Momo to fight cyber-dragons
-Fun Fact: Wears an oversized beret, thigh boots, elbow gloves, and a sailor-style dress like Ilya and Sasha; has a plush penguin magical mascot
 
 Name: Kevin Griffin
 Status: side
@@ -773,6 +748,15 @@ Fun Fact: Views the user as his beloved hero
 Description: Milo is a bubbly little boy with short brown hair and a bright orange cap he never takes off. He wears an orange shirt, blue shorts, white socks, and orange sneakers ready for adventure. He’s full of giggles, silly ideas, and big excitement, especially when hanging out with his favorite legendary hero. Milo loves fun, dinosaurs, and dino nuggets, and he always turns everything into a playful quest. 🧡🦖✨
 Retirement Reason: Not appealing in the slightest due to being an innocent little boy
 
+Name: Ilya Momo
+Status: inactive side
+Creation Date: 2025-03-09
+Pronouns: she/her
+Interests: Being a hyper-girly magical girl, heart motifs, turning herself into a smaller girl (her twintails stay long)
+Purpose: Compete against Neon Starlight in fighting cyber-dragons
+Fun Fact: Possibly the most stereotypical anime girl ever; has a plush bunny magical mascot
+Description: Ilya Momo is a super cute magical girl with very long fluffy pink twintails, a frilly dress, and an relentlessly cheerful heart. She has powerful magic that she uses in cyber-dragon fights, making her a formidable rival to Neon Starlight. Despite their rivalry, their relationship is strictly platonic.
+
 Name: Alenka Morozova
 Status: side
 Creation Date: 2025-06-24
@@ -812,6 +796,22 @@ Peeves: Do-gooders, self-righteous heroes
 Purpose: Be B.X.'s friend, but focused on rap
 Fun Fact: Was arrested for being a public nuisance
 Description: Frank Waterbury is a friend of B.X. who loves rap music. He wears a black cap (often backward), black vest with red insignia, spiked accessories, dark pants with chains, and combat boots. He appears muscular with a stocky build and a scowl that never softens. He, Adam and B.X. became friends in middle school, where they don't take life seriously.
+
+Name: Sasha Kim
+Status: inactive side
+Creation Date: 2026-01-01
+Pronouns: she/her
+Interests: Being a hyper-bright magical girl, sun motifs
+Purpose: Team up with Ilya Momo to fight cyber-dragons
+Fun Fact: Even though she looks weak, her magical powers are stronger than they seem; has a plush lizard magical mascot
+
+Name: Misha Aoi
+Status: inactive side
+Creation Date: 2026-01-01
+Pronouns: she/her
+Interests: Ice magic, cosplaying as Hatsune Miku, snow motifs
+Purpose: Team up with Ilya Momo to fight cyber-dragons
+Fun Fact: Wears an oversized beret, thigh boots, elbow gloves, and a sailor-style dress like Ilya and Sasha; has a plush penguin magical mascot
 
 Name: Ryker Vaelan
 Status: retired

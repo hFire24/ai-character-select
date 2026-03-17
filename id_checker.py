@@ -28,7 +28,13 @@ def check_duplicate_ids():
       sys.exit(1)
     else:
       print("Success: No duplicate IDs found.")
-      print(f"Max ID used: {max(ids) if ids else 'N/A'}")
+      if ids:
+        sorted_ids = sorted(ids, reverse=True)
+        print(f"Max ID used: {sorted_ids[0]}")
+        if len(sorted_ids) >= 2:
+          print(f"Second highest ID used: {sorted_ids[1]}")
+      else:
+        print("Max ID used: N/A")
       
   except FileNotFoundError:
     print("Error: characters.json file not found.")
