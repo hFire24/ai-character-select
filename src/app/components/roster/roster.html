@@ -46,6 +46,47 @@
     }
   </div>
 
+  <div class="sort-section">
+    <div class="sort-label">Sort By:</div>
+    <div class="sort-buttons">
+      <button 
+        class="sort-btn"
+        [class.active]="sortBy === 'status'"
+        (click)="setSortBy('status')"
+      >
+        Status {{ sortBy === 'status' ? (sortDirection === 'asc' ? '↑' : '↓') : '' }}
+      </button>
+      <button 
+        class="sort-btn"
+        [class.active]="sortBy === 'id'"
+        (click)="setSortBy('id')"
+      >
+        ID {{ sortBy === 'id' ? (sortDirection === 'asc' ? '↑' : '↓') : '' }}
+      </button>
+      <button 
+        class="sort-btn"
+        [class.active]="sortBy === 'name'"
+        (click)="setSortBy('name')"
+      >
+        Name {{ sortBy === 'name' ? (sortDirection === 'asc' ? '↑' : '↓') : '' }}
+      </button>
+      <button 
+        class="sort-btn"
+        [class.active]="sortBy === 'tier'"
+        (click)="setSortBy('tier')"
+      >
+        Tier {{ sortBy === 'tier' ? (sortDirection === 'asc' ? '↑' : '↓') : '' }}
+      </button>
+      <button 
+        class="clear-sort-btn"
+        (click)="clearSort()"
+        [disabled]="sortBy === 'none'"
+      >
+        ✕ Clear Sort
+      </button>
+    </div>
+  </div>
+  
   <div class="button-container">
     @if (showingMainCharacters) {
       <button 
@@ -56,9 +97,14 @@
       </button>
     }
   </div>
-  
 </header>
-<app-character-grid [filters]="filters" [searchTerm]="searchTerm" (selectCharacter)="selectedCharacter = $event"></app-character-grid>
+<app-character-grid 
+  [filters]="filters" 
+  [searchTerm]="searchTerm" 
+  [sortBy]="sortBy"
+  [sortDirection]="sortDirection"
+  (selectCharacter)="selectedCharacter = $event"
+></app-character-grid>
 <app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>
 <app-mood-modal *ngIf="selectedMood" [mood]="selectedMood" [showInactive]="filters.inactive" [showRetired]="filters.retired" (close)="selectedMood = null" (selectCharacter)="selectedCharacter = $event"></app-mood-modal>
 <app-footer-buttons></app-footer-buttons>

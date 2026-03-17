@@ -5,6 +5,7 @@ import { CharacterService } from '../../services/character.service';
 import { Character } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
 import { BackButton } from '../back-button/back-button';
+import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 import html2canvas from 'html2canvas';
 
 @Component({
@@ -96,7 +97,8 @@ export class Sorter implements OnInit, OnDestroy {
 
   start(): void {
     this.characterService.getCharactersSplitTwins(false).subscribe(chars => {
-      this.characters = this.filterCharacters(chars);
+      const pipe = new CharacterFilterPipe();
+      this.characters = pipe.transform(chars, this.filterOptions);
       
       if (this.characters.length < 2) {
         alert('Not enough characters to sort! Please adjust your filters.');
@@ -436,30 +438,25 @@ export class Sorter implements OnInit, OnDestroy {
     });
   }
 
-  private filterCharacters(chars: Character[]): Character[] {
-    return chars.filter(char => {
-      // Filter out future character
-      if (char.status.includes('future')) {
-        return false;
+  get filterOptions(): CharacterFilterOptions {
+    const options: CharacterFilterOptions = {
+      status: {
+        active: this.includeActive,
+        inactive: this.includeInactive,
+        side: this.includeSide,
+        retired: this.includeRetired,
+        me: this.includeMe
       }
+    };
 
-      // Filter by gender
-      if (this.genderFilter === 'boys' && char.pronouns === 'she/her') {
-        return false;
-      }
-      if (this.genderFilter === 'girls' && char.pronouns !== 'she/her') {
-        return false;
-      }
+    // Add gender filter if needed
+    if (this.genderFilter === 'boys') {
+      options.customFilter = (char: Character) => char.pronouns !== 'she/her';
+    } else if (this.genderFilter === 'girls') {
+      options.attributes = { pronouns: ['she/her'] };
+    }
 
-      // Filter by character status using checkboxes
-      const matchesActive = this.includeActive && char.status === 'active';
-      const matchesInactive = this.includeInactive && char.status === 'inactive';
-      const matchesSide = this.includeSide && char.status.includes('side');
-      const matchesRetired = this.includeRetired && char.status === 'retired';
-      const matchesMe = this.includeMe && char.status === 'me';
-      
-      return matchesActive || matchesInactive || matchesSide || matchesRetired || matchesMe;
-    });
+    return options;
   }
 
   async takeScreenshot(): Promise<void> {

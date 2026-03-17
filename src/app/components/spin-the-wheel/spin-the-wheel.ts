@@ -5,18 +5,18 @@ import { CharacterService, Character } from "../../services/character.service";
 import { CharacterModal } from "../character-modal/character-modal";
 import { Router } from "@angular/router";
 import { DeviceService } from "../../services/device.service";
+import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 
 @Component({
   selector: "app-spin-the-wheel",
   templateUrl: "./spin-the-wheel.html",
   styleUrl: "./spin-the-wheel.scss",
-  imports: [CommonModule, FormsModule, CharacterModal],
+  imports: [CommonModule, FormsModule, CharacterModal, CharacterFilterPipe],
   standalone: true
 })
 export class SpinTheWheel {
   spotlightIndex: number | null = null;
   characters: Character[] = [];
-  filteredCharacters: Character[] = [];
   excludedCharacters: Character[] = [];
   spinning = false;
   selectedCharacter: Character | null = null;
@@ -41,32 +41,35 @@ export class SpinTheWheel {
     this.skipAnimation = this.isMobile();
   }
 
-  ngOnChanges() {
-    this.applyFilter();
-  }
-
-  ngDoCheck() {
-    this.applyFilter();
-  }
-
   isMobile(): boolean {
     return this.deviceService.isMobile();
   }
 
-  applyFilter() {
-    let baseCharacters = this.characters;
-    
-    // Apply checkbox filters
-    this.filteredCharacters = baseCharacters.filter(c => {
-      const matchesFavorite = this.includeFavorite && c.tier >= 1 && c.tier <= 3;
-      const matchesActive = this.includeActive && c.status === "active";
-      const matchesInactive = this.includeInactive && c.status === "inactive";
-      const matchesSide = this.includeSide && c.status.includes("side");
-      const matchesRetired = this.includeRetired && c.status === "retired";
-      const matchesMe = this.includeMe && c.status === "me";
-      
-      return matchesFavorite || matchesActive || matchesInactive || matchesSide || matchesRetired || matchesMe;
-    });
+  // Filter options for the pipe
+  get filterOptions(): CharacterFilterOptions {
+    // Use custom filter to implement OR logic across all inclusion checkboxes
+    return {
+      customFilter: (char: Character) => {
+        // If no filters are checked, include nothing
+        const hasAnyFilter = this.includeFavorite || this.includeActive || 
+                            this.includeInactive || this.includeSide || 
+                            this.includeRetired || this.includeMe;
+        if (!hasAnyFilter) return false;
+
+        // Check each inclusion filter (OR logic)
+        if (this.includeFavorite && char.tier >= 1 && char.tier <= 3) return true;
+        if (this.includeActive && char.status === 'active') return true;
+        if (this.includeInactive && char.status === 'inactive') return true;
+        if (this.includeRetired && char.status === 'retired') return true;
+        if (this.includeMe && char.status === 'me') return true;
+        if (this.includeSide) {
+          const isMainCharacter = ['active', 'inactive', 'retired'].includes(char.status);
+          if (!isMainCharacter) return true;
+        }
+
+        return false;
+      }
+    };
   }
 
   onActiveChange() {
@@ -86,7 +89,6 @@ export class SpinTheWheel {
     
     observable.subscribe(chars => {
       this.characters = chars;
-      this.applyFilter();
     });
   }
 
@@ -101,7 +103,10 @@ export class SpinTheWheel {
   }
 
   spinWheel() {
-    const availableCharacters = this.filteredCharacters.filter(char => !this.excludedCharacters.includes(char));
+    // Apply filter pipe manually for logic that needs it
+    const pipe = new CharacterFilterPipe();
+    const filteredCharacters = pipe.transform(this.characters, this.filterOptions);
+    const availableCharacters = filteredCharacters.filter(char => !this.excludedCharacters.includes(char));
     if (this.spinning) return;
     if (availableCharacters.length === 0) {
       alert("Please include at least one character to spin.");
@@ -131,7 +136,7 @@ export class SpinTheWheel {
       if (current < indices.length) {
         const availableIndex = indices[current];
         const selectedChar = availableCharacters[availableIndex];
-        this.spotlightIndex = this.filteredCharacters.findIndex(char => char === selectedChar);
+        this.spotlightIndex = filteredCharacters.findIndex((char: Character) => char === selectedChar);
         current++;
         interval = Math.min(300, interval + 20);
         setTimeout(spotlightStep, interval);

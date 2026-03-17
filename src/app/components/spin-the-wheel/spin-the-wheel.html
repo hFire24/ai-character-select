@@ -41,7 +41,7 @@
 		<div class="panel-grid">
 			<div
 				class="panel"
-				*ngFor="let character of filteredCharacters; let i = index"
+				*ngFor="let character of characters | characterFilter:filterOptions; let i = index"
 				[class.spotlight]="i === spotlightIndex"
 				[class.selected]="selectedCharacter && selectedCharacter === character"
 				[class.disabled]="excludedCharacters.includes(character)"

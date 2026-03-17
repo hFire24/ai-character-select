@@ -1,11 +1,11 @@
 <main id="character">
-  @if (filteredCharacters.length === 0 && searchTerm) {
+  @if ((characters | characterFilter:filters:searchTerm).length === 0 && searchTerm) {
     <div class="no-results">
       <p>No characters found matching "{{ searchTerm }}"</p>
       <p class="suggestion">Try searching with a different term or check your spelling.</p>
     </div>
   } @else {
-    @for (c of filteredCharacters; track c.id) {
+    @for (c of characters | characterFilter:filters:searchTerm | sortCharacters:sortBy:sortDirection; track c.id) {
       <div
         class="character"
         [ngClass]="genClass(c.generation)"

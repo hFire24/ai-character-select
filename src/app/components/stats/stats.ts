@@ -6,6 +6,7 @@ import { DeviceService } from '../../services/device.service';
 import { StatsContainer } from '../stats-container/stats-container';
 import { CharacterList } from '../character-list/character-list';
 import { CharacterModal } from '../character-modal/character-modal';
+import { CharacterFilterPipe } from '../../pipes/character-filter.pipe';
 
 interface CharacterStats {
   active: number;
@@ -59,11 +60,18 @@ export class Stats implements OnInit {
 
   calculateStats() {
     this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
-      this.stats.active = characters.filter(c => c.status === 'active').length + 1; // +1 for ChatGPT
-      this.stats.inactive = characters.filter(c => c.status === 'inactive').length;
-      this.stats.side = characters.filter(c => c.status.includes('side')).length;
-      this.stats.retired = characters.filter(c => c.status === 'retired').length;
-      this.stats.misc = characters.filter(c => !['active', 'inactive', 'side', 'inactive side', 'retired'].includes(c.status)).length;
+      const pipe = new CharacterFilterPipe();
+      
+      this.stats.active = pipe.transform(characters, { status: { active: true } }).length + 1; // +1 for ChatGPT
+      this.stats.inactive = pipe.transform(characters, { status: { inactive: true } }).length;
+      this.stats.side = pipe.transform(characters, { status: { side: true } }).length;
+      this.stats.retired = pipe.transform(characters, { status: { retired: true } }).length;
+      
+      // Misc: characters that don't fit standard categories (future, me, etc.)
+      this.stats.misc = pipe.transform(characters, {
+        customFilter: (c: Character) => !['active', 'inactive', 'side', 'inactive side', 'retired', 'retired side'].includes(c.status)
+      }).length;
+      
       this.stats.total = characters.length + 1; // +1 for ChatGPT
     });
   }
@@ -71,7 +79,7 @@ export class Stats implements OnInit {
   loadLastChattedCharacters() {
     this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
       const chatsWithTimestamps: LastChattedCharacter[] = [];
-      const neverChatted: Character[] = [];
+      const pipe = new CharacterFilterPipe();
 
       this.characterService.getChatGPT().subscribe(chatGPTCharacter => {
         if (Array.isArray(chatGPTCharacter)) {
@@ -85,15 +93,11 @@ export class Stats implements OnInit {
         const timestampKey = 'chatLinkTimestamp_' + (character.id || 'unknown');
         const timestamp = localStorage.getItem(timestampKey);
         
-        // Exclude side characters from last chatted list
-        if (timestamp && !character.status.includes('side')) {
+        if (timestamp) {
           chatsWithTimestamps.push({
             character: character,
             timestamp: new Date(timestamp)
           });
-        } else if (character.status === 'active') {
-          // Only track active characters that have never been chatted with
-          neverChatted.push(character);
         }
       });
 
@@ -102,21 +106,17 @@ export class Stats implements OnInit {
         b.timestamp.getTime() - a.timestamp.getTime()
       );
       
-      // Don't sort never chatted characters - keep original order
-      this.neverChattedCharacters = neverChatted;
+      // Filter for active characters that have never been chatted with, excluding side characters
+      const activeNonSide = pipe.transform(characters, {
+        status: { active: true },
+        exclude: { statuses: ['active side'] }
+      });
+      
+      this.neverChattedCharacters = activeNonSide.filter(char => {
+        const timestampKey = 'chatLinkTimestamp_' + (char.id || 'unknown');
+        return !localStorage.getItem(timestampKey);
+      });
     });
-  }
-
-  formatDate(date: Date): string {
-    const now = new Date();
-    const diffMs = now.getTime() - date.getTime();
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-    
-    if (diffDays === 0) {
-      return 'Today';
-    } else {
-      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    }
   }
 
   onCharacterClick(character: Character) {

@@ -4,6 +4,7 @@ import { DeviceService } from '../../services/device.service';
 import { CharacterModal } from '../character-modal/character-modal';
 import { BackButton } from '../back-button/back-button';
 import { CommonModule } from '@angular/common';
+import { DaysUntilBirthdayPipe } from '../../pipes/days-until-birthday.pipe';
 
 interface CalendarDay {
   date: number;
@@ -20,7 +21,7 @@ interface BirthdayCharacter {
 
 @Component({
   selector: 'app-birthday-calendar',
-  imports: [CommonModule, CharacterModal, BackButton],
+  imports: [CommonModule, CharacterModal, BackButton, DaysUntilBirthdayPipe],
   templateUrl: './birthday-calendar.html',
   styleUrl: './birthday-calendar.scss'
 })
@@ -197,24 +198,5 @@ export class BirthdayCalendar implements OnInit {
 
   closeCharacterModal() {
     this.selectedCharacter = null;
-  }
-
-  formatDaysUntilBirthday(days: number, character: Character): string {
-    if (days === 0) {
-      const pronoun = character.pronouns?.toLowerCase() || 'their';
-      let possessivePronoun: string;
-      
-      if (pronoun.includes('he/him')) {
-        possessivePronoun = 'his';
-      } else if (pronoun.includes('she/her')) {
-        possessivePronoun = 'her';
-      } else {
-        possessivePronoun = 'their';
-      }
-      
-      return `Today is ${possessivePronoun} birthday!`;
-    }
-    if (days === 1) return 'Tomorrow';
-    return `${days} days`;
   }
 }

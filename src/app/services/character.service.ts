@@ -71,7 +71,7 @@ export class CharacterService {
 
   getChatGPT(): Observable<Character[]> {
     const chatGPT: Character = {
-      id: 5,
+      id: 0,
       shortName: 'ChatGPT',
       name: 'ChatGPT (Default Model)',
       img: 'Icons/main/ChatGPT.png',

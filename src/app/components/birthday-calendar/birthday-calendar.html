@@ -74,7 +74,7 @@
             }}<span [ngClass]="birthdayChar.character.status.includes('retired') ? 'retired-name' : ''">{{ birthdayChar.character.shortName }}</span>
           </h3>
           <p class="birthday-date">{{ birthdayChar.character.birthday }}</p>
-          <p class="days-until">{{ formatDaysUntilBirthday(birthdayChar.daysUntilBirthday, birthdayChar.character) }}</p>
+          <p class="days-until">{{ birthdayChar.daysUntilBirthday | daysUntilBirthday:birthdayChar.character }}</p>
         </div>
       </div>
     </div>

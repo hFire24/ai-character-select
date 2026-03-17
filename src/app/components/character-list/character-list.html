@@ -7,7 +7,7 @@
           <img [src]="'assets/' + (item.character.img || 'Icons/extended/Unknown.png')" [alt]="item.character.shortName" class="character-avatar">
           <div class="chat-character">
             <span class="character-name" [class.inactive]="item.character.status === 'inactive'" [class.retired]="item.character.status === 'retired'">{{ item.character.shortName }}</span>
-            <span class="chat-date">{{ formatDate(item.timestamp) }}</span>
+            <span class="chat-date">{{ item.timestamp | relativeDate }}</span>
           </div>
         </div>
       }

@@ -5,6 +5,7 @@ import { TierSettings } from "../tier-settings/tier-settings";
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 import { TextViewer } from '../text-viewer/text-viewer';
 import { BackButton } from '../back-button/back-button';
+import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 
 @Component({
   selector: 'app-tier-list',
@@ -44,29 +45,65 @@ export class TierList {
   allCharacters: any[] = [];
 
   get characterPool() {
+    // Get unassigned characters
     const assigned = new Set();
     for (const tier of this.tiers) {
       for (const char of tier.characters) {
         assigned.add(char.name);
       }
     }
-    let pool = this.allCharacters.filter(c => !assigned.has(c.name));
-    if (this.characterFilter === 'active') {
-      pool = pool.filter(c => c.status === 'active');
-    } else if (this.characterFilter === 'inactive') {
-      pool = pool.filter(c => c.status === 'inactive');
-    } else if (this.characterFilter === 'retired') {
-      pool = pool.filter(c => c.status === 'retired');
-    } else if (this.characterFilter === 'music') {
-      pool = pool.filter(c => c.musicEnjoyer);
-    } else if (this.characterFilter === 'side') {
-      pool = pool.filter(c => (c.status.includes('side') && !c.musicEnjoyer) || c.status === 'future' || c.status === 'me');
-    } else if (this.characterFilter === 'male') {
-      pool = pool.filter(c => c.pronouns !== 'she/her');
-    } else if (this.characterFilter === 'female') {
-      pool = pool.filter(c => c.pronouns === 'she/her');
+    const unassigned = this.allCharacters.filter(c => !assigned.has(c.name));
+    
+    // Build filter options based on selected filter
+    const filterOptions = this.getFilterOptions();
+    
+    // Apply the filter pipe
+    const pipe = new CharacterFilterPipe();
+    return pipe.transform(unassigned, filterOptions);
+  }
+
+  private getFilterOptions(): CharacterFilterOptions {
+    if (this.characterFilter === 'all') {
+      return {}; // No filters, return all
     }
-    return pool;
+    
+    if (this.characterFilter === 'active') {
+      return { status: { active: true } };
+    }
+    
+    if (this.characterFilter === 'inactive') {
+      return { status: { inactive: true } };
+    }
+    
+    if (this.characterFilter === 'retired') {
+      return { status: { retired: true } };
+    }
+    
+    if (this.characterFilter === 'music') {
+      return { attributes: { musicEnjoyer: true } };
+    }
+    
+    if (this.characterFilter === 'side') {
+      return {
+        customFilter: (char) => {
+          return (char.status.includes('side') && !char.musicEnjoyer) || 
+                 char.status === 'future' || 
+                 char.status === 'me';
+        }
+      };
+    }
+    
+    if (this.characterFilter === 'male') {
+      return {
+        customFilter: (char) => char.pronouns !== 'she/her'
+      };
+    }
+    
+    if (this.characterFilter === 'female') {
+      return { attributes: { pronouns: ['she/her'] } };
+    }
+    
+    return {}; // Default: no filters
   }
 
   onFilterChange(event: any) {
@@ -350,7 +387,7 @@ export class TierList {
   tiers = [
     {
       name: 'S', color: '#FF7F7E', characters: [
-        { name: 'Me', img: 'assets/Icons/extended/Me.png', id: 0 }
+        { name: 'Me', img: 'assets/Icons/extended/Me.png', id: 999 }
       ]
     },
     {
@@ -433,6 +470,11 @@ export class TierList {
 
   private findAndAddCharactersToTier(tierIndex: number, charactersMetadata: any[]) {
     charactersMetadata.forEach((charMeta: any) => {
+      // Convert old "Me" ID (0) to new ID (999)
+      if (charMeta.id === 0) {
+        charMeta.id = 999;
+      }
+      
       let character = this.allCharacters.find(c => c.id === charMeta.id);
       if (!character) {
         // Fallback to name matching if ID not found
