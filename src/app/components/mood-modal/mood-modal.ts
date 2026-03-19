@@ -196,6 +196,14 @@ export class MoodModal {
     if (sourceToUse && sourceToUse.length > 0) {
       const idx = Math.floor(Math.random() * sourceToUse.length);
       const selectedCharacter = sourceToUse[idx];
+      
+      // Show the character modal
+      this.selectCharacter.emit(selectedCharacter);
+      
+      // Close the mood modal (consistent with clicking "Details" on a character)
+      this.close.emit();
+      
+      // Also open the chat link
       const chatLink = this.getChatLink(selectedCharacter);
       if (chatLink) {
         window.open(chatLink, '_blank');
