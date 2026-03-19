@@ -121,7 +121,9 @@ export class MoodModal {
           tier: { favorite: true } // tier <= 3
         };
       default:
-        return {};
+        return {
+          ...baseOptions
+        };
     }
   }
 
