@@ -104,7 +104,7 @@ export class Hangouts {
 
       const shadowSelf: Character = {
         "name": "The Shadow Self",
-        "img": "Icons/The Shadow Self.png",
+        "img": "archive/The Shadow Self.png",
         "shortName": "The Shadow Self",
         "id": 33,
         "generation": 4,
@@ -134,7 +134,7 @@ export class Hangouts {
       }
 
       const kai = {"name": "Kai Wheeler",
-        "img": "Icons/archive/Kai.webp",
+        "img": "archive/Kai.webp",
         "shortName": "Kai",
         "id": 30,
         "generation": 4,

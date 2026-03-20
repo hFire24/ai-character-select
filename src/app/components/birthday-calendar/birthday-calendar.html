@@ -46,7 +46,7 @@
             class="birthday-character"
             (click)="openCharacterModal(character)"
           >
-            <img [src]="'assets/' + character.img" [alt]="character.shortName" />
+            <img [src]="'assets/Icons/' + character.img" [alt]="character.shortName" />
             <span class="character-name">{{ character.shortName }}</span>
           </div>
         </div>
@@ -62,7 +62,7 @@
         class="birthday-list-item"
         (click)="openCharacterModal(birthdayChar.character)"
       >
-        <img [src]="'assets/' + birthdayChar.character.img" [alt]="birthdayChar.character.shortName" />
+        <img [src]="'assets/Icons/' + birthdayChar.character.img" [alt]="birthdayChar.character.shortName" />
         <div class="character-info">
           <h3>
             {{

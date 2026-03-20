@@ -163,7 +163,7 @@ export class MoodModal {
     if (path && path.includes('ChatGPT')) {
       modifiedPath = path.replace('ChatGPT', 'ChatGPT-Mood');
     }
-    const assetUrl = 'assets/' + modifiedPath;
+    const assetUrl = 'assets/Icons/' + modifiedPath;
     return path ? assetUrl : 'assets/Icons/extended/Unknown-Mood.png';
   }
 

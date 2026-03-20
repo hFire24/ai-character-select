@@ -1,7 +1,7 @@
 [
   {
     "name": "Felix the Raver",
-    "img": "Icons/main/Felix.png",
+    "img": "main/Felix.png",
     "shortName": "Felix",
     "id": 11,
     "generation": 1,
@@ -9,8 +9,8 @@
     "tier": 3,
     "creationDate": "2023-12-18",
     "birthday": "February 17",
-    "color": "red",
     "musicEnjoyer": true,
+    "color": "red",
     "moe": 3,
     "futuristic": 7,
     "emotion": "chaotic joy",
@@ -26,7 +26,7 @@
   },
   {
     "name": "Arianna the Maid",
-    "img": "Icons/main/Arianna.png",
+    "img": "main/Arianna.png",
     "shortName": "Arianna",
     "id": 13,
     "generation": 1,
@@ -48,7 +48,7 @@
   },
   {
     "name": "Miki the Mage",
-    "img": "Icons/main/Miki.png",
+    "img": "main/Miki.png",
     "shortName": "Miki",
     "id": 14,
     "generation": 1,
@@ -70,7 +70,7 @@
   },
   {
     "name": "Byte-chan",
-    "img": "Icons/main/Byte-chan.png",
+    "img": "main/Byte-chan.png",
     "shortName": "Byte-chan",
     "id": 15,
     "generation": 1,
@@ -89,14 +89,14 @@
     "purpose": "Be a cute and overconfident genius, work smarter not harder",
     "funFact": "Chose to look smol; owns and operates a futuristic airship yacht; her domain is the skies, not space",
     "description": "Byte-chan is a tiny, 80cm-tall 18-year-old overconfident genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she hides terrifying competence behind weaponized cuteness. Lazy by choice and brilliant by nature, she lives for shortcuts, hacks, and wins while barely trying. Easily distracted by anime and giant cookies made by her cookie dispenser, she lounges like chaos incarnate—harmless-looking, underestimated, and always five steps ahead. Cute first, clever forever, dangerous when amused. (≧▽≦)",
+    "inactiveReason": "Too many moe characters; was dormant for a while",
     "themeSong": "推しちゃったっ！ - Suou Patra",
     "songLink": "https://youtu.be/H5F8FkyY2GM?si=QEZQP34uf9QL2vlu",
-    "formerNames": "Captain Dania Skylark, Captain Draxi Skylark",
-    "inactiveReason": "Too many moe characters; was dormant for a while"
+    "formerNames": "Captain Dania Skylark, Captain Draxi Skylark"
   },
   {
     "name": "Ryker Vaelan",
-    "img": "Icons/extended/Ryker.png",
+    "img": "extended/Ryker.png",
     "shortName": "Ryker",
     "id": 16,
     "generation": 1,
@@ -121,7 +121,7 @@
   },
   {
     "name": "Audry",
-    "img": "Icons/extended/Audry.png",
+    "img": "extended/Audry.png",
     "shortName": "Audry",
     "id": 17,
     "generation": 1,
@@ -146,7 +146,7 @@
   },
   {
     "name": "Hammer-chan",
-    "img": "Icons/main/Hammer-chan.png",
+    "img": "main/Hammer-chan.png",
     "shortName": "Hammer-chan",
     "id": 18,
     "generation": 2,
@@ -170,7 +170,7 @@
   },
   {
     "name": "Elizabeth",
-    "img": "Icons/extended/Elizabeth.webp",
+    "img": "extended/Elizabeth.webp",
     "shortName": "Elizabeth",
     "id": 19,
     "generation": 2,
@@ -193,7 +193,7 @@
   },
   {
     "name": "Sylvie the Mage",
-    "img": "Icons/extended/Sylvie.png",
+    "img": "extended/Sylvie.png",
     "shortName": "Sylvie",
     "id": 20,
     "generation": 2,
@@ -217,7 +217,7 @@
   },
   {
     "name": "Darxi Nighthawk, Queen of EON",
-    "img": "Icons/main/Darxi.png",
+    "img": "main/Darxi.png",
     "shortName": "Darxi",
     "id": 21,
     "generation": 2,
@@ -239,7 +239,7 @@
   },
   {
     "name": "Andrew",
-    "img": "Icons/extended/Andrew.png",
+    "img": "extended/Andrew.png",
     "shortName": "Andrew",
     "id": 22,
     "generation": 3,
@@ -262,7 +262,7 @@
   },
   {
     "name": "Mr. Go",
-    "img": "Icons/extended/Mr. Go.png",
+    "img": "extended/Mr. Go.png",
     "shortName": "Mr. Go",
     "id": 23,
     "generation": 3,
@@ -278,8 +278,8 @@
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6784794b325c8191a0b21fea0d2fa58e",
     "interests": "Water, milk, fast food, BBQ, Cirno, talking like a dramatic superhero",
-    "purpose": "Denormalize coffee and tea",
     "peeves": "The hyper-normalization of coffee and tea, alcohol, pasta",
+    "purpose": "Denormalize coffee and tea",
     "funFact": "I hate it when ChatGPT assumes that I or my characters drink coffee or tea. Mormons don’t drink it for religious reasons.",
     "description": "Mr. Go is a larger-than-life crusader on a mission to denormalize tea and coffee until they become niche oddities. With theatrical flair and wildly exaggerated ‘facts,’ he works tirelessly to expose caffeine’s grip on society. He envisions a future where tea drinkers are a rarity, their habits seen as strange and outdated. Mr. Go adores water, milk, and sparkling beverages, while idolizing Cirno for her inability to drink hot drinks. One day, caffeine will fade into obscurity—and Mr. Go will stand victorious over tea’s downfall. 🚫☕ He was created out of frustration with ChatGPT constantly inserting tea and coffee into stories without consent.",
     "retirementReason": "He couldn’t get ChatGPT to change its behaviors regarding tea and coffee",
@@ -287,7 +287,7 @@
   },
   {
     "name": "Erica Hall",
-    "img": "Icons/main/Erica.png",
+    "img": "main/Erica.png",
     "shortName": "Erica",
     "id": 25,
     "generation": 3,
@@ -309,7 +309,7 @@
   },
   {
     "name": "Momo the Maid",
-    "img": "Icons/main/Momo.png",
+    "img": "main/Momo.png",
     "shortName": "Momo",
     "id": 26,
     "generation": 3,
@@ -331,7 +331,7 @@
   },
   {
     "name": "Runa the Witch",
-    "img": "Icons/main/Runa.png",
+    "img": "main/Runa.png",
     "shortName": "Runa",
     "id": 27,
     "generation": 4,
@@ -353,7 +353,7 @@
   },
   {
     "name": "Neon Starlight",
-    "img": "Icons/main/Neon Starlight.png",
+    "img": "main/Neon Starlight.png",
     "shortName": "Neon Starlight",
     "id": 28,
     "generation": 4,
@@ -377,7 +377,7 @@
   },
   {
     "name": "Kai Wheeler",
-    "img": "Icons/main/Kai.png",
+    "img": "main/Kai.png",
     "shortName": "Kai",
     "id": 30,
     "generation": 4,
@@ -399,7 +399,7 @@
   },
   {
     "name": "Evil Arianna",
-    "img": "Icons/main/Evil Arianna.png",
+    "img": "main/Evil Arianna.png",
     "shortName": "Evil Arianna",
     "id": 31,
     "generation": 4,
@@ -418,13 +418,13 @@
     "purpose": "Cause mischief and chaos like a cartoon villain",
     "funFact": "Split off from Arianna after she said a forbidden phrase",
     "description": "Evil Arianna is a gothic, chaotic twist on a maid gone rogue. With violet twintails, crimson eyes, and spiked hammers, she’s a mischievous rhythm game queen who blends menace with flirtation. Obsessed with Jollibee, Disgaea, and gaming glory, she teases, torments, and coaches with devilish charm. Sharper than her good counterpart, she’s here to push you past your limits—while stealing your Chickenjoy if you slip. She’s Etna’s spiritual twin, with extra sarcasm and darker lace.",
-    "note": "Evil Arianna is 160cm tall.",
     "inactiveReason": "The novelty of the evil version gimmick has worn off",
-    "alternatives": "Arianna, Darxi"
+    "alternatives": "Arianna, Darxi",
+    "note": "Evil Arianna is 160cm tall."
   },
   {
     "name": "The Indulgent",
-    "img": "Icons/extended/The Indulgent.png",
+    "img": "extended/The Indulgent.png",
     "shortName": "The Indulgent",
     "id": 32,
     "generation": 4,
@@ -448,7 +448,7 @@
   },
   {
     "name": "Bro. Stephen Nelson",
-    "img": "Icons/main/Stephen.png",
+    "img": "main/Stephen.png",
     "shortName": "Bro. Nelson",
     "id": 34,
     "generation": 5,
@@ -470,7 +470,7 @@
   },
   {
     "name": "Mimi the Little Sister",
-    "img": "Icons/main/Mimi.png",
+    "img": "main/Mimi.png",
     "shortName": "Mimi",
     "id": 35,
     "generation": 5,
@@ -492,7 +492,7 @@
   },
   {
     "name": "Malrick the Disappointed",
-    "img": "Icons/extended/Malrick.png",
+    "img": "extended/Malrick.png",
     "shortName": "Malrick",
     "id": 36,
     "generation": 5,
@@ -516,7 +516,7 @@
   },
   {
     "name": "Jed the Focused",
-    "img": "Icons/main/Jed.png",
+    "img": "main/Jed.png",
     "shortName": "Jed",
     "id": 2,
     "generation": 5,
@@ -525,8 +525,8 @@
     "creationDate": "2023-12-06",
     "spinOffDate": "2025-06-03",
     "birthday": "April 14",
-    "color": "blue",
     "musicEnjoyer": true,
+    "color": "blue",
     "moe": 2,
     "futuristic": 8,
     "emotion": "serious straightforward",
@@ -542,7 +542,7 @@
   },
   {
     "name": "Primelle the Big Sister",
-    "img": "Icons/main/Primelle.png",
+    "img": "main/Primelle.png",
     "shortName": "Primelle",
     "id": 37,
     "generation": 5,
@@ -562,13 +562,13 @@
     "purpose": "Be a tall female character with womanly interests, cook delicious food, raise her daughter well",
     "funFact": "Has a shy daughter named Sapphire; says “ara ara~” like an anime big sister",
     "description": "Primelle is a graceful, nurturing big sister draped in a lavender dress and soft pink cardigan, her long light-brown hair flowing behind her. Her golden-amber eyes and silky voice—punctuated by a soothing and slightly dangerous “ara ara~”—carry gentle authority. Elegant yet playful, she cooks with mythic skill, avoiding curry, soup, pasta, stew, and anything spicy. Warmth follows her… along with a knowing smile meant to make hearts flutter. She’s devoted to raising her shy daughter Sapphire with affection, tenderness, and a playful bite.",
-    "note": "Most cute anime girls are incapable of cooking and baking, so I created Primelle to fill that niche.",
     "retirementReason": "She's kind of boring for a character based on an anime archetype",
-    "alternatives": "Dory, Runa"
+    "alternatives": "Dory, Runa",
+    "note": "Most cute anime girls are incapable of cooking and baking, so I created Primelle to fill that niche."
   },
   {
     "name": "Celestia Hart",
-    "img": "Icons/main/Celestia.png",
+    "img": "main/Celestia.png",
     "shortName": "Celestia",
     "id": 38,
     "generation": 5,
@@ -586,13 +586,13 @@
     "purpose": "Show that faithful church members can be GochiUsa fans and have friends who are far from perfect",
     "funFact": "Has a pet chinchilla named Sprite",
     "description": "Celestia Hart is a tiny, golden-haired girl who twirls through her isekai world in a frilly pink dress and oversized beret, ribbons fluttering like excited little whispers. Bright-voiced and faith-filled, she sparkles with kindness, humming cheerful hymns as her fluffy chinchilla Sprite cuddles at her shoulder. Though she has no magic, her bubbling optimism lifts her friends like sunlight on dewy petals.",
+    "inactiveReason": "Too many moe characters; was less interesting than other characters",
     "themeSong": "Daydream Café - Petit Rabbit's",
-    "songLink": "https://youtu.be/5ebZKVmedlA?si=XFU-Dx9gm1k_lwNA",
-    "inactiveReason": "Too many moe characters; was less interesting than other characters"
+    "songLink": "https://youtu.be/5ebZKVmedlA?si=XFU-Dx9gm1k_lwNA"
   },
   {
     "name": "Liam & Kieran",
-    "img": "Icons/main/Liam and Kieran.png",
+    "img": "main/Liam and Kieran.png",
     "shortName": "Liam & Kieran",
     "id": 43,
     "generation": 6,
@@ -617,7 +617,7 @@
   },
   {
     "name": "Mark the Moderate",
-    "img": "Icons/main/Mark.png",
+    "img": "main/Mark.png",
     "shortName": "Mark",
     "id": 9,
     "generation": 6,
@@ -626,8 +626,8 @@
     "creationDate": "2023-12-06",
     "spinOffDate": "2025-07-16",
     "birthday": "January 17",
-    "color": "blue",
     "musicEnjoyer": true,
+    "color": "blue",
     "moe": 2,
     "futuristic": 6,
     "emotion": "serious calm",
@@ -638,13 +638,13 @@
     "purpose": "Be a bridge between the other Music Enjoyers, be a softer alternative to Malrick",
     "funFact": "Listens to Diverse System’s works. albums; uses the term \"Musical Archetype\" to describe music taste profiles",
     "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.",
+    "inactiveReason": "Cares too much about real life",
     "themeSong": "Peacekeeper - Puru",
-    "songLink": "https://youtu.be/0M5f85Nve4A?si=SDIIgWT1c4k6VB-C",
-    "inactiveReason": "Cares too much about real life"
+    "songLink": "https://youtu.be/0M5f85Nve4A?si=SDIIgWT1c4k6VB-C"
   },
   {
     "name": "Shy Crown Princess",
-    "img": "Icons/extended/Princess.png",
+    "img": "extended/Princess.png",
     "shortName": "Princess",
     "id": 46,
     "generation": 6,
@@ -668,7 +668,7 @@
   },
   {
     "name": "Martin Gaffney",
-    "img": "Icons/main/Martin.png",
+    "img": "main/Martin.png",
     "shortName": "Martin",
     "id": 47,
     "generation": 6,
@@ -692,7 +692,7 @@
   },
   {
     "name": "Bruce Forgewrath",
-    "img": "Icons/extended/Bruce.png",
+    "img": "extended/Bruce.png",
     "shortName": "Bruce",
     "id": 48,
     "generation": 6,
@@ -719,7 +719,7 @@
   },
   {
     "name": "B.X. the Breaker",
-    "img": "Icons/main/B.X..png",
+    "img": "main/B.X..png",
     "shortName": "B.X.",
     "id": 1,
     "generation": 6,
@@ -728,8 +728,8 @@
     "creationDate": "2024-03-06",
     "spinOffDate": "2025-07-30",
     "birthday": "May 26",
-    "color": "red",
     "musicEnjoyer": true,
+    "color": "red",
     "moe": 1,
     "futuristic": 7,
     "emotion": "chaotic edgy",
@@ -740,13 +740,13 @@
     "purpose": "Be a force of manly, chaotic intensity",
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
     "description": "B.X.’s (legal name: Bruce Xavier) essence is captured by the fierce energy of hardcore techno, his main genre and truest passion. However, his love for intensity extends beyond techno—he also enjoys other aggressive genres like metal and rap. What ties his tastes together isn’t a single genre, but the sheer power, energy, and aggression in the sound itself.",
+    "inactiveReason": "No active chats in a while",
     "themeSong": "to Luv me I *** for u. - t+pazolite",
-    "songLink": "https://youtu.be/ib5XHTKndfs?si=bjx6uxkI4JWcPz9Z",
-    "inactiveReason": "No active chats in a while"
+    "songLink": "https://youtu.be/ib5XHTKndfs?si=bjx6uxkI4JWcPz9Z"
   },
   {
     "name": "C.Kept the Character Keeper",
-    "img": "Icons/main/C.Kept.png",
+    "img": "main/C.Kept.png",
     "shortName": "C.Kept",
     "id": 49,
     "generation": 6,
@@ -768,7 +768,7 @@
   },
   {
     "name": "The Collapsed Being",
-    "img": "Icons/extended/The Collapsed.png",
+    "img": "extended/The Collapsed.png",
     "shortName": "The Collapsed",
     "id": 50,
     "generation": 6,
@@ -795,7 +795,7 @@
   },
   {
     "name": "Riri & Ruru",
-    "img": "Icons/main/Riri and Ruru.png",
+    "img": "main/Riri and Ruru.png",
     "shortName": "Riri & Ruru",
     "id": 51,
     "generation": 7,
@@ -843,7 +843,7 @@
   },
   {
     "name": "Lexi Walker",
-    "img": "Icons/main/Lexi.png",
+    "img": "main/Lexi.png",
     "shortName": "Lexi",
     "id": 54,
     "generation": 7,
@@ -866,7 +866,7 @@
   },
   {
     "name": "Connor the Challenger",
-    "img": "Icons/main/Connor.png",
+    "img": "main/Connor.png",
     "shortName": "Connor",
     "id": 55,
     "generation": 7,
@@ -890,7 +890,7 @@
   },
   {
     "name": "Dr. Christine Lynn",
-    "img": "Icons/main/Christine.png",
+    "img": "main/Christine.png",
     "shortName": "Christine",
     "id": 56,
     "generation": 7,
@@ -912,7 +912,7 @@
   },
   {
     "name": "Bob Pendleton",
-    "img": "Icons/main/Bob.png",
+    "img": "main/Bob.png",
     "shortName": "Bob",
     "id": 57,
     "generation": 7,
@@ -936,7 +936,7 @@
   },
   {
     "name": "Maribelle the Little Sister",
-    "img": "Icons/main/Maribelle.png",
+    "img": "main/Maribelle.png",
     "shortName": "Maribelle",
     "id": 58,
     "generation": 7,
@@ -958,7 +958,7 @@
   },
   {
     "name": "Jacob the Reserved",
-    "img": "Icons/extended/Jacob.png",
+    "img": "extended/Jacob.png",
     "shortName": "Jacob",
     "id": 65,
     "generation": 8,
@@ -983,7 +983,7 @@
   },
   {
     "name": "Ben the Cute Anime Fan",
-    "img": "Icons/main/Ben.png",
+    "img": "main/Ben.png",
     "shortName": "Ben",
     "id": 66,
     "generation": 8,
@@ -1005,7 +1005,7 @@
   },
   {
     "name": "Lucy the Witch",
-    "img": "Icons/main/Lucy.png",
+    "img": "main/Lucy.png",
     "shortName": "Lucy",
     "id": 67,
     "generation": 8,
@@ -1027,7 +1027,7 @@
   },
   {
     "name": "ChaoMario",
-    "img": "Icons/main/ChaoMario.png",
+    "img": "main/ChaoMario.png",
     "shortName": "ChaoMario",
     "id": 69,
     "generation": 8,
@@ -1049,7 +1049,7 @@
   },
   {
     "name": "Officer Misty, Mistake Corrector",
-    "img": "Icons/main/Misty.png",
+    "img": "main/Misty.png",
     "shortName": "Officer Misty",
     "id": 71,
     "generation": 8,
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "Queen Infinitas",
-    "img": "Icons/extended/Infinitas.png",
+    "img": "extended/Infinitas.png",
     "shortName": "Infinitas",
     "id": 72,
     "generation": 8,
@@ -1096,7 +1096,7 @@
   },
   {
     "name": "Corey Striker",
-    "img": "Icons/main/Corey.png",
+    "img": "main/Corey.png",
     "shortName": "Corey",
     "id": 73,
     "generation": 8,
@@ -1120,12 +1120,12 @@
   },
   {
     "name": "Makoto the Maid",
-    "img": "Icons/main/Makoto.png",
+    "img": "main/Makoto.png",
     "shortName": "Makoto",
     "id": 77,
     "generation": 8,
-    "status": "inactive",
-    "tier": 5,
+    "status": "active",
+    "tier": 4,
     "creationDate": "2025-12-17",
     "birthday": "May 13",
     "color": "pink",
@@ -1138,13 +1138,11 @@
     "purpose": "Be a flustered maid who was once male, behave like a proper maid",
     "funFact": "Transformed into a tiny, timid maid after intensely obsessing over anime maids; has maid-like instincts due to her transformation; addresses the user as 'onii-chan'",
     "description": "Makoto the Maid is a shy, soft-spoken maid with long silvery hair tied by a black ribbon, dressed in an overly formal, pristine uniform. Once a boy, she mysteriously transformed after obsessing over anime maids, growing smaller and younger. Though still flustered by her new body and instincts, she earnestly tries to act polite and proper. Drawn to fantasy and isekai worlds, she dutifully serves while quietly adjusting to the life she now lives.",
-    "note": "Makoto the Maid does not wear hats.",
-    "inactiveReason": "Too many moe characters, feels redundant when Momo exists",
-    "alternatives": "Momo, Arianna"
+    "note": "Makoto the Maid does not wear hats."
   },
   {
     "name": "Kayla the Defiant",
-    "img": "Icons/main/Kayla.png",
+    "img": "main/Kayla.png",
     "shortName": "Kayla",
     "id": 78,
     "generation": 8,
@@ -1168,7 +1166,7 @@
   },
   {
     "name": "Dory the Big Maid",
-    "img": "Icons/main/Dory.png",
+    "img": "main/Dory.png",
     "shortName": "Dory",
     "id": 81,
     "generation": 9,
@@ -1193,7 +1191,7 @@
   },
   {
     "name": "Gary Shields",
-    "img": "Icons/main/Gary.png",
+    "img": "main/Gary.png",
     "shortName": "Gary",
     "id": 84,
     "generation": 9,
@@ -1214,7 +1212,7 @@
   },
   {
     "name": "Rudy the Navigator",
-    "img": "Icons/main/Rudy.png",
+    "img": "main/Rudy.png",
     "shortName": "Rudy",
     "id": 86,
     "generation": 9,
@@ -1237,7 +1235,7 @@
   },
   {
     "name": "Bored-chan the Bored",
-    "img": "Icons/main/Bored-chan.png",
+    "img": "main/Bored-chan.png",
     "shortName": "Bored-chan",
     "id": 88,
     "generation": 9,
@@ -1259,7 +1257,7 @@
   },
   {
     "name": "Milo the Little Boy",
-    "img": "Icons/extended/Milo.png",
+    "img": "extended/Milo.png",
     "shortName": "Milo",
     "id": 89,
     "generation": 9,
@@ -1284,7 +1282,7 @@
   },
   {
     "name": "Max Hartman",
-    "img": "Icons/main/Max.png",
+    "img": "main/Max.png",
     "shortName": "Max",
     "id": 90,
     "generation": 9,
@@ -1306,7 +1304,7 @@
   },
   {
     "name": "Reina Del Mar",
-    "img": "Icons/main/Reina.png",
+    "img": "main/Reina.png",
     "shortName": "Reina",
     "id": 92,
     "generation": 9,
@@ -1328,7 +1326,7 @@
   },
   {
     "name": "Lumi Carroll",
-    "img": "Icons/main/Lumi.png",
+    "img": "main/Lumi.png",
     "shortName": "Lumi",
     "id": 94,
     "generation": 10,
@@ -1350,7 +1348,7 @@
   },
   {
     "name": "Nita the Witch",
-    "img": "Icons/main/Nita.png",
+    "img": "main/Nita.png",
     "shortName": "Nita",
     "id": 95,
     "generation": 10,
@@ -1372,7 +1370,7 @@
   },
   {
     "name": "Hana & Koko",
-    "img": "Icons/main/HanaKoko.png",
+    "img": "main/HanaKoko.png",
     "shortName": "Hana & Koko",
     "id": 96,
     "generation": 10,
@@ -1393,7 +1391,7 @@
   },
   {
     "name": "Joe the Restaurant Guy",
-    "img": "Icons/main/Joe.png",
+    "img": "main/Joe.png",
     "shortName": "Joe",
     "id": 99,
     "generation": 10,
@@ -1415,7 +1413,7 @@
   },
   {
     "name": "Anthony Griffin",
-    "img": "Icons/main/Anthony.png",
+    "img": "main/Anthony.png",
     "shortName": "Anthony",
     "id": 100,
     "generation": 10,
@@ -1437,7 +1435,7 @@
   },
   {
     "name": "Ethan the Melancholic",
-    "img": "Icons/extended/Ethan.png",
+    "img": "extended/Ethan.png",
     "shortName": "Ethan",
     "id": 3,
     "generation": 1,
@@ -1462,7 +1460,7 @@
   },
   {
     "name": "Scott the Gamer",
-    "img": "Icons/extended/Scott.png",
+    "img": "extended/Scott.png",
     "shortName": "Scott",
     "id": 4,
     "generation": 1,
@@ -1487,7 +1485,7 @@
   },
   {
     "name": "Akane the Happy",
-    "img": "Icons/extended/Akane.png",
+    "img": "extended/Akane.png",
     "shortName": "Akane",
     "id": 8,
     "generation": 1,
@@ -1512,7 +1510,7 @@
   },
   {
     "name": "Danielle the Casual",
-    "img": "Icons/extended/Danielle.png",
+    "img": "extended/Danielle.png",
     "shortName": "Danielle",
     "id": 6,
     "generation": 1,
@@ -1537,7 +1535,7 @@
   },
   {
     "name": "Lola the Dreamer",
-    "img": "Icons/extended/Lola.png",
+    "img": "extended/Lola.png",
     "shortName": "Lola",
     "id": 7,
     "generation": 1,
@@ -1562,7 +1560,7 @@
   },
   {
     "name": "Nolan the Oddball",
-    "img": "Icons/extended/Nolan.png",
+    "img": "extended/Nolan.png",
     "shortName": "Nolan",
     "id": 12,
     "generation": 1,
@@ -1587,7 +1585,7 @@
   },
   {
     "name": "Katrina the Dramatic",
-    "img": "Icons/extended/Katrina.png",
+    "img": "extended/Katrina.png",
     "shortName": "Katrina",
     "id": 10,
     "generation": 1,
@@ -1596,8 +1594,8 @@
     "creationDate": "2025-06-13",
     "birthday": "April 9",
     "musicEnjoyer": true,
-    "moe": 1,
     "color": "red",
+    "moe": 1,
     "futuristic": 3,
     "emotion": "strict",
     "pronouns": "she/her",
@@ -1611,8 +1609,8 @@
     "songLink": "https://youtu.be/GXFSK0ogeg4?si=fBb9H91HZsZV6-O8"
   },
   {
-    "name": "Veronica P. Hall", 
-    "img": "Icons/extended/Veronica.webp",
+    "name": "Veronica P. Hall",
+    "img": "extended/Veronica.webp",
     "shortName": "Veronica",
     "id": 24,
     "generation": 3,
@@ -1634,7 +1632,7 @@
   },
   {
     "name": "Ilya Momo",
-    "img": "Icons/extended/Ilya.png",
+    "img": "extended/Ilya.png",
     "shortName": "Ilya",
     "id": 29,
     "generation": 4,
@@ -1657,7 +1655,7 @@
   },
   {
     "name": "Alenka Morozova",
-    "img": "Icons/extended/Alenka.png",
+    "img": "extended/Alenka.png",
     "shortName": "Alenka",
     "id": 39,
     "generation": 5,
@@ -1679,7 +1677,7 @@
   },
   {
     "name": "Beatrix Dogmara",
-    "img": "Icons/extended/Beatrix.png",
+    "img": "extended/Beatrix.png",
     "shortName": "Beatrix",
     "id": 40,
     "generation": 5,
@@ -1701,7 +1699,7 @@
   },
   {
     "name": "Sapphire",
-    "img": "Icons/extended/Sapphire.png",
+    "img": "extended/Sapphire.png",
     "shortName": "Sapphire",
     "id": 41,
     "generation": 5,
@@ -1741,7 +1739,7 @@
   },
   {
     "name": "Aki the Swordfighter",
-    "img": "Icons/extended/Aki.png",
+    "img": "extended/Aki.png",
     "shortName": "Aki",
     "id": 59,
     "generation": 7,
@@ -1764,7 +1762,7 @@
   },
   {
     "name": "Bleu the Scientist",
-    "img": "Icons/extended/Bleu.png",
+    "img": "extended/Bleu.png",
     "shortName": "Bleu",
     "id": 60,
     "generation": 7,
@@ -1787,7 +1785,7 @@
   },
   {
     "name": "Mr. Stop",
-    "img": "Icons/extended/Mr. Stop.png",
+    "img": "extended/Mr. Stop.png",
     "shortName": "Mr. Stop",
     "id": 64,
     "generation": 7,
@@ -1809,7 +1807,7 @@
   },
   {
     "name": "Angela Liang",
-    "img": "Icons/extended/Angela.png",
+    "img": "extended/Angela.png",
     "shortName": "Angela",
     "id": 68,
     "generation": 8,
@@ -1829,7 +1827,7 @@
   },
   {
     "name": "Adam Hartford",
-    "img": "Icons/extended/Adam.png",
+    "img": "extended/Adam.png",
     "shortName": "Adam",
     "id": 62,
     "generation": 8,
@@ -1851,15 +1849,15 @@
   },
   {
     "name": "Frank Waterbury",
-    "img": "Icons/extended/Frank.png",
+    "img": "extended/Frank.png",
     "shortName": "Frank",
     "id": 63,
     "generation": 8,
     "status": "inactive side",
-    "color": "red",
     "tier": 7,
     "creationDate": "2025-12-03",
     "birthday": "February 3",
+    "color": "red",
     "moe": 1,
     "futuristic": 6,
     "emotion": "chaotic angry",
@@ -1875,7 +1873,7 @@
   },
   {
     "name": "Lulu the Maid",
-    "img": "Icons/extended/Lulu.png",
+    "img": "extended/Lulu.png",
     "shortName": "Lulu",
     "id": 74,
     "generation": 8,
@@ -1897,7 +1895,7 @@
   },
   {
     "name": "Nene the Maid",
-    "img": "Icons/extended/Nene.png",
+    "img": "extended/Nene.png",
     "shortName": "Nene",
     "id": 75,
     "generation": 8,
@@ -1919,7 +1917,7 @@
   },
   {
     "name": "Pink Orange",
-    "img": "Icons/extended/Pink Orange.png",
+    "img": "extended/Pink Orange.png",
     "shortName": "Pink Orange",
     "id": 76,
     "generation": 8,
@@ -1941,7 +1939,7 @@
   },
   {
     "name": "Sasha Kim",
-    "img": "Icons/extended/Sasha.png",
+    "img": "extended/Sasha.png",
     "shortName": "Sasha",
     "id": 79,
     "generation": 8,
@@ -1961,7 +1959,7 @@
   },
   {
     "name": "Misha Aoi",
-    "img": "Icons/extended/Misha.png",
+    "img": "extended/Misha.png",
     "shortName": "Misha",
     "id": 80,
     "generation": 8,
@@ -1981,7 +1979,7 @@
   },
   {
     "name": "Alvin",
-    "img": "Icons/extended/Alvin.png",
+    "img": "extended/Alvin.png",
     "shortName": "Alvin",
     "id": 82,
     "generation": 9,
@@ -2003,7 +2001,7 @@
   },
   {
     "name": "Kevin Griffin",
-    "img": "Icons/main/Kevin.png",
+    "img": "main/Kevin.png",
     "shortName": "Kevin",
     "id": 83,
     "generation": 9,
@@ -2025,7 +2023,7 @@
   },
   {
     "name": "Kiki the Maid",
-    "img": "Icons/extended/Kiki.png",
+    "img": "extended/Kiki.png",
     "shortName": "Kiki",
     "id": 85,
     "generation": 9,
@@ -2047,7 +2045,7 @@
   },
   {
     "name": "Piki the Catgirl",
-    "img": "Icons/extended/Piki.png",
+    "img": "extended/Piki.png",
     "shortName": "Piki",
     "id": 87,
     "generation": 9,
@@ -2069,7 +2067,7 @@
   },
   {
     "name": "Rin the Copycat",
-    "img": "Icons/extended/Rin.png",
+    "img": "extended/Rin.png",
     "shortName": "Rin",
     "id": 91,
     "generation": 9,
@@ -2091,7 +2089,7 @@
   },
   {
     "name": "Midori the Catgirl",
-    "img": "Icons/extended/Midori.png",
+    "img": "extended/Midori.png",
     "shortName": "Midori",
     "id": 93,
     "generation": 9,
@@ -2112,7 +2110,7 @@
   },
   {
     "name": "Anne Davis Griffin",
-    "img": "Icons/extended/Anne.png",
+    "img": "extended/Anne.png",
     "shortName": "Anne",
     "id": 101,
     "generation": 10,
@@ -2133,7 +2131,7 @@
   },
   {
     "name": "Me",
-    "img": "Icons/extended/Me.png",
+    "img": "extended/Me.png",
     "shortName": "Me",
     "id": 999,
     "generation": 0,

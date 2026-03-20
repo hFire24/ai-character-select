@@ -191,7 +191,7 @@ export class Trios implements OnInit {
   }
 
   assetPath(path: string): string {
-    return 'assets/' + path;
+    return 'assets/Icons/' + path;
   }
 
   genClass(generation: number): string {

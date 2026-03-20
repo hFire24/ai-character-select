@@ -74,7 +74,7 @@ export class TournamentBracket implements OnInit {
       const player = playersBySeed.get(seedNumber);
       return player || {
         name: 'BYE',
-        img: 'Icons/extended/Unknown.png',
+        img: 'extended/Unknown.png',
         id: -1,
         shortName: 'BYE',
         tier: fallbackTier,
@@ -151,7 +151,7 @@ export class TournamentBracket implements OnInit {
   }
 
   assetPath(path: string) {
-    return 'assets/' + path;
+    return 'assets/Icons/' + path;
   }
 
   isWinner(characterId: number): boolean {

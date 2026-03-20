@@ -56,7 +56,7 @@
 		<h3>Selected Character:</h3>
 		<img [src]="'assets/' + selectedCharacter.img" [alt]="selectedCharacter.name"
 		width="128" height="128"
-		(error)="selectedCharacter.img = 'Icons/extended/Unknown.png'" 
+		(error)="selectedCharacter.img = 'extended/Unknown.png'" 
 		(click)="showCard = true"
 		[ngStyle]="{cursor: 'pointer'}"/>
 		<p>{{ selectedCharacter.name }}</p>

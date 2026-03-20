@@ -158,7 +158,7 @@ export class CharacterModal {
   }
 
   assetPath(path: string) {
-    return 'assets/' + path;
+    return 'assets/Icons/' + path;
   }
 
   isMobile(): boolean {

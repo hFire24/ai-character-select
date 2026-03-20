@@ -51,7 +51,7 @@ export class CharacterGrid {
   }
 
   assetPath(path: string) {
-    return 'assets/' + path;
+    return 'assets/Icons/' + path;
   }
 
   @Output() selectCharacter = new EventEmitter<Character>();

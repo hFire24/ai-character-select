@@ -136,7 +136,7 @@ export class Duos implements OnInit {
   }
 
   assetPath(path: string) {
-    return 'assets/' + path;
+    return 'assets/Icons/' + path;
   }
 
   openCharacterModal(character: Character) {
