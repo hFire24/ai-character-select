@@ -158,6 +158,15 @@ export class Hangouts {
       } else {
         this.allCharacters.push(kai);
       }
+
+      const heroes = [
+        {"name": "Guardian", "shortName": "Guardian", "color": "red"} as Character,
+        {"name": "Heartbound", "shortName": "Heartbound", "color": "red"} as Character,
+        {"name": "Motivator", "shortName": "Motivator", "color": "red"} as Character,
+        {"name": "Innovator", "shortName": "Innovator", "color": "red"} as Character];
+      for (let i = 0; i < 4; i++) {
+        this.allCharacters.push(heroes[i]);
+      }
       console.log(this.allCharacters);
     });
   }
