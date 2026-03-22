@@ -130,7 +130,7 @@ export class TierList {
           if (shortNameMap[name]) name = shortNameMap[name];
           return {
             name,
-            img: c.img ? 'assets/' + c.img : 'assets/Icons/extended/Unknown.png',
+            img: c.img ? 'assets/Icons/' + c.img : 'assets/Icons/extended/Unknown.png',
             id: c.id,
             status: c.status,
             tier: c.tier,
