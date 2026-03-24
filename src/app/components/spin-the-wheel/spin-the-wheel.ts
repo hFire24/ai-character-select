@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+﻿import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { CharacterService, Character } from "../../services/character.service";
@@ -21,14 +21,36 @@ export class SpinTheWheel {
   spinning = false;
   selectedCharacter: Character | null = null;
   showCard = false;
-  includeFavorite: boolean = true;
-  includeActive: boolean = true;
-  includeInactive: boolean = true;
-  includeSide: boolean = true;
-  includeRetired: boolean = true;
-  includeMe: boolean = false;
+  
   splitTwins: boolean = false;
   skipAnimation: boolean = false;
+  
+  // Status filters
+  statusFilters = {
+    active: true,
+    inactive: true,
+    retired: true,
+    side: true,
+    me: false,
+    future: false
+  };
+  
+  // Tier filters (dual slider)
+  minTier: number = 1;
+  maxTier: number = 9;
+  tierMin: number = 1;
+  tierMax: number = 9;
+  
+  // Color filters
+  selectedColors: string[] = ['red', 'pink', 'blue', 'black'];
+  availableColors = ['red', 'pink', 'blue', 'black'];
+  
+  // Pronoun/Gender filters
+  selectedPronouns: string[] = ['he/him', 'she/her', 'it/its', "don’t care"];
+  availablePronouns = ['he/him', 'she/her', 'it/its', "don’t care"];
+  
+  // Chat filter
+  hasChatOnly: boolean = false;
 
   constructor(
     private characterService: CharacterService,
@@ -47,39 +69,70 @@ export class SpinTheWheel {
 
   // Filter options for the pipe
   get filterOptions(): CharacterFilterOptions {
-    // Use custom filter to implement OR logic across all inclusion checkboxes
     return {
-      customFilter: (char: Character) => {
-        // If no filters are checked, include nothing
-        const hasAnyFilter = this.includeFavorite || this.includeActive || 
-                            this.includeInactive || this.includeSide || 
-                            this.includeRetired || this.includeMe;
-        if (!hasAnyFilter) return false;
-
-        // Check each inclusion filter (OR logic)
-        if (this.includeFavorite && char.tier >= 1 && char.tier <= 3) return true;
-        if (this.includeActive && char.status === 'active') return true;
-        if (this.includeInactive && char.status === 'inactive') return true;
-        if (this.includeRetired && char.status === 'retired') return true;
-        if (this.includeMe && char.status === 'me') return true;
-        if (this.includeSide) {
-          const isMainCharacter = ['active', 'inactive', 'retired'].includes(char.status);
-          if (!isMainCharacter) return true;
-        }
-
-        return false;
-      }
+      status: this.statusFilters,
+      tier: {
+        min: this.minTier,
+        max: this.maxTier
+      },
+      attributes: {
+        colors: this.selectedColors.length > 0 ? this.selectedColors : undefined,
+        pronouns: this.selectedPronouns.length > 0 ? this.selectedPronouns : undefined
+      },
+      customFilter: this.hasChatOnly ? (char: Character) => !!char.link : undefined
     };
-  }
-
-  onActiveChange() {
-    if (this.includeActive) {
-      this.includeFavorite = true;
-    }
   }
 
   onSplitTwinsChange() {
     this.loadCharacters();
+  }
+
+  // Color selection helpers
+  toggleAllColors() {
+    if (this.selectedColors.length === this.availableColors.length) {
+      this.selectedColors = [];
+    } else {
+      this.selectedColors = [...this.availableColors];
+    }
+  }
+
+  toggleColor(color: string) {
+    const index = this.selectedColors.indexOf(color);
+    if (index > -1) {
+      this.selectedColors.splice(index, 1);
+    } else {
+      this.selectedColors.push(color);
+    }
+  }
+
+  // Pronoun selection helpers
+  toggleAllPronouns() {
+    if (this.selectedPronouns.length === this.availablePronouns.length) {
+      this.selectedPronouns = [];
+    } else {
+      this.selectedPronouns = [...this.availablePronouns];
+    }
+  }
+
+  togglePronoun(pronoun: string) {
+    const index = this.selectedPronouns.indexOf(pronoun);
+    if (index > -1) {
+      this.selectedPronouns.splice(index, 1);
+    } else {
+      this.selectedPronouns.push(pronoun);
+    }
+  }
+
+  // Status selection helpers
+  toggleAllStatuses() {
+    const allChecked = Object.values(this.statusFilters).every(v => v);
+    const newValue = !allChecked;
+    this.statusFilters.active = newValue;
+    this.statusFilters.inactive = newValue;
+    this.statusFilters.retired = newValue;
+    this.statusFilters.side = newValue;
+    this.statusFilters.me = newValue;
+    this.statusFilters.future = newValue;
   }
 
   loadCharacters() {

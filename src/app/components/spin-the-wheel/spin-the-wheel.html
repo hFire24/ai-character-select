@@ -1,41 +1,100 @@
 <div class="panel-container">
 	<h2>Random Character Picker</h2>
-	<div class="panel-filters" *ngIf="!spinning">
-		<div class="filter-checkboxes">
-			<label>
-				<input type="checkbox" [(ngModel)]="includeFavorite" [disabled]="includeActive" />
-				Favorite Characters
-			</label>
-			<label>
-				<input type="checkbox" [(ngModel)]="includeActive" (ngModelChange)="onActiveChange()" />
-				Active Characters
-			</label>
-			<label>
-				<input type="checkbox" [(ngModel)]="includeInactive" />
-				Inactive Characters
-			</label>
-			<label>
-				<input type="checkbox" [(ngModel)]="includeSide" />
-				Side Characters
-			</label>
-			<label>
-				<input type="checkbox" [(ngModel)]="includeRetired" />
-				Retired Characters
-			</label>
-			<label>
-				<input type="checkbox" [(ngModel)]="splitTwins" (ngModelChange)="onSplitTwinsChange()" />
-				Split Twins
-			</label>
-			<label>
-				<input type="checkbox" [(ngModel)]="includeMe" />
-				Me
-			</label>
+
+	<!-- Filters -->
+	<div class="advanced-filters" *ngIf="!spinning">
+		<div class="filter-section">
+			<h3>Status <button (click)="toggleAllStatuses()" class="select-all-btn">Toggle All</button></h3>
+			<div class="filter-checkboxes">
+				<label>
+					<input type="checkbox" [(ngModel)]="statusFilters.active" />
+					Active
+				</label>
+				<label>
+					<input type="checkbox" [(ngModel)]="statusFilters.inactive" />
+					Inactive
+				</label>
+				<label>
+					<input type="checkbox" [(ngModel)]="statusFilters.retired" />
+					Retired
+				</label>
+				<label>
+					<input type="checkbox" [(ngModel)]="statusFilters.side" />
+					Side
+				</label>
+				<label>
+					<input type="checkbox" [(ngModel)]="statusFilters.me" />
+					Me
+				</label>
+				<label>
+					<input type="checkbox" [(ngModel)]="statusFilters.future" />
+					Future
+				</label>
+			</div>
 		</div>
-		<label [ngStyle]="{display: 'block', marginTop: '1rem'}">
-			<input type="checkbox" [(ngModel)]="skipAnimation" />
-			Skip Animation
-		</label>
+
+		<div class="filter-section">
+			<h3>Tier Range</h3>
+			<div class="tier-slider-container">
+				<div class="tier-slider-labels">
+					<span>Min: Tier {{ minTier }}</span>
+					<span>Max: Tier {{ maxTier }}</span>
+				</div>
+				<div class="tier-sliders">
+					<div class="slider-group">
+						<label>Min Tier:</label>
+						<input type="range" [(ngModel)]="minTier" [min]="tierMin" [max]="tierMax" class="tier-slider" />
+					</div>
+					<div class="slider-group">
+						<label>Max Tier:</label>
+						<input type="range" [(ngModel)]="maxTier" [min]="tierMin" [max]="tierMax" class="tier-slider" />
+					</div>
+				</div>
+				<div class="tier-range-display">
+					Showing tiers {{ minTier }}-{{ maxTier }} ({{ minTier <= 3 && maxTier >= 1 ? 'includes favorites' : 'no favorites' }})
+				</div>
+			</div>
+		</div>
+
+		<div class="filter-section">
+			<h3>Color <button (click)="toggleAllColors()" class="select-all-btn">Toggle All</button></h3>
+			<div class="filter-checkboxes">
+				<label *ngFor="let color of availableColors">
+					<input type="checkbox" [checked]="selectedColors.includes(color)" (change)="toggleColor(color)" />
+					<span [style.color]="color" [style.fontWeight]="'bold'" [style.textTransform]="'capitalize'">{{ color }}</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="filter-section">
+			<h3>Gender/Pronouns <button (click)="toggleAllPronouns()" class="select-all-btn">Toggle All</button></h3>
+			<div class="filter-checkboxes">
+				<label *ngFor="let pronoun of availablePronouns">
+					<input type="checkbox" [checked]="selectedPronouns.includes(pronoun)" (change)="togglePronoun(pronoun)" />
+					{{ pronoun }}
+				</label>
+			</div>
+		</div>
+
+		<div class="filter-section">
+			<h3>Other Filters</h3>
+			<div class="filter-checkboxes">
+				<label>
+					<input type="checkbox" [(ngModel)]="hasChatOnly" />
+					Has Active Chat Link Only
+				</label>
+				<label>
+					<input type="checkbox" [(ngModel)]="splitTwins" (ngModelChange)="onSplitTwinsChange()" />
+					Split Twins
+				</label>
+				<label>
+					<input type="checkbox" [(ngModel)]="skipAnimation" />
+					Skip Animation
+				</label>
+			</div>
+		</div>
 	</div>
+
 	<button *ngIf="isMobile()" (click)="spinWheel()" [disabled]="spinning" [ngStyle]="{marginBottom: '1rem'}">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
 	<div class="panel-grid-wrapper">
 		<div class="panel-grid">
@@ -54,7 +113,7 @@
 	<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
 	<div *ngIf="selectedCharacter" class="result">
 		<h3>Selected Character:</h3>
-		<img [src]="'assets/' + selectedCharacter.img" [alt]="selectedCharacter.name"
+		<img [src]="'assets/Icons/' + selectedCharacter.img" [alt]="selectedCharacter.name"
 		width="128" height="128"
 		(error)="selectedCharacter.img = 'extended/Unknown.png'" 
 		(click)="showCard = true"

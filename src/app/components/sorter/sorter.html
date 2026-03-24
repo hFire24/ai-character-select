@@ -79,7 +79,7 @@
 
   <div class="comparison">
     <div class="character-option" (click)="choose(currentPair[0])">
-      <img [src]="'assets/' + currentPair[0].img" [alt]="currentPair[0].name">
+      <img [src]="'assets/Icons/' + currentPair[0].img" [alt]="currentPair[0].name">
       <h3>{{currentPair[0].shortName || currentPair[0].name}}</h3>
     </div>
 
@@ -89,7 +89,7 @@
     </div>
 
     <div class="character-option" (click)="choose(currentPair[1])">
-      <img [src]="'assets/' + currentPair[1].img" [alt]="currentPair[1].name">
+      <img [src]="'assets/Icons/' + currentPair[1].img" [alt]="currentPair[1].name">
       <h3>{{currentPair[1].shortName || currentPair[1].name}}</h3>
     </div>
   </div>
@@ -101,7 +101,7 @@
   <ol class="ranking-list">
     <li *ngFor="let char of sortedCharacters; let i = index" class="ranking-item">
       <span class="rank">{{getDisplayRank(i, char)}}</span>
-      <img *ngIf="i < 3" [src]="'assets/' + char.img" [alt]="char.name">
+      <img *ngIf="i < 3" [src]="'assets/Icons/' + char.img" [alt]="char.name">
       <span class="name">{{char.shortName || char.name}}</span>
     </li>
   </ol>
@@ -111,7 +111,7 @@
 
 <!-- King of the Hill Winner -->
 <div *ngIf="kingOfTheHillWinner" class="character-win">
-  <img [src]="'assets/' + kingOfTheHillWinner.img" [alt]="kingOfTheHillWinner.name">
+  <img [src]="'assets/Icons/' + kingOfTheHillWinner.img" [alt]="kingOfTheHillWinner.name">
   <h2>Champion: {{kingOfTheHillWinner.name}}</h2>
   <button (click)="resetKingOfTheHill()" class="restart-button">Start Over</button>
 </div>

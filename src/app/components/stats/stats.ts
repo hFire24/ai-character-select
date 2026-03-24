@@ -93,7 +93,10 @@ export class Stats implements OnInit {
         const timestampKey = 'chatLinkTimestamp_' + (character.id || 'unknown');
         const timestamp = localStorage.getItem(timestampKey);
         
-        if (timestamp) {
+        // Exclude side characters (status includes 'side')
+        const isSideCharacter = character.status.includes('side');
+        
+        if (timestamp && !isSideCharacter) {
           chatsWithTimestamps.push({
             character: character,
             timestamp: new Date(timestamp)
@@ -109,7 +112,7 @@ export class Stats implements OnInit {
       // Filter for active characters that have never been chatted with, excluding side characters
       const activeNonSide = pipe.transform(characters, {
         status: { active: true },
-        exclude: { statuses: ['active side'] }
+        customFilter: (char: Character) => !char.status.includes('side')
       });
       
       this.neverChattedCharacters = activeNonSide.filter(char => {
