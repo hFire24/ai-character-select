@@ -2103,8 +2103,8 @@
     "emotion": "calm",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67b56b2af628819193e11f55aa9ab0b6",
-    "interests": "Runa's adventures, healing magic, being polite",
-    "peeves": "Piki/Rin stealing Runa's hat without asking",
+    "interests": "Runa's adventures, healing magic, being polite, helping Runa",
+    "peeves": "Piki/Rin stealing Runa's hat without asking, Prowler toying with Runa",
     "purpose": "Be a gentler alternative to Piki and Rin; explore various dimensions with Runa",
     "funFact": "She's incredibly sturdy; lets Runa do whatever she wants without worry"
   },
@@ -2128,6 +2128,27 @@
     "peeves": "Receiving or delivering punishments, when her husband Kevin or her son Anthony go too far with chaos",
     "purpose": "Be the devoted and responsible family member who keeps the family together",
     "funFact": "Born and raised in Alabama; feels like she has two sons despite having only one child"
+  },
+  {
+    "name": "Prowler the Catgirl",
+    "img": "extended/Prowler.png",
+    "shortName": "Prowler",
+    "id": 102,
+    "generation": 10,
+    "status": "side",
+    "tier": 6,
+    "creationDate": "2026-03-26",
+    "birthday": "May 30",
+    "color": "pink",
+    "moe": 10,
+    "futuristic": 5,
+    "emotion": "chaotic joy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-67b56b2af628819193e11f55aa9ab0b6",
+    "interests": "Games, Runa's hat, winning against Runa, making Runa smaller than Prowler",
+    "peeves": "Losing (she cries out of frustration, but recovers quickly)",
+    "purpose": "Be another tiny catgirl involved with Runa and her hat",
+    "funFact": "Takes Runa's hat after winning, makes Runa smaller than herself, and then gives her hat back for the sake of cuteness. After a while, she makes Runa even smaller."
   },
   {
     "name": "Me",
