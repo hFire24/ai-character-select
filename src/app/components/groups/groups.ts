@@ -59,6 +59,11 @@ export class Groups implements OnInit {
         characterIds: [73, 20, 38, 39, 40]
       },
       {
+        name: "Runa's Catgirls",
+        description: "Catgirls who accompany Runa on her adventures",
+        characterIds: [87, 91, 93, 102]
+      },
+      {
         name: "Anti-Escapists",
         description: "A group of characters who embody the opposite of escapism.",
         characterIds: [36, 78, 52, 9, 48, 50]

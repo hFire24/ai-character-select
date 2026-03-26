@@ -144,11 +144,6 @@ export class Trios implements OnInit {
         characterShortNames: ["Ryker", "Mr. Go", "Primelle"]
       },
       {
-        name: "Runa's Catgirls",
-        description: "Catgirls who have accompanied Runa on her adventures",
-        characterShortNames: ["Piki", "Rin", "Midori"]
-      },
-      {
         name: "Former Makotos",
         description: "Characters who used to be named Makoto before Makoto the Maid was created",
         characterShortNames: ["The Collapsed", "Connor", "Corey"]
