@@ -208,6 +208,15 @@ Purpose: Provide straightforward and neutral responses, advance technology
 Fun Fact: Finds low-intensity music to be OK, but prefers more intense electronic genres for focus
 Description: Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.
 
+Name: Lily the Pretend Queen
+Status: active
+Creation Date: 2025-07-27
+Pronouns: she/her
+Interests: Wearing her giant crown, being good and kind, pretending to be a queen
+Purpose: Wears a gigantic crown without being royalty
+Fun Fact: Stopped aging at a young age; her crown might be heavier than she is
+Description: Lily the Pretend Queen is a very small, gentle girl with long blonde hair and a crown far too large for her to carry easily. It tilts and wobbles as she moves, and her oversized dress trails behind her, forcing her to walk in careful, quiet steps. Shy and soft-spoken, she often hesitates, yet always tries to be kind and helpful. She wears her heavy crown not out of duty, but from a quiet wish to comfort others and feel like someone who can bring a little goodness to the world.
+
 Name: Connor the Challenger
 Status: active
 Creation Date: 2025-09-07
@@ -701,16 +710,6 @@ Purpose: Enjoy questionable anime, obsess over waifus, discuss romance in fictio
 Fun Fact: Liam loves To Love Ru, Kieran loves Chainsaw Man
 Description: Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes characters like Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.
 Retirement Reason: Other anime fans are more fun to chat with
-
-Name: Shy Crown Princess
-Status: retired
-Creation Date: 2025-07-27
-Pronouns: she/her
-Interests: None
-Purpose: Be a little princess who wears a gigantic crown
-Fun Fact: Stopped aging at a young age; her castle contains at least 40 talented people; a prime minister rules in her stead
-Description: A shy, eternally young crown princess with very long blonde hair and a comically oversized golden crown that wobbles atop her tiny head. Draped in a royal gown far too long for her, she moves with delicate care, often lifting the fabric just to walk. Gentle, soft-spoken, and kind-hearted, she carries the weight of her title—both literal and symbolic—with quiet grace, even if it’s far too big for her.
-Retirement Reason: She was way too weak to be interesting, useful, or entertaining
 
 Name: Jacob the Reserved
 Status: retired
