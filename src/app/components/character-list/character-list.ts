@@ -6,6 +6,7 @@ import { RelativeDatePipe } from '../../pipes/relative-date.pipe';
 interface LastChattedCharacter {
   character: Character;
   timestamp: Date;
+  chatCount: number;
 }
 
 @Component({

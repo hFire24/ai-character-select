@@ -20,6 +20,7 @@ interface CharacterStats {
 interface LastChattedCharacter {
   character: Character;
   timestamp: Date;
+  chatCount: number;
 }
 
 @Component({
@@ -97,9 +98,15 @@ export class Stats implements OnInit {
         const isSideCharacter = character.status.includes('side');
         
         if (timestamp && !isSideCharacter) {
+          // Get the chat link counter
+          const counterKey = 'chatLinkCounter_' + (character.id || 'unknown');
+          const counter = localStorage.getItem(counterKey);
+          const chatCount = counter ? parseInt(counter, 10) : 0;
+          
           chatsWithTimestamps.push({
             character: character,
-            timestamp: new Date(timestamp)
+            timestamp: new Date(timestamp),
+            chatCount: chatCount
           });
         }
       });

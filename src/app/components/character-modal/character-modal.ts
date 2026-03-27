@@ -56,6 +56,7 @@ export class CharacterModal {
   }
 
   updateChatLink() {
+    const oldLink = this.chatLink; // Store the current link before updating
     const newLink = prompt('Enter new chat link:', this.chatLink);
     console.log('New link entered:', newLink);
     if (newLink) {
@@ -72,6 +73,11 @@ export class CharacterModal {
         const timestampKey = this.getChatLinkTimestampKey();
         const now = new Date().toISOString();
         localStorage.setItem(timestampKey, now);
+        
+        // Increment counter only if it's a new, different, valid link
+        if (this.chatLink !== oldLink) {
+          this.incrementChatLinkCounter();
+        }
       }
       
       alert('Chat link updated!');
@@ -98,6 +104,23 @@ export class CharacterModal {
   getChatLinkTimestampKey(): string {
     // Use character id for uniqueness
     return 'chatLinkTimestamp_' + (this.character.id || 'unknown');
+  }
+
+  getChatLinkCounterKey(): string {
+    // Use character id for uniqueness
+    return 'chatLinkCounter_' + (this.character.id || 'unknown');
+  }
+
+  getChatLinkCounter(): number {
+    const key = this.getChatLinkCounterKey();
+    const counter = localStorage.getItem(key);
+    return counter ? parseInt(counter, 10) : 0;
+  }
+
+  incrementChatLinkCounter(): void {
+    const key = this.getChatLinkCounterKey();
+    const currentCount = this.getChatLinkCounter();
+    localStorage.setItem(key, (currentCount + 1).toString());
   }
 
   getChatLinkTimestamp(): string | null {
