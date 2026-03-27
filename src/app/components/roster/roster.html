@@ -46,7 +46,7 @@
     }
   </div>
 
-  <div class="sort-section">
+  <!--div class="sort-section">
     <div class="sort-label">Sort By:</div>
     <div class="sort-buttons">
       <button 
@@ -85,7 +85,7 @@
         ✕ Clear Sort
       </button>
     </div>
-  </div>
+  </div-->
   
   <div class="button-container">
     @if (showingMainCharacters) {
@@ -96,7 +96,10 @@
         📊 Show Stats
       </button>
     }
+    <button (click)="selectRandomCharacter(true)" style="background-color: #FF4C4C;">⚔️ Random Character (RP Friendly)</button>
+    <button (click)="selectRandomCharacter(false)">🎲 Random Character (All)</button>
   </div>
+  
 </header>
 <app-character-grid 
   [filters]="filters" 

@@ -21,6 +21,9 @@ export interface CharacterFilterOptions {
     future?: boolean;
   };
   
+  // RP friendly filter (only pink and red characters)
+  rpFriendly?: boolean;
+  
   // Tier filters
   tier?: {
     min?: number;        // Minimum tier (inclusive)
@@ -131,6 +134,13 @@ export class CharacterFilterPipe implements PipeTransform {
       if (options.status) {
         const statusMatch = this.checkStatus(character, options.status);
         if (!statusMatch) return false;
+      }
+
+      // RP Friendly filter (only pink and red characters)
+      if (options.rpFriendly === true) {
+        if (character.color !== 'pink' && character.color !== 'red') {
+          return false;
+        }
       }
 
       // Tier filter
