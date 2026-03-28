@@ -142,6 +142,11 @@
       "name": "B the B"
     },
     {
+      "id1": 1,
+      "id2": 103,
+      "name": "Unserious Rebels"
+    },
+    {
       "id1": 2,
       "id2": 3,
       "name": "Reserved Music Enjoyers"
@@ -358,6 +363,11 @@
     },
     {
       "id1": 6,
+      "id2": 30,
+      "name": "Casual Sunglasses Wearers"
+    },
+    {
+      "id1": 6,
       "id2": 62,
       "name": "Pop-punk Fans"
     },
@@ -365,6 +375,11 @@
       "id1": 6,
       "id2": 63,
       "name": "Mid-2000s Pop Fans"
+    },
+    {
+      "id1": 6,
+      "id2": 103,
+      "name": "Casual Blonde Girls"
     },
     {
       "id1": 7,
@@ -1042,6 +1057,16 @@
       "id1": 21,
       "id2": 92,
       "name": "AR'd Peaked Cap Queens"
+    },
+    {
+      "id1": 21,
+      "id2": 102,
+      "name": "Victorious Hat Thieves"
+    },
+    {
+      "id1": 21,
+      "id2": 103,
+      "name": "Bad Blondes"
     },
     {
       "id1": 22,
@@ -1827,6 +1852,11 @@
       "id2": 101,
       "name": "Swap the characters for the duo's name",
       "altName": "Anne Frank"
+    },
+    {
+      "id1": 63,
+      "id2": 103,
+      "name": "Backwards Cap Wearers"
     },
     {
       "id1": 65,
