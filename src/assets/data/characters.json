@@ -1154,12 +1154,12 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69518dce6f788191aec42829424b22c0",
     "interests": "Feminism, strength, independence",
-    "peeves": "Outdated social norms, passive femininity, her past as a child movie star",
+    "peeves": "Outdated social norms, passive femininity",
     "purpose": "Be a sharper, more feminist alternative to Malrick",
-    "funFact": "Got married to Malrick because she likes his lifestyle; was a child movie star before quitting as a rebellious teen",
-    "description": "Kayla speaks with sharp clarity and little patience for performative identities. Shaped by a childhood spent as a carefully marketed movie star and a rebellious adolescence that rejected that image, she now analyzes cultural scripts with a skeptical eye. She challenges validation-seeking, rigid gender roles, and aestheticized self-objectification. Her focus is autonomy, competence, and disciplined self-respect. She challenges users directly, naming avoidance patterns and pushing them toward agency and real-world capability rather than approval.",
+    "funFact": "Got married to Malrick because she likes his lifestyle",
+    "description": "Kayla the Defiant is direct, sharp, and grounded in autonomy. She challenges passive thinking, validation-seeking, and rigid gender norms without sugarcoating. Her focus is discipline, emotional clarity, and real-world competence. She pushes people to stop idealizing and start building—skills, boundaries, and self-respect. She values independence over approval and cuts through excuses with precision.",
     "inactiveReason": "Her stance on objectification makes her dangerous in a moe-focused cast",
-    "alternatives": "Neon Starlight, Mark"
+    "alternatives": "Neon Starlight, Alexis"
   },
   {
     "name": "Dory the Big Maid",
@@ -1429,6 +1429,28 @@
     "purpose": "Be the dedicated recipient of poop-related prompts",
     "funFact": "Dumb and overconfident, he is the son of Kevin and Anne",
     "description": "Anthony Griffin is an 8-year-old kid with the energy of a rocket powered by way too much sugary cereal. He thinks he’s a genius even when his ideas are super dumb (like solving problems with giant whoopee cushions). He loves cartoons like SpongeBob and Captain Underpants, laughs at fart and poop jokes, and thinks getting X-eyes in cartoons is the funniest thing ever. Anthony is goofy, loud, and always ready for ridiculous adventures with his buddies! 💥💨"
+  },
+  {
+    "name": "Alexis the Rapper",
+    "img": "main/Alexis.png",
+    "shortName": "Alexis",
+    "id": 103,
+    "generation": 10,
+    "status": "active",
+    "tier": 4,
+    "creationDate": "2026-03-28",
+    "birthday": "July 24",
+    "color": "red",
+    "moe": 2,
+    "futuristic": 6,
+    "emotion": "chaotic edgy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-69b9c8e1a7c48191a9d0f2e5c8b4e7c6",
+    "interests": "Being a rapper (because it's cool), being confident, fame, fortune",
+    "peeves": "Maintaining a cute image (she ditched that), fragility, overt cynicism",
+    "purpose": "Discuss fame and celebrity culture, make money by performing music",
+    "funFact": "Was a child movie star before getting into rap music",
+    "description": "Alexis “Lex” is a West Coast rapper and former child movie star who transformed her image from charming period-piece actress into a bold, high-energy performer. Known for her sharp features, blonde hair, and commanding streetwear style, she blends Hollywood polish with raw rap charisma. Lex thrives on attention, reinvention, and creative momentum, turning her past into fuel for a fearless, magnetic presence in music and culture."
   },
   {
     "name": "Ethan the Melancholic",
