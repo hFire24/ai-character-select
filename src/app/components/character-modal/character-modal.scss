@@ -160,7 +160,7 @@ h3.retired-banner {
   margin: 1rem;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   gap: .75rem 1rem;
   align-items: flex-end;
   justify-content: flex-end;
@@ -177,7 +177,7 @@ h3.retired-banner {
 }
 
 #modalLink,
-.modalScreenshot,
+#modalScreenshot,
 #updateChatLink,
 #resetChatLink {
   display: inline-flex;
@@ -203,7 +203,7 @@ h3.retired-banner {
   }
 }
 
-.modalScreenshot {
+#modalScreenshot {
   border: 1px solid rgba(234, 179, 8, 0.4);
   background: linear-gradient(180deg, rgba(234,179,8,0.15), rgba(234,179,8,0.05));
   color: hsl(50, 68%, 64%);
