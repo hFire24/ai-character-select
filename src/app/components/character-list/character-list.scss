@@ -10,6 +10,26 @@
   }
 }
 
+.reset-all-button {
+  padding: 10px 20px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #dc2626;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
 .last-chatted-list, .never-chatted-list {
   display: flex;
   flex-direction: row;

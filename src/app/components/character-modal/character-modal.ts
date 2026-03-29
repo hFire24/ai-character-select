@@ -89,6 +89,15 @@ export class CharacterModal {
       alert('Chat link reset to default.');
     }
   }
+
+  resetChatLink() {
+    const confirmed = confirm('Are you sure you want to reset this chat link to the default?');
+    if (confirmed) {
+      this.chatLink = this.character.link;
+      localStorage.removeItem(this.getChatLinkKey());
+      alert('Chat link reset to default.');
+    }
+  }
   
   isValidChatLink(newLink: string) {
     const chatGPTPattern = /^https:\/\/chatgpt\.com\/(g\/[a-zA-Z0-9\-]+\/)?c\/[a-f0-9\-]+$/;
@@ -162,7 +171,7 @@ export class CharacterModal {
   ngOnInit() {
     document.addEventListener('mousedown', this.handleClickOutside);
     this.loadChatLink();
-    this.scheduleDailyCleanup();
+    // Daily cleanup removed - chat links are now only reset manually
   }
 
   ngOnDestroy() {

@@ -9,7 +9,8 @@
     [lastChattedCharacters]="lastChattedCharacters" 
     [neverChattedCharacters]="neverChattedCharacters"
     [isDesktop]="isDesktop"
-    (selectCharacter)="onCharacterClick($event)">
+    (selectCharacter)="onCharacterClick($event)"
+    (refreshData)="loadLastChattedCharacters()">
   </app-character-list>
 </div>
 

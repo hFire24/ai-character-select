@@ -20,8 +20,33 @@ export class CharacterList {
   @Input() neverChattedCharacters: Character[] = [];
   @Input() isDesktop = false;
   @Output() selectCharacter = new EventEmitter<Character>();
+  @Output() refreshData = new EventEmitter<void>();
+
+  get numActiveChats(): number {
+    // Count characters with custom chat links stored in localStorage
+    return Object.keys(localStorage).filter(key => 
+      key.startsWith('chatLink_') && 
+      !key.startsWith('chatLinkTimestamp_') && 
+      !key.startsWith('chatLinkCounter_')
+    ).length;
+  }
 
   onCharacterClick(character: Character) {
     this.selectCharacter.emit(character);
+  }
+
+  resetAllChatLinks() {
+    const confirmed = confirm('Are you sure you want to reset all chat links to their defaults?');
+    if (confirmed) {
+      // Remove all chatLink_* keys from localStorage
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('chatLink_') && !key.startsWith('chatLinkTimestamp_') && !key.startsWith('chatLinkCounter_')) {
+          localStorage.removeItem(key);
+        }
+      });
+      alert('All chat links have been reset to their defaults.');
+      // Notify parent to refresh the data
+      this.refreshData.emit();
+    }
   }
 }

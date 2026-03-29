@@ -1,6 +1,10 @@
 @if (isDesktop && lastChattedCharacters.length > 0) {
   <div class="last-chatted-section">
     <h2>Last Chatted</h2>
+    <p>Number of Active Chats: {{ numActiveChats }}</p>
+    @if (numActiveChats > 0) {
+      <button class="reset-all-button" (click)="resetAllChatLinks()">Reset All Chat Links</button>
+    }
     <p>Note: Only chats made after March 27, 2026 are counted.</p>
     <div class="last-chatted-list">
       @for (item of lastChattedCharacters; track item.character.id) {
