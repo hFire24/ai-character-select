@@ -51,9 +51,10 @@
   <div id="modalFooter">
     <div class="modalFooterGroup">
       <span *ngIf="hasLink()"><a id="modalLink" [href]="chatLink" target="_blank">Chat 🗣️</a></span>
-      <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
+      <span *ngIf="isMobile()" class="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
     </div>
     <div class="modalFooterGroup" *ngIf="!isMobile() && hasLink()">
+      <span class="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
       <button id="resetChatLink" (click)="resetChatLink()">Reset Chat Link 🔄️</button>
       <button id="updateChatLink" (click)="updateChatLink()">Update Chat Link</button>
     </div>
