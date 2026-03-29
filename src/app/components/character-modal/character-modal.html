@@ -49,13 +49,13 @@
     <div id="modalDescription" style="display: none;">{{character.description}}</div>
   </div>
   <div id="modalFooter">
-    <div class="modalFooterGroup">
-      <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
+    <div class="modalFooterGroup" *ngIf="hasLink() && !isMobile()">
+      <button id="resetChatLink" (click)="resetChatLink()">Reset Chat Link 🔄️</button>
     </div>
-    <div class="modalFooterGroup" *ngIf="hasLink()">
-      <button id="resetChatLink" *ngIf="!isMobile()" (click)="resetChatLink()">Reset Chat Link 🔄️</button>
+    <div class="modalFooterGroup" >
+      <span><a id="modalLink" *ngIf="hasLink()" [href]="chatLink" target="_blank">Chat 🗣️</a></span>
+      <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
       <button id="updateChatLink" *ngIf="!isMobile()" (click)="updateChatLink()">Update Chat Link</button>
-      <span><a id="modalLink" [href]="chatLink" target="_blank">Chat 🗣️</a></span>
     </div>
   </div>
 </div>
