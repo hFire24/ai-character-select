@@ -13,6 +13,7 @@ import { Sorter } from './components/sorter/sorter';
 import { Stats } from './components/stats/stats';
 import { Hangouts } from './components/hangouts/hangouts';
 import { Groups } from './components/groups/groups';
+import { ChatManager } from './components/chat-manager/chat-manager';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
@@ -28,5 +29,6 @@ export const routes: Routes = [
   { path: 'sorter', component: Sorter, title: 'Character Sorter' },
   { path: 'stats', component: Stats, title: 'Character Statistics' },
   { path: 'hangouts', component: Hangouts, title: 'Random Hangouts' },
-  { path: 'groups', component: Groups, title: 'Hall of Groups'}
+  { path: 'groups', component: Groups, title: 'Hall of Groups'},
+  { path: 'chat-manager', component: ChatManager, title: 'Manage Active Chats' }
 ];

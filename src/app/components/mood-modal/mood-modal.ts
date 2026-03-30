@@ -104,7 +104,7 @@ export class MoodModal {
       case 'chatted':
         return {
           customFilter: (c: Character) => {
-            const key = 'chatLink_' + (c.id || 'unknown');
+            const key = 'chatLink_' + (c.id ?? 'unknown');
             return localStorage.getItem(key) !== null && !c.status.includes('side');
           }
         };
@@ -112,7 +112,7 @@ export class MoodModal {
         return {
           ...baseOptions,
           customFilter: (c: Character) => {
-            const key = 'chatLink_' + (c.id || 'unknown');
+            const key = 'chatLink_' + (c.id ?? 'unknown');
             return localStorage.getItem(key) === null;
           }
         };
@@ -212,7 +212,7 @@ export class MoodModal {
   }
 
   getChatLink(character: Character): string {
-    const key = 'chatLink_' + (character.id || 'unknown');
+    const key = 'chatLink_' + (character.id ?? 'unknown');
     const stored = localStorage.getItem(key);
     return stored ? stored : character.link;
   }

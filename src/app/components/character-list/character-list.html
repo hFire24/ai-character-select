@@ -1,18 +1,24 @@
 @if (isDesktop && lastChattedCharacters.length > 0) {
   <div class="last-chatted-section">
-    <h2>Last Chatted</h2>
     <p>Number of Active Chats: {{ numActiveChats }}</p>
-    @if (numActiveChats > 0) {
-      <button class="reset-all-button" (click)="resetAllChatLinks()">Reset All Chat Links</button>
-    }
-    <p>Note: Only chats made after March 27, 2026 are counted.</p>
+    <p>Note: Only chats made after <b>March 27, 2026</b> are counted for the total, and chats made after <b>March 30, 2026</b> are counted for the weekly total.</p>
+    <div class="button-group">
+      @if (numActiveChats > 0) {
+        <button class="manage-button" routerLink="/chat-manager">Manage Chats</button>
+        <button class="reset-all-button" (click)="resetAllChatLinks()">Reset All Chat Links</button>
+      }
+      <button class="sort-button" (click)="toggleSort()">
+        {{ sortByCount ? 'Sort by Date' : 'Sort by Count' }}
+      </button>
+    </div>
     <div class="last-chatted-list">
-      @for (item of lastChattedCharacters; track item.character.id) {
+      @for (item of sortedLastChattedCharacters; track item.character.id) {
         <div class="chat-item" (click)="onCharacterClick(item.character)">
           <img [src]="'assets/Icons/' + (item.character.img || 'extended/Unknown.png')" [alt]="item.character.shortName" class="character-avatar">
           <div class="chat-character">
             <span class="character-name" [class.inactive]="item.character.status === 'inactive'" [class.retired]="item.character.status === 'retired'">{{ item.character.shortName }}</span>
-            <span class="chat-count">{{ item.chatCount }} {{ item.chatCount === 1 ? 'Chat' : 'Chats' }}</span>
+            <span class="chat-count">Last Week: {{ item.weeklyChatCount }} {{ item.weeklyChatCount === 1 ? 'Chat' : 'Chats' }}</span>
+            <span class="chat-count">Total: {{ item.chatCount }} {{ item.chatCount === 1 ? 'Chat' : 'Chats' }}</span>
             <span class="chat-date">Last Chat: {{ item.timestamp | relativeDate }}</span>
           </div>
         </div>
@@ -30,7 +36,6 @@
           <img [src]="'assets/Icons/' + (character.img || 'extended/Unknown.png')" [alt]="character.shortName" class="character-avatar">
           <div class="chat-character">
             <span class="character-name" [class.inactive]="character.status === 'inactive'" [class.retired]="character.status === 'retired'">{{ character.shortName }}</span>
-            <span class="chat-count">0 Chats</span>
           </div>
         </div>
       }

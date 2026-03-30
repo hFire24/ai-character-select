@@ -11,10 +11,12 @@ import { Router } from '@angular/router';
 })
 export class BackButton {
   @Input() customStyles: { [key: string]: string } = {};
+  @Input() route: string = '/';
+  @Input() text: string = 'Back to Character Select';
   
   constructor(private router: Router) {}
 
   onClick() {
-    this.router.navigate(['/']);
+    this.router.navigate([this.route]);
   }
 }

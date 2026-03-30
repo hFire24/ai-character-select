@@ -77,6 +77,7 @@ export class CharacterModal {
         // Increment counter only if it's a new, different, valid link
         if (this.chatLink !== oldLink) {
           this.incrementChatLinkCounter();
+          this.addChatToHistory();
         }
       }
       
@@ -107,17 +108,47 @@ export class CharacterModal {
 
   getChatLinkKey(): string {
     // Use character id for uniqueness
-    return 'chatLink_' + (this.character.id || 'unknown');
+    return 'chatLink_' + (this.character.id ?? 'unknown');
   }
 
   getChatLinkTimestampKey(): string {
     // Use character id for uniqueness
-    return 'chatLinkTimestamp_' + (this.character.id || 'unknown');
+    return 'chatLinkTimestamp_' + (this.character.id ?? 'unknown');
   }
 
   getChatLinkCounterKey(): string {
     // Use character id for uniqueness
-    return 'chatLinkCounter_' + (this.character.id || 'unknown');
+    return 'chatLinkCounter_' + (this.character.id ?? 'unknown');
+  }
+
+  getChatLinkHistoryKey(): string {
+    // Use character id for uniqueness
+    return 'chatLinkHistory_' + (this.character.id ?? 'unknown');
+  }
+
+  getChatLinkHistory(): string[] {
+    const key = this.getChatLinkHistoryKey();
+    const history = localStorage.getItem(key);
+    return history ? JSON.parse(history) : [];
+  }
+
+  addChatToHistory(): void {
+    const key = this.getChatLinkHistoryKey();
+    const history = this.getChatLinkHistory();
+    const now = new Date().toISOString();
+    history.push(now);
+    localStorage.setItem(key, JSON.stringify(history));
+  }
+
+  getWeeklyChatCount(): number {
+    const history = this.getChatLinkHistory();
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    
+    return history.filter(timestamp => {
+      const date = new Date(timestamp);
+      return date >= sevenDaysAgo;
+    }).length;
   }
 
   getChatLinkCounter(): number {

@@ -21,6 +21,7 @@ interface LastChattedCharacter {
   character: Character;
   timestamp: Date;
   chatCount: number;
+  weeklyChatCount: number;
 }
 
 @Component({
@@ -91,7 +92,7 @@ export class Stats implements OnInit {
       });
 
       characters.forEach(character => {
-        const timestampKey = 'chatLinkTimestamp_' + (character.id || 'unknown');
+        const timestampKey = 'chatLinkTimestamp_' + (character.id ?? 'unknown');
         const timestamp = localStorage.getItem(timestampKey);
         
         // Exclude side characters (status includes 'side')
@@ -99,14 +100,35 @@ export class Stats implements OnInit {
         
         if (timestamp && !isSideCharacter) {
           // Get the chat link counter
-          const counterKey = 'chatLinkCounter_' + (character.id || 'unknown');
+          const counterKey = 'chatLinkCounter_' + (character.id ?? 'unknown');
           const counter = localStorage.getItem(counterKey);
           const chatCount = counter ? parseInt(counter, 10) : 0;
+          
+          // Get the chat link history for weekly count
+          const historyKey = 'chatLinkHistory_' + (character.id ?? 'unknown');
+          const historyStr = localStorage.getItem(historyKey);
+          let weeklyChatCount = 0;
+          
+          if (historyStr) {
+            try {
+              const history: string[] = JSON.parse(historyStr);
+              const sevenDaysAgo = new Date();
+              sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+              
+              weeklyChatCount = history.filter(ts => {
+                const date = new Date(ts);
+                return date >= sevenDaysAgo;
+              }).length;
+            } catch (e) {
+              console.error('Error parsing chat history:', e);
+            }
+          }
           
           chatsWithTimestamps.push({
             character: character,
             timestamp: new Date(timestamp),
-            chatCount: chatCount
+            chatCount: chatCount,
+            weeklyChatCount: weeklyChatCount
           });
         }
       });
@@ -123,7 +145,7 @@ export class Stats implements OnInit {
       });
       
       this.neverChattedCharacters = activeNonSide.filter(char => {
-        const timestampKey = 'chatLinkTimestamp_' + (char.id || 'unknown');
+        const timestampKey = 'chatLinkTimestamp_' + (char.id ?? 'unknown');
         return !localStorage.getItem(timestampKey);
       });
     });

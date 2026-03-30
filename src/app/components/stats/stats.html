@@ -2,9 +2,7 @@
   <app-back-button></app-back-button>
   
   <h1>Character Statistics</h1>
-  
-  <app-stats-container [stats]="stats"></app-stats-container>
-  
+    
   <app-character-list 
     [lastChattedCharacters]="lastChattedCharacters" 
     [neverChattedCharacters]="neverChattedCharacters"
@@ -12,6 +10,8 @@
     (selectCharacter)="onCharacterClick($event)"
     (refreshData)="loadLastChattedCharacters()">
   </app-character-list>
+  <h2>Characters by Status</h2>
+  <app-stats-container [stats]="stats"></app-stats-container>
 </div>
 
 <app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>

@@ -1,0 +1,48 @@
+<app-back-button [route]="'/stats'" [text]="'Back to Stats'"></app-back-button>
+
+<div class="chat-manager-container">
+  <h1>Manage Active Chats</h1>
+  
+  @if (activeChats.length === 0) {
+    <p class="empty-state">No active chats found.</p>
+  } @else {
+    <div class="controls">
+      <label class="select-all">
+        <input type="checkbox" [checked]="selectAll" (change)="toggleSelectAll()">
+        <span>Select All ({{ activeChats.length }})</span>
+      </label>
+      
+      @if (selectedCount > 0) {
+        <button class="delete-button" (click)="deleteSelected()">
+          Delete Selected ({{ selectedCount }})
+        </button>
+      }
+    </div>
+
+    <div class="chat-list">
+      @for (chat of activeChats; track chat.character.id) {
+        <div class="chat-row" [class.selected]="chat.selected">
+          <div class="checkbox-container">
+            <input type="checkbox" [checked]="chat.selected" (change)="toggleSelection(chat)">
+          </div>
+          
+          <img [src]="'assets/Icons/' + (chat.character.img || 'extended/Unknown.png')" 
+               [alt]="chat.character.shortName" 
+               class="character-icon">
+          
+          <div class="chat-info">
+            <div class="character-name">{{ chat.character.shortName }}</div>
+            <div class="chat-stats">
+              <span class="stat">Last Week: {{ chat.weeklyChatCount }}</span>
+              <span class="stat">Total: {{ chat.chatCount }}</span>
+              <span class="stat">Last: {{ chat.timestamp | relativeDate }}</span>
+            </div>
+            <div class="chat-link">
+              <a [href]="chat.chatLink" target="_blank" (click)="$event.stopPropagation()">{{ chat.chatLink }}</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

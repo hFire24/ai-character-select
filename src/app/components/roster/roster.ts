@@ -150,7 +150,7 @@ export class Roster {
   }
 
   getChatLink(character: Character): string {
-    const key = 'chatLink_' + (character.id || 'unknown');
+    const key = 'chatLink_' + (character.id ?? 'unknown');
     const stored = localStorage.getItem(key);
     return stored ? stored : character.link;
   }
