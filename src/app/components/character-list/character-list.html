@@ -17,9 +17,8 @@
           <img [src]="'assets/Icons/' + (item.character.img || 'extended/Unknown.png')" [alt]="item.character.shortName" class="character-avatar">
           <div class="chat-character">
             <span class="character-name" [class.inactive]="item.character.status === 'inactive'" [class.retired]="item.character.status === 'retired'">{{ item.character.shortName }}</span>
-            <span class="chat-count">Last Week: {{ item.weeklyChatCount }} {{ item.weeklyChatCount === 1 ? 'Chat' : 'Chats' }}</span>
-            <span class="chat-count">Total: {{ item.chatCount }} {{ item.chatCount === 1 ? 'Chat' : 'Chats' }}</span>
             <span class="chat-date">Last Chat: {{ item.timestamp | relativeDate }}</span>
+            <span class="chat-count">{{ item.chatCount }} {{ item.chatCount === 1 ? 'chat' : 'chats' }} ({{ item.weeklyChatCount }} last week)</span>
           </div>
         </div>
       }
