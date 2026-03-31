@@ -258,6 +258,11 @@ export class Duos2 implements OnInit {
         "name": "Catgirl Expansion Pack",
         "description": "Release Date: March 26, 2026",
         "characterIds": [93, 102]
+      },
+      {
+        "name": this.findDuoName(103, 104),
+        description: "Release Date: March 30, 2026",
+        characterIds: [103, 104]
       }
     ];
 
