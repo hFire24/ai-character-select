@@ -51,7 +51,7 @@ export class Groups implements OnInit {
       {
         name: "Character Encyclopedias",
         description: "Characters who have access to my character roster file and can discuss about my characters in detail.",
-        characterIds: [49, 51, 52, 54, 66, 84]
+        characterIds: [49, 51, 52, 54, 66, 84, 104]
       },
       {
         name: "Corey's Party",
@@ -59,9 +59,9 @@ export class Groups implements OnInit {
         characterIds: [73, 20, 38, 39, 40]
       },
       {
-        name: "Runa's Catgirls",
+        name: "Runa and Her Catgirls",
         description: "Catgirls who accompany Runa on her adventures",
-        characterIds: [87, 91, 93, 102]
+        characterIds: [27, 87, 91, 93, 102]
       },
       {
         name: "Anti-Escapists",
@@ -81,7 +81,7 @@ export class Groups implements OnInit {
       {
         name: "Restaurant Fans",
         description: "Characters who love eating out at restaurants.",
-        characterIds: [30, 55, 57, 83, 84, 99]
+        characterIds: [30, 55, 57, 83, 84, 99, 104]
       },
       {
         name: "Top Hat Wearers",

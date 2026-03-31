@@ -119,7 +119,8 @@ export class TierList {
       const shortNameMap: Record<string, string> = {
         'The Indulgent': 'Indulgent',
         'Future Sapphire': 'F. Sapphire',
-        'The Collapsed': 'Collapsed'
+        'The Collapsed': 'Collapsed',
+        'Barry': 'StrawBarry'
       };
       const source$ = this.splitTwins
         ? this.characterService.getCharactersSplitTwins(false)

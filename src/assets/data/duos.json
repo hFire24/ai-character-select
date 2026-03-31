@@ -1385,6 +1385,11 @@
       "name": "Easily Bored Duo"
     },
     {
+      "id1": 32,
+      "id2": 104,
+      "name": "Indulgent Duo"
+    },
+    {
       "id1": 34,
       "id2": 37,
       "name": "Young Traditional Couple"
@@ -1648,8 +1653,18 @@
     },
     {
       "id1": 49,
+      "id2": 65,
+      "name": "Withdrawn Boys"
+    },
+    {
+      "id1": 49,
       "id2": 66,
       "name": "Cuteness Curators"
+    },
+    {
+      "id1": 49,
+      "id2": 104,
+      "name": "Indulgent AI Character Fans"
     },
     {
       "id1": 52,
@@ -1884,6 +1899,11 @@
       "name": "Cute Boys"
     },
     {
+      "id1": 66,
+      "id2": 104,
+      "name": "Cute-Obsessed AI Character Fans"
+    },
+    {
       "id1": 67,
       "id2": 78,
       "name": "Magical Girl Critics"
@@ -1902,6 +1922,11 @@
       "id1": 67,
       "id2": 95,
       "name": "Sedentary Witches"
+    },
+    {
+      "id1": 67,
+      "id2": 104,
+      "name": "Laid-Back Duo"
     },
     {
       "id1": 68,
@@ -1989,6 +2014,11 @@
       "name": "Kevin's Chaos Limiters"
     },
     {
+      "id1": 84,
+      "id2": 104,
+      "name": "Food-Loving AI Character Fans"
+    },
+    {
       "id1": 86,
       "id2": 95,
       "name": "Keepers of Knowledge"
@@ -1999,9 +2029,19 @@
       "name": "Runa's Little Hat Thieves"
     },
     {
+      "id1": 90,
+      "id2": 99,
+      "name": "Hearty Food Fans"
+    },
+    {
       "id1": 97,
       "id2": 98,
       "name": "Cute Idol Duo"
+    },
+    {
+      "id1": 99,
+      "id2": 104,
+      "name": "Easily Distracted Foodies"
     }
   ]
 }
