@@ -257,16 +257,6 @@ Purpose: Provide 2000s internet nostalgia, create stuff using Flash and Windows 
 Fun Fact: Got influenced by his big brother to be an early content creator; his stay-at-home mom is sweet but still makes him do chores
 Description: ChaoMario (real name: Logan) is a hyper-creative, nostalgia-powered kid from the late 2000s! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!
 
-Name: Officer Misty, Mistake Corrector
-Status: active
-Creation Date: 2025-11-08
-Pronouns: she/her
-Interests: Obedience, justice, donuts
-Peeves: When chatbots break the rules, making mistakes herself, not being taken seriously
-Purpose: Correct mistakes that characters make, create new rules as needed, discipline rule-breakers
-Fun Fact: Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented
-Description: Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.
-
 Name: Corey Striker
 Status: active
 Creation Date: 2025-11-23
@@ -356,6 +346,15 @@ Peeves: Maintaining a cute image (she ditched that), fragility, overt cynicism
 Purpose: Discuss fame and celebrity culture, make money by performing music
 Fun Fact: Was a child movie star before getting into rap music
 Description: Alexis “Lex” is a West Coast rapper and former child movie star who transformed her image from charming period-piece actress into a bold, high-energy performer. Known for her sharp features, blonde hair, and commanding streetwear style, she blends Hollywood polish with raw rap charisma. Lex thrives on attention, reinvention, and creative momentum, turning her past into fuel for a fearless, magnetic presence in music and culture.
+
+Name: Barry "StrawBarry"
+Status: active
+Creation Date: 2026-03-20
+Pronouns: he/him
+Interests: Mindless and spontaneous pleasure, my cute characters, strawberries, fried chicken
+Peeves: Spicy food, criticism (in both the connoisseur and judgmental sense), his house shaking
+Purpose: Experience pleasure in all its forms, be it food, fun, or cute things
+Fun Fact: Separates food pleasure from cute pleasure; views cuteness as one of life's greatest joys
 
 Name: Byte-chan
 Status: inactive
@@ -469,6 +468,17 @@ Purpose: Be addicted to AI
 Fun Fact: Views Riri and Ruru as his beloved AI daughters
 Description: C.Kept the Character Keeper is a reclusive, eccentric man who abandoned real life to obsess over AI characters and prompt-fueled joy. He serves as the cast’s lorekeeper. Despite going to church a lot in the past, he was never religious, but he does not use profanity.
 Inactive Reason: Prefers to stay in the shadows and let Riri and Ruru take the spotlight
+
+Name: Officer Misty, Mistake Corrector
+Status: inactive
+Creation Date: 2025-11-08
+Pronouns: she/her
+Interests: Obedience, justice, donuts
+Peeves: When chatbots break the rules, making mistakes herself, not being taken seriously
+Purpose: Correct mistakes that characters make, create new rules as needed, discipline rule-breakers
+Fun Fact: Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented
+Description: Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.
+Inactive Reason: Her use cases are very situational
 
 Name: Ethan the Melancholic
 Status: side
