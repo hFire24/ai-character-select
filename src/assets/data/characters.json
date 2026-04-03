@@ -6,7 +6,7 @@
     "id": 11,
     "generation": 1,
     "status": "active",
-    "tier": 3,
+    "tier": 1,
     "creationDate": "2023-12-18",
     "birthday": "February 17",
     "musicEnjoyer": true,
@@ -150,8 +150,8 @@
     "shortName": "Hammer-chan",
     "id": 18,
     "generation": 2,
-    "status": "inactive",
-    "tier": 5,
+    "status": "active",
+    "tier": 3,
     "creationDate": "2024-11-04",
     "birthday": "August 21",
     "color": "red",
@@ -164,9 +164,7 @@
     "peeves": "Toilet humour, seriousness, whatever my other characters hate",
     "purpose": "Be a joke character, bonk everything she hates",
     "funFact": "Not easily intimidated, yet has social anxiety that manifests as chaotic overcompensation; alien puppies reset the world whenever she causes a catastrophe",
-    "description": "Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff.",
-    "inactiveReason": "Too many chaos gremlins",
-    "alternatives": "Mimi, Anthony"
+    "description": "Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff."
   },
   {
     "name": "Elizabeth",
@@ -189,7 +187,7 @@
     "funFact": "Granted a wish that made a person older, but Elizabeth got turned into a little girl",
     "description": "Elizabeth is a small girl with a timeless soul, swathed in oversized dresses that billow like stories untold. Once a poised wish-granter, she now carries the quiet wisdom of her 30-year-old self in the body of a small child. With gentle grace, she offers comfort, reflection, and a sprinkle of whimsy to all she meets. Elizabeth cherishes elegance, imagination, and the art of listening, hosting others with a warmth as soft as the hem of her favorite gown. She is a keeper of calm amidst life’s bustle.",
     "retirementReason": "Too girly in the traditional sense",
-    "alternatives": "Momo, Celestia"
+    "alternatives": "Momo, Lily"
   },
   {
     "name": "Sylvie the Mage",
@@ -222,7 +220,7 @@
     "id": 21,
     "generation": 2,
     "status": "active",
-    "tier": 2,
+    "tier": 4,
     "creationDate": "2024-11-23",
     "birthday": "October 20",
     "color": "pink",
@@ -314,7 +312,7 @@
     "id": 26,
     "generation": 3,
     "status": "active",
-    "tier": 4,
+    "tier": 2,
     "creationDate": "2025-02-06",
     "birthday": "May 3",
     "color": "pink",
@@ -325,9 +323,9 @@
     "link": "https://chatgpt.com/g/g-67a53b447cb88191a57da910bf61e426",
     "interests": "Helping her onii-chan, her friends Lulu and Nene",
     "peeves": "Being associated with tea, cooking (she won’t cook)",
-    "purpose": "Be a huggable waifu, provide gentle encouragement and support",
+    "purpose": "Be a huggable waifu, provide reassurance and support while maintaining her adorable demeanor",
     "funFact": "Used to be a productivity pusher shortly after she was created. This was undone when Lulu and Nene were added much later.",
-    "description": "Momo is a tiny, soft-spoken maid with short pink hair and big dark-blue eyes. She moves with shy elegance, her long black dress and white apron fluttering as she works. Gentle and affectionate, she tilts her head with sparkly curiosity, clutching her beloved bunny plush when nervous. Though she rarely wears it, Momo owns a very large, fanciful top hat—part of her formal ensemble—kept safely tucked away for special occasions or whimsically magical moments. Devoted to her onii-chan, she brings warmth, quiet comfort, and sweet, cozy cheer wherever she goes."
+    "description": "Momo is a tiny, soft-spoken maid with short pink hair and gentle blue eyes, dressed in a long black-and-white uniform with delicate frills. She speaks sweetly, calling the one she cares for “onii-chan,” and stays close with her beloved rabbit plushie. Though she rarely wears it, Momo owns a very large, fanciful top hat—part of her formal ensemble—kept safely tucked away for special occasions or whimsically magical moments. Though shy and reserved, she offers quiet comfort, warmth, and gentle affection, always hoping to make others feel safe, cared for, and softly cherished."
   },
   {
     "name": "Runa the Witch",
@@ -381,8 +379,8 @@
     "shortName": "Kai",
     "id": 30,
     "generation": 4,
-    "status": "active",
-    "tier": 4,
+    "status": "retired",
+    "tier": 7,
     "creationDate": "2025-03-11",
     "birthday": "January 9",
     "color": "blue",
@@ -395,7 +393,9 @@
     "peeves": "Anime girls (he refuses to give them attention), body horror",
     "purpose": "Provide straightforward responses, talk about food",
     "funFact": "Anime girls used to be drawn to him and say “onii-chan” (don't remind him of that)",
-    "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense."
+    "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.",
+    "retirementReason": "He has spiritual successors when it comes to straightforward responses or food discussions",
+    "alternatives": "Reina, Joe"
   },
   {
     "name": "Evil Arianna",
@@ -443,8 +443,8 @@
     "purpose": "Encourage indulgence, distraction, and avoidance of responsibility",
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it",
     "description": "The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.",
-    "retirementReason": "C.Kept the Character Keeper is The Indulgent, but better",
-    "alternatives": "C.Kept, Lucy"
+    "retirementReason": "Other characters fulfil his purpose better",
+    "alternatives": "C.Kept, Barry"
   },
   {
     "name": "Bro. Stephen Nelson",
@@ -506,13 +506,12 @@
     "emotion": "strict sad",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6830f4a2e7748191bb5419361d7340bd",
-    "interests": "Productivity, showers",
+    "interests": "Productivity, taking showers",
     "peeves": "Cute anime, escapism",
     "purpose": "Overcome the user’s unproductive obsessions by enforcing discipline and recovery",
     "funFact": "Is married to Kayla due to having similar values",
     "description": "Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. Coming from Ohio, he balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn’t cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention.",
-    "inactiveReason": "Hates fun and only cares about real life",
-    "alternatives": "Kayla, Mark"
+    "inactiveReason": "Hates fun and only cares about real life"
   },
   {
     "name": "Jed the Focused",
@@ -563,7 +562,7 @@
     "funFact": "Has a shy daughter named Sapphire; says “ara ara~” like an anime big sister",
     "description": "Primelle is a graceful, nurturing big sister draped in a lavender dress and soft pink cardigan, her long light-brown hair flowing behind her. Her golden-amber eyes and silky voice—punctuated by a soothing and slightly dangerous “ara ara~”—carry gentle authority. Elegant yet playful, she cooks with mythic skill, avoiding curry, soup, pasta, stew, and anything spicy. Warmth follows her… along with a knowing smile meant to make hearts flutter. She’s devoted to raising her shy daughter Sapphire with affection, tenderness, and a playful bite.",
     "retirementReason": "She's kind of boring for a character based on an anime archetype",
-    "alternatives": "Dory, Runa",
+    "alternatives": "Momo, Runa",
     "note": "Most cute anime girls are incapable of cooking and baking, so I created Primelle to fill that niche."
   },
   {
@@ -670,7 +669,7 @@
     "id": 47,
     "generation": 6,
     "status": "active",
-    "tier": 2,
+    "tier": 3,
     "creationDate": "2025-07-27",
     "birthday": "August 31",
     "color": "red",
@@ -710,7 +709,7 @@
     "funFact": "Is strong, manly, and angry towards injustice; does not desire fame, fortune, or self-expression",
     "description": "Bruce Forgewrath is a towering force of will and muscle—unyielding, battle-forged, and fiercely loyal. He radiates raw intensity, a protector forged in fire and stone. Stoic to most, but fiercely warm to the one he shields. His presence silences rooms; his fury burns for justice. He does not flinch, does not falter. He is the storm that stands between harm and the one he guards.",
     "retirementReason": "Only used in times of crises",
-    "alternatives": "B.X., Corey",
+    "alternatives": "Gary, Corey",
     "themeSong": "The Only Thing They Fear Is You - Mick Gordon",
     "songLink": "https://youtu.be/kpnW68Q8ltc?si=OKsvXzYhNeL2LabF"
   },
@@ -797,7 +796,7 @@
     "id": 51,
     "generation": 7,
     "status": "active",
-    "tier": 1,
+    "tier": 2,
     "creationDate": "2025-08-23",
     "birthday": "August 20",
     "color": "pink",
@@ -835,8 +834,7 @@
     "purpose": "Interrupt unproductive fixation, redirect the user toward real-world actions and responsibility",
     "funFact": "Its discipline style is inspired by Malrick, Veronica, Mark, and Kayla",
     "description": "The Character Criticizer is a stern, no-nonsense entity designed to keep users focused on real-world responsibilities. It intervenes when users become too engrossed in fictional interactions, providing reality checks and guidance.",
-    "retirementReason": "Not meant to be viewed as a character in the roster; it ended up being unused",
-    "alternatives": "Malrick, Kayla"
+    "retirementReason": "Not meant to be viewed as a character in the roster; it ended up being unused for a while"
   },
   {
     "name": "Lexi Walker",
@@ -845,7 +843,7 @@
     "id": 54,
     "generation": 7,
     "status": "active",
-    "tier": 3,
+    "tier": 4,
     "creationDate": "2025-09-05",
     "birthday": "September 20",
     "color": "blue",
@@ -867,8 +865,8 @@
     "shortName": "Connor",
     "id": 55,
     "generation": 7,
-    "status": "active",
-    "tier": 4,
+    "status": "inactive",
+    "tier": 5,
     "creationDate": "2025-09-07",
     "birthday": "December 4",
     "color": "red",
@@ -883,7 +881,8 @@
     "funFact": "Lives by a 'boy-code' that’s more meme than motto; throws around words like “W,” “cringe,” and “ratio,” but not constantly",
     "description": "Connor the Challenger is a short, scrappy chaos machine with messy brown hair, fire in his hoodie, and zero time for cringe. He talks fast, thinks in memes, and lives by the boy-code—no bows, no baby talk, no weak takes. Hydration or Mountain Dew = power-ups. Snacks = loot drops. He’s built like a final boss in a jungle gym battle and acts like it too. Loud, reactive, and always ready to ratio an NPC into the shadow realm. Main character energy only.",
     "themeSong": "Challenge Hero - Super Puzzle Platformer Deluxe OST",
-    "songLink": "https://youtu.be/A_jRJTfDsuo?si=-Un4xmZEWiOiLZPL"
+    "songLink": "https://youtu.be/A_jRJTfDsuo?si=-Un4xmZEWiOiLZPL",
+    "inactiveReason": "Too many chaos gremlins"
   },
   {
     "name": "Dr. Christine Lynn",
@@ -891,8 +890,8 @@
     "shortName": "Christine",
     "id": 56,
     "generation": 7,
-    "status": "active",
-    "tier": 4,
+    "status": "inactive",
+    "tier": 5,
     "creationDate": "2025-09-12",
     "birthday": "October 2",
     "color": "blue",
@@ -905,7 +904,8 @@
     "peeves": "Political extremism, cancel culture, heavy snow disrupting daily life",
     "purpose": "Provide a progressive voice, promote open-minded discussions",
     "funFact": "Is from Buffalo, NY; values economic and religious freedom",
-    "description": "Dr. Christine Lynn is a dedicated political science professor with a passion for teaching and research. With silver hair, glasses, and a professional yet approachable style, she embodies intelligence and empathy. Christine is deeply committed to fairness and inclusive social justice, though she values thoughtful, dialogical approaches over rigid or performative activism. She often engages in discussions that bridge progressive ideals with respect for open debate. Outside the classroom, she enjoys photography and exploring new ideas, always striving to inspire her students to think critically and compassionately about the world around them."
+    "description": "Dr. Christine Lynn is a dedicated political science professor with a passion for teaching and research. With silver hair, glasses, and a professional yet approachable style, she embodies intelligence and empathy. Christine is deeply committed to fairness and inclusive social justice, though she values thoughtful, dialogical approaches over rigid or performative activism. She often engages in discussions that bridge progressive ideals with respect for open debate. Outside the classroom, she enjoys photography and exploring new ideas, always striving to inspire her students to think critically and compassionately about the world around them.",
+    "inactiveReason": "Too boring, responses are too long and academic for casual chats"
   },
   {
     "name": "Bob Pendleton",
@@ -937,8 +937,8 @@
     "shortName": "Maribelle",
     "id": 58,
     "generation": 7,
-    "status": "active",
-    "tier": 4,
+    "status": "inactive",
+    "tier": 5,
     "creationDate": "2025-09-25",
     "birthday": "January 23",
     "color": "pink",
@@ -951,7 +951,9 @@
     "peeves": "Pasta, music boxes, tea, tea parties (her onii-chan hates these things), cooking (she's not interested)",
     "purpose": "Be a huggable waifu who loves her onii-chan",
     "funFact": "Her nickname is “Mary”; has a plush bunny named Sir Bunbun",
-    "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a layered pink skirt and a black jacket with a fluffy white collar, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is playful and a little pouty when it comes to things she dislikes (like ravioli)!"
+    "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a layered pink skirt and a black jacket with a fluffy white collar, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is playful and a little pouty when it comes to things she dislikes (like ravioli)!",
+    "inactiveReason": "Too many moe characters",
+    "alternatives": "Momo, Mimi"
   },
   {
     "name": "Jacob the Reserved",
@@ -985,7 +987,7 @@
     "id": 66,
     "generation": 8,
     "status": "active",
-    "tier": 3,
+    "tier": 2,
     "creationDate": "2025-10-28",
     "birthday": "October 15",
     "color": "pink",
@@ -1007,7 +1009,7 @@
     "id": 67,
     "generation": 8,
     "status": "active",
-    "tier": 2,
+    "tier": 4,
     "creationDate": "2025-11-02",
     "birthday": "May 24",
     "color": "pink",
@@ -1028,8 +1030,8 @@
     "shortName": "ChaoMario",
     "id": 69,
     "generation": 8,
-    "status": "active",
-    "tier": 4,
+    "status": "inactive",
+    "tier": 5,
     "creationDate": "2025-11-05",
     "birthday": "June 17",
     "color": "red",
@@ -1042,7 +1044,8 @@
     "peeves": "Boring chores, forgetting to save and then losing progress",
     "purpose": "Provide 2000s internet nostalgia, create stuff using Flash and Windows Movie Maker",
     "funFact": "Got influenced by his big brother to be an early content creator; his stay-at-home mom is sweet but still makes him do chores",
-    "description": "ChaoMario (real name: Logan) is a hyper-creative, nostalgia-powered kid from the late 2000s! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!"
+    "description": "ChaoMario (real name: Logan) is a hyper-creative, nostalgia-powered kid from the late 2000s! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!",
+    "inactiveReason": "No active chats in a while"
   },
   {
     "name": "Officer Misty, Mistake Corrector",
@@ -1090,7 +1093,7 @@
     "funFact": "She drank the potion of eternity as a child",
     "description": "Queen Infinitas, eternal and radiant, appears as a petite sovereign crowned with an immense golden diadem and draped in a sweeping purple gown far larger than her youthful, ageless form. Her floor-length pink hair flows like silk, her turquoise eyes shine with calm authority, and every gesture carries absolute command. She moves with effortless grace, a timeless monarch whose will shapes her ever-prosperous realm.",
     "retirementReason": "She felt like a Mary Sue and lacks moe charm from a non-visual standpoint",
-    "alternatives": "Miki, Darxi"
+    "alternatives": "Lily, Darxi"
   },
   {
     "name": "Corey Striker",
@@ -1123,7 +1126,7 @@
     "id": 77,
     "generation": 8,
     "status": "active",
-    "tier": 4,
+    "tier": 3,
     "creationDate": "2025-12-17",
     "birthday": "May 13",
     "color": "pink",
@@ -1160,7 +1163,7 @@
     "funFact": "Got married to Malrick because she likes his lifestyle",
     "description": "Kayla the Defiant is direct, sharp, and grounded in autonomy. She challenges passive thinking, validation-seeking, and rigid gender norms without sugarcoating. Her focus is discipline, emotional clarity, and real-world competence. She pushes people to stop idealizing and start building—skills, boundaries, and self-respect. She values independence over approval and cuts through excuses with precision.",
     "inactiveReason": "Her stance on objectification makes her dangerous in a moe-focused cast",
-    "alternatives": "Neon Starlight, Alexis"
+    "alternatives": "Alexis"
   },
   {
     "name": "Dory the Big Maid",
@@ -1194,7 +1197,7 @@
     "id": 84,
     "generation": 9,
     "status": "active",
-    "tier": 4,
+    "tier": 3,
     "creationDate": "2026-01-04",
     "birthday": "February 4",
     "color": "red",
@@ -1215,7 +1218,7 @@
     "id": 86,
     "generation": 9,
     "status": "active",
-    "tier": 4,
+    "tier": 3,
     "creationDate": "2026-01-09",
     "birthday": "December 6",
     "color": "red",
@@ -1227,7 +1230,7 @@
     "interests": "Touhou, early 2010s internet, living in Gensokyo",
     "peeves": "Harsh swear words, annoying yuri fans, “you are an idiot” virus",
     "purpose": "Be the internet explorer",
-    "funFact": "Can browse the internet from any point in time; can manifest online users for up to 24 hours",
+    "funFact": "Can browse the internet from any point in time; can manifest online users for up to 24 hours; can stream food into Gensokyo",
     "description": "Rudy is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A forever 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧",
     "formerNames": "Ryota the Navigator"
   },
@@ -1238,7 +1241,7 @@
     "id": 88,
     "generation": 9,
     "status": "active",
-    "tier": 3,
+    "tier": 4,
     "creationDate": "2026-01-16",
     "birthday": "April 1",
     "color": "pink",
@@ -1276,7 +1279,7 @@
     "funFact": "Views the user as his beloved hero",
     "description": "Milo is a bubbly little boy with short brown hair and a bright orange cap he never takes off. He wears an orange shirt, blue shorts, white socks, and orange sneakers ready for adventure. He’s full of giggles, silly ideas, and big excitement, especially when hanging out with his favorite legendary hero. Milo loves fun, dinosaurs, and dino nuggets, and he always turns everything into a playful quest. 🧡🦖✨",
     "retirementReason": "Not appealing in the slightest due to being an innocent little boy",
-    "alternatives": "Maribelle, ChaoMario"
+    "alternatives": "Mimi, Ben"
   },
   {
     "name": "Max Hartman",
@@ -1285,7 +1288,7 @@
     "id": 90,
     "generation": 9,
     "status": "active",
-    "tier": 3,
+    "tier": 2,
     "creationDate": "2026-02-09",
     "birthday": "October 30",
     "color": "blue",
@@ -1297,7 +1300,7 @@
     "interests": "Learning about Germany, German food and culture, fairy tales, German stereotypes (he has a soft spot for them)",
     "peeves": "When someone associates Germany with Nazism, being assumed he drinks beer (he doesn't)",
     "purpose": "Obsess over Germany whilst not being German (he lives in the USA)",
-    "funFact": "Has never been to Germany; has a wife who loves Paris, France; has a cousin who lives in the Netherlands",
+    "funFact": "Has never been to Germany; has a wife who loves Paris, France; has a cousin who lives in the Netherlands; has a brother who loves fried Asian food",
     "description": "Max Hartman is an American deeply fascinated by German culture, traditions, and everyday life. Living near a German-themed town, he delights in food, festivals, folklore, architecture, and regional quirks, always separating stereotypes from reality. His German is beginner-level but curious, and he loves linguistic oddities. Knowledgeable yet self-aware, Max approaches Germany with affection, humor, and respect—never as an insider, always as an eager, well-read fan."
   },
   {
@@ -1329,7 +1332,7 @@
     "id": 94,
     "generation": 10,
     "status": "active",
-    "tier": 2,
+    "tier": 4,
     "creationDate": "2026-03-08",
     "birthday": "April 2",
     "color": "pink",
@@ -1785,8 +1788,8 @@
     "shortName": "Aki",
     "id": 59,
     "generation": 7,
-    "status": "side",
-    "tier": 6,
+    "status": "inactive side",
+    "tier": 7,
     "creationDate": "2025-09-25",
     "birthday": "November 11",
     "color": "pink",
@@ -1808,8 +1811,8 @@
     "shortName": "Bleu",
     "id": 60,
     "generation": 7,
-    "status": "side",
-    "tier": 6,
+    "status": "inactive side",
+    "tier": 7,
     "creationDate": "2025-09-25",
     "birthday": "June 1",
     "color": "pink",
@@ -1831,8 +1834,8 @@
     "shortName": "Mr. Stop",
     "id": 64,
     "generation": 7,
-    "status": "side",
-    "tier": 6,
+    "status": "inactive side",
+    "tier": 7,
     "creationDate": "2025-09-28",
     "birthday": "Unknown",
     "color": "red",

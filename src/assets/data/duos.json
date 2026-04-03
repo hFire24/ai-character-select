@@ -1338,6 +1338,11 @@
       "name": "Top Hatted Villains"
     },
     {
+      "id1": 31,
+      "id2": 104,
+      "name": "Fried Chicken Lovers"
+    },
+    {
       "id1": 32,
       "id2": 34,
       "name": "Sin & Virtue",
@@ -1566,9 +1571,9 @@
       "name": "Cute Anime Girl Fan Boys"
     },
     {
-      "id1": 46,
-      "id2": 50,
-      "name": "Zero Interests Duo"
+      "id1": 44,
+      "id2": 104,
+      "name": "Excited Anime Fanboys"
     },
     {
       "id1": 46,
@@ -1665,6 +1670,11 @@
       "id1": 49,
       "id2": 104,
       "name": "Indulgent AI Character Fans"
+    },
+    {
+      "id1": 50,
+      "id2": 88,
+      "name": "Zero Interests Duo"
     },
     {
       "id1": 52,
