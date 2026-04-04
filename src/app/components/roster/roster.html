@@ -8,13 +8,23 @@
   <div class="filter-section">
     <div class="filter-label">Show Characters:</div>
     <div class="filter-chips">
+      @if (!isMobileDevice()) {
+        <button 
+          class="filter-chip"
+          [class.active]="filters.activeChats"
+          [disabled]="searchTerm.trim().length > 0"
+          (click)="toggleFilter('activeChats')"
+        >
+          💬 Active (Chats)
+        </button>
+      }
       <button 
         class="filter-chip"
         [class.active]="filters.active"
         [disabled]="searchTerm.trim().length > 0"
         (click)="toggleFilter('active')"
       >
-        ✓ Active
+        ✓ Active (All)
       </button>
       <button 
         class="filter-chip"
@@ -88,14 +98,7 @@
   </div-->
   
   <div class="button-container">
-    @if (showingMainCharacters) {
-      <button 
-        (click)="goToStats()" 
-        class="show-stats-btn"
-      >
-        📊 Show Stats
-      </button>
-    }
+    <button (click)="goToStats()" class="show-stats-btn">📊 Show Stats</button>
     <button (click)="selectRandomCharacter(true)" style="background-color: #FF4C4C;">⚔️ Random Character (RP Friendly)</button>
     <button (click)="selectRandomCharacter(false)">🎲 Random Character (All)</button>
   </div>

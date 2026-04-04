@@ -3,6 +3,7 @@ import { Character } from '../services/character.service';
 
 // Simple status filter interface (for backwards compatibility)
 export interface CharacterFilters {
+  activeChats: boolean;
   active: boolean;
   inactive: boolean;
   retired: boolean;
@@ -11,6 +12,9 @@ export interface CharacterFilters {
 
 // Comprehensive filter options interface
 export interface CharacterFilterOptions {
+  // Active chats filter (characters with active chat links in storage)
+  activeChats?: boolean;
+  
   // Status filters
   status?: {
     active?: boolean;
@@ -102,6 +106,14 @@ export class CharacterFilterPipe implements PipeTransform {
       );
     }
 
+    // If active chats filter is enabled, only show characters with active chats
+    if (filters.activeChats) {
+      return characters.filter(character => {
+        const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
+        return localStorage.getItem(chatLinkKey) !== null;
+      });
+    }
+
     // Apply filters based on character status
     return characters.filter(character => {
       if (character.status === 'active' && filters.active) return true;
@@ -128,6 +140,12 @@ export class CharacterFilterPipe implements PipeTransform {
           character.name.toLowerCase().includes(searchLower);
         if (!matchesSearch) return false;
         return true; // If searching, ignore other filters
+      }
+
+      // Active chats filter
+      if (options.activeChats) {
+        const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
+        if (localStorage.getItem(chatLinkKey) === null) return false;
       }
 
       // Status filter

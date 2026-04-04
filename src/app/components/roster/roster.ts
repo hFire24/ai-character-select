@@ -7,6 +7,7 @@ import { FooterButtons } from '../footer-buttons/footer-buttons';
 import { CommonModule } from '@angular/common';
 import { Character, CharacterService } from '../../services/character.service';
 import { Mood } from '../../services/mood.service';
+import { DeviceService } from '../../services/device.service';
 import { Legend } from "../legend/legend";
 import { SearchBar } from "../search-bar/search-bar";
 import { Activities } from "../activities/activities";
@@ -29,6 +30,7 @@ export class Roster {
   
   // Character type filters
   filters: CharacterFilters = {
+    activeChats: false,
     active: true,
     inactive: false,
     retired: false,
@@ -39,7 +41,7 @@ export class Roster {
   sortBy: SortField = 'none';
   sortDirection: SortDirection = 'asc';
 
-  constructor(private characterService: CharacterService, private router: Router) {
+  constructor(private characterService: CharacterService, private deviceService: DeviceService, private router: Router) {
       this.characterService.getCharactersPlusCriticizer().subscribe(data => {
         this.characters = data;
   
@@ -53,15 +55,34 @@ export class Roster {
       });
     }
 
-  toggleFilter(filterType: 'active' | 'inactive' | 'retired' | 'side') {
+  toggleFilter(filterType: 'activeChats' | 'active' | 'inactive' | 'retired' | 'side') {
     // Create a new object to trigger pipe change detection
     const newFilters = { ...this.filters };
-    newFilters[filterType] = !newFilters[filterType];
     
-    // Ensure at least one filter is always active
-    const hasActiveFilter = Object.values(newFilters).some(v => v);
-    if (!hasActiveFilter) {
-      newFilters[filterType] = true;
+    // If toggling activeChats, turn off all other filters
+    if (filterType === 'activeChats') {
+      if (!newFilters.activeChats) {
+        // Turning activeChats ON - disable all other filters
+        newFilters.activeChats = true;
+        newFilters.active = false;
+        newFilters.inactive = false;
+        newFilters.retired = false;
+        newFilters.side = false;
+      } else {
+        // Turning activeChats OFF - enable active filter as default
+        newFilters.activeChats = false;
+        newFilters.active = true;
+      }
+    } else {
+      // Toggling a status filter - turn off activeChats and toggle the status
+      newFilters.activeChats = false;
+      newFilters[filterType] = !newFilters[filterType];
+      
+      // Ensure at least one status filter is active (excluding activeChats)
+      const hasActiveStatusFilter = newFilters.active || newFilters.inactive || newFilters.retired || newFilters.side;
+      if (!hasActiveStatusFilter) {
+        newFilters[filterType] = true;
+      }
     }
     
     // Assign the new object reference
@@ -153,5 +174,9 @@ export class Roster {
     const key = 'chatLink_' + (character.id ?? 'unknown');
     const stored = localStorage.getItem(key);
     return stored ? stored : character.link;
+  }
+
+  isMobileDevice(): boolean {
+    return this.deviceService.isMobile();
   }
 }

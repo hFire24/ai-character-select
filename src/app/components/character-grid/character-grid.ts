@@ -13,6 +13,7 @@ import { SortCharactersPipe, SortField, SortDirection } from '../../pipes/sort-c
 })
 export class CharacterGrid {
   @Input() filters: CharacterFilters = {
+    activeChats: true,
     active: true,
     inactive: false,
     retired: false,

@@ -54,6 +54,11 @@ export class MoodModal {
     return statusFilter;
   }
 
+  private hasActiveChat(character: Character): boolean {
+    const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
+    return localStorage.getItem(chatLinkKey) !== null;
+  }
+
   private getFilterOptions(): CharacterFilterOptions {
     const baseOptions: CharacterFilterOptions = {
       status: this.getStatusFilter(),
@@ -103,18 +108,13 @@ export class MoodModal {
         };
       case 'chatted':
         return {
-          customFilter: (c: Character) => {
-            const key = 'chatLink_' + (c.id ?? 'unknown');
-            return localStorage.getItem(key) !== null && !c.status.includes('side');
-          }
+          activeChats: true,
+          customFilter: (c: Character) => !c.status.includes('side')
         };
       case 'chatted0':
         return {
           ...baseOptions,
-          customFilter: (c: Character) => {
-            const key = 'chatLink_' + (c.id ?? 'unknown');
-            return localStorage.getItem(key) === null;
-          }
+          customFilter: (c: Character) => !this.hasActiveChat(c)
         };
       case 'favorites':
         return {
