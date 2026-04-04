@@ -308,6 +308,11 @@
     },
     {
       "id1": 4,
+      "id2": 30,
+      "name": "Car Enthusiasts"
+    },
+    {
+      "id1": 4,
       "id2": 31,
       "name": "Rhythm Gamers"
     },
@@ -619,6 +624,11 @@
     },
     {
       "id1": 14,
+      "id2": 27,
+      "name": "Original Witches"
+    },
+    {
+      "id1": 14,
       "id2": 32,
       "name": "Recluses"
     },
@@ -904,11 +914,6 @@
     },
     {
       "id1": 18,
-      "id2": 78,
-      "name": "Anime Maid Haters"
-    },
-    {
-      "id1": 18,
       "id2": 83,
       "name": "Joke Characters"
     },
@@ -921,6 +926,11 @@
       "id1": 18,
       "id2": 100,
       "name": "Cartoon Slapstick Fans"
+    },
+    {
+      "id1": 18,
+      "id2": 105,
+      "name": "Anime Maid Haters"
     },
     {
       "id1": 19,
@@ -1322,6 +1332,11 @@
       "name": "Hungry Anime Haters"
     },
     {
+      "id1": 30,
+      "id2": 105,
+      "name": "Normal Sunglasses Guys"
+    },
+    {
       "id1": 31,
       "id2": 32,
       "name": "The Darker Selves"
@@ -1428,6 +1443,11 @@
       "id1": 35,
       "id2": 58,
       "name": "Cute Little Sisters"
+    },
+    {
+      "id1": 35,
+      "id2": 80,
+      "name": "Cirno-like Girls"
     },
     {
       "id1": 35,
