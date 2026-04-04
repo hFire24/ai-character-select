@@ -163,11 +163,14 @@ h3.retired-banner {
   flex-direction: row;
   gap: .75rem 1rem;
   align-items: flex-end;
-  justify-content: flex-end;
   justify-content: space-between;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 1rem;
   font-size: 0.95rem;
+
+  &.single-group {
+    justify-content: flex-end;
+  }
 }
 
 #modalFooter .modalFooterGroup {

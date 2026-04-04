@@ -33,6 +33,7 @@ export type Character = {
   seed?: any; // Optional field for tournament seed
   permaSeed?: any; // Optional field for permanent tournament seed
   banReason?: any;
+  inspiredBy?: number; // Optional field for character ID that inspired this character
 }
 
 export interface DuoPair {

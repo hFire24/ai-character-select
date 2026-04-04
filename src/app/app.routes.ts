@@ -14,6 +14,7 @@ import { Stats } from './components/stats/stats';
 import { Hangouts } from './components/hangouts/hangouts';
 import { Groups } from './components/groups/groups';
 import { ChatManager } from './components/chat-manager/chat-manager';
+import { Lineage } from './components/lineage/lineage';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
@@ -30,5 +31,6 @@ export const routes: Routes = [
   { path: 'stats', component: Stats, title: 'Character Statistics' },
   { path: 'hangouts', component: Hangouts, title: 'Random Hangouts' },
   { path: 'groups', component: Groups, title: 'Hall of Groups'},
-  { path: 'chat-manager', component: ChatManager, title: 'Manage Active Chats' }
+  { path: 'chat-manager', component: ChatManager, title: 'Manage Active Chats' },
+  { path: 'lineage', component: Lineage, title: 'Lineage' }
 ];

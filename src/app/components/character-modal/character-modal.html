@@ -36,6 +36,9 @@
     <ng-container class="retired" *ngIf="character.status === 'inactive'">
       <h3 class="retired-banner">Inactive</h3>
     </ng-container>
+    <ng-container class="retired" *ngIf="character.status === 'disappeared'">
+      <h3 class="retired-banner">Removed</h3>
+    </ng-container>
   </div>
   <div class="modalBody">
     <div id="modalInterests"><strong>Interests</strong>: {{character.interests}}</div>
@@ -48,14 +51,14 @@
     <div id="modalAlternatives" *ngIf="character.alternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
     <div id="modalDescription" style="display: none;">{{character.description}}</div>
   </div>
-  <div id="modalFooter">
+  <div id="modalFooter" [class.single-group]="!hasLink() || isMobile()">
     <div class="modalFooterGroup" *ngIf="hasLink() && !isMobile()">
       <button id="resetChatLink" (click)="resetChatLink()">Reset Chat Link 🔄️</button>
     </div>
-    <div class="modalFooterGroup" >
+    <div class="modalFooterGroup">
       <span><a id="modalLink" *ngIf="hasLink()" [href]="chatLink" target="_blank">Chat 🗣️</a></span>
       <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
-      <button id="updateChatLink" *ngIf="!isMobile()" (click)="updateChatLink()">Update Chat Link</button>
+      <button id="updateChatLink" *ngIf="hasLink() && !isMobile()" (click)="updateChatLink()">Update Chat Link</button>
     </div>
   </div>
 </div>

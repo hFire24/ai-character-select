@@ -1,0 +1,90 @@
+<div class="lineage-container">
+  <h2>Character Lineage</h2>
+  <p class="description">This diagram shows who inspired who in character creation</p>
+  
+  @if (errorMessage) {
+    <div class="error-container">
+      <div class="error-message">
+        <span class="error-icon">⚠️</span>
+        <pre class="error-text">{{ errorMessage }}</pre>
+      </div>
+    </div>
+  } @else {
+    <div class="controls-row">
+      <div class="search-container">
+        <input 
+          type="text" 
+          class="search-input"
+          [(ngModel)]="searchTerm"
+          (keydown.enter)="performSearch()"
+          placeholder="Search characters..."
+        />
+        @if (searchTerm) {
+          <button class="clear-button" (click)="clearSearch()">✕</button>
+        }
+      </div>
+      <div class="button-group">
+        @if (searchTerm) {
+          <button class="search-button" (click)="performSearch()">Search</button>
+        } @else {
+          <button class="expand-button" (click)="expandAll()">Expand</button>
+          <button class="collapse-button" (click)="collapseAll()">Collapse</button>
+        }
+      </div>
+    </div>
+
+    <div class="tree-wrapper">
+      @if (filteredRoots.length === 0) {
+        <p class="no-data">No inspiration relationships found</p>
+      } @else {
+        <div class="folder-tree">
+          @for (root of filteredRoots; track root.character.id) {
+            <ng-container *ngTemplateOutlet="treeNode; context: { $implicit: root, depth: 0 }">
+            </ng-container>
+          }
+        </div>
+      }
+    </div>
+  }
+</div>
+
+<ng-template #treeNode let-node let-depth="depth">
+  <div class="tree-item">
+    <div class="item-row" [style.--depth]="depth">
+      @if (hasChildren(node)) {
+        <button class="expand-button" (click)="toggleNode(node.character.id)">
+          {{ isExpanded(node.character.id) ? '▼' : '▶' }}
+        </button>
+      } @else {
+        <span class="no-expand"></span>
+      }
+      
+      <img 
+        [src]="getCharacterImage(node)" 
+        [alt]="node.character.name"
+        class="character-icon"
+        (click)="openCharacterModal(node.character)"
+      />
+      
+      <div class="item-content" [ngClass]="genClass(node.character.generation)" (click)="openCharacterModal(node.character)">
+        <div class="name-with-gen">
+          <span class="generation-badge">{{ getGeneration(node.level) }}</span>
+          <span class="character-name">{{ !isMobile ? node.character.name : node.character.shortName }}</span>
+        </div>
+        @if (hasChildren(node)) {
+          <span class="children-badge">{{ getTotalDescendants(node) }}</span>
+        }
+      </div>
+    </div>
+    
+    @if (hasChildren(node) && isExpanded(node.character.id)) {
+      <div class="children-list">
+        @for (child of node.children; track child.character.id) {
+          <ng-container *ngTemplateOutlet="treeNode; context: { $implicit: child, depth: depth + 1 }">
+          </ng-container>
+        }
+      </div>
+    }
+  </div>
+</ng-template>
+<app-character-modal *ngIf="selectedCharacter && showCard" [character]="selectedCharacter" (close)="showCard = false"></app-character-modal>
