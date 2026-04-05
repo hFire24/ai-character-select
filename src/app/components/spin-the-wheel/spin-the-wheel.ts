@@ -60,11 +60,7 @@ export class SpinTheWheel {
 
   ngOnInit() {
     this.loadCharacters();
-    this.skipAnimation = this.isMobile();
-  }
-
-  isMobile(): boolean {
-    return this.deviceService.isMobile();
+    this.skipAnimation = this.deviceService.isMobile();
   }
 
   // Filter options for the pipe

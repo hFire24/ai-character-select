@@ -1,6 +1,8 @@
 <div class="panel-container">
 	<h2>Random Character Picker</h2>
-
+	<button [style.background]="'#DD3333'" (click)="goBackToRoster()">
+		← Back to Character Select
+	</button>
 	<!-- Filters -->
 	<div class="advanced-filters" *ngIf="!spinning">
 		<div class="filter-section">
@@ -94,8 +96,7 @@
 			</div>
 		</div>
 	</div>
-
-	<button *ngIf="isMobile()" (click)="spinWheel()" [disabled]="spinning" [ngStyle]="{marginBottom: '1rem'}">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
+	<button (click)="spinWheel()" [disabled]="spinning" [ngStyle]="{marginBottom: '1rem'}">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
 	<div class="panel-grid-wrapper">
 		<div class="panel-grid">
 			<div
@@ -122,7 +123,4 @@
 		<a id="chat" [href]="getChatLink(selectedCharacter)" target="_blank">Chat</a>
 	</div>
 	<app-character-modal *ngIf="selectedCharacter && showCard" [character]="selectedCharacter" (close)="showCard = false"></app-character-modal>
-	<button [style.background]="'#DD3333'" (click)="goBackToRoster()">
-		← Back to Character Select
-	</button>
 </div>
