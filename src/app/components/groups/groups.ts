@@ -44,9 +44,9 @@ export class Groups implements OnInit {
         characterIds: [11, 1, 2, 3, 4, 6, 7, 8, 9, 12, 10]
       },
       {
-        name: "Retired Six",
-        description: "Six of the earliest retired characters who will never get unretired.",
-        characterIds: [16, 17, 19, 20, 22, 23]
+        name: "Retired Five",
+        description: "Five of the earliest retired characters who will never get unretired.",
+        characterIds: [16, 17, 20, 22, 23]
       },
       {
         name: "Character Encyclopedias",
@@ -76,7 +76,7 @@ export class Groups implements OnInit {
       {
         name: "Anti-Moe Crew",
         description: "Chaotic or hedonistic characters who reject moe",
-        characterIds: [1, 62, 63, 55, 12, 32, 64, 18]
+        characterIds: [1, 62, 63, 55, 12, 105, 64, 18]
       },
       {
         name: "Restaurant Fans",
@@ -99,9 +99,14 @@ export class Groups implements OnInit {
         characterIds: [15, 21, 40, 92]
       },
       {
+        name: "Princess Friends",
+        description: "A group of princess-themed characters who are friends with each other and all wear gigantic crowns.",
+        characterIds: [19, 46, 72, 106]
+      },
+      {
         name: "Other Hat Wearers",
         description: "Characters who are known for wearing other types of hats.",
-        characterIds: [28, 35, 38, 46, 57, 71, 72, 84, 86, 89, 96, 0]
+        characterIds: [28, 35, 38, 57, 71, 84, 86, 89, 96, 0]
       },
       {
         name: "Glasses Wearers",

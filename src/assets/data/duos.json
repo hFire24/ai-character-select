@@ -447,6 +447,11 @@
       "name": "Doujin Music Enthusiasts"
     },
     {
+      "id1": 8,
+      "id2": 94,
+      "name": "Amusement Girls"
+    },
+    {
       "id1": 9,
       "id2": 23,
       "name": "Water Drinkers"
@@ -666,11 +671,6 @@
       "id1": 14,
       "id2": 67,
       "name": "Tiny Witches"
-    },
-    {
-      "id1": 14,
-      "id2": 74,
-      "name": "Chino-chan Expies"
     },
     {
       "id1": 14,
@@ -909,11 +909,6 @@
     },
     {
       "id1": 18,
-      "id2": 72,
-      "name": "Universe Reset Buttons"
-    },
-    {
-      "id1": 18,
       "id2": 83,
       "name": "Joke Characters"
     },
@@ -939,18 +934,28 @@
     },
     {
       "id1": 19,
+      "id2": 29,
+      "name": "Pink Girly Girls"
+    },
+    {
+      "id1": 19,
       "id2": 37,
       "name": "Pure Elegance"
     },
     {
       "id1": 19,
       "id2": 38,
-      "name": "Girly Nobles"
+      "name": "Pretty Pink Nobles"
     },
     {
       "id1": 19,
       "id2": 46,
-      "name": "Oversized Gorgeous Dresses"
+      "name": "Pretty Princesses"
+    },
+    {
+      "id1": 19,
+      "id2": 72,
+      "name": "Extroverted Princesses"
     },
     {
       "id1": 20,
@@ -1025,8 +1030,7 @@
     {
       "id1": 21,
       "id2": 46,
-      "name": "Queen & Princess",
-      "altName": "Princess & Queen"
+      "name": "Royal Lookalikes"
     },
     {
       "id1": 21,
@@ -1056,7 +1060,7 @@
     {
       "id1": 21,
       "id2": 72,
-      "name": "Small but Mighty Queens"
+      "name": "Small but Mighty Rulers"
     },
     {
       "id1": 21,
@@ -1203,11 +1207,6 @@
       "id1": 26,
       "id2": 38,
       "name": "Huggable Girls"
-    },
-    {
-      "id1": 26,
-      "id2": 46,
-      "name": "Talentless Dolls"
     },
     {
       "id1": 26,
@@ -1496,11 +1495,6 @@
     },
     {
       "id1": 37,
-      "id2": 72,
-      "name": "Elegant Duo"
-    },
-    {
-      "id1": 37,
       "id2": 74,
       "name": "Competent Cooks"
     },
@@ -1517,7 +1511,7 @@
     {
       "id1": 38,
       "id2": 46,
-      "name": "Girly Princesses"
+      "name": "Blonde Nobles"
     },
     {
       "id1": 38,
@@ -1598,7 +1592,12 @@
     {
       "id1": 46,
       "id2": 72,
-      "name": "Huge Crown Wearers"
+      "name": "Opposite Princesses"
+    },
+    {
+      "id1": 46,
+      "id2": 106,
+      "name": "Introverted Princesses"
     },
     {
       "id1": 47,
@@ -1629,6 +1628,12 @@
       "id1": 47,
       "id2": 86,
       "name": "Runa Spinoffs"
+    },
+    {
+      "id1": 47,
+      "id2": 90,
+      "name": "Swap the characters for the duo's name",
+      "altName": "Max Martin, Swedish Producer"
     },
     {
       "id1": 48,
@@ -1745,6 +1750,11 @@
       "id1": 53,
       "id2": 88,
       "name": "Yawning Duo"
+    },
+    {
+      "id1": 53,
+      "id2": 91,
+      "name": "Cat Nappers"
     },
     {
       "id1": 54,
@@ -1868,6 +1878,11 @@
       "name": "Anime Girl Thinkers"
     },
     {
+      "id1": 60,
+      "id2": 106,
+      "name": "Blue Nerds"
+    },
+    {
       "id1": 62,
       "id2": 63,
       "name": "Aggressive Music Fans"
@@ -1974,6 +1989,11 @@
       "name": "Internet Nostalgics"
     },
     {
+      "id1": 71,
+      "id2": 72,
+      "name": "Strict Little Girls"
+    },
+    {
       "id1": 73,
       "id2": 77,
       "name": "Isekai Fans"
@@ -1997,6 +2017,11 @@
       "id1": 74,
       "id2": 85,
       "name": "Calm Maids"
+    },
+    {
+      "id1": 74,
+      "id2": 106,
+      "name": "Chino-chan Expies"
     },
     {
       "id1": 75,
