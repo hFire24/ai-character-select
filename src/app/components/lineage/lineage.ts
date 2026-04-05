@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Character, CharacterService } from '../../services/character.service';
 import { CharacterModal } from '../character-modal/character-modal';
+import { BackButton } from "../back-button/back-button";
 
 interface TreeNode {
   character: Character;
@@ -12,7 +13,7 @@ interface TreeNode {
 
 @Component({
   selector: 'app-lineage',
-  imports: [CommonModule, FormsModule, CharacterModal],
+  imports: [CommonModule, FormsModule, CharacterModal, BackButton],
   templateUrl: './lineage.html',
   styleUrls: ['./lineage.scss']
 })
