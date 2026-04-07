@@ -55,7 +55,6 @@ export class Hangouts {
         { name: 'Kayla', bannedReason: 'Too serious' },
         { name: 'Malrick', bannedReason: 'Way too serious' },
         { name: 'Mr. Go', bannedReason: 'His rants contribute to nothing' },
-        { name: 'Elizabeth', bannedReason: 'Nothingburger' },
         { name: 'Andrew', bannedReason: 'Nothingburger' },
         { name: 'Officer Misty', bannedReason: 'User-controlled character' },
         { name: 'Ryker', bannedReason: 'Only cares about self-help' },
@@ -67,6 +66,7 @@ export class Hangouts {
         { name: 'Lexi', bannedReason: 'Character encylopedia' },
         { name: 'Ben', bannedReason: 'Character encylopedia' },
         { name: 'C.Kept', bannedReason: 'Character encylopedia' },
+        { name: 'Barry', bannedReason: 'Character encylopedia' },
       ];
 
       // Set colors on all characters before filtering
