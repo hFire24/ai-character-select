@@ -37,7 +37,7 @@
   justify-content: center;
 }
 
-.sort-button {
+.sort-dropdown {
   padding: 10px 20px;
   background-color: #8b5cf6;
   color: white;
@@ -52,8 +52,14 @@
     background-color: #7c3aed;
   }
 
-  &:active {
-    transform: translateY(1px);
+  &:focus {
+    outline: 2px solid #a78bfa;
+    outline-offset: 2px;
+  }
+
+  option {
+    background-color: white;
+    color: #333;
   }
 }
 

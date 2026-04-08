@@ -7,9 +7,11 @@
         <button class="manage-button" routerLink="/chat-manager">Manage Chats</button>
         <button class="reset-all-button" (click)="resetAllChatLinks()">Reset All Chat Links</button>
       }
-      <button class="sort-button" (click)="toggleSort()">
-        {{ sortByCount ? 'Sort by Date' : 'Sort by Count' }}
-      </button>
+      <select class="sort-dropdown" [(ngModel)]="sortType">
+        <option value="date">Last Chat Date</option>
+        <option value="totalCount">Count (Total)</option>
+        <option value="weeklyCount">Count (Weekly)</option>
+      </select>
     </div>
     <div class="last-chatted-list">
       @for (item of sortedLastChattedCharacters; track item.character.id) {

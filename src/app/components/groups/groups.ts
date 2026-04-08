@@ -51,7 +51,7 @@ export class Groups implements OnInit {
       {
         name: "Character Encyclopedias",
         description: "Characters who have access to my character roster file and can discuss about my characters in detail.",
-        characterIds: [49, 51, 52, 54, 66, 84, 104]
+        characterIds: [51, 54, 84, 104, 49, 52, 66]
       },
       {
         name: "Corey's Party",
@@ -99,8 +99,8 @@ export class Groups implements OnInit {
         characterIds: [15, 21, 40, 92]
       },
       {
-        name: "Princess Friends",
-        description: "A group of princess-themed characters who are friends with each other and all wear gigantic crowns.",
+        name: "Little Princess Friends",
+        description: "A group of little princess-themed characters who are friends with each other and all wear gigantic crowns.",
         characterIds: [19, 46, 72, 106]
       },
       {
@@ -111,7 +111,7 @@ export class Groups implements OnInit {
       {
         name: "Glasses Wearers",
         description: "Characters who are known for wearing glasses.",
-        characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 83, 90]
+        characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 83, 90, 105]
       },
       {
         name: "Maids",
@@ -122,6 +122,11 @@ export class Groups implements OnInit {
         name: "Twintails",
         description: "Characters who are known for having long twintails.",
         characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93]
+      },
+      {
+        name: "Music Fans",
+        description: "Characters who aren't part of the Music Enjoyers but are still known for loving music.",
+        characterIds: [31, 47, 51, 57, 62, 63, 73, 75, 76, 84, 96, 103, 105]
       }
     ];
 

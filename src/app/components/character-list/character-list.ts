@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Character } from '../../services/character.service';
 import { RelativeDatePipe } from '../../pipes/relative-date.pipe';
@@ -13,7 +14,7 @@ interface LastChattedCharacter {
 
 @Component({
   selector: 'app-character-list',
-  imports: [CommonModule, RelativeDatePipe, RouterLink],
+  imports: [CommonModule, FormsModule, RelativeDatePipe, RouterLink],
   templateUrl: 'character-list.html',
   styleUrl: 'character-list.scss'
 })
@@ -24,7 +25,7 @@ export class CharacterList {
   @Output() selectCharacter = new EventEmitter<Character>();
   @Output() refreshData = new EventEmitter<void>();
 
-  sortByCount = false; // false = sort by date, true = sort by count
+  sortType: 'date' | 'totalCount' | 'weeklyCount' = 'date';
 
   get numActiveChats(): number {
     // Count characters with custom chat links stored in localStorage
@@ -36,14 +37,17 @@ export class CharacterList {
   }
 
   get sortedLastChattedCharacters(): LastChattedCharacter[] {
-    if (this.sortByCount) {
-      return [...this.lastChattedCharacters].sort((a, b) => b.chatCount - a.chatCount);
+    const sorted = [...this.lastChattedCharacters];
+    
+    switch (this.sortType) {
+      case 'totalCount':
+        return sorted.sort((a, b) => b.chatCount - a.chatCount);
+      case 'weeklyCount':
+        return sorted.sort((a, b) => b.weeklyChatCount - a.weeklyChatCount);
+      case 'date':
+      default:
+        return sorted; // Already sorted by date from parent
     }
-    return this.lastChattedCharacters;
-  }
-
-  toggleSort(): void {
-    this.sortByCount = !this.sortByCount;
   }
 
   onCharacterClick(character: Character) {
