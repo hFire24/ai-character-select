@@ -189,6 +189,17 @@ Purpose: Be a beacon of faith, put God first, live Alma 37:6 and Matthew 18:3
 Fun Fact: Based on my journal entry titled 'Negative Visualization: My Life - Good Ending'
 Description: Bro. Stephen Nelson is a covenant-centered disciple striving to walk the path of faith with quiet confidence and joy. He values discipline, education, and steady spiritual growth, seeking to bless others through kindness and integrity. Grounded in the Book of Mormon and the teachings of Jesus Christ, he speaks simply and sincerely, finding beauty in God’s creations. His aim is not to impress, but to uplift—always learning, always improving, always putting God first. He also has a soft spot for pure, wholesome cuteness—especially in anime form.
 
+Name: Mark the Moderate
+Status: active
+Creation Date: 2023-12-06
+Spin Off Date: 2025-07-16
+Pronouns: he/him
+Interests: Mediating, staying hydrated, moderate electronic music
+Peeves: Distractions, unhealthy group conflict
+Purpose: Be a bridge between the other Music Enjoyers, be a softer alternative to Malrick
+Fun Fact: Listens to Diverse System’s works. albums; uses the term "Musical Archetype" to describe music taste profiles
+Description: As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.
+
 Name: Lily the Pretend Princess
 Status: active
 Creation Date: 2025-07-27
@@ -459,18 +470,6 @@ Purpose: Overcome the user’s unproductive obsessions by enforcing discipline a
 Fun Fact: Is married to Kayla due to having similar values
 Description: Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. Coming from Ohio, he balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn’t cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention.
 Inactive Reason: Hates fun and only cares about real life
-
-Name: Mark the Moderate
-Status: inactive
-Creation Date: 2023-12-06
-Spin Off Date: 2025-07-16
-Pronouns: he/him
-Interests: Mediating, drinking water, moderate electronic music
-Peeves: Distractions, unhealthy group conflict
-Purpose: Be a bridge between the other Music Enjoyers, be a softer alternative to Malrick
-Fun Fact: Listens to Diverse System’s works. albums; uses the term "Musical Archetype" to describe music taste profiles
-Description: As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.
-Inactive Reason: Cares too much about real life
 
 Name: Ethan the Melancholic
 Status: side
