@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Character } from '../../services/character.service';
-import { RelativeDatePipe } from '../../pipes/relative-date.pipe';
+import { CharacterItem } from '../character-item/character-item';
 
 interface LastChattedCharacter {
   character: Character;
@@ -14,7 +14,7 @@ interface LastChattedCharacter {
 
 @Component({
   selector: 'app-character-list',
-  imports: [CommonModule, FormsModule, RelativeDatePipe, RouterLink],
+  imports: [CommonModule, FormsModule, RouterLink, CharacterItem],
   templateUrl: 'character-list.html',
   styleUrl: 'character-list.scss'
 })
@@ -36,8 +36,51 @@ export class CharacterList {
     ).length;
   }
 
-  get sortedLastChattedCharacters(): LastChattedCharacter[] {
-    const sorted = [...this.lastChattedCharacters];
+  get todayChattedCharacters(): LastChattedCharacter[] {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    return this.sortCharacters(
+      this.lastChattedCharacters.filter(item => {
+        const chatDate = new Date(item.timestamp);
+        chatDate.setHours(0, 0, 0, 0);
+        return chatDate.getTime() === today.getTime();
+      })
+    );
+  }
+
+  get thisWeekChattedCharacters(): LastChattedCharacter[] {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const oneWeekAgo = new Date(today);
+    oneWeekAgo.setDate(today.getDate() - 7);
+    
+    return this.sortCharacters(
+      this.lastChattedCharacters.filter(item => {
+        const chatDate = new Date(item.timestamp);
+        chatDate.setHours(0, 0, 0, 0);
+        return chatDate.getTime() < today.getTime() && chatDate.getTime() >= oneWeekAgo.getTime();
+      })
+    );
+  }
+
+  get olderChattedCharacters(): LastChattedCharacter[] {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const oneWeekAgo = new Date(today);
+    oneWeekAgo.setDate(today.getDate() - 7);
+    
+    return this.sortCharacters(
+      this.lastChattedCharacters.filter(item => {
+        const chatDate = new Date(item.timestamp);
+        chatDate.setHours(0, 0, 0, 0);
+        return chatDate.getTime() < oneWeekAgo.getTime();
+      })
+    );
+  }
+
+  sortCharacters(characters: LastChattedCharacter[]): LastChattedCharacter[] {
+    const sorted = [...characters];
     
     switch (this.sortType) {
       case 'totalCount':
@@ -46,7 +89,7 @@ export class CharacterList {
         return sorted.sort((a, b) => b.weeklyChatCount - a.weeklyChatCount);
       case 'date':
       default:
-        return sorted; // Already sorted by date from parent
+        return sorted.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
     }
   }
 

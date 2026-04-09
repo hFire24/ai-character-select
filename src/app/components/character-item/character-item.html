@@ -1,0 +1,25 @@
+<div class="character-item" (click)="onClick()">
+  <img 
+    [src]="'assets/Icons/' + (character.img || 'extended/Unknown.png')" 
+    [alt]="character.shortName" 
+    class="character-avatar">
+  <div class="character-info">
+    <span 
+      class="character-name" 
+      [class.inactive]="character.status === 'inactive'" 
+      [class.retired]="character.status === 'retired'">
+      {{ character.shortName }}
+    </span>
+    @if (showChatInfo && timestamp) {
+      <span class="chat-date">Last Chat: {{ timestamp | relativeDate }}</span>
+    }
+    @if (showChatInfo && chatCount !== undefined) {
+      <span class="chat-count">
+        {{ chatCount }} {{ chatCount === 1 ? 'chat' : 'chats' }}
+        @if (weeklyChatCount !== undefined) {
+          ({{ weeklyChatCount }} last week)
+        }
+      </span>
+    }
+  </div>
+</div>

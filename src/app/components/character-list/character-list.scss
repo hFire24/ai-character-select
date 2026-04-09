@@ -1,5 +1,4 @@
-.last-chatted-section,
-.never-chatted-section {
+.chatted-section {
   padding: 0 20px;
 
   h2 {
@@ -83,7 +82,7 @@
   }
 }
 
-.last-chatted-list, .never-chatted-list {
+.chatted-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -91,127 +90,8 @@
   margin: 0 auto;
 }
 
-.chat-character {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2px;
-  flex: 1;
-  align-items: flex-start;
-}
-
-.character-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-
-  &.inactive {
-    color: #6b7280; // Gray for inactive
-  }
-
-  &.retired {
-    color: #ef4444; // Red for retired
-  }
-}
-
-.chat-date {
-  font-size: 0.85rem;
-  color: #666;
-  font-weight: 400;
-  text-align: left;
-}
-
-.chat-count {
-  font-size: 0.9rem;
-  color: #8b5cf6;
-  font-weight: 500;
-}
-
-.chat-item {
-  width: 90vw;
-  max-width: 300px;
-  height: auto;
-  min-height: 74px;
-  vertical-align: top;
-  margin: 10px;
-  box-sizing: border-box;
-  padding: 5px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-
-  .character-avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 10px;
-    margin-right: 12px;
-    object-fit: cover;
-    flex-shrink: 0;
-    will-change: transform;
-  }
-}
-
-.never-chat-item {
-  width: 90vw;
-  max-width: 300px;
-  height: 74px;
-  vertical-align: top;
-  margin: 10px;
-  box-sizing: border-box;
-  padding: 5px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-
-  .character-avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 10px;
-    margin-right: 12px;
-    object-fit: cover;
-    flex-shrink: 0;
-    will-change: transform;
-  }
-
-  .character-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-align: left;
-    margin: 0;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
-  .last-chatted-section h2,
-  .never-chatted-section h2 {
+  .chatted-section h2 {
     color: #e0e0e0;
-  }
-
-  .chat-item,
-  .never-chat-item {
-    background-color: #23272a;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-  }
-
-  .character-name {
-    color: #e0e0e0;
-
-    &.inactive {
-      color: #9ca3af; // Gray for inactive in dark mode
-    }
-
-    &.retired {
-      color: #f87171; // Lighter red for retired in dark mode
-    }
-  }
-
-  .chat-date {
-    color: #aaa;
   }
 }

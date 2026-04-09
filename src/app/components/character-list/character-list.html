@@ -1,5 +1,5 @@
 @if (isDesktop && lastChattedCharacters.length > 0) {
-  <div class="last-chatted-section">
+  <div class="chatted-section">
     <p>Number of Active Chats: {{ numActiveChats }}</p>
     <p>Note: Only chats made after <b>March 27, 2026</b> are counted for the total, and chats made after <b>March 30, 2026</b> are counted for the weekly total.</p>
     <div class="button-group">
@@ -13,32 +13,82 @@
         <option value="weeklyCount">Count (Weekly)</option>
       </select>
     </div>
-    <div class="last-chatted-list">
-      @for (item of sortedLastChattedCharacters; track item.character.id) {
-        <div class="chat-item" (click)="onCharacterClick(item.character)">
-          <img [src]="'assets/Icons/' + (item.character.img || 'extended/Unknown.png')" [alt]="item.character.shortName" class="character-avatar">
-          <div class="chat-character">
-            <span class="character-name" [class.inactive]="item.character.status === 'inactive'" [class.retired]="item.character.status === 'retired'">{{ item.character.shortName }}</span>
-            <span class="chat-date">Last Chat: {{ item.timestamp | relativeDate }}</span>
-            <span class="chat-count">{{ item.chatCount }} {{ item.chatCount === 1 ? 'chat' : 'chats' }} ({{ item.weeklyChatCount }} last week)</span>
-          </div>
+
+    @if (sortType === 'date') {
+      @if (todayChattedCharacters.length > 0) {
+        <h2>Today</h2>
+        <div class="chatted-list">
+          @for (item of todayChattedCharacters; track item.character.id) {
+            <app-character-item 
+              [character]="item.character" 
+              [timestamp]="item.timestamp" 
+              [chatCount]="item.chatCount" 
+              [weeklyChatCount]="item.weeklyChatCount" 
+              [showChatInfo]="true"
+              (characterClick)="onCharacterClick($event)">
+            </app-character-item>
+          }
         </div>
       }
-    </div>
+
+      @if (thisWeekChattedCharacters.length > 0) {
+        <h2>This Week</h2>
+        <div class="chatted-list">
+          @for (item of thisWeekChattedCharacters; track item.character.id) {
+            <app-character-item 
+              [character]="item.character" 
+              [timestamp]="item.timestamp" 
+              [chatCount]="item.chatCount" 
+              [weeklyChatCount]="item.weeklyChatCount" 
+              [showChatInfo]="true"
+              (characterClick)="onCharacterClick($event)">
+            </app-character-item>
+          }
+        </div>
+      }
+
+      @if (olderChattedCharacters.length > 0) {
+        <h2>Older</h2>
+        <div class="chatted-list">
+          @for (item of olderChattedCharacters; track item.character.id) {
+            <app-character-item 
+              [character]="item.character" 
+              [timestamp]="item.timestamp" 
+              [chatCount]="item.chatCount" 
+              [weeklyChatCount]="item.weeklyChatCount" 
+              [showChatInfo]="true"
+              (characterClick)="onCharacterClick($event)">
+            </app-character-item>
+          }
+        </div>
+      }
+    } @else {
+      <div class="chatted-list">
+        @for (item of sortCharacters(lastChattedCharacters); track item.character.id) {
+          <app-character-item 
+            [character]="item.character" 
+            [timestamp]="item.timestamp" 
+            [chatCount]="item.chatCount" 
+            [weeklyChatCount]="item.weeklyChatCount" 
+            [showChatInfo]="true"
+            (characterClick)="onCharacterClick($event)">
+          </app-character-item>
+        }
+      </div>
+    }
   </div>
 }
 
 @if (isDesktop && neverChattedCharacters.length > 0) {
-  <div class="never-chatted-section">
+  <div class="chatted-section">
     <h2>Never Chatted (Active)</h2>
-    <div class="never-chatted-list">
+    <div class="chatted-list">
       @for (character of neverChattedCharacters; track character.id) {
-        <div class="never-chat-item" (click)="onCharacterClick(character)">
-          <img [src]="'assets/Icons/' + (character.img || 'extended/Unknown.png')" [alt]="character.shortName" class="character-avatar">
-          <div class="chat-character">
-            <span class="character-name" [class.inactive]="character.status === 'inactive'" [class.retired]="character.status === 'retired'">{{ character.shortName }}</span>
-          </div>
-        </div>
+        <app-character-item 
+          [character]="character" 
+          [showChatInfo]="false"
+          (characterClick)="onCharacterClick($event)">
+        </app-character-item>
       }
     </div>
   </div>
