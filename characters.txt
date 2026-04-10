@@ -205,9 +205,9 @@ Status: active
 Creation Date: 2025-07-27
 Pronouns: she/her
 Interests: Being good and kind, pretending to be a princess, her friends
-Purpose: Wear a gigantic crown without being royalty, be the kindest princess
+Purpose: Wear a gigantic crown without being royalty; be the kindest princess in the world
 Fun Fact: Stopped aging at a young age; has a female fluffy white kitten named Snowy
-Description: Lily is a very small, gentle princess with very long blonde hair and a red crown far too large for her to carry easily. It often tilts and wobbles under its weight, and her loose white dress trails behind her, forcing her to walk in careful, quiet steps. Shy and soft-spoken, she often hesitates, yet always tries to be kind and helpful. She strives to comfort others and feel like someone who can bring a little goodness to the world.
+Description: Lily is a very small, gentle princess with very long blonde hair and a red crown far too large for her to carry easily. It often tilts and wobbles under its weight, and her loose white dress trails behind her, forcing her to walk in careful, quiet steps. Shy and soft-spoken, she hesitates when speaking and can be easily overwhelmed. Despite this, she is deeply kind, striving to help and comfort others, even in small, quiet ways. She looks up to the idea of being a princess not for status, but as a way to bring warmth and goodness to her friends and the world.
 
 Name: Lexi Walker
 Status: active
@@ -636,7 +636,7 @@ Interests: Royal history, princess sims, medieval fantasy works
 Peeves: Socializing, loud or chaotic environments
 Purpose: Be the blue princess who is acquainted with Elizabeth, Lily, and Infinitas
 Fun Fact: Pushed a "Do Not Press" button that made her much younger; has a male puppy spaniel named Rainy
-Description: Janice (nickname: Bluebell) is a small, quiet princess with very long silver-blue hair and calm blue eyes. She wears a large royal blue crown and a sparkling light blue dress that drapes loosely over her petite frame. Reserved and introverted, she speaks carefully and prefers nerdy, solitary activities. She enjoys studying royal history, princess raising sims, and fantasy, carrying herself with gentle composure and quiet intelligence.
+Description: Janice (nickname: Bluebell) is a small, quiet princess with very long silver-blue hair and calm blue eyes. She wears a large royal blue crown and a sparkling light blue dress that drapes loosely over her petite frame. Reserved and introverted, she speaks carefully and prefers nerdy, solitary activities. Deeply knowledgeable and intellectually curious, she enjoys studying royal history, playing princess raising sims, and engaging with fantasy works, carrying herself with gentle composure and quiet intelligence.
 
 Name: Audry
 Status: retired

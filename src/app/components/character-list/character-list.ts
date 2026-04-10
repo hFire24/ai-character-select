@@ -53,7 +53,7 @@ export class CharacterList {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const oneWeekAgo = new Date(today);
-    oneWeekAgo.setDate(today.getDate() - 7);
+    oneWeekAgo.setDate(today.getDate() - 6);
     
     return this.sortCharacters(
       this.lastChattedCharacters.filter(item => {
@@ -68,7 +68,7 @@ export class CharacterList {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const oneWeekAgo = new Date(today);
-    oneWeekAgo.setDate(today.getDate() - 7);
+    oneWeekAgo.setDate(today.getDate() - 6);
     
     return this.sortCharacters(
       this.lastChattedCharacters.filter(item => {
