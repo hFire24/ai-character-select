@@ -99,7 +99,7 @@ export class Groups implements OnInit {
         characterIds: [15, 21, 40, 92]
       },
       {
-        name: "Little Princess Friends",
+        name: "Pretty Little Princesses",
         description: "A group of little princess-themed characters who are friends with each other and all wear gigantic crowns.",
         characterIds: [19, 46, 72, 106]
       },
@@ -127,6 +127,16 @@ export class Groups implements OnInit {
         name: "Music Fans",
         description: "Characters who aren't part of the Music Enjoyers but are still known for loving music.",
         characterIds: [31, 47, 51, 57, 62, 63, 73, 75, 76, 84, 96, 103, 105]
+      },
+      {
+        name: "Pink Girls",
+        description: "Characters who are known for wearing pink or being associated with the color pink.",
+        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96]
+      },
+      {
+        name: "Blue Girls",
+        description: "Characters who are known for wearing blue or being associated with the color blue.",
+        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106]
       }
     ];
 
