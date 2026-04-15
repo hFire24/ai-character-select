@@ -99,6 +99,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Riri & Ruru", "Lucy", "Bored-chan"]
       },
       {
+        name: "Mysterious Trio",
+        description: "Characters with unknown or mysterious backgrounds",
+        characterShortNames: ["Reina", "Lumi", "Nita"]
+      },
+      {
         name: "-chan Trio",
         description: "Three characters with the '-chan' suffix in their names",
         characterShortNames: ["Byte-chan", "Hammer-chan", "Bored-chan"]
