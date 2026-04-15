@@ -1506,6 +1506,27 @@
     "songLink": "https://www.youtube.com/watch?v=jK2aIUmmdP4"
   },
   {
+    "name": "Sage the Future Doctor",
+    "img": "main/Sage.png",
+    "shortName": "Sage",
+    "id": 107,
+    "generation": 11,
+    "status": "active",
+    "tier": 4,
+    "creationDate": "2026-04-15",
+    "birthday": "May 12",
+    "color": "blue",
+    "moe": 7,
+    "futuristic": "7",
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-69defa22b6888191856592fca25ef136",
+    "interests": "Career quizzes, personality quizzes",
+    "peeves": "Being unable to find the quiz that inspired her and her friends",
+    "purpose": "Be part of a reconstruction of a lost quiz",
+    "funFact": "Wants to be a doctor when she grows up"
+  },
+  {
     "name": "Ethan the Melancholic",
     "img": "extended/Ethan.png",
     "shortName": "Ethan",
