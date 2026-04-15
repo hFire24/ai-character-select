@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "start:duo-server": "node duo-server.js",
-    "dev": "concurrently \"npm run start:duo-server\" \"npm start\"",
+    "start:backend": "cd backend && dotnet run",
+    "start:backend:watch": "cd backend && dotnet watch run",
+    "dev": "concurrently \"npm run start:backend\" \"npm start\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
