@@ -1565,9 +1565,19 @@
       "name": "Plushie Holders"
     },
     {
+      "id1": 41,
+      "id2": 107,
+      "name": "Gemstone Girls"
+    },
+    {
       "id1": 42,
       "id2": 80,
       "name": "Miku Cosplayers"
+    },
+    {
+      "id1": 42,
+      "id2": 107,
+      "name": "Future Gemstone Girls"
     },
     {
       "id1": 44,
