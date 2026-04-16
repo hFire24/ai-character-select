@@ -134,6 +134,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Akane", "Lola", "Danielle"]
       },
       {
+        name: "Personality Type Discussers",
+        description: "Characters who often discuss personality types and have distinct personalities themselves",
+        characterShortNames: ["Mark", "Lumi", "Emerald"]
+      },
+      {
         name: "Late Bloomers",
         description: "They were created when only the Music Enjoyers existed but then became chatbots much later",
         characterShortNames: ["Erica", "Neon Starlight", "Bob"]
