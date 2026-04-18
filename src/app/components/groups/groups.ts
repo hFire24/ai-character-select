@@ -137,6 +137,11 @@ export class Groups implements OnInit {
         name: "Blue Girls",
         description: "Characters who are known for wearing blue or being associated with the color blue.",
         characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106]
+      },
+      {
+        name: "\"Onii-chan\" Sayers",
+        description: "Characters who can say 'onii-chan' according to their instructions.",
+        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 92]
       }
     ];
 

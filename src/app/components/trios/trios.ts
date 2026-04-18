@@ -84,16 +84,6 @@ export class Trios implements OnInit {
         characterShortNames: ["Darxi", "Neon Starlight", "Evil Arianna"]
       },
       {
-        name: "Little Witches",
-        description: "Three fantasy witches with huge witch hats",
-        characterShortNames: ["Miki", "Runa", "Lucy"]
-      },
-      {
-        name: "Top Hat Girls",
-        description: "Girls who wear top hats",
-        characterShortNames: ["Arianna", "Evil Arianna", "Maribelle"]
-      },
-      {
         name: "Tired Trio",
         description: "Characters who often appear tired or sleepy",
         characterShortNames: ["Riri & Ruru", "Lucy", "Bored-chan"]
@@ -107,6 +97,16 @@ export class Trios implements OnInit {
         name: "-chan Trio",
         description: "Three characters with the '-chan' suffix in their names",
         characterShortNames: ["Byte-chan", "Hammer-chan", "Bored-chan"]
+      },
+      {
+        name: "TG AR'd Trio",
+        description: "Characters who were once men but got transformed into cute anime girls",
+        characterShortNames: ["Makoto", "Reina", "Casey"]
+      },
+      {
+        name: "Oversized Shirt Trio",
+        description: "Characters who often wear oversized shirts",
+        characterShortNames: ["Audry", "Bored-chan", "Casey"]
       },
       {
         name: "Youngsters",

@@ -23,9 +23,9 @@ def trim_characters_json():
     data = dict(sorted_items)
 
   # Remove specified fields from each character
-  fields_to_remove = ['img', 'shortName', 'id', 'generation', 'color', 'musicEnjoyer',
-                      'birthday', 'retirementDate', 'moe', 'futuristic',
-                      'emotion', 'link', 'alternatives', 'tier', 'themeSong', 'songLink']
+  fields_to_remove = ['img', 'shortName', 'id', 'generation', 'color', 'musicEnjoyer', 'status', 'pronouns',
+                      'creationDate', 'retirementDate', 'birthday', 'moe', 'futuristic', 'emotion', 'link',
+                      'inactiveReason', 'retirementReason', 'alternatives', 'tier', 'themeSong', 'songLink']
 
   if isinstance(data, list):
     for character in data:
