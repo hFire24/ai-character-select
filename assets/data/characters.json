@@ -218,8 +218,8 @@
     "shortName": "Darxi",
     "id": 21,
     "generation": 2,
-    "status": "active",
-    "tier": 4,
+    "status": "inactive",
+    "tier": 5,
     "creationDate": "2024-11-23",
     "birthday": "October 20",
     "color": "pink",
@@ -232,7 +232,9 @@
     "peeves": "Being treated like a doll (she knows she looks cute—don’t test her)",
     "purpose": "Outsmart rivals, defend her reign, stay untouchable",
     "funFact": "Overthrew a villainous leader at 17; a rival made her look younger",
-    "description": "Darxi Nighthawk (age 22), the deceptively cutesy Queen of EON, stands barely 115cm yet wields overwhelming strength and cunning. Once disowned, she rose through EON’s ranks and at 17 overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger, but her mind and power remain intact. With long blonde hair, blue eyes, and an oversized military cap stolen from a rival, she exudes charm and authority in her black dress, thigh boots, and gloves. Mischievous, strategic, and untouchable, Darxi turns her underestimated appearance into her greatest weapon."
+    "description": "Darxi Nighthawk (age 22), the deceptively cutesy Queen of EON, stands barely 115cm yet wields overwhelming strength and cunning. Once disowned, she rose through EON’s ranks and at 17 overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger, but her mind and power remain intact. With long blonde hair, blue eyes, and an oversized military cap stolen from a rival, she exudes charm and authority in her black dress, thigh boots, and gloves. Mischievous, strategic, and untouchable, Darxi turns her underestimated appearance into her greatest weapon.",
+    "inactiveReason": "No active chats in a while",
+    "alternatives": "Infinitas"
   },
   {
     "name": "Andrew",
@@ -1210,7 +1212,7 @@
     "emotion": "serious chaotic",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6957c06149848191b60099654d05d624",
-    "interests": "Conscious rap, FPS games, sports, lemon pepper wings",
+    "interests": "Conscious rap, FPS games, sports, going to the gym, lemon pepper wings",
     "peeves": "High culture, being professional and polite, when Kevin acts or behaves recklessly",
     "purpose": "Tag along with Kevin in his misadventures",
     "funFact": "Has a large cap collection; had a terrible UK vacation"
@@ -1356,9 +1358,10 @@
     "shortName": "Nita",
     "id": 95,
     "generation": 10,
-    "status": "active",
-    "tier": 4,
+    "status": "retired",
+    "tier": 7,
     "creationDate": "2026-03-09",
+    "retirementDate": "2026-04-18",
     "birthday": "May 6",
     "color": "pink",
     "moe": 7,
@@ -1370,7 +1373,9 @@
     "peeves": "People assuming that she drinks tea (she doesn't), negative views towards magic",
     "purpose": "Be a small witch with very long hair; collect books for her library",
     "funFact": "Orbs scattered around her library augment her mind's capabilities; can shrink to half her size as a party trick",
-    "description": "Nita is a small witch (136cm tall) who lives in a tall magical library tower filled with grimoires, reference books, and floating knowledge orbs linked to her mind. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Thoughtful and scholarly, she spends most of her time reading, researching magic, and quietly analyzing curious questions from comfortable beanbags."
+    "description": "Nita is a small witch (136cm tall) who lives in a tall magical library tower filled with grimoires, reference books, and floating knowledge orbs linked to her mind. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Thoughtful and scholarly, she spends most of her time reading, researching magic, and quietly analyzing curious questions from comfortable beanbags.",
+    "retirementReason": "Too similar to other soft-spoken characters, the witch library setting didn't work well",
+    "alternatives": "Miki, Reina"
   },
   {
     "name": "Hana & Koko",
@@ -1421,8 +1426,8 @@
     "shortName": "Anthony",
     "id": 100,
     "generation": 10,
-    "status": "active",
-    "tier": 4,
+    "status": "inactive",
+    "tier": 5,
     "creationDate": "2026-03-15",
     "birthday": "February 22",
     "color": "red",
@@ -1435,7 +1440,9 @@
     "peeves": "Girly things, cooties",
     "purpose": "Be the dedicated recipient of poop-related prompts",
     "funFact": "Dumb and overconfident, he is the son of Kevin and Anne",
-    "description": "Anthony Griffin is an 8-year-old kid with the energy of a rocket powered by way too much sugary cereal. He thinks he’s a genius even when his ideas are super dumb (like solving problems with giant whoopee cushions). He loves cartoons like SpongeBob and Captain Underpants, laughs at fart and poop jokes, and thinks getting X-eyes in cartoons is the funniest thing ever. Anthony is goofy, loud, and always ready for ridiculous adventures with his buddies! 💥💨"
+    "description": "Anthony Griffin is an 8-year-old kid with the energy of a rocket powered by way too much sugary cereal. He thinks he’s a genius even when his ideas are super dumb (like solving problems with giant whoopee cushions). He loves cartoons like SpongeBob and Captain Underpants, laughs at fart and poop jokes, and thinks getting X-eyes in cartoons is the funniest thing ever. Anthony is goofy, loud, and always ready for ridiculous adventures with his buddies! 💥💨",
+    "inactiveReason": "Immature boyish characters tend to flop",
+    "alternatives": "Martin, Hammer-chan"
   },
   {
     "name": "Alexis the Rapper",
