@@ -1,0 +1,149 @@
+<div class="id-checker-container">
+  <h2>Character ID Checker</h2>
+  
+  <div class="search-section">
+    <div class="search-input-group">
+      <input 
+        type="text" 
+        [(ngModel)]="searchId" 
+        (keyup.enter)="onEnter($event)"
+        placeholder="Enter character ID..."
+        class="id-input"
+      />
+      <button (click)="searchById()" class="search-button">Search</button>
+      <button (click)="clearSearch()" class="clear-button" *ngIf="searched">Clear</button>
+    </div>
+  </div>
+
+  <div class="result-section" *ngIf="searched">
+    <div class="not-found" *ngIf="notFound">
+      <p>❌ Character with ID "{{ searchId }}" not found</p>
+    </div>
+
+    <div class="character-details" *ngIf="character">
+      <div class="character-header">
+        <img [src]="'assets/Icons/' + character.img" [alt]="character.name" class="character-image" />
+        <div class="header-info">
+          <h3>{{ character.name }}</h3>
+          <p class="short-name">Short Name: {{ character.shortName }}</p>
+          <p class="character-id">ID: {{ character.id }}</p>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-item">
+          <span class="label">Status:</span>
+          <span class="value" [class]="'status-' + character.status">{{ character.status }}</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Generation:</span>
+          <span class="value">{{ character.generation }}</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Tier:</span>
+          <span class="value">{{ character.tier }}</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Color:</span>
+          <span class="value">
+            <span class="color-indicator" [style.background-color]="character.color"></span>
+            {{ character.color }}
+          </span>
+        </div>
+
+        <div class="detail-item" *ngIf="character.birthday">
+          <span class="label">Birthday:</span>
+          <span class="value">{{ character.birthday }}</span>
+        </div>
+
+        <div class="detail-item" *ngIf="character.creationDate">
+          <span class="label">Creation Date:</span>
+          <span class="value">{{ character.creationDate }}</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Pronouns:</span>
+          <span class="value">{{ character.pronouns }}</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Emotion:</span>
+          <span class="value">{{ character.emotion }}</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Moe Level:</span>
+          <span class="value">{{ character.moe }}/10</span>
+        </div>
+
+        <div class="detail-item">
+          <span class="label">Futuristic Level:</span>
+          <span class="value">{{ character.futuristic }}/10</span>
+        </div>
+
+        <div class="detail-item" *ngIf="character.musicEnjoyer">
+          <span class="label">Music Enjoyer:</span>
+          <span class="value">✓ Yes</span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.interests">
+          <span class="label">Interests:</span>
+          <span class="value">{{ character.interests }}</span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.peeves">
+          <span class="label">Pet Peeves:</span>
+          <span class="value">{{ character.peeves }}</span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.purpose">
+          <span class="label">Purpose:</span>
+          <span class="value">{{ character.purpose }}</span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.funFact">
+          <span class="label">Fun Fact:</span>
+          <span class="value">{{ character.funFact }}</span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.description">
+          <span class="label">Description:</span>
+          <span class="value description-text">{{ character.description }}</span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.themeSong">
+          <span class="label">Theme Song:</span>
+          <span class="value">
+            {{ character.themeSong }}
+            <a *ngIf="character.songLink" [href]="character.songLink" target="_blank" class="song-link">🎵 Listen</a>
+          </span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.retirementReason">
+          <span class="label">Retirement Reason:</span>
+          <span class="value">{{ character.retirementReason }}</span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.inactiveReason">
+          <span class="label">Inactive Reason:</span>
+          <span class="value">{{ character.inactiveReason }}</span>
+        </div>
+
+        <div class="detail-item full-width" *ngIf="character.alternatives">
+          <span class="label">Alternatives:</span>
+          <span class="value">{{ character.alternatives }}</span>
+        </div>
+
+        <div class="detail-item full-width">
+          <span class="label">ChatGPT Link:</span>
+          <span class="value">
+            <a [href]="character.link" target="_blank" class="chat-link">Open Chat →</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
