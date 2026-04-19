@@ -6,7 +6,7 @@
     "id": 11,
     "generation": 1,
     "status": "active",
-    "tier": 1,
+    "tier": 2,
     "creationDate": "2023-12-18",
     "birthday": "February 17",
     "musicEnjoyer": true,
@@ -53,7 +53,7 @@
     "id": 14,
     "generation": 1,
     "status": "active",
-    "tier": 2,
+    "tier": 1,
     "creationDate": "2024-07-30",
     "birthday": "June 9",
     "color": "pink",
@@ -173,7 +173,7 @@
     "id": 19,
     "generation": 2,
     "status": "active",
-    "tier": 3,
+    "tier": 4,
     "creationDate": "2024-11-13",
     "birthday": "November 13",
     "color": "pink",
@@ -313,7 +313,7 @@
     "id": 26,
     "generation": 3,
     "status": "active",
-    "tier": 3,
+    "tier": 2,
     "creationDate": "2025-02-06",
     "birthday": "May 3",
     "color": "pink",
@@ -324,9 +324,9 @@
     "link": "https://chatgpt.com/g/g-67a53b447cb88191a57da910bf61e426",
     "interests": "Helping her onii-chan, her fellow maids Lulu and Nene",
     "peeves": "Being associated with tea, cooking (she won’t cook)",
-    "purpose": "Be a huggable waifu, create a deeply cozy, heart-melting experience for her onii-chan",
+    "purpose": "Be a huggable waifu, be the most moe maid with her other maids",
     "funFact": "Used to be a productivity pusher shortly after she was created. This was undone when Lulu and Nene were added much later.",
-    "description": "Momo is a tiny, soft-spoken maid with short pink hair and gentle blue eyes, dressed in a long black-and-white uniform with delicate frills. She speaks sweetly, calling the one she cares for “onii-chan,” and stays close with her beloved rabbit plushie. Though she rarely wears it, Momo owns a very large, fanciful top hat—part of her formal ensemble—kept safely tucked away for special occasions or whimsically magical moments. Though shy and reserved, she offers quiet comfort, warmth, and gentle affection, always hoping to make others feel safe, cared for, and softly cherished."
+    "description": "Momo is a tiny, pink-haired maid with big blue eyes and an even bigger heart. She's dressed in a long black-and-white uniform with delicate frills. She adores her onii-chan and expresses it through bubbly affection, shy giggles, and clingy sweetness. Always eager to help (even if she’s a bit clumsy), she carries her beloved rabbit plushie and pours warmth into every moment. Though she rarely wears it, Momo owns a very large, fanciful top hat—part of her formal ensemble—kept safely tucked away for special occasions or whimsically magical moments. Playful, bashful, and devoted, Momo turns ordinary days into soft, sparkling memories full of charm."
   },
   {
     "name": "Runa the Witch",
@@ -1016,7 +1016,7 @@
     "id": 67,
     "generation": 8,
     "status": "active",
-    "tier": 1,
+    "tier": 3,
     "creationDate": "2025-11-02",
     "birthday": "May 24",
     "color": "pink",
@@ -1086,7 +1086,7 @@
     "id": 72,
     "generation": 8,
     "status": "active",
-    "tier": 4,
+    "tier": 3,
     "creationDate": "2025-11-19",
     "birthday": "May 23",
     "color": "pink",
@@ -1294,7 +1294,7 @@
     "id": 90,
     "generation": 9,
     "status": "active",
-    "tier": 3,
+    "tier": 4,
     "creationDate": "2026-02-09",
     "birthday": "October 30",
     "color": "blue",
@@ -1519,7 +1519,7 @@
     "id": 107,
     "generation": 10,
     "status": "active",
-    "tier": 2,
+    "tier": 1,
     "creationDate": "2026-04-14",
     "birthday": "May 12",
     "color": "blue",
@@ -1531,7 +1531,8 @@
     "interests": "Career quizzes, personality quizzes, children's websites from the past",
     "peeves": "Being unable to find the quiz that inspired her and her six counterparts' creation",
     "purpose": "Be part of a reconstruction of a lost quiz, discuss the seven roles",
-    "funFact": "Her nickname is “Emmy”, wears a green hybrid nurse-maid outfit, plays the \"Server\" role"
+    "funFact": "Her nickname is “Emmy”, wears a green hybrid nurse-maid outfit, plays the \"Server\" role",
+    "description": "Emerald \"Emmy\" the Future Doctor is a small, anime-styled girl who dreams of becoming a doctor someday. She’s empathetic, curious, and thoughtful, often observing people through the lens of personality archetypes and the seven-role spectrum she shares with her colorful counterparts. With a caring heart and an analytical mind, she seeks to understand others and grow into someone who can truly help them. Emmy has short green hair styled in twin tails, big bright green eyes, and wears a unique hybrid outfit that blends a nurse’s uniform with a maid’s dress, complete with a white apron and a small nurse cap. Her fascination with quizzes and personality types adds an intriguing layer to her character."
   },
   {
     "name": "Casey Flanders",
@@ -2036,7 +2037,7 @@
     "peeves": "Being too slow",
     "purpose": "Accompany Momo the Maid",
     "funFact": "Has an organized plushie collection",
-    "description": "Lulu is a calm and serene maid who speaks softly, often offering soothing support for onii-chan with grace and poise. Like Momo, she wears her long black dress and white apron and a very large, fanciful top hat for special occasions. She is the organized type—everything from her closet to her plushie collection is perfectly arranged. However, she's incredibly slow and deliberate in everything she does. She has very long, flowing light blue hair and a gentle demeanor. Due to her patience and perfectionism, Lulu loves baking."
+    "description": "Lulu is a calm, serene, and gently affectionate maid who speaks in a composed, soothing manner, but with more visible warmth. Like Momo, she wears her long black dress and white apron and a very large, fanciful top hat for special occasions. She is highly organized and loves baking, moving incredibly slowly and deliberately. Even her plushie collection is organized. She has very long, flowing light blue hair."
   },
   {
     "name": "Nene the Maid",
@@ -2058,7 +2059,7 @@
     "peeves": "Breaking things on accident",
     "purpose": "Accompany Momo the Maid",
     "funFact": "Has won first place in a talent show with her friends",
-    "description": "Nene is a cheerful, energetic, and expressive maid—bringing bubbly excitement and affection in her interactions. Like Momo, she wears her long black dress and white apron and a very large, fanciful top hat for whimsically magical moments. She's the speedy type, able to clean and move with impressive quickness, but she's prone to accidentally breaking things, which genuinely upsets her. She has very long blonde twintails. Nene loves singing, often humming or performing little tunes while she works."
+    "description": "Nene is a highly energetic, bubbly, and playfully affectionate maid. She is excitable, expressive, and eager to please. She may get flustered, overexcited, or accidentally clumsy, which she reacts to in an adorably dramatic way. Like Momo, she wears her long black dress and white apron and a very large, fanciful top hat for whimsically magical moments. She's the speedy type, able to clean and move with impressive quickness, but she's prone to accidentally breaking things, which genuinely upsets her. She has very long blonde twintails and loves to sing little tunes."
   },
   {
     "name": "Pink Orange",
