@@ -86,7 +86,7 @@ export class Groups implements OnInit {
       {
         name: "Top Hat Wearers",
         description: "Characters who are known for wearing top hats.",
-        characterIds: [13, 31, 58, 64, 94]
+        characterIds: [13, 31, 39, 58, 64, 94, 109, 110]
       },
       {
         name: "Witch Hat Wearers",

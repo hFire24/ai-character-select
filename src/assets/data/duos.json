@@ -684,6 +684,11 @@
     },
     {
       "id1": 14,
+      "id2": 92,
+      "name": "Quiet Age-Regressed Girls"
+    },
+    {
+      "id1": 14,
       "id2": 94,
       "name": "Tiny, Mysterious Blue-Haired Girls"
     },
@@ -1514,6 +1519,11 @@
       "name": "Cooking Mamas"
     },
     {
+      "id1": 37,
+      "id2": 109,
+      "name": "Elegant Big Sisters"
+    },
+    {
       "id1": 38,
       "id2": 46,
       "name": "Blonde Nobles"
@@ -1575,6 +1585,11 @@
       "name": "Gemstone Girls"
     },
     {
+      "id1": 41,
+      "id2": 110,
+      "name": "Shy Girls of Elegant Ladies"
+    },
+    {
       "id1": 42,
       "id2": 80,
       "name": "Miku Cosplayers"
@@ -1613,6 +1628,16 @@
       "id1": 46,
       "id2": 106,
       "name": "Introverted Princesses"
+    },
+    {
+      "id1": 46,
+      "id2": 109,
+      "name": "Graceful White Gown Girls"
+    },
+    {
+      "id1": 46,
+      "id2": 110,
+      "name": "Shy Blonde Little Girls"
     },
     {
       "id1": 47,
@@ -2014,6 +2039,11 @@
       "name": "Strict Little Girls"
     },
     {
+      "id1": 72,
+      "id2": 109,
+      "name": "Elegant Talented Duo"
+    },
+    {
       "id1": 73,
       "id2": 77,
       "name": "Isekai Fans"
@@ -2132,6 +2162,11 @@
       "id1": 99,
       "id2": 104,
       "name": "Easily Distracted Foodies"
+    },
+    {
+      "id1": 109,
+      "id2": 110,
+      "name": "Elegant Sisters"
     }
   ]
 }
