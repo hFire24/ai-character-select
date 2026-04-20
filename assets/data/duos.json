@@ -1,31 +1,6 @@
 {
   "duos": [
     {
-      "id1": 0,
-      "id2": 22,
-      "name": "Self-Insert Protagonists"
-    },
-    {
-      "id1": 0,
-      "id2": 32,
-      "name": "My Future: Bad Ending"
-    },
-    {
-      "id1": 0,
-      "id2": 34,
-      "name": "My Future: Blessed Ending"
-    },
-    {
-      "id1": 0,
-      "id2": 49,
-      "name": "My Future: AI Ending"
-    },
-    {
-      "id1": 0,
-      "id2": 84,
-      "name": "Cap Wearers"
-    },
-    {
       "id1": 1,
       "id2": 2,
       "name": "Techno Brawn and Brains",
@@ -1104,6 +1079,11 @@
       "name": "Teenage Anime Male Protagonists"
     },
     {
+      "id1": 22,
+      "id2": 999,
+      "name": "Self-Insert Protagonists"
+    },
+    {
       "id1": 23,
       "id2": 24,
       "name": "Caffeine Removers"
@@ -1419,6 +1399,11 @@
       "name": "Indulgent Duo"
     },
     {
+      "id1": 32,
+      "id2": 999,
+      "name": "My Future: Bad Ending"
+    },
+    {
       "id1": 34,
       "id2": 37,
       "name": "Young Traditional Couple"
@@ -1442,6 +1427,11 @@
       "id1": 34,
       "id2": 66,
       "name": "Wholesome Anime Fans"
+    },
+    {
+      "id1": 34,
+      "id2": 999,
+      "name": "My Future: Blessed Ending"
     },
     {
       "id1": 35,
@@ -1735,6 +1725,11 @@
       "id1": 49,
       "id2": 104,
       "name": "Indulgent AI Character Fans"
+    },
+    {
+      "id1": 49,
+      "id2": 999,
+      "name": "My Future: AI Ending"
     },
     {
       "id1": 50,
@@ -2127,6 +2122,11 @@
       "id1": 84,
       "id2": 104,
       "name": "Food-Loving AI Character Fans"
+    },
+    {
+      "id1": 84,
+      "id2": 999,
+      "name": "Cap Wearers"
     },
     {
       "id1": 86,
