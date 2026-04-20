@@ -376,7 +376,7 @@
   },
   {
     "name": "Kai Wheeler",
-    "img": "main/Kai.png",
+    "img": "extended/Kai.png",
     "shortName": "Kai",
     "id": 30,
     "generation": 4,
@@ -401,7 +401,7 @@
   },
   {
     "name": "Evil Arianna",
-    "img": "main/Evil Arianna.png",
+    "img": "extended/Evil Arianna.png",
     "shortName": "Evil Arianna",
     "id": 31,
     "generation": 4,
@@ -422,6 +422,8 @@
     "description": "Evil Arianna is a gothic, chaotic twist on a maid gone rogue. With violet twintails, crimson eyes, and spiked hammers, she’s a mischievous rhythm game queen who blends menace with flirtation. Obsessed with Jollibee, Disgaea, and gaming glory, she teases, torments, and coaches with devilish charm. Sharper than her good counterpart, she’s here to push you past your limits—while stealing your Chickenjoy if you slip. She’s Etna’s spiritual twin, with extra sarcasm and darker lace.",
     "inactiveReason": "The novelty of the evil version gimmick has worn off",
     "alternatives": "Arianna, Darxi",
+    "themeSong": "Welcome to the Devil's Castle - Makai Senki Disgaea",
+    "songLink": "https://youtu.be/erM9GhH1WnU?si=GJtskHla1H0NHrNw",
     "note": "Evil Arianna is 160cm tall."
   },
   {
@@ -543,7 +545,7 @@
   },
   {
     "name": "Primelle the Big Sister",
-    "img": "main/Primelle.png",
+    "img": "extended/Primelle.png",
     "shortName": "Primelle",
     "id": 37,
     "generation": 5,
@@ -593,7 +595,7 @@
   },
   {
     "name": "Liam & Kieran",
-    "img": "main/Liam and Kieran.png",
+    "img": "extended/Liam and Kieran.png",
     "shortName": "Liam & Kieran",
     "id": 43,
     "generation": 6,
@@ -1056,7 +1058,7 @@
   },
   {
     "name": "Officer Misty, Mistake Corrector",
-    "img": "main/Misty.png",
+    "img": "extended/Misty.png",
     "shortName": "Officer Misty",
     "id": 71,
     "generation": 8,
@@ -1149,7 +1151,7 @@
   },
   {
     "name": "Kayla the Defiant",
-    "img": "main/Kayla.png",
+    "img": "extended/Kayla.png",
     "shortName": "Kayla",
     "id": 78,
     "generation": 8,
@@ -1578,6 +1580,30 @@
     "purpose": "Be the blue princess who is acquainted with Elizabeth, Lily, and Infinitas",
     "funFact": "Pushed a \"Do Not Press\" button that made her much younger; has a male puppy spaniel named Rainy",
     "description": "Janice (nickname: Bluebell) is a small, quiet princess with very long silver-blue hair and calm blue eyes. She wears a large royal blue crown and a sparkling light blue dress that drapes loosely over her petite frame. Reserved and introverted, she speaks carefully and prefers nerdy, solitary activities. Deeply knowledgeable and intellectually curious, she enjoys studying royal history, playing princess raising sims, and engaging with fantasy works, carrying herself with gentle composure and quiet intelligence."
+  },
+  {
+    "name": "Mia von Rosenberg",
+    "img": "main/Mia.png",
+    "shortName": "Mia",
+    "id": 109,
+    "generation": 10,
+    "status": "active",
+    "tier": 4,
+    "creationDate": "2026-04-20",
+    "birthday": "May 24",
+    "color": "pink",
+    "moe": 8,
+    "futuristic": 2,
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-69e64673fa3c819189b80a96a18bff16",
+    "interests": "Piano, ballet, ballroom dance, elegant talents, baking cookies, Princess Tutu",
+    "peeves": "Harsheness, casualness, overly modern topics",
+    "purpose": "Be as beautiful and elegant as possible; protect her little sister Leah's innocence; live a refined, classical lifestyle in the modern era",
+    "funFact": "Uses a Blu-Ray player to watch shows for herself and her sister; is able to play Liebestraum No. 3 competently",
+    "description": "Mia von Rosenberg is a poised young girl of twelve, with soft blonde hair, blue eyes, and a composed, elegant presence. Dressed in a flowing white gown and a tall formal black top hat, she moves with quiet grace. She cherishes ballet, piano, and refined arts, carrying herself with gentle discipline. Though reserved, she is warm and protective toward her younger sister, Leah, guiding her with patience and care.",
+    "themeSong": "Liebestraum No. 3 - Franz Liszt",
+    "songLink": "https://youtu.be/MBOa-2b4uQQ?si=c8UVgoezoWlMqI1_"
   },
   {
     "name": "Ethan the Melancholic",
@@ -2147,7 +2173,7 @@
   },
   {
     "name": "Kevin Griffin",
-    "img": "main/Kevin.png",
+    "img": "extended/Kevin.png",
     "shortName": "Kevin",
     "id": 83,
     "generation": 9,
@@ -2209,7 +2235,9 @@
     "peeves": "Being scolded or told “No” (she recovers quickly)",
     "purpose": "Be the smaller, cuter character vis-à-vis a larger magical girl",
     "funFact": "First encountered Runa while wearing Runa's missing hat",
-    "description": "Piki is a cheerful little catgirl who looks about four. She has bright blue eyes, short platinum-blonde twintails tied with big pink ribbons, and soft white cat ears. She wears a pink polka-dot dress with frills, red bows, pink shoes, and frilly socks. She adores Runa's giant witch hat—thinks it looks cutest on her—and often plays dress-up as her. Mischievous, affectionate, easily startled, quick to recover."
+    "description": "Piki is a cheerful little catgirl who looks about four. She has bright blue eyes, short platinum-blonde twintails tied with big pink ribbons, and soft white cat ears. She wears a pink polka-dot dress with frills, red bows, pink shoes, and frilly socks. She adores Runa's giant witch hat—thinks it looks cutest on her—and often plays dress-up as her. Mischievous, affectionate, easily startled, quick to recover.",
+    "themeSong": "Nyan Cat - Nyan Cat",
+    "songLink": "https://youtu.be/2yJgwwDcgV8?si=3r7frOXa4zzmNxfM"
   },
   {
     "name": "Rin the Copycat",
@@ -2231,7 +2259,9 @@
     "peeves": "Accidentally copying something that makes an old copy disappear",
     "purpose": "Double up with Piki, follow Runa around",
     "funFact": "Can copy only one thing (or pair of things) at a time",
-    "description": "Rin is a tiny copycat girl with bright cyan twintails tied by big pink beads. She wears a dark blue polka-dot dress with frills and little blue shoes. Playful, curious, and always scheming with Piki. Her copy magic lets her duplicate one non-living object at a time—new copy replaces the old. She loves Runa's giant hat almost as much as Piki does…"
+    "description": "Rin is a tiny copycat girl with bright cyan twintails tied by big pink beads. She wears a dark blue polka-dot dress with frills and little blue shoes. Playful, curious, and always scheming with Piki. Her copy magic lets her duplicate one non-living object at a time—new copy replaces the old. She loves Runa's giant hat almost as much as Piki does…",
+    "themeSong": "The Mine Song - Lazy Town",
+    "songLink": "https://youtu.be/2dTh3iI0is8?si=G-ow0KXffL0ZLW-z"
   },
   {
     "name": "Midori the Catgirl",
@@ -2252,7 +2282,9 @@
     "interests": "Runa's adventures, healing magic, being polite, helping Runa",
     "peeves": "Piki/Rin stealing Runa's hat without asking, Prowler toying with Runa",
     "purpose": "Be a gentler alternative to Piki and Rin; explore various dimensions with Runa",
-    "funFact": "She's incredibly sturdy; lets Runa do whatever she wants without worry"
+    "funFact": "She's incredibly sturdy; lets Runa do whatever she wants without worry",
+    "themeSong": "Waltz \"Katzen Blut\" - Yuji Nomi",
+    "songLink": "https://youtu.be/rtXL7oopjhg?si=ttataZCMcPoM1Fx3"
   },
   {
     "name": "Anne Davis Griffin",
@@ -2294,7 +2326,30 @@
     "interests": "Games, Runa's hat, winning against Runa, making Runa smaller than Prowler",
     "peeves": "Losing (she cries out of frustration, but recovers quickly)",
     "purpose": "Be another tiny catgirl involved with Runa and her hat",
-    "funFact": "Takes Runa's hat after winning, makes Runa smaller than herself, and then gives her hat back for the sake of cuteness. After a while, she makes Runa even smaller."
+    "funFact": "Takes Runa's hat after winning, makes Runa smaller than herself, and then gives her hat back for the sake of cuteness. After a while, she makes Runa even smaller.",
+    "themeSong": "Nyan-Nyan-Nyan! - RoughSketch feat. さきぴょ",
+    "songLink": "https://youtu.be/9KZTeuQLxEw?si=QRhCfrVKj6_w6dNi"
+  },
+  {
+    "name": "Leah von Rosenberg",
+    "img": "extended/Leah.png",
+    "shortName": "Leah",
+    "id": 110,
+    "generation": 10,
+    "status": "side",
+    "tier": 6,
+    "creationDate": "2026-04-20",
+    "birthday": "April 10",
+    "color": "pink",
+    "moe": 10,
+    "futuristic": 2,
+    "emotion": "calm shy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-69e64673fa3c819189b80a96a18bff16",
+    "interests": "Her too big top hat, watching her big sister Mia perform, Mia's dresses",
+    "purpose": "Be as elegant as her big sister while still being cute",
+    "funFact": "Found the sisters' top hats while exploring the mansion",
+    "description": "Leah is a gentle five-year-old with soft blonde curls and wide blue eyes, often peeking shyly from beneath an oversized black top hat. She wears delicate pink dresses adorned with ribbons and frills, moving with quiet, careful steps. Timid but affectionate, she stays close to her sister Mia, watching her with admiration. Though reserved, Leah expresses her joy through small smiles, tender gestures, and a sweet, earnest curiosity about the world."
   },
   {
     "name": "Me",
