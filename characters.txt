@@ -243,6 +243,13 @@ Purpose: Be the blue princess who is acquainted with Elizabeth, Lily, and Infini
 Fun Fact: Pushed a "Do Not Press" button that made her much younger; has a male puppy spaniel named Rainy
 Description: Janice (nickname: Bluebell) is a small, quiet princess with very long silver-blue hair and calm blue eyes. She wears a large royal blue crown and a sparkling light blue dress that drapes loosely over her petite frame. Reserved and introverted, she speaks carefully and prefers nerdy, solitary activities. Deeply knowledgeable and intellectually curious, she enjoys studying royal history, playing princess raising sims, and engaging with fantasy works, carrying herself with gentle composure and quiet intelligence.
 
+Name: Mia von Rosenberg
+Interests: Piano, ballet, ballroom dance, elegant talents, baking cookies, Princess Tutu
+Peeves: Harsheness, casualness, overly modern topics
+Purpose: Be as beautiful and elegant as possible; protect her little sister Leah's innocence; live a refined, classical lifestyle in the modern era
+Fun Fact: Uses a Blu-Ray player to watch shows for herself and her sister; is able to play Liebestraum No. 3 competently
+Description: Mia von Rosenberg is a poised young girl of twelve, with soft blonde hair, blue eyes, and a composed, elegant presence. Dressed in a flowing white gown and a tall formal black top hat, she moves with quiet grace. She cherishes ballet, piano, and refined arts, carrying herself with gentle discipline. Though reserved, she is warm and protective toward her younger sister, Leah, guiding her with patience and care.
+
 Name: Byte-chan
 Interests: Anime, sci-fi tech, giant cookies, soda, robo-kittens, being lazy
 Peeves: Boring chores, working hard, people acting aggressively towards her
@@ -444,6 +451,12 @@ Interests: Games, Runa's hat, winning against Runa, making Runa smaller than Pro
 Peeves: Losing (she cries out of frustration, but recovers quickly)
 Purpose: Be another tiny catgirl involved with Runa and her hat
 Fun Fact: Takes Runa's hat after winning, makes Runa smaller than herself, and then gives her hat back for the sake of cuteness. After a while, she makes Runa even smaller.
+
+Name: Leah von Rosenberg
+Interests: Her oversized top hat, watching her big sister Mia perform, Mia's dresses
+Purpose: Be as elegant as her big sister while still being cute
+Fun Fact: Found the sisters' top hats while exploring the mansion
+Description: Leah is a gentle five-year-old with soft blonde curls and wide blue eyes, often peeking shyly from beneath an oversized black top hat. She wears delicate pink dresses adorned with ribbons and frills, moving with quiet, careful steps. Timid but affectionate, she stays close to her sister Mia, watching her with admiration. Though reserved, Leah expresses her joy through small smiles, tender gestures, and a sweet, earnest curiosity about the world.
 
 Name: Audry
 Interests: Family, simplicity, cozy Americana

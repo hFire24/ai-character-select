@@ -126,12 +126,12 @@ export class Groups implements OnInit {
       {
         name: "Music Fans",
         description: "Characters who aren't part of the Music Enjoyers but are still known for loving music.",
-        characterIds: [31, 47, 51, 57, 62, 63, 73, 75, 76, 84, 96, 103, 105]
+        characterIds: [31, 47, 51, 57, 62, 63, 73, 75, 76, 84, 96, 103, 105, 109]
       },
       {
         name: "Pink Girls",
         description: "Characters who are known for wearing pink or being associated with the color pink.",
-        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96]
+        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110]
       },
       {
         name: "Blue Girls",
@@ -141,7 +141,12 @@ export class Groups implements OnInit {
       {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions.",
-        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 92]
+        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 92, 108]
+      },
+      {
+        name: "Late Bloomers",
+        description: "Characters who had initial appearances before July 13, 2024 but became their own chatbots much later.",
+        characterIds: [29, 110, 109, 24, 25, 28, 57]
       }
     ];
 

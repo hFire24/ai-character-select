@@ -1,11 +1,23 @@
 <div class="id-checker-container">
   <h2>Character ID Checker</h2>
   
+  <div class="mode-toggle">
+    <label class="checkbox-label">
+      <input 
+        type="checkbox" 
+        [(ngModel)]="splitTwinsMode" 
+        class="mode-checkbox"
+      />
+      <span>Split Twins Mode</span>
+    </label>
+  </div>
+  
   <div class="search-section">
     <div class="search-input-group">
       <input 
-        type="text" 
+        type="number" 
         [(ngModel)]="searchId" 
+        (ngModelChange)="onInputChange()"
         (keyup.enter)="onEnter($event)"
         placeholder="Enter character ID..."
         class="id-input"
@@ -22,7 +34,7 @@
 
     <div class="character-details" *ngIf="character">
       <div class="character-header">
-        <img [src]="'assets/Icons/' + character.img" [alt]="character.name" class="character-image" />
+        <img [src]="'assets/Icons/' + (character.img ? character.img : 'extended/Unknown.png')" [alt]="character.name" class="character-image" />
         <div class="header-info">
           <h3>{{ character.name }}</h3>
           <p class="short-name">Short Name: {{ character.shortName }}</p>
@@ -54,9 +66,9 @@
           </span>
         </div>
 
-        <div class="detail-item" *ngIf="character.birthday">
+        <div class="detail-item">
           <span class="label">Birthday:</span>
-          <span class="value">{{ character.birthday }}</span>
+          <span class="value">{{ character.birthday || 'Unknown' }}</span>
         </div>
 
         <div class="detail-item" *ngIf="character.creationDate">

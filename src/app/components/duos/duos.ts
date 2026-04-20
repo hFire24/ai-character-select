@@ -38,6 +38,7 @@ export class Duos implements OnInit {
   // Store original twin characters for modal display
   private liamKieranOriginal: Character | null = null;
   private ririRuruOriginal: Character | null = null;
+  private hanaKokoOriginal: Character | null = null;
 
   // Duo name pairs - loaded dynamically
   duoPairs: DuoPair[] = [];
@@ -147,6 +148,8 @@ export class Duos implements OnInit {
         this.selectedCharacter = this.liamKieranOriginal;
       } else if (character.id === 52 || character.id === 53) {
         this.selectedCharacter = this.ririRuruOriginal;
+      } else if (character.id === 97 || character.id === 98) {
+        this.selectedCharacter = this.hanaKokoOriginal;
       }
     } else {
       this.selectedCharacter = character;
