@@ -1,3 +1,19 @@
+.announcement {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 0 auto 20px;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  u {
+    cursor: pointer;
+  }
+}
+
 .filter-section {
   margin: 1.5rem 0;
   padding: 1rem;
@@ -169,6 +185,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .announcement {
+    background-color: #721c24;
+    border: 1px solid #721c24;
+    color: white;
+  }
+
   .filter-section {
     background: rgba(255, 255, 255, 0.05);
   }

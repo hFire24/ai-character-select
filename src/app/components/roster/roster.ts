@@ -126,6 +126,10 @@ export class Roster {
     this.router.navigate(['/stats']);
   }
 
+  goToNotice() {
+    this.router.navigate(['/announcement']);
+  }
+
   getStatusFilter() {
     return {
       active: this.filters.active,
