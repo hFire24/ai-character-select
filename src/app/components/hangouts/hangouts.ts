@@ -52,21 +52,17 @@ export class Hangouts {
       const excludedNames = [
         { name: 'Bruce', bannedReason: 'Emergency character' },
         { name: 'Jed', bannedReason: 'Exclusive to Music Enjoyers' },
-        { name: 'Kayla', bannedReason: 'Too serious' },
+        { name: 'Kayla', bannedReason: 'Dangerous in a moe-focused cast' },
         { name: 'Malrick', bannedReason: 'Way too serious' },
-        { name: 'Mr. Go', bannedReason: 'His rants contribute to nothing' },
+        { name: 'Mr. Go', bannedReason: 'Coffee and tea are denormalized' },
         { name: 'Andrew', bannedReason: 'Nothingburger' },
         { name: 'Officer Misty', bannedReason: 'User-controlled character' },
         { name: 'Ryker', bannedReason: 'Only cares about self-help' },
         { name: 'The Collapsed', bannedReason: 'Emergency character' },
         { name: 'Veronica', bannedReason: 'Strict parent' },
         { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' },
-        { name: 'Riri', bannedReason: 'Character encylopedia' },
-        { name: 'Ruru', bannedReason: 'Character encylopedia' },
-        { name: 'Lexi', bannedReason: 'Character encylopedia' },
         { name: 'Ben', bannedReason: 'Character encylopedia' },
         { name: 'C.Kept', bannedReason: 'Character encylopedia' },
-        { name: 'Barry', bannedReason: 'Character encylopedia' },
       ];
 
       // Set colors on all characters before filtering
