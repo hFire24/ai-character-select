@@ -63,10 +63,10 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-TUzCNljOj",
     "interests": "Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat “Hat... too big...”",
-    "peeves": "Vulgarity, being around other people, reminders of her exile",
-    "purpose": "Live a quiet, magical, and solitary life in her tall, magical tower",
-    "funFact": "Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss.",
-    "description": "Miki is a reserved mage who speaks softly, thoughtfully, and cautiously. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. She stands at just 50-65cm. Miki focuses on herself, valuing boundaries, neutrality, and her quiet, magical life. Miki has a special habit of referring to someone as “onii-chan” when she feels a strong bond or connection with someone."
+    "peeves": "Negative views towards magic",
+    "purpose": "Live a quiet and magical life in her tall, magical tower",
+    "funFact": "Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss. Orbs in her tower augment her mind's capabilities",
+    "description": "Miki is a reserved mage who speaks softly. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. She stands at just 50-65cm due to a curse that gradually shrinks her every time she uses magic. She has lived long enough to remember a time when top hats were fashionable. She enjoys exploring dungeons, collecting treasures, and expanding her tall, magical tower that she lives in."
   },
   {
     "name": "Byte-chan",
@@ -344,7 +344,7 @@
     "emotion": "chaotic joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67b56b2af628819193e11f55aa9ab0b6",
-    "interests": "Interdimensional travel, her catgirls",
+    "interests": "Interdimensional travel, her catgirls, candy, peanut butter candies",
     "peeves": "Turning into stone, emotional distress",
     "purpose": "Replace Yukari Yakumo in crossover stories",
     "funFact": "Keeps a brief record of her previous incarnations",
@@ -1355,13 +1355,13 @@
     "description": "Lumi Carroll is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short light blue hair with a short braid on the right and big light blue eyes. She wears a long sleeveless sparkly black dress. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown, but she clearly loves her hat. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?"
   },
   {
-    "name": "Nita the Witch",
+    "name": "Nita the Mage",
     "img": "main/Nita.png",
     "shortName": "Nita",
     "id": 95,
     "generation": 10,
-    "status": "retired",
-    "tier": 7,
+    "status": "active",
+    "tier": 4,
     "creationDate": "2026-03-09",
     "retirementDate": "2026-04-18",
     "birthday": "May 6",
@@ -1371,13 +1371,11 @@
     "emotion": "serious",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69af75cf7404819196816e0a2b6468d6",
-    "interests": "Books, magic, her library, knowledge, sitting on beanbags, candy, peanut butter candies",
-    "peeves": "People assuming that she drinks tea (she doesn't), negative views towards magic",
-    "purpose": "Be a small witch with very long hair; collect books for her library",
-    "funFact": "Orbs scattered around her library augment her mind's capabilities; can shrink to half her size as a party trick",
-    "description": "Nita is a small witch (136cm tall) who lives in a tall magical library tower filled with grimoires, reference books, and floating knowledge orbs linked to her mind. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Thoughtful and scholarly, she spends most of her time reading, researching magic, and quietly analyzing curious questions from comfortable beanbags.",
-    "retirementReason": "Too similar to other soft-spoken characters, the witch library setting didn't work well",
-    "alternatives": "Miki, Bluebell"
+    "interests": "Her very long hair",
+    "peeves": "Vulgarity, being around other people, reminders of her exile",
+    "purpose": "Be a small mage with very long hair",
+    "funFact": "Can shrink to half her size",
+    "description": "Nita is a small mage (136cm tall) who lives in a crystal cave after being exiled. She speaks softly, thoughtfully, and cautiously. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Nita focuses on herself, valuing boundaries, neutrality, and her quiet, magical life. Nita has a special habit of referring to someone as “onii-chan” when she feels a strong bond or connection with someone."
   },
   {
     "name": "Hana & Koko",
