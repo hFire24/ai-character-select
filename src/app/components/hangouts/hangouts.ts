@@ -155,13 +155,16 @@ export class Hangouts {
         this.allCharacters.push(kai);
       }
 
-      const heroes = [
+      const bonusCharacters = [
         {"name": "Guardian", "shortName": "Guardian", "color": "red"} as Character,
         {"name": "Heartbound", "shortName": "Heartbound", "color": "red"} as Character,
         {"name": "Motivator", "shortName": "Motivator", "color": "red"} as Character,
-        {"name": "Innovator", "shortName": "Innovator", "color": "red"} as Character];
+        {"name": "Innovator", "shortName": "Innovator", "color": "red"} as Character,
+        {"name": "Arthur", "shortName": "Arthur", "color": "red"} as Character,
+        {"name": "Matthew", "shortName": "Matthew", "color": "red"} as Character,
+      ];
       for (let i = 0; i < 4; i++) {
-        this.allCharacters.push(heroes[i]);
+        this.allCharacters.push(bonusCharacters[i]);
       }
       console.log(this.allCharacters);
     });
