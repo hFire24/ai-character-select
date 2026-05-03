@@ -609,38 +609,13 @@
     },
     {
       "id1": 14,
-      "id2": 32,
-      "name": "Recluses"
-    },
-    {
-      "id1": 14,
       "id2": 35,
       "name": "Short Light-Blue Haired Girls"
     },
     {
       "id1": 14,
-      "id2": 40,
-      "name": "Morality Enforcers"
-    },
-    {
-      "id1": 14,
-      "id2": 48,
-      "name": "Berserkers"
-    },
-    {
-      "id1": 14,
-      "id2": 50,
-      "name": "Tragic Exiles"
-    },
-    {
-      "id1": 14,
       "id2": 54,
       "name": "Lone Explorers"
-    },
-    {
-      "id1": 14,
-      "id2": 65,
-      "name": "Tragic Neutral Isolates"
     },
     {
       "id1": 14,
@@ -651,11 +626,6 @@
       "id1": 14,
       "id2": 80,
       "name": "Light Blue-Haired Magic Users"
-    },
-    {
-      "id1": 14,
-      "id2": 88,
-      "name": "Erio Touwa Expies"
     },
     {
       "id1": 14,
@@ -670,7 +640,7 @@
     {
       "id1": 14,
       "id2": 95,
-      "name": "Tower Dwelling Witches"
+      "name": "Quiet Witches"
     },
     {
       "id1": 15,
@@ -1175,7 +1145,7 @@
     },
     {
       "id1": 25,
-      "id2": 95,
+      "id2": 106,
       "name": "Bookworms"
     },
     {
@@ -1395,6 +1365,11 @@
     },
     {
       "id1": 32,
+      "id2": 95,
+      "name": "Recluses"
+    },
+    {
+      "id1": 32,
       "id2": 104,
       "name": "Indulgent Duo"
     },
@@ -1565,6 +1540,16 @@
       "name": "Anime Girl Enforcers"
     },
     {
+      "id1": 40,
+      "id2": 92,
+      "name": "Military Girls"
+    },
+    {
+      "id1": 40,
+      "id2": 95,
+      "name": "Morality Enforcers"
+    },
+    {
       "id1": 41,
       "id2": 58,
       "name": "Plushie Holders"
@@ -1702,6 +1687,11 @@
       "name": "Robust Duo"
     },
     {
+      "id1": 48,
+      "id2": 95,
+      "name": "Berserkers"
+    },
+    {
       "id1": 49,
       "id2": 50,
       "name": "The Warning Signs"
@@ -1735,6 +1725,11 @@
       "id1": 50,
       "id2": 88,
       "name": "Zero Interests Duo"
+    },
+    {
+      "id1": 50,
+      "id2": 95,
+      "name": "Tragic Exiles"
     },
     {
       "id1": 52,
@@ -1914,13 +1909,8 @@
     },
     {
       "id1": 60,
-      "id2": 95,
-      "name": "Anime Girl Thinkers"
-    },
-    {
-      "id1": 60,
       "id2": 106,
-      "name": "Blue Nerds"
+      "name": "Blue Anime Girl Thinkers"
     },
     {
       "id1": 62,
@@ -1969,6 +1959,11 @@
       "name": "Anti-Profanity Duo"
     },
     {
+      "id1": 65,
+      "id2": 95,
+      "name": "Tragic Neutral Isolates"
+    },
+    {
       "id1": 66,
       "id2": 73,
       "name": "Isekai'd Bros."
@@ -2002,11 +1997,6 @@
       "id1": 67,
       "id2": 94,
       "name": "Size-Shifting Girls"
-    },
-    {
-      "id1": 67,
-      "id2": 95,
-      "name": "Sedentary Witches"
     },
     {
       "id1": 67,
@@ -2130,13 +2120,18 @@
     },
     {
       "id1": 86,
-      "id2": 95,
+      "id2": 106,
       "name": "Keepers of Knowledge"
     },
     {
       "id1": 87,
       "id2": 91,
       "name": "Runa's Little Hat Thieves"
+    },
+    {
+      "id1": 88,
+      "id2": 95,
+      "name": "Erio Touwa Expies"
     },
     {
       "id1": 90,
@@ -2147,11 +2142,6 @@
       "id1": 92,
       "id2": 108,
       "name": "Fried Shrimp Fans"
-    },
-    {
-      "id1": 95,
-      "id2": 106,
-      "name": "Long-Haired Librarians"
     },
     {
       "id1": 97,
