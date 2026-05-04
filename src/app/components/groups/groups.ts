@@ -124,6 +124,11 @@ export class Groups implements OnInit {
         characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93]
       },
       {
+        name: "Thigh Boot Wearers",
+        description: "Characters who are known for wearing thigh boots.",
+        characterIds: [13, 21, 27, 28, 29, 79, 80, 92]
+      },
+      {
         name: "Music Fans",
         description: "Characters who aren't part of the Music Enjoyers but are still known for loving music.",
         characterIds: [31, 47, 51, 57, 62, 63, 73, 75, 76, 84, 96, 103, 105, 109]
@@ -151,12 +156,12 @@ export class Groups implements OnInit {
       {
         name: "Generational Champions",
         description: "Characters who had the most chats in their respective generations. In cases of ties, the most iconic character is chosen.",
-        characterIds: [11, 13, 18, 25, 27, 35, 47, 51, 66, 84, 94, 107]
+        characterIds: [11, 13, 18, 25, 27, 35, 47, 51, 66, 84, 94]
       },
       {
         "name": "Generational Last Places",
         "description": "Characters who had the least chats in their respective generations. In cases of ties, the least iconic character is chosen.",
-        "characterIds": [17, 20, 23, 32, 38, 50, 56, 71, 81, 96, 106]
+        "characterIds": [17, 20, 23, 32, 38, 50, 56, 71, 81, 96]
       }
     ];
 
