@@ -109,11 +109,6 @@ export class Trios implements OnInit {
         characterShortNames: ["Audry", "Bored-chan", "Casey"]
       },
       {
-        name: "Youngsters",
-        description: "Youthful and energetic boys",
-        characterShortNames: ["Martin", "Connor", "ChaoMario"]
-      },
-      {
         name: "Electronic Music Enjoyers",
         description: "Characters who love electronic music and have their own chatbot",
         characterShortNames: ["Felix", "Jed", "B.X."]
@@ -137,11 +132,6 @@ export class Trios implements OnInit {
         name: "Personality Type Discussers",
         description: "Characters who often discuss personality types and have distinct personalities themselves",
         characterShortNames: ["Mark", "Hikari", "Emerald"]
-      },
-      {
-        name: "Late Bloomers",
-        description: "They were created when only the Music Enjoyers existed but then became chatbots much later",
-        characterShortNames: ["Erica", "Neon Starlight", "Bob"]
       },
       {
         name: "Straightforward Trio",

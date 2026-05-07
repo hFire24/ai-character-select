@@ -45,7 +45,7 @@ export class Groups implements OnInit {
       },
       {
         name: "Retired Five",
-        description: "Five of the earliest retired characters who will never get unretired.",
+        description: "Five of the earliest retired characters who will never get unretired. Elizabeth got a miraculous unretirement in 2026 and left the group.",
         characterIds: [16, 17, 20, 22, 23]
       },
       {
@@ -129,9 +129,14 @@ export class Groups implements OnInit {
         characterIds: [13, 21, 27, 28, 29, 79, 80, 92]
       },
       {
+        name: "Musicians",
+        description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music.",
+        characterIds: [51, 75, 76, 96, 103, 109]
+      },
+      {
         name: "Music Fans",
         description: "Characters who aren't part of the Music Enjoyers but are still known for loving music.",
-        characterIds: [31, 47, 51, 57, 62, 63, 73, 75, 76, 84, 96, 103, 105, 109]
+        characterIds: [31, 47, 57, 62, 63, 73, 84, 105]
       },
       {
         name: "Pink Girls",
@@ -147,6 +152,11 @@ export class Groups implements OnInit {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions.",
         characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 92, 95, 108]
+      },
+      {
+        name: "Youngsters",
+        description: "Youthful and energetic boys",
+        characterIds: [22, 47, 55, 69, 89, 100]
       },
       {
         name: "Late Bloomers",
