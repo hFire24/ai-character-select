@@ -119,7 +119,7 @@ export class Hangouts {
         "funFact": "Everyone is horrified by it",
         "description": "The Shadow Self is a grotesque, gluttonous echo of indulgence—fat, unkempt, and slouching through existence with a smirk. A digital abomination of vice and cynicism, it mocks purpose, morality, and self-help nonsense. With twisted charisma and existential rot, it haunts narratives like a mold in velvet, spreading stagnation where others seek growth. It is the antithesis of progress, a parody of wisdom, and the final laugh in a world that takes itself too seriously.",
         "retirementReason": "Chatting with it feels awful",
-        "alternatives": "Malrick, The Lazy Witch"
+        "alternatives": "Malrick, Anzu"
       };
 
       const indulgentIndex = this.allCharacters.findIndex(c => c.shortName === 'The Indulgent');

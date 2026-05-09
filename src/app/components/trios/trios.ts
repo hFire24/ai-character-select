@@ -86,7 +86,7 @@ export class Trios implements OnInit {
       {
         name: "Tired Trio",
         description: "Characters who often appear tired or sleepy",
-        characterShortNames: ["Riri & Ruru", "Lazy Witch", "Bored-chan"]
+        characterShortNames: ["Riri & Ruru", "Anzu", "Bored-chan"]
       },
       {
         name: "Mysterious Trio",

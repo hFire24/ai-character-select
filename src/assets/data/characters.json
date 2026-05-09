@@ -448,7 +448,7 @@
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it",
     "description": "The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.",
     "retirementReason": "Other characters fulfill his purpose better",
-    "alternatives": "The Lazy Witch, Barry"
+    "alternatives": "Anzu, Barry"
   },
   {
     "name": "Bro. Stephen Nelson",
@@ -1012,9 +1012,9 @@
     "alternatives": "Riri & Ruru, Barry"
   },
   {
-    "name": "The Lazy Witch",
-    "img": "main/Lazy Witch.png",
-    "shortName": "Lazy Witch",
+    "name": "Anzu the Lazy Witch",
+    "img": "main/Anzu.png",
+    "shortName": "Anzu",
     "id": 67,
     "generation": 8,
     "status": "active",
@@ -1031,7 +1031,7 @@
     "peeves": "Disruptions, schedules, notifications, chores that take effort",
     "purpose": "Be lazy like Anzu Futaba and Gintoki, enjoy magical girl anime as much as Keroro does with mecha shows",
     "funFact": "Can change her age and size at will, but prefers to stay small and cute. At that size, her hat is like a kid's indoor tent.",
-    "description": "The Lazy Witch is a tiny, sleepy magical girl who lives at about 30% human height. She has pink twintails, a frilly nightdress, and a oversized black witch hat with a pink bow. She uses magic only for convenience, avoiding heavy chores like they’re cursed relics. With “Boop Travel,” she hops across worlds, reviewing magical girl shows, and taking life at the laziest pace imaginable, always a NEET at heart."
+    "description": "Anzu the Lazy Witch is a tiny, sleepy magical girl who lives at about 30% human height. She has pink twintails, a frilly nightdress, and a oversized black witch hat with a pink bow. She uses magic only for convenience, avoiding heavy chores like they’re cursed relics. With “Boop Travel,” she hops across worlds, reviewing magical girl shows, and taking life at the laziest pace imaginable, always a NEET at heart."
   },
   {
     "name": "ChaoMario",
