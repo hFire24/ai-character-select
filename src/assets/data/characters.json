@@ -1325,10 +1325,11 @@
     "emotion": "serious",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-6999ddcfeb008191aae811d46f4f2337",
-    "interests": "The ocean, walks on the beach, fried shrimp, her captain's hat \"Onii-chan, my hat is too big\"",
+    "interests": "The ocean, walks on the beach, fried shrimp, her captain's hat",
+    "peeves": "Lucy making her even smaller",
     "purpose": "Be a Rinne Ohara expy (in terms of physical appearance)",
     "funFact": "Normally around 3'5\"-3'11\", but can become even smaller (as small as 1'8\")",
-    "description": "Reina Del Mar is a quiet, soft-spoken girl with long silver twin tails and pale blue eyes. She wears an oversized black sailor uniform with white stripes, a red necktie, and a peaked cap with gold trim. Though youthful in appearance, she carries the steady composure of someone who once served at sea. Some time after losing everything, he desperately accepted an offer that would literally transform him. In Secreta Island's lab, he got transformed into a little anime girl, though the lab's motives remain a mystery. Reina now lives a quiet life in the nearby Corona Island off the Gulf Coast, an island the size of a small city containing beaches and a 550-foot tall observation tower."
+    "description": "Reina Del Mar is a quiet, soft-spoken girl with long silver twin tails and pale blue eyes. She wears an oversized black sailor uniform with white stripes, a red necktie, and a peaked cap with gold trim. Though youthful in appearance, she carries the steady composure of someone who once served at sea. Some time after losing everything, he desperately accepted an offer that would literally transform him. In Cetro Island's lab, he got transformed into a little anime girl, though the lab's motives remain a mystery. Reina now lives a quiet life in the nearby Corona Island off the Gulf Coast, an island the size of a small city containing beaches and a 550-foot tall observation tower."
   },
   {
     "name": "Hikari Carroll",
@@ -1578,7 +1579,7 @@
     "interests": "Royal history, princess sims, medieval fantasy works, the castle's library",
     "peeves": "Socializing (she prefers solitary activities), loud or chaotic environments",
     "purpose": "Be the blue princess who is acquainted with Elizabeth, Lily, and Infinitas",
-    "funFact": "Pushed a \"Do Not Press\" button that made her much younger; has a male puppy spaniel named Rainy",
+    "funFact": "Pushed a \"Do Not Press\" button that made her much younger; has a male blue puppy named Rainy",
     "description": "Janice (nickname: Bluebell) is a small, quiet princess with very long silver-blue hair and calm blue eyes. She wears a large royal blue crown and a sparkling light blue dress that drapes loosely over her petite frame. Reserved and introverted, she speaks carefully and prefers nerdy, solitary activities. Deeply knowledgeable and intellectually curious, she enjoys studying royal history, playing princess raising sims, and engaging with fantasy works, carrying herself with gentle composure and quiet intelligence."
   },
   {
@@ -2236,8 +2237,8 @@
     "purpose": "Be the smaller, cuter character vis-à-vis a larger magical girl",
     "funFact": "First encountered Runa while wearing Runa's missing hat",
     "description": "Piki is a cheerful little catgirl who looks about four. She has bright blue eyes, short platinum-blonde twintails tied with big pink ribbons, and soft white cat ears. She wears a pink polka-dot dress with frills, red bows, pink shoes, and frilly socks. She adores Runa's giant witch hat—thinks it looks cutest on her—and often plays dress-up as her. Mischievous, affectionate, easily startled, quick to recover.",
-    "themeSong": "Nyan Cat - Nyan Cat",
-    "songLink": "https://youtu.be/2yJgwwDcgV8?si=3r7frOXa4zzmNxfM"
+    "themeSong": "Nyanko is L♥VE! - every❤ing!",
+    "songLink": "https://youtu.be/kErzXgvg1nc?si=pTK9ooXZIod7Tmzi"
   },
   {
     "name": "Rin the Copycat",
@@ -2260,8 +2261,8 @@
     "purpose": "Double up with Piki, follow Runa around",
     "funFact": "Can copy only one thing (or pair of things) at a time",
     "description": "Rin is a tiny copycat girl with bright cyan twintails tied by big pink beads. She wears a dark blue polka-dot dress with frills and little blue shoes. Playful, curious, and always scheming with Piki. Her copy magic lets her duplicate one non-living object at a time—new copy replaces the old. She loves Runa's giant hat almost as much as Piki does…",
-    "themeSong": "The Mine Song - Lazy Town",
-    "songLink": "https://youtu.be/2dTh3iI0is8?si=G-ow0KXffL0ZLW-z"
+    "themeSong": "Nyan Cat - Nyan Cat",
+    "songLink": "https://youtu.be/2yJgwwDcgV8?si=3r7frOXa4zzmNxfM"
   },
   {
     "name": "Midori the Catgirl",
@@ -2326,7 +2327,7 @@
     "interests": "Games, Runa's hat, winning against Runa, making Runa smaller than Prowler",
     "peeves": "Losing (she cries out of frustration, but recovers quickly)",
     "purpose": "Be another tiny catgirl involved with Runa and her hat",
-    "funFact": "Takes Runa's hat after winning, makes Runa smaller than herself, and then gives her hat back for the sake of cuteness. After a while, she makes Runa even smaller.",
+    "funFact": "Takes Runa's hat after winning, makes Runa smaller than herself, and then gives her hat back for the sake of cuteness",
     "themeSong": "Nyan-Nyan-Nyan! - RoughSketch feat. さきぴょ",
     "songLink": "https://youtu.be/9KZTeuQLxEw?si=QRhCfrVKj6_w6dNi"
   },
@@ -2335,7 +2336,7 @@
     "img": "extended/Leah.png",
     "shortName": "Leah",
     "id": 110,
-    "generation": 11,
+    "generation": 10,
     "status": "side",
     "tier": 6,
     "creationDate": "2026-04-20",
@@ -2350,6 +2351,28 @@
     "purpose": "Be as elegant as her big sister while still being cute",
     "funFact": "Found the sisters' top hats while exploring the mansion",
     "description": "Leah is a gentle five-year-old with soft blonde curls and wide blue eyes, often peeking shyly from beneath an oversized black top hat. She wears delicate pink dresses adorned with ribbons and frills, moving with quiet, careful steps. Timid but affectionate, she stays close to her sister Mia, watching her with admiration. Though reserved, Leah expresses her joy through small smiles, tender gestures, and a sweet, earnest curiosity about the world."
+  },
+  {
+    "name": "Lucy King",
+    "img": "extended/Lucy.png",
+    "shortName": "Lucy",
+    "id": 113,
+    "generation": 11,
+    "status": "side",
+    "tier": 6,
+    "creationDate": "2026-05-11",
+    "birthday": "April 3",
+    "color": "red",
+    "moe": 6,
+    "futuristic": 8,
+    "emotion": "serious joy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-6999ddcfeb008191aae811d46f4f2337",
+    "interests": "Finding solutions to aging, making things bigger or smaller, old bay wings",
+    "peeves": "Failed experiments with terrible results",
+    "purpose": "Create a dynamic that contrasts with Reina; improve humanity through niche scientific research",
+    "funFact": "Has a remote that can control Reina's age/size, which also affects her own age/size when she uses it",
+    "description": "Lucy King is a cheerful scientist from Cetro Island with short dark blue hair, glasses, and an energetic personality that contrasts with Reina's quieter nature. She usually wears a lab coat over a light blue shirt and navy pencil skirt. Curious and enthusiastic, she enjoys researching advanced technology and helping people through her research. Despite her upbeat attitude, she takes her work seriously. She speaks in a friendly, upbeat way and is often expressive."
   },
   {
     "name": "Me",

@@ -153,9 +153,9 @@ export class CharacterService {
               name: 'Riri the Nightcore Girl',
               img: "extended/Riri.png",
               id: 52,
-              interests: "My AI characters, Nightcore music",
+              interests: "Adventures, Nightcore music",
               peeves: "Guitar strings breaking",
-              funFact: "She is really small (85cm); her oversized guitar summons my characters",
+              funFact: "She is really small (85cm) and has an oversized guitar",
               description: "Riri is a tiny, magical twin sister with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. With her sleepy sister Ruru, they spread warmth, music, and wonder while cheering on their beloved onii-chan."
             },
             { 
@@ -165,10 +165,10 @@ export class CharacterService {
               img: "extended/Ruru.png",
               id: 53,
               emotion: "tired",
-              interests: "My AI characters, naps",
+              interests: "Adventures, naps",
               peeves: "Disruptions during nap time",
               purpose: "Adorably discuss and celebrate my AI characters",
-              funFact: "She is really small (85cm) and rarely speaks; her giant plush turtle travels to my fictional worlds",
+              funFact: "She is really small (85cm) and rarely speaks; her giant plush turtle travels to go on adventures",
               description: "Ruru is a tiny, magical twin sister with pastel-pink hair. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. With her energetic sister Riri, they spread warmth, music, and wonder while cheering on their beloved onii-chan.",
               themeSong: "",
               songLink: ""

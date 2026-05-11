@@ -151,7 +151,7 @@ export class Groups implements OnInit {
       {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions.",
-        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 92, 95, 108]
+        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108]
       },
       {
         name: "Youngsters",
