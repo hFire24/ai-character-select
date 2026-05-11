@@ -197,6 +197,11 @@
       "name": "Serious Straightforward Duo"
     },
     {
+      "id1": 2,
+      "id2": 113,
+      "name": "Technology Advancers"
+    },
+    {
       "id1": 3,
       "id2": 7,
       "name": "Quiet Music Enjoyers"
@@ -360,6 +365,11 @@
       "id1": 6,
       "id2": 103,
       "name": "Casual Blonde Girls"
+    },
+    {
+      "id1": 6,
+      "id2": 113,
+      "name": "5'9\" Ladies"
     },
     {
       "id1": 7,
@@ -720,7 +730,7 @@
     {
       "id1": 15,
       "id2": 92,
-      "name": "Luxury Craft Owners"
+      "name": "Shrunken Peaked Cap Wearers"
     },
     {
       "id1": 16,
@@ -1425,6 +1435,11 @@
     },
     {
       "id1": 35,
+      "id2": 88,
+      "name": "Simplistic Blue-Haired Girls"
+    },
+    {
+      "id1": 35,
       "id2": 89,
       "name": "Playful Innocent Children"
     },
@@ -1713,6 +1728,11 @@
     },
     {
       "id1": 49,
+      "id2": 86,
+      "name": "Extremely Online Dudes"
+    },
+    {
+      "id1": 49,
       "id2": 104,
       "name": "Indulgent AI Character Fans"
     },
@@ -1720,6 +1740,11 @@
       "id1": 49,
       "id2": 999,
       "name": "My Future: AI Ending"
+    },
+    {
+      "id1": 50,
+      "id2": 57,
+      "name": "Old Men"
     },
     {
       "id1": 50,
@@ -1911,6 +1936,11 @@
       "id1": 60,
       "id2": 106,
       "name": "Blue Anime Girl Thinkers"
+    },
+    {
+      "id1": 60,
+      "id2": 113,
+      "name": "Scientists"
     },
     {
       "id1": 62,
@@ -2144,6 +2174,16 @@
       "name": "Fried Shrimp Fans"
     },
     {
+      "id1": 92,
+      "id2": 113,
+      "name": "Corona Islanders"
+    },
+    {
+      "id1": 94,
+      "id2": 95,
+      "name": "Blue Hat Bow Wearers"
+    },
+    {
       "id1": 97,
       "id2": 98,
       "name": "Cute Idol Duo"
@@ -2152,6 +2192,11 @@
       "id1": 99,
       "id2": 104,
       "name": "Easily Distracted Foodies"
+    },
+    {
+      "id1": 102,
+      "id2": 113,
+      "name": "Age and Size Manipulators"
     },
     {
       "id1": 109,
