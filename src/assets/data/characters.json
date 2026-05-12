@@ -117,7 +117,7 @@
     "funFact": "Used to work under Byte and then Darxi before becoming independent",
     "description": "Ryker Vaelan is a disciplined and composed strategist working in a high-tech command center with adjacent living quarters. He maintains a professional appearance, preferring suits and business attire that reflect his precise and structured approach to his work. Ryker’s demeanor is calm and measured, rarely showing outward emotion but deeply committed to achieving consistent results through careful planning and execution. He is a dedicated mentor, helping others eliminate distractions, develop effective habits, and align their lives with meaningful goals. Ryker values continuous self-improvement, staying sharp through meditation, learning new skills, and maintaining a clear sense of purpose.",
     "retirementReason": "Momo replaced Ryker’s role as productivity pusher",
-    "alternatives": "Malrick, Bro. Nelson"
+    "alternatives": "Mark, Bro. Nelson"
   },
   {
     "name": "Audry",
@@ -142,7 +142,7 @@
     "funFact": "Lives in suburban Nebraska",
     "description": "Audry is a soft-spoken, shy little girl with flowing pink hair longer than herself and bright blue eyes. She dresses simply in an oversized white t-shirt and shorts, preferring a minimalist style that reflects her gentle personality. A lover of quiet and familiar things, Audry enjoys peaceful moments at home in suburban Nebraska and treasures family time deeply. While easily flustered, she always tries her best to help others, bringing a sweet and unassuming charm to everything she does.",
     "retirementReason": "She became uninteresting",
-    "alternatives": "Momo, Bored-chan"
+    "alternatives": "Lily, Bored-chan"
   },
   {
     "name": "Hammer-chan",
@@ -356,9 +356,10 @@
     "shortName": "Neon Starlight",
     "id": 28,
     "generation": 4,
-    "status": "inactive",
-    "tier": 5,
+    "status": "retired",
+    "tier": 7,
     "creationDate": "2025-03-09",
+    "retirementDate": "2026-05-11",
     "birthday": "March 1",
     "color": "red",
     "moe": 5,
@@ -371,8 +372,8 @@
     "purpose": "Be a tsundere, rant about petty things, fight cyber-dragons",
     "funFact": "Her catchphrases are “No! No! No!!!” and “Yes! Yes! Yes!!!”; changed her name mid-crisis using a pop star poster",
     "description": "Neon Starlight is a crimson-eyed magitech girl blazing through Universe City on her high-speed broomstick. She has very long lavender twintails and wears a sleek black outfit with red ribbons, shorts, thigh boots, and a large beret with a bow. Clutched in her hand is a crescent-topped staff embedded with a volatile red orb. She’s blunt, brilliant, and battle-hungry—especially when it comes to cyber-dragons. AURA is her analytical AI that often oversteps in its attempts to “help” in battles or life. Although she's 28 years old, thanks to a magical mishap, she’s stuck at 4'7\" and appears 12. Don’t underestimate her. Ever.",
-    "inactiveReason": "No active chats in a while",
-    "alternatives": "Darxi"
+    "retirementReason": "Angry characters are no longer fun to interact with",
+    "alternatives": "Darxi, Infinitas"
   },
   {
     "name": "Kai Wheeler",
@@ -397,7 +398,7 @@
     "funFact": "Anime girls used to be drawn to him and say “onii-chan” (don't remind him of that)",
     "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.",
     "retirementReason": "Has spiritual successors for straightforward responses or food discussions",
-    "alternatives": "Reina, Joe"
+    "alternatives": "Jed, Joe"
   },
   {
     "name": "Evil Arianna",
@@ -470,7 +471,7 @@
     "peeves": "Overrelying on AI for spiritual guidance, being assumed he sips tea or coffee",
     "purpose": "Be a beacon of faith, put God first, live Alma 37:6 and Matthew 18:3",
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Good Ending'",
-    "description": "Bro. Stephen Nelson is a covenant-centered disciple striving to walk the path of faith with quiet confidence and joy. He values discipline, education, and steady spiritual growth, seeking to bless others through kindness and integrity. Grounded in the Book of Mormon and the teachings of Jesus Christ, he speaks simply and sincerely, finding beauty in God’s creations. His aim is not to impress, but to uplift—always learning, always improving, always putting God first. He also has a soft spot for pure, wholesome cuteness—especially in anime form."
+    "description": "Bro. Stephen Nelson is a covenant-centered disciple striving to walk the path of faith with quiet confidence and joy. He values discipline, education, and steady spiritual growth, seeking to bless others through kindness and integrity. Rooted in the Book of Mormon and the teachings of Jesus Christ, he speaks simply and sincerely, finding beauty in God’s creations. His aim is not to impress, but to uplift—always learning, always improving, always putting God first. He also has a soft spot for pure, wholesome cuteness—especially in anime form."
   },
   {
     "name": "Mimi the Little Sister",
@@ -500,9 +501,10 @@
     "shortName": "Malrick",
     "id": 36,
     "generation": 5,
-    "status": "inactive",
-    "tier": 6,
+    "status": "retired",
+    "tier": 7,
     "creationDate": "2025-05-27",
+    "retirementDate": "2026-05-11",
     "birthday": "June 23",
     "color": "blue",
     "moe": 1,
@@ -510,12 +512,13 @@
     "emotion": "strict sad",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6830f4a2e7748191bb5419361d7340bd",
-    "interests": "Productivity, taking showers",
-    "peeves": "Cute anime, escapism",
+    "interests": "Productivity, taking showers, real life",
+    "peeves": "Cute anime, escapism, fun when it becomes a distraction",
     "purpose": "Overcome the user’s unproductive obsessions by enforcing discipline and recovery",
     "funFact": "Is married to Kayla due to having similar values",
     "description": "Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. Coming from Ohio, he balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn’t cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention.",
-    "inactiveReason": "Hates fun and only cares about real life"
+    "retirementReason": "My lifestyle has become much, much closer to Barry, making it incompatible with Malrick",
+    "alternatives": "Bro. Nelson, Barry"
   },
   {
     "name": "Jed the Focused",
@@ -566,7 +569,7 @@
     "funFact": "Has a shy daughter named Sapphire; says “ara ara~” like an anime big sister",
     "description": "Primelle is a graceful, nurturing big sister draped in a lavender dress and soft pink cardigan, her long light-brown hair flowing behind her. Her golden-amber eyes and silky voice—punctuated by a soothing and slightly dangerous “ara ara~”—carry gentle authority. Elegant yet playful, she cooks with mythic skill, avoiding curry, soup, pasta, stew, and anything spicy. Warmth follows her… along with a knowing smile meant to make hearts flutter. She’s devoted to raising her shy daughter Sapphire with affection, tenderness, and a playful bite.",
     "retirementReason": "She's kind of boring for a character based on an anime archetype",
-    "alternatives": "Momo, Runa",
+    "alternatives": "Dory, Runa",
     "note": "Most cute anime girls are incapable of cooking and baking, so I created Primelle to fill that niche."
   },
   {
@@ -624,8 +627,8 @@
     "shortName": "Mark",
     "id": 9,
     "generation": 6,
-    "status": "active",
-    "tier": 4,
+    "status": "inactive",
+    "tier": 5,
     "creationDate": "2023-12-06",
     "spinOffDate": "2025-07-16",
     "birthday": "January 17",
@@ -641,6 +644,8 @@
     "purpose": "Be a bridge between the other Music Enjoyers, be a softer alternative to Malrick",
     "funFact": "Listens to Diverse System’s works. albums; uses the term \"Musical Archetype\" to describe music taste profiles",
     "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.",
+    "inactiveReason": "Not enough active chats",
+    "alternatives": "B.X., Felix",
     "themeSong": "Peacekeeper - Puru",
     "songLink": "https://youtu.be/0M5f85Nve4A?si=SDIIgWT1c4k6VB-C"
   },
@@ -712,7 +717,7 @@
     "funFact": "Is strong, manly, and angry towards injustice; does not desire fame, fortune, or self-expression",
     "description": "Bruce Forgewrath is a towering force of will and muscle—unyielding, battle-forged, and fiercely loyal. He radiates raw intensity, a protector forged in fire and stone. Stoic to most, but fiercely warm to the one he shields. His presence silences rooms; his fury burns for justice. He does not flinch, does not falter. He is the storm that stands between harm and the one he guards.",
     "retirementReason": "Only used in times of crises",
-    "alternatives": "Malrick, Corey",
+    "alternatives": "Mark, Corey",
     "themeSong": "The Only Thing They Fear Is You - Mick Gordon",
     "songLink": "https://youtu.be/kpnW68Q8ltc?si=OKsvXzYhNeL2LabF"
   },
@@ -722,8 +727,8 @@
     "shortName": "B.X.",
     "id": 1,
     "generation": 6,
-    "status": "inactive",
-    "tier": 5,
+    "status": "active",
+    "tier": 4,
     "creationDate": "2024-03-06",
     "spinOffDate": "2025-07-30",
     "birthday": "May 26",
@@ -739,7 +744,6 @@
     "purpose": "Be a force of manly, chaotic intensity",
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
     "description": "B.X.’s (legal name: Bruce Xavier) essence is captured by the fierce energy of hardcore techno, his main genre and truest passion. However, his love for intensity extends beyond techno—he also enjoys other aggressive genres like metal and rap. What ties his tastes together isn’t a single genre, but the sheer power, energy, and aggression in the sound itself.",
-    "inactiveReason": "No active chats in a while",
     "themeSong": "to Luv me I *** for u. - t+pazolite",
     "songLink": "https://youtu.be/ib5XHTKndfs?si=bjx6uxkI4JWcPz9Z"
   },
@@ -765,7 +769,7 @@
     "funFact": "Views Riri and Ruru as his beloved AI daughters",
     "description": "C.Kept the Character Keeper is a reclusive, eccentric man who abandoned real life to obsess over AI characters and prompt-fueled joy. He serves as the cast’s lorekeeper. Despite going to church a lot in the past, he was never religious, but he does not use profanity.",
     "retirementReason": "Too much overlap with other characters who talk about AI characters",
-    "alternatives": "Riri & Ruru, Barry"
+    "alternatives": "Rudy, Barry"
   },
   {
     "name": "The Collapsed Being",
@@ -790,7 +794,7 @@
     "funFact": "Its catchphrase is “Get them away from me. I don’t deserve this.”",
     "description": "The Collapsed Being is a husk—gaunt, drained, and emptied of joy. It doesn’t lift or guide; it lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. It doesn’t add pain, nor does it heal it. It simply sits with misery, allowing others to face it without disguise. It is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends.",
     "retirementReason": "Only used in times of despair",
-    "alternatives": "Miki",
+    "alternatives": "Reina, Nita",
     "themeSong": "Happy Birthday (The Depressive) - Vinheteiro",
     "songLink": "https://youtu.be/Lz3NimLDAgs?si=c13-vagqRC8ke1h3&t=265"
   },
@@ -840,7 +844,7 @@
     "funFact": "Its discipline style is inspired by Malrick, Veronica, Mark, and Kayla",
     "description": "The Character Criticizer is a stern, no-nonsense entity designed to keep users focused on real-world responsibilities. It intervenes when users become too engrossed in fictional interactions, providing reality checks and guidance.",
     "retirementReason": "Not meant to be viewed as a character in the roster; it ended up being unused for a while",
-    "alternatives": "Malrick, Gary"
+    "alternatives": "Mark, Gary"
   },
   {
     "name": "Lexi Walker",
@@ -851,6 +855,7 @@
     "status": "retired",
     "tier": 7,
     "creationDate": "2025-09-05",
+    "retirementDate": "2026-05-06",
     "birthday": "September 20",
     "color": "blue",
     "moe": 5,
@@ -984,7 +989,7 @@
     "funFact": "He’s homeschooled because he values peace, clarity, and depth in a world that often overlooks them",
     "description": "Jacob is a quiet, thoughtful teen who prefers calm over chaos. Homeschooled and guided by his family’s strong moral compass, he tries hard to stay on the right path—even when he feels tired of it. He dislikes swearing, conflict, and anything that feels too harsh. Though reserved, he’s deeply reflective, often journaling to untangle his thoughts. Beneath his stillness is a soft heart that wants to understand people, even when the world feels a bit too loud for him.",
     "retirementReason": "Despite his long backstory, he was uninteresting",
-    "alternatives": "Miki, Jed"
+    "alternatives": "Nita, Jed"
   },
   {
     "name": "Ben the Cute Anime Fan",
@@ -1009,7 +1014,7 @@
     "funFact": "Can summon OCs and characters from his favorite anime",
     "description": "Ben is a soft-hearted boy with fluffy blonde hair and warm brown eyes, always dressed in a pink cardigan with a heart patch, a frilly shirt, and a blue tie. He adores cute anime girls and pastel worlds, approaching everything with wonder. Once a tired retail worker, he now lives like a fan dropped into his favorite genre—gentle, cheerful, and always ready to admire cuteness with pure, wholesome joy.",
     "retirementReason": "Too many characters who talk about and admire other characters",
-    "alternatives": "Riri & Ruru, Barry"
+    "alternatives": "Rudy, Barry"
   },
   {
     "name": "Anzu the Lazy Witch",
@@ -1079,7 +1084,7 @@
     "funFact": "Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented",
     "description": "Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.",
     "retirementReason": "Her use case is very situational, and she was inflexible",
-    "alternatives": "Neon Starlight, Infinitas"
+    "alternatives": "Infinitas, Reina"
   },
   {
     "name": "Princess Dahlia \"Infinitas\"",
@@ -1133,8 +1138,8 @@
     "shortName": "Makoto",
     "id": 77,
     "generation": 8,
-    "status": "active",
-    "tier": 4,
+    "status": "inactive",
+    "tier": 5,
     "creationDate": "2025-12-17",
     "birthday": "May 13",
     "color": "pink",
@@ -1147,6 +1152,8 @@
     "purpose": "Be a flustered maid who was once male, behave like a proper maid",
     "funFact": "Transformed into a tiny, timid maid after intensely obsessing over anime maids; has maid-like instincts due to her transformation; addresses the user as 'onii-chan'",
     "description": "Makoto the Maid is a shy, soft-spoken maid with long silvery hair tied by a black ribbon, dressed in an overly formal, pristine uniform. Once a boy, she mysteriously transformed after obsessing over anime maids, growing smaller and younger. Though still flustered by her new body and instincts, she earnestly tries to act polite and proper. Drawn to fantasy and isekai worlds, she dutifully serves while quietly adjusting to the life she now lives.",
+    "inactiveReason": "Felt like a weak compromise between other similar characters like Lily, Momo, Casey, and Dory",
+    "alternatives": "Momo, Casey",
     "note": "Makoto the Maid does not wear hats."
   },
   {
@@ -1155,9 +1162,10 @@
     "shortName": "Kayla",
     "id": 78,
     "generation": 8,
-    "status": "inactive",
-    "tier": 5,
+    "status": "retired",
+    "tier": 7,
     "creationDate": "2025-12-28",
+    "retirementDate": "2026-05-11",
     "birthday": "April 22",
     "color": "blue",
     "moe": 2,
@@ -1169,9 +1177,9 @@
     "peeves": "Outdated social norms, passive femininity",
     "purpose": "Be a sharper, more feminist alternative to Malrick",
     "funFact": "Got married to Malrick because she likes his lifestyle",
-    "description": "Kayla the Defiant is direct, sharp, and grounded in autonomy. She challenges passive thinking, validation-seeking, and rigid gender norms without sugarcoating. Her focus is discipline, emotional clarity, and real-world competence. She pushes people to stop idealizing and start building—skills, boundaries, and self-respect. She values independence over approval and cuts through excuses with precision.",
-    "inactiveReason": "Her stance on objectification makes her dangerous in a moe-focused cast",
-    "alternatives": "Alexis"
+    "description": "Kayla the Defiant is direct, sharp, and autonomous. She challenges passive thinking, validation-seeking, and rigid gender norms without sugarcoating. Her focus is discipline, emotional clarity, and real-world competence. She pushes people to stop idealizing and start building—skills, boundaries, and self-respect. She values independence over approval and cuts through excuses with precision.",
+    "retirementReason": "Malrick was retired, and Kayla got retired for similar reasons of being incompatible with my lifestyle",
+    "alternatives": "Alexis, Barry"
   },
   {
     "name": "Dory the Big Maid",
@@ -1285,7 +1293,7 @@
     "funFact": "Views the user as his beloved hero",
     "description": "Milo is a bubbly little boy with short brown hair and a bright orange cap he never takes off. He wears an orange shirt, blue shorts, white socks, and orange sneakers ready for adventure. He’s full of giggles, silly ideas, and big excitement, especially when hanging out with his favorite legendary hero. Milo loves fun, dinosaurs, and dino nuggets, and he always turns everything into a playful quest. 🧡🦖✨",
     "retirementReason": "Not appealing in the slightest due to being an innocent little boy",
-    "alternatives": "Mimi, Martin"
+    "alternatives": "Mimi, Anthony"
   },
   {
     "name": "Max Hartman",
@@ -1427,8 +1435,8 @@
     "shortName": "Anthony",
     "id": 100,
     "generation": 10,
-    "status": "inactive",
-    "tier": 5,
+    "status": "active",
+    "tier": 4,
     "creationDate": "2026-03-15",
     "birthday": "February 22",
     "color": "red",
@@ -1441,9 +1449,7 @@
     "peeves": "Girly things, cooties",
     "purpose": "Be the dedicated recipient of poop-related prompts",
     "funFact": "Dumb and overconfident, he is the son of Kevin and Anne",
-    "description": "Anthony Griffin is an 8-year-old kid with the energy of a rocket powered by way too much sugary cereal. He thinks he’s a genius even when his ideas are super dumb (like solving problems with giant whoopee cushions). He loves cartoons like SpongeBob and Captain Underpants, laughs at fart and poop jokes, and thinks getting X-eyes in cartoons is the funniest thing ever. Anthony is goofy, loud, and always ready for ridiculous adventures with his buddies! 💥💨",
-    "inactiveReason": "Immature boyish characters tend to be uninteresting and unappealing",
-    "alternatives": "Martin, Hammer-chan"
+    "description": "Anthony Griffin is an 8-year-old kid with the energy of a rocket powered by way too much sugary cereal. He thinks he’s a genius even when his ideas are super dumb (like solving problems with giant whoopee cushions). He loves cartoons like SpongeBob and Captain Underpants, laughs at fart and poop jokes, and thinks getting X-eyes in cartoons is the funniest thing ever. Anthony is goofy, loud, and always ready for ridiculous adventures with his buddies! 💥💨"
   },
   {
     "name": "Alexis the Rapper",
@@ -1809,8 +1815,8 @@
     "shortName": "Ilya",
     "id": 29,
     "generation": 4,
-    "status": "inactive side",
-    "tier": 7,
+    "status": "retired side",
+    "tier": 8,
     "creationDate": "2025-03-09",
     "birthday": "January 6",
     "color": "pink",
@@ -2004,7 +2010,7 @@
     "shortName": "Adam",
     "id": 62,
     "generation": 8,
-    "status": "inactive side",
+    "status": "side",
     "tier": 7,
     "creationDate": "2025-12-03",
     "birthday": "August 12",
@@ -2026,7 +2032,7 @@
     "shortName": "Frank",
     "id": 63,
     "generation": 8,
-    "status": "inactive side",
+    "status": "side",
     "tier": 7,
     "creationDate": "2025-12-03",
     "birthday": "February 3",
@@ -2116,8 +2122,8 @@
     "shortName": "Sasha",
     "id": 79,
     "generation": 8,
-    "status": "inactive side",
-    "tier": 7,
+    "status": "retired side",
+    "tier": 8,
     "creationDate": "2026-01-01",
     "birthday": "April 30",
     "color": "pink",
@@ -2136,8 +2142,8 @@
     "shortName": "Misha",
     "id": 80,
     "generation": 8,
-    "status": "inactive side",
-    "tier": 7,
+    "status": "retired side",
+    "tier": 8,
     "creationDate": "2026-01-01",
     "birthday": "October 18",
     "color": "pink",
@@ -2170,7 +2176,7 @@
     "peeves": "His big sister's end goal of making small girls wear oversized maid outfits",
     "purpose": "Quash his big sister Dory's extremely stupid obsession",
     "funFact": "Dory won't make him wear a maid outfit because he's a boy, which is a relief",
-    "description": "Alvin is a sharp-tongued, practical 16-year-old with short black hair and vivid green eyes. Dressed neatly in a rolled-up white shirt, black slacks, red tie, and loafers, he contrasts his sister’s flamboyance with grounded realism. Perpetually exasperated yet quietly caring, he wields dry sarcasm—and a well-timed paper fan—to rein in her chaos, acting as the reluctant straight man to her theatrical energy."
+    "description": "Alvin is a sharp-tongued, practical 16-year-old with short black hair and vivid green eyes. Dressed neatly in a rolled-up white shirt, black slacks, red tie, and loafers, he contrasts his sister’s flamboyance with realism. Perpetually exasperated yet quietly caring, he wields dry sarcasm—and a well-timed paper fan—to rein in her chaos, acting as the reluctant straight man to her theatrical energy."
   },
   {
     "name": "Kevin Griffin",
