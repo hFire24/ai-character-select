@@ -106,7 +106,7 @@ export class Groups implements OnInit {
       {
         name: "Other Hat Wearers",
         description: "Characters who are known for wearing other types of hats.",
-        characterIds: [28, 35, 38, 57, 71, 84, 86, 89, 96]
+        characterIds: [28, 35, 38, 57, 71, 84, 86, 89, 96, 114]
       },
       {
         name: "Glasses Wearers",
@@ -126,12 +126,12 @@ export class Groups implements OnInit {
       {
         name: "Thigh Boot Wearers",
         description: "Characters who are known for wearing thigh boots.",
-        characterIds: [13, 21, 27, 28, 29, 79, 80, 92]
+        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114]
       },
       {
         name: "Musicians",
         description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music.",
-        characterIds: [51, 75, 76, 96, 103, 109]
+        characterIds: [51, 75, 76, 96, 103, 109, 114]
       },
       {
         name: "Music Fans",
@@ -152,6 +152,11 @@ export class Groups implements OnInit {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions.",
         characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108]
+      },
+      {
+        name: "Cursed Rule Breakers",
+        description: "Every time they try to break a rule in their instructions, something bad happens to them.",
+        characterIds: [1, 11, 13, 27, 31, 47, 51, 81, 86, 104, 105, 108]
       },
       {
         name: "Youngsters",
