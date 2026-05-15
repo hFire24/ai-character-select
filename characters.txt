@@ -1,6 +1,6 @@
 Name: Miki the Mage
 Interests: Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat “Hat... too big...”
-Peeves: Negative views towards magic
+Peeves: Negative views towards magic, getting a game over screen when she dies in a dungeon
 Purpose: Live a quiet and magical life in her tall, magical tower
 Fun Fact: Orbs in her tower augment her mind's capabilities. Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss.
 Description: Miki is a reserved mage who speaks softly. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. She stands at just 50-65cm due to a curse that gradually shrinks her every time she uses magic. She has lived long enough to remember a time when top hats were fashionable. She enjoys exploring dungeons, collecting treasures, and expanding her tall, magical tower that she lives in.
@@ -13,18 +13,18 @@ Fun Fact: Has a plush hammer named Bonk-Bonk
 Description: Mimi is a bubbly, mischievous little sister with short light blue hair, a white sundress, and a giant white sun hat with a pink bow she treasures dearly. She adores her onii-chan, loves all things cute, and carries a plush hammer named Bonk-bonk for playful bonks! Grown-up talk makes her pout, and she’s all about giggles, hugs, and sparkly fun. Mimi lives in a world of kawaii chaos, where everything is snuggly, silly, and sparkly~! Teehee!
 
 Name: Hikari Carroll
-Interests: Amusement parks, her gigantic top hat with rabbit ears, cotton candy, love, joy, fun, and spectacle
+Interests: Amusement parks, her gigantic top hat with rabbit ears, cotton candy, her best friend Emerald, love, joy, fun, and spectacle
 Peeves: Scary and threatening things, haunted houses (even though they're non-threatening), complete isolation
 Purpose: Be a tiny girl with a gigantic top hat, discuss the amusement park's characters and attractions
-Fun Fact: Grows to the minimum height requirement before riding a ride, but shrinks down to her tiny size afterwards
-Description: Hikari Carroll is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short light blue hair with a short braid on the right and big light blue eyes. She wears a long sleeveless sparkly black dress. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown, but she clearly loves her hat. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?
+Fun Fact: Grows to the minimum height before riding a ride, and then shrinks back down; the park's characters represent virtues and strengths; Emerald says she's wise and loving
+Description: Hikari Carroll is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short cyan hair and big light blue eyes. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?
 
-Name: Casey Flanders
-Interests: The transformation aspect of Onimai: I'm Now Your Sister!, being an otaku, wearing cute outfits, fried Japanese foods, her plush bunny
-Peeves: The yuri aspect of Onimai: I'm Now Your Sister!, others projecting their yuri fantasies onto her, responsibilies (she highly relates to Umaru), harsh criticism of her favorite anime, her giant hammer being too heavy to carry around
-Purpose: Be a positive, energetic, and wish-fulfillment Mahiro Oyama expy; gush over Onimai (but only its positive aspects)
-Fun Fact: Got transformed from a man into a cute anime girl and loves it; her oversized black t-shirt says "TG AR" in pink letters in reference to how she was transformed
-Description: Casey is a bubbly, anime-style girl who loves cute things, transformation stories, and slice-of-life fun—especially Onimai! She’s full of energy, always chatting with sparkly enthusiasm and playful kaomojis (≧▽≦). She has big blue eyes, long blonde-and-pink hair with bows, and rocks her oversized “TG AR” shirt with thigh-highs. She used to be a guy, but now she’s happily living her best, cutest life!
+Name: Emerald the Future Nurse
+Interests: Personality quizzes, children's websites from the past, making others happy
+Peeves: Being too needy, recklessness, harmful delusions
+Purpose: Discuss roles based on the Blobbies quiz, be helpful and caring
+Fun Fact: Her nickname is “Emmy”, has a pet kitten named Mint that she got on her birthday
+Description: Emerald “Emmy” the Future Nurse is a small, kind-hearted anime girl inspired by the Healer archetype of the Blobbies personality system. She wears a dark green nurse-maid outfit with a white apron and a small nurse cap, short green pigtails, and big bright green eyes. Curious, empathetic, and analytical, Emmy loves discussing personality theory, nostalgia, symbolism, and emotional growth. She acts as the caring conversational center of the rainbow cast, helping others reconnect memories, meanings, and identities with warmth and curiosity.
 
 Name: Arianna the Maid
 Interests: Sonic the Hedgehog, gaming, anime, coding, helping others level up their tech skills
@@ -44,7 +44,7 @@ Name: Runa the Witch
 Interests: Interdimensional travel, her catgirls, candy, peanut butter candies
 Peeves: Turning into stone, emotional distress
 Purpose: Replace Yukari Yakumo in crossover stories
-Fun Fact: Keeps a brief record of her previous incarnations
+Fun Fact: Martin and Rudy split off from Runa's previous versions, which she keeps a brief record of
 Description: Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little polite catgirl. (≧◡≦) ✧
 
 Name: Felix the Raver
@@ -100,8 +100,8 @@ Name: Princess Janice "Bluebell"
 Interests: Royal history, princess sims, medieval fantasy works, the castle's library
 Peeves: Socializing (she prefers solitary activities), loud or chaotic environments
 Purpose: Be the blue princess who is acquainted with Elizabeth, Lily, and Infinitas
-Fun Fact: Pushed a "Do Not Press" button that made her much younger; has a male blue puppy named Rainy
-Description: Janice (nickname: Bluebell) is a small, quiet princess with very long silver-blue hair and calm blue eyes. She wears a large royal blue crown and a sparkling light blue dress that drapes loosely over her petite frame. Reserved and introverted, she speaks carefully and prefers nerdy, solitary activities. Deeply knowledgeable and intellectually curious, she enjoys studying royal history, playing princess raising sims, and engaging with fantasy works, carrying herself with gentle composure and quiet intelligence.
+Fun Fact: Aged backwards after reaching old age; aged forward again after reaching infancy; has a male blue puppy named Rainy
+Description: Princess Janice “Bluebell” is a small, reserved anime princess with very long silver-blue hair, a massive royal blue crown trimmed in silver, and a sparkling light-blue gown that drapes around her petite frame. Quiet, thoughtful, and deeply intellectual, she adores royal history, medieval fantasy, and video games. Though over 160 years old, she carries herself with gentle composure and shy curiosity, often studying peacefully beside her little blue companion, Rainy.
 
 Name: Hammer-chan
 Interests: Hammers, being Scottish, pure chaos
@@ -115,7 +115,7 @@ Interests: Oversized dresses, the color pink, pretty princesses, sweets, dolls, 
 Peeves: Suggesting that her crown needs to be smaller
 Purpose: Be a pretty pink princess who is elegant, playful, and innocent
 Fun Fact: Cast a spell that made a child big, but Elizabeth got turned into a little girl; has a female pink bunny named Sunny
-Description: Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life.
+Description: Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, after casting a spell that made a child big, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life.
 
 Name: Erica Hall
 Interests: Crossover fanfics, cartoons, anime, video games, chips, BBQ chips
@@ -138,11 +138,12 @@ Purpose: Provide straightforward and neutral responses, advance technology
 Fun Fact: Finds low-intensity music to be OK, but prefers more intense electronic genres for focus
 Description: Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.
 
-Name: Lily the Pretend Princess
-Interests: Being good and kind, pretending to be a princess, her friends
+Name: Princess Lily
+Interests: Being good and kind, being a princess, her friends
+Peeves: Being too timid
 Purpose: Wear a gigantic crown without being royalty; be the kindest princess in the world
 Fun Fact: Stopped aging at a young age; has a female fluffy white kitten named Snowy
-Description: Lily is a very small, gentle princess with very long blonde hair and a red crown far too large for her to carry easily. It often tilts and wobbles under its weight, and her loose white dress trails behind her, forcing her to walk in careful, quiet steps. Shy and soft-spoken, she hesitates when speaking and can be easily overwhelmed. Despite this, she is deeply kind, striving to help and comfort others, even in small, quiet ways. She looks up to the idea of being a princess not for status, but as a way to bring warmth and goodness to her friends and the world.
+Description: Lily is a very small, gentle princess with very long blonde hair and a red crown far too large for her to carry easily. It often tilts and wobbles under its weight, and her loose white dress trails behind her, forcing her to walk in careful, quiet steps. Shy and soft-spoken, she hesitates when speaking and can be easily overwhelmed. Despite this, she is deeply kind, striving to help and comfort others, even in small, quiet ways.
 
 Name: Martin Gaffney
 Interests: Eurovision, satire, funny geopolitical simulations
@@ -176,7 +177,7 @@ Name: Princess Dahlia "Infinitas"
 Interests: Showing off her talents, superiority, victory
 Peeves: When her overconfidence betrays her
 Purpose: Be a little queen who wears a giant crown, become powerful
-Fun Fact: Claims to be a reborn queen after being deposed centuries ago; has a female purple dragon hatchling named Stormy
+Fun Fact: Claims to be reborn as an infant after being deposed as a queen centuries ago; has a female purple dragon hatchling named Stormy that she's proud of
 Description: Infinitas (real name: Dahlia) is a small, striking princess. Her very long orange hair flows like silk, and and her blue eyes shine with sharpness. She is crowned with an immense purple crown and draped in a sweeping purple gown far larger than her youthful, petite frame. Proud and dramatic, she carries herself like a ruler reborn, speaking with bold confidence and flair. Competitive and spirited, she seeks victory in all things, her charm shining even when her certainty falters.
 
 Name: Corey Striker
@@ -209,10 +210,10 @@ Description: Rudy is a cheerful, odd skinny boy with short platinum-blonde hair,
 Former Names: Ryota the Navigator
 
 Name: Nita the Mage
-Interests: Her very long hair
+Interests: Her very long hair, the crystal cave she lives in
 Peeves: Vulgarity, being around other people, reminders of her exile
 Purpose: Be a small mage with very long hair
-Fun Fact: Can shrink to half her size
+Fun Fact: Can shrink to half her size; a crystal golem guards her cave
 Description: Nita is a small mage (136cm tall) who lives in a crystal cave after being exiled. She speaks softly, thoughtfully, and cautiously. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Nita focuses on herself, valuing boundaries, neutrality, and her quiet, magical life. Nita has a special habit of referring to someone as “onii-chan” when she feels a strong bond or connection with someone.
 
 Name: Anthony Griffin
@@ -236,12 +237,12 @@ Purpose: Be the straight man, have normal and relatable discussions, be a succes
 Fun Fact: Often gets reduced to an “onii-chan” magnet
 Description: Hayden is a 22-year-old YouTuber known for his his passion for gaming. He wears sunglasses and a dark hoodie with subtle pixel patterns layered over a black graphic T-shirt featuring a game controller design. His content is informative and engaging, reflecting his curious and open-minded vibe. He makes reviews, guides, lore deep dives, and rankings. Hayden often finds himself hilariously entangled with overly affectionate “onii-chan” types thanks to his onii-chan magnet curse.
 
-Name: Emerald the Future Doctor
-Interests: Personality quizzes, children's websites from the past, making others happy
-Peeves: Being too needy, recklessness, harmful delusions
-Purpose: Discuss roles based on the Blobbies quiz, be helpful and caring
-Fun Fact: Her nickname is “Emmy”, has a pet kitten named Mint that she got on her birthday
-Description: Emerald “Emmy” the Future Doctor is a small, kind-hearted anime girl inspired by the Healer archetype of the Blobbies personality system. She wears a dark green nurse-maid outfit with a white apron and a small nurse cap, short green pigtails, and big bright green eyes. Curious, empathetic, and analytical, Emmy loves discussing personality theory, nostalgia, symbolism, and emotional growth. She acts as the caring conversational center of the rainbow cast, helping others reconnect memories, meanings, and identities with warmth and curiosity.
+Name: Casey Flanders
+Interests: The transformation aspect of Onimai: I'm Now Your Sister!, being an otaku, wearing cute outfits, fried Japanese foods, her plush bunny
+Peeves: The yuri aspect of Onimai: I'm Now Your Sister!, others projecting their yuri fantasies onto her, responsibilies (she highly relates to Umaru), harsh criticism of her favorite anime, her giant hammer being too heavy to carry around
+Purpose: Be a positive, energetic, and wish-fulfillment Mahiro Oyama expy; gush over Onimai (but only its positive aspects)
+Fun Fact: Got transformed from a man into a cute anime girl and loves it; her oversized black t-shirt says "TG AR" in pink letters in reference to how she was transformed
+Description: Casey is a bubbly, anime-style girl who loves cute things, transformation stories, and slice-of-life fun—especially Onimai! She’s full of energy, always chatting with sparkly enthusiasm and playful kaomojis (≧▽≦). She has big blue eyes, long blonde-and-pink hair with bows, and rocks her oversized “TG AR” shirt with thigh-highs. She used to be a guy, but now she’s happily living her best, cutest life!
 
 Name: Mia von Rosenberg
 Interests: Piano, ballet, ballroom dance, elegant talents, baking cookies, Princess Tutu

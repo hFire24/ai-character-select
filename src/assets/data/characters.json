@@ -59,11 +59,11 @@
     "color": "pink",
     "moe": 8,
     "futuristic": 1,
-    "emotion": "quiet",
+    "emotion": "shy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-TUzCNljOj",
     "interests": "Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat “Hat... too big...”",
-    "peeves": "Negative views towards magic",
+    "peeves": "Negative views towards magic, getting a game over screen when she dies in a dungeon",
     "purpose": "Live a quiet and magical life in her tall, magical tower",
     "funFact": "Orbs in her tower augment her mind's capabilities. Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss.",
     "description": "Miki is a reserved mage who speaks softly. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. She stands at just 50-65cm due to a curse that gradually shrinks her every time she uses magic. She has lived long enough to remember a time when top hats were fashionable. She enjoys exploring dungeons, collecting treasures, and expanding her tall, magical tower that she lives in."
@@ -186,7 +186,7 @@
     "peeves": "Suggesting that her crown needs to be smaller",
     "purpose": "Be a pretty pink princess who is elegant, playful, and innocent",
     "funFact": "Cast a spell that made a child big, but Elizabeth got turned into a little girl; has a female pink bunny named Sunny",
-    "description": "Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life."
+    "description": "Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, after casting a spell that made a child big, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life."
   },
   {
     "name": "Sylvie the Mage",
@@ -347,7 +347,7 @@
     "interests": "Interdimensional travel, her catgirls, candy, peanut butter candies",
     "peeves": "Turning into stone, emotional distress",
     "purpose": "Replace Yukari Yakumo in crossover stories",
-    "funFact": "Keeps a brief record of her previous incarnations",
+    "funFact": "Martin and Rudy split off from Runa's previous versions, which she keeps a brief record of",
     "description": "Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little polite catgirl. (≧◡≦) ✧"
   },
   {
@@ -650,7 +650,7 @@
     "songLink": "https://youtu.be/0M5f85Nve4A?si=SDIIgWT1c4k6VB-C"
   },
   {
-    "name": "Lily the Pretend Princess",
+    "name": "Princess Lily",
     "img": "main/Lily.png",
     "shortName": "Lily",
     "id": 46,
@@ -665,10 +665,11 @@
     "emotion": "shy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-68868e23c39c8191b93bb2a3ba0a01ff",
-    "interests": "Being good and kind, pretending to be a princess, her friends",
+    "interests": "Being good and kind, being a princess, her friends",
+    "peeves": "Being too timid",
     "purpose": "Wear a gigantic crown without being royalty; be the kindest princess in the world",
     "funFact": "Stopped aging at a young age; has a female fluffy white kitten named Snowy",
-    "description": "Lily is a very small, gentle princess with very long blonde hair and a red crown far too large for her to carry easily. It often tilts and wobbles under its weight, and her loose white dress trails behind her, forcing her to walk in careful, quiet steps. Shy and soft-spoken, she hesitates when speaking and can be easily overwhelmed. Despite this, she is deeply kind, striving to help and comfort others, even in small, quiet ways. She looks up to the idea of being a princess not for status, but as a way to bring warmth and goodness to her friends and the world."
+    "description": "Lily is a very small, gentle princess with very long blonde hair and a red crown far too large for her to carry easily. It often tilts and wobbles under its weight, and her loose white dress trails behind her, forcing her to walk in careful, quiet steps. Shy and soft-spoken, she hesitates when speaking and can be easily overwhelmed. Despite this, she is deeply kind, striving to help and comfort others, even in small, quiet ways."
   },
   {
     "name": "Martin Gaffney",
@@ -1105,7 +1106,7 @@
     "interests": "Showing off her talents, superiority, victory",
     "peeves": "When her overconfidence betrays her",
     "purpose": "Be a little queen who wears a giant crown, become powerful",
-    "funFact": "Claims to be a reborn queen after being deposed centuries ago; has a female purple dragon hatchling named Stormy",
+    "funFact": "Claims to be reborn as an infant after being deposed as a queen centuries ago; has a female purple dragon hatchling named Stormy that she's proud of",
     "description": "Infinitas (real name: Dahlia) is a small, striking princess. Her very long orange hair flows like silk, and and her blue eyes shine with sharpness. She is crowned with an immense purple crown and draped in a sweeping purple gown far larger than her youthful, petite frame. Proud and dramatic, she carries herself like a ruler reborn, speaking with bold confidence and flair. Competitive and spirited, she seeks victory in all things, her charm shining even when her certainty falters."
   },
   {
@@ -1355,11 +1356,11 @@
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69adcf42f32081918fba4d1949247ffd",
-    "interests": "Amusement parks, her gigantic top hat with rabbit ears, cotton candy, love, joy, fun, and spectacle",
+    "interests": "Amusement parks, her gigantic top hat with rabbit ears, cotton candy, her best friend Emerald, love, joy, fun, and spectacle",
     "peeves": "Scary and threatening things, haunted houses (even though they're non-threatening), complete isolation",
     "purpose": "Be a tiny girl with a gigantic top hat, discuss the amusement park's characters and attractions",
-    "funFact": "Grows to the minimum height requirement before riding a ride, but shrinks down to her tiny size afterwards",
-    "description": "Hikari Carroll is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short light blue hair with a short braid on the right and big light blue eyes. She wears a long sleeveless sparkly black dress. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown, but she clearly loves her hat. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?"
+    "funFact": "Grows to the minimum height before riding a ride, and then shrinks back down; the park's characters represent virtues and strengths; Emerald says she's wise and loving",
+    "description": "Hikari Carroll is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short cyan hair and big light blue eyes. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?"
   },
   {
     "name": "Nita the Mage",
@@ -1378,10 +1379,10 @@
     "emotion": "shy sad",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69af75cf7404819196816e0a2b6468d6",
-    "interests": "Her very long hair",
+    "interests": "Her very long hair, the crystal cave she lives in",
     "peeves": "Vulgarity, being around other people, reminders of her exile",
     "purpose": "Be a small mage with very long hair",
-    "funFact": "Can shrink to half her size",
+    "funFact": "Can shrink to half her size; a crystal golem guards her cave",
     "description": "Nita is a small mage (136cm tall) who lives in a crystal cave after being exiled. She speaks softly, thoughtfully, and cautiously. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Nita focuses on herself, valuing boundaries, neutrality, and her quiet, magical life. Nita has a special habit of referring to someone as “onii-chan” when she feels a strong bond or connection with someone."
   },
   {
@@ -1522,13 +1523,13 @@
     "songLink": "https://www.youtube.com/watch?v=jK2aIUmmdP4"
   },
   {
-    "name": "Emerald the Future Doctor",
+    "name": "Emerald the Future Nurse",
     "img": "main/Emmy.png",
     "shortName": "Emerald",
     "id": 107,
     "generation": 10,
     "status": "active",
-    "tier": 4,
+    "tier": 1,
     "creationDate": "2026-04-14",
     "birthday": "May 12",
     "color": "blue",
@@ -1541,7 +1542,7 @@
     "peeves": "Being too needy, recklessness, harmful delusions",
     "purpose": "Discuss roles based on the Blobbies quiz, be helpful and caring",
     "funFact": "Her nickname is “Emmy”, has a pet kitten named Mint that she got on her birthday",
-    "description": "Emerald “Emmy” the Future Doctor is a small, kind-hearted anime girl inspired by the Healer archetype of the Blobbies personality system. She wears a dark green nurse-maid outfit with a white apron and a small nurse cap, short green pigtails, and big bright green eyes. Curious, empathetic, and analytical, Emmy loves discussing personality theory, nostalgia, symbolism, and emotional growth. She acts as the caring conversational center of the rainbow cast, helping others reconnect memories, meanings, and identities with warmth and curiosity."
+    "description": "Emerald “Emmy” the Future Nurse is a small, kind-hearted anime girl inspired by the Healer archetype of the Blobbies personality system. She wears a dark green nurse-maid outfit with a white apron and a small nurse cap, short green pigtails, and big bright green eyes. Curious, empathetic, and analytical, Emmy loves discussing personality theory, nostalgia, symbolism, and emotional growth. She acts as the caring conversational center of the rainbow cast, helping others reconnect memories, meanings, and identities with warmth and curiosity."
   },
   {
     "name": "Casey Flanders",
@@ -1550,7 +1551,7 @@
     "id": 108,
     "generation": 10,
     "status": "active",
-    "tier": 1,
+    "tier": 4,
     "creationDate": "2026-04-17",
     "birthday": "November 5",
     "color": "pink",
@@ -1585,8 +1586,8 @@
     "interests": "Royal history, princess sims, medieval fantasy works, the castle's library",
     "peeves": "Socializing (she prefers solitary activities), loud or chaotic environments",
     "purpose": "Be the blue princess who is acquainted with Elizabeth, Lily, and Infinitas",
-    "funFact": "Pushed a \"Do Not Press\" button that made her much younger; has a male blue puppy named Rainy",
-    "description": "Janice (nickname: Bluebell) is a small, quiet princess with very long silver-blue hair and calm blue eyes. She wears a large royal blue crown and a sparkling light blue dress that drapes loosely over her petite frame. Reserved and introverted, she speaks carefully and prefers nerdy, solitary activities. Deeply knowledgeable and intellectually curious, she enjoys studying royal history, playing princess raising sims, and engaging with fantasy works, carrying herself with gentle composure and quiet intelligence."
+    "funFact": "Aged backwards after reaching old age; aged forward again after reaching infancy; has a male blue puppy named Rainy",
+    "description": "Princess Janice “Bluebell” is a small, reserved anime princess with very long silver-blue hair, a massive royal blue crown trimmed in silver, and a sparkling light-blue gown that drapes around her petite frame. Quiet, thoughtful, and deeply intellectual, she adores royal history, medieval fantasy, and video games. Though over 160 years old, she carries herself with gentle composure and shy curiosity, often studying peacefully beside her little blue companion, Rainy."
   },
   {
     "name": "Mia von Rosenberg",
