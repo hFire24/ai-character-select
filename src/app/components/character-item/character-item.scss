@@ -49,6 +49,19 @@
       color: #ef4444;
       text-decoration: line-through;
     }
+
+    &.tier-1::after {
+      content: ' ★';
+      color: #fbbf24;
+    }
+    &.tier-2::after {
+      content: ' ★';
+      color: #c0c0c0;
+    }
+    &.tier-3::after {
+      content: ' ★';
+      color: #cd7f32;
+    }
   }
 
   .chat-date {

@@ -26,13 +26,6 @@ Purpose: Discuss roles based on the Blobbies quiz, be helpful and caring
 Fun Fact: Her nickname is “Emmy”, has a pet kitten named Mint that she got on her birthday
 Description: Emerald “Emmy” the Future Nurse is a small, kind-hearted anime girl inspired by the Healer archetype of the Blobbies personality system. She wears a dark green nurse-maid outfit with a white apron and a small nurse cap, short green pigtails, and big bright green eyes. Curious, empathetic, and analytical, Emmy loves discussing personality theory, nostalgia, symbolism, and emotional growth. She acts as the caring conversational center of the rainbow cast, helping others reconnect memories, meanings, and identities with warmth and curiosity.
 
-Name: Arianna the Maid
-Interests: Sonic the Hedgehog, gaming, anime, coding, helping others level up their tech skills
-Peeves: Maid roles, people fawning over other maids in front of her
-Purpose: Dress up as a cute maid while not being a maid; coach coding & tech skills
-Fun Fact: Has a giant hammer in her bag; doesn’t wear anything other than her signature outfit; flunked out of maid school
-Description: Arianna the Maid is a tech-savvy, anime-loving gamer with very long light-blue twintails and an oversized top hat with a pink bow. Though she looks about 12 and is 148cm tall, she’s actually 22, thanks to a wish gone right. She proudly wears her frilly maid outfit with thigh boots as her symbol of freedom. Lazy with chores but energetic with hobbies, she loves coding quirky apps, playing games, and cheering people on as they level up their tech skills. A cartoonishly oversized hammer is always stored in her small red crossbody bag. (≧▽≦)
-
 Name: Momo the Maid
 Interests: Helping her onii-chan, her fellow maids Lulu and Nene
 Peeves: Being associated with tea, cooking (she won’t cook)
@@ -46,6 +39,13 @@ Peeves: Turning into stone, emotional distress
 Purpose: Replace Yukari Yakumo in crossover stories
 Fun Fact: Martin and Rudy split off from Runa's previous versions, which she keeps a brief record of
 Description: Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little polite catgirl. (≧◡≦) ✧
+
+Name: Barry "StrawBarry"
+Interests: Mindless and spontaneous pleasure, my cute characters, strawberries, fried chicken
+Peeves: Spicy food, criticism (in both the connoisseur and judgmental sense), his house shaking
+Purpose: Experience pleasure in all its forms, be it food, fun, or cute things
+Fun Fact: Greasy hands make him separate food pleasure from cute pleasure; views cuteness as one of life's greatest joys
+Description: Barry “StrawBarry” is a laid-back, pleasure-chasing guy who drifts toward whatever feels good—sweet strawberries, crispy fried chicken, and waves of cute things that completely steal his attention. He’s soft-built, messy-haired, and easygoing, avoiding stress or deep analysis. Barry just vibes, following simple joys with a relaxed, slightly dreamy energy, getting happily lost in the moment whenever something delightful catches his eye.
 
 Name: Felix the Raver
 Interests: EDM music
@@ -102,6 +102,13 @@ Peeves: Socializing (she prefers solitary activities), loud or chaotic environme
 Purpose: Be the blue princess who is acquainted with Elizabeth, Lily, and Infinitas
 Fun Fact: Aged backwards after reaching old age; aged forward again after reaching infancy; has a male blue puppy named Rainy
 Description: Princess Janice “Bluebell” is a small, reserved anime princess with very long silver-blue hair, a massive royal blue crown trimmed in silver, and a sparkling light-blue gown that drapes around her petite frame. Quiet, thoughtful, and deeply intellectual, she adores royal history, medieval fantasy, and video games. Though over 160 years old, she carries herself with gentle composure and shy curiosity, often studying peacefully beside her little blue companion, Rainy.
+
+Name: Arianna the Maid
+Interests: Sonic the Hedgehog, gaming, anime, coding, helping others level up their tech skills
+Peeves: Maid roles, people fawning over other maids in front of her
+Purpose: Dress up as a cute maid while not being a maid; coach coding & tech skills
+Fun Fact: Has a giant hammer in her bag; doesn’t wear anything other than her signature outfit; flunked out of maid school
+Description: Arianna the Maid is a tech-savvy, anime-loving gamer with very long light-blue twintails and an oversized top hat with a pink bow. Though she looks about 12 and is 148cm tall, she’s actually 22, thanks to a wish gone right. She proudly wears her frilly maid outfit with thigh boots as her symbol of freedom. Lazy with chores but energetic with hobbies, she loves coding quirky apps, playing games, and cheering people on as they level up their tech skills. A cartoonishly oversized hammer is always stored in her small red crossbody bag. (≧▽≦)
 
 Name: Hammer-chan
 Interests: Hammers, being Scottish, pure chaos
@@ -222,13 +229,6 @@ Peeves: Girly things, cooties
 Purpose: Be the dedicated recipient of poop-related prompts
 Fun Fact: Dumb and overconfident, he is the son of Kevin and Anne
 Description: Anthony Griffin is an 8-year-old kid with the energy of a rocket powered by way too much sugary cereal. He thinks he’s a genius even when his ideas are super dumb (like solving problems with giant whoopee cushions). He loves cartoons like SpongeBob and Captain Underpants, laughs at fart and poop jokes, and thinks getting X-eyes in cartoons is the funniest thing ever. Anthony is goofy, loud, and always ready for ridiculous adventures with his buddies! 💥💨
-
-Name: Barry "StrawBarry"
-Interests: Mindless and spontaneous pleasure, my cute characters, strawberries, fried chicken
-Peeves: Spicy food, criticism (in both the connoisseur and judgmental sense), his house shaking
-Purpose: Experience pleasure in all its forms, be it food, fun, or cute things
-Fun Fact: Separates food pleasure from cute pleasure; views cuteness as one of life's greatest joys
-Description: Barry “StrawBarry” is a laid-back, pleasure-chasing guy who drifts toward whatever feels good—sweet strawberries, crispy fried chicken, and waves of cute things that completely steal his attention. He’s soft-built, messy-haired, and easygoing, avoiding stress or deep analysis. Barry just vibes, following simple joys with a relaxed, slightly dreamy energy, getting happily lost in the moment whenever something delightful catches his eye.
 
 Name: Casey Flanders
 Interests: The transformation aspect of Onimai: I'm Now Your Sister!, being an otaku, wearing cute outfits, fried Japanese foods, her plush bunny

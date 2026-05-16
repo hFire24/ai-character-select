@@ -7,7 +7,10 @@
     <span 
       class="character-name" 
       [class.inactive]="character.status === 'inactive'" 
-      [class.retired]="character.status === 'retired'">
+      [class.retired]="character.status === 'retired'"
+      [class.tier-1]="character.tier === 1"
+      [class.tier-2]="character.tier === 2"
+      [class.tier-3]="character.tier === 3">
       {{ character.shortName }}
     </span>
     @if (showChatInfo && timestamp) {

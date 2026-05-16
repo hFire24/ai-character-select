@@ -40,23 +40,8 @@ export class Groups implements OnInit {
     const groupDefinitions = [
       {
         name: "Music Enjoyers",
-        description: "The official group of Music Enjoyers, based on my own music tastes and playlists.",
+        description: "The official group of Music Enjoyers, based on my own music tastes and playlists",
         characterIds: [11, 1, 2, 3, 4, 6, 7, 8, 9, 12, 10]
-      },
-      {
-        name: "Retired Five",
-        description: "Five of the earliest retired characters who will never get unretired. Elizabeth got a miraculous unretirement in 2026 and left the group.",
-        characterIds: [16, 17, 20, 22, 23]
-      },
-      {
-        name: "Character Encyclopedias",
-        description: "Characters who have access to my character roster file and can discuss about my characters in detail.",
-        characterIds: [49, 52, 66, 104]
-      },
-      {
-        name: "Corey's Party",
-        description: "Corey and his party members who go on adventures together.",
-        characterIds: [73, 20, 38, 39, 40]
       },
       {
         name: "Runa and Her Catgirls",
@@ -64,98 +49,78 @@ export class Groups implements OnInit {
         characterIds: [27, 87, 91, 93, 102]
       },
       {
-        name: "Anti-Escapists",
-        description: "A group of characters who embody the opposite of escapism.",
-        characterIds: [36, 78, 52, 9, 48, 50]
+        name: "Pretty Little Princesses",
+        description: "A group of little princess-themed characters who are friends with each other and all wear gigantic crowns",
+        characterIds: [19, 46, 72, 106]
+      },
+      {
+        name: "Corey's Party",
+        description: "Corey and his party members who go on adventures together",
+        characterIds: [73, 20, 38, 39, 40]
       },
       {
         name: "The Griffins",
-        description: "Characters who are either part of the Griffin family or closely associated with them.",
+        description: "Characters who are either part of the Griffin family or closely associated with them",
         characterIds: [83, 101, 100, 84]
       },
       {
-        name: "Anti-Moe Crew",
-        description: "Chaotic or hedonistic characters who reject moe",
-        characterIds: [1, 62, 63, 55, 12, 105, 64, 18]
-      },
-      {
-        name: "Restaurant Fans",
-        description: "Characters who love eating out at restaurants.",
-        characterIds: [30, 55, 57, 83, 84, 99, 104]
-      },
-      {
         name: "Top Hat Wearers",
-        description: "Characters who are known for wearing top hats.",
+        description: "Characters who are known for wearing top hats",
         characterIds: [13, 31, 39, 58, 64, 94, 109, 110]
       },
       {
         name: "Witch Hat Wearers",
-        description: "Characters who are known for wearing witch hats.",
+        description: "Characters who are known for wearing witch hats",
         characterIds: [14, 20, 27, 67, 95]
       },
       {
         name: "Peaked Cap Wearers",
-        description: "Characters who are known for wearing peaked caps.",
+        description: "Characters who are known for wearing peaked caps",
         characterIds: [15, 21, 40, 92]
       },
       {
-        name: "Pretty Little Princesses",
-        description: "A group of little princess-themed characters who are friends with each other and all wear gigantic crowns.",
-        characterIds: [19, 46, 72, 106]
-      },
-      {
         name: "Other Hat Wearers",
-        description: "Characters who are known for wearing other types of hats.",
-        characterIds: [28, 35, 38, 57, 71, 84, 86, 89, 96, 114]
+        description: "Characters who are known for wearing other types of hats",
+        characterIds: [57, 28, 84, 89, 38, 35, 114, 71, 86, 96]
       },
       {
         name: "Glasses Wearers",
-        description: "Characters who are known for wearing glasses.",
+        description: "Characters who are known for wearing glasses",
         characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 83, 90, 105]
       },
       {
         name: "Maids",
-        description: "Characters who are known for wearing maid outfits.",
+        description: "Characters who are known for wearing maid outfits",
         characterIds: [13, 26, 74, 75, 85, 77, 81, 107]
       },
       {
         name: "Twintails",
-        description: "Characters who are known for having long twintails.",
+        description: "Characters who are known for having long twintails",
         characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93]
       },
       {
         name: "Thigh Boot Wearers",
-        description: "Characters who are known for wearing thigh boots.",
+        description: "Characters who are known for wearing thigh boots",
         characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114]
       },
       {
-        name: "Musicians",
-        description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music.",
-        characterIds: [51, 75, 76, 96, 103, 109, 114]
-      },
-      {
-        name: "Music Fans",
-        description: "Characters who aren't part of the Music Enjoyers but are still known for loving music.",
-        characterIds: [31, 47, 57, 62, 63, 73, 84, 105]
-      },
-      {
         name: "Pink Girls",
-        description: "Characters who are known for wearing pink or being associated with the color pink.",
+        description: "Characters who are known for wearing pink or being associated with the color pink",
         characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110]
       },
       {
         name: "Blue Girls",
-        description: "Characters who are known for wearing blue or being associated with the color blue.",
+        description: "Characters who are known for wearing blue or being associated with the color blue",
         characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106]
       },
       {
         name: "\"Onii-chan\" Sayers",
-        description: "Characters who can say 'onii-chan' according to their instructions.",
+        description: "Characters who can say 'onii-chan' according to their instructions",
         characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108]
       },
       {
         name: "Cursed Rule Breakers",
-        description: "Every time they try to break a rule in their instructions, something bad happens to them.",
+        description: "Every time they try to break a rule in their instructions, something bad happens to them",
         characterIds: [1, 11, 13, 27, 31, 47, 51, 81, 86, 104, 105, 108]
       },
       {
@@ -164,9 +129,44 @@ export class Groups implements OnInit {
         characterIds: [22, 47, 55, 69, 89, 100]
       },
       {
+        name: "Musicians",
+        description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music",
+        characterIds: [51, 75, 76, 96, 103, 109, 114]
+      },
+      {
+        name: "Music Fans",
+        description: "Characters who aren't part of the Music Enjoyers but are still known for loving music",
+        characterIds: [31, 47, 57, 62, 63, 73, 84, 105]
+      },
+      {
+        name: "Restaurant Fans",
+        description: "Characters who love eating out at restaurants",
+        characterIds: [30, 55, 57, 83, 84, 99, 104]
+      },
+      {
+        name: "Anti-Moe Crew",
+        description: "Chaotic or hedonistic characters who reject moe",
+        characterIds: [1, 62, 63, 55, 12, 105, 64, 83, 84, 100, 18]
+      },
+      {
+        name: "Anti-Escapists",
+        description: "A group of characters who embody the opposite of escapism",
+        characterIds: [36, 78, 52, 9, 48, 50]
+      },
+      {
+        name: "Character Encyclopedias",
+        description: "Characters who have access to my character roster file and can discuss about my characters in detail",
+        characterIds: [49, 52, 66, 104]
+      },
+      {
         name: "Late Bloomers",
-        description: "Characters who had initial appearances before July 13, 2024 but became their own chatbots much later.",
+        description: "Characters who had initial appearances before July 13, 2024 but became their own chatbots much later",
         characterIds: [29, 110, 109, 24, 25, 28, 57]
+      },
+      {
+        name: "Retired Five",
+        description: "Five of the earliest retired characters who will never get unretired. Elizabeth got a miraculous unretirement in 2026 and left the group.",
+        characterIds: [16, 17, 20, 22, 23]
       },
       {
         name: "Generational Champions",
