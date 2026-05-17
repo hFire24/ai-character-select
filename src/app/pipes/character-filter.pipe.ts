@@ -3,7 +3,8 @@ import { Character } from '../services/character.service';
 
 // Simple status filter interface (for backwards compatibility)
 export interface CharacterFilters {
-  activeChats: boolean;
+  activeChats?: boolean;
+  activeNoChats?: boolean;
   active: boolean;
   inactive: boolean;
   retired: boolean;
@@ -14,6 +15,7 @@ export interface CharacterFilters {
 export interface CharacterFilterOptions {
   // Active chats filter (characters with active chat links in storage)
   activeChats?: boolean;
+  activeNoChats?: boolean;
   
   // Status filters
   status?: {
@@ -109,9 +111,15 @@ export class CharacterFilterPipe implements PipeTransform {
     // If active chats filter is enabled, only show characters with active chats
     if (filters.activeChats) {
       return characters.filter(character => {
-        const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
-        return localStorage.getItem(chatLinkKey) !== null;
+        return this.hasStoredChatLink(character);
       });
+    }
+
+    // If active no chats filter is enabled, only show active characters without active chats
+    if (filters.activeNoChats) {
+      return characters.filter(character =>
+        character.status === 'active' && !this.hasStoredChatLink(character)
+      );
     }
 
     // Apply filters based on character status
@@ -144,8 +152,12 @@ export class CharacterFilterPipe implements PipeTransform {
 
       // Active chats filter
       if (options.activeChats) {
-        const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
-        if (localStorage.getItem(chatLinkKey) === null) return false;
+        if (!this.hasStoredChatLink(character)) return false;
+      }
+
+      // Active no chats filter
+      if (options.activeNoChats) {
+        if (character.status !== 'active' || this.hasStoredChatLink(character)) return false;
       }
 
       // Status filter
@@ -263,5 +275,10 @@ export class CharacterFilterPipe implements PipeTransform {
     if (exclude.statuses && exclude.statuses.includes(character.status)) return true;
     
     return false;
+  }
+
+  private hasStoredChatLink(character: Character): boolean {
+    const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
+    return localStorage.getItem(chatLinkKey) !== null;
   }
 }

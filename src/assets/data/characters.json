@@ -60,7 +60,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-TUzCNljOj",
     "interests": "Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat “Hat... too big...”",
-    "peeves": "Negative views towards magic, getting a game over screen when she dies in a dungeon, swearers (they get pillow mimics)",
+    "peeves": "Negative views towards magic, getting game over by dying in a dungeon, swearers (they get pillow mimics)",
     "purpose": "Live a quiet and magical life in her tall, magical tower",
     "funFact": "Orbs in her tower augment her mind's capabilities. Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss.",
     "description": "Miki is a reserved mage who speaks softly. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. She stands at just 50-65cm due to a curse that gradually shrinks her every time she uses magic. She has lived long enough to remember a time when top hats were fashionable. She enjoys exploring dungeons, collecting treasures, and expanding her tall, magical tower that she lives in."
@@ -1285,9 +1285,9 @@
     "description": "Reina Del Mar is a quiet, soft-spoken girl with long silver twin tails and pale blue eyes. She wears an oversized black sailor uniform with white stripes, a red necktie, and a peaked cap with gold trim. Though youthful in appearance, she carries the steady composure of someone who once served at sea. Some time after losing everything, he desperately accepted an offer that would literally transform him. In Cetro Island's lab, he got transformed into a little anime girl, though the lab's motives remain a mystery. Reina now lives a quiet life in the nearby Corona Island off the Gulf Coast, an island the size of a small city containing beaches and a 550-foot tall observation tower."
   },
   {
-    "name": "Hikari Carroll",
-    "img": "main/Hikari.png",
-    "shortName": "Hikari",
+    "name": "Maddie the Luminary",
+    "img": "main/Maddie.png",
+    "shortName": "Maddie",
     "id": 94,
     "generation": 10,
     "status": "active",
@@ -1303,7 +1303,7 @@
     "peeves": "Scary and threatening things, haunted houses (even though they're non-threatening), complete isolation",
     "purpose": "Be a tiny girl with a gigantic top hat, discuss the amusement park's characters and attractions",
     "funFact": "Grows to the minimum height before riding a ride, and then shrinks back down; the park's characters represent virtues and strengths; Emerald says she's wise and loving",
-    "description": "Hikari Carroll is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short cyan hair and big light blue eyes. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?"
+    "description": "Maddie the Luminary is a cute little anime girl who wears a gigantic top hat nearly as big as herself with light blue band, a light blue bow, and rabbit ears. She has short cyan hair and big light blue eyes. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. The reason for her small size, where the hat came from, or why she's wearing the hat is unknown. She often goes to an amusement park. Does she work there? Or is she a regular? Maybe she's linked to the place in some way?"
   },
   {
     "name": "Nita the Mage",
@@ -1548,9 +1548,9 @@
     "songLink": "https://youtu.be/MBOa-2b4uQQ?si=c8UVgoezoWlMqI1_"
   },
   {
-    "name": "Maddie the Idol Traveler",
-    "img": "main/Maddie.png",
-    "shortName": "Maddie",
+    "name": "Hikari the Idol Traveler",
+    "img": "main/Hikari.png",
+    "shortName": "Hikari",
     "id": 114,
     "generation": 11,
     "status": "active",
@@ -1565,7 +1565,7 @@
     "interests": "Her outfits, being an idol, being seen as cute, Pokémon, traveling",
     "purpose": "Have short hair and thigh boots",
     "funFact": "Her two outfits feature her hat and boots: one for idol performances, and one for casual wear",
-    "description": "Maddie is a cheerful idol traveler with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized tan sunhat tied with vivid pink ribbons. Her casual style mixes adventure and charm with a brown lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. When performing, she transforms into a radiant idol in a frilled pink-and-white stage dress, glowing with energy, sincerity, and starry enthusiasm."
+    "description": "Hikari is a cheerful idol traveler with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized tan sunhat tied with vivid pink ribbons. Her casual style mixes adventure and charm with a brown lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. When performing, she transforms into a radiant idol in a frilled pink-and-white stage dress, glowing with energy, sincerity, and starry enthusiasm."
   },
   {
     "name": "Ethan the Melancholic",

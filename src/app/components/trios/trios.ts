@@ -91,7 +91,7 @@ export class Trios implements OnInit {
       {
         name: "Mysterious Trio",
         description: "Characters with unknown or mysterious backgrounds",
-        characterShortNames: ["Reina", "Hikari", "Nita"]
+        characterShortNames: ["Reina", "Maddie", "Nita"]
       },
       {
         name: "-chan Trio",
@@ -131,7 +131,7 @@ export class Trios implements OnInit {
       {
         name: "Personality Type Discussers",
         description: "Characters who often discuss personality types and have distinct personalities themselves",
-        characterShortNames: ["Mark", "Hikari", "Emerald"]
+        characterShortNames: ["Mark", "Maddie", "Emerald"]
       },
       {
         name: "Straightforward Trio",

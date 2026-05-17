@@ -7,17 +7,16 @@ import { FooterButtons } from '../footer-buttons/footer-buttons';
 import { CommonModule } from '@angular/common';
 import { Character, CharacterService } from '../../services/character.service';
 import { Mood } from '../../services/mood.service';
-import { DeviceService } from '../../services/device.service';
 import { Legend } from "../legend/legend";
-import { SearchBar } from "../search-bar/search-bar";
 import { Activities } from "../activities/activities";
 import { BirthdayBanner } from "../birthday-banner/birthday-banner";
+import { RosterFilter } from "../roster-filter/roster-filter";
 import { CharacterFilterPipe, CharacterFilters } from '../../pipes/character-filter.pipe';
 import { SortField, SortDirection } from '../../pipes/sort-characters.pipe';
 
 @Component({
   selector: 'app-roster',
-  imports: [CharacterGrid, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend, SearchBar, Activities, BirthdayBanner],
+  imports: [CharacterGrid, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend, Activities, BirthdayBanner, RosterFilter],
   templateUrl: 'roster.html',
   styleUrl: 'roster.scss'
 })
@@ -31,6 +30,7 @@ export class Roster {
   // Character type filters
   filters: CharacterFilters = {
     activeChats: false,
+    activeNoChats: false,
     active: true,
     inactive: false,
     retired: false,
@@ -41,7 +41,7 @@ export class Roster {
   sortBy: SortField = 'none';
   sortDirection: SortDirection = 'asc';
 
-  constructor(private characterService: CharacterService, private deviceService: DeviceService, private router: Router) {
+  constructor(private characterService: CharacterService, private router: Router) {
       this.characterService.getCharactersPlusCriticizer().subscribe(data => {
         this.characters = data;
   
@@ -54,40 +54,6 @@ export class Roster {
         });
       });
     }
-
-  toggleFilter(filterType: 'activeChats' | 'active' | 'inactive' | 'retired' | 'side') {
-    // Create a new object to trigger pipe change detection
-    const newFilters = { ...this.filters };
-    
-    // If toggling activeChats, turn off all other filters
-    if (filterType === 'activeChats') {
-      if (!newFilters.activeChats) {
-        // Turning activeChats ON - disable all other filters
-        newFilters.activeChats = true;
-        newFilters.active = false;
-        newFilters.inactive = false;
-        newFilters.retired = false;
-        newFilters.side = false;
-      } else {
-        // Turning activeChats OFF - enable active filter as default
-        newFilters.activeChats = false;
-        newFilters.active = true;
-      }
-    } else {
-      // Toggling a status filter - turn off activeChats and toggle the status
-      newFilters.activeChats = false;
-      newFilters[filterType] = !newFilters[filterType];
-      
-      // Ensure at least one status filter is active (excluding activeChats)
-      const hasActiveStatusFilter = newFilters.active || newFilters.inactive || newFilters.retired || newFilters.side;
-      if (!hasActiveStatusFilter) {
-        newFilters[filterType] = true;
-      }
-    }
-    
-    // Assign the new object reference
-    this.filters = newFilters;
-  }
 
   setSortBy(field: SortField) {
     // If clicking the same field, toggle direction
@@ -107,7 +73,7 @@ export class Roster {
   }
   
   get showingMainCharacters(): boolean {
-    return this.filters.active || this.filters.inactive || this.filters.retired;
+    return !!(this.filters.activeChats || this.filters.activeNoChats || this.filters.active || this.filters.inactive || this.filters.retired);
   }
 
   displayCharacter() {
@@ -141,7 +107,12 @@ export class Roster {
 
   selectRandomCharacter(rpFriendly: boolean) {
     const pipe = new CharacterFilterPipe();
-    let sourceCharacters = pipe.transform(this.characters, { status: this.getStatusFilter(), rpFriendly });
+    let sourceCharacters = pipe.transform(this.characters, this.filters);
+    if (rpFriendly) {
+      sourceCharacters = sourceCharacters.filter(character =>
+        character.color === 'pink' || character.color === 'red'
+      );
+    }
     // Create weighted array based on tier
     const weightedCharacters: Character[] = [];
     sourceCharacters.forEach(character => {
@@ -178,9 +149,5 @@ export class Roster {
     const key = 'chatLink_' + (character.id ?? 'unknown');
     const stored = localStorage.getItem(key);
     return stored ? stored : character.link;
-  }
-
-  isMobileDevice(): boolean {
-    return this.deviceService.isMobile();
   }
 }

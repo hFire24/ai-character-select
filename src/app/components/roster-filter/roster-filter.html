@@ -1,0 +1,61 @@
+<div class="filter-section">
+  <h3 class="filter-title clickable" (click)="toggleCollapse()">
+    Filters
+    <span class="collapse-icon">{{ isCollapsed ? '▶' : '▼' }}</span>
+  </h3>
+  <div class="filter-content" [class.collapsed]="isCollapsed">
+    <div class="filter-chips">
+      @if (!isMobileDevice()) {
+        <button
+          class="filter-chip chat-filter-chip"
+          [class.active]="filters.activeChats"
+          [disabled]="searchTerm.trim().length > 0"
+          (click)="toggleFilter('activeChats')"
+        >
+          💬 Active (Chats)
+        </button>
+        <button
+          class="filter-chip chat-filter-chip"
+          [class.active]="filters.activeNoChats"
+          [disabled]="searchTerm.trim().length > 0"
+          (click)="toggleFilter('activeNoChats')"
+        >
+          😐 No Chats
+        </button>
+      }
+      <button
+        class="filter-chip"
+        [class.active]="filters.active"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('active')"
+      >
+        ✓ Active (All)
+      </button>
+      <button
+        class="filter-chip"
+        [class.active]="filters.inactive"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('inactive')"
+      >
+        ⏸ Inactive
+      </button>
+      <button
+        class="filter-chip"
+        [class.active]="filters.retired"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('retired')"
+      >
+        🌇 Retired
+      </button>
+      <button
+        class="filter-chip"
+        [class.active]="filters.side"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('side')"
+      >
+        👥 Side
+      </button>
+    </div>
+    <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
+  </div>
+</div>

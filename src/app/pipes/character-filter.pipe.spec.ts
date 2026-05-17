@@ -7,6 +7,7 @@ describe('CharacterFilterPipe', () => {
 
   beforeEach(() => {
     pipe = new CharacterFilterPipe();
+    localStorage.clear();
     mockCharacters = [
       {
         id: 1,
@@ -105,6 +106,37 @@ describe('CharacterFilterPipe', () => {
       expect(result.every(c => c.status === 'active')).toBe(true);
     });
 
+    it('should filter active characters with stored chats', () => {
+      localStorage.setItem('chatLink_1', 'https://example.com/chat');
+      const filters: CharacterFilters = {
+        activeChats: true,
+        activeNoChats: false,
+        active: false,
+        inactive: false,
+        retired: false,
+        side: false
+      };
+      const result = pipe.transform(mockCharacters, filters);
+      expect(result.length).toBe(1);
+      expect(result[0].shortName).toBe('Active1');
+    });
+
+    it('should filter active characters without stored chats', () => {
+      localStorage.setItem('chatLink_1', 'https://example.com/chat');
+      localStorage.setItem('chatLink_2', 'https://example.com/retired-chat');
+      const filters: CharacterFilters = {
+        activeChats: false,
+        activeNoChats: true,
+        active: false,
+        inactive: false,
+        retired: false,
+        side: false
+      };
+      const result = pipe.transform(mockCharacters, filters);
+      expect(result.length).toBe(1);
+      expect(result[0].shortName).toBe('MoeChar');
+    });
+
     it('should filter retired characters', () => {
       const filters: CharacterFilters = { active: false, inactive: false, retired: true, side: false };
       const result = pipe.transform(mockCharacters, filters);
@@ -160,6 +192,16 @@ describe('CharacterFilterPipe', () => {
       };
       const result = pipe.transform(mockCharacters, options);
       expect(result.length).toBe(3); // Active1, MoeChar, Retired1
+    });
+
+    it('should filter active characters without stored chats using advanced options', () => {
+      localStorage.setItem('chatLink_1', 'https://example.com/chat');
+      const options: CharacterFilterOptions = {
+        activeNoChats: true
+      };
+      const result = pipe.transform(mockCharacters, options);
+      expect(result.length).toBe(1);
+      expect(result[0].shortName).toBe('MoeChar');
     });
 
     it('should filter by tier range', () => {
