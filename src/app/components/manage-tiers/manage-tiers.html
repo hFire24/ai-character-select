@@ -1,0 +1,171 @@
+<div class="back-button-container">
+  <app-back-button [route]="'/stats'" [text]="'Back to Stats'"></app-back-button>
+  <app-back-button></app-back-button>
+</div>
+
+<main class="manage-tiers-page">
+  <header class="page-header">
+    <h1>Manage Tiers</h1>
+    <p>Adjust the tiers of your characters.</p>
+  </header>
+
+  <section class="controls" aria-label="Tier management controls">
+    <div class="database-toolbar">
+      <label class="search-control">
+        <span>Search</span>
+        <input type="search" [(ngModel)]="searchTerm" placeholder="Search name or ID">
+      </label>
+
+      <div class="filter-builder" aria-label="Filters">
+        <label class="filter-pill">
+          <span>Status</span>
+          <select [(ngModel)]="statusFilter">
+            <option value="all">Any</option>
+            @for (status of statusOptions; track status) {
+              <option [value]="status">{{ status }}</option>
+            }
+          </select>
+        </label>
+
+        <label class="filter-pill">
+          <span>Tier</span>
+          <select [(ngModel)]="tierFilter">
+            <option value="all">Any</option>
+            @for (tier of tierOptions; track tier) {
+              <option [value]="tier">Tier {{ tier }}</option>
+            }
+          </select>
+        </label>
+      </div>
+
+      <div class="filter-summary" aria-live="polite">
+        <span class="result-count">{{ filteredCharacters.length }} results</span>
+        @if (activeFilterLabels.length > 0) {
+          @for (label of activeFilterLabels; track label) {
+            <span class="active-filter">{{ label }}</span>
+          }
+          <button type="button" class="clear-filter-btn" (click)="clearFilters()">Clear filters</button>
+        } @else {
+          <span class="active-filter muted">No filters</span>
+        }
+      </div>
+    </div>
+
+    <div class="sort-section">
+      <div class="sort-summary">
+        <button type="button" class="sort-toggle" (click)="toggleSortOptions()">
+          Sort options
+        </button>
+
+        @if (sortSummaryLabels.length > 0) {
+          @for (label of sortSummaryLabels; track label) {
+            <span class="sort-chip">{{ label }}</span>
+          }
+        } @else {
+          <span class="sort-chip muted">Unsorted</span>
+        }
+      </div>
+
+      @if (showSortOptions) {
+      <div class="advanced-sort">
+        @for (sortLevel of sortLevels; track sortLevel.level) {
+          <label>
+            <span>{{ sortLevel.fieldLabel }}</span>
+            <select
+              [ngModel]="getSortField(sortLevel.level)"
+              (ngModelChange)="updateSortField(sortLevel.level, $event)"
+            >
+              @for (option of sortOptions; track option.value) {
+                <option [value]="option.value">{{ option.label }}</option>
+              }
+            </select>
+          </label>
+
+          <label>
+            <span>Direction</span>
+            <select
+              [ngModel]="getSortDirection(sortLevel.level)"
+              (ngModelChange)="updateSortDirection(sortLevel.level, $event)"
+            >
+              <option value="asc">Ascending</option>
+              <option value="desc">Descending</option>
+            </select>
+          </label>
+        }
+
+        <div class="sort-actions">
+          <button
+            type="button"
+            class="clear-sort-btn"
+            (click)="clearSort()"
+          >
+            Reset sort
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+
+    <div class="actions">
+      <button type="button" class="secondary-button" (click)="exportText()">Export Text</button>
+      <button type="button" class="secondary-button" (click)="exportTierMap()">Export Map</button>
+      <button type="button" class="secondary-button" (click)="importTierMap()">Import Map</button>
+    </div>
+  </section>
+
+  @if (isLoading) {
+    <p class="loading-state">Loading characters...</p>
+  } @else {
+    <section class="results-content">
+      <div class="results-header">
+        <span>Character</span>
+        <span>Metadata</span>
+        <span>Tier</span>
+      </div>
+      <div class="character-list">
+      @for (character of filteredCharacters; track character.id) {
+        <article class="character-row">
+          <div class="identity">
+            <img
+              [src]="'assets/Icons/' + (character.img || 'extended/Unknown.png')"
+              [alt]="character.shortName"
+            >
+            <div>
+              <h2 
+                [class.tier-1]="character.tier === 1"
+                [class.tier-2]="character.tier === 2"
+                [class.tier-3]="character.tier === 3">
+                {{ character.shortName }}
+              </h2>
+              @if (['active', 'inactive', 'retired'].includes(character.status)) {
+                <div class="chat-stats">
+                  <span class="stat">Last Week: {{ character.weeklyChatCount }}</span>
+                  <span class="stat">Total: {{ character.chatCount }}</span>
+                  <span class="stat">Last: {{ character.timestamp ? (character.timestamp | relativeDate) : 'Never' }}</span>
+                </div>
+              }
+            </div>
+          </div>
+
+          <div class="metadata">
+            <span>ID: {{ character.id }}</span>
+            <span>{{ character.status }}</span>
+          </div>
+
+          <label class="tier-control">
+            <span>Tier</span>
+            <select [ngModel]="character.tier" (ngModelChange)="updateTier(character, $event)">
+              @for (tier of getAllowedTiers(character); track tier) {
+                <option [value]="tier">{{ tier }}</option>
+              }
+            </select>
+          </label>
+
+        </article>
+      } @empty {
+        <p class="empty-state">No characters match those filters.</p>
+      }
+      </div>
+    </section>
+  }
+</main>

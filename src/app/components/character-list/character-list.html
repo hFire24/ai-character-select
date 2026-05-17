@@ -3,6 +3,7 @@
     <p>Number of Active Chats: {{ numActiveChats }}</p>
     <p>Note: Only chats made after <b>March 27, 2026</b> are counted for the total, and chats made after <b>March 30, 2026</b> are counted for the weekly total.</p>
     <div class="button-group">
+      <button class="manage-button" routerLink="/manage-tiers">Manage Tiers</button>
       @if (numActiveChats > 0) {
         <button class="manage-button" routerLink="/chat-manager">Manage Chats</button>
         <button class="reset-all-button" (click)="resetAllChatLinks()">Reset All Chat Links</button>

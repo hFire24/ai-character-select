@@ -17,6 +17,7 @@ import { ChatManager } from './components/chat-manager/chat-manager';
 import { Lineage } from './components/lineage/lineage';
 import { IdChecker } from './components/id-checker/id-checker';
 import { Announcement } from './components/announcement/announcement';
+import { ManageTiers } from './components/manage-tiers/manage-tiers';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
@@ -36,5 +37,6 @@ export const routes: Routes = [
   { path: 'chat-manager', component: ChatManager, title: 'Manage Active Chats' },
   { path: 'lineage', component: Lineage, title: 'Lineage' },
   { path: 'id-checker', component: IdChecker, title: 'ID Checker' },
-  { path: 'announcement', component: Announcement, title: 'Announcement' }
+  { path: 'announcement', component: Announcement, title: 'Announcement' },
+  { path: 'manage-tiers', component: ManageTiers, title: 'Manage Tiers' }
 ];

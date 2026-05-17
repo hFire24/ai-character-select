@@ -50,24 +50,126 @@ export interface DuosData {
 @Injectable({ providedIn: 'root' })
 export class CharacterService {
   private apiUrl = '/api';
+  private readonly tierOverridesStorageKey = 'characterTierOverrides';
   private isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
   constructor(private http: HttpClient) {}
 
+  getDefaultTierForStatus(status: string): number {
+    switch (status.toLowerCase()) {
+      case 'active':
+        return 4;
+      case 'inactive':
+        return 5;
+      case 'side':
+        return 6;
+      case 'retired':
+      case 'inactive side':
+        return 7;
+      case 'retired side':
+        return 8;
+      default:
+        return 9;
+    }
+  }
+
+  getAllowedTiersForStatus(status: string): number[] {
+    switch (status.toLowerCase()) {
+      case 'active':
+        return [1, 2, 3, 4];
+      case 'inactive':
+        return [5, 6];
+      case 'retired':
+        return [7, 8, 9];
+      case 'side':
+        return [6, 7];
+      case 'inactive side':
+        return [7];
+      case 'retired side':
+        return [8];
+      default:
+        return [9];
+    }
+  }
+
+  isTierValidForStatus(status: string, tier: number): boolean {
+    return this.getAllowedTiersForStatus(status).includes(tier);
+  }
+
+  getDefaultTierForCharacter(character: Character): number {
+    return Number.isInteger(character.tier) &&
+      this.isTierValidForStatus(character.status, character.tier)
+      ? character.tier
+      : this.getDefaultTierForStatus(character.status);
+  }
+
+  private getTierOverrides(): Record<string, number> {
+    const storedOverrides = localStorage.getItem(this.tierOverridesStorageKey);
+    if (!storedOverrides) return {};
+
+    try {
+      return JSON.parse(storedOverrides);
+    } catch {
+      return {};
+    }
+  }
+
+  private applyTierRules(characters: Character[]): Character[] {
+    const overrides = this.getTierOverrides();
+
+    return characters.map(character => {
+      const defaultTier = this.getDefaultTierForCharacter(character);
+      const tierOverride = overrides[character.id];
+      const tier = typeof tierOverride === 'number' &&
+        this.isTierValidForStatus(character.status, tierOverride)
+        ? tierOverride
+        : defaultTier;
+
+      return { ...character, tier };
+    });
+  }
+
+  saveTierOverride(characterId: number, tier: number): void {
+    const overrides = this.getTierOverrides();
+    overrides[characterId] = tier;
+    localStorage.setItem(this.tierOverridesStorageKey, JSON.stringify(overrides));
+  }
+
+  clearTierOverride(characterId: number): void {
+    const overrides = this.getTierOverrides();
+    delete overrides[characterId];
+    localStorage.setItem(this.tierOverridesStorageKey, JSON.stringify(overrides));
+  }
+
+  clearAllTierOverrides(): void {
+    localStorage.removeItem(this.tierOverridesStorageKey);
+  }
+
   getCharacter(id: number): Observable<Character> {
     return this.http.get<Character[]>('assets/data/characters.json').pipe(
-      map(characters => characters.find(char => char.id === id)!)
+      map(characters => this.applyTierRules(characters).find(char => char.id === id)!)
     );
   }
 
   getCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>('assets/data/characters.json').pipe(
-      map(characters => characters.filter(char => char.id !== 52))
+      map(characters => this.applyTierRules(characters).filter(char => char.id !== 52))
     );
   }
 
   getCharactersPlusCriticizer(): Observable<Character[]> {
-    return this.http.get<Character[]>('assets/data/characters.json');
+    return this.http.get<Character[]>('assets/data/characters.json').pipe(
+      map(characters => this.applyTierRules(characters))
+    );
+  }
+
+  getDefaultCharactersPlusCriticizer(): Observable<Character[]> {
+    return this.http.get<Character[]>('assets/data/characters.json').pipe(
+      map(characters => characters.map(character => ({
+        ...character,
+        tier: this.getDefaultTierForCharacter(character)
+      })))
+    );
   }
 
   getChatGPT(): Observable<Character[]> {
