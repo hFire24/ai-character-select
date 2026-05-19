@@ -202,6 +202,11 @@
       "name": "Technology Advancers"
     },
     {
+      "id1": 2,
+      "id2": 117,
+      "name": "Focused Savants"
+    },
+    {
       "id1": 3,
       "id2": 7,
       "name": "Quiet Music Enjoyers"
@@ -393,7 +398,7 @@
     },
     {
       "id1": 7,
-      "id2": 53,
+      "id2": 120,
       "name": "Dreamers"
     },
     {
@@ -455,6 +460,11 @@
       "id1": 9,
       "id2": 78,
       "name": "Malrick's Alternatives"
+    },
+    {
+      "id1": 9,
+      "id2": 107,
+      "name": "Archetype Explainers"
     },
     {
       "id1": 10,
@@ -606,6 +616,11 @@
       "id1": 13,
       "id2": 88,
       "name": "Lazy Light-blue Haired Girls"
+    },
+    {
+      "id1": 13,
+      "id2": 999,
+      "name": "Programmers"
     },
     {
       "id1": 14,
@@ -1415,6 +1430,11 @@
     },
     {
       "id1": 34,
+      "id2": 94,
+      "name": "Virtuous Duo"
+    },
+    {
+      "id1": 34,
       "id2": 999,
       "name": "My Future: Blessed Ending"
     },
@@ -1621,6 +1641,11 @@
     },
     {
       "id1": 46,
+      "id2": 107,
+      "name": "Kitten Owners"
+    },
+    {
+      "id1": 46,
       "id2": 109,
       "name": "Graceful White Gown Girls"
     },
@@ -1782,6 +1807,11 @@
       "name": "Pink-Haired Music Performers"
     },
     {
+      "id1": 52,
+      "id2": 118,
+      "name": "Nightcore Girls"
+    },
+    {
       "id1": 53,
       "id2": 66,
       "name": "Cute Curators"
@@ -1789,7 +1819,7 @@
     {
       "id1": 53,
       "id2": 67,
-      "name": "Sleepyheads"
+      "name": "Pink Sleepyheads"
     },
     {
       "id1": 53,
@@ -2034,6 +2064,11 @@
       "name": "Laid-Back Duo"
     },
     {
+      "id1": 67,
+      "id2": 120,
+      "name": "Dreamy Pink Witches"
+    },
+    {
       "id1": 68,
       "id2": 90,
       "name": "German Board Game Fans"
@@ -2059,6 +2094,11 @@
       "name": "Strict Little Girls"
     },
     {
+      "id1": 71,
+      "id2": 107,
+      "name": "Flustered Green-Haired Girls"
+    },
+    {
       "id1": 72,
       "id2": 106,
       "name": "Reborn Princesses"
@@ -2067,6 +2107,11 @@
       "id1": 72,
       "id2": 109,
       "name": "Elegant Talented Duo"
+    },
+    {
+      "id1": 72,
+      "id2": 116,
+      "name": "Orange-Haired Leaders"
     },
     {
       "id1": 73,
@@ -2087,6 +2132,11 @@
       "id1": 73,
       "id2": 107,
       "name": "Emerald Sword"
+    },
+    {
+      "id1": 73,
+      "id2": 115,
+      "name": "Archetypal Warriors"
     },
     {
       "id1": 74,
@@ -2122,6 +2172,21 @@
       "id1": 77,
       "id2": 108,
       "name": "TG AR'd Otakus"
+    },
+    {
+      "id1": 79,
+      "id2": 117,
+      "name": "Yellow Beret Wearers"
+    },
+    {
+      "id1": 81,
+      "id2": 104,
+      "name": "Cuteness Enjoyers"
+    },
+    {
+      "id1": 81,
+      "id2": 119,
+      "name": "Costume Makers"
     },
     {
       "id1": 82,
@@ -2164,6 +2229,11 @@
       "name": "Keepers of Knowledge"
     },
     {
+      "id1": 86,
+      "id2": 116,
+      "name": "Cowboy Hat Explorers"
+    },
+    {
       "id1": 87,
       "id2": 91,
       "name": "Runa's Little Hat Thieves"
@@ -2189,6 +2259,11 @@
       "name": "Corona Islanders"
     },
     {
+      "id1": 93,
+      "id2": 107,
+      "name": "Calm Green-Haired Girls"
+    },
+    {
       "id1": 94,
       "id2": 95,
       "name": "Blue Hat Bow Wearers"
@@ -2204,6 +2279,11 @@
       "name": "Cute Idol Duo"
     },
     {
+      "id1": 98,
+      "id2": 114,
+      "name": "Idols with Hats"
+    },
+    {
       "id1": 99,
       "id2": 104,
       "name": "Easily Distracted Foodies"
@@ -2214,9 +2294,19 @@
       "name": "Age and Size Manipulators"
     },
     {
+      "id1": 106,
+      "id2": 117,
+      "name": "Studious Girls"
+    },
+    {
       "id1": 109,
       "id2": 110,
       "name": "Elegant Sisters"
+    },
+    {
+      "id1": 113,
+      "id2": 117,
+      "name": "Smart Innovative Girls"
     }
   ]
 }
