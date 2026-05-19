@@ -2,13 +2,9 @@
   @if (!tournamentWinner) {
     @for (column of columns; track $index) {
       <div class="column">
-        @for (c of column; track c.id; let i = $index) {
+        @for (c of column; track $index; let i = $index) {
           @if (i % 2 === 0) {
-            @if (
-              (column[i] && column[i + 1]) &&
-              !(column[i].id === -1 || column[i].name === 'BYE') &&
-              !(column[i + 1].id === -1 || column[i + 1].name === 'BYE')
-            ) {
+            @if (column[i] && column[i + 1]) {
               <div class="matchup">
                 <div class="character" [class.win]="isWinner(column[i].id)" (click)="toggleWin(column[i].id)">
                   @if (column[i].img) {

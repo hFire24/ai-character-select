@@ -37,7 +37,7 @@ export class Groups implements OnInit {
 
   private initializeGroups() {
     // Define groups with character IDs
-    const groupDefinitions = [
+    const groupDefinitionsWithoutGroupless = [
       {
         name: "Music Enjoyers",
         description: "The official group of Music Enjoyers, based on my own music tastes and playlists",
@@ -49,69 +49,74 @@ export class Groups implements OnInit {
         characterIds: [27, 87, 91, 93, 102]
       },
       {
-        name: "Pretty Little Princesses",
-        description: "A group of little princess-themed characters who are friends with each other and all wear gigantic crowns",
-        characterIds: [19, 46, 72, 106]
-      },
-      {
         name: "Corey's Party",
         description: "Corey and his party members who go on adventures together",
         characterIds: [73, 20, 38, 39, 40]
       },
       {
         name: "The Griffins",
-        description: "Characters who are either part of the Griffin family or closely associated with them",
+        description: "Characters either part of the Griffin family or closely associated with them",
         characterIds: [83, 101, 100, 84]
       },
       {
+        name: "Pretty Little Princesses",
+        description: "A group of little princess-themed characters who are friends with each other and all wear gigantic crowns",
+        characterIds: [19, 46, 72, 106]
+      },
+      {
+        name: "Personality Girls",
+        description: "Eight colorful girls defined by personality types",
+        characterIds: [115, 116, 117, 107, 94, 119, 120, 118]
+      },
+      {
         name: "Top Hat Wearers",
-        description: "Characters who are known for wearing top hats",
+        description: "Characters known for wearing top hats",
         characterIds: [13, 31, 39, 58, 64, 94, 109, 110]
       },
       {
         name: "Witch Hat Wearers",
-        description: "Characters who are known for wearing witch hats",
-        characterIds: [14, 20, 27, 67, 95]
+        description: "Characters known for wearing witch hats",
+        characterIds: [14, 20, 27, 67, 95, 120]
       },
       {
         name: "Peaked Cap Wearers",
-        description: "Characters who are known for wearing peaked caps",
+        description: "Characters known for wearing peaked caps",
         characterIds: [15, 21, 40, 92]
       },
       {
         name: "Other Hat Wearers",
-        description: "Characters who are known for wearing other types of hats",
-        characterIds: [57, 28, 84, 89, 38, 35, 114, 71, 86, 96]
+        description: "Characters known for wearing other types of hats",
+        characterIds: [118, 57, 119, 117, 28, 84, 89, 38, 96, 35, 114, 71, 86, 116]
       },
       {
         name: "Glasses Wearers",
-        description: "Characters who are known for wearing glasses",
-        characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 83, 90, 105]
+        description: "Characters known for wearing glasses, sunglasses, or goggles",
+        characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 60, 83, 90, 105, 113]
       },
       {
         name: "Maids",
-        description: "Characters who are known for wearing maid outfits",
+        description: "Characters known for wearing maid outfits",
         characterIds: [13, 26, 74, 75, 85, 77, 81, 107]
       },
       {
         name: "Twintails",
-        description: "Characters who are known for having long twintails",
+        description: "Characters known for having long twintails",
         characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93]
       },
       {
         name: "Thigh Boot Wearers",
-        description: "Characters who are known for wearing thigh boots",
+        description: "Characters known for wearing thigh boots",
         characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114]
       },
       {
         name: "Pink Girls",
-        description: "Characters who are known for wearing pink or being associated with the color pink",
-        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110]
+        description: "Characters known for wearing pink or being associated with the color pink",
+        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110, 120]
       },
       {
         name: "Blue Girls",
-        description: "Characters who are known for wearing blue or being associated with the color blue",
-        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106]
+        description: "Characters known for wearing blue or being associated with the color blue",
+        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119]
       },
       {
         name: "\"Onii-chan\" Sayers",
@@ -130,17 +135,17 @@ export class Groups implements OnInit {
       },
       {
         name: "Musicians",
-        description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music",
-        characterIds: [51, 75, 76, 96, 103, 109, 114]
+        description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music. Somehow, everyone here is a girl.",
+        characterIds: [51, 75, 76, 96, 103, 109, 114, 118]
       },
       {
         name: "Music Fans",
-        description: "Characters who aren't part of the Music Enjoyers but are still known for loving music",
+        description: "Characters not part of the Music Enjoyers but are still known for loving music",
         characterIds: [31, 47, 57, 62, 63, 73, 84, 105]
       },
       {
         name: "Restaurant Fans",
-        description: "Characters who love eating out at restaurants",
+        description: "Characters who love eating out at restaurants. Somehow, everyone here is a guy.",
         characterIds: [30, 55, 57, 83, 84, 99, 104]
       },
       {
@@ -177,21 +182,45 @@ export class Groups implements OnInit {
         "name": "Generational Last Places",
         "description": "Characters who had the least chats in their respective generations. In cases of ties, the least iconic character is chosen.",
         "characterIds": [17, 20, 23, 32, 38, 50, 56, 71, 81, 96]
+      },
+    ];
+
+    const groupDefinitions = [
+      ...groupDefinitionsWithoutGroupless,
+      {
+        name: "Groupless Characters",
+        description: "Characters not part of any other group",
+        characterIds: this.getGrouplessCharacterIds(this.characters, groupDefinitionsWithoutGroupless)
       }
     ];
 
-    this.groups = groupDefinitions.map((def, index) => ({
-      id: index + 1,
-      name: def.name,
-      description: def.description,
-      characters: def.characterIds
+    this.groups = groupDefinitions.map((def, index) => {
+      const chars = def.characterIds
         .map(id => this.characters.find(c => c.id === id))
-        .filter(c => c !== undefined) as Character[]
-    }));
+        .filter((c): c is Character => c !== undefined);
+
+      if (index === groupDefinitions.length - 1) {
+        chars.sort((a, b) => a.id - b.id);
+      }
+
+      return {
+        id: index + 1,
+        name: def.name,
+        description: def.description,
+        characters: chars
+      };
+    });
   }
 
   assetPath(path: string): string {
     return 'assets/Icons/' + path;
+  }
+
+  private getGrouplessCharacterIds(characters: Character[], groupDefinitions: Array<{characterIds: number[]}>): number[] {
+    const groupedIds = new Set<number>(groupDefinitions.flatMap(def => def.characterIds));
+    return characters
+      .filter(character => !groupedIds.has(character.id))
+      .map(character => character.id);
   }
 
   genClass(generation: number): string {

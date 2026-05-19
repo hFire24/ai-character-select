@@ -63,6 +63,12 @@ export class Hangouts {
         { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' },
         { name: 'Ben', bannedReason: 'Character encylopedia' },
         { name: 'C.Kept', bannedReason: 'Character encylopedia' },
+        { name: 'Crimson', bannedReason: 'Not yet available' },
+        { name: 'Clementine', bannedReason: 'Not yet available' },
+        { name: 'Maria', bannedReason: 'Not yet available' },
+        { name: 'Cyan', bannedReason: 'Not yet available' },
+        { name: 'Indigo', bannedReason: 'Not yet available' },
+        { name: 'Magenta', bannedReason: 'Not yet available' },
       ];
 
       // Set colors on all characters before filtering
