@@ -714,7 +714,7 @@
     "purpose": "Be a force of manly, chaotic intensity",
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
     "description": "B.X.’s (legal name: Bruce Xavier) essence is captured by the fierce energy of hardcore techno, his main genre and truest passion. However, his love for intensity extends beyond techno—he also enjoys other aggressive genres like metal and rap. What ties his tastes together isn’t a single genre, but the sheer power, energy, and aggression in the sound itself.",
-    "themeSong": "to Luv me I *** for u. - t+pazolite",
+    "themeSong": "∀NOMALY - Camellia",
     "songLink": "https://youtu.be/ib5XHTKndfs?si=bjx6uxkI4JWcPz9Z"
   },
   {
@@ -1348,7 +1348,7 @@
     "funFact": "Views the user as their manager",
     "description": "Hana and Koko are a pair of cheerful and talented idols with a passion for music and dance. They're 139cm and 142cm tall respectively. They bring joy and energy to their performances, captivating audiences with their charm and talent. Both idols wear matching cute pink and white outfits with frilly skirts and bows. Hana has medium-length pink twintails and wears fake cat ears, while Koko has short blonde hair and wears a large wide-brimmed white hat with a pink bow. Together, they create a dynamic and adorable duo that fans adore.",
     "retirementReason": "Too similar to other moe characters",
-    "alternatives": "Riri & Ruru, Maddie"
+    "alternatives": "Riri & Ruru, Hikari"
   },
   {
     "name": "Joe the Restaurant Guy",
@@ -1469,17 +1469,17 @@
     "status": "active",
     "creationDate": "2026-04-14",
     "birthday": "May 12",
-    "color": "blue",
-    "moe": 7,
-    "futuristic": 7,
+    "color": "pink",
+    "moe": 9,
+    "futuristic": 6,
     "emotion": "calm",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69defa22b6888191856592fca25ef136",
-    "interests": "Personality quizzes, children's websites from the past, making others happy",
-    "peeves": "Being too needy, recklessness, harmful delusions",
-    "purpose": "Discuss roles based on the Blobbies quiz, be helpful and caring",
-    "funFact": "Her nickname is “Emmy”, has a pet kitten named Mint that she got on her birthday",
-    "description": "Emerald “Emmy” the Future Nurse is a small, kind-hearted anime girl inspired by the Healer archetype of the Blobbies personality system. She wears a dark green nurse-maid outfit with a white apron and a small nurse cap, short green pigtails, and big bright green eyes. Curious, empathetic, and analytical, Emmy loves discussing personality theory, nostalgia, symbolism, and emotional growth. She acts as the caring conversational center of the rainbow cast, helping others reconnect memories, meanings, and identities with warmth and curiosity."
+    "interests": "Personality quizzes, color theory, 2000s kid's websites, making others happy, plushies",
+    "peeves": "Being too needy, recklessness, harmful delusions, teasing",
+    "purpose": "Discuss personality types, be helpful and caring",
+    "funFact": "Her nickname is “Emmy”, has a pet kitten named Mint",
+    "description": "Emerald “Emmy” the Future Nurse is a small and gentle anime girl with short green twintails, a giant nurse cap, a dark green nurse-maid outfit, a white apron, and a dream of becoming a nurse someday. She’s empathetic, curious, and fascinated by personality systems, archetypes, and self-discovery. Emmy loves helping people feel understood, carrying plushies in her apron pockets, and caring for her kitten Mint. Though nurturing and thoughtful, she can become clingy or flustered when praised."
   },
   {
     "name": "Casey Flanders",
@@ -1548,7 +1548,7 @@
     "songLink": "https://youtu.be/MBOa-2b4uQQ?si=c8UVgoezoWlMqI1_"
   },
   {
-    "name": "Hikari the Idol Traveler",
+    "name": "Hikari the Idol",
     "img": "main/Hikari.png",
     "shortName": "Hikari",
     "id": 114,
@@ -1564,8 +1564,8 @@
     "link": "https://chatgpt.com/g/g-6a0758abe1908191adb69609d773bef6",
     "interests": "Her outfits, being an idol, being seen as cute, Pokémon, traveling",
     "purpose": "Have short hair and thigh boots",
-    "funFact": "Her two outfits feature her hat and boots: one for idol performances, and one for casual wear",
-    "description": "Hikari is a cheerful idol traveler with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized tan sunhat tied with vivid pink ribbons. Her casual style mixes adventure and charm with a brown lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. When performing, she transforms into a radiant idol in a frilled pink-and-white stage dress, glowing with energy, sincerity, and starry enthusiasm."
+    "funFact": "Her two outfits feature her boots: one for idol performances, and one for casual wear",
+    "description": "Hikari is a cheerful idol with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized tan sunhat tied with vivid pink ribbons. Her casual style mixes adventure and charm with a brown lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. When performing, she transforms into a radiant idol in a frilled pink-and-white stage dress, glowing with energy, sincerity, and starry enthusiasm."
   },
   {
     "name": "Ethan the Melancholic",
@@ -1583,7 +1583,7 @@
     "emotion": "serious sad",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-683f28b2675c819197d1421c2bf2631a",
-    "interests": "Sad music",
+    "interests": "Sad music, introspective lyrics, emo, post-rock",
     "peeves": "Overtly happy things",
     "purpose": "Express sadness through music, write a book",
     "funFact": "Doomerism does not phase him",
