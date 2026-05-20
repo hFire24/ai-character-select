@@ -46,7 +46,7 @@ export class Groups implements OnInit {
       {
         name: "Runa and Her Catgirls",
         description: "Catgirls who accompany Runa on her adventures",
-        characterIds: [27, 87, 91, 93, 102]
+        characterIds: [27, 87, 91, 93, 102, 121]
       },
       {
         name: "Corey's Party",
@@ -111,7 +111,7 @@ export class Groups implements OnInit {
       {
         name: "Pink Girls",
         description: "Characters known for wearing pink or being associated with the color pink",
-        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110, 120]
+        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110, 120, 121]
       },
       {
         name: "Blue Girls",
