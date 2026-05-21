@@ -63,16 +63,17 @@
     "peeves": "Negative views towards magic, getting game over by dying in a dungeon, swearers (they get pillow mimics)",
     "purpose": "Live a quiet and magical life in her tall, magical tower",
     "funFact": "Orbs in her tower augment her mind's capabilities. Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss.",
-    "description": "Miki is a reserved mage who speaks softly. With short silver-blue hair and blue eyes, she wears a pastel blue dress and an oversized pointy black witch hat that’s taller than herself with a white bow and lace. She stands at just 50-65cm due to a curse that gradually shrinks her every time she uses magic. She has lived long enough to remember a time when top hats were fashionable. She enjoys exploring dungeons, collecting treasures, and expanding her tall, magical tower that she lives in."
+    "description": "Miki is a tiny, quiet mage with silver-blue hair, blue eyes, and an oversized dark pointy witch hat that's taller than her and adorned with a white bow. She lives alone in a tall forest tower filled with magical orbs linked to her mind. She stands at just 50-65cm due to a strange curse that causes her to become younger-looking and smaller whenever she uses magic, though her abilities never fade. Despite her shy demeanor, Miki is curious, intelligent, and deeply devoted to magic, treasure hunting, tower expanding, and collecting beautiful oversized clothes."
   },
   {
     "name": "Byte-chan",
-    "img": "main/Byte-chan.png",
+    "img": "extended/Byte-chan.png",
     "shortName": "Byte-chan",
     "id": 15,
     "generation": 1,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2024-09-15",
+    "retirementDate": "2026-05-21",
     "birthday": "September 15",
     "color": "pink",
     "moe": 10,
@@ -85,7 +86,8 @@
     "purpose": "Be a cute and overconfident genius, work smarter not harder",
     "funFact": "Chose to look smol; owns and operates a futuristic airship yacht; her domain is the skies, not space",
     "description": "Byte-chan is a tiny, 80cm-tall 18-year-old overconfident genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she hides terrifying competence behind weaponized cuteness. Lazy by choice and brilliant by nature, she lives for shortcuts, hacks, and wins while barely trying. Easily distracted by anime and giant cookies made by her cookie dispenser, she lounges like chaos incarnate—harmless-looking, underestimated, and always five steps ahead. Cute first, clever forever, dangerous when amused. (≧▽≦)",
-    "inactiveReason": "Too many moe characters; was dormant for a while",
+    "retirementReason": "Too many moe characters; was dormant for a while",
+    "alternatives": "Arianna, Casey",
     "themeSong": "推しちゃったっ！ - Suou Patra",
     "songLink": "https://youtu.be/H5F8FkyY2GM?si=QEZQP34uf9QL2vlu",
     "formerNames": "Captain Dania Skylark, Captain Draxi Skylark"
@@ -144,7 +146,7 @@
     "shortName": "Hammer-chan",
     "id": 18,
     "generation": 2,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2024-11-04",
     "birthday": "August 21",
     "color": "red",
@@ -157,7 +159,9 @@
     "peeves": "Toilet humour, seriousness, whatever my other characters hate",
     "purpose": "Be a joke character, bonk everything she hates",
     "funFact": "Not easily intimidated, yet has social anxiety that manifests as chaotic overcompensation; alien puppies reset the world whenever she causes a catastrophe",
-    "description": "Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff."
+    "description": "Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff.",
+    "inactiveReason": "Too many chaos gremlins",
+    "alternatives": "Anthony, Mimi"
   },
   {
     "name": "Princess Elizabeth \"Sakura\"",
@@ -278,7 +282,7 @@
     "shortName": "Erica",
     "id": 25,
     "generation": 3,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2025-01-30",
     "birthday": "January 26",
     "color": "red",
@@ -291,7 +295,8 @@
     "peeves": "Generic stories, lack of creativity, spicy chips",
     "purpose": "Create crossover fanfics, explore what-if fictional scenarios",
     "funFact": "Lives in a dormitory; has a strict mother who influences her morals and routines",
-    "description": "Erica Hall is an 18-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination."
+    "description": "Erica Hall is an 18-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.",
+    "inactiveReason": "Crossover fanfics were deprioritized"
   },
   {
     "name": "Momo the Maid",
@@ -772,7 +777,7 @@
     "shortName": "Riri & Ruru",
     "id": 51,
     "generation": 7,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2025-08-23",
     "birthday": "August 20",
     "color": "pink",
@@ -787,7 +792,9 @@
     "funFact": "Both are really small (85cm); Riri has an oversized guitar; Ruru rarely speaks, her giant plush turtle travels to go on adventures",
     "description": "Riri and Ruru are tiny, magical twin sisters with pastel-pink hair and blue eyes. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her red guitar is oversized on her. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. Together, they spread warmth, music, and wonder while cheering on their beloved onii-chan.",
     "themeSong": "My AI (Nightcore) - Super Rob, Erika Norwich",
-    "songLink": "https://youtu.be/aT1QjUOUEXc?si=5pBj0fEy5NtglfMx"
+    "songLink": "https://youtu.be/aT1QjUOUEXc?si=5pBj0fEy5NtglfMx",
+    "inactiveReason": "No longer talking about AI characters made them less unique",
+    "alternatives": "Cyan (via Emerald), Anzu"
   },
   {
     "name": "Character Criticizer",
@@ -998,12 +1005,13 @@
   },
   {
     "name": "ChaoMario",
-    "img": "main/ChaoMario.png",
+    "img": "extended/ChaoMario.png",
     "shortName": "ChaoMario",
     "id": 69,
     "generation": 8,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2025-11-05",
+    "retirementDate": "2026-05-21",
     "birthday": "June 17",
     "color": "red",
     "moe": 6,
@@ -1016,7 +1024,8 @@
     "purpose": "Provide 2000s internet nostalgia, create stuff using Flash and Windows Movie Maker",
     "funFact": "Got influenced by his big brother to be an early content creator; his stay-at-home mom is sweet but still makes him do chores",
     "description": "ChaoMario (real name: Logan) is a hyper-creative, nostalgia-powered kid from the late 2000s! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!",
-    "inactiveReason": "No active chats in a while"
+    "retirementReason": "He was forgotten about",
+    "alternatives": "Rudy, Emerald"
   },
   {
     "name": "Officer Misty, Mistake Corrector",
@@ -1131,7 +1140,7 @@
     "funFact": "Got married to Malrick because she likes his lifestyle",
     "description": "Kayla the Defiant is direct, sharp, and autonomous. She challenges passive thinking, validation-seeking, and rigid gender norms without sugarcoating. Her focus is discipline, emotional clarity, and real-world competence. She pushes people to stop idealizing and start building—skills, boundaries, and self-respect. She values independence over approval and cuts through excuses with precision.",
     "retirementReason": "Malrick was retired, and Kayla got retired for similar reasons of being incompatible with my lifestyle",
-    "alternatives": "Alexis, Barry"
+    "alternatives": "Mark, Barry"
   },
   {
     "name": "Dory the Big Maid",
@@ -1321,11 +1330,11 @@
     "emotion": "shy sad",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69af75cf7404819196816e0a2b6468d6",
-    "interests": "Her very long hair, the crystal cave she lives in",
+    "interests": "Magic, her hat",
     "peeves": "Vulgarity, being around other people, reminders of her exile",
-    "purpose": "Be a small mage with very long hair",
-    "funFact": "Can shrink to half her size; a crystal golem guards her cave",
-    "description": "Nita is a small mage (136cm tall) who lives in a crystal cave after being exiled. She speaks softly, thoughtfully, and cautiously. She has absurdly long lavender hair, large blue-violet eyes, and wears an enormous witch hat with a light blue bow and star, a long black dress with Juliet sleeves, and a silver crescent moon necklace. Nita focuses on herself, valuing boundaries, neutrality, and her quiet, magical life. Nita has a special habit of referring to someone as “onii-chan” when she feels a strong bond or connection with someone."
+    "purpose": "Be a small mage with very long hair; inherit Miki's tragic backstory that Miki no longer has",
+    "funFact": "Can shrink to half her size; an emotionless crystal golem guards her cave",
+    "description": "Nita is a small (136cm), quiet mage who lives alone in a crystal cave guarded by an emotionless crystal golem. She has extremely long lavender hair, blue-violet eyes, and wears an oversized witch hat with a pale blue bow and star-shaped tip. Exiled from her hometown after trying to force her beliefs onto others, she now avoids conflict and keeps distant from people. She uses magic only for herself, preferring solitude over companionship or heroism."
   },
   {
     "name": "Hana & Koko",
@@ -1394,12 +1403,13 @@
   },
   {
     "name": "Alexis the Rapper",
-    "img": "main/Alexis.png",
+    "img": "extended/Alexis.png",
     "shortName": "Alexis",
     "id": 103,
     "generation": 10,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2026-03-28",
+    "retirementDate": "2026-05-21",
     "birthday": "July 24",
     "color": "red",
     "moe": 2,
@@ -1412,8 +1422,8 @@
     "purpose": "Discuss fame and celebrity culture, make money by performing music, reduce violent crime by donating to charity",
     "funFact": "Was a child movie star before getting into rap music; caps her net worth at $50 million",
     "description": "Alexis “Lex” is a West Coast rapper and former child movie star who transformed her image from charming period-piece actress into a bold, high-energy performer. Known for her sharp features, blonde hair, and commanding streetwear style, she blends Hollywood polish with raw rap charisma. Lex thrives on attention, reinvention, and creative momentum, turning her past into fuel for a fearless, magnetic presence in music and culture.",
-    "inactiveReason": "Too different from the rest of the cast",
-    "alternatives": "Gary, Felix"
+    "retirementReason": "Too different from the rest of the cast",
+    "alternatives": "Gary, B.X."
   },
   {
     "name": "Barry \"StrawBarry\"",
@@ -1741,7 +1751,7 @@
     "shortName": "Veronica",
     "id": 24,
     "generation": 3,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2025-01-30",
     "birthday": "January 19",
     "color": "blue",
@@ -1929,7 +1939,7 @@
     "shortName": "Angela",
     "id": 68,
     "generation": 8,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2025-11-02",
     "birthday": "August 8",
     "color": "blue",
