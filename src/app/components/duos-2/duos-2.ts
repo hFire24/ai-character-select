@@ -299,6 +299,11 @@ export class Duos2 implements OnInit {
         "description": "Release Date: May 19, 2026",
         "characterIds": [119, 120]
       },
+      {
+        "name": this.findDuoName(121, 122),
+        "description": "Release Date: May 23, 2026",
+        "characterIds": [121, 122]
+      }
     ];
 
     this.duos = duoDefinitions.map((def, index) => ({

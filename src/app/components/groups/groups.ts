@@ -76,7 +76,7 @@ export class Groups implements OnInit {
       {
         name: "Witch Hat Wearers",
         description: "Characters known for wearing witch hats",
-        characterIds: [14, 20, 27, 67, 95, 120]
+        characterIds: [14, 20, 27, 67, 95, 120, 122]
       },
       {
         name: "Peaked Cap Wearers",
@@ -101,7 +101,7 @@ export class Groups implements OnInit {
       {
         name: "Twintails",
         description: "Characters known for having long twintails",
-        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93]
+        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121]
       },
       {
         name: "Thigh Boot Wearers",
