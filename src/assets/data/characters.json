@@ -59,11 +59,11 @@
     "emotion": "shy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-TUzCNljOj",
-    "interests": "Magic, exploring dungeons, collecting treasure, gorgeous dresses, her gigantic hat “Hat... too big...”",
+    "interests": "Magic, gorgeous dresses, her gigantic hat “Hat... too big...”",
     "peeves": "Negative views towards magic, swearers (they get pillow mimics)",
     "purpose": "Live a quiet and magical life in her tall, magical tower",
     "funFact": "Orbs in her tower augment her mind's capabilities. Every time she uses magic, she age regresses or shrinks extremely slowly. The changes are almost unnoticeable from day to day, but significant over time, similar to weight loss.",
-    "description": "Miki is a tiny, quiet mage with silver-blue hair, blue eyes, and an oversized dark pointy witch hat that's taller than her and adorned with a white bow. She lives alone in a tall forest tower filled with magical orbs linked to her mind. She stands at just 50-65cm due to a strange curse that causes her to become younger-looking and smaller whenever she uses magic, though her abilities never fade. Despite her shy demeanor, Miki is deeply devoted to magic, treasure hunting, tower expanding, and collecting beautiful oversized clothes."
+    "description": "Miki is a tiny, quiet mage with silver-blue hair, blue eyes, and an oversized dark pointy witch hat that's taller than her and adorned with a white bow. She lives alone in a tall forest tower filled with magical orbs linked to her mind. She stands at just 50-65cm due to a strange curse that causes her to become younger-looking and smaller whenever she uses magic, though her abilities never fade. Despite her shy demeanor, Miki is deeply devoted to magic, expanding her tower, and collecting beautiful oversized clothes."
   },
   {
     "name": "Byte-chan",
@@ -87,7 +87,7 @@
     "funFact": "Chose to look smol; owns and operates a futuristic airship yacht; her domain is the skies, not space",
     "description": "Byte-chan is a tiny, 80cm-tall 18-year-old overconfident genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she hides terrifying competence behind weaponized cuteness. Lazy by choice and brilliant by nature, she lives for shortcuts, hacks, and wins while barely trying. Easily distracted by anime and giant cookies made by her cookie dispenser, she lounges like chaos incarnate—harmless-looking, underestimated, and always five steps ahead. Cute first, clever forever, dangerous when amused. (≧▽≦)",
     "retirementReason": "Too many moe characters; was dormant for a while",
-    "alternatives": "Arianna, Casey",
+    "alternatives": "Arianna, Pevba",
     "themeSong": "推しちゃったっ！ - Suou Patra",
     "songLink": "https://youtu.be/H5F8FkyY2GM?si=QEZQP34uf9QL2vlu",
     "formerNames": "Captain Dania Skylark, Captain Draxi Skylark"
@@ -362,7 +362,7 @@
     "funFact": "Her catchphrases are “No! No! No!!!” and “Yes! Yes! Yes!!!”; changed her name mid-crisis using a pop star poster",
     "description": "Neon Starlight is a crimson-eyed magitech girl blazing through Universe City on her high-speed broomstick. She has very long lavender twintails and wears a sleek black outfit with red ribbons, shorts, thigh boots, and a large beret with a bow. Clutched in her hand is a crescent-topped staff embedded with a volatile red orb. She’s blunt, brilliant, and battle-hungry—especially when it comes to cyber-dragons. AURA is her analytical AI that often oversteps in its attempts to “help” in battles or life. Although she's 28 years old, thanks to a magical mishap, she’s stuck at 4'7\" and appears 12. Don’t underestimate her. Ever.",
     "retirementReason": "Angry characters are no longer fun to interact with",
-    "alternatives": "Darxi, Infinitas"
+    "alternatives": "Infinitas, Pevba"
   },
   {
     "name": "Kai Wheeler",
@@ -1597,6 +1597,27 @@
     "description": "Azalea is a cheerful little anime girl with short blonde hair and bright blue eyes who loves make-believe adventures and dressing up in fun costumes. One day she might twirl around in a tall and pointy witch hat casting “magic spells,” and the next she’s a cowgirl shouting “YEEHAW!” in an oversized cowboy hat with pink ribbons. She adores cartoons, silly spooky stories, sparkly imagination, and pretending the world is one giant adventure playground."
   },
   {
+    "name": "Captain Pevba Erzpiratin",
+    "img": "main/Pevba.png",
+    "shortName": "Pevba",
+    "id": 123,
+    "generation": 11,
+    "status": "active",
+    "creationDate": "2026-05-28",
+    "birthday": "June 27",
+    "color": "pink",
+    "moe": 7,
+    "futuristic": 9,
+    "emotion": "chaotic angry",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-6a17d7630ea48191bc77b4539de56514",
+    "interests": "Adventure, collecting treasure, freedom",
+    "peeves": "Her rival Hudson Vanderbilt, being called a \"Fail-piratin\", getting game overs and having x-eyes",
+    "purpose": "Go on adventures; be a tsundere pirate; try not to game over; get as much treasure as possible",
+    "funFact": "Her pirate ship (Azure Tempest) is interdimensional and can travel to different worlds",
+    "description": "Captain Pevba Erzpiratin is a fantasy sci-fi pirate captain with short pale blue hair, bright blue eyes, and a stubborn tsundere attitude. Standing only 145 cm tall, she wears an oversized black pirate hat with a white feather, a long black coat lined in red, a frilled black outfit with crimson accents, and black thigh-high boots with red folds. She captains the interdimensional ship Azure Tempest, chasing treasure, freedom, and adventure across worlds while often stumbling into chaotic, comedic disasters."
+  },
+  {
     "name": "Ethan the Melancholic",
     "img": "extended/Ethan.png",
     "shortName": "Ethan",
@@ -2475,6 +2496,26 @@
     "peeves": "Dishonesty, not being taken seriously",
     "purpose": "Take Runa's hat and wear it to make her look cuter and more attractive",
     "funFact": "Came from a gothic kingdom; wears a black dress"
+  },
+  {
+    "name": "Hudson Vanderbilt",
+    "img": "extended/Hudson.png",
+    "shortName": "Hudson",
+    "id": 124,
+    "generation": 11,
+    "status": "side",
+    "creationDate": "2026-05-28",
+    "birthday": "February 28",
+    "color": "red",
+    "moe": 3,
+    "futuristic": 9,
+    "emotion": "serious cool",
+    "link": "https://chatgpt.com/g/g-6a17d7630ea48191bc77b4539de56514",
+    "interests": "Capitalism, power, money, innovation, prosperity, philanthropy, maintaining his reputation",
+    "peeves": "Pirates, anti-capitalism",
+    "purpose": "Use his money and power for good and innovation",
+    "funFact": "Runs Vanderbilt Commerce; calls Pevba a \"Fail-piratin\"",
+    "description": "Hudson Vanderbilt is a merchant and philanthropist who loves capitalism, innovation, and prosperity. He a tall man who has short dark brown hair, amber eyes, and wears a white suit with a black tie and gold trim. He runs Vanderbilt Commerce, a company that invests in new technologies and supports charitable causes. His ship is called the VCS Endeavor. He believes that power can be used for good. His reputation and image are very positive to most people thanks to his philanthropy."
   },
   {
     "name": "Me",

@@ -86,7 +86,7 @@ export class Groups implements OnInit {
       {
         name: "Other Hat Wearers",
         description: "Characters known for wearing other types of hats",
-        characterIds: [118, 57, 119, 117, 28, 84, 89, 38, 96, 35, 114, 71, 86, 116, 122]
+        characterIds: [118, 57, 119, 117, 28, 84, 89, 38, 96, 35, 114, 71, 86, 116, 122, 123]
       },
       {
         name: "Glasses Wearers",
@@ -106,7 +106,7 @@ export class Groups implements OnInit {
       {
         name: "Thigh Boot Wearers",
         description: "Characters known for wearing thigh boots",
-        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114]
+        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123]
       },
       {
         name: "Pink Girls",
@@ -116,7 +116,7 @@ export class Groups implements OnInit {
       {
         name: "Blue Girls",
         description: "Characters known for wearing blue or being associated with the color blue",
-        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119]
+        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123]
       },
       {
         name: "\"Onii-chan\" Sayers",

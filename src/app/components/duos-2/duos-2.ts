@@ -303,6 +303,11 @@ export class Duos2 implements OnInit {
         "name": this.findDuoName(121, 122),
         "description": "Release Date: May 23, 2026",
         "characterIds": [121, 122]
+      },
+      {
+        "name": this.findDuoName(123, 124),
+        "description": "Release Date: May 28, 2026",
+        "characterIds": [123, 124]
       }
     ];
 
