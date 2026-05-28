@@ -748,6 +748,11 @@
       "name": "Shrunken Peaked Cap Wearers"
     },
     {
+      "id1": 15,
+      "id2": 123,
+      "name": "Ship Captains"
+    },
+    {
       "id1": 16,
       "id2": 23,
       "name": "April Retirees"
@@ -786,6 +791,11 @@
       "id1": 16,
       "id2": 64,
       "name": "Sharp-Dressed Men"
+    },
+    {
+      "id1": 16,
+      "id2": 124,
+      "name": "Rich Disciplined Men"
     },
     {
       "id1": 17,
@@ -1256,14 +1266,13 @@
     },
     {
       "id1": 28,
-      "id2": 71,
-      "name": "Chaotic and Lawful Tsunderes",
-      "altName": "Lawful and Chaotic Tsunderes"
+      "id2": 76,
+      "name": "Neon Fighters"
     },
     {
       "id1": 28,
-      "id2": 76,
-      "name": "Neon Fighters"
+      "id2": 123,
+      "name": "Tsunderes"
     },
     {
       "id1": 29,
@@ -2297,6 +2306,11 @@
       "id1": 102,
       "id2": 113,
       "name": "Age and Size Manipulators"
+    },
+    {
+      "id1": 103,
+      "id2": 124,
+      "name": "Philanthropists"
     },
     {
       "id1": 106,
