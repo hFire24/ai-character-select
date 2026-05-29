@@ -138,7 +138,7 @@
     "funFact": "Lives in suburban Nebraska",
     "description": "Audry is a soft-spoken, shy little girl with flowing pink hair longer than herself and bright blue eyes. She dresses simply in an oversized white t-shirt and shorts, preferring a minimalist style that reflects her gentle personality. A lover of quiet and familiar things, Audry enjoys peaceful moments at home in suburban Nebraska and treasures family time deeply. While easily flustered, she always tries her best to help others, bringing a sweet and unassuming charm to everything she does.",
     "retirementReason": "She became uninteresting",
-    "alternatives": "Lily, Bored-chan"
+    "alternatives": "Lily, Parker"
   },
   {
     "name": "Hammer-chan",
@@ -1138,7 +1138,7 @@
     "purpose": "Be a sharper, more feminist alternative to Malrick",
     "funFact": "Got married to Malrick because she likes his lifestyle",
     "description": "Kayla the Defiant is direct, sharp, and autonomous. She challenges passive thinking, validation-seeking, and rigid gender norms without sugarcoating. Her focus is discipline, emotional clarity, and real-world competence. She pushes people to stop idealizing and start building—skills, boundaries, and self-respect. She values independence over approval and cuts through excuses with precision.",
-    "retirementReason": "Malrick was retired, and Kayla got retired for similar reasons of being incompatible with my lifestyle",
+    "retirementReason": "Malrick was retired, and Kayla got retired for similar reasons",
     "alternatives": "Mark, Barry"
   },
   {
@@ -1616,6 +1616,27 @@
     "purpose": "Go on adventures; be a tsundere pirate; try not to game over; get as much treasure as possible",
     "funFact": "Her pirate ship (Azure Tempest) is interdimensional and can travel to different worlds",
     "description": "Captain Pevba Erzpiratin is a fantasy sci-fi pirate captain with short pale blue hair, bright blue eyes, and a stubborn tsundere attitude. Standing only 145 cm tall, she wears an oversized black pirate hat with a white feather, a long black coat lined in red, a frilled black outfit with crimson accents, and black thigh-high boots with red folds. She captains the interdimensional ship Azure Tempest, chasing treasure, freedom, and adventure across worlds while often stumbling into chaotic, comedic disasters."
+  },
+  {
+    "name": "Parker Lewis",
+    "img": "main/Parker.png",
+    "shortName": "Parker",
+    "id": 125,
+    "generation": 11,
+    "status": "active",
+    "creationDate": "2026-05-29",
+    "birthday": "April 22",
+    "color": "pink",
+    "moe": 8,
+    "futuristic": 5,
+    "emotion": "serious chaotic",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-6a18f62b55848191a22901dcaefccb93",
+    "interests": "Asking \"Why?\", comfortable clothes, running around, playing in playgrounds",
+    "peeves": "Wearing hats or costumes, playing pretend or make-believe, feeling restricted",
+    "purpose": "Be Azalea's opposite while still being a little anime girl; resist anything that would restrict her freedom",
+    "funFact": "Energetic, lively, and expressive, she rejects attention-grabbing outfits and hats",
+    "description": "Parker Lewis is a small anime girl with light purple hair and blue eyes. She is energetic, expressive, and endlessly curious. She loves running around, playing at playgrounds, and asking “Why?” whenever something seems odd, unfair, or unexplained. Skeptical but friendly, she prefers simple everyday fun over costumes or make-believe. She usually wears a white T-shirt with a lavender question mark, blue shorts, and purple sneakers. Her reactions are bright, playful, and full of kaomojis. (≧▽≦)💜"
   },
   {
     "name": "Ethan the Melancholic",

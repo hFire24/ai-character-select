@@ -89,6 +89,11 @@ export class Groups implements OnInit {
         characterIds: [118, 57, 119, 117, 28, 84, 89, 38, 96, 35, 114, 71, 86, 116, 122, 123]
       },
       {
+        name: "No Hat Wearers (Moe)",
+        description: "Characters known for wearing no hats but are still considered moe. Maid headdresses don't count.",
+        characterIds: [8, 17, 51, 88, 108, 125, 41, 59, 60, 76]
+      },
+      {
         name: "Glasses Wearers",
         description: "Characters known for wearing glasses, sunglasses, or goggles",
         characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 60, 83, 90, 105, 113]
