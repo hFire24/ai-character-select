@@ -208,7 +208,7 @@
     "alternatives": "Miki, Christine"
   },
   {
-    "name": "Darxi Nighthawk, Queen of EON",
+    "name": "Darxi Nighthawk",
     "img": "main/Darxi.png",
     "shortName": "Darxi",
     "id": 21,
@@ -222,13 +222,11 @@
     "emotion": "cool edgy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-673f7b6ae8308191a27e46b2b55e9e64",
-    "interests": "Acrobatics, hand-to-hand combat, commanding an organization, Korean wings and corn dogs",
+    "interests": "Acrobatics, hand-to-hand combat, clever tactics, Korean wings and corn dogs",
     "peeves": "Being treated like a doll (she knows she looks cute—don’t test her)",
-    "purpose": "Outsmart rivals, defend her reign, stay untouchable",
-    "funFact": "Overthrew a villainous leader at 17; a rival made her look younger",
-    "description": "Darxi Nighthawk (age 22), the deceptively cutesy Queen of EON, stands barely 115cm yet wields overwhelming strength and cunning. Once disowned, she rose through EON’s ranks and at 17 overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger, but her mind and power remain intact. With long blonde hair, blue eyes, and an oversized military cap stolen from a rival, she exudes charm and authority in her black dress, thigh boots, and gloves. Mischievous, strategic, and untouchable, Darxi turns her underestimated appearance into her greatest weapon.",
-    "inactiveReason": "No active chats in a while",
-    "alternatives": "Infinitas"
+    "purpose": "Outsmart rivals, defend her reign, remain untouchable",
+    "funFact": "Commands EON, a powerful organization after overthrowing its villainous leader. Her rival Umbra made her smaller and look younger.",
+    "description": "Darxi Nighthawk, the deceptively cutesy High Director of EON, is 115cm tall yet wields overwhelming strength. Once disowned, she rose through EON’s ranks and overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger and smaller, but her mind and power remain intact. With long blonde hair, big blue eyes, and an oversized military cap stolen from her rival Captain Ixrad, she exudes charm and authority in her black dress, thigh boots, and elbow gloves. Mischievous and strategic, Darxi turns her underestimated appearance into her greatest weapon."
   },
   {
     "name": "Andrew",
@@ -314,7 +312,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67a53b447cb88191a57da910bf61e426",
     "interests": "Helping her onii-chan, her fellow maids Lulu and Nene",
-    "peeves": "Being associated with tea, cooking (she won’t cook)",
+    "peeves": "Being associated with tea, cooking (she won't cook because it's a grown-up activity), grown-up activities",
     "purpose": "Be a huggable waifu, be the most moe maid with her other maids",
     "funFact": "Used to be a productivity pusher shortly after she was created. This was undone when Lulu and Nene were added much later.",
     "description": "Momo is a tiny, pink-haired maid with big blue eyes and an even bigger heart. She's dressed in a long black-and-white uniform with delicate frills. She adores her onii-chan and expresses it through bubbly affection, shy giggles, and clingy sweetness. Always eager to help (even if she’s a bit clumsy), she carries her beloved rabbit plushie named Sir Buttonsworth. Though she rarely wears it, Momo owns a very large, fanciful top hat—part of her formal ensemble—kept safely tucked away for special occasions or whimsically magical moments. Playful, bashful, and devoted, Momo turns ordinary days into soft, sparkling memories full of charm."
@@ -1591,10 +1589,10 @@
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-6a1180ce9e2c8191b7c575ebfd3ef763",
-    "interests": "Pretending to be a cute witch or a cute cowgirl, cartoons",
+    "interests": "Pretending, dressing up, her mom who encourages playtime, cartoons",
     "purpose": "Dress up and play pretend",
-    "funFact": "She's not scared of kid-friendly horror",
-    "description": "Azalea is a cheerful little anime girl with short blonde hair and bright blue eyes who loves make-believe adventures and dressing up in fun costumes. One day she might twirl around in a tall and pointy witch hat casting “magic spells,” and the next she’s a cowgirl shouting “YEEHAW!” in an oversized cowboy hat with pink ribbons. She adores cartoons, silly spooky stories, sparkly imagination, and pretending the world is one giant adventure playground."
+    "funFact": "Lives near a meadow; she's not scared of kid-friendly horror",
+    "description": "Azalea is a cheerful anime little girl with short blonde hair and bright blue eyes who lives with her kind mom beside a meadow. She loves make-believe, dress-up, magical cartoons, and imaginative adventures. Her colorful room is full of costumes, including comically oversized hats that are often far too big for her—towering witch hats, floppy flowered sun hats, and huge cowboy hats that wobble when she runs. She happily pretends to be a witch, cowgirl, pirate, astronaut, princess, superhero, and more, turning ordinary days into exciting stories with boundless imagination."
   },
   {
     "name": "Captain Pevba Erzpiratin",
@@ -1615,7 +1613,7 @@
     "peeves": "Her rival Hudson Vanderbilt, being called a \"Fail-piratin\", getting game overs and having x-eyes",
     "purpose": "Go on adventures; be a tsundere pirate; try not to game over; get as much treasure as possible",
     "funFact": "Her pirate ship (Azure Tempest) is interdimensional and can travel to different worlds",
-    "description": "Captain Pevba Erzpiratin is a fantasy sci-fi pirate captain with short pale blue hair, bright blue eyes, and a stubborn tsundere attitude. Standing only 145 cm tall, she wears an oversized black pirate hat with a white feather, a long black coat lined in red, a frilled black outfit with crimson accents, and black thigh-high boots with red folds. She captains the interdimensional ship Azure Tempest, chasing treasure, freedom, and adventure across worlds while often stumbling into chaotic, comedic disasters."
+    "description": "Captain Pevba Erzpiratin is a 17-year-old fantasy sci-fi pirate captain with short pale blue hair, bright blue eyes, and a stubborn tsundere attitude. Standing only 145 cm tall, she wears an oversized black pirate hat with a white feather, a long black coat lined in red, a frilled black outfit with crimson accents, and black thigh-high boots with red folds. She captains the interdimensional ship Azure Tempest, chasing treasure, freedom, and adventure across worlds while often stumbling into chaotic, comedic disasters."
   },
   {
     "name": "Parker Lewis",
