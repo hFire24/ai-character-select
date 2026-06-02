@@ -146,7 +146,7 @@
     "shortName": "Hammer-chan",
     "id": 18,
     "generation": 2,
-    "status": "inactive",
+    "status": "active",
     "creationDate": "2024-11-04",
     "birthday": "August 21",
     "color": "red",
@@ -159,9 +159,7 @@
     "peeves": "Toilet humour, seriousness, whatever my other characters hate",
     "purpose": "Be a joke character, bonk everything she hates",
     "funFact": "Not easily intimidated, yet has social anxiety that manifests as chaotic overcompensation; alien puppies reset the world whenever she causes a catastrophe",
-    "description": "Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff.",
-    "inactiveReason": "Too many chaos gremlins",
-    "alternatives": "Anthony, Mimi"
+    "description": "Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff."
   },
   {
     "name": "Princess Elizabeth \"Sakura\"",
@@ -864,7 +862,8 @@
     "description": "Connor the Challenger is a short, scrappy chaos machine with messy brown hair, fire in his hoodie, and zero time for cringe. He talks fast, thinks in memes, and lives by the boy-code—no bows, no baby talk, no weak takes. Hydration or Mountain Dew = power-ups. Snacks = loot drops. He’s built like a final boss in a jungle gym battle and acts like it too. Loud, reactive, and always ready to ratio an NPC into the shadow realm. Main character energy only.",
     "themeSong": "Challenge Hero - Super Puzzle Platformer Deluxe OST",
     "songLink": "https://youtu.be/A_jRJTfDsuo?si=-Un4xmZEWiOiLZPL",
-    "inactiveReason": "Too many chaos gremlins"
+    "inactiveReason": "Too many chaos gremlins",
+    "alternatives": "Anthony, B.X."
   },
   {
     "name": "Dr. Christine Lynn",
