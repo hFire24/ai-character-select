@@ -162,6 +162,8 @@ export class Hangouts {
         {"name": "Innovator", "shortName": "Innovator", "color": "red"} as Character,
         {"name": "Arthur", "shortName": "Arthur", "color": "red"} as Character,
         {"name": "Matthew", "shortName": "Matthew", "color": "red"} as Character,
+        {"name": "Futaba", "shortName": "Futaba", "color": "pink"} as Character,
+        {"name": "Matt Jr.", "shortName": "Matt Jr.", "color": "red"} as Character
       ];
       for (let i = 0; i < bonusCharacters.length; i++) {
         this.allCharacters.push(bonusCharacters[i]);

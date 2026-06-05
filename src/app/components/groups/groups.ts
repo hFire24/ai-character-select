@@ -65,8 +65,8 @@ export class Groups implements OnInit {
       },
       {
         name: "Personality Girls",
-        description: "Eight colorful girls defined by personality types",
-        characterIds: [115, 116, 117, 107, 94, 119, 120, 118]
+        description: "Nine colorful girls defined by personality types",
+        characterIds: [115, 116, 117, 107, 94, 119, 120, 118, 127]
       },
       {
         name: "Top Hat Wearers",
@@ -84,9 +84,9 @@ export class Groups implements OnInit {
         characterIds: [15, 21, 40, 92]
       },
       {
-        name: "Other Hat Wearers",
-        description: "Characters known for wearing other types of hats",
-        characterIds: [118, 57, 119, 117, 28, 84, 89, 38, 96, 35, 114, 71, 86, 116, 122, 123]
+        name: "Other Hat Wearers (Moe)",
+        description: "Characters known for wearing other types of hats and are considered moe.",
+        characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123]
       },
       {
         name: "No Hat Wearers (Moe)",

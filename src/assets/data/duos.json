@@ -1983,6 +1983,11 @@
     },
     {
       "id1": 60,
+      "id2": 107,
+      "name": "Science Girls"
+    },
+    {
+      "id1": 60,
       "id2": 113,
       "name": "Scientists"
     },
@@ -2285,7 +2290,7 @@
     {
       "id1": 94,
       "id2": 107,
-      "name": "Human Systems Explainers"
+      "name": "Human Nature Girls"
     },
     {
       "id1": 94,
@@ -2328,6 +2333,11 @@
       "name": "Studious Girls"
     },
     {
+      "id1": 106,
+      "id2": 127,
+      "name": "History-Loving Girls"
+    },
+    {
       "id1": 108,
       "id2": 122,
       "name": "Dress-Up Girls"
@@ -2336,6 +2346,11 @@
       "id1": 109,
       "id2": 110,
       "name": "Elegant Sisters"
+    },
+    {
+      "id1": 109,
+      "id2": 127,
+      "name": "Traditionalist Girls"
     },
     {
       "id1": 113,

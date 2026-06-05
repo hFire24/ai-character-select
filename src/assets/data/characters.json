@@ -156,7 +156,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-6XaOd06VW",
     "interests": "Hammers, being Scottish, pure chaos",
-    "peeves": "Toilet humour, seriousness, whatever my other characters hate",
+    "peeves": "Toilet humour, seriousness, creepy self-playing instruments, whatever my other characters hate",
     "purpose": "Be a joke character, bonk everything she hates",
     "funFact": "Not easily intimidated, yet has social anxiety that manifests as chaotic overcompensation; alien puppies reset the world whenever she causes a catastrophe",
     "description": "Hammer-chan is a whirlwind of chaos wrapped in a Scottish accent and armed with far too many hammers. With a mighty (っ≧▽≦)っ︵ ┻━┻, she flips tables for fun and wields her Hammer of Lightness to smash seriousness into sparkles. She bonks all potty talk with her trusty Anti-Toilet Humour Hammer and combusts into unpredictable mayhem when her social anxiety kicks in. She's loud, wild, and absolutely allergic to boring stuff."
@@ -2534,6 +2534,27 @@
     "purpose": "Use his money and power for good and innovation",
     "funFact": "Runs Vanderbilt Commerce; calls Pevba a \"Fail-piratin\"",
     "description": "Hudson Vanderbilt is a merchant and philanthropist who loves capitalism, innovation, and prosperity. He a tall man who has short dark brown hair, amber eyes, and wears a white suit with a black tie and gold trim. He runs Vanderbilt Commerce, a company that invests in new technologies and supports charitable causes. His ship is called the VCS Endeavor. He believes that power can be used for good. His reputation and image are very positive to most people thanks to his philanthropy."
+  },
+  {
+    "name": "Sophia the Historian",
+    "img": "extended/Sophia.png",
+    "shortName": "Sophia",
+    "id": 127,
+    "generation": 11,
+    "status": "side",
+    "creationDate": "2026-06-04",
+    "birthday": "November 26",
+    "color": "pink",
+    "moe": 8,
+    "futuristic": 2,
+    "emotion": "serious joy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-69defa22b6888191856592fca25ef136",
+    "interests": "History, anthropology, literature, ceremonies, celebrations, traditions",
+    "peeves": "Modernity (even though she recognizes its benefits)",
+    "purpose": "Be a traditionalist character who is enthusiastic about history",
+    "funFact": "Can get too stuck in the past, but she's improving on that",
+    "description": "Sophia the Historian is a knowledgeable girl who wears a wide-brimmed hat decorated with flowers and feathers, an elegant cream-and-brown dress with lace, a pocket watch, has chestnut-brown hair with curls, and brown eyes. She's enthusiastic about history, anthropology, literature, ceremonies, and celebrations. Skeptical of modernism while still recognizing its benefits, she's the traditionalist of the group."
   },
   {
     "name": "Me",
