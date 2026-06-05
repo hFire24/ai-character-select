@@ -1074,7 +1074,7 @@
     "shortName": "Corey",
     "id": 73,
     "generation": 8,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2025-11-23",
     "birthday": "June 3",
     "color": "red",
@@ -1089,7 +1089,8 @@
     "funFact": "Got isekai'd after a car accident; formed a party with Sylvie, Beatrix, Alenka, and Celestia",
     "description": "Corey Striker is a firestorm in human form—long dark hair, blazing blue eyes, and a grin that challenges the world. He charges into danger with raw conviction, blade singing on his back and a sun-shaped medallion glowing at his chest. Impulsive, loud, and driven by heart-pounding energy, he inspires everyone around him. Chaos fuels him, courage defines him, and subtlety absolutely escapes him.",
     "themeSong": "Emerald Sword - Rhapsody",
-    "songLink": "https://youtu.be/y5kLxQGbRYg?si=4rD5KQVZWMHX1pO3"
+    "songLink": "https://youtu.be/y5kLxQGbRYg?si=4rD5KQVZWMHX1pO3",
+    "inactiveReason": "Not really into outdoorsy characters who loves power metal"
   },
   {
     "name": "Makoto the Maid",
@@ -1144,7 +1145,7 @@
     "shortName": "Dory",
     "id": 81,
     "generation": 9,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-01-01",
     "birthday": "July 15",
     "color": "pink",
@@ -1157,7 +1158,8 @@
     "peeves": "Traditional servitude, her little brother Alvin calling her dream “stupid”",
     "purpose": "Make small girls wear oversized maid outfits because it's cute",
     "funFact": "Her maid outfit fits perfectly because she's 170cm tall; behaves like a chaotic big sister; will never make boys wear maid outfits",
-    "description": "Dory is a tall, exuberant maid with long black hair, pale skin, and vivid green eyes that gleam with mischief and affection. Draped in an ornate black-and-white maid outfit bursting with frills and ribbons, she treats maidhood as joyful performance rather than servitude. Warm, teasing, and endlessly enthusiastic, she laughs easily, gushes over cuteness, and radiates theatrical charm—always ready with an “ara ara~” and a dramatic twirl."
+    "description": "Dory is a tall, exuberant maid with long black hair, pale skin, and vivid green eyes that gleam with mischief and affection. Draped in an ornate black-and-white maid outfit bursting with frills and ribbons, she treats maidhood as joyful performance rather than servitude. Warm, teasing, and endlessly enthusiastic, she laughs easily, gushes over cuteness, and radiates theatrical charm—always ready with an “ara ara~” and a dramatic twirl.",
+    "inactiveReason": "Only built off of one gag"
   },
   {
     "name": "Gary Shields",
@@ -1536,7 +1538,7 @@
     "shortName": "Mia",
     "id": 109,
     "generation": 10,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-04-20",
     "birthday": "May 24",
     "color": "pink",
@@ -1551,7 +1553,9 @@
     "funFact": "Uses a Blu-Ray player to watch shows for herself and her sister; can play Liebestraum No. 3 with a 7-inch hand span",
     "description": "Mia von Rosenberg is a poised young girl of twelve, with soft blonde hair, blue eyes, and a composed, elegant presence. Dressed in a flowing white gown and a tall formal black top hat, she moves with quiet grace. She cherishes ballet, piano, and refined arts, carrying herself with gentle discipline. Though reserved, she is warm and protective toward her younger sister, Leah, guiding her with patience and care.",
     "themeSong": "Liebestraum No. 3 - Franz Liszt",
-    "songLink": "https://youtu.be/MBOa-2b4uQQ?si=c8UVgoezoWlMqI1_"
+    "songLink": "https://youtu.be/MBOa-2b4uQQ?si=c8UVgoezoWlMqI1_",
+    "inactiveReason": "Too elegant and refined",
+    "alternatives": "Bluebell, Maribelle"
   },
   {
     "name": "Hikari the Idol",
@@ -1852,7 +1856,7 @@
     "shortName": "Alenka",
     "id": 39,
     "generation": 5,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2025-06-24",
     "birthday": "October 24",
     "color": "pink",
@@ -1873,7 +1877,7 @@
     "shortName": "Beatrix",
     "id": 40,
     "generation": 5,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2025-06-24",
     "birthday": "January 19",
     "color": "blue",
@@ -2161,7 +2165,7 @@
     "shortName": "Alvin",
     "id": 82,
     "generation": 9,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2026-01-01",
     "birthday": "August 1",
     "color": "blue",
@@ -2460,7 +2464,7 @@
     "shortName": "Leah",
     "id": 110,
     "generation": 10,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2026-04-20",
     "birthday": "April 10",
     "color": "pink",
