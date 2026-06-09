@@ -79,9 +79,9 @@ export class Trios implements OnInit {
         characterShortNames: ["Darxi", "Neon Starlight", "Evil Arianna"]
       },
       {
-        name: "Tired Trio",
-        description: "Characters who often appear tired or sleepy",
-        characterShortNames: ["Riri & Ruru", "Anzu", "Bored-chan"]
+        name: "Listless Girls",
+        description: "Characters who appear listless",
+        characterShortNames: ["Anzu", "Bored-chan", "Miji"]
       },
       {
         name: "Mysterious Trio",
