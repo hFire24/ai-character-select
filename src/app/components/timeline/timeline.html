@@ -1,0 +1,85 @@
+<header class="timeline-header">
+  <h1>Character Timeline</h1>
+  <app-back-button></app-back-button>
+</header>
+
+<section class="timeline-controls">
+  <div class="timeline-summary">
+    <strong>{{ totalCharacters }}</strong>
+    characters across
+    <strong>{{ nodes.length }}</strong>
+    creation dates
+  </div>
+
+  <label class="zoom-control">
+    <span>Zoom</span>
+    <input
+      type="range"
+      min="0.75"
+      max="5"
+      step="0.25"
+      [value]="zoom"
+      (input)="onZoomChange($any($event.target).value)"
+    />
+    <span>{{ zoom }}x</span>
+  </label>
+</section>
+
+<section class="timeline-scroll" *ngIf="nodes.length; else emptyTimeline" (click)="clearActiveNode()">
+  <div
+    class="timeline-canvas"
+    [style.width.px]="timelineWidth"
+    [style.height.px]="getTimelineHeight()"
+  >
+    <div class="timeline-axis"></div>
+
+    <div
+      *ngFor="let marker of yearMarkers"
+      class="year-marker"
+      [style.left.px]="marker.position"
+    >
+      <span>{{ marker.year }}</span>
+    </div>
+
+    <button
+      *ngFor="let node of nodes"
+      type="button"
+      class="timeline-node"
+      [class.active]="isNodeActive(node)"
+      [style.left.px]="node.position"
+      [style.top.px]="axisY"
+      [attr.aria-label]="node.label + ': ' + node.generationLabel + ', ' + node.characters.length + ' character(s)'"
+      (click)="toggleNode(node, $event)"
+    >
+      <span class="node-dot" [ngClass]="node.generationClass"></span>
+
+      <span
+        class="node-tooltip"
+        [class.align-left]="node.popupAlignment === 'left'"
+        [class.align-right]="node.popupAlignment === 'right'"
+        (click)="$event.stopPropagation()"
+      >
+        <strong>{{ node.label }}</strong>
+        <span class="generation-label">{{ node.generationLabel }}</span>
+        <span
+          *ngFor="let character of node.characters"
+          class="tooltip-character"
+          (click)="openCharacter(character); $event.stopPropagation()"
+        >
+          <img [src]="'assets/Icons/' + character.img" [alt]="character.shortName" />
+          <span>{{ character.shortName }}</span>
+        </span>
+      </span>
+    </button>
+  </div>
+</section>
+
+<ng-template #emptyTimeline>
+  <p class="empty-state">No creation dates found.</p>
+</ng-template>
+
+<app-character-modal
+  *ngIf="selectedCharacter"
+  [character]="selectedCharacter"
+  (close)="closeCharacterModal()"
+></app-character-modal>

@@ -313,6 +313,11 @@ export class Duos2 implements OnInit {
         "name": this.findDuoName(121, 127),
         "description": "Release Date: June 5, 2026",
         "characterIds": [121, 127]
+      },
+      {
+        "name": "Big Sisters Expansion Pack",
+        "description": "Release Date: June 10, 2026",
+        "characterIds": [129, 130]
       }
     ];
 

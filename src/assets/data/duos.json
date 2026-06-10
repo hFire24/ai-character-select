@@ -1073,6 +1073,11 @@
       "name": "Bad Blondes"
     },
     {
+      "id1": 21,
+      "id2": 108,
+      "name": "Honey Butter Chips Fans"
+    },
+    {
       "id1": 22,
       "id2": 23,
       "name": "Fanboy and Hero",
@@ -1242,6 +1247,11 @@
       "id1": 27,
       "id2": 86,
       "name": "Touhou Fans"
+    },
+    {
+      "id1": 27,
+      "id2": 129,
+      "name": "Blonde Twintailed Witches"
     },
     {
       "id1": 28,
@@ -1414,6 +1424,11 @@
     },
     {
       "id1": 32,
+      "id2": 128,
+      "name": "Fat Duo"
+    },
+    {
+      "id1": 32,
       "id2": 999,
       "name": "My Future: Bad Ending"
     },
@@ -1456,6 +1471,11 @@
       "id1": 35,
       "id2": 46,
       "name": "Ultra Cute Joke Characters"
+    },
+    {
+      "id1": 35,
+      "id2": 52,
+      "name": "Beloved Little Sisters"
     },
     {
       "id1": 35,
@@ -2088,6 +2108,11 @@
       "name": "Dreamy Pink Witches"
     },
     {
+      "id1": 67,
+      "id2": 128,
+      "name": "Lazy Duo"
+    },
+    {
       "id1": 68,
       "id2": 90,
       "name": "German Board Game Fans"
@@ -2164,6 +2189,11 @@
     },
     {
       "id1": 74,
+      "id2": 77,
+      "name": "Dedicated Maids"
+    },
+    {
+      "id1": 74,
       "id2": 85,
       "name": "Calm Maids"
     },
@@ -2201,11 +2231,6 @@
       "id1": 81,
       "id2": 104,
       "name": "Cuteness Enjoyers"
-    },
-    {
-      "id1": 81,
-      "id2": 119,
-      "name": "Costume Makers"
     },
     {
       "id1": 82,
@@ -2303,9 +2328,9 @@
       "name": "Cute Idol Duo"
     },
     {
-      "id1": 98,
-      "id2": 114,
-      "name": "Idols with Hats"
+      "id1": 97,
+      "id2": 121,
+      "name": "Pink-Haired Catgirls"
     },
     {
       "id1": 99,
@@ -2356,6 +2381,21 @@
       "id1": 113,
       "id2": 117,
       "name": "Smart Innovative Girls"
+    },
+    {
+      "id1": 119,
+      "id2": 129,
+      "name": "Costume Makers"
+    },
+    {
+      "id1": 122,
+      "id2": 129,
+      "name": "Dress-Up Sisters"
+    },
+    {
+      "id1": 125,
+      "id2": 130,
+      "name": "Curious Sisters"
     }
   ]
 }

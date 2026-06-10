@@ -64,14 +64,34 @@
         title="See who inspired who in character creation">
         Lineage
       </button>
+      <button
+        *ngIf="!isMobile()"
+        routerLink="timeline"
+        routerLinkActive="active"
+        title="View the timeline of character creation">
+        Timeline
+      </button>
     </div>
     <div class="activities-group">
       <h4>Other Activities</h4>
       <button
-        routerLink="story-helper"
+        routerLink="stats"
         routerLinkActive="active"
-        title="Enhance your story prompts with this tool">
-        Story Helper
+        title="View statistics about your character roster">
+        Stats
+      </button>
+      <button
+        *ngIf="!isMobile()"
+        routerLink="manage-tiers"
+        routerLinkActive="active"
+        title="Manage and customize your tier rankings">
+        Manage Tiers
+      </button>
+      <button
+        routerLink="hangouts"
+        routerLinkActive="active"
+        title="Generate randomized groups for hangouts">
+        Hangouts
       </button>
       <button
         routerLink="spin-the-wheel"
@@ -80,16 +100,10 @@
         Random Picker
       </button>
       <button
-        routerLink="stats"
+        routerLink="story-helper"
         routerLinkActive="active"
-        title="View statistics about your character roster">
-        Stats
-      </button>
-      <button
-        routerLink="hangouts"
-        routerLinkActive="active"
-        title="Generate randomized groups for hangouts">
-        Hangouts
+        title="Enhance your story prompts with this tool">
+        Story Helper
       </button>
       <button disabled title="Coming soon - Personality Quizzes">Quizzes</button>
     </div>

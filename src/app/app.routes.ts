@@ -18,6 +18,7 @@ import { Lineage } from './components/lineage/lineage';
 import { IdChecker } from './components/id-checker/id-checker';
 import { Announcement } from './components/announcement/announcement';
 import { ManageTiers } from './components/manage-tiers/manage-tiers';
+import { Timeline } from './components/timeline/timeline';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
@@ -28,6 +29,7 @@ export const routes: Routes = [
   { path: 'duos-2', component: Duos2, title: 'View Duos' },
   { path: 'trios', component: Trios, title: 'Hall of Trios' },
   { path: 'birthday-calendar', component: BirthdayCalendar, title: 'Birthday Calendar' },
+  { path: 'timeline', component: Timeline, title: 'Character Timeline' },
   { path: 'tournament', component: Tournament, title: 'Tournament Bracket' },
   { path: 'story-helper', component: StoryHelper, title: 'Story Helper' },
   { path: 'sorter', component: Sorter, title: 'Character Sorter' },

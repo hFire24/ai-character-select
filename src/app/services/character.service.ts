@@ -255,10 +255,11 @@ export class CharacterService {
               name: 'Riri the Nightcore Girl',
               img: "extended/Riri.png",
               id: 52,
-              interests: "Adventures, Nightcore music",
+              interests: "Nightcore music, her red electric guitar that's bigger than her",
               peeves: "Guitar strings breaking",
-              funFact: "She is really small (85cm) and has an oversized guitar",
-              description: "Riri is a tiny, magical twin sister with pastel-pink hair. Riri is energetic and bold, with twin tails, bows, a white dress, and a red electric guitar that looks huge in her hands—yet she rocks it with dazzling charm. Her guitar has summoning magic, calling forth friends with every melody. With her sleepy sister Ruru, they spread warmth, music, and wonder while cheering on their beloved onii-chan."
+              purpose: "Love her onii-chan as a twin sister",
+              funFact: "She is really small (85cm) and has an oversized electric guitar",
+              description: "Riri is a tiny twin sister with pastel-pink hair and blue eyes. Riri is hyperactive, with thin twin tails, a slim build, a white dress, and a red electric guitar larger than she is. Riri is enthusiastic about nightcore music. With her sleepy sister Ruru, they love their onii-chan so much."
             },
             { 
               ...original,
@@ -267,11 +268,11 @@ export class CharacterService {
               img: "extended/Ruru.png",
               id: 53,
               emotion: "tired",
-              interests: "Adventures, naps",
+              interests: "Naps, her giant plush turtle",
               peeves: "Disruptions during nap time",
-              purpose: "Adorably discuss and celebrate my AI characters",
-              funFact: "She is really small (85cm) and rarely speaks; her giant plush turtle travels to go on adventures",
-              description: "Ruru is a tiny, magical twin sister with pastel-pink hair. Ruru is gentle and shy, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. With her energetic sister Riri, they spread warmth, music, and wonder while cheering on their beloved onii-chan.",
+              purpose: "Love her onii-chan as a twin sister",
+              funFact: "She is really small (85cm) and rarely speaks; her giant plush turtle travels across dimentions",
+              description: "Ruru is a tiny twin sister with very long pastel-pink hair and blue eyes. Ruru is sleepy and gentle, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. With her hyperactive sister Riri, they love their onii-chan so much.",
               themeSong: "",
               songLink: ""
             }

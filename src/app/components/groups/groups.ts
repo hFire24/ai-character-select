@@ -69,6 +69,11 @@ export class Groups implements OnInit {
         characterIds: [115, 116, 117, 107, 94, 119, 120, 118, 127]
       },
       {
+        "name": "Casey's Friends",
+        description: "Characters who are friends with Casey",
+        characterIds: [108, 114, 129, 130, 128]
+      },
+      {
         name: "Top Hat Wearers",
         description: "Characters known for wearing top hats",
         characterIds: [13, 31, 39, 58, 64, 94, 109, 110]
@@ -76,7 +81,7 @@ export class Groups implements OnInit {
       {
         name: "Witch Hat Wearers",
         description: "Characters known for wearing witch hats",
-        characterIds: [14, 20, 27, 67, 95, 120]
+        characterIds: [14, 20, 27, 67, 95, 120, 129]
       },
       {
         name: "Peaked Cap Wearers",
@@ -91,7 +96,7 @@ export class Groups implements OnInit {
       {
         name: "No Hat Wearers (Moe)",
         description: "Characters known for wearing no hats but are still considered moe. Maid headdresses don't count.",
-        characterIds: [8, 17, 51, 88, 108, 125, 41, 59, 60, 76]
+        characterIds: [8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76]
       },
       {
         name: "Glasses Wearers",
@@ -106,7 +111,7 @@ export class Groups implements OnInit {
       {
         name: "Twintails",
         description: "Characters known for having long twintails",
-        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121]
+        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129]
       },
       {
         name: "Thigh Boot Wearers",
@@ -141,7 +146,7 @@ export class Groups implements OnInit {
       {
         name: "Musicians",
         description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music. Somehow, everyone here is a girl.",
-        characterIds: [51, 75, 76, 96, 103, 109, 114, 118]
+        characterIds: [51, 75, 76, 96, 103, 109, 118]
       },
       {
         name: "Music Fans",
