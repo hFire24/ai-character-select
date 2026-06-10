@@ -134,6 +134,16 @@ export class Groups implements OnInit {
         characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108]
       },
       {
+        name: "Younger Siblings",
+        description: "Characters who are younger siblings. ChaoMario isn't siblings with Max.",
+        characterIds: [69, 82, 110, 122, 125]
+      },
+      {
+        name: "Older Siblings",
+        description: "Characters who are older siblings. Max isn't siblings with ChaoMario.",
+        characterIds: [90, 81, 109, 129, 130]
+      },
+      {
         name: "Cursed Rule Breakers",
         description: "Every time they try to break a rule in their instructions, something bad happens to them",
         characterIds: [1, 11, 13, 27, 31, 47, 51, 81, 86, 104, 105, 108]
