@@ -156,14 +156,14 @@ export class Hangouts {
       }
 
       const bonusCharacters = [
-        {"name": "Guardian", "shortName": "Guardian", "color": "red"} as Character,
-        {"name": "Heartbound", "shortName": "Heartbound", "color": "red"} as Character,
-        {"name": "Motivator", "shortName": "Motivator", "color": "red"} as Character,
-        {"name": "Innovator", "shortName": "Innovator", "color": "red"} as Character,
-        {"name": "Arthur", "shortName": "Arthur", "color": "red"} as Character,
-        {"name": "Matthew", "shortName": "Matthew", "color": "red"} as Character,
-        {"name": "Futaba", "shortName": "Futaba", "color": "pink"} as Character,
-        {"name": "Matt Jr.", "shortName": "Matt Jr.", "color": "red"} as Character
+        {"id": 1001, "name": "Guardian", "shortName": "Guardian", "color": "red"} as Character,
+        {"id": 1002, "name": "Heartbound", "shortName": "Heartbound", "color": "red"} as Character,
+        {"id": 1003, "name": "Motivator", "shortName": "Motivator", "color": "red"} as Character,
+        {"id": 1004, "name": "Innovator", "shortName": "Innovator", "color": "red"} as Character,
+        {"id": 1005, "name": "Arthur", "shortName": "Arthur", "color": "red"} as Character,
+        {"id": 1006, "name": "Matthew", "shortName": "Matthew", "color": "red"} as Character,
+        {"id": 1007, "name": "Futaba", "shortName": "Futaba", "color": "pink"} as Character,
+        {"id": 1008, "name": "Matt Jr.", "shortName": "Matt Jr.", "color": "red"} as Character
       ];
       for (let i = 0; i < bonusCharacters.length; i++) {
         this.allCharacters.push(bonusCharacters[i]);
