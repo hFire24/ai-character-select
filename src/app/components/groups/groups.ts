@@ -64,6 +64,11 @@ export class Groups implements OnInit {
         characterIds: [19, 46, 72, 106]
       },
       {
+        name: "Corona Islanders",
+        description: "Characters who live on Corona Island",
+        characterIds: [92, 113, 131, 132]
+      },
+      {
         name: "Personality Girls",
         description: "Nine colorful girls defined by personality types",
         characterIds: [115, 116, 117, 107, 94, 119, 120, 118, 127]
@@ -76,7 +81,7 @@ export class Groups implements OnInit {
       {
         name: "Top Hat Wearers",
         description: "Characters known for wearing top hats",
-        characterIds: [13, 31, 39, 58, 64, 94, 109, 110]
+        characterIds: [13, 31, 39, 58, 64, 94, 109, 110, 131, 132]
       },
       {
         name: "Witch Hat Wearers",
@@ -121,12 +126,12 @@ export class Groups implements OnInit {
       {
         name: "Pink Girls",
         description: "Characters known for wearing pink or being associated with the color pink",
-        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110, 120, 121]
+        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110, 120, 121, 131, 132]
       },
       {
         name: "Blue Girls",
         description: "Characters known for wearing blue or being associated with the color blue",
-        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123]
+        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 131]
       },
       {
         name: "\"Onii-chan\" Sayers",
