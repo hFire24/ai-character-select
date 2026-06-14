@@ -131,7 +131,7 @@ export class Groups implements OnInit {
       {
         name: "Blue Girls",
         description: "Characters known for wearing blue or being associated with the color blue",
-        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 131]
+        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 132]
       },
       {
         name: "\"Onii-chan\" Sayers",
@@ -174,29 +174,39 @@ export class Groups implements OnInit {
         characterIds: [30, 55, 57, 83, 84, 99, 104]
       },
       {
+        name: "Character Encyclopedias",
+        description: "Characters who have access to my character roster file and can discuss about my characters in detail",
+        characterIds: [49, 52, 66, 104]
+      },
+      {
         name: "Anti-Moe Crew",
         description: "Chaotic or hedonistic characters who reject moe",
         characterIds: [1, 62, 63, 55, 12, 105, 64, 83, 84, 100, 18]
       },
       {
         name: "Anti-Escapists",
-        description: "A group of characters who embody the opposite of escapism",
-        characterIds: [36, 78, 52, 9, 48, 50]
-      },
-      {
-        name: "Character Encyclopedias",
-        description: "Characters who have access to my character roster file and can discuss about my characters in detail",
-        characterIds: [49, 52, 66, 104]
-      },
-      {
-        name: "Late Bloomers",
-        description: "Characters who had initial appearances before July 13, 2024 but became their own chatbots much later",
-        characterIds: [29, 110, 109, 24, 25, 28, 57]
+        description: "A group of characters who embody the opposite of escapism. With the exception of Mark, they will never get unretired.",
+        characterIds: [16, 36, 78, 52, 9, 48, 50]
       },
       {
         name: "Retired Five",
         description: "Five of the earliest retired characters who will never get unretired. Elizabeth got a miraculous unretirement in 2026 and left the group.",
         characterIds: [16, 17, 20, 22, 23]
+      },
+      {
+        name: "Multi-Retirees",
+        description: "Characters who were retired twice or more. Kai was retired three times.",
+        characterIds: [30, 32, 48, 49, 66, 69, 71]
+      },
+      {
+        name: "May 2026 Retirees",
+        description: "Characters who retired in May 2026",
+        characterIds: [54, 36, 78, 28, 96, 15, 69, 103]
+      },
+      {
+        name: "Late Bloomers",
+        description: "Characters who had initial appearances before July 13, 2024 but became their own chatbots much later",
+        characterIds: [29, 110, 109, 24, 25, 28, 57]
       },
       {
         name: "Generational Champions",
