@@ -32,9 +32,9 @@ export class CharacterGrid {
       
       this.characterService.getChatGPT().subscribe(chatGPTCharacter => {
         if (Array.isArray(chatGPTCharacter)) {
-          this.characters.push(...chatGPTCharacter);
+          this.characters.unshift(...chatGPTCharacter);
         } else {
-          this.characters.push(chatGPTCharacter);
+          this.characters.unshift(chatGPTCharacter);
         }
       });
       
