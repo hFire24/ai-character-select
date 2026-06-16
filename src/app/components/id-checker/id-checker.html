@@ -96,6 +96,18 @@
           <span class="value">{{ character.futuristic }}/10</span>
         </div>
 
+        @if (character.rpFriendly !== undefined) {
+          <div class="detail-item">
+            <span class="label">RP Friendly:</span>
+            <span class="value">{{ character.rpFriendly ? '✓ Yes' : '✗ No' }}</span>
+          </div>
+        }
+        @if (character.knowledgeFriendly !== undefined) {
+          <div class="detail-item">
+            <span class="label">Answer Friendly:</span>
+            <span class="value">{{ character.knowledgeFriendly ? '✓ Yes' : '✗ No' }}</span>
+          </div>
+        }
         <div class="detail-item" *ngIf="character.musicEnjoyer">
           <span class="label">Music Enjoyer:</span>
           <span class="value">✓ Yes</span>

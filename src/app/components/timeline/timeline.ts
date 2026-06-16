@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Character, CharacterService } from '../../services/character.service';
 import { BackButton } from '../back-button/back-button';
@@ -23,12 +23,14 @@ interface TimelineNode {
   templateUrl: './timeline.html',
   styleUrl: './timeline.scss'
 })
-export class Timeline implements OnInit {
+export class Timeline implements OnInit, AfterViewInit {
+  @ViewChild('timelineScroll') private timelineScroll?: ElementRef<HTMLElement>;
+
   nodes: TimelineNode[] = [];
   yearMarkers: { year: number; position: number }[] = [];
   selectedCharacter: Character | null = null;
   activeNodeKey: string | null = null;
-  zoom = 1;
+  zoom = 5;
   timelineWidth = 900;
   totalCharacters = 0;
   startDate: Date | null = null;
@@ -45,6 +47,10 @@ export class Timeline implements OnInit {
 
   ngOnInit() {
     this.loadCharacters();
+  }
+
+  ngAfterViewInit() {
+    this.scheduleScrollToRight();
   }
 
   loadCharacters() {
@@ -75,12 +81,15 @@ export class Timeline implements OnInit {
       this.startDate = sortedGroups[0].date;
       this.endDate = sortedGroups[sortedGroups.length - 1].date;
       this.buildTimeline(sortedGroups);
+      this.scheduleScrollToRight();
     });
   }
 
   onZoomChange(value: string) {
+    const rightOffset = this.getRightScrollOffset();
     this.zoom = Number(value);
     this.recalculateTimeline();
+    this.scheduleScrollToRightOffset(rightOffset);
   }
 
   openCharacter(character: Character) {
@@ -118,6 +127,32 @@ export class Timeline implements OnInit {
     }));
 
     this.buildTimeline(groups);
+  }
+
+  private getRightScrollOffset(): number {
+    const scrollElement = this.timelineScroll?.nativeElement;
+    if (!scrollElement) return 0;
+
+    return Math.max(
+      0,
+      scrollElement.scrollWidth - scrollElement.clientWidth - scrollElement.scrollLeft
+    );
+  }
+
+  private scheduleScrollToRight() {
+    this.scheduleScrollToRightOffset(0);
+  }
+
+  private scheduleScrollToRightOffset(rightOffset: number) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const scrollElement = this.timelineScroll?.nativeElement;
+        if (!scrollElement) return;
+
+        const maxScrollLeft = Math.max(0, scrollElement.scrollWidth - scrollElement.clientWidth);
+        scrollElement.scrollLeft = Math.max(0, maxScrollLeft - rightOffset);
+      });
+    });
   }
 
   private buildTimeline(groups: { date: Date; dateKey: string; characters: Character[] }[]) {

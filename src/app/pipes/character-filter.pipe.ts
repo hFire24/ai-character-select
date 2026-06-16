@@ -27,8 +27,11 @@ export interface CharacterFilterOptions {
     future?: boolean;
   };
   
-  // RP friendly filter (only pink and red characters)
+  // RP friendly filter
   rpFriendly?: boolean;
+  
+  // Question friendly filter
+  knowledgeFriendly?: boolean;
   
   // Tier filters
   tier?: {
@@ -45,6 +48,8 @@ export interface CharacterFilterOptions {
     colors?: string[];   // e.g., ['pink', 'blue', 'red']
     pronouns?: string[]; // e.g., ['he/him', 'she/her']
     musicEnjoyer?: boolean | null; // true = only music enjoyers, false = exclude music enjoyers, null = all
+    rpFriendly?: boolean | null; // true = only RP friendly, false = exclude RP friendly, null = all
+    knowledgeFriendly?: boolean | null; // true = only knowledge friendly, false = exclude knowledge friendly, null = all
   };
   
   // Exclusions
@@ -166,9 +171,16 @@ export class CharacterFilterPipe implements PipeTransform {
         if (!statusMatch) return false;
       }
 
-      // RP Friendly filter (only pink and red characters)
+      // RP Friendly filter
       if (options.rpFriendly === true) {
-        if (character.color !== 'pink' && character.color !== 'red') {
+        if (character.rpFriendly !== true) {
+          return false;
+        }
+      }
+
+      // Question Friendly filter
+      if (options.knowledgeFriendly === true) {
+        if (character.knowledgeFriendly !== true) {
           return false;
         }
       }
@@ -261,6 +273,18 @@ export class CharacterFilterPipe implements PipeTransform {
     if (attrs.musicEnjoyer !== undefined && attrs.musicEnjoyer !== null) {
       if (attrs.musicEnjoyer && !character.musicEnjoyer) return false;
       if (!attrs.musicEnjoyer && character.musicEnjoyer) return false;
+    }
+
+    // RP friendly filter
+    if (attrs.rpFriendly !== undefined && attrs.rpFriendly !== null) {
+      if (attrs.rpFriendly && !character.rpFriendly) return false;
+      if (!attrs.rpFriendly && character.rpFriendly) return false;
+    }
+
+    // Knowledge friendly filter
+    if (attrs.knowledgeFriendly !== undefined && attrs.knowledgeFriendly !== null) {
+      if (attrs.knowledgeFriendly && !character.knowledgeFriendly) return false;
+      if (!attrs.knowledgeFriendly && character.knowledgeFriendly) return false;
     }
 
     return true;

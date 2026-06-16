@@ -7,6 +7,8 @@ import { Router } from "@angular/router";
 import { DeviceService } from "../../services/device.service";
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 
+type FriendlinessFilter = 'all' | 'rp' | 'knowledge' | 'both';
+
 @Component({
   selector: "app-spin-the-wheel",
   templateUrl: "./spin-the-wheel.html",
@@ -41,16 +43,13 @@ export class SpinTheWheel {
   tierMin: number = 1;
   tierMax: number = 9;
   
-  // Color filters
-  selectedColors: string[] = ['red', 'pink', 'blue', 'black'];
-  availableColors = ['red', 'pink', 'blue', 'black'];
-  
   // Pronoun/Gender filters
   selectedPronouns: string[] = ['he/him', 'she/her', 'it/its', "don’t care"];
   availablePronouns = ['he/him', 'she/her', 'it/its', "don’t care"];
   
   // Chat filter
   hasChatOnly: boolean = false;
+  friendlinessFilter: FriendlinessFilter = 'all';
 
   constructor(
     private characterService: CharacterService,
@@ -72,33 +71,16 @@ export class SpinTheWheel {
         max: this.maxTier
       },
       attributes: {
-        colors: this.selectedColors.length > 0 ? this.selectedColors : undefined,
         pronouns: this.selectedPronouns.length > 0 ? this.selectedPronouns : undefined
       },
+      rpFriendly: this.friendlinessFilter === 'rp' || this.friendlinessFilter === 'both' ? true : undefined,
+      knowledgeFriendly: this.friendlinessFilter === 'knowledge' || this.friendlinessFilter === 'both' ? true : undefined,
       customFilter: this.hasChatOnly ? (char: Character) => !!char.link : undefined
     };
   }
 
   onSplitTwinsChange() {
     this.loadCharacters();
-  }
-
-  // Color selection helpers
-  toggleAllColors() {
-    if (this.selectedColors.length === this.availableColors.length) {
-      this.selectedColors = [];
-    } else {
-      this.selectedColors = [...this.availableColors];
-    }
-  }
-
-  toggleColor(color: string) {
-    const index = this.selectedColors.indexOf(color);
-    if (index > -1) {
-      this.selectedColors.splice(index, 1);
-    } else {
-      this.selectedColors.push(color);
-    }
   }
 
   // Pronoun selection helpers

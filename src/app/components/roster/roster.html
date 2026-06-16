@@ -16,8 +16,9 @@
 
   <div class="button-container">
     <button (click)="goToStats()" class="show-stats-btn">📊 Show Stats</button>
-    <button (click)="selectRandomCharacter(true)" style="background-color: #FF4C4C;">⚔️ Random Character (RP Friendly)</button>
-    <button (click)="selectRandomCharacter(false)">🎲 Random Character (All)</button>
+    <button (click)="selectRandomCharacter(true, false)" style="background-color: #FF4C4C;">⚔️ Random Character (RP Friendly)</button>
+    <button (click)="selectRandomCharacter(false, true)" style="background-color: #3B4CCA;">🧠 Random Character (For Answers)</button>
+    <button (click)="selectRandomCharacter(true, true)">🎲 Random Character (All)</button>
   </div>
 </header>
 <app-character-grid

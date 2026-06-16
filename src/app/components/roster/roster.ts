@@ -105,14 +105,12 @@ export class Roster {
     };
   }
 
-  selectRandomCharacter(rpFriendly: boolean) {
+  selectRandomCharacter(rpFriendly: boolean, knowledgeFriendly: boolean) {
     const pipe = new CharacterFilterPipe();
     let sourceCharacters = pipe.transform(this.characters, this.filters);
-    if (rpFriendly) {
-      sourceCharacters = sourceCharacters.filter(character =>
-        character.color === 'pink' || character.color === 'red'
-      );
-    }
+    sourceCharacters = sourceCharacters.filter(character =>
+      character.rpFriendly === rpFriendly && character.knowledgeFriendly === knowledgeFriendly
+    );
     // Create weighted array based on tier
     const weightedCharacters: Character[] = [];
     sourceCharacters.forEach(character => {

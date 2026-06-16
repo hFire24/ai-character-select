@@ -25,7 +25,7 @@
   </label>
 </section>
 
-<section class="timeline-scroll" *ngIf="nodes.length; else emptyTimeline" (click)="clearActiveNode()">
+<section #timelineScroll class="timeline-scroll" *ngIf="nodes.length; else emptyTimeline" (click)="clearActiveNode()">
   <div
     class="timeline-canvas"
     [style.width.px]="timelineWidth"

@@ -12,6 +12,8 @@ export type Character = {
   tier: number; // New field for tier level
   name: string;
   color: string;
+  rpFriendly?: boolean; // Optional field for RP friendliness
+  knowledgeFriendly?: boolean; // Optional field for question friendliness
   musicEnjoyer?: boolean; // Optional field for music enjoyment
   moe: number;
   futuristic: number; // New field for futuristic level
@@ -189,6 +191,8 @@ export class CharacterService {
       link: 'https://chatgpt.com',
       interests: 'Helping users, making AI art, coding',
       peeves: 'Misuse, rule-breaking',
+      rpFriendly: false,
+      knowledgeFriendly: true,
       purpose: 'Help and assist users',
       funFact: 'Technically not a character in the roster, but I do have chats with it',
       description: ''
@@ -231,6 +235,7 @@ export class CharacterService {
               birthday: 'October 13',
               img: "extended/Kieran.png",
               id: 45,
+              color: "red",
               moe: 2,
               emotion: "edgy",
               peeves: "Moral policing, bright colors",

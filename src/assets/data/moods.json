@@ -1,6 +1,6 @@
 [
   { "name": "RP Friendly", "emoji": "⚔️", "arg": "rp", "color":"#FF4C4C", "description": "These characters are great for role-playing interactions." },
-  { "name": "Not RP Friendly", "emoji": "🔵", "arg": "blue", "color":"#3B4CCA", "description": "Characters who weren't designed for role-playing interactions." },
+  { "name": "Knowledge Friendly", "emoji": "🧠", "arg": "knowledge", "color":"#3B4CCA", "description": "Characters who are designed for answering questions." },
   { "name": "Futuristic", "emoji": "🤖", "arg": "futuristic", "color":"#34495e", "description": "They live in the future, engage with cutting-edge technology, or embrace futuristic aesthetics." },
   { "name": "Traditional", "emoji": "🌳", "arg": "traditional", "color":"#d35400", "description": "They live in the past, prefer traditional ways of life, or embrace old-fashioned aesthetics." },
   { "name": "Has Chat", "emoji": "💬", "arg": "chatted", "color":"#27ae60", "description": "You have an active chat with these characters." },

@@ -59,11 +59,23 @@
 		</div>
 
 		<div class="filter-section">
-			<h3>Color <button (click)="toggleAllColors()" class="select-all-btn">Toggle All</button></h3>
+			<h3>Character Types</h3>
 			<div class="filter-checkboxes">
-				<label *ngFor="let color of availableColors">
-					<input type="checkbox" [checked]="selectedColors.includes(color)" (change)="toggleColor(color)" />
-					<span [style.color]="color" [style.fontWeight]="'bold'" [style.textTransform]="'capitalize'">{{ color }}</span>
+				<label>
+					<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="all" />
+					All Characters
+				</label>
+				<label>
+					<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="rp" />
+					RP Friendly
+				</label>
+				<label>
+					<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="knowledge" />
+					Knowledge Friendly
+				</label>
+				<label>
+					<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="both" />
+					RP & Knowledge Friendly
 				</label>
 			</div>
 		</div>

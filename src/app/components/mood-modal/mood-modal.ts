@@ -71,15 +71,15 @@ export class MoodModal {
           ...baseOptions,
           customFilter: (c: Character) => c.moe >= 7 || c.color === 'pink'
         };
-      case 'blue':
+      case 'knowledge':
         return {
           ...baseOptions,
-          attributes: { colors: ['blue'] }
+          knowledgeFriendly: true
         };
       case 'rp':
         return {
           ...baseOptions,
-          attributes: { colors: ['pink', 'red'] }
+          rpFriendly: true
         };
       case 'futuristic':
         return {
@@ -104,7 +104,7 @@ export class MoodModal {
       case 'moe0':
         return {
           ...baseOptions,
-          attributes: { moe: { max: 3 } }
+          attributes: { moe: { max: 5 } }
         };
       case 'chatted':
         return {

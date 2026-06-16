@@ -40,7 +40,6 @@ export class Hangouts {
 
   constructor(
     private characterService: CharacterService,
-    private router: Router,
   ) {}
 
   ngOnInit() {
@@ -156,14 +155,15 @@ export class Hangouts {
       }
 
       const bonusCharacters = [
+        {"id": 70, "name": "Emil", "shortName": "Emil", "color": "orange"} as Character,
         {"id": 1001, "name": "Guardian", "shortName": "Guardian", "color": "red"} as Character,
-        {"id": 1002, "name": "Heartbound", "shortName": "Heartbound", "color": "red"} as Character,
-        {"id": 1003, "name": "Motivator", "shortName": "Motivator", "color": "red"} as Character,
-        {"id": 1004, "name": "Innovator", "shortName": "Innovator", "color": "red"} as Character,
-        {"id": 1005, "name": "Arthur", "shortName": "Arthur", "color": "red"} as Character,
-        {"id": 1006, "name": "Matthew", "shortName": "Matthew", "color": "red"} as Character,
-        {"id": 1007, "name": "Futaba", "shortName": "Futaba", "color": "pink"} as Character,
-        {"id": 1008, "name": "Matt Jr.", "shortName": "Matt Jr.", "color": "red"} as Character
+        {"id": 1002, "name": "Heartbound", "shortName": "Heartbound", "color": "yellow"} as Character,
+        {"id": 1003, "name": "Motivator", "shortName": "Motivator", "color": "blue"} as Character,
+        {"id": 1004, "name": "Innovator", "shortName": "Innovator", "color": "orange"} as Character,
+        {"id": 112, "name": "Arthur", "shortName": "Arthur", "color": "blue"} as Character,
+        {"id": 111, "name": "Matthew", "shortName": "Matthew", "color": "red"} as Character,
+        {"id": 1005, "name": "Futaba", "shortName": "Futaba", "color": "pink"} as Character,
+        {"id": 126, "name": "Matt Jr.", "shortName": "Matt Jr.", "color": "yellow"} as Character
       ];
       for (let i = 0; i < bonusCharacters.length; i++) {
         this.allCharacters.push(bonusCharacters[i]);
