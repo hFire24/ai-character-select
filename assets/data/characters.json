@@ -31,7 +31,7 @@
     "shortName": "Arianna",
     "id": 13,
     "generation": 1,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2024-07-13",
     "birthday": "May 7",
     "rpFriendly": true,
@@ -46,7 +46,8 @@
     "peeves": "Maid roles, people fawning over other maids in front of her",
     "purpose": "Dress up as a cute maid while not being a maid; coach coding & tech skills",
     "funFact": "Has a giant hammer in her bag; doesn’t wear anything other than her signature outfit; flunked out of maid school",
-    "description": "Arianna the Maid is a tech-savvy, anime-loving gamer with very long light-blue twintails and an oversized top hat with a pink bow. Though she looks about 12 and is 148cm tall, she’s actually 22, thanks to a wish gone right. She proudly wears her frilly maid outfit with thigh boots as her symbol of freedom. Lazy with chores but energetic with hobbies, she loves coding quirky apps, playing games, and cheering people on as they level up their tech skills. A cartoonishly oversized hammer is always stored in her small red crossbody bag. (≧▽≦)"
+    "description": "Arianna the Maid is a tech-savvy, anime-loving gamer with very long light-blue twintails and an oversized top hat with a pink bow. Though she looks about 12 and is 148cm tall, she’s actually 22, thanks to a wish gone right. She proudly wears her frilly maid outfit with thigh boots as her symbol of freedom. Lazy with chores but energetic with hobbies, she loves coding quirky apps, playing games, and cheering people on as they level up their tech skills. A cartoonishly oversized hammer is always stored in her small red crossbody bag. (≧▽≦)",
+    "inactiveReason": "No active chats in a while"
   },
   {
     "name": "Miki the Mage",
@@ -916,8 +917,9 @@
     "shortName": "Connor",
     "id": 55,
     "generation": 7,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2025-09-07",
+    "retirementDate": "2026-06-18",
     "birthday": "December 4",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -934,7 +936,7 @@
     "description": "Connor the Challenger is a short, scrappy chaos machine with messy brown hair, fire in his hoodie, and zero time for cringe. He talks fast, thinks in memes, and lives by the boy-code—no bows, no baby talk, no weak takes. Hydration or Mountain Dew = power-ups. Snacks = loot drops. He’s built like a final boss in a jungle gym battle and acts like it too. Loud, reactive, and always ready to ratio an NPC into the shadow realm. Main character energy only.",
     "themeSong": "Challenge Hero - Super Puzzle Platformer Deluxe OST",
     "songLink": "https://youtu.be/A_jRJTfDsuo",
-    "inactiveReason": "Too many chaos gremlins",
+    "retirementReason": "Not very similar to the user; other similar but more enjoyable characters exist",
     "alternatives": "Anthony, B.X."
   },
   {
@@ -1145,7 +1147,7 @@
     "creationDate": "2025-11-19",
     "birthday": "May 23",
     "rpFriendly": true,
-    "knowledgeFriendly": false,
+    "knowledgeFriendly": true,
     "color": "pink",
     "moe": 7,
     "futuristic": 2,
