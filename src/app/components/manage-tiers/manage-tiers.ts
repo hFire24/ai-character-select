@@ -5,6 +5,7 @@ import { forkJoin } from 'rxjs';
 import { BackButton } from '../back-button/back-button';
 import { Character, CharacterService } from '../../services/character.service';
 import { RelativeDatePipe } from "../../pipes/relative-date.pipe";
+import { getStatusSortRank } from '../../utils/status-sort';
 
 type ManagedCharacter = Character & {
   defaultTier: number;
@@ -369,7 +370,7 @@ export class ManageTiers {
       case 'id':
         return a.id - b.id;
       case 'status':
-        return this.getStatusSortRank(a.status) - this.getStatusSortRank(b.status) ||
+        return getStatusSortRank(a.status) - getStatusSortRank(b.status) ||
           a.status.localeCompare(b.status);
       case 'totalChats':
         return a.chatCount - b.chatCount;
@@ -386,10 +387,6 @@ export class ManageTiers {
     return this.sortOptions.some(option => option.value === field)
       ? field as ManageTiersSortField
       : 'none';
-  }
-
-  private getStatusSortRank(status: string): number {
-    return ['active', 'inactive', 'retired'].includes(status.toLowerCase()) ? 1 : 2;
   }
 
   private applyImportedTierMap(tierMap: Record<string, unknown>): void {

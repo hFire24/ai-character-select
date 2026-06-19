@@ -98,6 +98,25 @@ export class CharacterList {
     return retiredCharacters;
   }
 
+  get combinedChattedCharacters(): LastChattedCharacter[] {
+    if (this.sortType === 'totalCount') {
+      return this.sortCharacters([
+        ...this.activeChattedCharacters,
+        ...this.thisWeekChattedCharacters,
+        ...this.olderChattedCharacters
+      ]);
+    }
+
+    if (this.sortType === 'weeklyCount') {
+      return this.sortCharacters([
+        ...this.activeChattedCharacters,
+        ...this.thisWeekChattedCharacters
+      ]);
+    }
+
+    return [];
+  }
+
   private get retiredChattedCharacterIds(): Set<number> {
     return new Set(this.retiredChattedCharacters.map(item => item.character.id));
   }

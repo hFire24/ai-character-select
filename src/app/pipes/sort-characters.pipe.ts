@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Character } from '../services/character.service';
+import { getStatusSortRank } from '../utils/status-sort';
 
 export type SortField = 'none' | 'id' | 'name' | 'shortName' | 'status' | 'generation' | 'tier' | 'moe' | 'futuristic' | 'birthday' | 'creationDate';
 export type SortDirection = 'asc' | 'desc';
@@ -42,17 +43,8 @@ export class SortCharactersPipe implements PipeTransform {
           valueB = b.shortName.toLowerCase();
           break;
         case 'status':
-          // Custom status order: active, inactive, retired, side, inactive side, retired side, everything else
-          const statusOrder: { [key: string]: number } = {
-            'active': 1,
-            'inactive': 2,
-            'retired': 3,
-            'side': 4,
-            'inactive side': 5,
-            'retired side': 6
-          };
-          valueA = statusOrder[a.status.toLowerCase()] || 999;
-          valueB = statusOrder[b.status.toLowerCase()] || 999;
+          valueA = getStatusSortRank(a.status);
+          valueB = getStatusSortRank(b.status);
           break;
         case 'generation':
           valueA = a.generation;

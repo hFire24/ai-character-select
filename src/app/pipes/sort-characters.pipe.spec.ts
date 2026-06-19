@@ -106,6 +106,35 @@ describe('SortCharactersPipe', () => {
     expect(result[2].shortName).toBe('Alice');
   });
 
+  it('should sort statuses in the canonical order', () => {
+    const statuses = [
+      'future',
+      'retired side',
+      'inactive side',
+      'retired',
+      'side',
+      'inactive',
+      'active'
+    ];
+    const characters = statuses.map((status, index) => ({
+      ...mockCharacters[0],
+      id: index,
+      status
+    }));
+
+    const result = pipe.transform(characters, 'status', 'asc');
+
+    expect(result.map(character => character.status)).toEqual([
+      'active',
+      'inactive',
+      'side',
+      'retired',
+      'inactive side',
+      'retired side',
+      'future'
+    ]);
+  });
+
   it('should sort by generation ascending', () => {
     const result = pipe.transform(mockCharacters, 'generation', 'asc');
     expect(result[0].generation).toBe(1);
