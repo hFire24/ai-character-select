@@ -36,6 +36,33 @@
   justify-content: center;
 }
 
+.data-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 20px 15px;
+}
+
+.data-button {
+  padding: 10px 20px;
+  background-color: #0f766e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #115e59;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
 .sort-dropdown {
   padding: 10px 20px;
   background-color: #8b5cf6;

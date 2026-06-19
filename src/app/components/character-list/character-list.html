@@ -1,7 +1,21 @@
+@if (isDesktop) {
+  <div class="data-controls">
+    <button class="data-button" (click)="exportData()">Export Data</button>
+    <button class="data-button" (click)="importInput.click()">Import Data</button>
+    <input
+      #importInput
+      type="file"
+      accept="application/json,.json"
+      hidden
+      (change)="importData($event)"
+    />
+  </div>
+}
+
 @if (isDesktop && lastChattedCharacters.length > 0) {
   <div class="chatted-section">
     <p>Number of Active Chats: {{ numActiveChats }}</p>
-    <p>Note: Only chats made after <b>March 27, 2026</b> are counted for the total, and chats made after <b>March 30, 2026</b> are counted for the weekly total.</p>
+    <p>Note: Only chats made after <b>March 27, 2026</b> are counted for the total.</p>
     <div class="button-group">
       <button class="manage-button" routerLink="/manage-tiers">Manage Tiers</button>
       @if (numActiveChats > 0) {
