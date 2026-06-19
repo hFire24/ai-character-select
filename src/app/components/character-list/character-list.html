@@ -1,17 +1,3 @@
-@if (isDesktop) {
-  <div class="data-controls">
-    <button class="data-button" (click)="exportData()">Export Data</button>
-    <button class="data-button" (click)="importInput.click()">Import Data</button>
-    <input
-      #importInput
-      type="file"
-      accept="application/json,.json"
-      hidden
-      (change)="importData($event)"
-    />
-  </div>
-}
-
 @if (isDesktop && lastChattedCharacters.length > 0) {
   <div class="chatted-section">
     <p>Number of Active Chats: {{ numActiveChats }}</p>
@@ -27,6 +13,19 @@
         <option value="totalCount">Count (Total)</option>
         <option value="weeklyCount">Count (Weekly)</option>
       </select>
+    </div>
+
+    <div class="data-controls">
+      <button class="data-button" routerLink="/chat-history-chart">Chat History Chart</button>
+      <button class="data-button" (click)="exportData()">Export Data</button>
+      <button class="data-button" (click)="importInput.click()">Import Data</button>
+      <input
+        #importInput
+        type="file"
+        accept="application/json,.json"
+        hidden
+        (change)="importData($event)"
+      />
     </div>
 
     @if (activeChattedCharacters.length > 0) {

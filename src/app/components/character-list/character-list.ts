@@ -92,7 +92,7 @@ export class CharacterList {
 
     for (const item of oldestFirst) {
       if (item.character.status !== 'retired') break;
-      if (!this.hasActiveChat(item.character)) retiredCharacters.push(item);
+      if (!this.hasActiveChat(item.character)) retiredCharacters.unshift(item);
     }
 
     return retiredCharacters;

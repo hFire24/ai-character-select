@@ -1,0 +1,204 @@
+<app-back-button [route]="'/stats'" [text]="'Back to Stats'"></app-back-button>
+
+<main class="history-page">
+  <header>
+    <h1>Chat History Spread</h1>
+    <p>Compare the dates recorded in each character's chat-link history.</p>
+  </header>
+
+  <section class="character-picker" aria-label="Add a character">
+    <div class="picker-heading">
+      <div>
+        <strong>Add characters</strong>
+        <span>Search by short name or enter a complete ID.</span>
+      </div>
+      <button
+        class="add-all-button"
+        type="button"
+        [disabled]="isLoading || availableCharacters.length === 0"
+        (click)="addAllCharacters()"
+      >
+        Add all characters
+      </button>
+    </div>
+    <div class="character-search">
+      <input
+        type="search"
+        [(ngModel)]="searchTerm"
+        placeholder="Search by ID or short name"
+        aria-label="Search by character ID or short name"
+        autocomplete="off"
+        [disabled]="isLoading || availableCharacters.length === 0"
+        (keydown.enter)="addCharacter()"
+      />
+
+      @if (searchTerm.trim()) {
+        <div class="search-results">
+          @for (character of searchResults; track character.id) {
+            <button class="search-result" type="button" (click)="addCharacter(character)">
+              <img [src]="'assets/Icons/' + character.img" alt="" />
+              <span class="result-details">
+                <strong>{{ character.shortName }}</strong>
+                <small>ID {{ character.id }} &middot; {{ historyCount(character.id) }} history entries</small>
+              </span>
+              <span class="add-icon" aria-hidden="true">+</span>
+            </button>
+          } @empty {
+            <p class="no-results">No character with chat history matches that search.</p>
+          }
+        </div>
+      }
+    </div>
+  </section>
+
+  @if (!isLoading && characters.length > 0) {
+    <section class="date-range" aria-label="Chart date range">
+      <strong>Date range</strong>
+      <label>
+        <span>From</span>
+        <input
+          type="date"
+          [ngModel]="selectedStartDate"
+          [min]="datasetStartDate"
+          [max]="selectedEndDate"
+          (ngModelChange)="updateStartDate($event)"
+        />
+      </label>
+      <label>
+        <span>To</span>
+        <input
+          type="date"
+          [ngModel]="selectedEndDate"
+          [min]="selectedStartDate"
+          [max]="datasetEndDate"
+          (ngModelChange)="updateEndDate($event)"
+        />
+      </label>
+      <button type="button" [disabled]="isFullDateRange" (click)="resetDateRange()">
+        Full range
+      </button>
+    </section>
+  }
+
+  @if (isLoading) {
+    <p class="empty-state">Loading chat histories...</p>
+  } @else if (characters.length === 0) {
+    <p class="empty-state">No chat-link history data is stored in this browser.</p>
+  } @else if (series.length === 0) {
+    <p class="empty-state">Add one or more characters to plot their history.</p>
+  } @else {
+    <section class="selected-toolbar" aria-label="Selected characters">
+      <div class="selected-list">
+        @for (item of series; track item.character.id; let index = $index) {
+          <button type="button" (click)="removeCharacter(item.character.id)">
+            <img
+              class="selected-avatar"
+              [src]="'assets/Icons/' + item.character.img"
+              [alt]="item.character.shortName"
+              [style.border-color]="pointColor(index)"
+            />
+            {{ item.character.shortName }}
+            <span class="remove-icon" aria-hidden="true">&times;</span>
+          </button>
+        }
+      </div>
+      <button type="button" class="clear-button" (click)="clearCharacters()">Clear all</button>
+    </section>
+
+    <section class="chart-card" aria-label="Chat history date plot">
+      <svg class="history-chart" [attr.viewBox]="chartViewBox" role="img">
+        <defs>
+          @for (item of series; track item.character.id; let rowIndex = $index) {
+            <clipPath [attr.id]="'avatar-clip-' + item.character.id">
+              <circle cx="28" [attr.cy]="rowY(rowIndex)" r="19" />
+            </clipPath>
+          }
+        </defs>
+
+        @for (tick of dateTicks; track tick.getTime()) {
+          <line
+            class="tick-line"
+            [attr.x1]="dateX(tick)"
+            [attr.x2]="dateX(tick)"
+            [attr.y1]="droughtY"
+            [attr.y2]="axisY + 7"
+          />
+        }
+
+        @if (showDrought) {
+          <rect
+            class="drought-band"
+            [attr.x]="droughtStartX"
+            [attr.y]="droughtY"
+            [attr.width]="droughtEndX - droughtStartX"
+            [attr.height]="droughtHeight"
+          >
+            <title>History drought: April 21 through May 6, 2026</title>
+          </rect>
+          <text
+            class="drought-label"
+            [attr.x]="(droughtStartX + droughtEndX) / 2"
+            [attr.y]="droughtLabelY"
+          >
+            History drought
+          </text>
+        }
+
+        @for (item of series; track item.character.id; let rowIndex = $index) {
+          <line
+            class="row-line"
+            [attr.x1]="plotStartX"
+            [attr.x2]="plotEndX"
+            [attr.y1]="rowY(rowIndex)"
+            [attr.y2]="rowY(rowIndex)"
+          />
+          <image
+            x="9"
+            [attr.y]="rowY(rowIndex) - 19"
+            width="38"
+            height="38"
+            [attr.href]="'assets/Icons/' + item.character.img"
+            [attr.clip-path]="'url(#avatar-clip-' + item.character.id + ')'"
+            preserveAspectRatio="xMidYMid slice"
+          />
+          <text class="row-label" x="55" [attr.y]="rowY(rowIndex) + 5">
+            {{ item.character.shortName }} ({{ visibleHistoryCount(item) }})
+          </text>
+
+          @for (point of item.points; track point.dateKey) {
+            @if (isDateVisible(point.date)) {
+              <g>
+                <title>{{ item.character.name }}: {{ formatDate(point.date) }} ({{ point.count }} chat{{ point.count === 1 ? '' : 's' }})</title>
+                <circle
+                  [attr.cx]="dateX(point.date)"
+                  [attr.cy]="rowY(rowIndex)"
+                  [attr.r]="point.count > 1 ? 10 : 7"
+                  [attr.fill]="pointColor(rowIndex)"
+                />
+                @if (point.count > 1) {
+                  <text class="point-count" [attr.x]="dateX(point.date)" [attr.y]="rowY(rowIndex) + 4">
+                    {{ point.count }}
+                  </text>
+                }
+              </g>
+            }
+          }
+        }
+
+        <line
+          class="axis-line"
+          [attr.x1]="plotStartX"
+          [attr.x2]="plotEndX"
+          [attr.y1]="axisY"
+          [attr.y2]="axisY"
+        />
+        @for (tick of dateTicks; track tick.getTime()) {
+          <text class="tick-label" [attr.x]="dateX(tick)" [attr.y]="axisY + 24">
+            <tspan [attr.x]="dateX(tick)">{{ formatMonthDay(tick) }}</tspan>
+            <tspan class="tick-year" [attr.x]="dateX(tick)" dy="15">{{ formatYear(tick) }}</tspan>
+          </text>
+        }
+      </svg>
+    </section>
+  }
+</main>

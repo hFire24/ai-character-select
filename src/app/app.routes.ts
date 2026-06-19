@@ -19,6 +19,7 @@ import { IdChecker } from './components/id-checker/id-checker';
 import { Announcement } from './components/announcement/announcement';
 import { ManageTiers } from './components/manage-tiers/manage-tiers';
 import { Timeline } from './components/timeline/timeline';
+import { ChatHistoryChart } from './components/chat-history-chart/chat-history-chart';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
@@ -40,5 +41,6 @@ export const routes: Routes = [
   { path: 'lineage', component: Lineage, title: 'Lineage' },
   { path: 'id-checker', component: IdChecker, title: 'ID Checker' },
   { path: 'announcement', component: Announcement, title: 'Announcement' },
-  { path: 'manage-tiers', component: ManageTiers, title: 'Manage Tiers' }
+  { path: 'manage-tiers', component: ManageTiers, title: 'Manage Tiers' },
+  { path: 'chat-history-chart', component: ChatHistoryChart, title: 'Chat History Spread' }
 ];
