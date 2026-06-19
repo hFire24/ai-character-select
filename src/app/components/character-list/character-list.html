@@ -15,22 +15,21 @@
       </select>
     </div>
 
-    @if (sortType === 'date') {
-      @if (todayChattedCharacters.length > 0) {
-        <h2>Today</h2>
-        <div class="chatted-list">
-          @for (item of todayChattedCharacters; track item.character.id) {
-            <app-character-item 
-              [character]="item.character" 
-              [timestamp]="item.timestamp" 
-              [chatCount]="item.chatCount" 
-              [weeklyChatCount]="item.weeklyChatCount" 
-              [showChatInfo]="true"
-              (characterClick)="onCharacterClick($event)">
-            </app-character-item>
-          }
-        </div>
-      }
+    @if (activeChattedCharacters.length > 0) {
+      <h2>Active</h2>
+      <div class="chatted-list">
+        @for (item of activeChattedCharacters; track item.character.id) {
+          <app-character-item 
+            [character]="item.character" 
+            [timestamp]="item.timestamp" 
+            [chatCount]="item.chatCount" 
+            [weeklyChatCount]="item.weeklyChatCount" 
+            [showChatInfo]="true"
+            (characterClick)="onCharacterClick($event)">
+          </app-character-item>
+        }
+      </div>
+    }
 
       @if (thisWeekChattedCharacters.length > 0) {
         <h2>This Week</h2>
@@ -63,9 +62,11 @@
           }
         </div>
       }
-    } @else {
+
+    @if (retiredChattedCharacters.length > 0) {
+      <h2>Retired</h2>
       <div class="chatted-list">
-        @for (item of sortCharacters(lastChattedCharacters); track item.character.id) {
+        @for (item of retiredChattedCharacters; track item.character.id) {
           <app-character-item 
             [character]="item.character" 
             [timestamp]="item.timestamp" 

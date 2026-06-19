@@ -36,47 +36,69 @@ export class CharacterList {
     ).length;
   }
 
-  get todayChattedCharacters(): LastChattedCharacter[] {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    
+  get activeChattedCharacters(): LastChattedCharacter[] {
     return this.sortCharacters(
-      this.lastChattedCharacters.filter(item => {
-        const chatDate = new Date(item.timestamp);
-        chatDate.setHours(0, 0, 0, 0);
-        return chatDate.getTime() === today.getTime();
-      })
+      this.lastChattedCharacters.filter(item => this.hasActiveChat(item.character))
     );
   }
 
   get thisWeekChattedCharacters(): LastChattedCharacter[] {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const oneWeekAgo = new Date(today);
-    oneWeekAgo.setDate(today.getDate() - 6);
+    const oneWeekAgo = this.getOneWeekAgo();
+    const retiredCharacterIds = this.retiredChattedCharacterIds;
     
     return this.sortCharacters(
       this.lastChattedCharacters.filter(item => {
         const chatDate = new Date(item.timestamp);
         chatDate.setHours(0, 0, 0, 0);
-        return chatDate.getTime() < today.getTime() && chatDate.getTime() >= oneWeekAgo.getTime();
+        return !this.hasActiveChat(item.character) &&
+          !retiredCharacterIds.has(item.character.id) &&
+          chatDate.getTime() >= oneWeekAgo.getTime();
       })
     );
   }
 
   get olderChattedCharacters(): LastChattedCharacter[] {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const oneWeekAgo = new Date(today);
-    oneWeekAgo.setDate(today.getDate() - 6);
+    const oneWeekAgo = this.getOneWeekAgo();
+    const retiredCharacterIds = this.retiredChattedCharacterIds;
     
     return this.sortCharacters(
       this.lastChattedCharacters.filter(item => {
         const chatDate = new Date(item.timestamp);
         chatDate.setHours(0, 0, 0, 0);
-        return chatDate.getTime() < oneWeekAgo.getTime();
+        return !this.hasActiveChat(item.character) &&
+          !retiredCharacterIds.has(item.character.id) &&
+          chatDate.getTime() < oneWeekAgo.getTime();
       })
     );
+  }
+
+  get retiredChattedCharacters(): LastChattedCharacter[] {
+    const oldestFirst = [...this.lastChattedCharacters].sort(
+      (a, b) => a.timestamp.getTime() - b.timestamp.getTime()
+    );
+    const retiredCharacters: LastChattedCharacter[] = [];
+
+    for (const item of oldestFirst) {
+      if (item.character.status !== 'retired') break;
+      if (!this.hasActiveChat(item.character)) retiredCharacters.push(item);
+    }
+
+    return retiredCharacters;
+  }
+
+  private get retiredChattedCharacterIds(): Set<number> {
+    return new Set(this.retiredChattedCharacters.map(item => item.character.id));
+  }
+
+  private getOneWeekAgo(): Date {
+    const oneWeekAgo = new Date();
+    oneWeekAgo.setHours(0, 0, 0, 0);
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 6);
+    return oneWeekAgo;
+  }
+
+  private hasActiveChat(character: Character): boolean {
+    return localStorage.getItem(`chatLink_${character.id ?? 'unknown'}`) !== null;
   }
 
   sortCharacters(characters: LastChattedCharacter[]): LastChattedCharacter[] {
