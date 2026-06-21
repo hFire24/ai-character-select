@@ -3,6 +3,12 @@ import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
 import { BackButton } from '../back-button/back-button';
 import { RelativeDatePipe } from '../../pipes/relative-date.pipe';
+import {
+  archiveChatLink,
+  getArchivedChatLink,
+  getStoredChatLink,
+  restoreChatLink
+} from '../../utils/chat-link-storage';
 
 interface ActiveChat {
   character: Character;
@@ -11,6 +17,14 @@ interface ActiveChat {
   chatCount: number;
   weeklyChatCount: number;
   selected: boolean;
+}
+
+interface ArchivedChat {
+  character: Character;
+  chatLink: string;
+  timestamp: Date | null;
+  chatCount: number;
+  weeklyChatCount: number;
 }
 
 @Component({
@@ -22,6 +36,7 @@ interface ActiveChat {
 })
 export class ChatManager implements OnInit {
   activeChats: ActiveChat[] = [];
+  archivedChats: ArchivedChat[] = [];
   selectAll = false;
 
   constructor(private characterService: CharacterService) {}
@@ -41,47 +56,55 @@ export class ChatManager implements OnInit {
         }
 
         const activeChats: ActiveChat[] = [];
+        const archivedChats: ArchivedChat[] = [];
 
         characters.forEach(character => {
-          const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
-          const chatLink = localStorage.getItem(chatLinkKey);
+          const chatLink = getStoredChatLink(character);
+          const archivedChatLink = getArchivedChatLink(character);
+
+          const timestampKey = 'chatLinkTimestamp_' + (character.id ?? 'unknown');
+          const timestampValue = localStorage.getItem(timestampKey);
+          const timestamp = timestampValue ? new Date(timestampValue) : null;
+
+          const counterKey = 'chatLinkCounter_' + (character.id ?? 'unknown');
+          const counter = localStorage.getItem(counterKey);
+          const chatCount = counter ? parseInt(counter, 10) : 0;
+
+          const historyKey = 'chatLinkHistory_' + (character.id ?? 'unknown');
+          const historyStr = localStorage.getItem(historyKey);
+          let weeklyChatCount = 0;
+
+          if (historyStr) {
+            try {
+              const history: string[] = JSON.parse(historyStr);
+              const sevenDaysAgo = new Date();
+              sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+              weeklyChatCount = history.filter(ts => new Date(ts) >= sevenDaysAgo).length;
+            } catch (e) {
+              console.error('Error parsing chat history:', e);
+            }
+          }
           
           // Only include characters with active chat links
           if (chatLink) {
-            const timestampKey = 'chatLinkTimestamp_' + (character.id ?? 'unknown');
-            const timestamp = localStorage.getItem(timestampKey);
-            
-            const counterKey = 'chatLinkCounter_' + (character.id ?? 'unknown');
-            const counter = localStorage.getItem(counterKey);
-            const chatCount = counter ? parseInt(counter, 10) : 0;
-            
-            // Get weekly chat count
-            const historyKey = 'chatLinkHistory_' + (character.id ?? 'unknown');
-            const historyStr = localStorage.getItem(historyKey);
-            let weeklyChatCount = 0;
-            
-            if (historyStr) {
-              try {
-                const history: string[] = JSON.parse(historyStr);
-                const sevenDaysAgo = new Date();
-                sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-                
-                weeklyChatCount = history.filter(ts => {
-                  const date = new Date(ts);
-                  return date >= sevenDaysAgo;
-                }).length;
-              } catch (e) {
-                console.error('Error parsing chat history:', e);
-              }
-            }
-            
             activeChats.push({
               character: character,
               chatLink: chatLink,
-              timestamp: timestamp ? new Date(timestamp) : new Date(),
+              timestamp: timestamp ?? new Date(),
               chatCount: chatCount,
               weeklyChatCount: weeklyChatCount,
               selected: false
+            });
+          }
+
+          if (archivedChatLink) {
+            archivedChats.push({
+              character,
+              chatLink: archivedChatLink,
+              timestamp,
+              chatCount,
+              weeklyChatCount
             });
           }
         });
@@ -89,6 +112,9 @@ export class ChatManager implements OnInit {
         // Sort by most recent first
         this.activeChats = activeChats.sort((a, b) => 
           b.timestamp.getTime() - a.timestamp.getTime()
+        );
+        this.archivedChats = archivedChats.sort((a, b) =>
+          (b.timestamp?.getTime() ?? 0) - (a.timestamp?.getTime() ?? 0)
         );
       });
     });
@@ -118,16 +144,11 @@ export class ChatManager implements OnInit {
       return;
     }
 
-    const confirmed = confirm(`Are you sure you want to delete ${this.selectedCount} selected chat${this.selectedCount === 1 ? '' : 's'}?`);
+    const confirmed = confirm(`Are you sure you want to archive ${this.selectedCount} selected chat${this.selectedCount === 1 ? '' : 's'}?`);
     if (confirmed) {
       this.activeChats.forEach(chat => {
         if (chat.selected) {
-          const chatLinkKey = 'chatLink_' + (chat.character.id ?? 'unknown');
-          const timestampKey = 'chatLinkTimestamp_' + (chat.character.id ?? 'unknown');
-          const counterKey = 'chatLinkCounter_' + (chat.character.id ?? 'unknown');
-          const historyKey = 'chatLinkHistory_' + (chat.character.id ?? 'unknown');
-          
-          localStorage.removeItem(chatLinkKey);
+          archiveChatLink(chat.character);
           // Keep timestamp and counter for historical tracking
           // localStorage.removeItem(timestampKey);
           // localStorage.removeItem(counterKey);
@@ -135,9 +156,15 @@ export class ChatManager implements OnInit {
         }
       });
       
-      alert(`${this.selectedCount} chat${this.selectedCount === 1 ? '' : 's'} deleted successfully.`);
+      alert(`${this.selectedCount} chat${this.selectedCount === 1 ? '' : 's'} archived successfully.`);
       this.loadActiveChats();
       this.selectAll = false;
+    }
+  }
+
+  restoreArchivedChat(chat: ArchivedChat) {
+    if (restoreChatLink(chat.character)) {
+      this.loadActiveChats();
     }
   }
 

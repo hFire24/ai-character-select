@@ -1,7 +1,8 @@
 <app-back-button [route]="'/stats'" [text]="'Back to Stats'"></app-back-button>
 
 <div class="chat-manager-container">
-  <h1>Manage Active Chats</h1>
+  <h1>Manage Chats</h1>
+  <h2>Active Chats</h2>
   
   @if (activeChats.length === 0) {
     <p class="empty-state">No active chats found.</p>
@@ -14,7 +15,7 @@
       
       @if (selectedCount > 0) {
         <button class="delete-button" (click)="deleteSelected()">
-          Delete Selected ({{ selectedCount }})
+          Archive Selected ({{ selectedCount }})
         </button>
       }
     </div>
@@ -45,4 +46,37 @@
       }
     </div>
   }
+
+
+  <section class="archived-section">
+    <h2>Archived Chats</h2>
+
+    @if (archivedChats.length === 0) {
+      <p class="empty-state">No archived chats found.</p>
+    } @else {
+      <div class="chat-list">
+        @for (chat of archivedChats; track chat.character.id) {
+          <div class="chat-row archived-chat-row">
+            <img [src]="'assets/Icons/' + (chat.character.img || 'extended/Unknown.png')"
+                 [alt]="chat.character.shortName"
+                 class="character-icon">
+
+            <div class="chat-info">
+              <div class="character-name">{{ chat.character.shortName }}</div>
+              <div class="chat-stats">
+                @if (chat.timestamp) {
+                  <span class="stat">Last Chat Date: {{ chat.timestamp | relativeDate }}</span>
+                }
+              </div>
+              <div class="chat-link">
+                <a [href]="chat.chatLink" target="_blank" (click)="$event.stopPropagation()">{{ chat.chatLink }}</a>
+              </div>
+            </div>
+
+            <button class="restore-button" (click)="restoreArchivedChat(chat)">Restore</button>
+          </div>
+        }
+      </div>
+    }
+  </section>
 </div>

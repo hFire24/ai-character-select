@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Character } from '../services/character.service';
+import { getStoredChatLink } from '../utils/chat-link-storage';
 
 // Simple status filter interface (for backwards compatibility)
 export interface CharacterFilters {
@@ -302,7 +303,6 @@ export class CharacterFilterPipe implements PipeTransform {
   }
 
   private hasStoredChatLink(character: Character): boolean {
-    const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
-    return localStorage.getItem(chatLinkKey) !== null;
+    return getStoredChatLink(character) !== null;
   }
 }

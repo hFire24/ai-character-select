@@ -6,6 +6,7 @@ import { CharacterModal } from "../character-modal/character-modal";
 import { Router } from "@angular/router";
 import { DeviceService } from "../../services/device.service";
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
+import { getEffectiveChatLink } from '../../utils/chat-link-storage';
 
 type FriendlinessFilter = 'all' | 'rp' | 'knowledge' | 'both';
 
@@ -182,9 +183,7 @@ export class SpinTheWheel {
   }
 
   getChatLink(character: Character): string {
-    const key = "chatLink_" + (character.id ?? "unknown");
-    const stored = localStorage.getItem(key);
-    return stored ? stored : character.link;
+    return getEffectiveChatLink(character);
   }
 
   goBackToRoster() {

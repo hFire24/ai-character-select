@@ -182,7 +182,8 @@ h3.retired-banner {
 #modalLink,
 #modalScreenshot,
 #updateChatLink,
-#resetChatLink {
+#resetChatLink,
+#restoreChatLink {
   display: inline-flex;
   align-items: center;
   gap: .4rem;
@@ -241,6 +242,19 @@ h3.retired-banner {
     transform: translateY(-1px);
     border-color: rgba(239, 68, 68, 0.7);
     background: linear-gradient(180deg, rgba(239,68,68,0.25), rgba(239,68,68,0.08));
+    color: white;
+  }
+}
+
+#restoreChatLink {
+  border: 1px solid rgba(94, 162, 255, 0.4);
+  background: linear-gradient(180deg, rgba(94,162,255,0.15), rgba(94,162,255,0.05));
+  color: #a8c8ff;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: rgba(94, 162, 255, 0.7);
+    background: linear-gradient(180deg, rgba(94,162,255,0.25), rgba(94,162,255,0.08));
     color: white;
   }
 }

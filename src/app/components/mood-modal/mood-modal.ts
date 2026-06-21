@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
 import { RouterLink } from '@angular/router';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
+import { getEffectiveChatLink, getStoredChatLink } from '../../utils/chat-link-storage';
 
 const FALLBACK_MOOD: Mood = {
   name: "",
@@ -55,8 +56,7 @@ export class MoodModal {
   }
 
   private hasActiveChat(character: Character): boolean {
-    const chatLinkKey = 'chatLink_' + (character.id ?? 'unknown');
-    return localStorage.getItem(chatLinkKey) !== null;
+    return getStoredChatLink(character) !== null;
   }
 
   private getFilterOptions(): CharacterFilterOptions {
@@ -212,8 +212,6 @@ export class MoodModal {
   }
 
   getChatLink(character: Character): string {
-    const key = 'chatLink_' + (character.id ?? 'unknown');
-    const stored = localStorage.getItem(key);
-    return stored ? stored : character.link;
+    return getEffectiveChatLink(character);
   }
 }

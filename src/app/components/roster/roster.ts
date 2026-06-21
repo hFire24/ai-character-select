@@ -13,6 +13,7 @@ import { BirthdayBanner } from "../birthday-banner/birthday-banner";
 import { RosterFilter } from "../roster-filter/roster-filter";
 import { CharacterFilterPipe, CharacterFilters } from '../../pipes/character-filter.pipe';
 import { SortField, SortDirection } from '../../pipes/sort-characters.pipe';
+import { getEffectiveChatLink } from '../../utils/chat-link-storage';
 
 @Component({
   selector: 'app-roster',
@@ -144,8 +145,6 @@ export class Roster {
   }
 
   getChatLink(character: Character): string {
-    const key = 'chatLink_' + (character.id ?? 'unknown');
-    const stored = localStorage.getItem(key);
-    return stored ? stored : character.link;
+    return getEffectiveChatLink(character);
   }
 }

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Character } from '../../services/character.service';
 import { CharacterItem } from '../character-item/character-item';
+import { archiveAllChatLinks, getStoredChatLink } from '../../utils/chat-link-storage';
 
 interface LastChattedCharacter {
   character: Character;
@@ -26,6 +27,8 @@ interface CharacterListBackup {
 })
 export class CharacterList {
   private readonly storageKeyPrefixes = [
+    'chatLink_',
+    'archivedChatLink_',
     'chatLinkTimestamp_',
     'chatLinkCounter_',
     'chatLinkHistory_'
@@ -41,11 +44,7 @@ export class CharacterList {
 
   get numActiveChats(): number {
     // Count characters with custom chat links stored in localStorage
-    return Object.keys(localStorage).filter(key => 
-      key.startsWith('chatLink_') && 
-      !key.startsWith('chatLinkTimestamp_') && 
-      !key.startsWith('chatLinkCounter_')
-    ).length;
+    return Object.keys(localStorage).filter(key => key.startsWith('chatLink_')).length;
   }
 
   get activeChattedCharacters(): LastChattedCharacter[] {
@@ -129,7 +128,7 @@ export class CharacterList {
   }
 
   private hasActiveChat(character: Character): boolean {
-    return localStorage.getItem(`chatLink_${character.id ?? 'unknown'}`) !== null;
+    return getStoredChatLink(character) !== null;
   }
 
   sortCharacters(characters: LastChattedCharacter[]): LastChattedCharacter[] {
@@ -235,12 +234,7 @@ export class CharacterList {
   resetAllChatLinks() {
     const confirmed = confirm('Are you sure you want to reset all chat links to their defaults?');
     if (confirmed) {
-      // Remove all chatLink_* keys from localStorage
-      Object.keys(localStorage).forEach(key => {
-        if (key.startsWith('chatLink_') && !key.startsWith('chatLinkTimestamp_') && !key.startsWith('chatLinkCounter_')) {
-          localStorage.removeItem(key);
-        }
-      });
+      archiveAllChatLinks();
       alert('All chat links have been reset to their defaults.');
       // Notify parent to refresh the data
       this.refreshData.emit();

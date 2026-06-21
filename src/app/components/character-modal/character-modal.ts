@@ -2,6 +2,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Character, CharacterService } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
 import { CommonModule } from '@angular/common';
+import {
+  archiveChatLink,
+  getArchivedChatLink,
+  getEffectiveChatLink,
+  getStoredChatLink,
+  restoreChatLink as restoreStoredChatLink,
+  saveChatLink
+} from '../../utils/chat-link-storage';
 
 const FALLBACK_CHARACTER: Character = {
   name: "",
@@ -46,13 +54,7 @@ export class CharacterModal {
   constructor(private deviceService: DeviceService, private characterService: CharacterService) {}
 
   loadChatLink() {
-    const key = this.getChatLinkKey();
-    const stored = localStorage.getItem(key);
-    if (stored) {
-      this.chatLink = stored;
-    } else {
-      this.chatLink = this.character.link;
-    }
+    this.chatLink = getEffectiveChatLink(this.character);
   }
 
   updateChatLink() {
@@ -66,7 +68,7 @@ export class CharacterModal {
         alert('Invalid chat link format. Please enter a valid URL starting with https://');
         return;
       }
-      localStorage.setItem(this.getChatLinkKey(), this.chatLink);
+      saveChatLink(this.character, this.chatLink);
       
       // Update timestamp when chat link is changed (not reset to default)
       if (this.chatLink !== this.character.link) {
@@ -85,7 +87,7 @@ export class CharacterModal {
     } else if (newLink === '') {
       // If the user clears the input, reset to default link
       this.chatLink = this.character.link;
-      localStorage.removeItem(this.getChatLinkKey());
+      archiveChatLink(this.character);
       // Don't update timestamp when resetting to default
       alert('Chat link reset to default.');
     }
@@ -95,9 +97,24 @@ export class CharacterModal {
     const confirmed = confirm('Are you sure you want to reset this chat link to the default?');
     if (confirmed) {
       this.chatLink = this.character.link;
-      localStorage.removeItem(this.getChatLinkKey());
+      archiveChatLink(this.character);
       alert('Chat link reset to default.');
     }
+  }
+
+  restoreChatLink() {
+    if (restoreStoredChatLink(this.character)) {
+      this.loadChatLink();
+      alert('Chat link restored.');
+    }
+  }
+
+  hasActiveChatLink(): boolean {
+    return getStoredChatLink(this.character) !== null;
+  }
+
+  hasArchivedLink(): boolean {
+    return getArchivedChatLink(this.character) !== null;
   }
   
   isValidChatLink(newLink: string) {

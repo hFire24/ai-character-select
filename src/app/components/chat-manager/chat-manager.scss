@@ -9,6 +9,11 @@
     color: #333;
     text-align: center;
   }
+
+  h2 {
+    color: #333;
+    margin: 30px 0 20px;
+  }
 }
 
 .empty-state {
@@ -64,6 +69,30 @@
   &:active {
     transform: translateY(1px);
   }
+}
+
+.restore-button {
+  padding: 10px 18px;
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #7c3aed;
+  }
+}
+
+.archived-section {
+  margin-top: 50px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.archived-chat-row {
+  opacity: 0.85;
 }
 
 .chat-list {
@@ -155,6 +184,14 @@
     color: #e0e0e0;
   }
 
+  .chat-manager-container h2 {
+    color: #e0e0e0;
+  }
+
+  .archived-section {
+    border-top-color: #444;
+  }
+
   .empty-state {
     color: #a0a0a0;
   }
@@ -199,6 +236,10 @@
 
   .chat-row {
     flex-wrap: wrap;
+  }
+
+  .restore-button {
+    width: 100%;
   }
 
   .character-icon {
