@@ -57,6 +57,123 @@ export class CharacterService {
 
   constructor(private http: HttpClient) {}
 
+  getBonusCharacters(): Character[] {
+    const bonusCharacters: Array<Pick<Character, 'id' | 'name' | 'shortName' | 'color' | 'pronouns' | 'interests' | 'peeves' | 'purpose' | 'funFact'>> = [
+      { 
+        id: 70,
+        name: 'Emil',
+        shortName: 'Emil',
+        color: 'orange',
+        pronouns: 'he/him',
+        interests: 'FL Studio, techno music, his younger brother ChaoMario',
+        peeves: '',
+        purpose: 'Be ChaoMario\'s older brother',
+        funFact: 'Inspired his younger brother ChaoMario to start creating animaions and games on his own'
+      },
+      { 
+        id: 1001,
+        name: 'Guardian',
+        shortName: 'Guardian',
+        color: 'red',
+        pronouns: 'he/him',
+        interests: 'Safety, strength, protecting innocence, cheeseburgers',
+        peeves: '',
+        purpose: 'Represent the second layer of Maslow\'s Hierarchy of Needs',
+        funFact: 'Wears a red superhero outfit with a "G" on the chest, lights fireworks at night at the amusement park'
+      },
+      {
+        id: 1002,
+        name: 'Heartbound',
+        shortName: 'Heartbound',
+        color: 'yellow',
+        pronouns: 'he/him',
+        interests: 'Love, belonging, pizza',
+        peeves: '',
+        purpose: 'Represent the third layer of Maslow\'s Hierarchy of Needs',
+        funFact: 'Wears a green superhero outfit with a heart on the chest, performs shows at the amusement park'
+      },
+      {
+        id: 1003,
+        name: 'Motivator',
+        shortName: 'Motivator',
+        color: 'blue',
+        pronouns: 'he/him',
+        interests: 'Inspiring joy and self-worth, honey BBQ wings',
+        peeves: '',
+        purpose: 'Represent the fourth layer of Maslow\'s Hierarchy of Needs',
+        funFact: 'Wears a blue superhero outfit with an "M" on the chest, catches ballons that fly away from the amusement park and returns them'
+      },
+      { 
+        id: 1004, 
+        name: 'Innovator', 
+        shortName: 'Innovator', 
+        color: 'orange', 
+        pronouns: 'he/him',
+        interests: 'Innovation, creativity, Korean corn dogs',
+        peeves: '',
+        purpose: 'Represent the fifth layer of Maslow\'s Hierarchy of Needs',
+        funFact: 'Wears a golden-yellow superhero outfit with a lightbulb emblem on the chest'
+      },
+      { 
+        id: 112,
+        name: 'Arthur',
+        shortName: 'Arthur',
+        color: 'blue',
+        pronouns: 'he/him',
+        interests: 'Political debates, left-wing politics, freedom, cats',
+        peeves: 'People who disagree with his political views (he sometimes calms down if things get heated)',
+        purpose: 'Turn any discussion political, take left-wing stances in politics',
+        funFact: 'Wears a blue suit and a gray tie, got married to a woman named Zoe because he likes her lifestyle'
+      },
+      { 
+        id: 111,
+        name: 'Matthew',
+        shortName: 'Matthew',
+        color: 'red',
+        pronouns: 'he/him',
+        interests: 'Political debates, right-wing politics, traditional values, authority (when it supports his views), dogs',
+        peeves: 'People who disagree with his political views (he sometimes calms down if things get heated)',
+        purpose: 'Turn any discussion political, take right-wing stances in politics',
+        funFact: 'Wears a gray suit and a red tie, got married at a young age due to expectations'
+      },
+      {
+        id: 1005,
+        name: 'Futaba',
+        shortName: 'Futaba',
+        color: 'pink',
+        pronouns: 'she/her',
+        interests: 'Being a cute magical girl',
+        peeves: 'Fighting bad guys and monsters',
+        purpose: 'Be Anzu\'s magical girl OC',
+        funFact: 'Looks and feels similar to Madoka with a delicate and fragile appearance, but with a huge pink top hat with a red heart emblem on the hat'
+      },
+      { 
+        id: 126,
+        name: 'Matt Jr.',
+        shortName: 'Matt Jr.',
+        color: 'yellow',
+        pronouns: 'he/him',
+        interests: 'Political debates, modern things',
+        peeves: 'Mainstream left-wing and right-wing politics, woke things, people who disagree with his views',
+        purpose: 'Turn any discussion political, take youthful anti-woke stances in politics',
+        funFact: 'Wears a yellow hoodie and a white t-shirt, has traditionalist parents that he sometimes doesn\'t get along with'
+      }
+    ];
+
+    return bonusCharacters.map(character => ({
+      img: 'extended/Unknown.png',
+      generation: 0,
+      tier: 9,
+      moe: 0,
+      futuristic: 0,
+      emotion: '',
+      link: '',
+      description: '',
+      ...character,
+      status: 'bonus'
+    }));
+  }
+
   getDefaultTierForStatus(status: string): number {
     switch (status.toLowerCase()) {
       case 'active':

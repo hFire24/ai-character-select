@@ -186,6 +186,14 @@ describe('CharacterFilterPipe', () => {
   });
 
   describe('Advanced Filter Interface', () => {
+    it('filters bonus characters independently from side characters', () => {
+      const bonusCharacter = { ...mockCharacters[0], id: 5, status: 'bonus' };
+      const characters = [...mockCharacters, bonusCharacter];
+
+      expect(pipe.transform(characters, { status: { side: true } })).not.toContain(bonusCharacter);
+      expect(pipe.transform(characters, { status: { bonus: true } })).toEqual([bonusCharacter]);
+    });
+
     it('should filter by status using advanced options', () => {
       const options: CharacterFilterOptions = {
         status: { active: true, retired: true }

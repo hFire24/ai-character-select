@@ -22,6 +22,7 @@ export class Sorter implements OnInit, OnDestroy {
   includeSide: boolean = true;
   includeRetired: boolean = true;
   includeMe: boolean = false;
+  includeBonus: boolean = true;
   isIOS: boolean = false;
   
   // Mode selection
@@ -98,7 +99,8 @@ export class Sorter implements OnInit, OnDestroy {
   start(): void {
     this.characterService.getCharactersSplitTwins(false).subscribe(chars => {
       const pipe = new CharacterFilterPipe();
-      this.characters = pipe.transform(chars, this.filterOptions);
+      const characters = [...chars, ...this.characterService.getBonusCharacters()];
+      this.characters = pipe.transform(characters, this.filterOptions);
       
       if (this.characters.length < 2) {
         alert('Not enough characters to sort! Please adjust your filters.');
@@ -445,7 +447,8 @@ export class Sorter implements OnInit, OnDestroy {
         inactive: this.includeInactive,
         side: this.includeSide,
         retired: this.includeRetired,
-        me: this.includeMe
+        me: this.includeMe,
+        bonus: this.includeBonus
       }
     };
 

@@ -1,9 +1,42 @@
 @if (!rankingStarted) {
 <h1>{{title}}</h1>
-<section>
+<section class="setup">
   <p>Type in a title and begin the blind ranking process.</p>
   <input type="text" [(ngModel)]="title" placeholder="Enter title here" />
-  <button (click)="startRanking()">Start Ranking</button>
+
+  <div class="filters">
+    <div class="filter-group">
+      <h3>Gender</h3>
+      <div class="filter-section">
+        <label>
+          <input type="radio" name="filter" [(ngModel)]="genderFilter" value="all">
+          {{ genderAllLabel }}
+        </label>
+        <label>
+          <input type="radio" name="filter" [(ngModel)]="genderFilter" value="boys">
+          {{ genderBoysLabel }}
+        </label>
+        <label>
+          <input type="radio" name="filter" [(ngModel)]="genderFilter" value="girls">
+          {{ genderGirlsLabel }}
+        </label>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Character Types</h3>
+      <div class="filter-section">
+        <label><input type="checkbox" [(ngModel)]="includeActive"> Active Characters</label>
+        <label><input type="checkbox" [(ngModel)]="includeInactive"> Inactive Characters</label>
+        <label><input type="checkbox" [(ngModel)]="includeSide"> Side Characters</label>
+        <label><input type="checkbox" [(ngModel)]="includeRetired"> Retired Characters</label>
+        <label><input type="checkbox" [(ngModel)]="includeMe"> Me</label>
+        <label><input type="checkbox" [(ngModel)]="includeBonus"> Bonus Characters</label>
+      </div>
+    </div>
+  </div>
+
+  <button class="start-button" (click)="startRanking()">Start Ranking</button>
 </section>
 } @else {
 <section>

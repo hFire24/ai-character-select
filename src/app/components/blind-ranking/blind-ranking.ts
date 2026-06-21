@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 import { BackButton } from '../back-button/back-button';
 import { CharacterModal } from '../character-modal/character-modal';
+import { CharacterFilterOptions, CharacterFilterPipe } from '../../pipes/character-filter.pipe';
 
 @Component({
   selector: 'app-blind-ranking',
@@ -22,18 +23,36 @@ export class BlindRanking {
   temporaryPlacement: number | null = null; // Track which slot is temporarily filled
   gameComplete: boolean = false;
   screenshotDataUrl: string | null = null;
+  genderFilter: 'all' | 'boys' | 'girls' = 'all';
+  includeActive = true;
+  includeInactive = true;
+  includeSide = true;
+  includeRetired = true;
+  includeMe = false;
+  includeBonus = true;
+  genderAllLabel = 'All';
+  genderBoysLabel = 'Boys';
+  genderGirlsLabel = 'Girls';
   
   private characterService = inject(CharacterService);
   showCard: boolean = false;
 
   constructor() {
     this.characterService.getCharactersSplitTwins(false).subscribe((characters: Character[]) => {
-      this.allCharacters = characters.filter(c => !c.status.includes('future'));
+      this.allCharacters = [...characters, ...this.characterService.getBonusCharacters()];
     });
   }
 
   startRanking() {
+    const pipe = new CharacterFilterPipe();
+    const filteredCharacters = pipe.transform(this.allCharacters, this.filterOptions);
+    if (filteredCharacters.length < 5) {
+      alert('Not enough characters to rank! Please adjust your filters.');
+      return;
+    }
+
     console.log("Ranking started with title:", this.title);
+    this.availableCharacters = filteredCharacters;
     this.rankingStarted = true;
     this.resetGame();
     this.showNextCharacter();
@@ -44,7 +63,8 @@ export class BlindRanking {
   }
 
   private resetGame() {
-    this.availableCharacters = [...this.allCharacters];
+    const pipe = new CharacterFilterPipe();
+    this.availableCharacters = pipe.transform(this.allCharacters, this.filterOptions);
     this.shuffleArray(this.availableCharacters);
     this.rankedCharacters = [null, null, null, null, null];
     this.currentCharacter = null;
@@ -117,6 +137,27 @@ export class BlindRanking {
 
   isTemporaryPlacement(index: number): boolean {
     return this.temporaryPlacement === index;
+  }
+
+  get filterOptions(): CharacterFilterOptions {
+    const options: CharacterFilterOptions = {
+      status: {
+        active: this.includeActive,
+        inactive: this.includeInactive,
+        side: this.includeSide,
+        retired: this.includeRetired,
+        me: this.includeMe,
+        bonus: this.includeBonus
+      }
+    };
+
+    if (this.genderFilter === 'boys') {
+      options.customFilter = (character: Character) => character.pronouns !== 'she/her';
+    } else if (this.genderFilter === 'girls') {
+      options.attributes = { pronouns: ['she/her'] };
+    }
+
+    return options;
   }
 
   async takeScreenshot() {

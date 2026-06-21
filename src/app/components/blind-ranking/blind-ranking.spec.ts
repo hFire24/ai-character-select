@@ -20,4 +20,21 @@ describe('BlindRanking', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('uses the same default character-type filters as the sorter', () => {
+    expect(component.filterOptions.status).toEqual({
+      active: true,
+      inactive: true,
+      side: true,
+      retired: true,
+      me: false,
+      bonus: true
+    });
+  });
+
+  it('applies the girls gender filter', () => {
+    component.genderFilter = 'girls';
+
+    expect(component.filterOptions.attributes?.pronouns).toEqual(['she/her']);
+  });
 });

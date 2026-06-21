@@ -26,6 +26,7 @@ export interface CharacterFilterOptions {
     side?: boolean;
     me?: boolean;
     future?: boolean;
+    bonus?: boolean;
   };
   
   // RP friendly filter
@@ -217,16 +218,14 @@ export class CharacterFilterPipe implements PipeTransform {
     const hasAnyFilter = Object.values(status).some(v => v === true);
     if (!hasAnyFilter) return true; // No status filters active
 
-    if (status.active && character.status === 'active') return true;
-    if (status.inactive && character.status === 'inactive') return true;
-    if (status.retired && character.status === 'retired') return true;
-    if (status.me && character.status === 'me') return true;
-    if (status.future && character.status === 'future') return true;
-    
-    if (status.side) {
-      const isMainCharacter = ['active', 'inactive', 'retired'].includes(character.status);
-      if (!isMainCharacter) return true;
-    }
+    const characterStatus = character.status.toLowerCase();
+    if (status.active && characterStatus === 'active') return true;
+    if (status.inactive && characterStatus === 'inactive') return true;
+    if (status.retired && characterStatus === 'retired') return true;
+    if (status.side && characterStatus.includes('side')) return true;
+    if (status.me && characterStatus === 'me') return true;
+    if (status.future && characterStatus === 'future') return true;
+    if (status.bonus && characterStatus === 'bonus') return true;
     
     return false;
   }
