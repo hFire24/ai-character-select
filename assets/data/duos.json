@@ -402,6 +402,11 @@
       "name": "Dreamers"
     },
     {
+      "id1": 7,
+      "id2": 128,
+      "name": "Chillout Duo"
+    },
+    {
       "id1": 8,
       "id2": 12,
       "name": "Funny Music Enjoyers"
@@ -726,6 +731,11 @@
       "id1": 15,
       "id2": 55,
       "name": "Elite Snackers"
+    },
+    {
+      "id1": 15,
+      "id2": 60,
+      "name": "Tiny Scientists"
     },
     {
       "id1": 15,
@@ -1147,6 +1157,11 @@
       "id1": 24,
       "id2": 37,
       "name": "Devoted Mothers"
+    },
+    {
+      "id1": 24,
+      "id2": 40,
+      "name": "Strict Ladies"
     },
     {
       "id1": 24,
@@ -1581,6 +1596,16 @@
       "id1": 38,
       "id2": 94,
       "name": "Fairytale Girls"
+    },
+    {
+      "id1": 38,
+      "id2": 110,
+      "name": "Innocent Blondes with Pink Dresses"
+    },
+    {
+      "id1": 38,
+      "id2": 134,
+      "name": "Promoters of Innocence"
     },
     {
       "id1": 39,
@@ -2223,6 +2248,11 @@
       "name": "Blonde Anime Singers"
     },
     {
+      "id1": 76,
+      "id2": 115,
+      "name": "Two-Wheeled Speed Racers"
+    },
+    {
       "id1": 77,
       "id2": 81,
       "name": "Obsessed with Maids"
@@ -2338,6 +2368,11 @@
       "name": "Innocent Girls"
     },
     {
+      "id1": 94,
+      "id2": 134,
+      "name": "Innocent Moral Philosophers"
+    },
+    {
       "id1": 97,
       "id2": 98,
       "name": "Cute Idol Duo"
@@ -2398,6 +2433,11 @@
       "name": "Smart Innovative Girls"
     },
     {
+      "id1": 117,
+      "id2": 133,
+      "name": "Genius Blondes"
+    },
+    {
       "id1": 119,
       "id2": 129,
       "name": "Costume Makers"
@@ -2411,6 +2451,16 @@
       "id1": 125,
       "id2": 130,
       "name": "Curious Sisters"
+    },
+    {
+      "id1": 131,
+      "id2": 132,
+      "name": "Top Hatted Resort Girls"
+    },
+    {
+      "id1": 133,
+      "id2": 134,
+      "name": "Anti-Ageist Counterparts"
     }
   ]
 }
