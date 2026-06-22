@@ -101,7 +101,7 @@ export class Groups implements OnInit {
       {
         name: "No Hat Wearers (Moe)",
         description: "Characters known for wearing no hats but are still considered moe. Maid headdresses don't count.",
-        characterIds: [8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76]
+        characterIds: [8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134]
       },
       {
         name: "Glasses Wearers",
@@ -116,7 +116,7 @@ export class Groups implements OnInit {
       {
         name: "Twintails",
         description: "Characters known for having long twintails",
-        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129]
+        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 133]
       },
       {
         name: "Thigh Boot Wearers",
@@ -126,7 +126,7 @@ export class Groups implements OnInit {
       {
         name: "Pink Girls",
         description: "Characters known for wearing pink or being associated with the color pink",
-        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110, 120, 121, 131, 132]
+        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110, 120, 121, 131, 132, 134]
       },
       {
         name: "Blue Girls",
@@ -214,9 +214,9 @@ export class Groups implements OnInit {
         characterIds: [11, 13, 18, 25, 27, 35, 47, 51, 66, 84, 94]
       },
       {
-        "name": "Generational Last Places",
-        "description": "Characters who had the least chats in their respective generations. In cases of ties, the least iconic character is chosen.",
-        "characterIds": [17, 20, 23, 32, 38, 50, 56, 71, 81, 96]
+        name: "Generational Last Places",
+        description: "Characters who had the least chats in their respective generations. In cases of ties, the least iconic character is chosen.",
+        characterIds: [17, 20, 23, 32, 38, 50, 56, 71, 81, 96]
       },
     ];
 
