@@ -69,6 +69,16 @@ export class Trios implements OnInit {
         characterShortNames: ["Celestia", "Alenka", "Beatrix"]
       },
       {
+        name: "Azalea's Sisters",
+        description: "Azalea and her sisters",
+        characterShortNames: ["Iris", "Azalea", "Ellie"]
+      },
+      {
+        name: "The Lewis Family",
+        description: "Members of the Lewis family",
+        characterShortNames: ["Nora", "Parker", "Rowan"]
+      },
+      {
         name: "Traditional Ladies",
         description: "Elegant characters embodying traditional feminine grace",
         characterShortNames: ["Primelle", "Celestia", "Elizabeth"]

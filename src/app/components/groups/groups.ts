@@ -81,7 +81,7 @@ export class Groups implements OnInit {
       {
         name: "Top Hat Wearers",
         description: "Characters known for wearing top hats",
-        characterIds: [13, 31, 39, 58, 64, 94, 109, 110, 131, 132]
+        characterIds: [13, 31, 39, 58, 64, 94, 109, 110, 131, 132, 135]
       },
       {
         name: "Witch Hat Wearers",
@@ -124,13 +124,18 @@ export class Groups implements OnInit {
         characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123]
       },
       {
-        name: "Pink Girls",
-        description: "Characters known for wearing pink or being associated with the color pink",
-        characterIds: [8, 17, 19, 26, 29, 38, 39, 51, 58, 67, 76, 96, 110, 120, 121, 131, 132, 134]
+        name: "Pink-Haired Girls",
+        description: "Characters known for having pink hair",
+        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134]
+      },
+      {
+        name: "Blonde Girls",
+        description: "Girls known for having blonde hair",
+        characterIds: [21, 27, 38, 46, 75, 79, 87, 103, 108, 109, 110, 117, 122, 129, 133, 135]
       },
       {
         name: "Blue Girls",
-        description: "Characters known for wearing blue or being associated with the color blue",
+        description: "Characters known for having blue hair or being associated with the color blue",
         characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 132]
       },
       {
@@ -141,12 +146,12 @@ export class Groups implements OnInit {
       {
         name: "Younger Siblings",
         description: "Characters who are younger siblings. ChaoMario isn't siblings with Max.",
-        characterIds: [69, 82, 110, 122, 125]
+        characterIds: [69, 82, 110, 122, 125, 135]
       },
       {
         name: "Older Siblings",
         description: "Characters who are older siblings. Max isn't siblings with ChaoMario.",
-        characterIds: [90, 81, 109, 129, 130]
+        characterIds: [90, 81, 109, 129, 130, 122]
       },
       {
         name: "Cursed Rule Breakers",
