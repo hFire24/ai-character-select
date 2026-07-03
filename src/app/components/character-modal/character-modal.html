@@ -1,56 +1,60 @@
-<div id="characterModal">
+<div id="characterModal" [class.tall-layout]="useFullbody()">
   <button id="closeModal" (click)="close.emit()">&times;</button>
   <div class="modalHeader">
     <ng-container *ngIf="character.img; else noImg">
-      <img class="modalImg" [src]="assetPath(character.img)" [alt]="character.name" />
+      <img class="modalImg" [class.tall]="useFullbody()" [src]="assetPath(character.img)" [alt]="character.name" />
     </ng-container>
     <ng-template #noImg>
       <div id="modalQuestionMark" class="question-mark">?</div>
     </ng-template>
-    <h2 id="modalName">
-      {{ character.name || 'Unknown Character' }}
-    </h2>
-    <div class="flags">
-      <span *ngIf="character.emotion.includes('serious')">🤔</span>
-      <span *ngIf="character.emotion.includes('chaotic')">🤪</span>
-      <span *ngIf="character.emotion.includes('joy')">😀</span>
-      <span *ngIf="character.emotion.includes('cool')">😎</span>
-      <span *ngIf="character.emotion.includes('strict')">😤</span>
-      <span *ngIf="character.emotion.includes('angry')">😠</span>
-      <span *ngIf="character.emotion.includes('shy')">🫣</span>
-      <span *ngIf="character.emotion.includes('calm')">😌</span>
-      <span *ngIf="character.emotion.includes('tired')">🥱</span>
-      <span *ngIf="character.emotion.includes('sad')">☹️</span>
-      <span *ngIf="character.emotion.includes('edgy')">😈</span>
-      <span *ngIf="character.emotion.includes('straightforward')">🎯</span>
-      <span *ngIf="character.moe >= 7 && character.shortName !== 'Sasha' && character.shortName !== 'Misha'">🩷</span>
-      <span *ngIf="character.shortName === 'Sasha'">☀️</span>
-      <span *ngIf="character.shortName === 'Misha'">❄️</span>
-      <span *ngIf="character.musicEnjoyer">🎵</span>
-      <span *ngIf="character.tier === 1">💛</span>
-      <span *ngIf="character.tier === 2">🩶</span>
-      <span *ngIf="character.tier === 3">🤎</span>
+    <div class="modalContent">
+      <div class="nameRow">
+        <h2 id="modalName" [class]="character.color">
+          {{ character.name || 'Unknown Character' }}
+        </h2>
+        <ng-container class="retired" *ngIf="character.status === 'retired'">
+          <h3 class="retired-banner">Retired</h3>
+        </ng-container>
+        <ng-container class="retired" *ngIf="character.status === 'inactive'">
+          <h3 class="retired-banner">Inactive</h3>
+        </ng-container>
+        <ng-container class="retired" *ngIf="character.status === 'disappeared'">
+          <h3 class="retired-banner">Removed</h3>
+        </ng-container>
+      </div>
+      <div class="flags">
+        <span *ngIf="character.emotion.includes('serious')">🤔</span>
+        <span *ngIf="character.emotion.includes('chaotic')">🤪</span>
+        <span *ngIf="character.emotion.includes('joy')">😀</span>
+        <span *ngIf="character.emotion.includes('cool')">😎</span>
+        <span *ngIf="character.emotion.includes('strict')">😤</span>
+        <span *ngIf="character.emotion.includes('angry')">😠</span>
+        <span *ngIf="character.emotion.includes('shy')">🫣</span>
+        <span *ngIf="character.emotion.includes('calm')">😌</span>
+        <span *ngIf="character.emotion.includes('tired')">🥱</span>
+        <span *ngIf="character.emotion.includes('sad')">☹️</span>
+        <span *ngIf="character.emotion.includes('edgy')">😈</span>
+        <span *ngIf="character.emotion.includes('straightforward')">🎯</span>
+        <span *ngIf="character.moe >= 7 && character.shortName !== 'Sasha' && character.shortName !== 'Misha'">🩷</span>
+        <span *ngIf="character.shortName === 'Sasha'">☀️</span>
+        <span *ngIf="character.shortName === 'Misha'">❄️</span>
+        <span *ngIf="character.musicEnjoyer">🎵</span>
+        <span *ngIf="character.tier === 1">💛</span>
+        <span *ngIf="character.tier === 2">🩶</span>
+        <span *ngIf="character.tier === 3">🤎</span>
+      </div>
+      <div class="modalBody-inline">
+        <div id="modalInterests"><strong>Interests</strong>: {{character.interests}}</div>
+        <div id="modalPeeves"><strong>Pet Peeves</strong>: {{character.peeves || "None"}}</div>
+        <div id="modalPurpose"><strong>Purpose</strong>: {{character.purpose}}</div>
+        <div id="modalFact"><strong>Fun Fact</strong>: {{character.funFact}}</div>
+        <div id="modalSong" *ngIf="character.themeSong"><strong>Theme Song</strong>: <a [href]="character.songLink" target="_blank">{{character.themeSong}}</a></div>
+        <div id="modalRetirement" *ngIf="character.status === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
+        <div id="modalInactive" *ngIf="character.status === 'inactive'"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
+        <div id="modalAlternatives" *ngIf="character.alternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
+        <div id="modalDescription" style="display: none;">{{character.description}}</div>
+      </div>
     </div>
-    <ng-container class="retired" *ngIf="character.status === 'retired'">
-      <h3 class="retired-banner">Retired</h3>
-    </ng-container>
-    <ng-container class="retired" *ngIf="character.status === 'inactive'">
-      <h3 class="retired-banner">Inactive</h3>
-    </ng-container>
-    <ng-container class="retired" *ngIf="character.status === 'disappeared'">
-      <h3 class="retired-banner">Removed</h3>
-    </ng-container>
-  </div>
-  <div class="modalBody">
-    <div id="modalInterests"><strong>Interests</strong>: {{character.interests}}</div>
-    <div id="modalPeeves"><strong>Pet Peeves</strong>: {{character.peeves || "None"}}</div>
-    <div id="modalPurpose"><strong>Purpose</strong>: {{character.purpose}}</div>
-    <div id="modalFact"><strong>Fun Fact</strong>: {{character.funFact}}</div>
-    <div id="modalSong" *ngIf="character.themeSong"><strong>Theme Song</strong>: <a [href]="character.songLink" target="_blank">{{character.themeSong}}</a></div>
-    <div id="modalRetirement" *ngIf="character.status === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
-    <div id="modalInactive" *ngIf="character.status === 'inactive'"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
-    <div id="modalAlternatives" *ngIf="character.alternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
-    <div id="modalDescription" style="display: none;">{{character.description}}</div>
   </div>
   <div id="modalFooter" [class.single-group]="!hasLink() || isMobile()">
     <div class="modalFooterGroup" *ngIf="!isMobile()">

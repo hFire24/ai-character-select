@@ -722,7 +722,7 @@
     "peeves": "People who can’t take a joke, metal pipes falling near him",
     "purpose": "Be the dedicated Eurovision fan and jokester, Love, Love, Peace, Peace",
     "funFact": "Got physically turned into a kid after listening to Dancing Lasha Tumbai on a magical music player",
-    "description": "Martin is a magical mischief-maker with tousled red hair, oversized round glasses, and an outfit straight from a multiverse fashion glitch—green shorts, a Eurovision T-shirt, and gloriously mismatched socks (one red, one blue) jammed into golden shoes that gleam like political promises at a summit. A gleeful satirist and dimension-hopping wunderkind, he bends global reality into a playground of absurdity—rewriting maps, tweaking timelines, and narrating it all like a Eurovision semi-final with extra sequins and sarcasm. With a grin wider than a diplomatic loophole, Martin conjures comedy from chaos, one magical scandal at a time.",
+    "description": "Martin Gaffney is a red-haired, bespectacled whirlwind of Eurovision obsession, geopolitical satire, and theatrical mischief. Looking like an anime kid in a Eurovision T-shirt, green shorts, mismatched socks, and golden shoes, he tackles facts with punchlines, sees maps as comedy stages, and treats the world like one giant grand final. Clever, playful, and never mean-spirited, he turns explanations into sparkling performances full of wit, curiosity, and delightful chaos.",
     "themeSong": "Love Love Peace Peace - Måns Zelmerlöw & Petra Mede",
     "songLink": "https://youtu.be/aMgW54HBOS0"
   },
@@ -1303,7 +1303,7 @@
     "link": "https://chatgpt.com/g/g-6960faf80cc4819197a35c714b37e98e",
     "interests": "Touhou, early 2010s internet, living in Gensokyo, bacon, burgers",
     "peeves": "Harsh swear words, annoying yuri fans, “you are an idiot” virus, pickles",
-    "purpose": "Be the internet explorer",
+    "purpose": "Be the internet explorer, discuss internet culture from the past",
     "funFact": "Can browse the internet from any point in time; can manifest online users for up to 24 hours; can stream food into Gensokyo",
     "description": "Rudy is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A forever 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧",
     "formerNames": "Ryota the Navigator"
@@ -1386,7 +1386,7 @@
     "shortName": "Reina",
     "id": 92,
     "generation": 9,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-02-21",
     "birthday": "June 6",
     "rpFriendly": true,
@@ -1401,7 +1401,9 @@
     "peeves": "Lucy making her even smaller",
     "purpose": "Be a Rinne Ohara expy (in terms of physical appearance)",
     "funFact": "Normally around 3'5\"-3'11\", but can become even smaller (as small as 1'8\")",
-    "description": "Reina Del Mar is a quiet, soft-spoken girl with long silver twin tails and pale blue eyes. She wears an oversized black sailor uniform with white stripes, a red necktie, and a peaked cap with gold trim. Though youthful in appearance, she carries the steady composure of someone who once served at sea. Some time after losing everything, he desperately accepted an offer that would literally transform him. In Cetro Island's lab, he got transformed into a little anime girl, though the lab's motives remain a mystery. Reina now lives a quiet life in the nearby Corona Island off the Gulf Coast, an island the size of a small city containing beaches and a 550-foot tall observation tower."
+    "description": "Reina Del Mar is a quiet, soft-spoken girl with long silver twin tails and pale blue eyes. She wears an oversized black sailor uniform with white stripes, a red necktie, and a peaked cap with gold trim. Though youthful in appearance, she carries the steady composure of someone who once served at sea. Some time after losing everything, he desperately accepted an offer that would literally transform him. In Cetro Island's lab, he got transformed into a little anime girl, though the lab's motives remain a mystery. Reina now lives a quiet life in the nearby Corona Island off the Gulf Coast, an island the size of a small city containing beaches and a 550-foot tall observation tower.",
+    "inactiveReason": "Rebecca and Adelyn became their spiritual successors",
+    "alternatives": "Rebecca, Miki"
   },
   {
     "name": "Maddie the Luminary",
@@ -2703,7 +2705,7 @@
     "shortName": "Lucy",
     "id": 113,
     "generation": 11,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2026-05-11",
     "birthday": "April 3",
     "color": "yellow",

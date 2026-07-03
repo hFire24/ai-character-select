@@ -45,9 +45,6 @@
 #characterModal > .modalHeader {
   padding: 1.25rem 1.25rem 0 1.25rem;
 }
-#characterModal > .modalBody {
-  padding: 0;
-}
 #characterModal > #modalFooter {
   padding-top: 1rem;
 }
@@ -75,13 +72,40 @@
 /* === Header layout: image + name + flags === */
 .modalHeader {
   display: grid;
-  grid-template-columns: 120px auto auto;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "img name retired"
-    "img flags retired";
-  align-items: center;
-  gap: 0rem 1rem;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "img content";
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.flags {
+  display: inline-flex;
+  align-items: left;
+  font-size: 0.95rem;
+  color: #b8c6d9;
+  justify-content: flex-start;
+}
+
+.modalBody-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.98rem;
+  text-align: left;
+  
+  div {
+    margin: 0;
+    
+    strong { color: #e8edf3; }
+    a { text-decoration: underline; }
+  }
 }
 
 .modalImg,
@@ -96,6 +120,10 @@
   margin-top: 0px;
 }
 
+.modalImg.tall {
+  height: 180px;
+}
+
 /* placeholder if no image */
 #modalQuestionMark {
   display: grid;
@@ -106,53 +134,60 @@
 }
 
 #modalName {
-  grid-area: name;
   margin: 0;
   font-size: clamp(1.25rem, 2.2vw, 1.8rem);
   line-height: 1.2;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 0.2px;
+  //text-transform: uppercase;
+  //font-variant: small-caps;
   text-align: left;
+  font-family: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.red {
+  color: #ff5555;
+}
+.orange {
+  color: #f97316;
+}
+.yellow {
+  color: #facc15;
+}
+.blue {
+  color: #3b96ff;
+}
+.pink {
+  color: #f472b6;
+}
+.black {
+  color: #6b7280;
+}
 /* “serious/chaos” flags row */
-.modalHeader > .flags {
-  grid-area: flags;
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.95rem;
-  color: #b8c6d9;
-}
-
 .modalHeader > .retired {
-  grid-area: retired;
   display: inline-flex;
   align-items: center;
   font-size: 0.95rem;
-  background: darkred;
+  justify-content: flex-start;
 }
 
 .retired-banner {
   font-weight: 800;
   text-align: right;
+  white-space: nowrap;
 }
 
 h3.retired-banner {
   margin: 0;
   margin-right: 20px;
-}
-
-/* === Body rows === */
-.modalBody div {
-  margin: .6rem 1.25rem 0 1.25rem; /* align with header padding */
-  font-size: 0.98rem;
-  text-align: left;
-  &::first-letter { text-transform: uppercase; }
-
-  /* label: value pattern */
-  strong { color: #e8edf3; }
-
-  a { text-decoration: underline;}
+  font-size: 1rem;
 }
 
 /* === Footer === */
@@ -263,17 +298,15 @@ h3.retired-banner {
 @media (max-width: 560px) {
   .modalHeader {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
       "img"
-      "name"
-      "flags";
-    justify-items: center;
-    text-align: center;
+      "content";
+    justify-items: stretch;
   }
 
   #modalName {
-    text-align: center;
+    text-align: left;
   }
 
   #characterModal > .modalHeader {
@@ -283,11 +316,6 @@ h3.retired-banner {
   #modalFooter {
     align-items: center;
     justify-content: center;
-  }
-
-  h3.retired-banner {
-    margin: 0;
-    margin-right: 0;
   }
 }
 
@@ -310,7 +338,6 @@ h3.retired-banner {
 // iOS font fix
 :host-context(body.ios-device) {
   #modalQuestionMark,
-  #modalName,
   .retired-banner {
     font-family: 'Archivo Black', -apple-system, BlinkMacSystemFont, sans-serif;
   }

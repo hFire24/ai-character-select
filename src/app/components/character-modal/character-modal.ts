@@ -238,7 +238,36 @@ export class CharacterModal {
   }
 
   assetPath(path: string) {
-    return 'assets/Icons/' + path;
+    if (!path) return '';
+    // Expecting formats like "main/xyz" or "extended/xyz"
+    const parts = path.split('/');
+    const rest = parts.slice(1).join('/');
+    const fullbodyPath = `assets/Icons/tall/${rest}`;
+
+    if (this.assetExists(fullbodyPath)) {
+      return fullbodyPath;
+    }
+
+    return `assets/Icons/${path}`;
+  }
+
+  useFullbody(): boolean {
+    if (!this.character.img) return false;
+    const parts = this.character.img.split('/');
+    const rest = parts.slice(1).join('/');
+    const fullbodyPath = `assets/Icons/tall/${rest}`;
+    return this.assetExists(fullbodyPath);
+  }
+
+  private assetExists(path: string): boolean {
+    try {
+      const request = new XMLHttpRequest();
+      request.open('HEAD', path, false);
+      request.send();
+      return request.status >= 200 && request.status < 400;
+    } catch {
+      return false;
+    }
   }
 
   isMobile(): boolean {
@@ -266,7 +295,8 @@ export class CharacterModal {
     const avatarCS  = avatarRef ? getComputedStyle(avatarRef) : null;
 
     // Dimensions / radius from CSS (fallbacks if missing)
-    const AVATAR_SIZE   = Math.round(parseFloat(avatarCS?.width || '160')) || 160;
+    const AVATAR_WIDTH   = Math.round(parseFloat(avatarCS?.width || '160')) || 160;
+    const AVATAR_HEIGHT  = this.useFullbody() ? 180 : AVATAR_WIDTH; // 2:3 ratio for tall, 1:1 for others
     const AVATAR_RADIUS = Math.round(parseFloat(avatarCS?.borderRadius || '16')) || 16;
 
     // Gap between avatar and text column
@@ -426,7 +456,7 @@ export class CharacterModal {
     const W = Math.max(600, Math.ceil(modalEl?.clientWidth || 800) + 50);
     const P = 24;
     // text column starts to the right of the avatar
-    const textX = P + AVATAR_SIZE + AVATAR_GAP;
+    const textX = P + AVATAR_WIDTH + AVATAR_GAP;
     // body rows: label (bold) + value (regular), same line
     const labelGap = 8;
     // available width for text/wrapping
@@ -444,10 +474,10 @@ export class CharacterModal {
 
       const isDescription = r.id === 'modalDescription';
 
-      // For description: no label, starts from left edge
+      // For description: no label, starts from left edge (or right edge if tall)
       if (isDescription) {
         measCtx.font = r.valueFont;
-        const maxValueWidth = W - P - P; // Full width minus padding on both sides
+        const maxValueWidth = this.useFullbody() ? contentWidth : (W - P - P);
         const valueLines = wrapText(measCtx, r.value || '', maxValueWidth);
         const lineHeight = parseFloat((r.valueFont.split(' ')[1] || '16px'));
         const height = valueLines.length * lineHeight + 6;
@@ -458,8 +488,8 @@ export class CharacterModal {
       // Check if this row will be below the avatar
       const yPosition = bodyHeight;
       const rowStartsAtY = P + titleSize + 12 + yPosition;
-      const avatarBottom = P + AVATAR_SIZE;
-      const canMoveLeft = rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN;
+      const avatarBottom = P + AVATAR_HEIGHT;
+      const canMoveLeft = !this.useFullbody() && (rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN);
 
       // measure label width using label font
       measCtx.font = r.labelFont;
@@ -484,7 +514,7 @@ export class CharacterModal {
     );
 
     // final canvas height must fit both avatar and text
-    const H = Math.max(P + AVATAR_SIZE + P, P + textBlockHeight + P);
+    const H = Math.max(P + AVATAR_HEIGHT + P, P + textBlockHeight + P);
 
     const canvas = document.createElement('canvas');
     canvas.width = W * dpr;
@@ -515,31 +545,32 @@ export class CharacterModal {
     roundRect(0.5, 0.5, W - 1, H - 1, RADIUS);
     ctx.stroke();
 
-    const ax = P, ay = P, a = AVATAR_SIZE;
+    const ax = P, ay = P;
+    const aw = AVATAR_WIDTH, ah = AVATAR_HEIGHT;
     // rounded-rect clip
     ctx.save();
     ctx.beginPath();
-    const r = Math.min(AVATAR_RADIUS, a / 2);
+    const r = Math.min(AVATAR_RADIUS, aw / 2, ah / 2);
     ctx.moveTo(ax + r, ay);
-    ctx.arcTo(ax + a, ay, ax + a, ay + a, r);
-    ctx.arcTo(ax + a, ay + a, ax, ay + a, r);
-    ctx.arcTo(ax, ay + a, ax, ay, r);
-    ctx.arcTo(ax, ay, ax + a, ay, r);
+    ctx.arcTo(ax + aw, ay, ax + aw, ay + ah, r);
+    ctx.arcTo(ax + aw, ay + ah, ax, ay + ah, r);
+    ctx.arcTo(ax, ay + ah, ax, ay, r);
+    ctx.arcTo(ax, ay, ax + aw, ay, r);
     ctx.closePath();
     ctx.clip();
 
     // draw image or placeholder
     if (avatarImg) {
-      ctx.drawImage(avatarImg, ax, ay, a, a);
+      ctx.drawImage(avatarImg, ax, ay, aw, ah);
     } else {
       // match your '?' block colors if you want; simple fallback:
       ctx.fillStyle = '#1c2030';
-      ctx.fillRect(ax, ay, a, a);
+      ctx.fillRect(ax, ay, aw, ah);
       ctx.fillStyle = '#8ea0ff';
-      ctx.font = '900 ' + Math.round(a * 0.5) + 'px ' + (nameCS?.fontFamily || 'system-ui, -apple-system, Segoe UI, Inter, sans-serif');
+      ctx.font = '900 ' + Math.round(Math.min(aw, ah) * 0.5) + 'px ' + (nameCS?.fontFamily || 'system-ui, -apple-system, Segoe UI, Inter, sans-serif');
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText('?', ax + a / 2, ay + a / 2);
+      ctx.fillText('?', ax + aw / 2, ay + ah / 2);
     }
     ctx.restore();
 
@@ -568,12 +599,13 @@ export class CharacterModal {
     for (const r of preparedRows) {
       if (!r) continue;
       
-      // Special handling for description: no label, starts from left edge
+      // Special handling for description: no label, starts from left edge (or right edge if tall)
       if (r.isDescription) {
         ctx.fillStyle = r.color;
         ctx.font = r.valueFont;
+        const descX = this.useFullbody() ? textX : P;
         for (let i = 0; i < r.valueLines.length; i++) {
-          ctx.fillText(r.valueLines[i], P, y);
+          ctx.fillText(r.valueLines[i], descX, y);
           y += r.lineHeight;
         }
         y += 6;
@@ -582,8 +614,8 @@ export class CharacterModal {
 
       // Check if this row is below the avatar (in blank space to the left)
       const rowStartsAtY = P + titleSize + 12 + r.yPosition;
-      const avatarBottom = P + AVATAR_SIZE;
-      const canMoveLeft = rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN;
+      const avatarBottom = P + AVATAR_HEIGHT;
+      const canMoveLeft = !this.useFullbody() && (rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN);
 
       const rowX = canMoveLeft ? P : textX;
 
