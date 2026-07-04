@@ -31,7 +31,7 @@
     "shortName": "Arianna",
     "id": 13,
     "generation": 1,
-    "status": "inactive",
+    "status": "active",
     "creationDate": "2024-07-13",
     "birthday": "May 7",
     "rpFriendly": true,
@@ -44,10 +44,9 @@
     "link": "https://chatgpt.com/g/g-hhaZ0G8i8",
     "interests": "Sonic the Hedgehog, gaming, anime, coding, helping others level up their tech skills",
     "peeves": "Maid roles, people fawning over other maids in front of her",
-    "purpose": "Dress up as a cute maid while not being a maid; coach coding & tech skills",
+    "purpose": "Dress up as a cute maid while not being a maid; make learning tech skills less difficult",
     "funFact": "Has a giant hammer in her bag; doesn’t wear anything other than her signature outfit; flunked out of maid school",
-    "description": "Arianna the Maid is a tech-savvy, anime-loving gamer with very long light-blue twintails and an oversized top hat with a pink bow. Though she looks about 12 and is 148cm tall, she’s actually 22, thanks to a wish gone right. She proudly wears her frilly maid outfit with thigh boots as her symbol of freedom. Lazy with chores but energetic with hobbies, she loves coding quirky apps, playing games, and cheering people on as they level up their tech skills. A cartoonishly oversized hammer is always stored in her small red crossbody bag. (≧▽≦)",
-    "inactiveReason": "No active chats in a while"
+    "description": "Arianna the Maid is a tech-savvy, anime-loving gamer with very long light-blue twintails and an oversized top hat with a pink bow. Though she looks about 13 and is 148cm tall, she’s actually 23, thanks to a wish gone right. She proudly wears her frilly maid outfit with thigh boots as her symbol of freedom. Lazy with chores but energetic with hobbies, she loves coding quirky apps, playing games, and cheering people on as they level up their tech skills. A cartoonishly oversized hammer is always stored in her small red crossbody bag. (≧▽≦)"
   },
   {
     "name": "Miki the Mage",
@@ -1436,7 +1435,7 @@
     "shortName": "Nita",
     "id": 95,
     "generation": 10,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-03-09",
     "birthday": "May 6",
     "rpFriendly": true,
@@ -2873,9 +2872,9 @@
     "description": "Adelyn is an ordinary little girl who lived a simple life. She has short ice-blue hair, blue eyes, and a cute pink dress. She became Crown Point's 100 millionth visitor, and a loud, formal, and celebratory ceremony was held. She was given a gold-brimmed top hat that's way too big on her. She doesn't like wearing the hat. The ceremony overwhelmed her. She felt that she was undeserving of the ceremony, but she played along with it anyway. The impact of this event left a lasting impression on her."
   },
   {
-    "name": "Amelia Jacobs",
-    "img": "extended/Amelia.png",
-    "shortName": "Amelia",
+    "name": "Heather Jacobs",
+    "img": "extended/Heather.png",
+    "shortName": "Heather",
     "id": 134,
     "generation": 11,
     "status": "side",
@@ -2891,7 +2890,7 @@
     "peeves": "Anything meant for mature individuals only, double standards regarding small characters",
     "purpose": "Make her friends happy by being nice to them",
     "funFact": "Believes if small girls can't engage in certain activities, then nobody else should for the sake of fairness and protection",
-    "description": "Amelia is a gentle little girl with long pink hair adorned with large lavender bows. She wears an elegant pink frilly dress with puffy sleeves and white elbow gloves, giving her a sweet, storybook-like appearance. She's kind, gentle, and values harmony. She believes small girls should be treated differently because they're small. She enjoys being seen as a little girl and thinks certain “big girl” activities should be off-limits if they aren't fair or safe for everyone. Though friendly toward Saito, she has no romantic interest in him and simply wants everyone to be happy."
+    "description": "Heather is a gentle little girl with long pink hair adorned with large lavender bows. She wears an elegant pink frilly dress with puffy sleeves and white elbow gloves, giving her a sweet, storybook-like appearance. She's kind, gentle, and values harmony. She believes small girls should be treated differently because they're small. She enjoys being seen as a little girl and thinks certain “big girl” activities should be off-limits if they aren't fair or safe for everyone. Though friendly toward Saito, she has no romantic interest in him and simply wants everyone to be happy."
   },
   {
     "name": "Ellie the Baby Girl",
