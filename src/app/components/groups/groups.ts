@@ -81,7 +81,7 @@ export class Groups implements OnInit {
       {
         name: "Top Hat Wearers",
         description: "Characters known for wearing top hats",
-        characterIds: [13, 31, 39, 58, 64, 94, 109, 110, 131, 132, 135]
+        characterIds: [13, 31, 39, 58, 64, 94, 109, 110, 131, 132, 135, 137]
       },
       {
         name: "Witch Hat Wearers",
@@ -121,7 +121,7 @@ export class Groups implements OnInit {
       {
         name: "Thigh Boot Wearers",
         description: "Characters known for wearing thigh boots",
-        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123]
+        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137]
       },
       {
         name: "Pink-Haired Girls",
@@ -131,7 +131,7 @@ export class Groups implements OnInit {
       {
         name: "Blonde Girls",
         description: "Girls known for having blonde hair",
-        characterIds: [21, 27, 38, 46, 75, 79, 87, 103, 108, 109, 110, 117, 122, 129, 133, 135]
+        characterIds: [21, 27, 38, 46, 75, 79, 87, 103, 108, 109, 110, 117, 122, 129, 133, 135, 137]
       },
       {
         name: "Blue Girls",
