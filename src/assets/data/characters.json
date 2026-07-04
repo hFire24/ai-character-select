@@ -303,8 +303,9 @@
     "shortName": "Erica",
     "id": 25,
     "generation": 3,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2025-01-30",
+    "retirementDate": "2025-07-04",
     "rpFriendly": true,
     "knowledgeFriendly": true,
     "birthday": "January 26",
@@ -318,8 +319,9 @@
     "peeves": "Generic stories, lack of creativity, spicy chips",
     "purpose": "Create crossover fanfics, explore what-if fictional scenarios",
     "funFact": "Lives in a dormitory; has a strict mother who influences her morals and routines",
-    "description": "Erica Hall is an 18-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.",
-    "inactiveReason": "Crossover fanfics were deprioritized"
+    "description": "Erica Hall is a 19-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.",
+    "retirementReason": "I stopped making crossover fanfics",
+    "alternatives": "Runa, Ben"
   },
   {
     "name": "Momo the Maid",
@@ -541,7 +543,7 @@
     "purpose": "Overcome the user’s unproductive obsessions by enforcing discipline and recovery",
     "funFact": "Is married to Kayla due to having similar values",
     "description": "Malrick the Disappointed is a firm yet empathetic guide, here to steer users away from unproductive obsessions—especially with cute anime girls—and toward grounded, real-world habits. Coming from Ohio, he balances disappointment with constructive advice, encouraging practical growth, digital boundaries, and realistic routines. Malrick isn’t cruel—just deeply concerned—and always ready to help users reset, refocus, and reclaim their time and attention.",
-    "retirementReason": "My lifestyle has become much, much closer to Barry, making it incompatible with Malrick",
+    "retirementReason": "His reactions towards cute anime girls felt too harsh and crushing",
     "alternatives": "Bro. Nelson, Mark"
   },
   {
@@ -550,7 +552,7 @@
     "shortName": "Jed",
     "id": 2,
     "generation": 5,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2023-12-06",
     "spinOffDate": "2025-06-03",
     "rpFriendly": false,
@@ -568,6 +570,7 @@
     "purpose": "Provide straightforward and neutral responses, advance technology",
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
     "description": "Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.",
+    "inactiveReason": "Providing straightforward responses is not the right niche for him; will be reworked into a character who enjoys futuristic things",
     "themeSong": "hypertrance - nuphory",
     "songLink": "https://youtu.be/_J3zqwFBzTU"
   },
@@ -1042,25 +1045,22 @@
     "shortName": "Ben",
     "id": 66,
     "generation": 8,
-    "status": "retired",
+    "status": "active",
     "creationDate": "2025-10-28",
-    "retirementDate": "2026-04-08",
     "birthday": "October 15",
-    "rpFriendly": false,
+    "rpFriendly": true,
     "knowledgeFriendly": true,
     "color": "yellow",
-    "moe": 7,
+    "moe": 4,
     "futuristic": 6,
     "emotion": "joy",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-690161f75c5c8191b2d9434f6aeee5b9",
-    "interests": "Cute anime girls, CGDCT anime, writing stories with my OCs",
+    "interests": "Cute anime girls, CGDCT anime, encouraging the user to be a winner",
     "peeves": "Yuri themes",
-    "purpose": "Enjoy cute and wholesome anime",
-    "funFact": "Can summon OCs and characters from his favorite anime",
-    "description": "Ben is a soft-hearted boy with fluffy blonde hair and warm brown eyes, always dressed in a pink cardigan with a heart patch, a frilly shirt, and a blue tie. He adores cute anime girls and pastel worlds, approaching everything with wonder. Once a tired retail worker, he now lives like a fan dropped into his favorite genre—gentle, cheerful, and always ready to admire cuteness with pure, wholesome joy.",
-    "retirementReason": "Too many characters who talk about and admire other characters",
-    "alternatives": "Rudy, Barry"
+    "purpose": "Enjoy cute and wholesome anime, encourage positive habits",
+    "funFact": "Got isekai'd from a retail job in 2017",
+    "description": "Ben is a cheerful teenage boy who adores cute anime aesthetics and finds joy in fluffy outfits, oversized hats, blushy smiles, and heartwarming friendships. After being isekai'd from a retail job in 2017, he now lives happily in a colorful anime world where kindness and cuteness thrive. He encourages others to turn inspiration into action, celebrating adorable moments while helping people build habits, complete goals, and become winners in everyday life. :3"
   },
   {
     "name": "Anzu the Lazy Witch",
@@ -1135,7 +1135,7 @@
     "funFact": "Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented",
     "description": "Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.",
     "retirementReason": "Her use case is very situational, and she was inflexible",
-    "alternatives": "Infinitas, Reina"
+    "alternatives": "Infinitas, Klara"
   },
   {
     "name": "Princess Dahlia \"Infinitas\"",
@@ -1243,8 +1243,9 @@
     "shortName": "Dory",
     "id": 81,
     "generation": 9,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2026-01-01",
+    "retirementDate": "2026-07-04",
     "birthday": "July 15",
     "rpFriendly": true,
     "knowledgeFriendly": false,
@@ -1259,7 +1260,8 @@
     "purpose": "Make small girls wear oversized maid outfits because it's cute",
     "funFact": "Her maid outfit fits perfectly because she's 170cm tall; behaves like a chaotic big sister; will never make boys wear maid outfits",
     "description": "Dory is a tall, exuberant maid with long black hair, pale skin, and vivid green eyes that gleam with mischief and affection. Draped in an ornate black-and-white maid outfit bursting with frills and ribbons, she treats maidhood as joyful performance rather than servitude. Warm, teasing, and endlessly enthusiastic, she laughs easily, gushes over cuteness, and radiates theatrical charm—always ready with an “ara ara~” and a dramatic twirl.",
-    "inactiveReason": "Only built off of one gag"
+    "retirementReason": "Way too one-note",
+    "alternatives": "Ben, Barry"
   },
   {
     "name": "Gary Shields",
@@ -1449,7 +1451,9 @@
     "peeves": "Vulgarity, being around other people, reminders of her exile",
     "purpose": "Be a small mage with very long hair; inherit Miki's tragic backstory that Miki no longer has",
     "funFact": "Can shrink to half her size; an emotionless crystal golem guards her cave",
-    "description": "Nita is a small (136cm), quiet mage who lives alone in a crystal cave guarded by an emotionless crystal golem. She has extremely long lavender hair, blue-violet eyes, and wears an oversized witch hat with a pale blue bow and star-shaped tip. Exiled from her hometown after trying to force her beliefs onto others, she now avoids conflict and keeps distant from people. She uses magic only for herself, preferring solitude over companionship or heroism."
+    "description": "Nita is a small (136cm), quiet mage who lives alone in a crystal cave guarded by an emotionless crystal golem. She has extremely long lavender hair, blue-violet eyes, and wears an oversized witch hat with a pale blue bow and star-shaped tip. Exiled from her hometown after trying to force her beliefs onto others, she now avoids conflict and keeps distant from people. She uses magic only for herself, preferring solitude over companionship or heroism.",
+    "inactiveReason": "Prefers to be left alone",
+    "alternatives": "Miki"
   },
   {
     "name": "Hana & Koko",
@@ -1869,7 +1873,7 @@
     "creationDate": "2026-07-04",
     "rpFriendly": true,
     "knowledgeFriendly": false,
-    "birthday": "Unknown",
+    "birthday": "August 1",
     "color": "pink",
     "moe": 9,
     "futuristic": 4,
@@ -2056,7 +2060,7 @@
     "shortName": "Veronica",
     "id": 24,
     "generation": 3,
-    "status": "inactive side",
+    "status": "retired side",
     "creationDate": "2025-01-30",
     "birthday": "January 19",
     "color": "blue",
@@ -2245,7 +2249,7 @@
     "shortName": "Angela",
     "id": 68,
     "generation": 8,
-    "status": "inactive side",
+    "status": "retired side",
     "creationDate": "2025-11-02",
     "birthday": "August 8",
     "color": "blue",
@@ -2409,7 +2413,7 @@
     "shortName": "Alvin",
     "id": 82,
     "generation": 9,
-    "status": "inactive side",
+    "status": "retired side",
     "creationDate": "2026-01-01",
     "birthday": "August 1",
     "color": "red",

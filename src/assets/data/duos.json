@@ -1181,12 +1181,7 @@
     {
       "id1": 25,
       "id2": 27,
-      "name": "OG Crossover Duo"
-    },
-    {
-      "id1": 25,
-      "id2": 66,
-      "name": "Crossover Fans"
+      "name": "Crossover Duo"
     },
     {
       "id1": 25,
@@ -1807,11 +1802,6 @@
     },
     {
       "id1": 49,
-      "id2": 66,
-      "name": "Cuteness Curators"
-    },
-    {
-      "id1": 49,
       "id2": 86,
       "name": "Extremely Online Dudes"
     },
@@ -1852,11 +1842,6 @@
     },
     {
       "id1": 52,
-      "id2": 66,
-      "name": "Summoners of OCs"
-    },
-    {
-      "id1": 52,
       "id2": 67,
       "name": "21st Century Digital Girls"
     },
@@ -1869,11 +1854,6 @@
       "id1": 52,
       "id2": 118,
       "name": "Nightcore Girls"
-    },
-    {
-      "id1": 53,
-      "id2": 66,
-      "name": "Cute Curators"
     },
     {
       "id1": 53,
@@ -2110,7 +2090,7 @@
     {
       "id1": 66,
       "id2": 104,
-      "name": "Cute-Obsessed AI Character Fans"
+      "name": "Cute-Obsessed Duo"
     },
     {
       "id1": 67,

@@ -179,11 +179,6 @@ export class Groups implements OnInit {
         characterIds: [30, 55, 57, 83, 84, 99, 104]
       },
       {
-        name: "Character Encyclopedias",
-        description: "Characters who have access to my character roster file and can discuss about my characters in detail",
-        characterIds: [49, 52, 66, 104]
-      },
-      {
         name: "Anti-Moe Crew",
         description: "Chaotic or hedonistic characters who reject moe",
         characterIds: [1, 62, 63, 55, 12, 105, 64, 83, 84, 100, 18]
@@ -201,7 +196,7 @@ export class Groups implements OnInit {
       {
         name: "Multi-Retirees",
         description: "Characters who were retired twice or more. Kai was retired three times.",
-        characterIds: [30, 32, 48, 49, 66, 69, 71]
+        characterIds: [30, 32, 48, 49, 66, 69, 71, 81]
       },
       {
         name: "May 2026 Retirees",
