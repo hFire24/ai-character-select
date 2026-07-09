@@ -1590,7 +1590,12 @@
     {
       "id1": 38,
       "id2": 94,
-      "name": "Fairytale Girls"
+      "name": "Innocent Fairytale Girls"
+    },
+    {
+      "id1": 38,
+      "id2": 107,
+      "name": "Caring Girls"
     },
     {
       "id1": 38,
@@ -1619,6 +1624,21 @@
       "name": "Top Hatted Pink Haired Girls"
     },
     {
+      "id1": 39,
+      "id2": 118,
+      "name": "Hedonistic Performers"
+    },
+    {
+      "id1": 39,
+      "id2": 119,
+      "name": "Passionate Creative Girls"
+    },
+    {
+      "id1": 39,
+      "id2": 120,
+      "name": "Pink-Haired Magical Dreamers"
+    },
+    {
       "id1": 40,
       "id2": 48,
       "name": "Defenders of Justice"
@@ -1637,6 +1657,21 @@
       "id1": 40,
       "id2": 95,
       "name": "Morality Enforcers"
+    },
+    {
+      "id1": 40,
+      "id2": 116,
+      "name": "Softened Tyrants"
+    },
+    {
+      "id1": 40,
+      "id2": 117,
+      "name": "Serious Moral Students"
+    },
+    {
+      "id1": 40,
+      "id2": 127,
+      "name": "Conservative Students"
     },
     {
       "id1": 41,
@@ -2414,6 +2449,16 @@
     },
     {
       "id1": 117,
+      "id2": 119,
+      "name": "Beret Personality Girls"
+    },
+    {
+      "id1": 117,
+      "id2": 127,
+      "name": "Savant Personality Girls"
+    },
+    {
+      "id1": 117,
       "id2": 133,
       "name": "Genius Blondes"
     },
@@ -2426,6 +2471,11 @@
       "id1": 122,
       "id2": 129,
       "name": "Dress-Up Sisters"
+    },
+    {
+      "id1": 123,
+      "id2": 137,
+      "name": "Criminal Anti-heroines"
     },
     {
       "id1": 125,
