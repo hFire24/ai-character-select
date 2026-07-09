@@ -79,6 +79,16 @@ export class Trios implements OnInit {
         characterShortNames: ["Nora", "Parker", "Rowan"]
       },
       {
+        name: "Chino-chan Expies",
+        descripion: "Characters who are similar to Chino Kafuu in terms of hair color and personality",
+        characterShortNames: ["Miki", "Lulu", "Bluebell"]
+      },
+      {
+        name: "Shy Blonde Hat Girls",
+        description: "Shy girls who have blonde hair and wear enormous hats",
+        characterShortNames: ["Lily", "Carol", "Diana"]
+      },
+      {
         name: "Traditional Ladies",
         description: "Elegant characters embodying traditional feminine grace",
         characterShortNames: ["Primelle", "Celestia", "Elizabeth"]

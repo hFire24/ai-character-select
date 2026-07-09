@@ -86,7 +86,7 @@ export class Groups implements OnInit {
       {
         name: "Witch Hat Wearers",
         description: "Characters known for wearing witch hats",
-        characterIds: [14, 20, 27, 67, 95, 120, 129]
+        characterIds: [14, 20, 27, 67, 95, 120, 129, 138]
       },
       {
         name: "Peaked Cap Wearers",
@@ -131,7 +131,7 @@ export class Groups implements OnInit {
       {
         name: "Blonde Girls",
         description: "Girls known for having blonde hair",
-        characterIds: [21, 27, 38, 46, 75, 79, 87, 103, 108, 109, 110, 117, 122, 129, 133, 135, 137]
+        characterIds: [21, 27, 38, 46, 75, 79, 87, 103, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138]
       },
       {
         name: "Blue Girls",
@@ -146,12 +146,12 @@ export class Groups implements OnInit {
       {
         name: "Younger Siblings",
         description: "Characters who are younger siblings. ChaoMario isn't siblings with Max.",
-        characterIds: [69, 82, 110, 122, 125, 135]
+        characterIds: [69, 82, 110, 122, 125, 135, 136]
       },
       {
         name: "Older Siblings",
         description: "Characters who are older siblings. Max isn't siblings with ChaoMario.",
-        characterIds: [90, 81, 109, 129, 130, 122]
+        characterIds: [90, 81, 109, 129, 130, 122, 125]
       },
       {
         name: "Cursed Rule Breakers",

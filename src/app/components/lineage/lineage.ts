@@ -91,7 +91,8 @@ export class Lineage {
         104: [122, 123, 124, 125],
         107: [115, 116, 117, 118, 119, 120, 127],
         122: [129, 135],
-        125: [130, 136]
+        125: [130, 136],
+        128: [138]
         };
 
       // Validate: Check for characters with multiple parents
