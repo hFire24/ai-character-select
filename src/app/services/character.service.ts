@@ -15,6 +15,7 @@ export type Character = {
   rpFriendly?: boolean; // Optional field for RP friendliness
   knowledgeFriendly?: boolean; // Optional field for question friendliness
   musicEnjoyer?: boolean; // Optional field for music enjoyment
+  personalityGirl?: boolean; // Optional field for personality girl
   moe: number;
   futuristic: number; // New field for futuristic level
   emotion: string;

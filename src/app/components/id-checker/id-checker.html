@@ -113,6 +113,11 @@
           <span class="value">✓ Yes</span>
         </div>
 
+        <div class="detail-item" *ngIf="character.personalityGirl">
+          <span class="label">Personality Girl:</span>
+          <span class="value">✓ Yes</span>
+        </div>
+
         <div class="detail-item full-width" *ngIf="character.interests">
           <span class="label">Interests:</span>
           <span class="value">{{ character.interests }}</span>

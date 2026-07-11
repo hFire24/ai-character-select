@@ -50,6 +50,7 @@ export interface CharacterFilterOptions {
     colors?: string[];   // e.g., ['pink', 'blue', 'red']
     pronouns?: string[]; // e.g., ['he/him', 'she/her']
     musicEnjoyer?: boolean | null; // true = only music enjoyers, false = exclude music enjoyers, null = all
+    personalityGirl?: boolean | null; // true = only personality girls, false = exclude personality girls, null = all
     rpFriendly?: boolean | null; // true = only RP friendly, false = exclude RP friendly, null = all
     knowledgeFriendly?: boolean | null; // true = only knowledge friendly, false = exclude knowledge friendly, null = all
   };
@@ -273,6 +274,12 @@ export class CharacterFilterPipe implements PipeTransform {
     if (attrs.musicEnjoyer !== undefined && attrs.musicEnjoyer !== null) {
       if (attrs.musicEnjoyer && !character.musicEnjoyer) return false;
       if (!attrs.musicEnjoyer && character.musicEnjoyer) return false;
+    }
+
+    // Personality girl filter
+    if (attrs.personalityGirl !== undefined && attrs.personalityGirl !== null) {
+      if (attrs.personalityGirl && !character.personalityGirl) return false;
+      if (!attrs.personalityGirl && character.personalityGirl) return false;
     }
 
     // RP friendly filter

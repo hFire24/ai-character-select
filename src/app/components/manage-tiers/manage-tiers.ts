@@ -278,6 +278,7 @@ export class ManageTiers {
       'generation',
       'color',
       'musicEnjoyer',
+      'personalityGirl',
       'status',
       'pronouns',
       'creationDate',

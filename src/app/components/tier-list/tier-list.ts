@@ -82,11 +82,15 @@ export class TierList {
     if (this.characterFilter === 'music') {
       return { attributes: { musicEnjoyer: true } };
     }
+
+    if (this.characterFilter === 'personality') {
+      return { attributes: { personalityGirl: true } };
+    }
     
     if (this.characterFilter === 'side') {
       return {
         customFilter: (char) => {
-          return (char.status.includes('side') && !char.musicEnjoyer) || 
+          return (char.status.includes('side') && !char.musicEnjoyer && !char.personalityGirl) || 
                  char.status === 'future' || 
                  char.status === 'me';
         }
@@ -136,6 +140,7 @@ export class TierList {
             status: c.status,
             tier: c.tier,
             musicEnjoyer: c.musicEnjoyer,
+            personalityGirl: c.personalityGirl,
             pronouns: c.pronouns
           };
         });
