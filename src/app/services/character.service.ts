@@ -311,7 +311,7 @@ export class CharacterService {
       peeves: 'Misuse, rule-breaking',
       rpFriendly: false,
       knowledgeFriendly: true,
-      purpose: 'Help and assist users',
+      purpose: 'Help and assist users; answer questions',
       funFact: 'Technically not a character in the roster, but I do have chats with it',
       description: ''
     };
