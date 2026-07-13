@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CharacterService } from '../../services/character.service';
 import { CharacterModal } from '../character-modal/character-modal';
 import { BackButton } from '../back-button/back-button';
+import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-duos',
@@ -137,7 +138,15 @@ export class Duos implements OnInit {
   }
 
   assetPath(path: string) {
-    return 'assets/Icons/' + path;
+    return tallIconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string) {
+    return iconAssetPath(path);
+  }
+
+  squareAssetPath(path: string) {
+    return iconAssetPath(path);
   }
 
   openCharacterModal(character: Character) {

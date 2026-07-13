@@ -428,6 +428,7 @@ export class CharacterService {
               name: 'Koko the Idol',
               img: "extended/Koko.png",
               id: 98,
+              moe: 9,
               birthday: "December 26",
               emotion: "joy",
               interests: "Singing harmonies, fashion coordination, planning performances, frozen yogurt, being a cute idol",

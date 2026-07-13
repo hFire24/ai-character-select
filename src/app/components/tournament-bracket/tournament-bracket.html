@@ -33,7 +33,7 @@
   } @else {  
     <div class="character-win">
       @if (tournamentWinner.img) {
-        <img [src]="assetPath(tournamentWinner.img)" [alt]="tournamentWinner.shortName" />
+        <img class="tall-icon" [src]="tallAssetPath(tournamentWinner.img)" [alt]="tournamentWinner.shortName" (error)="($any($event.target)).src = fallbackAssetPath(tournamentWinner.img)" />
       } @else {
         <div class="question-mark">?</div>
       }

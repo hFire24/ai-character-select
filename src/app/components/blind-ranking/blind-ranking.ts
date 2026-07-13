@@ -6,6 +6,7 @@ import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 import { BackButton } from '../back-button/back-button';
 import { CharacterModal } from '../character-modal/character-modal';
 import { CharacterFilterOptions, CharacterFilterPipe } from '../../pipes/character-filter.pipe';
+import { iconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-blind-ranking',
@@ -29,7 +30,7 @@ export class BlindRanking {
   includeSide = true;
   includeRetired = true;
   includeMe = false;
-  includeBonus = true;
+  includeBonus = false;
   genderAllLabel = 'All';
   genderBoysLabel = 'Boys';
   genderGirlsLabel = 'Girls';
@@ -189,5 +190,22 @@ export class BlindRanking {
     });
 
     this.screenshotDataUrl = canvas.toDataURL('image/png');
+  }
+
+  assetPath(path: string): string {
+    if (!path) return '';
+
+    const [, ...rest] = path.split('/');
+    const filename = rest.join('/');
+
+    return filename ? `assets/Icons/tall/${filename}` : iconAssetPath(path);
+  }
+
+  squareAssetPath(path: string): string {
+    return iconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string): string {
+    return iconAssetPath(path);
   }
 }

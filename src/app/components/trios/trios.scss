@@ -83,10 +83,7 @@
 }
 
 .character h3 {
-  color: #2c3e50;
   font-size: 1.5em;
-  margin: 8px 0 0 0;
-  text-align: center;
 }
 
 .empty-trio {
@@ -113,7 +110,7 @@
 }
 
 // Responsive design
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .trios-grid {
     grid-template-columns: 1fr;
   }
@@ -148,10 +145,35 @@
     object-fit: cover;
     will-change: transform;
   }
+  .character:has(.tall-icon)::after,
+  .character:has(.question-mark)::after {
+    display: none !important;
+  }
+  .character h2,
   .character h3 {
-    margin: 0;
+    position: static !important;
+    font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    color: #000 !important;
     font-size: 1.2em;
-    text-align: left;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+  .character .question-mark {
+    font-size: 42px;
+    margin-top: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -199,12 +221,6 @@
     }
   }
 
-  .character {
-    h3 {
-      color: #f0f0f0;
-    }
-  }
-
   .empty-trio {
     color: #777;
   }
@@ -217,6 +233,13 @@
     
     p {
       color: #777;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .character h2,
+    .character h3 {
+      color: #fff !important;
     }
   }
 }

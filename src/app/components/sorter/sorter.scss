@@ -139,8 +139,8 @@ body {
   img {
     width: min(200px, 50vw);
     max-width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
+    height: min(300px, 60vh);
+    aspect-ratio: 2 / 3;
     object-fit: contain;
     margin-bottom: 1rem;
   }
@@ -262,6 +262,8 @@ body {
     img {
       width: min(130px, 36vw);
       max-width: 100%;
+      height: min(195px, 54vw);
+      aspect-ratio: 2 / 3;
     }
 
     h3 {
@@ -374,6 +376,8 @@ body {
 
   img {
     width: 200px;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
   }
 
   h2 {

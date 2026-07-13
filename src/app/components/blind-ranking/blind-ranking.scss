@@ -65,6 +65,10 @@ button {
   img {
     display: block;
     margin: 10px auto;
+    width: min(200px, 50vw);
+    height: min(300px, 60vh);
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
   }
   
   h2 {

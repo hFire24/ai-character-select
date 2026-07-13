@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
 import { DeviceService } from "../../services/device.service";
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 import { getEffectiveChatLink } from '../../utils/chat-link-storage';
+import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 type FriendlinessFilter = 'all' | 'rp' | 'knowledge' | 'both';
 
@@ -184,6 +185,14 @@ export class SpinTheWheel {
 
   getChatLink(character: Character): string {
     return getEffectiveChatLink(character);
+  }
+
+  assetPath(path: string): string {
+    return tallIconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string): string {
+    return iconAssetPath(path);
   }
 
   goBackToRoster() {

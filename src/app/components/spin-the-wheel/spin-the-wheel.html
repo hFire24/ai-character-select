@@ -126,9 +126,9 @@
 	<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
 	<div *ngIf="selectedCharacter" class="result">
 		<h3>Selected Character:</h3>
-		<img [src]="'assets/Icons/' + selectedCharacter.img" [alt]="selectedCharacter.name"
-		width="128" height="128"
-		(error)="selectedCharacter.img = 'extended/Unknown.png'" 
+		<img class="tall-icon" [src]="assetPath(selectedCharacter.img)" [alt]="selectedCharacter.name"
+		width="128" height="192"
+		(error)="($any($event.target)).src = fallbackAssetPath(selectedCharacter.img)" 
 		(click)="showCard = true"
 		[ngStyle]="{cursor: 'pointer'}"/>
 		<p>{{ selectedCharacter.name }}</p>

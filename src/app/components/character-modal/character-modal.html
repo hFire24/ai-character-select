@@ -9,7 +9,7 @@
     </ng-template>
     <div class="modalContent">
       <div class="nameRow">
-        <h2 id="modalName" [class]="character.color">
+        <h2 id="modalName" [class]="character.color || 'white'">
           {{ character.name || 'Unknown Character' }}
         </h2>
         <ng-container class="retired" *ngIf="character.status === 'retired'">

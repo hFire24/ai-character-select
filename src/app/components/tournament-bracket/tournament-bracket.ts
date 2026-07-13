@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Character, CharacterService } from '../../services/character.service';
+import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-tournament-bracket',
@@ -151,7 +152,15 @@ export class TournamentBracket implements OnInit {
   }
 
   assetPath(path: string) {
-    return 'assets/Icons/' + path;
+    return iconAssetPath(path);
+  }
+
+  tallAssetPath(path: string) {
+    return tallIconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string) {
+    return iconAssetPath(path);
   }
 
   isWinner(characterId: number): boolean {

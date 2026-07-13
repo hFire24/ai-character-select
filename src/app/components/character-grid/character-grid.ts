@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
 import { CharacterFilterPipe, CharacterFilters } from '../../pipes/character-filter.pipe';
 import { SortCharactersPipe, SortField, SortDirection } from '../../pipes/sort-characters.pipe';
+import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-character-grid',
@@ -53,7 +54,11 @@ export class CharacterGrid {
   }
 
   assetPath(path: string) {
-    return 'assets/Icons/' + path;
+    return tallIconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string) {
+    return iconAssetPath(path);
   }
 
   @Output() selectCharacter = new EventEmitter<Character>();

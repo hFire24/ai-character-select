@@ -22,12 +22,12 @@
             @for (character of duo.characters; track character.id) {
               <div 
                 class="character" 
-                [ngClass]="genClass(character.generation)"
+                [ngClass]="[genClass(character.generation), character.color || 'white']"
                 (click)="onCharacterClick(character)"
                 title="Click to view {{ character.shortName }}"
               >
                 @if (character.img) {
-                  <img [src]="assetPath(character.img)" [alt]="character.shortName" />
+                  <img class="tall-icon" [src]="assetPath(character.img)" [alt]="character.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character.img)" />
                 } @else {
                   <div class="question-mark">?</div>
                 }

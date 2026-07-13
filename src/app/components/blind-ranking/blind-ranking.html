@@ -47,9 +47,8 @@
       <div class="current-character" (click)="revealCharacterModal()">
         @if (currentCharacter) {
           <h2>Rank this character (1-5):</h2>
-          <img [src]="'assets/Icons/' + currentCharacter.img" [alt]="currentCharacter.name"
-            width="128" height="128"
-            (error)="currentCharacter.img = 'extended/Unknown.png'"/>
+          <img class="tall-icon" [src]="assetPath(currentCharacter.img)" [alt]="currentCharacter.name"
+            (error)="($any($event.target)).src = fallbackAssetPath(currentCharacter.img)"/>
           <p>{{ currentCharacter.name }}</p>
         }
       </div>
@@ -65,9 +64,9 @@
              (click)="placeInRank($index)">
           <div class="rank-number">{{ $index + 1 }}</div>
           @if (character) {
-            <img [src]="'assets/Icons/' + character.img" [alt]="character.name"
-              width="64" height="64"
-              (error)="character.img = 'extended/Unknown.png'"/>
+            <img [src]="assetPath(character.img)" [alt]="character.name"
+              width="100" height="150"
+              (error)="($any($event.target)).src = fallbackAssetPath(character.img)"/>
             <p>{{ character.name }}</p>
           } @else {
             <p class="empty-text">Click to place</p>

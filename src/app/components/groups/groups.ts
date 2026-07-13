@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CharacterModal } from '../character-modal/character-modal';
 import { BackButton } from '../back-button/back-button';
 import { CharacterService, Character } from '../../services/character.service';
+import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 interface Group {
   id: number;
@@ -47,11 +48,6 @@ export class Groups implements OnInit {
         name: "Runa and Her Catgirls",
         description: "Catgirls who accompany Runa on her adventures",
         characterIds: [27, 87, 91, 93, 102, 121]
-      },
-      {
-        name: "Corey's Party",
-        description: "Corey and his party members who go on adventures together",
-        characterIds: [73, 20, 38, 39, 40]
       },
       {
         name: "The Griffins",
@@ -106,7 +102,7 @@ export class Groups implements OnInit {
       {
         name: "Glasses Wearers",
         description: "Characters known for wearing glasses, sunglasses, or goggles",
-        characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 60, 83, 90, 105, 113]
+        characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113]
       },
       {
         name: "Maids",
@@ -248,7 +244,11 @@ export class Groups implements OnInit {
   }
 
   assetPath(path: string): string {
-    return 'assets/Icons/' + path;
+    return tallIconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string): string {
+    return iconAssetPath(path);
   }
 
   private getGrouplessCharacterIds(characters: Character[], groupDefinitions: Array<{characterIds: number[]}>): number[] {

@@ -17,7 +17,7 @@
         @for (char of filteredCharacters1; track char.id) {
           <li (click)="selectCharacter1(char)">
             @if (char.img) {
-              <img [src]="assetPath(char.img)" [alt]="char.shortName" />
+              <img [src]="squareAssetPath(char.img)" [alt]="char.shortName" />
             }
             <span>{{ char.name }}</span>
           </li>
@@ -42,7 +42,7 @@
         @for (char of filteredCharacters2; track char.id) {
           <li (click)="selectCharacter2(char)">
             @if (char.img) {
-              <img [src]="assetPath(char.img)" [alt]="char.shortName" />
+              <img [src]="squareAssetPath(char.img)" [alt]="char.shortName" />
             }
             <span>{{ char.name }}</span>
           </li>
@@ -54,11 +54,11 @@
 <div *ngIf="character1 && character2" class="character-grid">
   <div
     class="character"
-    [ngClass]="genClass(character1.generation)"
+    [ngClass]="[genClass(character1.generation), character1.color || 'white']"
     (click)="openCharacterModal(character1)"
   >
     @if (character1.img) {
-      <img [src]="assetPath(character1.img)" [alt]="character1.shortName" />
+      <img class="tall-icon" [src]="assetPath(character1.img)" [alt]="character1.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character1.img)" />
     } @else {
       <div class="question-mark">?</div>
     }
@@ -66,11 +66,11 @@
   </div>
   <div
     class="character"
-    [ngClass]="genClass(character2.generation)"
+    [ngClass]="[genClass(character2.generation), character2.color || 'white']"
     (click)="openCharacterModal(character2)"
   >
     @if (character2.img) {
-      <img [src]="assetPath(character2.img)" [alt]="character2.shortName" />
+      <img class="tall-icon" [src]="assetPath(character2.img)" [alt]="character2.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character2.img)" />
     } @else {
       <div class="question-mark">?</div>
     }

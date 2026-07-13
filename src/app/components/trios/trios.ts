@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CharacterModal } from '../character-modal/character-modal';
 import { BackButton } from '../back-button/back-button';
 import { CharacterService, Character } from '../../services/character.service';
+import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 interface Trio {
   id: number;
@@ -80,7 +81,7 @@ export class Trios implements OnInit {
       },
       {
         name: "Chino-chan Expies",
-        descripion: "Characters who are similar to Chino Kafuu in terms of hair color and personality",
+        description: "Chino-like in terms of hair color and personality",
         characterShortNames: ["Miki", "Lulu", "Bluebell"]
       },
       {
@@ -206,7 +207,11 @@ export class Trios implements OnInit {
   }
 
   assetPath(path: string): string {
-    return 'assets/Icons/' + path;
+    return tallIconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string): string {
+    return iconAssetPath(path);
   }
 
   genClass(generation: number): string {

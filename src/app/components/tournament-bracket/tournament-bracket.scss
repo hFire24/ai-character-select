@@ -70,6 +70,30 @@
   }
 }
 
+.matchup {
+  position: relative;
+
+  &::after {
+    content: "VS";
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    transform: translate(-50%, -60%);
+    width: 42.5px;
+    height: 42.5px;
+    background-color: #ff4444; // bright red for light mode
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    z-index: 10;
+    pointer-events: none;
+  }
+}
+
 .character {
   width: 100%;
   max-width: 300px;
@@ -107,26 +131,6 @@
     background-color: mediumspringgreen;
   }
 
-  // Add VS circle after odd-numbered characters
-  &:nth-child(odd)::after {
-    content: "VS";
-    position: absolute;
-    left: 50%;
-    top: 47%;
-    transform: translate(-50%, 50%);
-    width: 42.5px;
-    height: 42.5px;
-    background-color: #ff4444; // bright red for light mode
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 16px;
-    color: white;
-    z-index: 10;
-  }
-
   // Position context for the VS circle
   position: relative;
 
@@ -154,6 +158,14 @@
 
 .character-win img {
   width: 200px;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+}
+
+@media (max-width: 800px) {
+  .character-win img {
+    aspect-ratio: 1 / 1;
+  }
 }
 
 button {
@@ -165,6 +177,10 @@ button {
 }
 
 @media (prefers-color-scheme: dark) {
+  .matchup::after {
+    background-color: #cc0000; // dark red for dark mode
+  }
+
   .character {
     background-color: #23272a;
 
@@ -172,8 +188,7 @@ button {
       background-color: #006400;
     }
 
-    // Dark red VS circle for dark mode
-    &:nth-child(odd)::after, .seed {
+    .seed {
       background-color: #cc0000; // dark red for dark mode
     }
   }

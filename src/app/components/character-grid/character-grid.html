@@ -8,13 +8,13 @@
     @for (c of characters | characterFilter:filters:searchTerm | sortCharacters:sortBy:sortDirection; track c.id) {
       <div
         class="character"
-        [ngClass]="genClass(c.generation)"
+        [ngClass]="[genClass(c.generation), c.shortName === 'ChatGPT' ? 'white' : (c.color || 'white')]"
         [style.background-color]="c.shortName === 'ChatGPT' ? '#10a37f' : null"
         [style.color]="c.shortName === 'ChatGPT' ? 'white' : null"
         (click)="selectCharacter.emit(c)"
       >
         @if (c.img && c.shortName !== 'ChatGPT') {
-          <img [src]="assetPath(c.img)" [alt]="c.shortName" />
+          <img class="tall-icon" [src]="assetPath(c.img)" [alt]="c.shortName" (error)="($any($event.target)).src = fallbackAssetPath(c.img)" />
         } @else {
           <div class="question-mark">?</div>
         }

@@ -4,6 +4,7 @@ import { CharacterModal } from '../character-modal/character-modal';
 import { BackButton } from '../back-button/back-button';
 import { CharacterService, Character, DuoPair } from '../../services/character.service';
 import { forkJoin } from 'rxjs';
+import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 interface Duo {
   id: number;
@@ -352,7 +353,11 @@ export class Duos2 implements OnInit {
   }
 
   assetPath(path: string): string {
-    return 'assets/Icons/' + path;
+    return tallIconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string): string {
+    return iconAssetPath(path);
   }
 
   genClass(generation: number): string {

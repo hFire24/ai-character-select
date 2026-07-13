@@ -6,6 +6,7 @@ import { Character } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
 import { BackButton } from '../back-button/back-button';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
+import { iconAssetPath } from '../../utils/character-assets';
 import html2canvas from 'html2canvas';
 
 @Component({
@@ -22,7 +23,7 @@ export class Sorter implements OnInit, OnDestroy {
   includeSide: boolean = true;
   includeRetired: boolean = true;
   includeMe: boolean = false;
-  includeBonus: boolean = true;
+  includeBonus: boolean = false;
   isIOS: boolean = false;
   
   // Mode selection
@@ -550,5 +551,22 @@ export class Sorter implements OnInit, OnDestroy {
     this.isSorting = false;
     this.currentPair = null;
     this.sortedCharacters = [];
+  }
+
+  assetPath(path: string): string {
+    if (!path) return '';
+
+    const [, ...rest] = path.split('/');
+    const filename = rest.join('/');
+
+    return filename ? `assets/Icons/tall/${filename}` : iconAssetPath(path);
+  }
+
+  squareAssetPath(path: string): string {
+    return iconAssetPath(path);
+  }
+
+  fallbackAssetPath(path: string): string {
+    return iconAssetPath(path);
   }
 }
