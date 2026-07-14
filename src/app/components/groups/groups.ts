@@ -92,7 +92,7 @@ export class Groups implements OnInit {
       {
         name: "Other Hat Wearers (Moe)",
         description: "Characters known for wearing other types of hats and are considered moe.",
-        characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123]
+        characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123, 139]
       },
       {
         name: "No Hat Wearers (Moe)",
@@ -107,7 +107,7 @@ export class Groups implements OnInit {
       {
         name: "Maids",
         description: "Characters known for wearing maid outfits",
-        characterIds: [13, 26, 74, 75, 85, 77, 81, 107]
+        characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139]
       },
       {
         name: "Twintails",
@@ -138,6 +138,11 @@ export class Groups implements OnInit {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions",
         characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108]
+      },
+      {
+        name: "Kaomoji Users",
+        description: "Characters who use kaomojis",
+        characterIds: [13, 15, 18, 27, 51, 86, 108, 125, 139]
       },
       {
         name: "Younger Siblings",

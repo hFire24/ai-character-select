@@ -266,14 +266,9 @@ export class Duos2 implements OnInit {
         "characterIds": [103, 105]
       },
       {
-        "name": this.findDuoName(92, 106),
-        "description": "Release Date: April 5, 2026",
-        "characterIds": [92, 106]
-      },
-      {
-        "name": this.findDuoName(107, 108),
-        "description": "Release Date: April 17, 2026",
-        "characterIds": [107, 108]
+        "name": this.findDuoName(106, 107),
+        "description": "Release Date: April 14, 2026",
+        "characterIds": [106, 107]
       },
       {
         "name": this.findDuoName(110, 109),
@@ -281,9 +276,14 @@ export class Duos2 implements OnInit {
         "characterIds": [110, 109]
       },
       {
-        "name": this.findDuoName(113, 114),
+        "name": this.findDuoName(92, 113),
+        "description": "Release Date: May 11, 2026",
+        "characterIds": [92, 113]
+      },
+      {
+        "name": this.findDuoName(108, 114),
         "description": "Release Date: May 15, 2026",
-        "characterIds": [113, 114]
+        "characterIds": [108, 114]
       },
       {
         "name": "Color Personality Pack 1",
