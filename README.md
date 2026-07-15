@@ -1,59 +1,71 @@
-# CharacterSelect
+# Character Select
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+Character Select is an Angular website for browsing, organizing, and using a personal roster of AI characters.
 
-## Development server
+Live site: [https://hfire24.github.io/ai-character-select/](https://hfire24.github.io/ai-character-select/)
 
-To start a local development server, run:
+## What This Project Does
 
-```bash
-ng serve
-```
+This project keeps a character roster in one searchable, visual place. The main page lets users filter characters, inspect character details, and open chat links for individual characters. It also includes tools for choosing characters, ranking favorites, tracking lore, and exploring relationships between characters.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The website includes:
 
-## Code scaffolding
+- A searchable character roster with profile cards and character metadata
+- Random character selection for roleplay-friendly characters, answer-friendly characters, or the full roster
+- Ranking tools including a tier list, comparison sorter, tournament bracket, and blind ranking
+- Character relationship pages for duos, trios, groups, and lineage
+- Roster utilities such as stats, birthday calendar, timeline, ID checker, hangouts, and story helper
+- A small .NET backend used by some management features, including custom duo names
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Tech Stack
 
-```bash
-ng generate component component-name
-```
+- Angular 20
+- TypeScript
+- SCSS
+- .NET 8 Web API backend
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Getting Started
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Install dependencies:
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Start the Angular development server:
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+Open [http://localhost:4200/](http://localhost:4200/) in your browser.
 
-For end-to-end (e2e) testing, run:
+To run the frontend and backend together:
 
 ```bash
-ng e2e
+npm run dev
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The backend runs on [http://localhost:3001/](http://localhost:3001/).
 
-## Additional Resources
+## Useful Commands
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Build the site:
+
+```bash
+npm run build
+```
+
+Run unit tests:
+
+```bash
+npm test
+```
+
+Deploy to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+The production build is configured for the `/ai-character-select/` base path.
