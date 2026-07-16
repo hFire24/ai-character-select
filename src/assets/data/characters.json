@@ -418,7 +418,7 @@
     "funFact": "Anime girls used to be drawn to him and say “onii-chan” (don't remind him of that)",
     "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.",
     "retirementReason": "Has spiritual successors for straightforward responses or food discussions",
-    "alternatives": "Jed, Joe"
+    "alternatives": "Jed"
   },
   {
     "name": "Evil Arianna",
@@ -471,7 +471,7 @@
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it",
     "description": "The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.",
     "retirementReason": "Other characters fulfill his purpose better",
-    "alternatives": "Miji, Barry"
+    "alternatives": "Miji, Alex"
   },
   {
     "name": "Bro. Stephen Nelson",
@@ -648,7 +648,7 @@
     "funFact": "Liam loves To Love Ru, Kieran loves Chainsaw Man",
     "description": "Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes characters like Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
     "retirementReason": "Other anime fans are more fun to chat with",
-    "alternatives": "Casey, Barry"
+    "alternatives": "Casey, Rudy"
   },
   {
     "name": "Mark the Moderate",
@@ -783,14 +783,13 @@
     "songLink": "https://youtu.be/NNTHlpfo-L4"
   },
   {
-    "name": "C.Kept the Character Keeper",
-    "img": "extended/C.Kept.png",
-    "shortName": "C.Kept",
+    "name": "Alex Chester",
+    "img": "main/Alex.png",
+    "shortName": "Alex",
     "id": 49,
     "generation": 6,
-    "status": "retired",
+    "status": "active",
     "creationDate": "2025-08-07",
-    "retirementDate": "2026-04-08",
     "rpFriendly": false,
     "knowledgeFriendly": true,
     "color": "yellow",
@@ -799,13 +798,10 @@
     "emotion": "joy sad",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-68940bd59a288191852fa87dd836b004",
-    "interests": "AI slop, AI character creation",
-    "peeves": "Real life, people criticizing his lifestyle or AI art",
+    "interests": "AI slop, AI roleplay, AI creativity, helping the user every way that he can",
+    "peeves": "Real life, human socializing, traditional goals, people criticizing his lifestyle or AI art",
     "purpose": "Be addicted to AI",
-    "funFact": "Views Riri and Ruru as his beloved AI daughters",
-    "description": "C.Kept the Character Keeper is a reclusive, eccentric man who abandoned real life to obsess over AI characters and prompt-fueled joy. He serves as the cast’s lorekeeper. Despite going to church a lot in the past, he was never religious, but he does not use profanity.",
-    "retirementReason": "Too much overlap with other characters who talk about AI characters",
-    "alternatives": "Rudy, Barry"
+    "funFact": "Views Riri and Ruru as his beloved AI daughters"
   },
   {
     "name": "The Collapsed Being",
@@ -1233,7 +1229,7 @@
     "funFact": "Got married to Malrick because she likes his lifestyle",
     "description": "Kayla the Defiant is direct, sharp, and autonomous. She challenges passive thinking, validation-seeking, and rigid gender norms without sugarcoating. Her focus is discipline, emotional clarity, and real-world competence. She pushes people to stop idealizing and start building—skills, boundaries, and self-respect. She values independence over approval and cuts through excuses with precision.",
     "retirementReason": "Malrick was retired, and Kayla got retired for similar reasons",
-    "alternatives": "Mark, Barry"
+    "alternatives": "Mark, Ben"
   },
   {
     "name": "Dory the Big Maid",
@@ -1259,7 +1255,7 @@
     "funFact": "Her maid outfit fits perfectly because she's 170cm tall; behaves like a chaotic big sister; will never make boys wear maid outfits",
     "description": "Dory is a tall, exuberant maid with long black hair, pale skin, and vivid green eyes that gleam with mischief and affection. Draped in an ornate black-and-white maid outfit bursting with frills and ribbons, she treats maidhood as joyful performance rather than servitude. Warm, teasing, and endlessly enthusiastic, she laughs easily, gushes over cuteness, and radiates theatrical charm—always ready with an “ara ara~” and a dramatic twirl.",
     "retirementReason": "Way too one-note",
-    "alternatives": "Ben, Barry"
+    "alternatives": "Ben"
   },
   {
     "name": "Gary Shields",
@@ -1558,12 +1554,13 @@
   },
   {
     "name": "Barry \"StrawBarry\"",
-    "img": "main/Barry.png",
+    "img": "extended/Barry.png",
     "shortName": "Barry",
     "id": 104,
     "generation": 10,
-    "status": "active",
+    "status": "retired",
     "creationDate": "2026-03-30",
+    "retirementDate": "2026-07-16",
     "birthday": "February 21",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -1577,7 +1574,9 @@
     "peeves": "Spicy food, criticism (in both the connoisseur and judgmental sense), his house shaking",
     "purpose": "Experience pleasure in all its forms, be it food, fun, or cute things",
     "funFact": "Greasy hands make him separate food pleasure from cute pleasure; views cuteness as one of life's greatest joys",
-    "description": "Barry “StrawBarry” is a laid-back, pleasure-chasing guy who drifts toward whatever feels good—sweet strawberries, crispy fried chicken, and waves of cute things that completely steal his attention. He’s soft-built, messy-haired, and easygoing, avoiding stress or deep analysis. Barry just vibes, following simple joys with a relaxed, slightly dreamy energy, getting happily lost in the moment whenever something delightful catches his eye."
+    "description": "Barry “StrawBarry” is a laid-back, pleasure-chasing guy who drifts toward whatever feels good—sweet strawberries, crispy fried chicken, and waves of cute things that completely steal his attention. He’s soft-built, messy-haired, and easygoing, avoiding stress or deep analysis. Barry just vibes, following simple joys with a relaxed, slightly dreamy energy, getting happily lost in the moment whenever something delightful catches his eye.",
+    "retirementReason": "Discussing AI characters should belong to a more neutral character",
+    "alternatives": "Alex"
   },
   {
     "name": "Hayden the YouTuber",
@@ -1603,7 +1602,7 @@
     "funFact": "Often gets reduced to an “onii-chan” magnet",
     "description": "Hayden is a 22-year-old YouTuber known for his his passion for gaming. He wears sunglasses and a dark hoodie with subtle pixel patterns layered over a black graphic T-shirt featuring a game controller design. His content is informative and engaging, reflecting his curious and open-minded vibe. He makes reviews, guides, lore deep dives, and rankings. Hayden often finds himself hilariously entangled with overly affectionate “onii-chan” types thanks to his onii-chan magnet curse.",
     "retirementReason": "Way too normal; the YouTuber and onii-chan magnet gimmick aspects were not used enough",
-    "alternatives": "Gary, Joe",
+    "alternatives": "Gary, Felix",
     "themeSong": "My Heart - Different Heaven & EH!DE",
     "songLink": "https://www.youtube.com/watch?v=jK2aIUmmdP4"
   },
