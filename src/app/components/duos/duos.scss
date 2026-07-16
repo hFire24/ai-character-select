@@ -76,11 +76,146 @@ form {
   margin-bottom: 30px;
 }
 
+.emoji-presets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+
+  button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    min-height: 34px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #4CAF50;
+      background: #f1fff2;
+    }
+
+    &:hover .preset-label,
+    &:focus-visible .preset-label {
+      opacity: 1;
+      transform: translate(-50%, 0);
+      pointer-events: none;
+    }
+  }
+
+  .preset-emoji {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .preset-label {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 6px);
+    z-index: 2;
+    width: max-content;
+    max-width: 140px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    background: #222;
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.1;
+    opacity: 0;
+    transform: translate(-50%, 4px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+}
+
 .character-grid {
   display: flex;
   gap: 20px;
   justify-content: center;
   margin: 20px 0;
+}
+
+.relationship-panel {
+  width: min(560px, calc(100% - 40px));
+  margin: 20px auto 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  box-sizing: border-box;
+
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .relationship-list {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 16px;
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .relationship-emoji {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  .relationship-form {
+    align-items: center;
+    margin-bottom: 0;
+
+    .input-container {
+      width: min(400px, 100%);
+      text-align: center;
+
+      label {
+        margin-bottom: 0;
+        text-align: center;
+      }
+    }
+
+    .relationship-input-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      input {
+        width: 72px;
+        flex: 0 0 72px;
+        text-align: center;
+      }
+    }
+
+    .submit-btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,6 +241,22 @@ form {
           background-color: #3c3c3c;
         }
       }
+    }
+  }
+
+  .relationship-panel {
+    background: rgba(45, 45, 45, 0.8);
+    border-color: #555;
+  }
+
+  .emoji-presets button {
+    background: #2c2c2c;
+    border-color: #555;
+    color: #f0f0f0;
+
+    &:hover {
+      border-color: #4CAF50;
+      background: #243526;
     }
   }
 }

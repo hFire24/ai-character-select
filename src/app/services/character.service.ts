@@ -50,6 +50,17 @@ export interface DuosData {
   duos: DuoPair[];
 }
 
+export interface RelationshipPair {
+  id1: number;
+  id2: number;
+  id1ToId2Emoji?: string;
+  id2ToId1Emoji?: string;
+}
+
+export interface RelationshipsData {
+  relationships: RelationshipPair[];
+}
+
 @Injectable({ providedIn: 'root' })
 export class CharacterService {
   private apiUrl = '/api';
@@ -477,6 +488,28 @@ export class CharacterService {
     // POST to the local server which will update duos.json
     return this.http.post<{ message: string; duos: DuoPair[] }>(`${this.apiUrl}/duos`, duo).pipe(
       map(response => response.duos)
+    );
+  }
+
+  getRelationships(): Observable<RelationshipPair[]> {
+    if (this.isDevelopment) {
+      return this.http.get<RelationshipsData>(`${this.apiUrl}/relationships`).pipe(
+        map(data => data.relationships)
+      );
+    }
+
+    return this.http.get<RelationshipsData>('assets/data/relationships.json').pipe(
+      map(data => data.relationships)
+    );
+  }
+
+  updateRelationship(relationship: RelationshipPair): Observable<RelationshipPair[]> {
+    if (!this.isDevelopment) {
+      throw new Error('Updating duo relationships is only available in development mode (localhost)');
+    }
+
+    return this.http.put<{ message: string; relationships: RelationshipPair[] }>(`${this.apiUrl}/relationships`, relationship).pipe(
+      map(response => response.relationships)
     );
   }
 }

@@ -81,6 +81,77 @@
   <h2>{{ duoName }}</h2>
 </div>
 
+@if (character1 && character2 && (hasRelationshipEmojis() || isDevelopment)) {
+  <section class="relationship-panel">
+    <h2>Relationship</h2>
+
+    @if (hasRelationshipEmojis()) {
+      <div class="relationship-list">
+        @if (getRelationshipEmoji(character1, character2)) {
+          <p>
+            <strong>{{ character1.shortName }}</strong>
+            thinks of
+            <strong>{{ character2.shortName }}</strong>
+            <span class="relationship-emoji">{{ getRelationshipEmoji(character1, character2) }}</span>
+          </p>
+        }
+        @if (getRelationshipEmoji(character2, character1)) {
+          <p>
+            <strong>{{ character2.shortName }}</strong>
+            thinks of
+            <strong>{{ character1.shortName }}</strong>
+            <span class="relationship-emoji">{{ getRelationshipEmoji(character2, character1) }}</span>
+          </p>
+        }
+      </div>
+    }
+
+    @if (isDevelopment) {
+      <form class="relationship-form" (ngSubmit)="submitRelationshipEmojis()">
+        <div class="input-container">
+          <div class="relationship-input-row">
+            <label for="relationship1Emoji">{{ character1.shortName }} to {{ character2.shortName }}:</label>
+            <input
+              type="text"
+              id="relationship1Emoji"
+              [(ngModel)]="relationship1Emoji"
+              name="relationship1Emoji">
+          </div>
+          <div class="emoji-presets" aria-label="Preset relationship emojis">
+            @for (preset of relationshipEmojiPresets; track preset.emoji) {
+              <button type="button" (click)="setRelationshipEmoji(1, preset.emoji)" [title]="preset.label">
+                <span class="preset-emoji">{{ preset.emoji }}</span>
+                <span class="preset-label">{{ preset.label }}</span>
+              </button>
+            }
+          </div>
+        </div>
+
+        <div class="input-container">
+          <div class="relationship-input-row">
+            <label for="relationship2Emoji">{{ character2.shortName }} to {{ character1.shortName }}:</label>
+            <input
+              type="text"
+              id="relationship2Emoji"
+              [(ngModel)]="relationship2Emoji"
+              name="relationship2Emoji">
+          </div>
+          <div class="emoji-presets" aria-label="Preset relationship emojis">
+            @for (preset of relationshipEmojiPresets; track preset.emoji) {
+              <button type="button" (click)="setRelationshipEmoji(2, preset.emoji)" [title]="preset.label">
+                <span class="preset-emoji">{{ preset.emoji }}</span>
+                <span class="preset-label">{{ preset.label }}</span>
+              </button>
+            }
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Save Relationship</button>
+      </form>
+    }
+  </section>
+}
+
 <div class="random-duo-controls">
   <div class="radio-group" [ngStyle]="{display: 'block', marginBottom: '1rem'}">
     <label>

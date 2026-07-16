@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Character, DuoPair } from '../../services/character.service';
+import { Character, DuoPair, RelationshipPair } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CharacterService } from '../../services/character.service';
@@ -25,6 +25,19 @@ export class Duos implements OnInit {
   // Form fields for adding new duo
   newDuoName: string = '';
   newDuoAltName: string = '';
+  relationship1Emoji: string = '';
+  relationship2Emoji: string = '';
+  relationshipEmojiPresets: Array<{ emoji: string; label: string }> = [
+    { emoji: '😐', label: 'Neutral' },
+    { emoji: '🙂', label: 'Good' },
+    { emoji: '😀', label: 'Great' },
+    { emoji: '😄', label: 'Fantastic' },
+    { emoji: '😕', label: 'Complicated' },
+    { emoji: '😑', label: 'Uninterested' },
+    { emoji: '😒', label: 'Bad' },
+    { emoji: '😠', label: 'Awful' },
+    { emoji: '😡', label: 'Hostile' }
+  ];
   
   allCharacters: Character[] = [];
   filteredCharacters1: Character[] = [];
@@ -42,6 +55,7 @@ export class Duos implements OnInit {
 
   // Duo name pairs - loaded dynamically
   duoPairs: DuoPair[] = [];
+  relationshipPairs: RelationshipPair[] = [];
 
   constructor(private characterService: CharacterService, private router: Router) {
     this.isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
@@ -55,11 +69,19 @@ export class Duos implements OnInit {
 
     // Load duos
     this.loadDuos();
+    this.loadRelationships();
   }
 
   loadDuos() {
     this.characterService.getDuos().subscribe(duos => {
       this.duoPairs = duos;
+    });
+  }
+
+  loadRelationships() {
+    this.characterService.getRelationships().subscribe(relationships => {
+      this.relationshipPairs = relationships;
+      this.syncRelationshipInputs();
     });
   }
 
@@ -123,6 +145,8 @@ export class Duos implements OnInit {
       this.duoName = customDuo 
         ? (this.character1.id > this.character2.id && customDuo.altName ? customDuo.altName : customDuo.name)
         : `${this.character1.name} & ${this.character2.name}`;
+
+      this.syncRelationshipInputs();
     }
   }
 
@@ -130,6 +154,41 @@ export class Duos implements OnInit {
     if (!this.character1 || !this.character2) return false;
     const [id1, id2] = [this.character1.id, this.character2.id].sort((a, b) => a - b);
     return this.duoPairs.some(duo => duo.id1 === id1 && duo.id2 === id2);
+  }
+
+  getCurrentDuo(): DuoPair | undefined {
+    if (!this.character1 || !this.character2) return undefined;
+    const [id1, id2] = [this.character1.id, this.character2.id].sort((a, b) => a - b);
+    return this.duoPairs.find(duo => duo.id1 === id1 && duo.id2 === id2);
+  }
+
+  getCurrentRelationship(): RelationshipPair | undefined {
+    if (!this.character1 || !this.character2) return undefined;
+    const [id1, id2] = [this.character1.id, this.character2.id].sort((a, b) => a - b);
+    return this.relationshipPairs.find(relationship => relationship.id1 === id1 && relationship.id2 === id2);
+  }
+
+  getRelationshipEmoji(from: Character, to: Character): string {
+    const relationship = this.getCurrentRelationship();
+    if (!relationship) return '';
+    return from.id < to.id ? (relationship.id1ToId2Emoji || '') : (relationship.id2ToId1Emoji || '');
+  }
+
+  hasRelationshipEmojis(): boolean {
+    return !!(this.character1 && this.character2 &&
+      (this.getRelationshipEmoji(this.character1, this.character2) ||
+        this.getRelationshipEmoji(this.character2, this.character1)));
+  }
+
+  private syncRelationshipInputs(relationship = this.getCurrentRelationship()) {
+    if (!this.character1 || !this.character2) {
+      this.relationship1Emoji = '';
+      this.relationship2Emoji = '';
+      return;
+    }
+
+    this.relationship1Emoji = relationship ? this.getRelationshipEmoji(this.character1, this.character2) : '';
+    this.relationship2Emoji = relationship ? this.getRelationshipEmoji(this.character2, this.character1) : '';
   }
 
   genClass(g: number) {
@@ -201,6 +260,51 @@ export class Duos implements OnInit {
   clearNewDuoForm() {
     this.newDuoName = '';
     this.newDuoAltName = '';
+  }
+
+  submitRelationshipEmojis() {
+    if (!this.character1 || !this.character2) {
+      alert('Please select both characters.');
+      return;
+    }
+
+    const [id1, id2] = [this.character1.id, this.character2.id].sort((a, b) => a - b);
+
+    const updatedRelationship: RelationshipPair = {
+      id1,
+      id2,
+      id1ToId2Emoji: this.getSortedRelationshipEmoji('forward') || undefined,
+      id2ToId1Emoji: this.getSortedRelationshipEmoji('reverse') || undefined
+    };
+
+    this.characterService.updateRelationship(updatedRelationship).subscribe({
+      next: (updatedRelationships) => {
+        this.relationshipPairs = updatedRelationships;
+        this.syncRelationshipInputs();
+        alert('Relationship emojis saved!');
+      },
+      error: (err) => {
+        alert(err.message || 'Failed to save relationship emojis.');
+      }
+    });
+  }
+
+  setRelationshipEmoji(target: 1 | 2, emoji: string) {
+    if (target === 1) {
+      this.relationship1Emoji = emoji;
+    } else {
+      this.relationship2Emoji = emoji;
+    }
+  }
+
+  private getSortedRelationshipEmoji(direction: 'forward' | 'reverse'): string {
+    if (!this.character1 || !this.character2) return '';
+
+    const character1IsLowerId = this.character1.id < this.character2.id;
+    const forwardEmoji = character1IsLowerId ? this.relationship1Emoji : this.relationship2Emoji;
+    const reverseEmoji = character1IsLowerId ? this.relationship2Emoji : this.relationship1Emoji;
+
+    return (direction === 'forward' ? forwardEmoji : reverseEmoji).trim();
   }
 
   getRandomDuo() {

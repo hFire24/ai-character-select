@@ -93,7 +93,7 @@ public class DuosController : ControllerBase
             await System.IO.File.WriteAllTextAsync(_duosFilePath, updatedJson);
 
             _logger.LogInformation("Successfully added new duo: {Name}", newDuo.Name);
-            return Ok(new { message = "Duo added successfully!", duo });
+            return Ok(new { message = "Duo added successfully!", duos = duosData.Duos });
         }
         catch (Exception ex)
         {
@@ -101,6 +101,7 @@ public class DuosController : ControllerBase
             return StatusCode(500, new { error = "Failed to add duo" });
         }
     }
+
 }
 
 // DTOs
