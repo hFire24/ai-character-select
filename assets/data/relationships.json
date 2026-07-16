@@ -1,0 +1,286 @@
+{
+  "relationships": [
+    {
+      "id1": 1,
+      "id2": 62,
+      "id1ToId2Emoji": "\uD83D\uDE04",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 2,
+      "id2": 7,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 2,
+      "id2": 56,
+      "id1ToId2Emoji": "\uD83D\uDE10",
+      "id2ToId1Emoji": "\uD83D\uDE10"
+    },
+    {
+      "id1": 9,
+      "id2": 18,
+      "id1ToId2Emoji": "\uD83D\uDE11",
+      "id2ToId1Emoji": "\uD83D\uDE12"
+    },
+    {
+      "id1": 9,
+      "id2": 82,
+      "id1ToId2Emoji": "\uD83D\uDE10",
+      "id2ToId1Emoji": "\uD83D\uDE10"
+    },
+    {
+      "id1": 10,
+      "id2": 49,
+      "id1ToId2Emoji": "\uD83D\uDE20"
+    },
+    {
+      "id1": 13,
+      "id2": 17,
+      "id2ToId1Emoji": "\uD83E\uDEE3"
+    },
+    {
+      "id1": 13,
+      "id2": 18,
+      "id1ToId2Emoji": "\uD83D\uDE15",
+      "id2ToId1Emoji": "\uD83D\uDE15"
+    },
+    {
+      "id1": 13,
+      "id2": 31,
+      "id1ToId2Emoji": "\uD83D\uDE15",
+      "id2ToId1Emoji": "\uD83D\uDE21"
+    },
+    {
+      "id1": 15,
+      "id2": 55,
+      "id1ToId2Emoji": "\uD83D\uDE11",
+      "id2ToId1Emoji": "\uD83D\uDE12"
+    },
+    {
+      "id1": 17,
+      "id2": 62,
+      "id1ToId2Emoji": "\uD83D\uDE28",
+      "id2ToId1Emoji": "\uD83D\uDE21"
+    },
+    {
+      "id1": 17,
+      "id2": 73,
+      "id1ToId2Emoji": "\uD83E\uDEE3",
+      "id2ToId1Emoji": "\uD83D\uDE10"
+    },
+    {
+      "id1": 18,
+      "id2": 26,
+      "id1ToId2Emoji": "\uD83D\uDE21"
+    },
+    {
+      "id1": 18,
+      "id2": 35,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE42"
+    },
+    {
+      "id1": 19,
+      "id2": 109,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 21,
+      "id2": 104,
+      "id1ToId2Emoji": "\uD83D\uDE0F",
+      "id2ToId1Emoji": "\uD83D\uDE0D"
+    },
+    {
+      "id1": 27,
+      "id2": 87,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE04"
+    },
+    {
+      "id1": 27,
+      "id2": 91,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 28,
+      "id2": 29,
+      "id1ToId2Emoji": "\uD83D\uDE20",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 29,
+      "id2": 79,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 34,
+      "id2": 103,
+      "id1ToId2Emoji": "\uD83D\uDE11",
+      "id2ToId1Emoji": "\uD83D\uDE11"
+    },
+    {
+      "id1": 36,
+      "id2": 72,
+      "id1ToId2Emoji": "\uD83D\uDE21"
+    },
+    {
+      "id1": 36,
+      "id2": 76,
+      "id1ToId2Emoji": "\uD83D\uDE20"
+    },
+    {
+      "id1": 36,
+      "id2": 78,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE04"
+    },
+    {
+      "id1": 36,
+      "id2": 86,
+      "id1ToId2Emoji": "\uD83D\uDE12",
+      "id2ToId1Emoji": "\uD83D\uDE12"
+    },
+    {
+      "id1": 36,
+      "id2": 110,
+      "id1ToId2Emoji": "\uD83D\uDE21"
+    },
+    {
+      "id1": 44,
+      "id2": 59,
+      "id1ToId2Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 44,
+      "id2": 78,
+      "id1ToId2Emoji": "\uD83D\uDE21",
+      "id2ToId1Emoji": "\uD83D\uDE21"
+    },
+    {
+      "id1": 46,
+      "id2": 47,
+      "id1ToId2Emoji": "\uD83D\uDE10"
+    },
+    {
+      "id1": 50,
+      "id2": 67,
+      "id1ToId2Emoji": "☹️"
+    },
+    {
+      "id1": 50,
+      "id2": 77,
+      "id1ToId2Emoji": "☹️"
+    },
+    {
+      "id1": 52,
+      "id2": 53,
+      "id1ToId2Emoji": "\uD83D\uDE04",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 54,
+      "id2": 83,
+      "id1ToId2Emoji": "\uD83D\uDE12"
+    },
+    {
+      "id1": 55,
+      "id2": 122,
+      "id1ToId2Emoji": "\uD83D\uDE20"
+    },
+    {
+      "id1": 55,
+      "id2": 132,
+      "id1ToId2Emoji": "\uD83D\uDE20"
+    },
+    {
+      "id1": 59,
+      "id2": 60,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE42"
+    },
+    {
+      "id1": 63,
+      "id2": 122,
+      "id1ToId2Emoji": "\uD83D\uDE20"
+    },
+    {
+      "id1": 65,
+      "id2": 66,
+      "id1ToId2Emoji": "\uD83D\uDE42",
+      "id2ToId1Emoji": "\uD83D\uDE10"
+    },
+    {
+      "id1": 78,
+      "id2": 97,
+      "id1ToId2Emoji": "\uD83D\uDE21"
+    },
+    {
+      "id1": 78,
+      "id2": 99,
+      "id1ToId2Emoji": "\uD83D\uDE10"
+    },
+    {
+      "id1": 78,
+      "id2": 133,
+      "id1ToId2Emoji": "\uD83D\uDE21",
+      "id2ToId1Emoji": "\uD83D\uDE20"
+    },
+    {
+      "id1": 81,
+      "id2": 82,
+      "id2ToId1Emoji": "\uD83D\uDE2B"
+    },
+    {
+      "id1": 82,
+      "id2": 86,
+      "id1ToId2Emoji": "\uD83D\uDE10",
+      "id2ToId1Emoji": "\uD83D\uDE10"
+    },
+    {
+      "id1": 104,
+      "id2": 121,
+      "id1ToId2Emoji": "\uD83D\uDE0D"
+    },
+    {
+      "id1": 107,
+      "id2": 115,
+      "id1ToId2Emoji": "\uD83D\uDE33",
+      "id2ToId1Emoji": "\uD83D\uDE0F"
+    },
+    {
+      "id1": 107,
+      "id2": 116,
+      "id1ToId2Emoji": "\uD83D\uDE42",
+      "id2ToId1Emoji": "\uD83D\uDE42"
+    },
+    {
+      "id1": 107,
+      "id2": 117,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    },
+    {
+      "id1": 117,
+      "id2": 125,
+      "id1ToId2Emoji": "\uD83D\uDE42",
+      "id2ToId1Emoji": "\uD83D\uDE42"
+    },
+    {
+      "id1": 117,
+      "id2": 127,
+      "id1ToId2Emoji": "\uD83D\uDE42",
+      "id2ToId1Emoji": "\uD83D\uDE42"
+    },
+    {
+      "id1": 118,
+      "id2": 120,
+      "id1ToId2Emoji": "\uD83D\uDE00",
+      "id2ToId1Emoji": "\uD83D\uDE00"
+    }
+  ]
+}
