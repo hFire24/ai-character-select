@@ -89,7 +89,7 @@
 
     <div class="tie-option">
       <button (click)="chooseTie()" class="tie-button">Tie</button>
-      <button class="back-button" (click)="back()" [disabled]="!canGoBack()">Undo</button>
+      <button class="undo-button" (click)="undo()" [disabled]="!canUndo()">Undo</button>
     </div>
 
     <div class="character-option" (click)="choose(currentPair[1])">
@@ -119,5 +119,3 @@
   <h2>Champion: {{kingOfTheHillWinner.name}}</h2>
   <button (click)="resetKingOfTheHill()" class="restart-button">Start Over</button>
 </div>
-
-<app-back-button></app-back-button>

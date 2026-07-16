@@ -169,7 +169,7 @@ body {
     min-width: 100%;
   }
 
-  .back-button {
+  .undo-button {
     padding: 0.75rem 1.5rem;
     font-size: 1.05rem;
     background-color: #888;
@@ -179,7 +179,7 @@ body {
     cursor: pointer;
     min-width: 100%;
   }
-  .back-button:disabled { opacity: 0.6; cursor: not-allowed; }
+  .undo-button:disabled { opacity: 0.6; cursor: not-allowed; }
 }
 
 .results {

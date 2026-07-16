@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterModal } from '../character-modal/character-modal';
-import { BackButton } from '../back-button/back-button';
 import { CharacterService, Character } from '../../services/character.service';
 import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
@@ -14,7 +13,7 @@ interface Trio {
 
 @Component({
   selector: 'app-trios',
-  imports: [CommonModule, CharacterModal, BackButton],
+  imports: [CommonModule, CharacterModal],
   templateUrl: './trios.html',
   styleUrl: './trios.scss'
 })

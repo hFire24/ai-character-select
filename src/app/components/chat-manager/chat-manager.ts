@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
-import { BackButton } from '../back-button/back-button';
 import { RelativeDatePipe } from '../../pipes/relative-date.pipe';
 import {
   archiveChatLink,
@@ -30,7 +29,7 @@ interface ArchivedChat {
 @Component({
   selector: 'app-chat-manager',
   standalone: true,
-  imports: [CommonModule, BackButton, RelativeDatePipe],
+  imports: [CommonModule, RelativeDatePipe],
   templateUrl: './chat-manager.html',
   styleUrl: './chat-manager.scss'
 })

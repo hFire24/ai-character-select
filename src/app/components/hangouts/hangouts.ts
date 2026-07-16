@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { CharacterService, Character } from "../../services/character.service";
-import { Router } from "@angular/router";
-import { BackButton } from '../back-button/back-button';
 
 interface Room {
   name: string;
@@ -12,7 +10,7 @@ interface Room {
 
 @Component({
   selector: 'app-hangouts',
-  imports: [CommonModule, FormsModule, BackButton],
+  imports: [CommonModule, FormsModule],
   templateUrl: './hangouts.html',
   styleUrl: './hangouts.scss'
 })

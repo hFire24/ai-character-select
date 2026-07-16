@@ -2,7 +2,6 @@
   <h1>Choose Your Character!</h1>
   <!--div class="announcement"><b>Read:</b>&nbsp;<u (click)="goToNotice()">An announcement from the developer</u></div-->
   <app-birthday-banner (selectCharacter)="selectedCharacter = $event"></app-birthday-banner>
-  <app-activities></app-activities>
   <app-legend
     [showMoreCharacters]="!showingMainCharacters"
     (selectMood)="selectedMood = $event"
@@ -41,4 +40,3 @@
   (close)="selectedMood = null"
   (selectCharacter)="selectedCharacter = $event"
 ></app-mood-modal>
-<app-footer-buttons></app-footer-buttons>

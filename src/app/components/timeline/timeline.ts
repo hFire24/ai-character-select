@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Character, CharacterService } from '../../services/character.service';
-import { BackButton } from '../back-button/back-button';
 import { CharacterModal } from '../character-modal/character-modal';
 
 interface TimelineNode {
@@ -19,7 +18,7 @@ interface TimelineNode {
 
 @Component({
   selector: 'app-timeline',
-  imports: [CommonModule, BackButton, CharacterModal],
+  imports: [CommonModule, CharacterModal],
   templateUrl: './timeline.html',
   styleUrl: './timeline.scss'
 })

@@ -2,9 +2,6 @@
   <div class="header">
     <h1>Character Birthdays</h1>
   </div>
-  <div [style.margin-bottom]="'1rem'">
-    <app-back-button></app-back-button>
-  </div>
   <button 
     *ngIf="!isSmallMobile()" 
     class="view-toggle-button" 
@@ -87,4 +84,3 @@
     (close)="closeCharacterModal()"
   ></app-character-modal>
 </div>
-<app-back-button></app-back-button>

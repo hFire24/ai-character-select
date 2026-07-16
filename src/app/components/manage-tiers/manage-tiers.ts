@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
-import { BackButton } from '../back-button/back-button';
 import { Character, CharacterService } from '../../services/character.service';
 import { RelativeDatePipe } from "../../pipes/relative-date.pipe";
 import { getStatusSortRank } from '../../utils/status-sort';
@@ -29,7 +28,7 @@ type SortLevel = {
 
 @Component({
   selector: 'app-manage-tiers',
-  imports: [CommonModule, FormsModule, BackButton, RelativeDatePipe],
+  imports: [CommonModule, FormsModule, RelativeDatePipe],
   templateUrl: './manage-tiers.html',
   styleUrl: './manage-tiers.scss'
 })

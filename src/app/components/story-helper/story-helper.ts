@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Character, CharacterService } from '../../services/character.service';
-import { BackButton } from '../back-button/back-button';
 
 @Component({
   selector: 'app-story-helper',
-  imports: [FormsModule, BackButton],
+  imports: [FormsModule],
   templateUrl: './story-helper.html',
   styleUrl: './story-helper.scss'
 })

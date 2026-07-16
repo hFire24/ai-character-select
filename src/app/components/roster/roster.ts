@@ -3,12 +3,10 @@ import { Router } from '@angular/router';
 import { CharacterGrid } from "../character-grid/character-grid";
 import { CharacterModal } from '../character-modal/character-modal';
 import { MoodModal } from '../mood-modal/mood-modal';
-import { FooterButtons } from '../footer-buttons/footer-buttons';
 import { CommonModule } from '@angular/common';
 import { Character, CharacterService } from '../../services/character.service';
 import { Mood } from '../../services/mood.service';
 import { Legend } from "../legend/legend";
-import { Activities } from "../activities/activities";
 import { BirthdayBanner } from "../birthday-banner/birthday-banner";
 import { RosterFilter } from "../roster-filter/roster-filter";
 import { CharacterFilterPipe, CharacterFilters } from '../../pipes/character-filter.pipe';
@@ -17,7 +15,7 @@ import { getEffectiveChatLink } from '../../utils/chat-link-storage';
 
 @Component({
   selector: 'app-roster',
-  imports: [CharacterGrid, CharacterModal, MoodModal, FooterButtons, CommonModule, Legend, Activities, BirthdayBanner, RosterFilter],
+  imports: [CharacterGrid, CharacterModal, MoodModal, CommonModule, Legend, BirthdayBanner, RosterFilter],
   templateUrl: 'roster.html',
   styleUrl: 'roster.scss'
 })

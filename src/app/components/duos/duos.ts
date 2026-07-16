@@ -5,12 +5,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CharacterService } from '../../services/character.service';
 import { CharacterModal } from '../character-modal/character-modal';
-import { BackButton } from '../back-button/back-button';
 import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-duos',
-  imports: [CommonModule, FormsModule, CharacterModal, BackButton],
+  imports: [CommonModule, FormsModule, CharacterModal],
   templateUrl: './duos.html',
   styleUrl: './duos.scss'
 })

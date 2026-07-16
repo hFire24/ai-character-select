@@ -25,6 +25,7 @@ export class SpinTheWheel {
   spinning = false;
   selectedCharacter: Character | null = null;
   showCard = false;
+  isFiltersCollapsed = true;
   
   splitTwins: boolean = false;
   skipAnimation: boolean = false;
@@ -62,6 +63,10 @@ export class SpinTheWheel {
   ngOnInit() {
     this.loadCharacters();
     this.skipAnimation = this.deviceService.isMobile();
+  }
+
+  toggleFilters() {
+    this.isFiltersCollapsed = !this.isFiltersCollapsed;
   }
 
   // Filter options for the pipe
@@ -193,10 +198,6 @@ export class SpinTheWheel {
 
   fallbackAssetPath(path: string): string {
     return iconAssetPath(path);
-  }
-
-  goBackToRoster() {
-    this.router.navigate(["/"]);
   }
 
   scrollToResult() {

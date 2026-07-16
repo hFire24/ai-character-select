@@ -4,14 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { CharacterService } from '../../services/character.service';
 import { Character } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
-import { BackButton } from '../back-button/back-button';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 import { iconAssetPath } from '../../utils/character-assets';
 import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-sorter',
-  imports: [CommonModule, FormsModule, BackButton],
+  imports: [CommonModule, FormsModule],
   templateUrl: './sorter.html',
   styleUrl: './sorter.scss'
 })
@@ -52,7 +51,7 @@ export class Sorter implements OnInit, OnDestroy {
   currentKing: Character | null = null;
   remainingCharacters: Character[] = [];
 
-  // History for back/undo
+  // History for undo
   private history: Array<{
     characters: Character[];
     mergeQueue: Character[][];
@@ -275,7 +274,7 @@ export class Sorter implements OnInit, OnDestroy {
     return shuffled;
   }
 
-  back(): void {
+  undo(): void {
     if (!this.history.length) return;
     const s = this.history.pop()!;
     this.characters = [...s.characters];
@@ -299,7 +298,7 @@ export class Sorter implements OnInit, OnDestroy {
     this.kingOfTheHillWinner = s.kingOfTheHillWinner;
   }
 
-  canGoBack(): boolean {
+  canUndo(): boolean {
     return this.history.length > 0;
   }
 

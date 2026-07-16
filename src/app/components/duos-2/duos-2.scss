@@ -17,22 +17,6 @@
     font-size: 18px;
     margin: 0 0 20px 0;
   }
-  
-  .back-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      background-color: #2980b9;
-      transform: translateY(-2px);
-    }
-  }
 }
 
 .loading {
@@ -195,14 +179,6 @@
     
     .subtitle {
       color: #b0b0b0;
-    }
-    
-    .back-button {
-      background-color: #4a90e2;
-      
-      &:hover {
-        background-color: #357abd;
-      }
     }
   }
 

@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { Character, CharacterService } from '../../services/character.service';
-import { BackButton } from '../back-button/back-button';
 
 interface HistoryPoint {
   date: Date;
@@ -18,7 +17,7 @@ interface CharacterHistorySeries {
 
 @Component({
   selector: 'app-chat-history-chart',
-  imports: [CommonModule, FormsModule, BackButton],
+  imports: [CommonModule, FormsModule],
   templateUrl: './chat-history-chart.html',
   styleUrl: './chat-history-chart.scss'
 })

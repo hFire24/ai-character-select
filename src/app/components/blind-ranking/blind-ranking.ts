@@ -3,14 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { CharacterService, Character } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
-import { BackButton } from '../back-button/back-button';
 import { CharacterModal } from '../character-modal/character-modal';
 import { CharacterFilterOptions, CharacterFilterPipe } from '../../pipes/character-filter.pipe';
 import { iconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-blind-ranking',
-  imports: [FormsModule, CommonModule, TierScreenshot, BackButton, CharacterModal],
+  imports: [FormsModule, CommonModule, TierScreenshot, CharacterModal],
   templateUrl: './blind-ranking.html',
   styleUrl: './blind-ranking.scss'
 })

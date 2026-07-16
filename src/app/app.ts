@@ -4,10 +4,11 @@ import { Character } from './services/character.service';
 import { Mood } from './services/mood.service';
 import { RouterOutlet } from '@angular/router';
 import { DeviceService } from './services/device.service';
+import { Navbar } from './components/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

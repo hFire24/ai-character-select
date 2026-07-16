@@ -1,110 +1,113 @@
 <div class="panel-container">
 	<h2>Random Character Picker</h2>
-	<button [style.background]="'#DD3333'" (click)="goBackToRoster()">
-		← Back to Character Select
-	</button>
 	<!-- Filters -->
 	<div class="advanced-filters" *ngIf="!spinning">
-		<div class="filter-section">
-			<h3>Status <button (click)="toggleAllStatuses()" class="select-all-btn">Toggle All</button></h3>
-			<div class="filter-checkboxes">
-				<label>
-					<input type="checkbox" [(ngModel)]="statusFilters.active" />
-					Active
-				</label>
-				<label>
-					<input type="checkbox" [(ngModel)]="statusFilters.inactive" />
-					Inactive
-				</label>
-				<label>
-					<input type="checkbox" [(ngModel)]="statusFilters.retired" />
-					Retired
-				</label>
-				<label>
-					<input type="checkbox" [(ngModel)]="statusFilters.side" />
-					Side
-				</label>
-				<label>
-					<input type="checkbox" [(ngModel)]="statusFilters.me" />
-					Me
-				</label>
-				<label>
-					<input type="checkbox" [(ngModel)]="statusFilters.future" />
-					Future
-				</label>
-			</div>
-		</div>
-
-		<div class="filter-section">
-			<h3>Tier Range</h3>
-			<div class="tier-slider-container">
-				<div class="tier-slider-labels">
-					<span>Min: Tier {{ minTier }}</span>
-					<span>Max: Tier {{ maxTier }}</span>
+		<h3 class="filter-title clickable" (click)="toggleFilters()">
+			Advanced Filters
+			<span class="collapse-icon">{{ isFiltersCollapsed ? '▶' : '▼' }}</span>
+		</h3>
+		<div class="advanced-filter-content" [class.collapsed]="isFiltersCollapsed">
+			<div class="filter-section">
+				<h3>Status <button (click)="toggleAllStatuses()" class="select-all-btn">Toggle All</button></h3>
+				<div class="filter-checkboxes">
+					<label>
+						<input type="checkbox" [(ngModel)]="statusFilters.active" />
+						Active
+					</label>
+					<label>
+						<input type="checkbox" [(ngModel)]="statusFilters.inactive" />
+						Inactive
+					</label>
+					<label>
+						<input type="checkbox" [(ngModel)]="statusFilters.retired" />
+						Retired
+					</label>
+					<label>
+						<input type="checkbox" [(ngModel)]="statusFilters.side" />
+						Side
+					</label>
+					<label>
+						<input type="checkbox" [(ngModel)]="statusFilters.me" />
+						Me
+					</label>
+					<label>
+						<input type="checkbox" [(ngModel)]="statusFilters.future" />
+						Future
+					</label>
 				</div>
-				<div class="tier-sliders">
-					<div class="slider-group">
-						<label>Min Tier:</label>
-						<input type="range" [(ngModel)]="minTier" [min]="tierMin" [max]="tierMax" class="tier-slider" />
+			</div>
+
+			<div class="filter-section">
+				<h3>Tier Range</h3>
+				<div class="tier-slider-container">
+					<div class="tier-slider-labels">
+						<span>Min: Tier {{ minTier }}</span>
+						<span>Max: Tier {{ maxTier }}</span>
 					</div>
-					<div class="slider-group">
-						<label>Max Tier:</label>
-						<input type="range" [(ngModel)]="maxTier" [min]="tierMin" [max]="tierMax" class="tier-slider" />
+					<div class="tier-sliders">
+						<div class="slider-group">
+							<label>Min Tier:</label>
+							<input type="range" [(ngModel)]="minTier" [min]="tierMin" [max]="tierMax" class="tier-slider" />
+						</div>
+						<div class="slider-group">
+							<label>Max Tier:</label>
+							<input type="range" [(ngModel)]="maxTier" [min]="tierMin" [max]="tierMax" class="tier-slider" />
+						</div>
+					</div>
+					<div class="tier-range-display">
+						Showing tiers {{ minTier }}-{{ maxTier }} ({{ minTier <= 3 && maxTier >= 1 ? 'includes favorites' : 'no favorites' }})
 					</div>
 				</div>
-				<div class="tier-range-display">
-					Showing tiers {{ minTier }}-{{ maxTier }} ({{ minTier <= 3 && maxTier >= 1 ? 'includes favorites' : 'no favorites' }})
+			</div>
+
+			<div class="filter-section">
+				<h3>Character Types</h3>
+				<div class="filter-checkboxes">
+					<label>
+						<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="all" />
+						All Characters
+					</label>
+					<label>
+						<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="rp" />
+						RP Friendly
+					</label>
+					<label>
+						<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="knowledge" />
+						Knowledge Friendly
+					</label>
+					<label>
+						<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="both" />
+						RP & Knowledge Friendly
+					</label>
 				</div>
 			</div>
-		</div>
 
-		<div class="filter-section">
-			<h3>Character Types</h3>
-			<div class="filter-checkboxes">
-				<label>
-					<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="all" />
-					All Characters
-				</label>
-				<label>
-					<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="rp" />
-					RP Friendly
-				</label>
-				<label>
-					<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="knowledge" />
-					Knowledge Friendly
-				</label>
-				<label>
-					<input type="radio" name="friendlinessFilter" [(ngModel)]="friendlinessFilter" value="both" />
-					RP & Knowledge Friendly
-				</label>
+			<div class="filter-section">
+				<h3>Gender/Pronouns <button (click)="toggleAllPronouns()" class="select-all-btn">Toggle All</button></h3>
+				<div class="filter-checkboxes">
+					<label *ngFor="let pronoun of availablePronouns">
+						<input type="checkbox" [checked]="selectedPronouns.includes(pronoun)" (change)="togglePronoun(pronoun)" />
+						{{ pronoun }}
+					</label>
+				</div>
 			</div>
-		</div>
 
-		<div class="filter-section">
-			<h3>Gender/Pronouns <button (click)="toggleAllPronouns()" class="select-all-btn">Toggle All</button></h3>
-			<div class="filter-checkboxes">
-				<label *ngFor="let pronoun of availablePronouns">
-					<input type="checkbox" [checked]="selectedPronouns.includes(pronoun)" (change)="togglePronoun(pronoun)" />
-					{{ pronoun }}
-				</label>
-			</div>
-		</div>
-
-		<div class="filter-section">
-			<h3>Other Filters</h3>
-			<div class="filter-checkboxes">
-				<label>
-					<input type="checkbox" [(ngModel)]="hasChatOnly" />
-					Has Active Chat Link Only
-				</label>
-				<label>
-					<input type="checkbox" [(ngModel)]="splitTwins" (ngModelChange)="onSplitTwinsChange()" />
-					Split Twins
-				</label>
-				<label>
-					<input type="checkbox" [(ngModel)]="skipAnimation" />
-					Skip Animation
-				</label>
+			<div class="filter-section">
+				<h3>Other Filters</h3>
+				<div class="filter-checkboxes">
+					<label>
+						<input type="checkbox" [(ngModel)]="hasChatOnly" />
+						Has Active Chat Link Only
+					</label>
+					<label>
+						<input type="checkbox" [(ngModel)]="splitTwins" (ngModelChange)="onSplitTwinsChange()" />
+						Split Twins
+					</label>
+					<label>
+						<input type="checkbox" [(ngModel)]="skipAnimation" />
+						Skip Animation
+					</label>
+				</div>
 			</div>
 		</div>
 	</div>

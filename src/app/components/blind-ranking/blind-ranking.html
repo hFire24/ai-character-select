@@ -92,7 +92,6 @@
 </section>
 }
 <app-character-modal *ngIf="currentCharacter && showCard" [character]="currentCharacter" (close)="showCard = false"></app-character-modal>
-<app-back-button></app-back-button>
 @if (screenshotDataUrl) {
   <app-tier-screenshot [screenshotTitle]="'Blind Ranking Screenshot'" [screenshotDataUrl]="screenshotDataUrl"></app-tier-screenshot>
 }

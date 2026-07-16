@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
-import { BackButton } from '../back-button/back-button';
 import { DeviceService } from '../../services/device.service';
 import { StatsContainer } from '../stats-container/stats-container';
 import { CharacterList } from '../character-list/character-list';
@@ -26,7 +25,7 @@ interface LastChattedCharacter {
 
 @Component({
   selector: 'app-stats',
-  imports: [CommonModule, BackButton, StatsContainer, CharacterList, CharacterModal],
+  imports: [CommonModule, StatsContainer, CharacterList, CharacterModal],
   templateUrl: 'stats.html',
   styleUrl: 'stats.scss'
 })

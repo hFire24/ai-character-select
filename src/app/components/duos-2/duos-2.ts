@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterModal } from '../character-modal/character-modal';
-import { BackButton } from '../back-button/back-button';
 import { CharacterService, Character, DuoPair } from '../../services/character.service';
 import { forkJoin } from 'rxjs';
 import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
@@ -15,7 +14,7 @@ interface Duo {
 
 @Component({
   selector: 'app-duos-2',
-  imports: [CommonModule, CharacterModal, BackButton],
+  imports: [CommonModule, CharacterModal],
   templateUrl: './duos-2.html',
   styleUrl: './duos-2.scss'
 })

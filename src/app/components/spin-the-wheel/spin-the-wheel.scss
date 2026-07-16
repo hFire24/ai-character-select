@@ -20,6 +20,44 @@ label {
 	width: 100%;
 }
 
+.filter-title {
+	font-weight: 900;
+	color: #2c3e50;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.filter-title.clickable {
+	cursor: pointer;
+	user-select: none;
+	transition: color 0.2s ease;
+
+	&:hover {
+		color: #3498db;
+	}
+}
+
+.collapse-icon {
+	font-size: 0.8em;
+	margin-left: 8px;
+}
+
+.advanced-filter-content {
+	overflow: hidden;
+	transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+	opacity: 1;
+	max-height: 1200px;
+	margin-top: 1.5rem;
+
+	&.collapsed {
+		max-height: 0;
+		opacity: 0;
+		margin-top: 0;
+	}
+}
+
 .filter-section {
 	margin-bottom: 1.5rem;
 	
@@ -308,6 +346,14 @@ label {
 	
 	.filter-section h3 {
 		color: #e1eafc;
+	}
+
+	.filter-title {
+		color: #e2e8f0;
+
+		&.clickable:hover {
+			color: #63b3ed;
+		}
 	}
 	
 	.filter-checkboxes label {

@@ -1,0 +1,117 @@
+<nav class="navbar" aria-label="Main navigation">
+  <a class="brand-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
+    Characters
+  </a>
+
+  <button
+    class="hamburger"
+    type="button"
+    (click)="toggleMenu()"
+    [class.open]="isMenuOpen"
+    [attr.aria-expanded]="isMenuOpen"
+    aria-label="Toggle navigation"
+    aria-controls="navbar-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div id="navbar-menu" class="navbar-menu" [class.open]="isMenuOpen">
+    <section class="nav-category" [class.open]="openCategory === 'groupings'">
+      <button type="button" class="category-toggle" (click)="toggleCategory('groupings')">
+        Groupings <span>{{ openCategory === 'groupings' ? '-' : '+' }}</span>
+      </button>
+      <div class="category-links">
+        <a routerLink="/groups" routerLinkActive="active" title="View groups of four or more characters with special connections" (click)="closeMenu()">
+          Groups
+        </a>
+        <a routerLink="/hangouts" routerLinkActive="active" title="Generate randomized groups for hangouts" (click)="closeMenu()">
+          Hangouts
+        </a>
+        <a routerLink="/duos" routerLinkActive="active" title="Find out which pair of characters have duo names" (click)="closeMenu()">
+          Duos
+        </a>
+        <a routerLink="/trios" routerLinkActive="active" title="View groups of three characters with special connections" (click)="closeMenu()">
+          Trios
+        </a>
+        <a
+          *ngIf="!isMobile()"
+          routerLink="/tier-list"
+          routerLinkActive="active"
+          title="Create and customize tier rankings with drag-and-drop functionality"
+          (click)="closeMenu()">
+          Tier List
+        </a>
+        <a routerLink="/lineage" routerLinkActive="active" title="See who inspired who in character creation" (click)="closeMenu()">
+          Lineage
+        </a>
+      </div>
+    </section>
+
+    <section *ngIf="!isMobile()" class="nav-category" [class.open]="openCategory === 'management'">
+      <button type="button" class="category-toggle" (click)="toggleCategory('management')">
+        Management <span>{{ openCategory === 'management' ? '-' : '+' }}</span>
+      </button>
+      <div class="category-links">
+        <a routerLink="/stats" routerLinkActive="active" title="View statistics about your character roster" (click)="closeMenu()">
+          Stats
+        </a>
+        <a routerLink="/manage-tiers" routerLinkActive="active" title="Manage and customize your tier rankings" (click)="closeMenu()">
+          Manage Tiers
+        </a>
+        <a routerLink="/chat-manager" routerLinkActive="active" title="Manage active character chats" (click)="closeMenu()">
+          Manage Chats
+        </a>
+        <a routerLink="/chat-history-chart" routerLinkActive="active" title="View chat history spread" (click)="closeMenu()">
+          Chat History
+        </a>
+        <a routerLink="/id-checker" routerLinkActive="active" title="Check character IDs for duplicates and gaps" (click)="closeMenu()">
+          ID Checker
+        </a>
+      </div>
+    </section>
+
+    <section class="nav-category" [class.open]="openCategory === 'fun'">
+      <button type="button" class="category-toggle" (click)="toggleCategory('fun')">
+        Fun <span>{{ openCategory === 'fun' ? '-' : '+' }}</span>
+      </button>
+      <div class="category-links">
+        <a routerLink="/sorter" routerLinkActive="active" title="Compare characters pairwise to determine your rankings" (click)="closeMenu()">
+          Comparison
+        </a>
+        <a routerLink="/tournament" routerLinkActive="active" title="Run a bracket-style tournament to find your favorite character" (click)="closeMenu()">
+          Tournament
+        </a>
+        <a routerLink="/blind-ranking" routerLinkActive="active" title="Rank characters without knowing who comes next" (click)="closeMenu()">
+          Blind Ranking
+        </a>
+        <a routerLink="/spin-the-wheel" routerLinkActive="active" title="Randomly select a character from the roster" (click)="closeMenu()">
+          Random Picker
+        </a>
+        <span class="disabled-link" title="Coming soon - Personality Quizzes">Quizzes</span>
+      </div>
+    </section>
+
+    <section class="nav-category" [class.open]="openCategory === 'other'">
+      <button type="button" class="category-toggle" (click)="toggleCategory('other')">
+        Other <span>{{ openCategory === 'other' ? '-' : '+' }}</span>
+      </button>
+      <div class="category-links">
+        <a routerLink="/birthday-calendar" routerLinkActive="active" title="See character birthdays organized by month" (click)="closeMenu()">
+          Birthdays
+        </a>
+        <a
+          *ngIf="!isMobile()"
+          routerLink="/timeline"
+          routerLinkActive="active"
+          title="View the timeline of character creation"
+          (click)="closeMenu()">
+          Timelines
+        </a>
+        <a routerLink="/story-helper" routerLinkActive="active" title="Enhance your story prompts with this tool" (click)="closeMenu()">
+          Story Helper
+        </a>
+      </div>
+    </section>
+  </div>
+</nav>

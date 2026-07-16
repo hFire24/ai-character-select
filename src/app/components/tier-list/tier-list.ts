@@ -4,12 +4,11 @@ import { CommonModule } from '@angular/common';
 import { TierSettings } from "../tier-settings/tier-settings";
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 import { TextViewer } from '../text-viewer/text-viewer';
-import { BackButton } from '../back-button/back-button';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 
 @Component({
   selector: 'app-tier-list',
-  imports: [CommonModule, TierSettings, TierScreenshot, TextViewer, BackButton],
+  imports: [CommonModule, TierSettings, TierScreenshot, TextViewer],
   templateUrl: './tier-list.html',
   styleUrl: './tier-list.scss'
 })

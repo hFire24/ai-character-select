@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Character, CharacterService } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
 import { CharacterModal } from '../character-modal/character-modal';
-import { BackButton } from '../back-button/back-button';
 import { CommonModule } from '@angular/common';
 import { DaysUntilBirthdayPipe } from '../../pipes/days-until-birthday.pipe';
 
@@ -21,7 +20,7 @@ interface BirthdayCharacter {
 
 @Component({
   selector: 'app-birthday-calendar',
-  imports: [CommonModule, CharacterModal, BackButton, DaysUntilBirthdayPipe],
+  imports: [CommonModule, CharacterModal, DaysUntilBirthdayPipe],
   templateUrl: './birthday-calendar.html',
   styleUrl: './birthday-calendar.scss'
 })
