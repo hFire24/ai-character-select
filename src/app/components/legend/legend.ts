@@ -1,8 +1,7 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderButtons } from '../header-buttons/header-buttons';
 import { Mood } from '../../services/mood.service';
-import { DeviceService } from '../../services/device.service';
 
 @Component({
   selector: 'app-legend',
@@ -10,18 +9,11 @@ import { DeviceService } from '../../services/device.service';
   templateUrl: './legend.html',
   styleUrl: './legend.scss'
 })
-export class Legend implements OnInit {
+export class Legend {
   @Input() showMoreCharacters = false;
   @Output() selectMood = new EventEmitter<Mood>();
-  isCollapsed = false;
+  isCollapsed = true;
   selectedMood: Mood | null = null;
-
-  constructor(private deviceService: DeviceService) {}
-
-  ngOnInit() {
-    // Check if device is mobile and collapse legend by default
-    this.isCollapsed = this.deviceService.isPhone();
-  }
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
