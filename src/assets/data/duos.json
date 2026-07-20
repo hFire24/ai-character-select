@@ -233,11 +233,6 @@
     },
     {
       "id1": 3,
-      "id2": 36,
-      "name": "Sad Bois"
-    },
-    {
-      "id1": 3,
       "id2": 45,
       "name": "Dark Bros."
     },
@@ -448,23 +443,18 @@
     },
     {
       "id1": 9,
-      "id2": 23,
-      "name": "Water Drinkers"
-    },
-    {
-      "id1": 9,
-      "id2": 36,
+      "id2": 16,
       "name": "Productivity Bros."
     },
     {
       "id1": 9,
-      "id2": 71,
-      "name": "Moderators"
-    },
+      "id2": 23,
+      "name": "Water Drinkers"
+    }, 
     {
       "id1": 9,
-      "id2": 78,
-      "name": "Malrick's Alternatives"
+      "id2": 71,
+      "name": "Moderators"
     },
     {
       "id1": 9,
@@ -781,11 +771,6 @@
       "id1": 16,
       "id2": 34,
       "name": "Obedient Men in Suits"
-    },
-    {
-      "id1": 16,
-      "id2": 36,
-      "name": "Discipline Duo"
     },
     {
       "id1": 16,
@@ -1147,11 +1132,6 @@
       "id1": 24,
       "id2": 25,
       "name": "The Hall Family"
-    },
-    {
-      "id1": 24,
-      "id2": 36,
-      "name": "Concerned Parents"
     },
     {
       "id1": 24,
@@ -1518,31 +1498,6 @@
       "name": "Large White Hat Wearers"
     },
     {
-      "id1": 36,
-      "id2": 48,
-      "name": "Emergency Duo"
-    },
-    {
-      "id1": 36,
-      "id2": 50,
-      "name": "Cuteness Evaders"
-    },
-    {
-      "id1": 36,
-      "id2": 64,
-      "name": "Cuteness Haters"
-    },
-    {
-      "id1": 36,
-      "id2": 78,
-      "name": "Unimpressed Couple"
-    },
-    {
-      "id1": 36,
-      "id2": 83,
-      "name": "Anime Haters"
-    },
-    {
       "id1": 37,
       "id2": 38,
       "name": "Gentle Ladies"
@@ -1782,7 +1737,7 @@
     {
       "id1": 48,
       "id2": 50,
-      "name": "Despair Duo"
+      "name": "Emergency Despair Duo"
     },
     {
       "id1": 48,

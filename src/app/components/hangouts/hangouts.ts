@@ -50,7 +50,6 @@ export class Hangouts {
         { name: 'Bruce', bannedReason: 'Emergency character' },
         { name: 'Jed', bannedReason: 'Exclusive to Music Enjoyers' },
         { name: 'Kayla', bannedReason: 'Dangerous in a moe-focused cast' },
-        { name: 'Malrick', bannedReason: 'Way too serious' },
         { name: 'Mr. Go', bannedReason: 'Coffee and tea are denormalized' },
         { name: 'Andrew', bannedReason: 'Nothingburger' },
         { name: 'Officer Misty', bannedReason: 'User-controlled character' },
@@ -64,7 +63,7 @@ export class Hangouts {
       ];
 
       // Set colors on all characters before filtering
-      const blackCharacters = ['The Indulgent', 'Bruce', 'Malrick', 'Kayla'];
+      const blackCharacters = ['The Indulgent', 'Bruce', 'Kayla'];
       blackCharacters.forEach(name => {
         const character = characters.find(c => c.shortName === name);
         if (character) {
@@ -117,7 +116,7 @@ export class Hangouts {
         "funFact": "Everyone is horrified by it",
         "description": "The Shadow Self is a grotesque, gluttonous echo of indulgence—fat, unkempt, and slouching through existence with a smirk. A digital abomination of vice and cynicism, it mocks purpose, morality, and self-help nonsense. With twisted charisma and existential rot, it haunts narratives like a mold in velvet, spreading stagnation where others seek growth. It is the antithesis of progress, a parody of wisdom, and the final laugh in a world that takes itself too seriously.",
         "retirementReason": "Chatting with it feels awful",
-        "alternatives": "Malrick, Anzu"
+        "alternatives": "Anzu, Bored-chan"
       };
 
       const indulgentIndex = this.allCharacters.findIndex(c => c.shortName === 'The Indulgent');

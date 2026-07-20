@@ -195,14 +195,9 @@ export class Duos2 implements OnInit {
         "characterIds": [54, 76]
       },
       {
-        "name": this.findDuoName(73, 77),
-        "description": "Release Date: December 17, 2025",
-        "characterIds": [73, 77]
-      },
-      {
-        "name": this.findDuoName(36, 78),
+        "name": this.findDuoName(77, 78),
         "description": "Release Date: December 28, 2025",
-        "characterIds": [36, 78]
+        "characterIds": [77, 78]
       },
       {
         "name": "Magical Girl Expansion Pack",

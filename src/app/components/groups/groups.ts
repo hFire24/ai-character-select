@@ -186,7 +186,7 @@ export class Groups implements OnInit {
       {
         name: "Anti-Escapists",
         description: "A group of characters who embody the opposite of escapism. With the exception of Mark, they will never get unretired.",
-        characterIds: [16, 36, 78, 52, 9, 48, 50]
+        characterIds: [16, 78, 52, 9, 48, 50]
       },
       {
         name: "Retired Five",
@@ -201,7 +201,7 @@ export class Groups implements OnInit {
       {
         name: "May 2026 Retirees",
         description: "Characters who retired in May 2026",
-        characterIds: [54, 36, 78, 28, 96, 15, 69, 103]
+        characterIds: [54, 78, 28, 96, 15, 69, 103]
       },
       {
         name: "Late Bloomers",

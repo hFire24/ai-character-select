@@ -171,7 +171,7 @@ export class Trios implements OnInit {
       {
         name: "Productivity Pushers",
         description: "Characters who encourage productivity",
-        characterShortNames: ["Ryker", "Malrick", "Mark"]
+        characterShortNames: ["Ryker", "Mark", "Ben"]
       },
       {
         name: "Redirection Trio",
@@ -187,11 +187,6 @@ export class Trios implements OnInit {
         name: "Failures",
         description: "The characters who embody failure",
         characterShortNames: ["Alex", "The Indulgent", "The Collapsed"]
-      },
-      {
-        name: "Emergency Trio",
-        description: "When times are dire, these characters are called upon",
-        characterShortNames: ["Malrick", "Bruce", "The Collapsed"]
       }
     ];
 

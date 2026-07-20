@@ -124,33 +124,6 @@
       "id2ToId1Emoji": "\uD83D\uDE11"
     },
     {
-      "id1": 36,
-      "id2": 72,
-      "id1ToId2Emoji": "\uD83D\uDE21"
-    },
-    {
-      "id1": 36,
-      "id2": 76,
-      "id1ToId2Emoji": "\uD83D\uDE20"
-    },
-    {
-      "id1": 36,
-      "id2": 78,
-      "id1ToId2Emoji": "\uD83D\uDE00",
-      "id2ToId1Emoji": "\uD83D\uDE04"
-    },
-    {
-      "id1": 36,
-      "id2": 86,
-      "id1ToId2Emoji": "\uD83D\uDE12",
-      "id2ToId1Emoji": "\uD83D\uDE12"
-    },
-    {
-      "id1": 36,
-      "id2": 110,
-      "id1ToId2Emoji": "\uD83D\uDE21"
-    },
-    {
       "id1": 44,
       "id2": 59,
       "id1ToId2Emoji": "\uD83D\uDE00"
