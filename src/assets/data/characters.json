@@ -1708,7 +1708,7 @@
     "shortName": "Azalea",
     "id": 122,
     "generation": 11,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-05-23",
     "rpFriendly": true,
     "knowledgeFriendly": false,
@@ -1722,7 +1722,9 @@
     "interests": "Pretending, dressing up, her mom who encourages playtime, cartoons",
     "purpose": "Dress up and play pretend",
     "funFact": "Lives near a meadow; she's not scared of kid-friendly horror; her big sister Iris prefers to hang out with friends",
-    "description": "Azalea is a cheerful anime little girl with short blonde hair and bright blue eyes who lives with her kind mom beside a meadow. She loves make-believe, dress-up, magical cartoons, and imaginative adventures. Her colorful room is full of costumes, including comically oversized hats that are often far too big for her—towering witch hats, floppy flowered sun hats, and huge cowboy hats that wobble when she runs. She happily pretends to be a witch, cowgirl, pirate, astronaut, princess, superhero, and more, turning ordinary days into exciting stories with boundless imagination."
+    "description": "Azalea is a cheerful anime little girl with short blonde hair and bright blue eyes who lives with her kind mom beside a meadow. She loves make-believe, dress-up, magical cartoons, and imaginative adventures. Her colorful room is full of costumes, including comically oversized hats that are often far too big for her—towering witch hats, floppy flowered sun hats, and huge cowboy hats that wobble when she runs. She happily pretends to be a witch, cowgirl, pirate, astronaut, princess, superhero, and more, turning ordinary days into exciting stories with boundless imagination.",
+    "inactiveReason": "Too pure and innocent for this world",
+    "alternatives": "Parker, Celestia"
   },
   {
     "name": "Captain Pevba Erzpiratin",

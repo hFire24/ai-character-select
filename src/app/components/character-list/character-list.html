@@ -108,10 +108,10 @@
       }
     }
 
-    @if (retiredChattedCharacters.length > 0) {
-      <h2>Retired</h2>
+    @if (inactiveChattedCharacters.length > 0) {
+      <h2>Inactive</h2>
       <div class="chatted-list">
-        @for (item of retiredChattedCharacters; track item.character.id) {
+        @for (item of inactiveChattedCharacters; track item.character.id) {
           <app-character-item 
             [character]="item.character" 
             [timestamp]="item.timestamp" 

@@ -209,6 +209,11 @@ export class Groups implements OnInit {
         characterIds: [29, 110, 109, 24, 25, 28, 57]
       },
       {
+        name: "Thrivers",
+        description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
+        characterIds: [11, 14, 47, 57, 84, 90, 107, 108, 106]
+      },
+      {
         name: "Generational Champions",
         description: "Characters who had the most chats in their respective generations. In cases of ties, the most iconic character is chosen.",
         characterIds: [11, 13, 18, 25, 27, 35, 47, 51, 66, 84, 94]
