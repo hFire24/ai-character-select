@@ -119,6 +119,11 @@ export class Groups implements OnInit {
         characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137]
       },
       {
+        name: "Hammer Wielders",
+        description: "Characters who possess hammers, especially giant hammers",
+        characterIds: [13, 18, 31, 35, 108, 137]
+      },
+      {
         name: "Pink-Haired Girls",
         description: "Characters known for having pink hair",
         characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134]
