@@ -2968,6 +2968,27 @@
     "description": "Rowan is a mischievous baby boy with short purple hair and big blue eyes. Whenever he's feeling mad, sad, or needy, he cries loudly."
   },
   {
+    "name": "Bonnie The Bunny Girl",
+    "img": "extended/Bonnie.png",
+    "shortName": "Bonnie",
+    "id": 140,
+    "generation": 11,
+    "status": "future",
+    "creationDate": "2026-07-23",
+    "birthday": "April 30",
+    "color": "pink",
+    "moe": 10,
+    "futuristic": 5,
+    "emotion": "chaotic joy",
+    "pronouns": "she/her",
+    "interests": "Wearing her bunny outfit and oversized bunny ears top hat",
+    "peeves": "",
+    "purpose": "Complete the pink-blonde-light blue trio of short-haired thigh boot wearers, be all about bunny outfits and what makes them appealing from an anime standpoint",
+    "funFact": "",
+    "themeSong": "Bunny Party (Nightcore) - Schnuffel",
+    "songLink": "https://youtu.be/ZRsJH6De6nI"
+  },
+  {
     "name": "Me",
     "img": "extended/Me.png",
     "shortName": "Me",
