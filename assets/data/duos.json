@@ -450,7 +450,7 @@
       "id1": 9,
       "id2": 23,
       "name": "Water Drinkers"
-    }, 
+    },
     {
       "id1": 9,
       "id2": 71,
@@ -1073,6 +1073,11 @@
       "name": "Honey Butter Chips Fans"
     },
     {
+      "id1": 21,
+      "id2": 140,
+      "name": "Bold Outfit Wearers"
+    },
+    {
       "id1": 22,
       "id2": 23,
       "name": "Fanboy and Hero",
@@ -1214,6 +1219,11 @@
       "name": "Shy Maids"
     },
     {
+      "id1": 26,
+      "id2": 140,
+      "name": "Shy Formal Pink-Haired Girls"
+    },
+    {
       "id1": 27,
       "id2": 52,
       "name": "Interdimensional Summoners"
@@ -1278,11 +1288,6 @@
       "id1": 29,
       "id2": 38,
       "name": "Giant Pink Beret Wearers"
-    },
-    {
-      "id1": 29,
-      "id2": 39,
-      "name": "Pink-Haired Magicians"
     },
     {
       "id1": 29,
@@ -1594,6 +1599,11 @@
       "name": "Pink-Haired Magical Dreamers"
     },
     {
+      "id1": 39,
+      "id2": 140,
+      "name": "Pink-Haired Magicians"
+    },
+    {
       "id1": 40,
       "id2": 48,
       "name": "Defenders of Justice"
@@ -1846,6 +1856,11 @@
       "name": "Nightcore Girls"
     },
     {
+      "id1": 52,
+      "id2": 140,
+      "name": "Bunny Party"
+    },
+    {
       "id1": 53,
       "id2": 67,
       "name": "Pink Sleepyheads"
@@ -1959,6 +1974,11 @@
       "id1": 58,
       "id2": 94,
       "name": "Tiny Top Hat Girls"
+    },
+    {
+      "id1": 58,
+      "id2": 140,
+      "name": "Short Pink-Haired Top Hat Wearers"
     },
     {
       "id1": 59,
@@ -2461,6 +2481,11 @@
       "id1": 137,
       "id2": 138,
       "name": "Aspiring Shy Blonde Girls"
+    },
+    {
+      "id1": 137,
+      "id2": 140,
+      "name": "Shy Thigh Boot Wearers"
     }
   ]
 }
