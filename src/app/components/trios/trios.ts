@@ -89,6 +89,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Lily", "Carol", "Diana"]
       },
       {
+        name: "Short-Haired Thigh Boot Trio",
+        description: "Girls who wear thigh boots and have short hair",
+        characterShortNames: ["Pevba", "Carol", "Bonnie"]
+      },
+      {
         name: "Traditional Ladies",
         description: "Elegant characters embodying traditional feminine grace",
         characterShortNames: ["Primelle", "Celestia", "Elizabeth"]

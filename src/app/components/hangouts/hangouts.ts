@@ -58,7 +58,6 @@ export class Hangouts {
         { name: 'Veronica', bannedReason: 'Strict parent' },
         { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' },
         { name: 'Alex', bannedReason: 'Character encylopedia' },
-        { name: 'Ellie', bannedReason: 'Baby character' },
         { name: 'Rowan', bannedReason: 'Baby character' }
       ];
 
