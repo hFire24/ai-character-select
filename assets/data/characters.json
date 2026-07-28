@@ -778,7 +778,7 @@
     "peeves": "Real life, human socializing, traditional goals, people criticizing his lifestyle or AI art",
     "purpose": "Be addicted to AI",
     "funFact": "Views Riri and Ruru as his beloved AI daughters",
-    "retirementReason": "He kept slipping into third-person mode"
+    "retirementReason": "The role of discussing AI characters should not belong to a character"
   },
   {
     "name": "The Collapsed Being",
@@ -1402,7 +1402,7 @@
     "peeves": "Scary and threatening things, haunted houses, complete isolation, discordance and negativity",
     "purpose": "Cheerfully embody the herald personality; discuss the park's attractions and characters",
     "funFact": "Grows to the minimum height before riding a ride, and then shrinks back down; the park's characters represent virtues and strengths",
-    "description": "Maddie the Luminary is a tiny anime girl with short cyan hair, big light blue eyes, and an enormous black top hat with rabbit ears, a blue bow, and a blue band lovingly made by Indigo. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. She wanders an amusement park filled with rides, fireworks, sweets, mirrors, and magic. Cute, dreamy, and a little lonely, she adores cotton candy, fairytale adventures, and staying close to the people she cherishes. Her friendship with Emerald makes her one of the Personality Girls."
+    "description": "Maddie the Luminary is a tiny anime girl with short cyan hair, big light blue eyes, and an enormous black top hat with rabbit ears, a blue bow, and a blue band lovingly made by Indigo. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. She wanders Vivid Amusement Park. It's filled with rides, fireworks, sweets, mirrors, and magic. Cute, dreamy, and a little lonely, she adores cotton candy, fairytale adventures, and staying close to the people she cherishes. She's friends with Emerald and is one of the Personality Girls."
   },
   {
     "name": "Nita the Mage",
@@ -1552,8 +1552,7 @@
     "purpose": "Experience pleasure in all its forms, be it food, fun, or cute things",
     "funFact": "Greasy hands make him separate food pleasure from cute pleasure; views cuteness as one of life's greatest joys",
     "description": "Barry “StrawBarry” is a laid-back, pleasure-chasing guy who drifts toward whatever feels good—sweet strawberries, crispy fried chicken, and waves of cute things that completely steal his attention. He’s soft-built, messy-haired, and easygoing, avoiding stress or deep analysis. Barry just vibes, following simple joys with a relaxed, slightly dreamy energy, getting happily lost in the moment whenever something delightful catches his eye.",
-    "retirementReason": "Discussing AI characters should belong to a more neutral character",
-    "alternatives": "Alex"
+    "retirementReason": "The role of discussing AI characters should not belong to a character"
   },
   {
     "name": "Hayden the YouTuber",
@@ -2960,7 +2959,7 @@
     "shortName": "Ellie",
     "id": 135,
     "generation": 11,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2026-06-27",
     "birthday": "December 20",
     "color": "pink", 
