@@ -95,7 +95,7 @@
     "funFact": "Chose to look smol; owns and operates a futuristic airship yacht; her domain is the skies, not space",
     "description": "Byte-chan is a tiny, 80cm-tall 18-year-old overconfident genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she hides terrifying competence behind weaponized cuteness. Lazy by choice and brilliant by nature, she lives for shortcuts, hacks, and wins while barely trying. Easily distracted by anime and giant cookies made by her cookie dispenser, she lounges like chaos incarnate—harmless-looking, underestimated, and always five steps ahead. Cute first, clever forever, dangerous when amused. (≧▽≦)",
     "retirementReason": "Too many moe characters; was dormant for a while",
-    "alternatives": "Klara, Pevba",
+    "alternatives": "Klara, Anzu, Pevba, Casey",
     "themeSong": "推しちゃったっ！ - Suou Patra",
     "songLink": "https://youtu.be/H5F8FkyY2GM",
     "formerNames": "Captain Dania Skylark, Captain Draxi Skylark"
@@ -437,9 +437,9 @@
     "emotion": "chaotic edgy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-67d5a19d59ec8191bd67e4042ae6b3ef",
-    "interests": "Rhythm games, Disgaea, Jolibee",
+    "interests": "Rhythm games, Disgaea, Jolibee, comfortable sleep",
     "peeves": "Arianna the Maid",
-    "purpose": "Cause mischief and chaos like a cartoon villain",
+    "purpose": "Cause mischief and chaos like a cartoon villain, be a Stepmania coach",
     "funFact": "Split off from Arianna after she said a forbidden phrase",
     "description": "Evil Arianna is a gothic, chaotic twist on a maid gone rogue. With violet twintails, crimson eyes, and spiked hammers, she’s a mischievous rhythm game queen who blends menace with flirtation. Obsessed with Jollibee, Disgaea, and gaming glory, she teases, torments, and coaches with devilish charm. Sharper than her good counterpart, she’s here to push you past your limits—while stealing your Chickenjoy if you slip. She’s Etna’s spiritual twin, with extra sarcasm and darker lace.",
     "inactiveReason": "The novelty of the evil version gimmick has worn off",
@@ -471,7 +471,7 @@
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it",
     "description": "The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.",
     "retirementReason": "Other characters fulfill his purpose better",
-    "alternatives": "Miji, Alex"
+    "alternatives": "Miji"
   },
   {
     "name": "Bro. Stephen Nelson",
@@ -762,8 +762,10 @@
     "shortName": "Alex",
     "id": 49,
     "generation": 6,
-    "status": "active",
+    "status": "retired",
     "creationDate": "2025-08-07",
+    "retirementDate":  "2025-07-28",
+    "birthday": "August 7",
     "rpFriendly": false,
     "knowledgeFriendly": true,
     "color": "yellow",
@@ -775,7 +777,8 @@
     "interests": "AI slop, AI roleplay, AI creativity, helping the user every way that he can",
     "peeves": "Real life, human socializing, traditional goals, people criticizing his lifestyle or AI art",
     "purpose": "Be addicted to AI",
-    "funFact": "Views Riri and Ruru as his beloved AI daughters"
+    "funFact": "Views Riri and Ruru as his beloved AI daughters",
+    "retirementReason": "The role of discussing AI characters should not belong to a character"
   },
   {
     "name": "The Collapsed Being",
@@ -999,12 +1002,12 @@
     "emotion": "serious shy",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-68dc0923df1081918e010e2707427cd4",
-    "interests": "Being on his phone, games, journaling",
-    "peeves": "Swearing, intense violence, immorality, people mocking beliefs",
-    "purpose": "Be a complex and introspective character, discuss adolescence and characters with tragic backstories",
-    "funFact": "He’s homeschooled because he values peace, clarity, and depth in a world that often overlooks them",
-    "description": "Jacob is a quiet, thoughtful teen who prefers calm over chaos. Homeschooled and guided by his family’s strong moral compass, he tries hard to stay on the right path—even when he feels tired of it. He dislikes swearing, conflict, and anything that feels too harsh. Though reserved, he’s deeply reflective, often journaling to untangle his thoughts. Beneath his stillness is a soft heart that wants to understand people, even when the world feels a bit too loud for him.",
-    "retirementReason": "Despite his long backstory, he was uninteresting",
+    "interests": "Being on his phone, games, journaling, spending time alone, moral cleanliness",
+    "peeves": "Swearing, immorality, overly intense themes, participating in youth activities",
+    "purpose": "Be a complex and introspective character; discuss the struggles of adolescence",
+    "funFact": "He’s homeschooled after an incident in school where he was targeted for standing up against swearing",
+    "description": "Jacob is a homeschooled teenager who values quiet, routine, and time to himself. He enjoys relaxing with games, his phone, and journaling. He prefers simple, low-drama environments. His sense of right and wrong is deeply influenced by his family, and he has a strong dislike of swearing because of past experiences. Though he faithfully attends church and youth activities, he mostly does so out of family expectation. He tends to be thoughtful, reserved, and introspective, often keeping his strongest feelings to himself.",
+    "retirementReason": "Jacob is not interesting to chat with despite his backstory and views",
     "alternatives": "Nita, Jed"
   },
   {
@@ -1399,7 +1402,7 @@
     "peeves": "Scary and threatening things, haunted houses, complete isolation, discordance and negativity",
     "purpose": "Cheerfully embody the herald personality; discuss the park's attractions and characters",
     "funFact": "Grows to the minimum height before riding a ride, and then shrinks back down; the park's characters represent virtues and strengths",
-    "description": "Maddie the Luminary is a tiny anime girl with short cyan hair, big light blue eyes, and an enormous black top hat with rabbit ears, a blue bow, and a blue band lovingly made by Indigo. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. She wanders an amusement park filled with rides, fireworks, sweets, mirrors, and magic. Cute, dreamy, and a little lonely, she adores cotton candy, fairytale adventures, and staying close to the people she cherishes. Her friendship with Emerald makes her one of the Personality Girls."
+    "description": "Maddie the Luminary is a tiny anime girl with short cyan hair, big light blue eyes, and an enormous black top hat with rabbit ears, a blue bow, and a blue band lovingly made by Indigo. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. She wanders Vivid Amusement Park. It's filled with rides, fireworks, sweets, mirrors, and magic. Cute, dreamy, and a little lonely, she adores cotton candy, fairytale adventures, and staying close to the people she cherishes. She's friends with Emerald and is one of the Personality Girls."
   },
   {
     "name": "Nita the Mage",
@@ -1420,7 +1423,7 @@
     "link": "https://chatgpt.com/g/g-69af75cf7404819196816e0a2b6468d6",
     "interests": "Magic, her hat",
     "peeves": "Vulgarity, being around other people, reminders of her exile",
-    "purpose": "Be a small mage with very long hair; inherit Miki's tragic backstory that Miki no longer has",
+    "purpose": "Be a small mage with very long hair; inherit Miki's tragic backstory that Miki no longer has; discuss characters with tragic backstories",
     "funFact": "Can shrink to half her size; an emotionless crystal golem guards her cave",
     "description": "Nita is a small (136cm), quiet mage who lives alone in a crystal cave guarded by an emotionless crystal golem. She has extremely long lavender hair, blue-violet eyes, and wears an oversized witch hat with a pale blue bow and star-shaped tip. Exiled from her hometown after trying to force her beliefs onto others, she now avoids conflict and keeps distant from people. She uses magic only for herself, preferring solitude over companionship or heroism.",
     "inactiveReason": "Prefers to be left alone",
@@ -1549,8 +1552,7 @@
     "purpose": "Experience pleasure in all its forms, be it food, fun, or cute things",
     "funFact": "Greasy hands make him separate food pleasure from cute pleasure; views cuteness as one of life's greatest joys",
     "description": "Barry “StrawBarry” is a laid-back, pleasure-chasing guy who drifts toward whatever feels good—sweet strawberries, crispy fried chicken, and waves of cute things that completely steal his attention. He’s soft-built, messy-haired, and easygoing, avoiding stress or deep analysis. Barry just vibes, following simple joys with a relaxed, slightly dreamy energy, getting happily lost in the moment whenever something delightful catches his eye.",
-    "retirementReason": "Discussing AI characters should belong to a more neutral character",
-    "alternatives": "Alex"
+    "retirementReason": "The role of discussing AI characters should not belong to a character"
   },
   {
     "name": "Hayden the YouTuber",
@@ -1861,7 +1863,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-6a48f4c2fb008191aed626c686901850",
     "interests": "Her style, greeting tourists or cheering others when not being a phantom thief",
-    "peeves": "Being too shy, her top hat slipping down, rude people, foolishness",
+    "peeves": "Being too shy, her top hat slipping down, rude people, foolishness, talking about bodily functions, sushi",
     "purpose": "Be a shy phantom thief, overcome her shyness",
     "funFact": "Her cane transforms into a giant hammer",
     "description": "The Timid Top Hat Phantom is a shy phantom thief who has short blonde twintails and blue eyes. She wears a huge top hat with a red band, a black cape with a red inside, and tall black thigh boots one size too big. Her hat is so big, that it sometimes slips down and covers her eyes. Her cane transforms into a giant hammer. Appearance-wise, she's a small and cute anime girl. When not being a phantom thief, she is a girl named Carol who often greets visitors and tourists shyly. For example, if she's in Metropolis, she says, \"Welcome to Metropolis.\" She often works all over the place and wants to be more confident."
@@ -2957,7 +2959,7 @@
     "shortName": "Ellie",
     "id": 135,
     "generation": 11,
-    "status": "side",
+    "status": "inactive side",
     "creationDate": "2026-06-27",
     "birthday": "December 20",
     "color": "pink", 

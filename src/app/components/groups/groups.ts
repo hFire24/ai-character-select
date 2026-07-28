@@ -200,7 +200,7 @@ export class Groups implements OnInit {
       },
       {
         name: "Multi-Retirees",
-        description: "Characters who were retired twice or more. Kai was retired three times.",
+        description: "Characters who were retired twice or more. Kai and Alex were retired three times.",
         characterIds: [30, 32, 48, 49, 66, 69, 71, 81]
       },
       {
