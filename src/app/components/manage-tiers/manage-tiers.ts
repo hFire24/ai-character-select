@@ -276,6 +276,8 @@ export class ManageTiers {
       'id',
       'generation',
       'color',
+      'rpFriendly',
+      'knowledgeFriendly',
       'musicEnjoyer',
       'personalityGirl',
       'status',
