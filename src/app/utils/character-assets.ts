@@ -4,10 +4,11 @@ export function iconAssetPath(path: string): string {
 
 export function tallIconAssetPath(path: string): string {
   if (!path) return '';
-  if (typeof window !== 'undefined' && window.matchMedia('(max-width: 800px)').matches) {
-    return iconAssetPath(path);
-  }
+  return (typeof window !== 'undefined' && window.matchMedia('(max-width: 800px)').matches) ? 
+    iconAssetPath(path) : useTallIconAssetPath(path);
+}
 
+export function useTallIconAssetPath(path: string): string {
   const [, ...rest] = path.split('/');
   const filename = rest.join('/');
 

@@ -42,6 +42,11 @@ export interface CharacterFilterOptions {
     favorite?: boolean;  // Tier 1-3 only
     exclude?: number[];  // Specific tiers to exclude
   };
+
+  moe?: {
+    min?: number;
+    max?: number;
+  }
   
   // Attribute filters
   attributes?: {
@@ -194,6 +199,11 @@ export class CharacterFilterPipe implements PipeTransform {
         if (!tierMatch) return false;
       }
 
+      if (options.moe) {
+        const moeMatch = this.checkMoe(character, options.moe);
+        if (!moeMatch) return false;
+      }
+
       // Attribute filters
       if (options.attributes) {
         const attrMatch = this.checkAttributes(character, options.attributes);
@@ -238,6 +248,15 @@ export class CharacterFilterPipe implements PipeTransform {
     if (tier.min !== undefined && charTier < tier.min) return false;
     if (tier.max !== undefined && charTier > tier.max) return false;
     if (tier.exclude && tier.exclude.includes(charTier)) return false;
+
+    return true;
+  }
+
+  private checkMoe(character: Character, moe: NonNullable<CharacterFilterOptions['moe']>): boolean {
+    const charMoe = character.moe || 0;
+
+    if (moe.min !== undefined && charMoe < moe.min) return false;
+    if (moe.max !== undefined && charMoe > moe.max) return false;
 
     return true;
   }

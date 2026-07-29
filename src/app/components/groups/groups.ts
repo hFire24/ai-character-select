@@ -184,6 +184,16 @@ export class Groups implements OnInit {
         characterIds: [30, 55, 57, 83, 84, 99, 104]
       },
       {
+        name: "STEM Group",
+        description: "Characters who enjoy STEM-related topics: Science, Technology, Engineering, and Mathematics",
+        characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 107, 117, 113]
+      },
+      {
+        name: "Social Studies Group",
+        description: "Characters who enjoy discussing topics related to social studies like history, geography, politics, or religion",
+        characterIds: [34, 47, 56, 57, 68, 78, 83, 90, 106, 107, 116, 127, 141]
+      },
+      {
         name: "Anti-Moe Crew",
         description: "Chaotic or hedonistic characters who reject moe",
         characterIds: [1, 62, 63, 55, 12, 105, 64, 83, 84, 100, 18]

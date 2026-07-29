@@ -44,18 +44,23 @@
 						<span>Min: Tier {{ minTier }}</span>
 						<span>Max: Tier {{ maxTier }}</span>
 					</div>
-					<div class="tier-sliders">
-						<div class="slider-group">
-							<label>Min Tier:</label>
-							<input type="range" [(ngModel)]="minTier" [min]="tierMin" [max]="tierMax" class="tier-slider" />
-						</div>
-						<div class="slider-group">
-							<label>Max Tier:</label>
-							<input type="range" [(ngModel)]="maxTier" [min]="tierMin" [max]="tierMax" class="tier-slider" />
-						</div>
+					<div class="dual-range" [style.--range-start.%]="tierRangeStart" [style.--range-end.%]="tierRangeEnd">
+						<input type="range" [(ngModel)]="tierThumbA" [min]="tierMin" [max]="tierMax" class="tier-slider range-thumb-a" aria-label="First tier range handle" />
+						<input type="range" [(ngModel)]="tierThumbB" [min]="tierMin" [max]="tierMax" class="tier-slider range-thumb-b" aria-label="Second tier range handle" />
 					</div>
-					<div class="tier-range-display">
-						Showing tiers {{ minTier }}-{{ maxTier }} ({{ minTier <= 3 && maxTier >= 1 ? 'includes favorites' : 'no favorites' }})
+				</div>
+			</div>
+
+			<div class="filter-section">
+				<h3>Moe Range</h3>
+				<div class="tier-slider-container">
+					<div class="tier-slider-labels">
+						<span>Min: {{ minMoe }}</span>
+						<span>Max: {{ maxMoe }}</span>
+					</div>
+					<div class="dual-range" [style.--range-start.%]="moeRangeStart" [style.--range-end.%]="moeRangeEnd">
+						<input type="range" [(ngModel)]="moeThumbA" min="1" max="10" class="tier-slider range-thumb-a" aria-label="First moe range handle" />
+						<input type="range" [(ngModel)]="moeThumbB" min="1" max="10" class="tier-slider range-thumb-b" aria-label="Second moe range handle" />
 					</div>
 				</div>
 			</div>

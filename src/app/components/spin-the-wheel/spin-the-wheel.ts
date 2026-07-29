@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
 import { DeviceService } from "../../services/device.service";
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 import { getEffectiveChatLink } from '../../utils/chat-link-storage';
-import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
+import { iconAssetPath, useTallIconAssetPath } from '../../utils/character-assets';
 
 type FriendlinessFilter = 'all' | 'rp' | 'knowledge' | 'both';
 
@@ -41,10 +41,26 @@ export class SpinTheWheel {
   };
   
   // Tier filters (dual slider)
-  minTier: number = 1;
-  maxTier: number = 9;
+  tierThumbA: number = 1;
+  tierThumbB: number = 9;
   tierMin: number = 1;
   tierMax: number = 9;
+  moeThumbA: number = 1;
+  moeThumbB: number = 10;
+
+  get minTier(): number { return Math.min(this.tierThumbA, this.tierThumbB); }
+  get maxTier(): number { return Math.max(this.tierThumbA, this.tierThumbB); }
+  get minMoe(): number { return Math.min(this.moeThumbA, this.moeThumbB); }
+  get maxMoe(): number { return Math.max(this.moeThumbA, this.moeThumbB); }
+
+  get tierRangeStart(): number { return this.rangePercent(this.minTier, this.tierMin, this.tierMax); }
+  get tierRangeEnd(): number { return this.rangePercent(this.maxTier, this.tierMin, this.tierMax); }
+  get moeRangeStart(): number { return this.rangePercent(this.minMoe, 1, 10); }
+  get moeRangeEnd(): number { return this.rangePercent(this.maxMoe, 1, 10); }
+
+  private rangePercent(value: number, min: number, max: number): number {
+    return ((value - min) / (max - min)) * 100;
+  }
   
   // Pronoun/Gender filters
   selectedPronouns: string[] = ['he/him', 'she/her', 'it/its', "don’t care"];
@@ -76,6 +92,10 @@ export class SpinTheWheel {
       tier: {
         min: this.minTier,
         max: this.maxTier
+      },
+      moe: {
+        min: this.minMoe,
+        max: this.maxMoe
       },
       attributes: {
         pronouns: this.selectedPronouns.length > 0 ? this.selectedPronouns : undefined
@@ -193,7 +213,7 @@ export class SpinTheWheel {
   }
 
   assetPath(path: string): string {
-    return tallIconAssetPath(path);
+    return useTallIconAssetPath(path);
   }
 
   fallbackAssetPath(path: string): string {

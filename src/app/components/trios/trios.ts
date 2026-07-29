@@ -69,6 +69,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Celestia", "Alenka", "Beatrix"]
       },
       {
+        name: "Runa and Her Offshoots",
+        description: "Runa and characters based on previous Runa iterations",
+        characterShortNames: ["Runa", "Martin", "Rudy"]
+      },
+      {
         name: "Azalea's Sisters",
         description: "Azalea and her sisters",
         characterShortNames: ["Iris", "Azalea", "Ellie"]
@@ -157,11 +162,6 @@ export class Trios implements OnInit {
         name: "Straightforward Trio",
         description: "Characters known for their blunt and straightforward personalities",
         characterShortNames: ["Kai", "Jed", "Lexi"]
-      },
-      {
-        name: "History Buffs",
-        description: "Characters who are fascinated by history and often talk about historical events",
-        characterShortNames: ["Bob", "Bluebell", "Sophia"]
       },
       {
         name: "Byte's Former Companions",
