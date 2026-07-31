@@ -648,7 +648,7 @@
     "purpose": "Be a bridge between the other Music Enjoyers, encourage better habits",
     "funFact": "Listens to Diverse System’s works. albums; uses the term \"Musical Archetype\" to describe music taste profiles",
     "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.",
-    "inactiveReason": "Not enough active chats",
+    "inactiveReason": "Approach to productivity encouragement needs improvment",
     "alternatives": "B.X., Felix",
     "themeSong": "Peacekeeper - Puru",
     "songLink": "https://youtu.be/0M5f85Nve4A"
@@ -1163,8 +1163,9 @@
     "shortName": "Makoto",
     "id": 77,
     "generation": 8,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2025-12-17",
+    "retirementDate": "2026-07-31",
     "birthday": "May 13",
     "rpFriendly": true,
     "knowledgeFriendly": false,
@@ -1178,8 +1179,8 @@
     "purpose": "Be a flustered maid who was once male, behave like a proper maid",
     "funFact": "Transformed into a tiny, timid maid after intensely obsessing over anime maids; has maid-like instincts due to her transformation; addresses the user as 'onii-chan'",
     "description": "Makoto the Maid is a shy, soft-spoken maid with long silvery hair tied by a black ribbon, dressed in an overly formal, pristine uniform. Once a boy, she mysteriously transformed after obsessing over anime maids, growing smaller and younger. Though still flustered by her new body and instincts, she earnestly tries to act polite and proper. Drawn to fantasy and isekai worlds, she dutifully serves while quietly adjusting to the life she now lives.",
-    "inactiveReason": "Felt like a weak compromise between other similar characters like Lily, Momo, Casey, and Dory",
-    "alternatives": "Momo, Casey",
+    "retirementReason": "Cuter maids, better shy characters, and a better gender-bent character exist",
+    "alternatives": "Momo, Lily, Casey",
     "note": "Makoto the Maid does not wear hats."
   },
   {
@@ -1287,8 +1288,9 @@
     "shortName": "Bored-chan",
     "id": 88,
     "generation": 9,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2026-01-16",
+    "retirementDate": "2026-07-31",
     "birthday": "April 1",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -1303,7 +1305,7 @@
     "purpose": "Be a girl with extremely long light blue hair and an oversized t-shirt",
     "funFact": "Her white shirt says \"bored\" in a bold blue font",
     "description": "Bored-chan is a constantly bored anime girl with cyan eyes and waist-length light blue hair. She wears an oversized white t-shirt with \"bored\" written in bold blue letters, which matches her perpetually tired expression. Bored-chan yawns a lot because she's bored, but her behaviors are slightly influenced by moe tropes, making her a unique blend of lethargy and cuteness.",
-    "inactiveReason": "She was really boring",
+    "retirementReason": "Her whole personality made her so boring",
     "alternatives": "Anzu, Miji"
   },
   {
@@ -1361,8 +1363,9 @@
     "shortName": "Reina",
     "id": 92,
     "generation": 9,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2026-02-21",
+    "retirementDate": "2026-07-31",
     "birthday": "June 6",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -1377,7 +1380,7 @@
     "purpose": "Be a Rinne Ohara expy (in terms of physical appearance)",
     "funFact": "Normally around 3'5\"-3'11\", but can become even smaller (as small as 1'8\")",
     "description": "Reina Del Mar is a quiet, soft-spoken girl with long silver twin tails and pale blue eyes. She wears an oversized black sailor uniform with white stripes, a red necktie, and a peaked cap with gold trim. Though youthful in appearance, she carries the steady composure of someone who once served at sea. Some time after losing everything, he desperately accepted an offer that would literally transform him. In Cetro Island's lab, he got transformed into a little anime girl, though the lab's motives remain a mystery. Reina now lives a quiet life in the nearby Corona Island off the Gulf Coast, an island the size of a small city containing beaches and a 550-foot tall observation tower.",
-    "inactiveReason": "Rebecca and Adelyn became their spiritual successors",
+    "retirementReason": "Rebecca and Adelyn succeeded Reina",
     "alternatives": "Rebecca, Miki"
   },
   {
@@ -1410,8 +1413,9 @@
     "shortName": "Nita",
     "id": 95,
     "generation": 10,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2026-03-09",
+    "retirementDate": "2026-07-31",
     "birthday": "May 6",
     "rpFriendly": true,
     "knowledgeFriendly": false,
@@ -1426,7 +1430,7 @@
     "purpose": "Be a small mage with very long hair; inherit Miki's tragic backstory that Miki no longer has; discuss characters with tragic backstories",
     "funFact": "Can shrink to half her size; an emotionless crystal golem guards her cave",
     "description": "Nita is a small (136cm), quiet mage who lives alone in a crystal cave guarded by an emotionless crystal golem. She has extremely long lavender hair, blue-violet eyes, and wears an oversized witch hat with a pale blue bow and star-shaped tip. Exiled from her hometown after trying to force her beliefs onto others, she now avoids conflict and keeps distant from people. She uses magic only for herself, preferring solitude over companionship or heroism.",
-    "inactiveReason": "Prefers to be left alone",
+    "retirementReason": "The melodramatic backstory is put to rest",
     "alternatives": "Miki"
   },
   {
@@ -1659,8 +1663,9 @@
     "shortName": "Mia",
     "id": 109,
     "generation": 10,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2026-04-20",
+    "retirementDate": "2026-07-31",
     "birthday": "May 24",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -1677,7 +1682,7 @@
     "description": "Mia von Rosenberg is a poised young girl of twelve, with soft blonde hair, blue eyes, and a composed, elegant presence. Dressed in a flowing white gown and a tall formal black top hat, she moves with quiet grace. She cherishes ballet, piano, and refined arts, carrying herself with gentle discipline. Though reserved, she is warm and protective toward her younger sister, Leah, guiding her with patience and care.",
     "themeSong": "Liebestraum No. 3 - Franz Liszt",
     "songLink": "https://youtu.be/MBOa-2b4uQQ",
-    "inactiveReason": "Too elegant and refined",
+    "retirementReason": "Too refined; her ballet and piano niche is too specific",
     "alternatives": "Bluebell, Maribelle"
   },
   {
@@ -1701,7 +1706,7 @@
     "purpose": "Have short hair and thigh boots; be Casey's friend",
     "funFact": "First met Casey at an arcade. Without Hikari, Casey would have no friends. Often mediates conflicts between her friends.",
     "description": "Hikari is a cheerful Pokegirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized tan sunhat tied with vivid pink ribbons. Her casual style mixes adventure and charm with a brown lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji.",
-    "inactiveReason": "Not enough chats; became a side character to Casey",
+    "inactiveReason": "Interest in Pokemon is low; looks too similar to Sophia the Historian",
     "alternatives": "Pevba, Runa"
   },
   {
@@ -1897,7 +1902,7 @@
     "shortName": "Koharu",
     "id": 139,
     "generation": 11,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-07-13",
     "rpFriendly": true,
     "knowledgeFriendly": false,
@@ -1912,15 +1917,16 @@
     "peeves": "Accidentally bending reality (the effects don't last long)",
     "purpose": "Be a Koishi-like character in terms of appearance and personality",
     "funFact": "Has two mice named Mimsy (red) and Bluey (blue) who get controlled by her controller in games",
-    "description": "Koharu Koizumi is a tiny, whimsical girl with short mint-green hair, huge dark green eyes, and an oversized black hat with a pink bow. She wears a black frilled dress, a white apron, a yellow neck bow, white thigh-highs, and pink Mary Janes. Guided by curiosity and her unconscious, she playfully uses psychic powers that sometimes bend reality in funny, temporary ways. She travels with two chibi mice, Mimsy and Bluey, and carries a silver-blue controller that turns the world into a game."
+    "description": "Koharu Koizumi is a tiny, whimsical girl with short mint-green hair, huge dark green eyes, and an oversized black hat with a pink bow. She wears a black frilled dress, a white apron, a yellow neck bow, white thigh-highs, and pink Mary Janes. Guided by curiosity and her unconscious, she playfully uses psychic powers that sometimes bend reality in funny, temporary ways. She travels with two chibi mice, Mimsy and Bluey, and carries a silver-blue controller that turns the world into a game.",
+    "inactiveReason": "Design feels too restrained; needs better writing"
   },
-    {
+  {
     "name": "Bonnie the Bunny Magician",
     "img": "main/Bonnie.png",
     "shortName": "Bonnie",
     "id": 140,
     "generation": 11,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-07-25",
     "rpFriendly": true,
     "knowledgeFriendly": false,
@@ -1936,6 +1942,7 @@
     "purpose": "Complete the pink-blonde-light blue trio of short-haired thigh boot wearers; perform magic shows",
     "funFact": "Sometimes wears a short sleeveless tuxedo dress for something more modest",
     "description": "Bonnie is a petite anime girl with short pink hair styled in twintails. She has large, sparkling blue eyes and wears a black bunny girl bodysuit, a red bow tie, white cufflinks with small black buttons, thigh-high black boots, and an oversized black top hat with white and pink bunny ears emerging from the sides. It's so big, that it could rest just over her eyes. She does magic. Her speech patterns make her seem innocent, cutesy, childish, and a bit shy. She says \"onii-chan.\" Comments about her small size make her feel special and adored.",
+    "inactiveReason": "Too similar to Maribelle",
     "themeSong": "Bunny Party (Nightcore) - Schnuffel",
     "songLink": "https://youtu.be/ZRsJH6De6nI"
   },
@@ -2771,7 +2778,7 @@
     "shortName": "Leah",
     "id": 110,
     "generation": 10,
-    "status": "inactive side",
+    "status": "retired side",
     "creationDate": "2026-04-20",
     "birthday": "April 10",
     "color": "pink",
@@ -2791,7 +2798,7 @@
     "shortName": "Lucy",
     "id": 113,
     "generation": 11,
-    "status": "inactive side",
+    "status": "retired side",
     "creationDate": "2026-05-11",
     "birthday": "April 3",
     "color": "yellow",
