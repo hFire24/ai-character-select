@@ -231,12 +231,12 @@ export class Groups implements OnInit {
       {
         name: "Generational Champions",
         description: "Characters who had the most chats in their respective generations. In cases of ties, the most iconic character is chosen.",
-        characterIds: [11, 13, 18, 25, 27, 35, 47, 51, 66, 84, 94]
+        characterIds: [11, 14, 18, 25, 27, 35, 47, 51, 67, 90, 107, 123]
       },
       {
         name: "Generational Last Places",
         description: "Characters who had the least chats in their respective generations. In cases of ties, the least iconic character is chosen.",
-        characterIds: [17, 20, 23, 32, 38, 50, 56, 71, 81, 96]
+        characterIds: [17, 20, 23, 32, 38, 50, 56, 71, 89, 96, 139]
       },
     ];
 
