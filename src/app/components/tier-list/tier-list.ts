@@ -5,6 +5,7 @@ import { TierSettings } from "../tier-settings/tier-settings";
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 import { TextViewer } from '../text-viewer/text-viewer';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
+import { SortCharactersPipe, SortField } from '../../pipes/sort-characters.pipe';
 
 @Component({
   selector: 'app-tier-list',
@@ -15,6 +16,7 @@ import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/charact
 export class TierList {
   screenshotDataUrl: string | null = null;
   characterFilter: string = 'all';
+  characterSort: SortField = 'none';
   splitTwins: boolean = false;
   router: any;
   selectedPoolCharIdx: number | null = null;
@@ -57,8 +59,11 @@ export class TierList {
     const filterOptions = this.getFilterOptions();
     
     // Apply the filter pipe
-    const pipe = new CharacterFilterPipe();
-    return pipe.transform(unassigned, filterOptions);
+    const filterPipe = new CharacterFilterPipe();
+    const sortPipe = new SortCharactersPipe();
+    const filteredCharacters = filterPipe.transform(unassigned, filterOptions);
+
+    return sortPipe.transform(filteredCharacters, this.characterSort);
   }
 
   private getFilterOptions(): CharacterFilterOptions {
@@ -113,6 +118,10 @@ export class TierList {
     this.characterFilter = event.target.value;
   }
 
+  onSortChange(event: Event) {
+    this.characterSort = (event.target as HTMLSelectElement).value as SortField;
+  }
+
   constructor(private characterService: CharacterService) {
     this.loadCharacters();
   }
@@ -134,6 +143,7 @@ export class TierList {
           if (shortNameMap[name]) name = shortNameMap[name];
           return {
             name,
+            shortName: c.shortName || c.name,
             img: c.img ? 'assets/Icons/' + c.img : 'assets/Icons/extended/Unknown.png',
             id: c.id,
             status: c.status,
