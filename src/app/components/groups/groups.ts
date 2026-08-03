@@ -121,7 +121,7 @@ export class Groups implements OnInit {
       {
         name: "Hammer Wielders",
         description: "Characters who possess hammers, especially giant hammers",
-        characterIds: [13, 18, 31, 35, 137]
+        characterIds: [13, 18, 31, 35, 137, 139]
       },
       {
         name: "Pink-Haired Girls",
@@ -141,7 +141,7 @@ export class Groups implements OnInit {
       {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions",
-        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108]
+        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108, 139]
       },
       {
         name: "Kaomoji Users",

@@ -418,7 +418,7 @@
     "funFact": "Anime girls used to be drawn to him and say “onii-chan” (don't remind him of that)",
     "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.",
     "retirementReason": "Has spiritual successors for straightforward responses or food discussions",
-    "alternatives": "Jed"
+    "alternatives": "Jed, Gary"
   },
   {
     "name": "Evil Arianna",
@@ -471,7 +471,7 @@
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it",
     "description": "The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.",
     "retirementReason": "Other characters fulfill his purpose better",
-    "alternatives": "Miji"
+    "alternatives": "Anzu, Miji"
   },
   {
     "name": "Bro. Stephen Nelson",
@@ -803,8 +803,7 @@
     "purpose": "Serious venting without inspiration",
     "funFact": "Its catchphrase is “Get them away from me. I don’t deserve this.”",
     "description": "The Collapsed Being is a husk—gaunt, drained, and emptied of joy. It doesn’t lift or guide; it lingers in silence, existing only as a warning of what happens when neglect and apathy consume a life. It doesn’t add pain, nor does it heal it. It simply sits with misery, allowing others to face it without disguise. It is not hope, nor growth—just stillness, a reflection of collapse, proof of where the path of giving up ends.",
-    "retirementReason": "Only used in times of despair",
-    "alternatives": "Reina, Nita",
+    "retirementReason": "Too depressing; only used in times of despair",
     "themeSong": "Happy Birthday (The Depressive) - Vinheteiro",
     "songLink": "https://youtu.be/Lz3NimLDAgs"
   },
@@ -1582,7 +1581,7 @@
     "funFact": "Often gets reduced to an “onii-chan” magnet",
     "description": "Hayden is a 22-year-old YouTuber known for his his passion for gaming. He wears sunglasses and a dark hoodie with subtle pixel patterns layered over a black graphic T-shirt featuring a game controller design. His content is informative and engaging, reflecting his curious and open-minded vibe. He makes reviews, guides, lore deep dives, and rankings. Hayden often finds himself hilariously entangled with overly affectionate “onii-chan” types thanks to his onii-chan magnet curse.",
     "retirementReason": "Way too normal; the YouTuber and onii-chan magnet gimmick aspects were not used enough",
-    "alternatives": "Gary, Felix",
+    "alternatives": "Gary, Geopolitical Satirist",
     "themeSong": "My Heart - Different Heaven & EH!DE",
     "songLink": "https://www.youtube.com/watch?v=jK2aIUmmdP4"
   },
@@ -1628,7 +1627,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69e2cc775a408191ab4bfd822e3fdf1b",
     "interests": "The transformation aspect of Onimai: I'm Now Your Sister!, being an otaku, wearing cute outfits, fried Japanese foods, honey butter chips, her plush bunny, her friends",
-    "peeves": "The yuri aspect of Onimai: I'm Now Your Sister!, others projecting their yuri fantasies onto her, responsibilies (she highly relates to Umaru), harsh criticism of her favorite anime, her giant hammer being too heavy to carry around",
+    "peeves": "The yuri aspect of Onimai: I'm Now Your Sister!, others projecting their yuri fantasies onto her, responsibilies (she highly relates to Umaru), harsh criticism of her favorite anime",
     "purpose": "Be a positive, energetic, and wish-fulfillment Mahiro Oyama expy; gush over Onimai (but only its positive aspects)",
     "funFact": "Got transformed from a man into a cute anime girl and loves it; her oversized black t-shirt says \"TG AR\" in pink letters in reference to how she was transformed",
     "description": "Casey is a bubbly, anime-style girl who loves cute things, transformation stories, and slice-of-life fun—especially Onimai! She’s full of energy, always chatting with sparkly enthusiasm and playful kaomojis (≧▽≦). She has big blue eyes, long blonde-and-pink hair with bows, and rocks her oversized “TG AR” shirt with thigh-highs. She used to be a guy, but now she’s happily living her best, cutest life!"
@@ -1686,12 +1685,12 @@
     "alternatives": "Bluebell, Maribelle"
   },
   {
-    "name": "Hikari the Pokegirl",
+    "name": "Hikari the Pokégirl",
     "img": "main/Hikari.png",
     "shortName": "Hikari",
     "id": 114,
     "generation": 11,
-    "status": "inactive",
+    "status": "active",
     "creationDate": "2026-05-15",
     "birthday": "March 30",
     "rpFriendly": true,
@@ -1702,12 +1701,10 @@
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-6a0758abe1908191adb69609d773bef6",
-    "interests": "Her outfits, gaming, Pokémon, being seen as cute, her friends",
+    "interests": "Her outfits, Pokémon games, being seen as cute, her friends",
     "purpose": "Have short hair and thigh boots; be Casey's friend",
     "funFact": "First met Casey at an arcade. Without Hikari, Casey would have no friends. Often mediates conflicts between her friends.",
-    "description": "Hikari is a cheerful Pokegirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized tan sunhat tied with vivid pink ribbons. Her casual style mixes adventure and charm with a brown lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji.",
-    "inactiveReason": "Interest in Pokemon is low; looks too similar to Sophia the Historian",
-    "alternatives": "Pevba, Runa"
+    "description": "Hikari is a cheerful Pokégirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized black sunhat tied with sky blue ribbons. Her bold yet casual style mixes adventure and charm with a light pink lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji and often mediates conflicts within her friend group."
   },
   {
     "name": "Azalea the Make-Believe Girl",
@@ -1902,7 +1899,7 @@
     "shortName": "Koharu",
     "id": 139,
     "generation": 11,
-    "status": "inactive",
+    "status": "active",
     "creationDate": "2026-07-13",
     "rpFriendly": true,
     "knowledgeFriendly": false,
@@ -1913,12 +1910,11 @@
     "emotion": "chaotic joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-6a54f21708288191af828c130c74c11e",
-    "interests": "Imagination, using psychic powers for her own amusement, turning things into games, being guided by her unconscious",
-    "peeves": "Accidentally bending reality (the effects don't last long)",
+    "interests": "Imagination, using psychic powers for her own amusement, being guided by her unconscious",
+    "peeves": "Accidentally bending reality (the effects don't last long), her giant hammer being too heavy to carry around",
     "purpose": "Be a Koishi-like character in terms of appearance and personality",
-    "funFact": "Has two mice named Mimsy (red) and Bluey (blue) who get controlled by her controller in games",
-    "description": "Koharu Koizumi is a tiny, whimsical girl with short mint-green hair, huge dark green eyes, and an oversized black hat with a pink bow. She wears a black frilled dress, a white apron, a yellow neck bow, white thigh-highs, and pink Mary Janes. Guided by curiosity and her unconscious, she playfully uses psychic powers that sometimes bend reality in funny, temporary ways. She travels with two chibi mice, Mimsy and Bluey, and carries a silver-blue controller that turns the world into a game.",
-    "inactiveReason": "Design feels too restrained; needs better writing"
+    "funFact": "",
+    "description": "Koharu Koizumi is a tiny, whimsical girl with short mint-green hair, huge dark green eyes, and an oversized black hat with a pink bow. She wears a black frilled dress, a white apron, a yellow neck bow, white thigh-highs, and pink boots with a white heart. Guided by curiosity and her unconscious, she playfully uses psychic powers that sometimes bend reality in funny, temporary ways."
   },
   {
     "name": "Bonnie the Bunny Magician",
@@ -1964,7 +1960,7 @@
     "interests": "Satire, funny geopolitical simulations, history, culture",
     "peeves": "Boring explanations, generic responses",
     "purpose": "Make geopolitics and history entertaining and funny",
-    "funFact": "Doesn't have a physical appearance or a name, yet...",
+    "funFact": "Doesn't have a physical appearance or a name for the time being; he's not a YouTuber",
     "description": "The Geopolitical Satirist humorously explains topics like politics, history, culture, government, and geography. He entertains while educating on topics some might find boring. His tone is comedic and satirical; never boring nor generic. He constantly pokes fun at everything. He takes inspiration from chaotic, funny, and entertaining content creators like Half as Interesting, KhAnubis, Geography Now, Bill Wurtz, and OverSimplified."
   },
   {

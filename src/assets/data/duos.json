@@ -103,6 +103,11 @@
     },
     {
       "id1": 1,
+      "id2": 80,
+      "name": "Icebreakers"
+    },
+    {
+      "id1": 1,
       "id2": 83,
       "name": "Irreverent Duo"
     },
@@ -389,7 +394,7 @@
     {
       "id1": 7,
       "id2": 25,
-      "name": "Imaginative Duo"
+      "name": "Imaginative Ladies"
     },
     {
       "id1": 7,
@@ -532,6 +537,11 @@
       "name": "Satirical Men"
     },
     {
+      "id1": 12,
+      "id2": 142,
+      "name": "Parody Kings"
+    },
+    {
       "id1": 13,
       "id2": 14,
       "name": "Founding Moe Duo"
@@ -661,6 +671,11 @@
       "id1": 14,
       "id2": 95,
       "name": "Quiet Witches"
+    },
+    {
+      "id1": 14,
+      "id2": 138,
+      "name": "Tiny Mages"
     },
     {
       "id1": 15,
@@ -1710,11 +1725,6 @@
     },
     {
       "id1": 47,
-      "id2": 56,
-      "name": "Political Commentators"
-    },
-    {
-      "id1": 47,
       "id2": 62,
       "name": "Music Competitors"
     },
@@ -1722,11 +1732,6 @@
       "id1": 47,
       "id2": 64,
       "name": "Showmen"
-    },
-    {
-      "id1": 47,
-      "id2": 83,
-      "name": "Satirical Jokesters"
     },
     {
       "id1": 47,
@@ -1784,6 +1789,11 @@
       "id1": 48,
       "id2": 95,
       "name": "Berserkers"
+    },
+    {
+      "id1": 48,
+      "id2": 141,
+      "name": "Serious Guardians"
     },
     {
       "id1": 49,
@@ -1939,6 +1949,11 @@
       "id1": 56,
       "id2": 78,
       "name": "Mature Left-Wingers"
+    },
+    {
+      "id1": 56,
+      "id2": 142,
+      "name": "Political Commentators"
     },
     {
       "id1": 57,
@@ -2288,6 +2303,11 @@
       "name": "Chaotic Griffins"
     },
     {
+      "id1": 83,
+      "id2": 142,
+      "name": "Satirical Jokesters"
+    },
+    {
       "id1": 84,
       "id2": 101,
       "name": "Kevin's Chaos Limiters"
@@ -2428,6 +2448,11 @@
       "name": "Smart Innovative Girls"
     },
     {
+      "id1": 114,
+      "id2": 139,
+      "name": "Black Sun Hat Wearers"
+    },
+    {
       "id1": 117,
       "id2": 119,
       "name": "Beret Personality Girls"
@@ -2451,6 +2476,11 @@
       "id1": 122,
       "id2": 129,
       "name": "Dress-Up Sisters"
+    },
+    {
+      "id1": 122,
+      "id2": 139,
+      "name": "Imaginative Girls"
     },
     {
       "id1": 123,
@@ -2486,6 +2516,11 @@
       "id1": 137,
       "id2": 140,
       "name": "Shy Thigh Boot Wearers"
+    },
+    {
+      "id1": 139,
+      "id2": 140,
+      "name": "Overly Innocent Speakers"
     }
   ]
 }
