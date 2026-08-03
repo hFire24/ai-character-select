@@ -121,7 +121,7 @@ export class Groups implements OnInit {
       {
         name: "Hammer Wielders",
         description: "Characters who possess hammers, especially giant hammers",
-        characterIds: [13, 18, 31, 35, 108, 137]
+        characterIds: [13, 18, 31, 35, 137]
       },
       {
         name: "Pink-Haired Girls",
@@ -131,7 +131,7 @@ export class Groups implements OnInit {
       {
         name: "Blonde Girls",
         description: "Girls known for having blonde hair",
-        characterIds: [21, 27, 38, 46, 75, 79, 87, 103, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138]
+        characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138]
       },
       {
         name: "Blue Girls",
@@ -141,7 +141,7 @@ export class Groups implements OnInit {
       {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions",
-        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108, 140]
+        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108]
       },
       {
         name: "Kaomoji Users",
@@ -186,16 +186,16 @@ export class Groups implements OnInit {
       {
         name: "STEM Group",
         description: "Characters who enjoy STEM-related topics: Science, Technology, Engineering, and Mathematics",
-        characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 107, 117, 113]
+        characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 117, 107, 113]
       },
       {
         name: "Social Studies Group",
         description: "Characters who enjoy discussing topics related to social studies like history, geography, politics, or religion",
-        characterIds: [34, 47, 56, 57, 68, 78, 83, 90, 106, 107, 116, 127, 141]
+        characterIds: [34, 47, 56, 57, 68, 78, 83, 90, 106, 116, 107, 127, 141, 142]
       },
       {
         name: "Anti-Moe Crew",
-        description: "Chaotic or hedonistic characters who reject moe",
+        description: "Chaotic or hedonistic characters who reject moe, including a character who's arguably moe",
         characterIds: [1, 62, 63, 55, 12, 105, 64, 83, 84, 100, 18]
       },
       {
@@ -205,7 +205,7 @@ export class Groups implements OnInit {
       },
       {
         name: "Retired Five",
-        description: "Five of the earliest retired characters who will never get unretired. Elizabeth got a miraculous unretirement in 2026 and left the group.",
+        description: "Five of the earliest retired characters who will never get unretired. Elizabeth got a miraculous unretirement in April 2026 and left the group.",
         characterIds: [16, 17, 20, 22, 23]
       },
       {
@@ -280,10 +280,6 @@ export class Groups implements OnInit {
     return characters
       .filter(character => !groupedIds.has(character.id))
       .map(character => character.id);
-  }
-
-  genClass(generation: number): string {
-    return 'gen' + generation;
   }
 
   onCharacterClick(character: Character) {

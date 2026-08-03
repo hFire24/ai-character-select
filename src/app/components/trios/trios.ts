@@ -213,10 +213,6 @@ export class Trios implements OnInit {
     return iconAssetPath(path);
   }
 
-  genClass(generation: number): string {
-    return 'gen' + generation;
-  }
-
   onCharacterClick(character: Character) {
     this.selectedCharacter = character; // Trigger modal display
   }

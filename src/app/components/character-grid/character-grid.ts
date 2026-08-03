@@ -49,10 +49,6 @@ export class CharacterGrid {
     });
   }
 
-  genClass(g: number) {
-    return 'gen' + g;
-  }
-
   assetPath(path: string) {
     return tallIconAssetPath(path);
   }

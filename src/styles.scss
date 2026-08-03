@@ -101,6 +101,12 @@ ol {
 .yellow {
   color: #facc15;
 }
+.green {
+  color: #22c55e;
+}
+.cyan {
+  color: #06d4d4;
+}
 .blue {
   color: #3b96ff;
 }
@@ -128,38 +134,32 @@ a {
   color: inherit;
 }
 
-.gen1 {
+.cardBg-red {
   background-color: #f9c2c2;
 }
-.gen2 {
-  background-color: #f9c2e6;
-}
-.gen3 {
+.cardBg-green {
   background-color: #c2f9c2;
 }
-.gen4 {
-  background-color: #c2c2f9;
-}
-.gen5 {
+.cardBg-pink {
   background-color: #f9c2f9;
 }
-.gen6 {
+.cardBg-yellow {
   background-color: #f9f2c2;
 }
-.gen7 {
+.cardBg-cyan {
   background-color: #c2f9f9;
 }
-.gen8 {
+.cardBg-purple {
   background-color: #d9c2f9;
 }
-.gen9 {
-  background-color: #c2f9e6;
-}
-.gen10 {
+.cardBg-blue {
   background-color: #c2d8f9;
 }
-.gen11 {
-  background-color: #f9e6c2;
+.cardBg-orange {
+  background-color: #f9d8c2;
+}
+.cardBg-black {
+  background-color: #c2c2c2;
 }
 button {
   padding: 10px 20px;
@@ -344,17 +344,15 @@ footer div {
   #character .character::after {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
   }
-  .gen1 { background-color: #4b2c2c; }
-  .gen2 { background-color: #4b2c3e; }
-  .gen3 { background-color: #2c4b2c; }
-  .gen4 { background-color: #2c2c4b; }
-  .gen5 { background-color: #4b2c4b; }
-  .gen6 { background-color: #4b432c; }
-  .gen7 { background-color: #2c4b4b; }
-  .gen8 { background-color: #392c4b; }
-  .gen9 { background-color: #2c4b36; }
-  .gen10 { background-color: #2c3e4b; }
-  .gen11 { background-color: #4b3e2c; }
+  .cardBg-red { background-color: #4b2c2c; }
+  .cardBg-green { background-color: #2c4b2c; }
+  .cardBg-blue { background-color: #2c2c4b; }
+  .cardBg-pink { background-color: #4b2c4b; }
+  .cardBg-yellow { background-color: #4b432c; }
+  .cardBg-cyan { background-color: #2c4b4b; }
+  .cardBg-purple { background-color: #392c4b; }
+  .cardBg-orange { background-color: #4b392c; }
+  .cardBg-black { background-color: #2c2c2c; }
   @media (max-width: 800px) {
     .character h2,
     .character h3,

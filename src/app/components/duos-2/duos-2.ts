@@ -359,10 +359,6 @@ export class Duos2 implements OnInit {
     return iconAssetPath(path);
   }
 
-  genClass(generation: number): string {
-    return 'gen' + generation;
-  }
-
   onCharacterClick(character: Character) {
     this.selectedCharacter = character;
   }

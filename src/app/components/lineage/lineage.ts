@@ -222,10 +222,6 @@ export class Lineage {
     return count;
   }
 
-  genClass(g: number) {
-    return 'gen' + g;
-  }
-
   toggleNode(nodeId: number): void {
     if (this.expandedNodes.has(nodeId)) {
       this.expandedNodes.delete(nodeId);

@@ -21,7 +21,7 @@
             @for (character of duo.characters; track character.id) {
               <div 
                 class="character" 
-                [ngClass]="[genClass(character.generation), character.color || 'white']"
+                [ngClass]="['cardBg-' + character.color, character.color || 'white']"
                 (click)="onCharacterClick(character)"
                 title="Click to view {{ character.shortName }}"
               >

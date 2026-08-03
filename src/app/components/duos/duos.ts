@@ -191,10 +191,6 @@ export class Duos implements OnInit {
     this.relationship2Emoji = relationship ? this.getRelationshipEmoji(this.character2, this.character1) : '';
   }
 
-  genClass(g: number) {
-    return 'gen' + g;
-  }
-
   assetPath(path: string) {
     return tallIconAssetPath(path);
   }

@@ -8,7 +8,7 @@
     @for (c of characters | characterFilter:filters:searchTerm | sortCharacters:sortBy:sortDirection; track c.id) {
       <div
         class="character"
-        [ngClass]="[genClass(c.generation), c.shortName === 'ChatGPT' ? 'white' : (c.color || 'white')]"
+        [ngClass]="['cardBg-' + c.color, c.shortName === 'ChatGPT' ? 'white' : (c.color || 'white')]"
         [style.background-color]="c.shortName === 'ChatGPT' ? '#10a37f' : null"
         [style.color]="c.shortName === 'ChatGPT' ? 'white' : null"
         (click)="selectCharacter.emit(c)"

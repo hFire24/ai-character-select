@@ -54,7 +54,7 @@
 <div *ngIf="character1 && character2" class="character-grid">
   <div
     class="character"
-    [ngClass]="[genClass(character1.generation), character1.color || 'white']"
+    [ngClass]="['cardBg-' + character1.color, character1.color || 'white']"
     (click)="openCharacterModal(character1)"
   >
     @if (character1.img) {
@@ -66,7 +66,7 @@
   </div>
   <div
     class="character"
-    [ngClass]="[genClass(character2.generation), character2.color || 'white']"
+    [ngClass]="['cardBg-' + character2.color, character2.color || 'white']"
     (click)="openCharacterModal(character2)"
   >
     @if (character2.img) {
