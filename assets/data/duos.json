@@ -640,7 +640,7 @@
     {
       "id1": 14,
       "id2": 35,
-      "name": "Short Light-Blue Haired Girls"
+      "name": "Tiny Light-Blue Haired Girls"
     },
     {
       "id1": 14,
@@ -1516,6 +1516,11 @@
       "id1": 35,
       "id2": 98,
       "name": "Large White Hat Wearers"
+    },
+    {
+      "id1": 35,
+      "id2": 139,
+      "name": "Hammer-Wielding Little Sisters"
     },
     {
       "id1": 37,
