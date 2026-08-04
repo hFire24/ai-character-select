@@ -16,6 +16,7 @@ import { SortCharactersPipe, SortField } from '../../pipes/sort-characters.pipe'
 export class TierList {
   screenshotDataUrl: string | null = null;
   characterFilter: string = 'all';
+  filterTierCharacters: boolean = false;
   characterSort: SortField = 'none';
   splitTwins: boolean = false;
   router: any;
@@ -74,13 +75,21 @@ export class TierList {
     if (this.characterFilter === 'active') {
       return { status: { active: true } };
     }
-    
+
+    if (this.characterFilter === 'inactiveRetired') {
+      return { status: { inactive: true, retired: true } };
+    }
+
     if (this.characterFilter === 'inactive') {
       return { status: { inactive: true } };
     }
     
     if (this.characterFilter === 'retired') {
       return { status: { retired: true } };
+    }
+
+    if (this.characterFilter === 'allSide') {
+      return { status: { side: true, future: true, me: true } };
     }
     
     if (this.characterFilter === 'music') {
@@ -110,8 +119,38 @@ export class TierList {
     if (this.characterFilter === 'female') {
       return { attributes: { pronouns: ['she/her'] } };
     }
+
+    if (this.characterFilter === 'moe') {
+      return { attributes: { moe: { min: 7, max: 10 } } };
+    }
+
+    if (this.characterFilter === 'non-moe') {
+      return { attributes: { moe: { min: 1, max: 6 } } };
+    }
     
     return {}; // Default: no filters
+  }
+
+  isTierCharacterVisible(character: any): boolean {
+    if (!this.filterTierCharacters || this.characterFilter === 'all') {
+      return true;
+    }
+
+    // Imported/legacy tier entries may only contain an ID and display name. Use
+    // the fully populated pool record so every filter has the fields it needs.
+    const filterableCharacter = this.allCharacters.find(c => c.id === character.id);
+    if (!filterableCharacter) {
+      return false;
+    }
+
+    return new CharacterFilterPipe().transform(
+      [filterableCharacter],
+      this.getFilterOptions()
+    ).length === 1;
+  }
+
+  getVisibleTierCharacterCount(characters: any[]): number {
+    return characters.filter(character => this.isTierCharacterVisible(character)).length;
   }
 
   onFilterChange(event: any) {
@@ -148,6 +187,7 @@ export class TierList {
             id: c.id,
             status: c.status,
             tier: c.tier,
+            moe: c.moe,
             musicEnjoyer: c.musicEnjoyer,
             personalityGirl: c.personalityGirl,
             pronouns: c.pronouns
@@ -525,13 +565,14 @@ export class TierList {
           this.characterFilter = metadata.characterFilter;
         }
       }
+      this.filterTierCharacters = metadata.filterTierCharacters === true;
       // Check and update Split Twins setting before loading characters
       let needsCharacterReload = false;
       if (metadata.splitTwins !== undefined && this.splitTwins !== metadata.splitTwins) {
         this.splitTwins = metadata.splitTwins;
         needsCharacterReload = true;
         // Update the checkbox state in the UI
-        const splitTwinsCheckbox = document.querySelector('input[type="checkbox"]') as HTMLInputElement;
+        const splitTwinsCheckbox = document.querySelector('#splitTwins') as HTMLInputElement;
         if (splitTwinsCheckbox) {
           splitTwinsCheckbox.checked = this.splitTwins;
         }
@@ -603,6 +644,7 @@ export class TierList {
     const metadata = {
       exportDate: new Date().toISOString(),
       characterFilter: this.characterFilter,
+      filterTierCharacters: this.filterTierCharacters,
       splitTwins: this.splitTwins,
       tiers: this.tiers.map(tier => ({
         name: tier.name,

@@ -21,13 +21,14 @@
       (dragover)="onDragOver($event)"
       (drop)="onCharacterDrop($event, i, 0)"
       (click)="(selectedPoolCharIdx !== null || selectedTierCharIdx !== null) && placeSelectedCharacterInTier(i)">
-      <ng-container *ngIf="tier.characters.length === 0">
+      <ng-container *ngIf="getVisibleTierCharacterCount(tier.characters) === 0">
         <div class="tier-empty-placeholder">
           Drop here
         </div>
       </ng-container>
       <ng-container *ngFor="let char of tier.characters; let j = index">
         <div class="tier-character"
+          *ngIf="isTierCharacterVisible(char)"
           [class.selected]="selectedTierCharIdx?.tierIdx === i && selectedTierCharIdx?.charIdx === j"
           draggable="true"
           (dragstart)="onDragStart($event, i, j)"
@@ -95,13 +96,17 @@
   <select id="characterFilter" (change)="onFilterChange($event)">
     <option value="all">All characters</option>
     <option value="active">Active Characters</option>
+    <option value="inactiveRetired">Inactive & Retired</option>
     <option value="inactive">Inactive Characters</option>
     <option value="retired">Retired Characters</option>
+    <option value="allSide">All Side Characters</option>
     <option value="music">Music Enjoyers</option>
     <option value="personality">Personality Girls</option>
-    <option value="side">Side Characters</option>
+    <option value="side">Other Side Characters</option>
     <option value="male">Male Characters</option>
     <option value="female">Female Characters</option>
+    <option value="moe">Moe Characters</option>
+    <option value="non-moe">Non-Moe Characters</option>
   </select>
   <label [ngStyle]="{ 'margin-left': '10px' }" for="characterSort">Sort:</label>
   <select id="characterSort" (change)="onSortChange($event)">
@@ -110,6 +115,9 @@
     <option value="shortName">Name</option>
     <option value="status">Status</option>
   </select>
+  <br>
+  <label for="filterTierCharacters">Hide filtered characters in tier list: </label>
+  <input type="checkbox" id="filterTierCharacters" [checked]="filterTierCharacters" (change)="filterTierCharacters = $any($event.target).checked">
   <br>
   <label for="splitTwins">Split Twins:</label>
   <input type="checkbox" id="splitTwins" (change)="onSplitTwinsChange($event)">
