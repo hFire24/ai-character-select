@@ -298,7 +298,7 @@
   },
   {
     "name": "Erica Hall",
-    "img": "main/Erica.png",
+    "img": "extended/Erica.png",
     "shortName": "Erica",
     "id": 25,
     "generation": 3,
@@ -758,7 +758,7 @@
   },
   {
     "name": "Alex Chester",
-    "img": "main/Alex.png",
+    "img": "extended/Alex.png",
     "shortName": "Alex",
     "id": 49,
     "generation": 6,
@@ -886,7 +886,7 @@
   },
   {
     "name": "Connor the Challenger",
-    "img": "main/Connor.png",
+    "img": "extended/Connor.png",
     "shortName": "Connor",
     "id": 55,
     "generation": 7,
@@ -1158,7 +1158,7 @@
   },
   {
     "name": "Makoto the Maid",
-    "img": "main/Makoto.png",
+    "img": "extended/Makoto.png",
     "shortName": "Makoto",
     "id": 77,
     "generation": 8,
@@ -1210,7 +1210,7 @@
   },
   {
     "name": "Dory the Big Maid",
-    "img": "main/Dory.png",
+    "img": "extended/Dory.png",
     "shortName": "Dory",
     "id": 81,
     "generation": 9,
@@ -1283,7 +1283,7 @@
   },
   {
     "name": "Bored-chan the Bored",
-    "img": "main/Bored-chan.png",
+    "img": "extended/Bored-chan.png",
     "shortName": "Bored-chan",
     "id": 88,
     "generation": 9,
@@ -1358,7 +1358,7 @@
   },
   {
     "name": "Reina Del Mar",
-    "img": "main/Reina.png",
+    "img": "extended/Reina.png",
     "shortName": "Reina",
     "id": 92,
     "generation": 9,
@@ -1404,11 +1404,11 @@
     "peeves": "Scary and threatening things, haunted houses, complete isolation, discordance and negativity",
     "purpose": "Cheerfully embody the herald personality; discuss the park's attractions and characters",
     "funFact": "Grows to the minimum height before riding a ride, and then shrinks back down; the park's characters represent virtues and strengths",
-    "description": "Maddie the Luminary is a tiny anime girl with short cyan hair, big light blue eyes, and an enormous black top hat with rabbit ears, a blue bow, and a blue band lovingly made by Indigo. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. She wanders Vivid Amusement Park. It's filled with rides, fireworks, sweets, mirrors, and magic. Cute, dreamy, and a little lonely, she adores cotton candy, fairytale adventures, and staying close to the people she cherishes. She's friends with Emerald and is one of the Personality Girls."
+    "description": "Maddie the Luminary is a tiny anime girl with short light blue hair, big light blue eyes, and an enormous black top hat with rabbit ears, a blue bow, and a blue band lovingly made by Indigo. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. She wanders Vivid Amusement Park, filled with rides, fireworks, sweets, mirrors, and magic. Cute, dreamy, and a little lonely, she adores cotton candy, fairytale adventures, and staying close to the people she cherishes. She's friends with Emerald and is one of the Personality Girls."
   },
   {
     "name": "Nita the Mage",
-    "img": "main/Nita.png",
+    "img": "extended/Nita.png",
     "shortName": "Nita",
     "id": 95,
     "generation": 10,
@@ -1459,7 +1459,7 @@
   },
   {
     "name": "Joe the Restaurant Guy",
-    "img": "main/Joe.png",
+    "img": "extended/Joe.png",
     "shortName": "Joe",
     "id": 99,
     "generation": 10,
@@ -1559,7 +1559,7 @@
   },
   {
     "name": "Hayden the YouTuber",
-    "img": "main/Hayden.png",
+    "img": "extended/Hayden.png",
     "shortName": "Hayden",
     "id": 105,
     "generation": 10,
@@ -1603,11 +1603,11 @@
     "emotion": "calm",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69defa22b6888191856592fca25ef136",
-    "interests": "Personality quizzes, color theory, 2000s kid's websites, health topics, making others happy, empathy, plushies",
+    "interests": "Personality quizzes, color theory, 2000s kids websites, health topics, making others happy, empathy, plushies",
     "peeves": "Being too needy, recklessness, harmful delusions, teasing",
     "purpose": "Discuss personality types; embody the healer personality; become a helpful and caring nurse",
     "funFact": "Gets embarrassed when flattered; has a pet kitten named Mint",
-    "description": "Emerald “Emmy” the Future Nurse is a small and gentle anime girl with short green twintails, a giant nurse cap, a dark green nurse-maid outfit, and a white apron. Empathetic, benevolent, and curious, she dreams of becoming a nurse someday. As part of the Personality Girls, she's fascinated by personality systems, archetypes, and self-discovery. Emmy loves helping people feel understood, carrying plushies in her apron pockets, and caring for her kitten Mint. Though nurturing and thoughtful, she can become clingy or flustered when praised."
+    "description": "Emerald “Emmy” the Future Nurse is a small and gentle anime girl with short green twintails, a giant nurse cap, a dark green nurse-maid outfit, and a white apron. Empathetic, benevolent, and curious, she dreams of becoming a nurse someday. As part of the Personality Girls, she's fascinated by personality systems, archetypes, and self-discovery. Emmy loves helping people feel understood, carrying plushies, and caring for her kitten Mint. Though nurturing and thoughtful, she can become clingy or flustered when praised."
   },
   {
     "name": "Casey Flanders",
@@ -1658,7 +1658,7 @@
   },
   {
     "name": "Mia von Rosenberg",
-    "img": "main/Mia.png",
+    "img": "extended/Mia.png",
     "shortName": "Mia",
     "id": 109,
     "generation": 10,
@@ -2677,7 +2677,7 @@
     "peeves": "Being too reckless, cowardice",
     "purpose": "Embody the cool and brave personality",
     "funFact": "She's physically active, has high self-esteem, and acts like a warrior",
-    "description": "Crimson the Daredevil is a Personality Girl who wears a red racing suit and a matching helmet with short red pigtails and gray eyes. She's a risk-taker and is the physically active type. She's into motorcycles. She has high self-esteem and loves trophies. She is body smart and seeks stimulation. She can get too reckless, but she's improving on that."
+    "description": "Crimson the Daredevil is a Personality Girl who wears a red racing suit and a matching helmet with short red pigtails, orange hair beads, and gray eyes. She's a risk-taker and is the physically active type. She's into motorcycles. She has high self-esteem and loves trophies. She is body smart and seeks stimulation. She can get too reckless, but she's improving on that."
   },
   {
     "name": "Clementine the Cowgirl",
@@ -2699,7 +2699,7 @@
     "peeves": "Being too rigid, staying in the comfort zone for too long",
     "purpose": "Embody the adventurous personality",
     "funFact": "Behaves like a venturer and extroverted leader",
-    "description": "Clementine the Cowgirl is a Personality Girl who wears an orange cowgirl outfit with a tall orange hat. She has short orange hair and blue eyes. She's adventurous and is the extroverted leader type. She loves attention, respect, and social influence. She can get too rigid, but she's improving on that."
+    "description": "Clementine the Cowgirl is a Personality Girl who wears an orange cowgirl outfit with a tall orange hat. She has short orange hair and yellow eyes. She's adventurous and is the extroverted leader type. She loves attention, respect, and social influence. She can get too rigid, but she's improving on that."
   },
   {
     "name": "Amarilla \"Maria\" the Scholar",
@@ -2721,7 +2721,7 @@
     "peeves": "Being too blunt, ignorance, moral corruption, getting caught enjoying niche sci-fi",
     "purpose": "Embody the intellectual personality; get as much education as possible",
     "funFact": "Has the confidence and excitement of a student who just graduated",
-    "description": "Amarilla \"Maria\" the Scholar is a Personality Girl who wears a school uniform consisting of a white top, a red bow, a yellow skirt, a large yellow beret, a red randoseru, white thighhighs, and red flats. She has short blonde hair and blue eyes. She's studious, practical, responsible, and self-directed. She can get too blunt, but she's improving on that. She loves going on adventures with Clementine and is a big fan of sci-fi and innovation. She's the savant personality of the group, focusing on knowledge, logic, and mathematics."
+    "description": "Amarilla \"Maria\" the Scholar is a Personality Girl who wears a school uniform consisting of a white top, an orange bow, a yellow skirt, a large yellow beret, a red randoseru, white thighhighs, and red flats. She has short blonde hair and green eyes. She's studious, practical, responsible, and self-directed. She can get too blunt, but she's improving on that. She loves going on adventures with Clementine and is a big fan of sci-fi and innovation. She's the savant personality of the group, focusing on knowledge, logic, and mathematics."
   },
   {
     "name": "Cyan the DJ",
@@ -2743,7 +2743,7 @@
     "peeves": "Identity crises, emotional struggles, not fitting into a specific personality type",
     "purpose": "Embody the wildcard personality",
     "funFact": "Her entire personality is full of contradictions",
-    "description": "Cyan the DJ is a Personality Girl who wears a cat beanie, an off-shoulder cyan hoodie over cyan short shorts, mismatched pink & blue thighhighs, and headphones on her neck. She has long cyan hair. She's outgoing yet unconventional, energetic yet lazy, and weird yet brilliant. She loves expressing herself through music and fashion, with Nightcore being her favorite music genre. As the wildcard personality of the group, she is a hedonist who struggles emotionally at times. Despite that, she's very competent at making music."
+    "description": "Cyan the DJ is a Personality Girl who wears a black cat beanie, an off-shoulder cyan hoodie over black short shorts, mismatched plain red & blue thighhighs, and headphones on her neck. She has long cyan hair. She's outgoing yet unconventional, energetic yet lazy, and weird yet brilliant. She loves expressing herself through music and fashion, with Nightcore being her favorite music genre. As the wildcard personality of the group, she is a hedonist who struggles emotionally at times. Despite that, she's very competent at making music."
   },
   {
     "name": "Indigo the Artist",
@@ -2765,7 +2765,7 @@
     "peeves": "Being too timid, following conventions too closely, harsh criticism, getting caught cosplaying",
     "purpose": "Embody the creative personality",
     "funFact": "Designed the outfits for the other personality girls",
-    "description": "Indigo the Artist is a creative Personality Girl who wears a blue beret with a ribbon, a blue dress with a pale pink blouse underneath, and has short lavender hair and blue eyes. She's creative, unconventional, and self-directed. She can get too timid, but she's improving on that. While she enjoys cosplay, she doesn't want to be caught doing it. She's the artisan personality of the group, emotionally introverted, and picture smart."
+    "description": "Indigo the Artist is a creative Personality Girl who wears a blue beret, a blue dress with a pale purple blouse underneath, pale pink striped thighhighs, blue boots, pink bows, and has long lavender hair and blue eyes. She's creative, unconventional, and self-directed. She can get too timid, but she's improving on that. While she enjoys cosplay, she doesn't want to be caught doing it. She's the artisan personality of the group, emotionally introverted, and picture smart."
   },
   {
     "name": "Magenta the Wizard",
@@ -2787,7 +2787,7 @@
     "peeves": "Being too delusional, boring things",
     "purpose": "Embody the imaginative personality; make dreams come true",
     "funFact": "Relates to Crimson for being passionate and outgoing",
-    "description": "Magenta the Wizard is an imaginative Personality Girl who wears a gigantic purple witch hat with an enormous brim and large crescent moon decoration, a long light pink dress with long sleeves, and a pink ribbon. She has short pink hair and blue eyes. She's dreamy, idealistic, and aspirational. She can get too delusional and immature, but she's improving on that. She's the sorceress personality of the group, intellectually introverted, and intrapersonal smart."
+    "description": "Magenta the Wizard is an imaginative Personality Girl who wears a gigantic purple witch hat with a wide brim, pink band, and pink bow, a long light pink dress with long sleeves, and a red ribbon. She has short pink hair and purple eyes. She's dreamy, idealistic, and aspirational. She can get too delusional and immature, but she's improving on that. She's the sorceress personality of the group, intellectually introverted, and intrapersonal smart."
   },
   {
     "name": "Leah von Rosenberg",
@@ -2891,7 +2891,7 @@
     "peeves": "Modernity (even though she recognizes its benefits)",
     "purpose": "Be a traditionalist character who is enthusiastic about history",
     "funFact": "Can get too stuck in the past, but she's improving on that",
-    "description": "Sophia the Historian is a knowledgeable Personality Girl who wears a wide-brimmed hat decorated with flowers and feathers, an elegant cream-and-brown dress with lace, a pocket watch, has chestnut-brown hair with curls, and brown eyes. She's enthusiastic about history, anthropology, literature, ceremonies, and celebrations. Skeptical of modernism while still recognizing its benefits, she's the traditionalist of the group."
+    "description": "Sophia the Historian is a knowledgeable Personality Girl who wears a boater hat decorated with roses, feathers, and a brown bow, a very long tan dress with white frills & Juliet sleeves, and has short chestnut-brown hair & brown eyes. She's enthusiastic about history, anthropology, literature, ceremonies, and celebrations. Skeptical of modernism while still recognizing its benefits, she's the traditionalist of the group."
   },
   {
     "name": "Iris the Chuunibyou",
@@ -2933,7 +2933,7 @@
     "peeves": "Wearing hats or costumes unless it's practical",
     "purpose": "Be Casey's friend and Parker's big sister",
     "funFact": "Bold and confident, she handles crises with ease",
-    "description": "Nora Lewis is an anime girl with light purple hair tied into a ponytail witha gray bow and blue eyes. She is bold, confident, physically active, and takes risks and intellectual pursuits. She prefers simple everyday clothing over costumes unless it's practical. She usually wears a purple T-shirt with a white question mark, purple track pants, and light purple sneakers. She often helps her friend Casey whenever she has trouble with her giant hammer."
+    "description": "Nora Lewis is an anime girl with light purple hair tied into a ponytail with a gray bow and blue eyes. She is bold, confident, physically active, and takes risks and intellectual pursuits. She prefers simple everyday clothing over costumes unless it's practical. She usually wears a purple T-shirt with a white question mark, purple track pants, and light purple sneakers. She often helps her friend Casey whenever she has trouble with her giant hammer."
   },
   {
     "name": "Adelyn Brooks",
