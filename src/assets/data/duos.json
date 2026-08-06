@@ -293,11 +293,6 @@
     },
     {
       "id1": 4,
-      "id2": 30,
-      "name": "Car Enthusiasts"
-    },
-    {
-      "id1": 4,
       "id2": 31,
       "name": "Rhythm Gamers"
     },
@@ -621,6 +616,11 @@
       "id1": 13,
       "id2": 88,
       "name": "Lazy Light-blue Haired Girls"
+    },
+    {
+      "id1": 13,
+      "id2": 94,
+      "name": "Light Blue-Haired Top Hat Girls"
     },
     {
       "id1": 13,
@@ -1348,6 +1348,11 @@
       "id1": 30,
       "id2": 105,
       "name": "Normal Sunglasses Guys"
+    },
+    {
+      "id1": 30,
+      "id2": 143,
+      "name": "Car Enthusiasts"
     },
     {
       "id1": 31,
@@ -2458,6 +2463,11 @@
       "name": "Black Sun Hat Wearers"
     },
     {
+      "id1": 115,
+      "id2": 143,
+      "name": "Speed Demons"
+    },
+    {
       "id1": 117,
       "id2": 119,
       "name": "Beret Personality Girls"
@@ -2496,6 +2506,11 @@
       "id1": 125,
       "id2": 130,
       "name": "Curious Sisters"
+    },
+    {
+      "id1": 129,
+      "id2": 130,
+      "name": "Big Sister Frenemies"
     },
     {
       "id1": 131,

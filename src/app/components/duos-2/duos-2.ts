@@ -310,7 +310,7 @@ export class Duos2 implements OnInit {
         "characterIds": [121, 127]
       },
       {
-        "name": "Big Sisters Expansion Pack",
+        "name": this.findDuoName(129, 130),
         "description": "Release Date: June 10, 2026",
         "characterIds": [129, 130]
       },
