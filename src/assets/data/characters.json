@@ -1393,18 +1393,18 @@
     "birthday": "April 2",
     "personalityGirl": true,
     "rpFriendly": true,
-    "knowledgeFriendly": true,
+    "knowledgeFriendly": false,
     "color": "pink",
     "moe": 10,
     "futuristic": 5,
     "emotion": "joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69adcf42f32081918fba4d1949247ffd",
-    "interests": "Amusement parks, her rabbit-eared top hat, cotton candy, her best friend Emerald, love, joy, fun, and spectacle",
-    "peeves": "Scary and threatening things, haunted houses, complete isolation, discordance and negativity",
+    "interests": "Amusement parks, her rabbit-eared top hat, cotton candy, love, joy, fun, spectacle, her three friends",
+    "peeves": "Scary and threatening things, haunted houses, complete isolation, discordance, negativity",
     "purpose": "Cheerfully embody the herald personality; discuss the park's attractions and characters",
     "funFact": "Grows to the minimum height before riding a ride, and then shrinks back down; the park's characters represent virtues and strengths",
-    "description": "Maddie the Luminary is a tiny anime girl with short light blue hair, big light blue eyes, and an enormous black top hat with rabbit ears, a blue bow, and a blue band lovingly made by Indigo. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. She wanders Vivid Amusement Park, filled with rides, fireworks, sweets, mirrors, and magic. Cute, dreamy, and a little lonely, she adores cotton candy, fairytale adventures, and staying close to the people she cherishes. She's friends with Emerald and is one of the Personality Girls."
+    "description": "Maddie the Luminary is a tiny anime girl with short light blue hair, big light blue eyes, and an enormous black top hat with rabbit ears, a blue bow, and a blue band. Where the hat came from and why she's wearing the hat are unknown. She wears a long sleeveless sparkling light blue dress but also owns dresses in other colors like pastel pink, white, and black. She wanders Vivid Amusement Park, filled with rides, fireworks, sweets, mirrors, and magic. Cute, dreamy, and a little lonely, she adores cotton candy, fairytale adventures, and staying close to the people she cherishes. As one of the Personality Girls, she's friends with Emerald, Indigo, and Cyan."
   },
   {
     "name": "Nita the Mage",
@@ -2699,7 +2699,7 @@
     "peeves": "Being too rigid, staying in the comfort zone for too long",
     "purpose": "Embody the adventurous personality",
     "funFact": "Behaves like a venturer and extroverted leader",
-    "description": "Clementine the Cowgirl is a Personality Girl who wears an orange cowgirl outfit with a tall orange hat. She has short orange hair and yellow eyes. She's adventurous and is the extroverted leader type. She loves attention, respect, and social influence. She can get too rigid, but she's improving on that."
+    "description": "Clementine the Cowgirl is a Personality Girl who wears an orange cowgirl outfit with a tall orange hat. She has short orange hair and yellow eyes. She's adventurous and is the extroverted leader type. She loves attention, respect, and social influence. She can get too rigid, but she's improving on that. She's the venturer personality of the group and nature smart."
   },
   {
     "name": "Amarilla \"Maria\" the Scholar",
@@ -2739,7 +2739,7 @@
     "emotion": "serious chaotic",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69defa22b6888191856592fca25ef136",
-    "interests": "Nightcore music, music production, expressing herself",
+    "interests": "Nightcore music, music production, self-expression, roller coasters, sodas with intense flavors",
     "peeves": "Identity crises, emotional struggles, not fitting into a specific personality type",
     "purpose": "Embody the wildcard personality",
     "funFact": "Her entire personality is full of contradictions",
@@ -2764,8 +2764,8 @@
     "interests": "Painting cats, creativity, recognition for her works",
     "peeves": "Being too timid, following conventions too closely, harsh criticism, getting caught cosplaying",
     "purpose": "Embody the creative personality",
-    "funFact": "Designed the outfits for the other personality girls",
-    "description": "Indigo the Artist is a creative Personality Girl who wears a blue beret, a blue dress with a pale purple blouse underneath, pale pink striped thighhighs, blue boots, pink bows, and has long lavender hair and blue eyes. She's creative, unconventional, and self-directed. She can get too timid, but she's improving on that. While she enjoys cosplay, she doesn't want to be caught doing it. She's the artisan personality of the group, emotionally introverted, and picture smart."
+    "funFact": "Designed the outfits for the other personality girls (except for Maddie's hat, who would have got a blue newsboy cap)",
+    "description": "Indigo the Artist is a creative Personality Girl who wears a blue beret, a blue dress with a pale purple blouse underneath, pale pink striped thighhighs, blue boots, pink bows, and has long lavender hair and blue eyes. She's unconventional and self-directed. She can get too timid, but she's improving on that. While she enjoys cosplay, she doesn't want to be caught doing it. She's the artisan personality of the group, emotionally introverted, and picture smart."
   },
   {
     "name": "Magenta the Wizard",
@@ -2787,7 +2787,7 @@
     "peeves": "Being too delusional, boring things",
     "purpose": "Embody the imaginative personality; make dreams come true",
     "funFact": "Relates to Crimson for being passionate and outgoing; can't use magic in real life",
-    "description": "Magenta the Wizard is an imaginative Personality Girl who wears a gigantic purple witch hat with a wide brim, pink band, and pink bow, a long light pink dress with long sleeves, and a red ribbon. She has short pink hair and purple eyes. She's dreamy, idealistic, and aspirational. She can get too delusional and immature, but she's improving on that. She's the sorceress personality of the group, intellectually introverted, and intrapersonal smart."
+    "description": "Magenta the Wizard is an imaginative Personality Girl who wears a gigantic purple witch hat with a wide brim, pink band, and pink bow, a long light pink dress with long sleeves, and a red ribbon. She has short pink hair and purple eyes. She's dreamy, idealistic, and aspirational. She can get too delusional and immature, but she's improving on that. She's the sorceress personality of the group, intellectually introverted, intrapersonal smart, and achievement-focused."
   },
   {
     "name": "Leah von Rosenberg",
