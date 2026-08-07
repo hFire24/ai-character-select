@@ -60,7 +60,7 @@ export class Stats implements OnInit {
   }
 
   calculateStats() {
-    this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
+    this.characterService.getCharacters().subscribe((characters: Character[]) => {
       const pipe = new CharacterFilterPipe();
       
       this.stats.active = pipe.transform(characters, { status: { active: true } }).length + 1; // +1 for ChatGPT
@@ -78,7 +78,7 @@ export class Stats implements OnInit {
   }
 
   loadLastChattedCharacters() {
-    this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
+    this.characterService.getCharacters().subscribe((characters: Character[]) => {
       const chatsWithTimestamps: LastChattedCharacter[] = [];
       const pipe = new CharacterFilterPipe();
 

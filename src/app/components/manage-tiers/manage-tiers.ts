@@ -223,8 +223,8 @@ export class ManageTiers {
 
   private loadCharacters(): void {
     forkJoin({
-      characters: this.characterService.getCharactersPlusCriticizer(),
-      defaultCharacters: this.characterService.getDefaultCharactersPlusCriticizer()
+      characters: this.characterService.getCharacters(),
+      defaultCharacters: this.characterService.getDefaultCharacters()
     }).subscribe(({ characters, defaultCharacters }) => {
       const defaultTiers = new Map(defaultCharacters.map(character => [character.id, character.tier]));
 

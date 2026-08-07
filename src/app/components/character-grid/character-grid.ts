@@ -28,7 +28,7 @@ export class CharacterGrid {
   characters: Character[] = [];
 
   constructor(private characterService: CharacterService) {
-    this.characterService.getCharactersPlusCriticizer().subscribe(data => {
+    this.characterService.getCharacters().subscribe(data => {
       this.characters = data;
       
       this.characterService.getChatGPT().subscribe(chatGPTCharacter => {

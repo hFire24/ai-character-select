@@ -142,8 +142,8 @@ export class SpinTheWheel {
 
   loadCharacters() {
     const observable = this.splitTwins 
-      ? this.characterService.getCharactersSplitTwins(true)
-      : this.characterService.getCharactersPlusCriticizer();
+      ? this.characterService.getCharactersSplitTwins()
+      : this.characterService.getCharacters();
     
     observable.subscribe(chars => {
       this.characters = chars;

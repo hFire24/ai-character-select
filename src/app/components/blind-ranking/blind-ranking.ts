@@ -38,7 +38,7 @@ export class BlindRanking {
   showCard: boolean = false;
 
   constructor() {
-    this.characterService.getCharactersSplitTwins(false).subscribe((characters: Character[]) => {
+    this.characterService.getCharactersSplitTwins().subscribe((characters: Character[]) => {
       this.allCharacters = [...characters, ...this.characterService.getBonusCharacters()];
     });
   }

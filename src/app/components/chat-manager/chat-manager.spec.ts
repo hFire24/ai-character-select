@@ -10,8 +10,8 @@ describe('ChatManager', () => {
 
   beforeEach(async () => {
     localStorage.clear();
-    mockCharacterService = jasmine.createSpyObj('CharacterService', ['getCharactersPlusCriticizer', 'getChatGPT']);
-    mockCharacterService.getCharactersPlusCriticizer.and.returnValue(of([]));
+    mockCharacterService = jasmine.createSpyObj('CharacterService', ['getCharacters', 'getChatGPT']);
+    mockCharacterService.getCharacters.and.returnValue(of([]));
     mockCharacterService.getChatGPT.and.returnValue(of([]));
 
     await TestBed.configureTestingModule({
@@ -31,7 +31,7 @@ describe('ChatManager', () => {
   });
 
   it('should load active chats on init', () => {
-    expect(mockCharacterService.getCharactersPlusCriticizer).toHaveBeenCalled();
+    expect(mockCharacterService.getCharacters).toHaveBeenCalled();
   });
 
   it('should toggle select all', () => {
@@ -61,7 +61,7 @@ describe('ChatManager', () => {
 
   it('loads archived chats and restores them without changing the timestamp', () => {
     const character = { id: 42, shortName: 'Test', link: 'default' } as any;
-    mockCharacterService.getCharactersPlusCriticizer.and.returnValue(of([character]));
+    mockCharacterService.getCharacters.and.returnValue(of([character]));
     localStorage.setItem('archivedChatLink_42', 'https://chatgpt.com/c/archived');
     localStorage.setItem('chatLinkTimestamp_42', '2026-01-01T00:00:00.000Z');
 

@@ -45,7 +45,7 @@ export class Hangouts {
   }
 
   loadCharacters() {
-    this.characterService.getCharactersSplitTwins(false).subscribe(characters => {
+    this.characterService.getCharactersSplitTwins().subscribe(characters => {
       const excludedNames = [
         { name: 'Bruce', bannedReason: 'Emergency character' },
         { name: 'Jed', bannedReason: 'Exclusive to Music Enjoyers' },

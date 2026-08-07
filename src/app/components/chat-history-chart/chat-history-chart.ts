@@ -251,7 +251,7 @@ export class ChatHistoryChart {
 
   private loadCharacters() {
     forkJoin({
-      characters: this.characterService.getCharactersPlusCriticizer(),
+      characters: this.characterService.getCharacters(),
       chatGPT: this.characterService.getChatGPT()
     }).subscribe(({ characters, chatGPT }) => {
       this.characters = [...characters, ...chatGPT]

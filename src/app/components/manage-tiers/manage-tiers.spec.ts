@@ -10,8 +10,8 @@ describe('ManageTiers', () => {
   const characterServiceSpy = jasmine.createSpyObj<CharacterService>(
     'CharacterService',
     [
-      'getCharactersPlusCriticizer',
-      'getDefaultCharactersPlusCriticizer',
+      'getCharacters',
+      'getDefaultCharacters',
       'getAllowedTiersForStatus',
       'getDefaultTierForStatus',
       'isTierValidForStatus',
@@ -21,8 +21,8 @@ describe('ManageTiers', () => {
   );
 
   beforeEach(async () => {
-    characterServiceSpy.getCharactersPlusCriticizer.and.returnValue(of([]));
-    characterServiceSpy.getDefaultCharactersPlusCriticizer.and.returnValue(of([]));
+    characterServiceSpy.getCharacters.and.returnValue(of([]));
+    characterServiceSpy.getDefaultCharacters.and.returnValue(of([]));
     characterServiceSpy.getAllowedTiersForStatus.and.returnValue([1, 2, 3, 4]);
     characterServiceSpy.getDefaultTierForStatus.and.returnValue(4);
     characterServiceSpy.isTierValidForStatus.and.returnValue(true);

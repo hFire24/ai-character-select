@@ -97,7 +97,7 @@ export class Sorter implements OnInit, OnDestroy {
 
 
   start(): void {
-    this.characterService.getCharactersSplitTwins(false).subscribe(chars => {
+    this.characterService.getCharactersSplitTwins().subscribe(chars => {
       const pipe = new CharacterFilterPipe();
       const characters = [...chars, ...this.characterService.getBonusCharacters()];
       this.characters = pipe.transform(characters, this.filterOptions);

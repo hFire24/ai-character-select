@@ -41,7 +41,7 @@ export class Roster {
   sortDirection: SortDirection = 'asc';
 
   constructor(private characterService: CharacterService, private router: Router) {
-      this.characterService.getCharactersPlusCriticizer().subscribe(data => {
+      this.characterService.getCharacters().subscribe(data => {
         this.characters = data;
   
         this.characterService.getChatGPT().subscribe(chatGPTCharacter => {

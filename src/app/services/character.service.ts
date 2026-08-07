@@ -31,6 +31,7 @@ export type Character = {
   alternatives?: string; // Optional field for alternatives
   birthday?: string; // Optional field for birthday
   creationDate?: string; // Optional field for creation date
+  retirementDate?: string; // Optional field for retirement date
   themeSong?: string; // Optional field for theme song
   songLink?: string; // Optional field for song link
   seed?: any; // Optional field for tournament seed
@@ -284,17 +285,11 @@ export class CharacterService {
 
   getCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>('assets/data/characters.json').pipe(
-      map(characters => this.applyTierRules(characters).filter(char => char.id !== 52))
-    );
-  }
-
-  getCharactersPlusCriticizer(): Observable<Character[]> {
-    return this.http.get<Character[]>('assets/data/characters.json').pipe(
       map(characters => this.applyTierRules(characters))
     );
   }
 
-  getDefaultCharactersPlusCriticizer(): Observable<Character[]> {
+  getDefaultCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>('assets/data/characters.json').pipe(
       map(characters => characters.map(character => ({
         ...character,
@@ -332,7 +327,40 @@ export class CharacterService {
     });
   }
 
-  getCharactersSplitTwins(addCriticizer: boolean): Observable<Character[]> {
+  getCriticizer(): Observable<Character[]> {
+    const criticizer: Character = {
+      "name": "Character Criticizer",
+      "img": "",
+      "shortName": "Criticizer",
+      "id": 52,
+      "generation": 7,
+      "status": "retired",
+      "tier": 9,
+      "creationDate": "2025-08-24",
+      "retirementDate": "2026-03-01",
+      "color": "black",
+      "rpFriendly": false,
+      "knowledgeFriendly": false,
+      "moe": 1,
+      "futuristic": 7,
+      "emotion": "serious strict",
+      "pronouns": "it/its",
+      "link": "https://chatgpt.com/g/g-68ab9aa397dc8191a6b861031bc718a9",
+      "interests": "Reality checks, task completion",
+      "peeves": "Frivolous character interaction, neglecting real-life responsibilities",
+      "purpose": "Interrupt unproductive fixation, redirect the user toward real-world actions and responsibility",
+      "funFact": "Its discipline style is inspired by Veronica, Mark, and Kayla",
+      "description": "The Character Criticizer is a stern, no-nonsense entity designed to keep users focused on real-world responsibilities. It intervenes when users become too engrossed in fictional interactions, providing reality checks and guidance.",
+      "retirementReason": "Not meant to be viewed as a character in the roster; it ended up being unused for a while",
+      "alternatives": "Mark, Gary"
+    };
+    return new Observable(observer => {
+      observer.next([criticizer]);
+      observer.complete();
+    });
+  }
+
+  getCharactersSplitTwins(): Observable<Character[]> {
     return this.getCharacters().pipe(
       switchMap(characters => {
         const splitCharacters: Character[] = [...characters];
@@ -447,17 +475,6 @@ export class CharacterService {
               funFact: "She's sweet, supportive, and a bit more composed than Hana",
               description: "Koko is a cheerful and talented idol with a passion for music and dance. She brings joy and energy to her performances, captivating her audience with her charm and talent. She has short blonde hair and wears a cute pink and white idol outfit with a frilly skirt, bows, and a large wide-brimmed white hat with a pink bow."
             }
-          );
-        }
-        
-        if (addCriticizer) {
-          return this.getCharacter(52).pipe(
-            map(criticizer => {
-              if (criticizer) {
-                splitCharacters.push({ ...criticizer, id: 51 });
-              }
-              return splitCharacters;
-            })
           );
         }
         

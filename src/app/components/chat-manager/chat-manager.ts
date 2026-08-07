@@ -45,7 +45,7 @@ export class ChatManager implements OnInit {
   }
 
   loadActiveChats() {
-    this.characterService.getCharactersPlusCriticizer().subscribe((characters: Character[]) => {
+    this.characterService.getCharacters().subscribe((characters: Character[]) => {
       // Add ChatGPT
       this.characterService.getChatGPT().subscribe(chatGPTCharacter => {
         if (Array.isArray(chatGPTCharacter)) {

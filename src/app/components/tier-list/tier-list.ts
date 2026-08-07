@@ -174,7 +174,7 @@ export class TierList {
         'Barry': 'StrawBarry'
       };
       const source$ = this.splitTwins
-        ? this.characterService.getCharactersSplitTwins(false)
+        ? this.characterService.getCharactersSplitTwins()
         : this.characterService.getCharacters();
       source$.subscribe(data => {
         this.allCharacters = data.map(c => {

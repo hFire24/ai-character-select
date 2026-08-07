@@ -56,7 +56,7 @@ export class IdChecker {
 
   private searchInCurrentMode(id: number, callback?: (found: boolean) => void) {
     if (this.splitTwinsMode) {
-      this.characterService.getCharactersSplitTwins(true).subscribe((characters) => {
+      this.characterService.getCharactersSplitTwins().subscribe((characters) => {
         const char = characters.find(c => c.id === id);
         if (char) {
           this.character = char;

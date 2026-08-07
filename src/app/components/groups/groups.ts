@@ -28,7 +28,7 @@ export class Groups implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.characterService.getCharactersPlusCriticizer().subscribe(chars => {
+    this.characterService.getCharacters().subscribe(chars => {
       this.characters = chars;
       this.initializeGroups();
       this.loading = false;
@@ -201,7 +201,7 @@ export class Groups implements OnInit {
       {
         name: "Anti-Escapists",
         description: "A group of characters who embody the opposite of escapism. With the exception of Mark, they will never get unretired.",
-        characterIds: [16, 78, 52, 9, 48, 50]
+        characterIds: [16, 78, 9, 48, 50]
       },
       {
         name: "Retired Five",

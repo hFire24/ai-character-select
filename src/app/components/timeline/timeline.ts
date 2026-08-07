@@ -53,7 +53,7 @@ export class Timeline implements OnInit, AfterViewInit {
   }
 
   loadCharacters() {
-    this.characterService.getCharactersSplitTwins(false).subscribe(characters => {
+    this.characterService.getCharactersSplitTwins().subscribe(characters => {
       const datedCharacters = characters.filter(character => this.parseDate(character.creationDate));
       this.totalCharacters = datedCharacters.length;
 

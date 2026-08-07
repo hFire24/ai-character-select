@@ -28,7 +28,7 @@ export class Trios implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.characterService.getCharactersPlusCriticizer().subscribe(chars => {
+    this.characterService.getCharactersSplitTwins().subscribe(chars => {
       this.characters = chars;
       this.initializeTrios();
       this.loading = false;

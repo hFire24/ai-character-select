@@ -31,7 +31,7 @@ export class Duos2 implements OnInit {
 
   ngOnInit() {
     forkJoin({
-      characters: this.characterService.getCharactersSplitTwins(true),
+      characters: this.characterService.getCharactersSplitTwins(),
       duoPairs: this.characterService.getDuos()
     }).subscribe(({ characters, duoPairs }) => {
       this.characters = characters;
