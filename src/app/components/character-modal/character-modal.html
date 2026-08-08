@@ -60,6 +60,7 @@
     <div class="modalFooterGroup" *ngIf="!isMobile()">
       <button id="resetChatLink" *ngIf="hasActiveChatLink()" (click)="resetChatLink()">Reset Chat Link 🔄️</button>
       <button id="restoreChatLink" *ngIf="hasArchivedLink()" (click)="restoreChatLink()">Restore Chat Link 🔄️</button>
+      <span class="last-chat-date" [attr.title]="lastChatDateTitle"><strong>Last Chat:</strong> {{ lastChatDate }}</span>
     </div>
     <div class="modalFooterGroup">
       <span><a id="modalLink" *ngIf="hasLink()" [href]="chatLink" target="_blank">Chat 🗣️</a></span>

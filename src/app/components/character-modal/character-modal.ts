@@ -50,6 +50,8 @@ export class CharacterModal {
   @Output() close = new EventEmitter<void>();
 
   chatLink: string = '';
+  lastChatDate = 'N/A';
+  lastChatDateTitle = 'N/A';
 
   constructor(private deviceService: DeviceService, private characterService: CharacterService) {}
 
@@ -146,7 +148,58 @@ export class CharacterModal {
   getChatLinkHistory(): string[] {
     const key = this.getChatLinkHistoryKey();
     const history = localStorage.getItem(key);
-    return history ? JSON.parse(history) : [];
+    if (!history) return [];
+    try {
+      const parsed: unknown = JSON.parse(history);
+      return Array.isArray(parsed)
+        ? parsed.filter((timestamp): timestamp is string => typeof timestamp === 'string')
+        : [];
+    } catch {
+      return [];
+    }
+  }
+
+  loadLastChatDate(): void {
+    const latestTimestamp = this.getChatLinkHistory()
+      .map(timestamp => new Date(timestamp))
+      .filter(date => !Number.isNaN(date.getTime()))
+      .sort((a, b) => b.getTime() - a.getTime())[0];
+
+    this.lastChatDate = latestTimestamp ? this.formatRelativeDate(latestTimestamp) : 'N/A';
+    this.lastChatDateTitle = latestTimestamp
+      ? new Intl.DateTimeFormat(undefined, {
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric'
+        }).format(latestTimestamp)
+      : 'N/A';
+  }
+
+  private formatRelativeDate(date: Date): string {
+    const now = new Date();
+    const dayMilliseconds = 24 * 60 * 60 * 1000;
+    const dayNumber = (value: Date) =>
+      Date.UTC(value.getFullYear(), value.getMonth(), value.getDate()) / dayMilliseconds;
+    const daysAgo = Math.max(0, dayNumber(now) - dayNumber(date));
+
+    let value: number;
+    let unit: Intl.RelativeTimeFormatUnit;
+    if (daysAgo < 7) {
+      value = -daysAgo;
+      unit = 'day';
+    } else if (daysAgo < 30) {
+      value = -Math.floor(daysAgo / 7);
+      unit = 'week';
+    } else if (daysAgo < 365) {
+      value = -Math.floor(daysAgo / 30);
+      unit = 'month';
+    } else {
+      value = -Math.floor(daysAgo / 365);
+      unit = 'year';
+    }
+
+    const formatted = new Intl.RelativeTimeFormat(undefined, { numeric: 'auto' }).format(value, unit);
+    return formatted.charAt(0).toUpperCase() + formatted.slice(1);
   }
 
   addChatToHistory(): void {
@@ -155,6 +208,7 @@ export class CharacterModal {
     const now = new Date().toISOString();
     history.push(now);
     localStorage.setItem(key, JSON.stringify(history));
+    this.loadLastChatDate();
   }
 
   getWeeklyChatCount(): number {
@@ -219,6 +273,7 @@ export class CharacterModal {
   ngOnInit() {
     document.addEventListener('mousedown', this.handleClickOutside);
     this.loadChatLink();
+    if (!this.isMobile()) this.loadLastChatDate();
     // Daily cleanup removed - chat links are now only reset manually
   }
 

@@ -304,6 +304,66 @@ header {
   object-fit: cover;
 }
 
+.chart-controls {
+  display: flex;
+  width: fit-content;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 0 auto 16px;
+  padding: 12px 14px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  background: #f8fafc;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  span,
+  small {
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  input,
+  select,
+  button {
+    height: 36px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: #334155;
+    font: inherit;
+  }
+
+  select,
+  button {
+    padding: 0 10px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  small {
+    align-self: center;
+    white-space: nowrap;
+  }
+}
+
+.sort-direction span {
+  margin-left: 3px;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.filtered-empty {
+  padding-block: 28px;
+}
+
 .chart-card {
   overflow-x: auto;
   border: 1px solid #dbe3ee;
@@ -325,10 +385,27 @@ header {
   stroke-width: 1;
 }
 
-.tick-line {
-  stroke: #e2e8f0;
-  stroke-width: 1;
-  stroke-dasharray: 4 5;
+.era-band {
+  opacity: 0.22;
+}
+
+.era-53 {
+  fill: #2563eb;
+}
+
+.era-55 {
+  fill: #7c3aed;
+}
+
+.era-56 {
+  fill: #059669;
+}
+
+.era-label {
+  fill: #334155;
+  font-size: 11px;
+  font-weight: 700;
+  text-anchor: middle;
 }
 
 .drought-band {
@@ -349,22 +426,24 @@ header {
   text-anchor: start;
 }
 
-.tick-label {
-  fill: #64748b;
-  font-size: 12px;
-  text-anchor: middle;
+.histogram-bar {
+  opacity: 0.86;
+  rx: 2px;
 }
 
-.tick-year {
-  fill: #94a3b8;
-  font-size: 11px;
-}
-
-.point-count {
+.bar-count {
   fill: white;
   font-size: 10px;
   font-weight: 700;
   text-anchor: middle;
+  pointer-events: none;
+}
+
+.foreground-label {
+  paint-order: stroke;
+  stroke: white;
+  stroke-width: 3px;
+  stroke-linejoin: round;
   pointer-events: none;
 }
 
@@ -387,7 +466,11 @@ header {
   .date-range input,
   .date-range button,
   .search-results,
-  .selected-list button {
+  .selected-list button,
+  .chart-controls,
+  .chart-controls input,
+  .chart-controls select,
+  .chart-controls button {
     background: #1e293b;
     border-color: #475569;
     color: #e2e8f0;
@@ -404,7 +487,9 @@ header {
   .picker-heading span,
   .date-range span,
   .result-details small,
-  .no-results {
+  .no-results,
+  .chart-controls span,
+  .chart-controls small {
     color: #94a3b8;
   }
 
@@ -433,17 +518,9 @@ header {
     fill: #e2e8f0;
   }
 
-  .tick-label {
-    fill: #94a3b8;
-  }
-
   .row-line,
   .axis-line {
     stroke: #475569;
-  }
-
-  .tick-line {
-    stroke: #334155;
   }
 
   .drought-band {
@@ -453,36 +530,16 @@ header {
   .drought-label {
     fill: #fecaca;
   }
-}
 
-@media (max-width: 700px) {
-  .history-page {
-    padding-inline: 12px;
+  .era-band {
+    opacity: 0.3;
   }
 
-  .character-search,
-  .character-picker input {
-    width: 100%;
+  .era-label {
+    fill: #f8fafc;
   }
 
-  .picker-heading {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .selected-toolbar {
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .date-range {
-    width: auto;
-    align-items: stretch;
-    flex-direction: column;
-
-    strong {
-      align-self: flex-start;
-    }
+  .foreground-label {
+    stroke: #1e293b;
   }
 }

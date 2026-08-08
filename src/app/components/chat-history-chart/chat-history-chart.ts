@@ -8,12 +8,23 @@ interface HistoryPoint {
   date: Date;
   dateKey: string;
   count: number;
+  endDate?: Date;
 }
 
 interface CharacterHistorySeries {
   character: Character;
   points: HistoryPoint[];
 }
+
+interface HistoryEra {
+  label: string;
+  start: Date;
+  end: Date;
+  className: string;
+}
+
+type HistorySortField = 'added' | 'name' | 'id' | 'count' | 'first' | 'latest';
+type SortDirection = 'asc' | 'desc';
 
 @Component({
   selector: 'app-chat-history-chart',
@@ -25,12 +36,19 @@ export class ChatHistoryChart {
   private readonly chartWidth = 1100;
   private readonly plotLeft = 200;
   private readonly plotRight = 1070;
-  private readonly rowHeight = 72;
-  private readonly topPadding = 32;
-  private readonly bottomPadding = 70;
+  private readonly rowHeight = 60;
+  private readonly firstRowHeight = 72;
+  private readonly topPadding = 52;
+  private readonly bottomPadding = 24;
   private readonly droughtStart = new Date('2026-04-21T12:00:00');
   private readonly droughtEnd = new Date('2026-05-06T12:00:00');
   private readonly historyPointsByCharacterId = new Map<number, HistoryPoint[]>();
+  private readonly displayedPointsCache = new Map<string, HistoryPoint[]>();
+  private displayedSeriesCache: CharacterHistorySeries[] = [];
+  private displayedSeriesCacheKey = '';
+  private histogramMaximumCache = 1;
+  private histogramMaximumCacheKey = '';
+  private seriesVersion = 0;
   private datasetDateExtent: [Date, Date] = [new Date(), new Date()];
 
   characters: Character[] = [];
@@ -39,6 +57,9 @@ export class ChatHistoryChart {
   selectedStartDate = '';
   selectedEndDate = '';
   searchTerm = '';
+  statusFilter = 'all';
+  sortBy: HistorySortField = 'added';
+  sortDirection: SortDirection = 'asc';
   series: CharacterHistorySeries[] = [];
   isLoading = true;
 
@@ -86,8 +107,55 @@ export class ChatHistoryChart {
       .reduce((total, point) => total + point.count, 0);
   }
 
+  displayedPoints(item: CharacterHistorySeries): HistoryPoint[] {
+    const [rangeStart, rangeEnd] = this.dateExtent;
+    const dayMilliseconds = 24 * 60 * 60 * 1000;
+    const dayNumber = (date: Date) => Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / dayMilliseconds;
+    const addDays = (date: Date, days: number) => {
+      const result = new Date(date);
+      result.setDate(result.getDate() + days);
+      return result;
+    };
+    const inclusiveDays = dayNumber(rangeEnd) - dayNumber(rangeStart) + 1;
+    const bucketDays = Math.floor(inclusiveDays / 60) + 1;
+    const cacheKey = `${item.character.id}|${this.toDateKey(rangeStart)}|${this.toDateKey(rangeEnd)}|${bucketDays}`;
+    const cached = this.displayedPointsCache.get(cacheKey);
+    if (cached) return cached;
+    const buckets = new Map<number, HistoryPoint>();
+
+    item.points.filter(point => this.isDateVisible(point.date)).forEach(point => {
+      const dayOffset = dayNumber(point.date) - dayNumber(rangeStart);
+      const bucketIndex = Math.floor(dayOffset / bucketDays);
+      const bucketStart = addDays(rangeStart, bucketIndex * bucketDays);
+      const proposedEnd = addDays(bucketStart, bucketDays - 1);
+      const bucketEnd = proposedEnd > rangeEnd ? new Date(rangeEnd) : proposedEnd;
+      const existing = buckets.get(bucketIndex);
+      if (existing) {
+        existing.count += point.count;
+      } else {
+        buckets.set(bucketIndex, {
+          date: bucketStart,
+          endDate: bucketEnd,
+          dateKey: `${this.toDateKey(bucketStart)}-${this.toDateKey(bucketEnd)}`,
+          count: point.count
+        });
+      }
+    });
+
+    const points = Array.from(buckets.values());
+    this.displayedPointsCache.set(cacheKey, points);
+    return points;
+  }
+
+  formatPointDate(point: HistoryPoint): string {
+    if (!point.endDate || point.date.getTime() === point.endDate.getTime()) {
+      return this.formatDate(point.date);
+    }
+    return `${this.formatDate(point.date)}–${this.formatDate(point.endDate)}`;
+  }
+
   get chartHeight(): number {
-    return this.topPadding + this.series.length * this.rowHeight + this.bottomPadding;
+    return this.axisY + this.bottomPadding;
   }
 
   get chartViewBox(): string {
@@ -95,7 +163,43 @@ export class ChatHistoryChart {
   }
 
   get axisY(): number {
-    return this.topPadding + this.series.length * this.rowHeight;
+    if (this.displayedSeries.length === 0) return this.topPadding;
+    return this.topPadding + this.firstRowHeight +
+      (this.displayedSeries.length - 1) * this.rowHeight;
+  }
+
+  get displayedSeries(): CharacterHistorySeries[] {
+    const cacheKey = this.displayStateKey;
+    if (cacheKey === this.displayedSeriesCacheKey) return this.displayedSeriesCache;
+
+    const filtered = this.series.filter(item =>
+      this.statusFilter === 'all' || item.character.status === this.statusFilter
+    );
+    if (this.sortBy === 'added') {
+      this.displayedSeriesCache = this.sortDirection === 'asc' ? filtered : [...filtered].reverse();
+      this.displayedSeriesCacheKey = cacheKey;
+      return this.displayedSeriesCache;
+    }
+
+    this.displayedSeriesCache = [...filtered].sort((a, b) => {
+      let result = 0;
+      switch (this.sortBy) {
+        case 'name': result = a.character.shortName.localeCompare(b.character.shortName); break;
+        case 'id': result = a.character.id - b.character.id; break;
+        case 'count': result = this.visibleHistoryCount(a) - this.visibleHistoryCount(b); break;
+        case 'first': result = this.visibleActivityTime(a, false) - this.visibleActivityTime(b, false); break;
+        case 'latest': result = this.visibleActivityTime(a, true) - this.visibleActivityTime(b, true); break;
+      }
+      return (this.sortDirection === 'asc' ? result : -result) ||
+        a.character.shortName.localeCompare(b.character.shortName);
+    });
+    this.displayedSeriesCacheKey = cacheKey;
+    return this.displayedSeriesCache;
+  }
+
+  get availableStatuses(): string[] {
+    return Array.from(new Set(this.series.map(item => item.character.status)))
+      .sort((a, b) => a.localeCompare(b));
   }
 
   get dateTicks(): Date[] {
@@ -116,6 +220,40 @@ export class ChatHistoryChart {
     return this.droughtStart <= end && this.droughtEnd >= start;
   }
 
+  get visibleEras(): HistoryEra[] {
+    const [visibleStart, visibleEnd] = this.dateExtent;
+    const eras: HistoryEra[] = [
+      {
+        label: '5.3',
+        start: this.datasetDateExtent[0],
+        end: new Date('2026-04-21T12:00:00'),
+        className: 'era-53'
+      },
+      {
+        label: '5.5',
+        start: new Date('2026-05-06T12:00:00'),
+        end: new Date('2026-08-06T12:00:00'),
+        className: 'era-55'
+      },
+      {
+        label: '5.6',
+        start: new Date('2026-08-06T12:00:00'),
+        end: this.datasetDateExtent[1],
+        className: 'era-56'
+      }
+    ];
+
+    return eras.filter(era => era.start <= visibleEnd && era.end >= visibleStart);
+  }
+
+  eraStartX(era: HistoryEra): number {
+    return Math.max(this.plotLeft, this.dateX(era.start));
+  }
+
+  eraEndX(era: HistoryEra): number {
+    return Math.min(this.plotRight, this.dateX(era.end));
+  }
+
   get droughtStartX(): number {
     return Math.max(this.plotLeft, this.dateX(this.droughtStart));
   }
@@ -133,7 +271,7 @@ export class ChatHistoryChart {
   }
 
   get droughtLabelY(): number {
-    return this.topPadding + 14;
+    return this.topPadding - 14;
   }
 
   get plotStartX(): number {
@@ -162,6 +300,7 @@ export class ChatHistoryChart {
       ...this.series,
       this.createSeries(character)
     ];
+    this.seriesVersion++;
     this.searchTerm = '';
   }
 
@@ -170,15 +309,25 @@ export class ChatHistoryChart {
       ...this.series,
       ...this.availableCharacters.map(character => this.createSeries(character))
     ];
+    this.seriesVersion++;
+    this.sortBy = 'count';
+    this.sortDirection = 'desc';
     this.searchTerm = '';
   }
 
   removeCharacter(characterId: number) {
     this.series = this.series.filter(item => item.character.id !== characterId);
+    this.seriesVersion++;
   }
 
   clearCharacters() {
     this.series = [];
+    this.seriesVersion++;
+    this.statusFilter = 'all';
+  }
+
+  toggleSortDirection() {
+    this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
   }
 
   updateStartDate(value: string) {
@@ -210,7 +359,9 @@ export class ChatHistoryChart {
   }
 
   rowY(index: number): number {
-    return this.topPadding + index * this.rowHeight + this.rowHeight / 2;
+    if (index === 0) return this.topPadding + this.firstRowHeight / 2;
+    return this.topPadding + this.firstRowHeight +
+      (index - 1) * this.rowHeight + this.rowHeight / 2;
   }
 
   dateX(date: Date): number {
@@ -225,6 +376,61 @@ export class ChatHistoryChart {
     return colors[index % colors.length];
   }
 
+  characterColor(characterId: number): string {
+    return this.pointColor(this.series.findIndex(item => item.character.id === characterId));
+  }
+
+  iconPath(character: Character): string {
+    return character.img
+      ? `assets/Icons/${character.img}`
+      : 'assets/Icons/extended/Unknown.png';
+  }
+
+  useUnknownIcon(event: Event): void {
+    const image = event.currentTarget as HTMLImageElement | SVGImageElement;
+    if (image instanceof HTMLImageElement) {
+      image.src = 'assets/Icons/extended/Unknown.png';
+    } else {
+      image.setAttribute('href', 'assets/Icons/extended/Unknown.png');
+    }
+  }
+
+  histogramBarX(point: HistoryPoint): number {
+    const [rangeStart, rangeEnd] = this.dateExtent;
+    const totalDays = this.calendarDayNumber(rangeEnd) - this.calendarDayNumber(rangeStart) + 1;
+    const bucketDays = Math.floor(totalDays / 60) + 1;
+    const bucketCount = Math.ceil(totalDays / bucketDays);
+    const dayOffset = this.calendarDayNumber(point.date) - this.calendarDayNumber(rangeStart);
+    const bucketIndex = Math.floor(dayOffset / bucketDays);
+    return this.plotLeft + (bucketIndex / bucketCount) * (this.plotRight - this.plotLeft);
+  }
+
+  histogramBarWidth(_point: HistoryPoint): number {
+    const [rangeStart, rangeEnd] = this.dateExtent;
+    const totalDays = this.calendarDayNumber(rangeEnd) - this.calendarDayNumber(rangeStart) + 1;
+    const bucketDays = Math.floor(totalDays / 60) + 1;
+    const bucketCount = Math.ceil(totalDays / bucketDays);
+    return (this.plotRight - this.plotLeft) / bucketCount;
+  }
+
+  histogramBarHeight(point: HistoryPoint): number {
+    return Math.max(7, (point.count / this.visibleHistogramMaximum) * 34);
+  }
+
+  get visibleHistogramMaximum(): number {
+    const cacheKey = this.displayStateKey;
+    if (cacheKey === this.histogramMaximumCacheKey) return this.histogramMaximumCache;
+
+    this.histogramMaximumCache = Math.max(
+      1,
+      ...this.displayedSeries.flatMap(item =>
+        this.displayedPoints(item).map(point => point.count)
+      )
+    );
+    this.histogramMaximumCacheKey = cacheKey;
+    return this.histogramMaximumCache;
+  }
+
   formatDate(date: Date): string {
     return new Intl.DateTimeFormat(undefined, {
       month: 'short',
@@ -233,20 +439,24 @@ export class ChatHistoryChart {
     }).format(date);
   }
 
-  formatMonthDay(date: Date): string {
-    return new Intl.DateTimeFormat(undefined, {
-      month: 'short',
-      day: 'numeric'
-    }).format(date);
-  }
-
-  formatYear(date: Date): string {
-    return String(date.getFullYear());
-  }
-
   private get dateExtent(): [Date, Date] {
     if (!this.selectedStartDate || !this.selectedEndDate) return this.datasetDateExtent;
     return [this.dateFromKey(this.selectedStartDate), this.dateFromKey(this.selectedEndDate)];
+  }
+
+  private calendarDayNumber(date: Date): number {
+    return Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / (24 * 60 * 60 * 1000);
+  }
+
+  private get displayStateKey(): string {
+    return [
+      this.seriesVersion,
+      this.selectedStartDate,
+      this.selectedEndDate,
+      this.statusFilter,
+      this.sortBy,
+      this.sortDirection
+    ].join('|');
   }
 
   private loadCharacters() {
@@ -284,7 +494,15 @@ export class ChatHistoryChart {
   }
 
   private removeCharactersWithoutVisibleHistory() {
-    this.series = this.series.filter(item => this.visibleHistoryCount(item) > 0);
+    const visibleSeries = this.series.filter(item => this.visibleHistoryCount(item) > 0);
+    if (visibleSeries.length !== this.series.length) this.seriesVersion++;
+    this.series = visibleSeries;
+  }
+
+  private visibleActivityTime(item: CharacterHistorySeries, latest: boolean): number {
+    const points = item.points.filter(point => this.isDateVisible(point.date));
+    if (points.length === 0) return 0;
+    return points[latest ? points.length - 1 : 0].date.getTime();
   }
 
   private clampDateKey(value: string, minimum: string, maximum: string): string {
