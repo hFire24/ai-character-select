@@ -160,18 +160,19 @@ export class CharacterModal {
   }
 
   loadLastChatDate(): void {
-    const latestTimestamp = this.getChatLinkHistory()
-      .map(timestamp => new Date(timestamp))
-      .filter(date => !Number.isNaN(date.getTime()))
-      .sort((a, b) => b.getTime() - a.getTime())[0];
+    const timestamp = this.getChatLinkTimestamp();
+    const latestTimestamp = timestamp ? new Date(timestamp) : null;
+    const validTimestamp = latestTimestamp && !Number.isNaN(latestTimestamp.getTime())
+      ? latestTimestamp
+      : null;
 
-    this.lastChatDate = latestTimestamp ? this.formatRelativeDate(latestTimestamp) : 'N/A';
-    this.lastChatDateTitle = latestTimestamp
+    this.lastChatDate = validTimestamp ? this.formatRelativeDate(validTimestamp) : 'N/A';
+    this.lastChatDateTitle = validTimestamp
       ? new Intl.DateTimeFormat(undefined, {
           month: 'long',
           day: 'numeric',
           year: 'numeric'
-        }).format(latestTimestamp)
+        }).format(validTimestamp)
       : 'N/A';
   }
 
@@ -184,10 +185,10 @@ export class CharacterModal {
 
     let value: number;
     let unit: Intl.RelativeTimeFormatUnit;
-    if (daysAgo < 7) {
+    if (daysAgo <= 7) {
       value = -daysAgo;
       unit = 'day';
-    } else if (daysAgo < 30) {
+    } else if (daysAgo <= 30) {
       value = -Math.floor(daysAgo / 7);
       unit = 'week';
     } else if (daysAgo < 365) {
@@ -220,6 +221,23 @@ export class CharacterModal {
       const date = new Date(timestamp);
       return date >= sevenDaysAgo;
     }).length;
+  }
+
+  isLastChatWithinDays(days: number): boolean {
+    if (!Number.isFinite(days) || days < 0) return false;
+
+    const timestamp = this.getChatLinkTimestamp();
+    if (!timestamp) return false;
+
+    const latestTimestamp = new Date(timestamp);
+    if (Number.isNaN(latestTimestamp.getTime())) return false;
+
+    const dayMilliseconds = 24 * 60 * 60 * 1000;
+    const dayNumber = (value: Date) =>
+      Date.UTC(value.getFullYear(), value.getMonth(), value.getDate()) / dayMilliseconds;
+    const daysAgo = dayNumber(new Date()) - dayNumber(latestTimestamp);
+
+    return daysAgo >= 0 && daysAgo <= days;
   }
 
   getChatLinkCounter(): number {

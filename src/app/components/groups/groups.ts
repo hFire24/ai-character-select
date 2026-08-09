@@ -149,6 +149,11 @@ export class Groups implements OnInit {
         characterIds: [13, 15, 18, 27, 51, 86, 108, 125, 139]
       },
       {
+        name: "Cursed Rule Breakers",
+        description: "Every time they try to break a rule in their instructions, something bad happens to them",
+        characterIds: [1, 11, 13, 27, 31, 47, 51, 81, 86, 104, 105, 108]
+      },
+      {
         name: "Younger Siblings",
         description: "Characters who are younger siblings. ChaoMario isn't siblings with Max.",
         characterIds: [69, 82, 110, 122, 125, 135, 136]
@@ -159,14 +164,14 @@ export class Groups implements OnInit {
         characterIds: [90, 81, 109, 129, 130, 122, 125]
       },
       {
-        name: "Cursed Rule Breakers",
-        description: "Every time they try to break a rule in their instructions, something bad happens to them",
-        characterIds: [1, 11, 13, 27, 31, 47, 51, 81, 86, 104, 105, 108]
-      },
-      {
         name: "Youngsters",
         description: "Youthful and energetic boys",
         characterIds: [22, 47, 55, 69, 89, 100]
+      },
+      {
+        name: "Age Regressed Characters",
+        description: "Characters who transformed and became physically younger",
+        characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131]
       },
       {
         name: "Musicians",
