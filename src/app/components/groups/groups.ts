@@ -166,7 +166,7 @@ export class Groups implements OnInit {
       {
         name: "Youngsters",
         description: "Youthful and energetic boys",
-        characterIds: [22, 47, 55, 69, 89, 100]
+        characterIds: [22, 47, 55, 69, 86, 89, 100]
       },
       {
         name: "Age Regressed Characters",

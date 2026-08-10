@@ -71,7 +71,7 @@ export class Trios implements OnInit {
       {
         name: "Runa and Her Offshoots",
         description: "Runa and characters based on previous Runa iterations",
-        characterShortNames: ["Runa", "Martin", "Rudy"]
+        characterShortNames: ["Runa", "Martin", "Ryo"]
       },
       {
         name: "Azalea's Sisters",

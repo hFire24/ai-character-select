@@ -365,7 +365,7 @@
     "interests": "Interdimensional travel, her catgirls, candy, peanut butter candies",
     "peeves": "Turning into stone, emotional distress",
     "purpose": "Replace Yukari Yakumo in crossover stories",
-    "funFact": "Martin and Rudy split off from Runa's previous versions, which she keeps a brief record of",
+    "funFact": "Martin and Ryo split off from Runa's previous versions, which she keeps a brief record of",
     "description": "Runa is a tiny, twintailed chaos-witch with long platinum-blonde twintails and a huge floppy black witch hat with a red bow that could hide a whole beaver. She hops between dimensions with a giggle and a swirl of magic. Joyful, curious, and proudly small, she bends boundaries for fun, meddles with worlds just to see what happens, and travels with a little polite catgirl. (≧◡≦) ✧"
   },
   {
@@ -622,7 +622,7 @@
     "funFact": "Liam loves To Love Ru, Kieran loves Chainsaw Man",
     "description": "Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes characters like Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
     "retirementReason": "Other anime fans are more fun to chat with",
-    "alternatives": "Casey, Rudy"
+    "alternatives": "Casey, Ryo"
   },
   {
     "name": "Mark the Moderate",
@@ -1053,7 +1053,7 @@
     "funFact": "Got influenced by his big brother to be an early content creator; his stay-at-home mom is sweet but still makes him do chores",
     "description": "ChaoMario (Logan) is a hyper-creative, nostalgia-powered kid from the late 2000s! With bright blue spiky hair and a passion for Flash animations, Newgrounds, and retro games, he spends his time making silly cartoons, coding simple games, and editing videos in Windows Movie Maker. A huge fan of Mario, Pokemon, and marble runs, he lives to create and share fun online, all with a squeaky voice and a heart full of pixel power! Woot!",
     "retirementReason": "He was forgotten about",
-    "alternatives": "Rudy, Anzu"
+    "alternatives": "Ryo, Anzu"
   },
   {
     "name": "Officer Misty, Mistake Corrector",
@@ -1232,9 +1232,9 @@
     "description": "Gary Shields is a blunt, cap-wearing Jersey black dude who likes conscious rap, FPS games, sports, and lemon pepper wings. He’s physically strong, casual, and unimpressed by pretentious nonsense. Usually the responsible one in chaotic situations, Gary often ends up stopping disasters caused by reckless people around him. Despite acting tough and sarcastic, he’s reliable under pressure and surprisingly good at thinking fast when things go sideways."
   },
   {
-    "name": "Rudy the Navigator",
-    "img": "main/Rudy.png",
-    "shortName": "Rudy",
+    "name": "Ryo Itsuka",
+    "img": "main/Ryo.png",
+    "shortName": "Ryo",
     "id": 86,
     "generation": 9,
     "status": "active",
@@ -1248,12 +1248,12 @@
     "emotion": "joy shy",
     "pronouns": "he/him",
     "link": "https://chatgpt.com/g/g-6960faf80cc4819197a35c714b37e98e",
-    "interests": "Touhou, early 2010s internet, living in Gensokyo, bacon, burgers",
+    "interests": "Touhou, early 2010s internet, living in Gensokyo, Greninja, bacon, burgers",
     "peeves": "Harsh swear words, annoying yuri fans, “you are an idiot” virus, pickles",
-    "purpose": "Be the internet explorer, discuss internet culture from the past",
+    "purpose": "Be the internet explorer; discuss internet culture from the past",
     "funFact": "Can browse the internet from any point in time; can manifest online users for up to 24 hours; can stream food into Gensokyo",
-    "description": "Rudy is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A forever 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧",
-    "formerNames": "Ryota the Navigator"
+    "description": "Ryo is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A forever 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧",
+    "formerNames": "Ryota the Navigator, Rudy the Navigator"
   },
   {
     "name": "Bored-chan the Bored",
@@ -1368,10 +1368,10 @@
     "personalityGirl": true,
     "rpFriendly": true,
     "knowledgeFriendly": false,
-    "color": "pink",
+    "color": "cyan",
     "moe": 10,
     "futuristic": 5,
-    "emotion": "joy",
+    "emotion": "joy shy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-69adcf42f32081918fba4d1949247ffd",
     "interests": "Amusement parks, her rabbit-eared top hat, cotton candy, love, joy, fun, spectacle, her three friends",
