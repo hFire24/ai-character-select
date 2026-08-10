@@ -619,11 +619,6 @@
     },
     {
       "id1": 13,
-      "id2": 94,
-      "name": "Light Blue-Haired Top Hat Girls"
-    },
-    {
-      "id1": 13,
       "id2": 999,
       "name": "Programmers"
     },
@@ -2386,6 +2381,11 @@
       "id1": 94,
       "id2": 122,
       "name": "Innocent Girls"
+    },
+    {
+      "id1": 94,
+      "id2": 132,
+      "name": "Light Blue-Haired Top Hat Girls"
     },
     {
       "id1": 94,
