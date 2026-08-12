@@ -1,77 +1,100 @@
 <div id="characterModal" [class.tall-layout]="useFullbody()">
   <button id="closeModal" (click)="close.emit()">&times;</button>
   <div class="modalHeader">
-    <ng-container *ngIf="character.img; else noImg">
+    @if (character.img) {
       <img class="modalImg" [class.tall]="useFullbody()" [src]="assetPath(character.img)" [alt]="character.name" />
-    </ng-container>
-    <ng-template #noImg>
+    } @else {
       <div id="modalQuestionMark" class="question-mark">?</div>
-    </ng-template>
+    }
     <div class="modalContent">
       <div class="nameRow">
         <h2 id="modalName" [class]="character.color || 'white'">
           {{ character.name || 'Unknown Character' }}
         </h2>
-        <ng-container class="retired" *ngIf="character.status === 'retired'">
+        @if (character.status === 'retired') {
           <h3 class="retired-banner">Retired</h3>
-        </ng-container>
-        <ng-container class="retired" *ngIf="character.status === 'inactive'">
+        }
+        @if (character.status === 'inactive') {
           <h3 class="retired-banner">Inactive</h3>
-        </ng-container>
-        <ng-container class="retired" *ngIf="character.status === 'disappeared'">
+        }
+        @if (character.status === 'disappeared') {
           <h3 class="retired-banner">Removed</h3>
-        </ng-container>
+        }
       </div>
       <div class="flags">
-        <span *ngIf="character.emotion.includes('serious')">🤔</span>
-        <span *ngIf="character.emotion.includes('chaotic')">🤪</span>
-        <span *ngIf="character.emotion.includes('joy')">😀</span>
-        <span *ngIf="character.emotion.includes('cool')">😎</span>
-        <span *ngIf="character.emotion.includes('strict')">😤</span>
-        <span *ngIf="character.emotion.includes('angry')">😠</span>
-        <span *ngIf="character.emotion.includes('shy')">🫣</span>
-        <span *ngIf="character.emotion.includes('calm')">😌</span>
-        <span *ngIf="character.emotion.includes('tired')">🥱</span>
-        <span *ngIf="character.emotion.includes('sad')">☹️</span>
-        <span *ngIf="character.emotion.includes('edgy')">😈</span>
-        <span *ngIf="character.emotion.includes('straightforward')">🎯</span>
-        <span *ngIf="character.moe >= 7 && character.shortName !== 'Sasha' && character.shortName !== 'Misha'">🩷</span>
-        <span *ngIf="character.shortName === 'Sasha'">☀️</span>
-        <span *ngIf="character.shortName === 'Misha'">❄️</span>
-        <span *ngIf="character.musicEnjoyer">🎵</span>
-        <span *ngIf="character.tier === 1">💛</span>
-        <span *ngIf="character.tier === 2">🩶</span>
-        <span *ngIf="character.tier === 3">🤎</span>
+        @if (character.emotion.includes('serious')) { <span>🤔</span> }
+        @if (character.emotion.includes('chaotic')) { <span>🤪</span> }
+        @if (character.emotion.includes('joy')) { <span>😀</span> }
+        @if (character.emotion.includes('cool')) { <span>😎</span> }
+        @if (character.emotion.includes('strict')) { <span>😤</span> }
+        @if (character.emotion.includes('angry')) { <span>😠</span> }
+        @if (character.emotion.includes('shy')) { <span>🫣</span> }
+        @if (character.emotion.includes('calm')) { <span>😌</span> }
+        @if (character.emotion.includes('tired')) { <span>🥱</span> }
+        @if (character.emotion.includes('sad')) { <span>☹️</span> }
+        @if (character.emotion.includes('edgy')) { <span>😈</span> }
+        @if (character.emotion.includes('straightforward')) { <span>🎯</span> }
+        @if (character.moe >= 7 && character.shortName !== 'Sasha' && character.shortName !== 'Misha') { <span>🩷</span> }
+        @if (character.shortName === 'Sasha') { <span>☀️</span> }
+        @if (character.shortName === 'Misha') { <span>❄️</span> }
+        @if (character.musicEnjoyer) { <span>🎵</span> }
+        @if (character.tier === 1) { <span>💛</span> }
+        @if (character.tier === 2) { <span>🩶</span> }
+        @if (character.tier === 3) { <span>🤎</span> }
       </div>
       <div class="modalBody-inline">
         <div id="modalInterests"><strong>Interests</strong>: {{character.interests}}</div>
         <div id="modalPeeves"><strong>Dislikes</strong>: {{character.peeves || "None"}}</div>
         <div id="modalPurpose"><strong>Purpose</strong>: {{character.purpose}}</div>
         <div id="modalFact"><strong>Fun Fact</strong>: {{character.funFact}}</div>
-        <div id="modalSong" *ngIf="character.themeSong"><strong>Theme Song</strong>: <a [href]="character.songLink" target="_blank">{{character.themeSong}}</a></div>
-        <div id="modalRetirement" *ngIf="character.status === 'retired'"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
-        <div id="modalInactive" *ngIf="character.status === 'inactive'"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
-        <div id="modalAlternatives" *ngIf="character.alternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
+        @if (character.themeSong) {
+          <div id="modalSong"><strong>Theme Song</strong>: <a [href]="character.songLink" target="_blank">{{character.themeSong}}</a></div>
+        }
+        @if (character.status === 'retired') {
+          <div id="modalRetirement"><strong>Ret. Reason</strong>: {{character.retirementReason}}</div>
+        }
+        @if (character.status === 'inactive') {
+          <div id="modalInactive"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
+        }
+        @if (character.alternatives) {
+          <div id="modalAlternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
+        }
         <div id="modalDescription" style="display: none;">{{character.description}}</div>
       </div>
     </div>
   </div>
-  <div class="modalStats" *ngIf="!isMobile() && !character.status?.includes('side')">
-    <span class="last-chat-date">
-      <strong>Last Chat:</strong> {{ lastChatDate }}<ng-container *ngIf="lastChatDateTitle !== 'N/A'"> ({{ lastChatDateTitle }})</ng-container>
-    </span>
-    <span *ngIf="isLastChatWithinDays(7)"><strong>Chats This Week:</strong> {{ getWeeklyChatCount() }}</span>
-    <span><strong>Total Chats: </strong> {{ getChatLinkCounter() }}</span>
-  </div>
-  <div id="modalFooter" [class.single-group]="!hasLink() || isMobile()">
-    <div class="modalFooterGroup" *ngIf="!isMobile()">
-      <button id="resetChatLink" *ngIf="hasActiveChatLink()" (click)="resetChatLink()">Reset Chat Link 🔄️</button>
-      <button id="restoreChatLink" *ngIf="hasArchivedLink()" (click)="restoreChatLink()">Restore Chat Link 🔄️</button>
+  @if (!isMobile() && !character.status?.includes('side')) {
+    <div class="modalStats">
+      @if (!isLastChatWithinDays(7)) {
+        <span class="last-chat-date">
+          <strong>Last Chat:</strong> {{ lastChatDateTitle || "N/A" }}
+        </span>
+      }
+      @else {
+        <span [title]="getWeeklyChatCount(true) + ' ' + (getWeeklyChatCount(true) > 1 ? 'chats' : 'chat') + ' this week. Last: ' + lastChatDateTitle">{{ getWeeklyChatCount(false) }}</span>
+      }
+      <span><strong>Total Chats: </strong> {{ getChatLinkCounter() }}</span>
     </div>
+  }
+  <div id="modalFooter" [class.single-group]="!hasLink() || isMobile()">
+    @if (!isMobile()) {
+      <div class="modalFooterGroup">
+        @if (hasActiveChatLink()) {
+          <button id="resetChatLink" (click)="resetChatLink()">Reset Chat Link 🔄️</button>
+        }
+        @if (hasArchivedLink()) {
+          <button id="restoreChatLink" (click)="restoreChatLink()">Restore Chat Link 🔄️</button>
+        }
+      </div>
+    }
     <div class="modalFooterGroup">
-      <span><a id="modalLink" *ngIf="hasLink()" [href]="chatLink" target="_blank">Chat 🗣️</a></span>
+      @if (hasLink()) {
+        <span><a id="modalLink" [href]="chatLink" target="_blank">Chat 🗣️</a></span>
+      }
       <span id="modalScreenshot" (click)="screenshot('characterModal')">Copy Card 📷</span>
-      <button id="updateChatLink" *ngIf="hasLink() && !isMobile()" (click)="updateChatLink()">Update Chat Link</button>
+      @if (hasLink() && !isMobile()) {
+        <button id="updateChatLink" (click)="updateChatLink()">Update Chat Link</button>
+      }
     </div>
   </div>
 </div>
