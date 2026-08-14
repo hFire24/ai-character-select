@@ -12,6 +12,7 @@ import { RosterFilter } from "../roster-filter/roster-filter";
 import { CharacterFilterPipe, CharacterFilters } from '../../pipes/character-filter.pipe';
 import { SortField, SortDirection } from '../../pipes/sort-characters.pipe';
 import { getEffectiveChatLink } from '../../utils/chat-link-storage';
+import { DeviceService } from '../../services/device.service';
 
 @Component({
   selector: 'app-roster',
@@ -40,7 +41,11 @@ export class Roster {
   sortBy: SortField = 'none';
   sortDirection: SortDirection = 'asc';
 
-  constructor(private characterService: CharacterService, private router: Router) {
+  constructor(
+    private characterService: CharacterService,
+    private router: Router,
+    private deviceService: DeviceService
+  ) {
       this.characterService.getCharacters().subscribe(data => {
         this.characters = data;
   
@@ -134,10 +139,12 @@ export class Roster {
       // Show the character modal
       this.selectedCharacter = selectedCharacter;
       
-      // Also open the chat link
-      const chatLink = this.getChatLink(selectedCharacter);
-      if (chatLink) {
-        window.open(chatLink, '_blank');
+      // Mobile users choose how to open the link from the modal's Chat button.
+      if (!this.deviceService.isMobile()) {
+        const chatLink = this.getChatLink(selectedCharacter);
+        if (chatLink) {
+          window.open(chatLink, '_blank');
+        }
       }
     }
   }

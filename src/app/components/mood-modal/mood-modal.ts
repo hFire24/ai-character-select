@@ -5,6 +5,7 @@ import { CharacterService, Character } from '../../services/character.service';
 import { RouterLink } from '@angular/router';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 import { getEffectiveChatLink, getStoredChatLink } from '../../utils/chat-link-storage';
+import { DeviceService } from '../../services/device.service';
 
 const FALLBACK_MOOD: Mood = {
   name: "",
@@ -27,7 +28,10 @@ export class MoodModal {
   @Output() close = new EventEmitter<void>();
   characters: Character[] = [];
 
-  constructor(private characterService: CharacterService) {
+  constructor(
+    private characterService: CharacterService,
+    private deviceService: DeviceService
+  ) {
     this.characterService.getCharacters().subscribe(data => {
       this.characters = data;
 
@@ -203,10 +207,12 @@ export class MoodModal {
       // Close the mood modal (consistent with clicking "Details" on a character)
       this.close.emit();
       
-      // Also open the chat link
-      const chatLink = this.getChatLink(selectedCharacter);
-      if (chatLink) {
-        window.open(chatLink, '_blank');
+      // Mobile users choose how to open the link from the character modal.
+      if (!this.deviceService.isMobile()) {
+        const chatLink = this.getChatLink(selectedCharacter);
+        if (chatLink) {
+          window.open(chatLink, '_blank');
+        }
       }
     }
   }
