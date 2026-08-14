@@ -120,9 +120,8 @@ export class CharacterModal {
   }
   
   isValidChatLink(newLink: string): boolean {
-    const chatGPTPattern = /^https:\/\/chatgpt\.com\/(g\/[a-zA-Z0-9\-]+\/)?c\/[a-f0-9\-]+$/;
-    const geminiPattern = /^https:\/\/gemini\.google\.com\//;
-    return chatGPTPattern.test(newLink.trim()) || geminiPattern.test(newLink.trim());
+    const chatGPTPattern = /^https:\/\/chatgpt\.com\/(g\/[a-zA-Z0-9\-]+\/)?c\/[a-f0-9\-]+(?:\?.*)?$/;
+    return chatGPTPattern.test(newLink.trim());
   }
 
   getChatLinkKey(): string {

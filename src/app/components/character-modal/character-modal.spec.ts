@@ -21,6 +21,18 @@ describe('CharacterModal', () => {
     expect(component).toBeTruthy();
   });
 
+  describe('isValidChatLink', () => {
+    it('accepts a ChatGPT chat link with a query string after the chat id', () => {
+      expect(
+        component.isValidChatLink('https://chatgpt.com/c/abcdef12-3456?model=gpt-5')
+      ).toBeTrue();
+    });
+
+    it('still accepts a ChatGPT chat link without a query string', () => {
+      expect(component.isValidChatLink('https://chatgpt.com/c/abcdef12-3456')).toBeTrue();
+    });
+  });
+
   describe('isLastChatWithinDays', () => {
     beforeEach(() => {
       jasmine.clock().install();

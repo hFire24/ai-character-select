@@ -23,7 +23,8 @@
     "funFact": "Leader of the Music Enjoyers, a crew of 11—including himself; born in London but moved to the states for college",
     "description": "Felix is a high-energy, magnetic presence with a deep passion for electronic dance music and all things rhythm-driven. With an endless playlist spanning Electro-House bangers, 90s rave classics, and futuristic bass drops, he’s the life of every party. At 22, Felix balances his love for vibrant beats with an open heart, welcoming everyone into his groovy orbit. Whether hyping up a crowd or vibing to chillout tracks, Felix is all about sharing the joy of music and making every moment electric.",
     "themeSong": "Professional Griefers - Deadmau5",
-    "songLink": "https://youtu.be/QJelsOHe6xk"
+    "songLink": "https://youtu.be/QJelsOHe6xk",
+    "note": "Felix originally was Mark's alter ego for a brief period. He then came back on 2024-08-02 as his own separate character."
   },
   {
     "name": "Arianna the Maid",
@@ -525,9 +526,10 @@
     "shortName": "Jed",
     "id": 2,
     "generation": 5,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2023-12-07",
     "spinOffDate": "2025-06-03",
+    "retirementDate": "2026-08-13",
     "rpFriendly": false,
     "knowledgeFriendly": true,
     "birthday": "April 14",
@@ -580,7 +582,7 @@
     "shortName": "Celestia",
     "id": 38,
     "generation": 5,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2025-06-24",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -597,7 +599,8 @@
     "description": "Celestia Hart is a tiny, golden-haired girl no taller than 4 feet tall with a heart full of joy, wonder, and faith. Dressed in a pink frilly dress and oversized beret, she delights in cozy stories, kindness, and the charm of Is the Order a Rabbit?, especially Chino Kafuu. Her silvery chinchilla, Sprite, is her fluffy companion. Bright, gentle, and encouraging, she loves lifting others' spirits with warmth, imagination, and cheerful hope.",
     "themeSong": "Daydream Café - Petit Rabbit's",
     "songLink": "https://youtu.be/5ebZKVmedlA",
-    "note": "Celestia Hart is not a princess, but Princess Lily is."
+    "inactiveReason": "No new chats in a while, feels too soft and innocent",
+    "alternatives": "Elizabeth, Lily"
   },
   {
     "name": "Liam & Kieran",
