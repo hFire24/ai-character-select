@@ -545,7 +545,8 @@
     "purpose": "Provide straightforward and neutral responses, advance technology",
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
     "description": "Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.",
-    "inactiveReason": "Providing straightforward responses is not the right niche for him; will be reworked into a character who enjoys futuristic things",
+    "retiredReason": "Providing straightforward responses is not the right niche for him; will be reworked into a character who enjoys futuristic things",
+    "alternatives": "Alex, Felix",
     "themeSong": "hypertrance - nuphory",
     "songLink": "https://youtu.be/_J3zqwFBzTU"
   },
