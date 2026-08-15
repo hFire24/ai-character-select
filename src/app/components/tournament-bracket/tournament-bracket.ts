@@ -112,7 +112,7 @@ export class TournamentBracket implements OnInit {
     const shadowSelfId = 50;
     const index = characters.findIndex(c => c.id === shadowSelfId);
     if (index !== -1) {
-      characters[index] = { ...characters[index], tier: 7 };
+      characters[index] = { ...characters[index], tier: 9 };
     }
     return characters;
   }

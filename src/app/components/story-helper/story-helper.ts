@@ -100,8 +100,8 @@ export class StoryHelper {
     const filteredCharacters = this.excludeRetired ? this.characters.filter(c => !c.status.includes('retired')) : this.characters;
     if (filteredCharacters.length === 0) return;
 
-    // Create weighted array: tier 8 characters get 0.5 weight, others get 1.0 weight
-    const weights = filteredCharacters.map(c => c.tier >= 8 ? 0.5 : 1.0);
+    // Create weighted array: tier 9 characters get 0.5 weight, others get 1.0 weight
+    const weights = filteredCharacters.map(c => c.tier >= 9 ? 0.5 : 1.0);
     const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
     
     // Generate random number and select character based on weight

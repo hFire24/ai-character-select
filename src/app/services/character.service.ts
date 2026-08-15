@@ -201,7 +201,7 @@ export class CharacterService {
       case 'retired side':
         return 8;
       default:
-        return 9;
+        return 10;
     }
   }
 
@@ -212,7 +212,7 @@ export class CharacterService {
       case 'inactive':
         return [5, 6];
       case 'retired':
-        return [7, 8, 9];
+        return [6, 7, 8, 9];
       case 'side':
         return [6, 7];
       case 'inactive side':
@@ -220,7 +220,7 @@ export class CharacterService {
       case 'retired side':
         return [8];
       default:
-        return [9];
+        return [10];
     }
   }
 

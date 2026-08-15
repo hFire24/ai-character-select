@@ -66,7 +66,7 @@ export class MoodModal {
   private getFilterOptions(): CharacterFilterOptions {
     const baseOptions: CharacterFilterOptions = {
       status: this.getStatusFilter(),
-      tier: { max: 7 } // tier < 8
+      tier: { max: 8 } // tier < 9
     };
 
     switch (this.mood.arg) {
