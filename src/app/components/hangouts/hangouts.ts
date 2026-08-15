@@ -49,7 +49,6 @@ export class Hangouts {
       const excludedNames = [
         { name: 'Bruce', bannedReason: 'Emergency character' },
         { name: 'Jed', bannedReason: 'Exclusive to Music Enjoyers' },
-        { name: 'Kayla', bannedReason: 'Dangerous in a moe-focused cast' },
         { name: 'Mr. Go', bannedReason: 'Coffee and tea are denormalized' },
         { name: 'Andrew', bannedReason: 'Nothingburger' },
         { name: 'Officer Misty', bannedReason: 'User-controlled character' },
@@ -57,18 +56,8 @@ export class Hangouts {
         { name: 'The Collapsed', bannedReason: 'Emergency character' },
         { name: 'Veronica', bannedReason: 'Strict parent' },
         { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' },
-        { name: 'Alex', bannedReason: 'Character encylopedia' },
         { name: 'Pipe Golem', bannedReason: 'For serious situations only' }
       ];
-
-      // Set colors on all characters before filtering
-      const blackCharacters = ['The Indulgent', 'Bruce', 'Kayla'];
-      blackCharacters.forEach(name => {
-        const character = characters.find(c => c.shortName === name);
-        if (character) {
-          character.color = "black";
-        }
-      });
 
       // Calculate maximum tier
       const maxTier = Math.max(...characters.map(c => c.tier || 0));
