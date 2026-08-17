@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { Character, CharacterService } from '../../services/character.service';
+import { CharacterModal } from '../character-modal/character-modal';
 
 interface HistoryPoint {
   date: Date;
@@ -28,7 +29,7 @@ type SortDirection = 'asc' | 'desc';
 
 @Component({
   selector: 'app-chat-history-chart',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, CharacterModal],
   templateUrl: './chat-history-chart.html',
   styleUrl: './chat-history-chart.scss'
 })
@@ -37,7 +38,7 @@ export class ChatHistoryChart {
   private readonly plotLeft = 200;
   private readonly plotRight = 1070;
   private readonly rowHeight = 60;
-  private readonly firstRowHeight = 72;
+  private readonly firstRowHeight = 70;
   private readonly topPadding = 52;
   private readonly bottomPadding = 24;
   private readonly droughtStart = new Date('2026-04-21T12:00:00');
@@ -52,6 +53,7 @@ export class ChatHistoryChart {
   private datasetDateExtent: [Date, Date] = [new Date(), new Date()];
 
   characters: Character[] = [];
+  selectedCharacter: Character | null = null;
   datasetStartDate = '';
   datasetEndDate = '';
   selectedStartDate = '';
@@ -79,7 +81,7 @@ export class ChatHistoryChart {
     if (!query) return [];
     const isIdQuery = /^\d+$/.test(query);
 
-    return this.availableCharacters
+    return this.characters
       .filter(
         character =>
           isIdQuery
@@ -99,6 +101,10 @@ export class ChatHistoryChart {
     return this.getHistoryPoints(characterId)
       .filter(point => this.isDateVisible(point.date))
       .reduce((total, point) => total + point.count, 0);
+  }
+
+  isCharacterSelected(characterId: number): boolean {
+    return this.series.some(item => item.character.id === characterId);
   }
 
   visibleHistoryCount(item: CharacterHistorySeries): number {
@@ -247,19 +253,21 @@ export class ChatHistoryChart {
   }
 
   eraStartX(era: HistoryEra): number {
-    return Math.max(this.plotLeft, this.dateX(era.start));
+    return Math.max(this.plotLeft, this.dayBoundaryX(era.start));
   }
 
   eraEndX(era: HistoryEra): number {
-    return Math.min(this.plotRight, this.dateX(era.end));
+    return era.end >= this.datasetDateExtent[1]
+      ? this.plotRight
+      : Math.min(this.plotRight, this.dayBoundaryX(era.end));
   }
 
   get droughtStartX(): number {
-    return Math.max(this.plotLeft, this.dateX(this.droughtStart));
+    return Math.max(this.plotLeft, this.dayBoundaryX(this.droughtStart));
   }
 
   get droughtEndX(): number {
-    return Math.min(this.plotRight, this.dateX(this.droughtEnd));
+    return Math.min(this.plotRight, this.dayBoundaryX(this.droughtEnd));
   }
 
   get droughtY(): number {
@@ -290,6 +298,12 @@ export class ChatHistoryChart {
   }
 
   addCharacter(character = this.searchResults[0]) {
+    if (character && this.isCharacterSelected(character.id)) {
+      this.removeCharacter(character.id);
+      this.searchTerm = '';
+      return;
+    }
+
     if (
       !character ||
       this.historyCount(character.id) === 0 ||
@@ -353,15 +367,48 @@ export class ChatHistoryChart {
     this.selectedEndDate = this.datasetEndDate;
   }
 
+  setRecentWeek() {
+    const end = this.dateFromKey(this.datasetEndDate);
+    const start = new Date(end);
+    start.setDate(start.getDate() - 6);
+
+    this.applyRecentDateRange(start);
+  }
+
+  setRecentMonths(months: number) {
+    const end = this.dateFromKey(this.datasetEndDate);
+    const start = new Date(end);
+    const targetDay = start.getDate();
+    start.setDate(1);
+    start.setMonth(start.getMonth() - months);
+    const lastDayOfTargetMonth = new Date(
+      start.getFullYear(),
+      start.getMonth() + 1,
+      0
+    ).getDate();
+    start.setDate(Math.min(targetDay, lastDayOfTargetMonth));
+
+    this.applyRecentDateRange(start);
+  }
+
+  private applyRecentDateRange(start: Date) {
+
+    this.selectedStartDate = this.clampDateKey(
+      this.toDateKey(start),
+      this.datasetStartDate,
+      this.datasetEndDate
+    );
+    this.selectedEndDate = this.datasetEndDate;
+    this.removeCharactersWithoutVisibleHistory();
+  }
+
   isDateVisible(date: Date): boolean {
     const [start, end] = this.dateExtent;
     return date >= start && date <= end;
   }
 
   rowY(index: number): number {
-    if (index === 0) return this.topPadding + this.firstRowHeight / 2;
-    return this.topPadding + this.firstRowHeight +
-      (index - 1) * this.rowHeight + this.rowHeight / 2;
+    return this.topPadding + this.firstRowHeight / 2 + index * this.rowHeight;
   }
 
   dateX(date: Date): number {
@@ -369,6 +416,13 @@ export class ChatHistoryChart {
     const span = end.getTime() - start.getTime();
     const ratio = span === 0 ? 0.5 : (date.getTime() - start.getTime()) / span;
     return this.plotLeft + ratio * (this.plotRight - this.plotLeft);
+  }
+
+  private dayBoundaryX(date: Date): number {
+    const [start, end] = this.dateExtent;
+    const totalDays = this.calendarDayNumber(end) - this.calendarDayNumber(start) + 1;
+    const dayOffset = this.calendarDayNumber(date) - this.calendarDayNumber(start);
+    return this.plotLeft + (dayOffset / totalDays) * (this.plotRight - this.plotLeft);
   }
 
   pointColor(index: number): string {

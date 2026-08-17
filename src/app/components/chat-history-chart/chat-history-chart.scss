@@ -38,7 +38,7 @@ header {
   gap: 16px;
   margin-bottom: 12px;
 
-  div {
+  .picker-copy {
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -55,7 +55,15 @@ header {
   }
 }
 
-.add-all-button {
+.picker-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-all-button,
+.picker-clear-button {
   flex: 0 0 auto;
   padding: 8px 12px;
   border: 1px solid #2563eb;
@@ -76,6 +84,16 @@ header {
     background: #e2e8f0;
     color: #94a3b8;
     cursor: default;
+  }
+}
+
+.picker-clear-button {
+  padding-inline: 9px;
+  border-color: #dc2626;
+  background: #dc2626;
+
+  &:hover:not(:disabled) {
+    background: #b91c1c;
   }
 }
 
@@ -142,6 +160,10 @@ header {
     outline: none;
   }
 
+  &.selected {
+    background: #eff6ff;
+  }
+
   img {
     width: 42px;
     height: 42px;
@@ -190,7 +212,8 @@ header {
 .date-range {
   display: flex;
   width: fit-content;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: stretch;
   gap: 12px;
   margin: 0 auto 24px;
   padding: 12px 16px;
@@ -201,6 +224,18 @@ header {
   strong {
     align-self: center;
     color: #0f172a;
+  }
+
+  .date-range-fields,
+  .date-range-presets {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .date-range-presets {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   label {
@@ -243,65 +278,6 @@ header {
       cursor: default;
     }
   }
-}
-
-.selected-toolbar {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.selected-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 8px 6px 10px;
-    border: 1px solid #cbd5e1;
-    border-radius: 999px;
-    background: white;
-    color: #334155;
-    cursor: pointer;
-  }
-
-  small {
-    color: #64748b;
-  }
-}
-
-.remove-icon {
-  color: #94a3b8;
-  font-size: 1.05rem;
-}
-
-.clear-button {
-  flex: 0 0 auto;
-  padding: 7px 9px;
-  border: 0;
-  background: transparent;
-  color: #64748b;
-  font: inherit;
-  font-size: 0.85rem;
-  cursor: pointer;
-
-  &:hover {
-    color: #dc2626;
-  }
-}
-
-.selected-avatar {
-  width: 25px;
-  height: 25px;
-  border: 2px solid;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 .chart-controls {
@@ -424,6 +400,14 @@ header {
   font-size: 14px;
   font-weight: 600;
   text-anchor: start;
+
+  &.inactive {
+    fill: #999;
+  }
+
+  &.retired {
+    fill: #ef4444;
+  }
 }
 
 .histogram-bar {
@@ -466,7 +450,7 @@ header {
   .date-range input,
   .date-range button,
   .search-results,
-  .selected-list button,
+  .picker-clear-button,
   .chart-controls,
   .chart-controls input,
   .chart-controls select,
@@ -516,6 +500,14 @@ header {
 
   .row-label {
     fill: #e2e8f0;
+
+    &.inactive {
+      fill: #888;
+    }
+
+    &.retired {
+      fill: #f87171;
+    }
   }
 
   .row-line,
