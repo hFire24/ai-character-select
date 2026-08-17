@@ -1,0 +1,1 @@
+function s(n){return`assets/Icons/${n}`}function i(n){return n?typeof window<"u"&&window.matchMedia("(max-width: 800px)").matches?s(n):o(n):"assets/Icons/tall/Unknown.png"}function o(n){if(!n)return"assets/Icons/tall/Unknown.png";let[,...e]=n.split("/"),t=e.join("/");return t?`assets/Icons/tall/${t}`:s(n)}export{s as a,i as b,o as c};
