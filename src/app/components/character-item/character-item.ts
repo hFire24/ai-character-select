@@ -32,7 +32,7 @@ export class CharacterItem {
   }
 
   openTierMenu(event: MouseEvent): void {
-    if (this.character.status !== 'active' || event.shiftKey) return;
+    if (this.character.status !== 'active' || this.character.id === 0 || event.shiftKey) return;
     event.preventDefault();
     event.stopPropagation();
     CharacterItem.openItem?.closeTierMenu();
