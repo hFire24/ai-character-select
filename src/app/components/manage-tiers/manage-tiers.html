@@ -124,12 +124,14 @@
             <img
               [src]="'assets/Icons/' + (character.img || 'extended/Unknown.png')"
               [alt]="character.shortName"
+              (click)="selectedCharacter = character"
             >
             <div>
               <h2 
                 [class.tier-1]="character.tier === 1"
                 [class.tier-2]="character.tier === 2"
-                [class.tier-3]="character.tier === 3">
+                [class.tier-3]="character.tier === 3"
+                (click)="selectedCharacter = character">
                 {{ character.shortName }}
               </h2>
               @if (['active', 'inactive', 'retired'].includes(character.status)) {
@@ -164,3 +166,5 @@
     </section>
   }
 </main>
+
+<app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>

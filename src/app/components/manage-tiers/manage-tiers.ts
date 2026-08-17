@@ -5,6 +5,7 @@ import { forkJoin } from 'rxjs';
 import { Character, CharacterService } from '../../services/character.service';
 import { RelativeDatePipe } from "../../pipes/relative-date.pipe";
 import { getStatusSortRank } from '../../utils/status-sort';
+import { CharacterModal } from '../character-modal/character-modal';
 
 type ManagedCharacter = Character & {
   defaultTier: number;
@@ -28,12 +29,13 @@ type SortLevel = {
 
 @Component({
   selector: 'app-manage-tiers',
-  imports: [CommonModule, FormsModule, RelativeDatePipe],
+  imports: [CommonModule, FormsModule, RelativeDatePipe, CharacterModal],
   templateUrl: './manage-tiers.html',
   styleUrl: './manage-tiers.scss'
 })
 export class ManageTiers {
   characters: ManagedCharacter[] = [];
+  selectedCharacter: Character | null = null;
   searchTerm = '';
   statusFilter = 'all';
   tierFilter = 'all';

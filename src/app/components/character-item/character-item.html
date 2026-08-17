@@ -1,4 +1,4 @@
-<div class="character-item" (click)="onClick()">
+<div class="character-item" (click)="onClick()" (contextmenu)="openTierMenu($event)">
   <img 
     [src]="'assets/Icons/' + (character.img || 'extended/Unknown.png')" 
     [alt]="character.shortName" 
@@ -25,4 +25,14 @@
       </span>
     }
   </div>
+  @if (tierMenuOpen) {
+    <div class="tier-context-menu" [style.left.px]="tierMenuX" [style.top.px]="tierMenuY" (click)="$event.stopPropagation()">
+      @for (tier of allowedTiers; track tier) {
+        <button type="button" [class]="'tier-option tier-' + tier" [class.selected]="character.tier === tier"
+          [attr.aria-label]="'Tier ' + tier" (click)="updateTier(tier, $event)">
+          {{ tier < 4 ? '★' : '☆' }}
+        </button>
+      }
+    </div>
+  }
 </div>
