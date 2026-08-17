@@ -1,46 +1,26 @@
 import { Routes } from '@angular/router';
-import { TierList } from './components/tier-list/tier-list';
 import { Roster } from './components/roster/roster';
-import { SpinTheWheel } from './components/spin-the-wheel/spin-the-wheel';
-import { Duos } from './components/duos/duos';
-import { Duos2 } from './components/duos-2/duos-2';
-import { Trios } from './components/trios/trios';
-import { BirthdayCalendar } from './components/birthday-calendar/birthday-calendar';
-import { Tournament } from './components/tournament/tournament';
-import { BlindRanking } from './components/blind-ranking/blind-ranking';
-import { StoryHelper } from './components/story-helper/story-helper';
-import { Sorter } from './components/sorter/sorter';
-import { Stats } from './components/stats/stats';
-import { Hangouts } from './components/hangouts/hangouts';
-import { Groups } from './components/groups/groups';
-import { ChatManager } from './components/chat-manager/chat-manager';
-import { Lineage } from './components/lineage/lineage';
-import { IdChecker } from './components/id-checker/id-checker';
-import { Announcement } from './components/announcement/announcement';
-import { ManageTiers } from './components/manage-tiers/manage-tiers';
-import { Timeline } from './components/timeline/timeline';
-import { ChatHistoryChart } from './components/chat-history-chart/chat-history-chart';
 
 export const routes: Routes = [
   { path: '', component: Roster, title: 'Choose Your Character!' },
-  { path: 'blind-ranking', component: BlindRanking, title: 'Blind Ranking' },
-  { path: 'tier-list', component: TierList, title: 'Create a Tier List' },
-  { path: 'spin-the-wheel', component: SpinTheWheel, title: 'Spin the Wheel' },
-  { path: 'duos', component: Duos, title: 'Duo Name Generator' },
-  { path: 'duos-2', component: Duos2, title: 'View Duos' },
-  { path: 'trios', component: Trios, title: 'Hall of Trios' },
-  { path: 'birthday-calendar', component: BirthdayCalendar, title: 'Birthday Calendar' },
-  { path: 'timeline', component: Timeline, title: 'Character Timeline' },
-  { path: 'tournament', component: Tournament, title: 'Tournament Bracket' },
-  { path: 'story-helper', component: StoryHelper, title: 'Story Helper' },
-  { path: 'sorter', component: Sorter, title: 'Character Sorter' },
-  { path: 'stats', component: Stats, title: 'Character Statistics' },
-  { path: 'hangouts', component: Hangouts, title: 'Random Hangouts' },
-  { path: 'groups', component: Groups, title: 'Hall of Groups'},
-  { path: 'chat-manager', component: ChatManager, title: 'Manage Active Chats' },
-  { path: 'lineage', component: Lineage, title: 'Lineage' },
-  { path: 'id-checker', component: IdChecker, title: 'ID Checker' },
-  { path: 'announcement', component: Announcement, title: 'Announcement' },
-  { path: 'manage-tiers', component: ManageTiers, title: 'Manage Tiers' },
-  { path: 'chat-history-chart', component: ChatHistoryChart, title: 'Chat History Spread' }
+  { path: 'blind-ranking', loadComponent: () => import('./components/blind-ranking/blind-ranking').then(m => m.BlindRanking), title: 'Blind Ranking' },
+  { path: 'tier-list', loadComponent: () => import('./components/tier-list/tier-list').then(m => m.TierList), title: 'Create a Tier List' },
+  { path: 'spin-the-wheel', loadComponent: () => import('./components/spin-the-wheel/spin-the-wheel').then(m => m.SpinTheWheel), title: 'Spin the Wheel' },
+  { path: 'duos', loadComponent: () => import('./components/duos/duos').then(m => m.Duos), title: 'Duo Name Generator' },
+  { path: 'duos-2', loadComponent: () => import('./components/duos-2/duos-2').then(m => m.Duos2), title: 'View Duos' },
+  { path: 'trios', loadComponent: () => import('./components/trios/trios').then(m => m.Trios), title: 'Hall of Trios' },
+  { path: 'birthday-calendar', loadComponent: () => import('./components/birthday-calendar/birthday-calendar').then(m => m.BirthdayCalendar), title: 'Birthday Calendar' },
+  { path: 'timeline', loadComponent: () => import('./components/timeline/timeline').then(m => m.Timeline), title: 'Character Timeline' },
+  { path: 'tournament', loadComponent: () => import('./components/tournament/tournament').then(m => m.Tournament), title: 'Tournament Bracket' },
+  { path: 'story-helper', loadComponent: () => import('./components/story-helper/story-helper').then(m => m.StoryHelper), title: 'Story Helper' },
+  { path: 'sorter', loadComponent: () => import('./components/sorter/sorter').then(m => m.Sorter), title: 'Character Sorter' },
+  { path: 'stats', loadComponent: () => import('./components/stats/stats').then(m => m.Stats), title: 'Character Statistics' },
+  { path: 'hangouts', loadComponent: () => import('./components/hangouts/hangouts').then(m => m.Hangouts), title: 'Random Hangouts' },
+  { path: 'groups', loadComponent: () => import('./components/groups/groups').then(m => m.Groups), title: 'Hall of Groups' },
+  { path: 'chat-manager', loadComponent: () => import('./components/chat-manager/chat-manager').then(m => m.ChatManager), title: 'Manage Active Chats' },
+  { path: 'lineage', loadComponent: () => import('./components/lineage/lineage').then(m => m.Lineage), title: 'Lineage' },
+  { path: 'id-checker', loadComponent: () => import('./components/id-checker/id-checker').then(m => m.IdChecker), title: 'ID Checker' },
+  { path: 'announcement', loadComponent: () => import('./components/announcement/announcement').then(m => m.Announcement), title: 'Announcement' },
+  { path: 'manage-tiers', loadComponent: () => import('./components/manage-tiers/manage-tiers').then(m => m.ManageTiers), title: 'Manage Tiers' },
+  { path: 'chat-history-chart', loadComponent: () => import('./components/chat-history-chart/chat-history-chart').then(m => m.ChatHistoryChart), title: 'Chat History Spread' }
 ];
