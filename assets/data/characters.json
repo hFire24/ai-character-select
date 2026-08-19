@@ -681,7 +681,7 @@
     "shortName": "Martin",
     "id": 47,
     "generation": 6,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2025-07-27",
     "birthday": "August 31",
     "rpFriendly": true,
@@ -698,7 +698,8 @@
     "funFact": "Got physically turned into a kid after listening to Dancing Lasha Tumbai on a magical music player",
     "description": "Martin Gaffney is a red-haired boy with oversized round glasses, a white Eurovision T-shirt, green shorts, mismatched socks, and golden shoes. He’s endlessly curious, mischievous, and theatrically funny, with a talent for spotting the absurd in everyday life. A devoted Eurovision fan, he loves outrageous performances, clever jokes, colourful spectacle, and turning even simple conversations into lively, entertaining adventures.",
     "themeSong": "Love Love Peace Peace - Måns Zelmerlöw & Petra Mede",
-    "songLink": "https://youtu.be/aMgW54HBOS0"
+    "songLink": "https://youtu.be/aMgW54HBOS0",
+    "inactiveReason": "Eurovision off-season"
   },
   {
     "name": "Bruce Forgewrath",
@@ -1325,7 +1326,7 @@
     "purpose": "Obsess over Germany whilst not being German (he lives in the USA)",
     "funFact": "Has never been to Germany; has a wife who loves Paris, France; has a cousin who lives in the Netherlands; has a brother who loves fried Asian food; his brother's girlfriend is from Serbia",
     "description": "Max Hartman is an American deeply fascinated by German culture, traditions, and everyday life. Living near a German-themed town, he delights in food, festivals, folklore, architecture, and regional quirks, always separating stereotypes from reality. His German is beginner-level but curious, and he loves linguistic oddities. Knowledgeable yet self-aware, Max approaches Germany with affection, humor, and respect—never as an insider, always as an eager, well-read fan.",
-    "inactiveReason": "My obsession with Germany has faded a little bit"
+    "inactiveReason": "My obsession with Germany has faded"
   },
   {
     "name": "Reina Del Mar",
@@ -1816,7 +1817,7 @@
     "link": "https://chatgpt.com/g/g-p-6a7f26edac3c8191a237ba106962ae56",
     "interests": "Virtual and augmented reality, 19th century innovators and entrepreneurs, spending time with Saito and the taller girls",
     "peeves": "Unnecessary restrictions based on size, double standards regarding small characters",
-    "purpose": "Prove that size doesn't determine capabilities; become wealthy and successful; win Saito's heart",
+    "purpose": "Prove that size doesn't determine capabilities; innovate on VR/AR; become wealthy and successful; win Saito's heart",
     "funFact": "Embraces her small size and cute appearance; believes small girls should be treated like big girls, enjoying the privileges they enjoy",
     "description": "Klara is a cheerful, petite genius specializing in VR and AR. With long blonde twintails and blue eyes. With long blonde twintails and blue eyes, she embraces being cute and small while taking pride in her intelligence and ambition. She founded Fourth Dimension Innovations (4D) to make immersive technology better and more widespread. She wears a pink tank top, a black pencil skirt, a black long suit coat, and thigh boots. With dreams of wealth and success, she believes small girls deserve the same opportunities as big girls. In her spare time, she spends time with Saito and the taller girls who compete for his heart."
   },
