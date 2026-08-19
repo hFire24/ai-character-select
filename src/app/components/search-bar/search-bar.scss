@@ -53,3 +53,9 @@
   font-style: italic;
   opacity: 0.8;
 }
+
+@media (prefers-color-scheme: dark) {
+  .search-info {
+    color: #c4c4c4;
+  }
+}

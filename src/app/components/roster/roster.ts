@@ -11,7 +11,7 @@ import { BirthdayBanner } from "../birthday-banner/birthday-banner";
 import { RosterFilter } from "../roster-filter/roster-filter";
 import { CharacterFilterPipe, CharacterFilters } from '../../pipes/character-filter.pipe';
 import { SortField, SortDirection } from '../../pipes/sort-characters.pipe';
-import { getEffectiveChatLink } from '../../utils/chat-link-storage';
+import { getEffectiveChatLink, archiveAllChatLinks } from '../../utils/chat-link-storage';
 import { DeviceService } from '../../services/device.service';
 
 @Component({
@@ -80,6 +80,11 @@ export class Roster {
     return !!(this.filters.activeChats || this.filters.activeNoChats || this.filters.active || this.filters.inactive || this.filters.retired);
   }
 
+  get visibleCharacterCount(): number {
+    const pipe = new CharacterFilterPipe();
+    return pipe.transform(this.characters, this.filters, this.searchTerm).length;
+  }
+
   displayCharacter() {
     this.selectedCharacter = this.selectedCharacter; // Trigger modal display
   }
@@ -146,10 +151,28 @@ export class Roster {
           window.open(chatLink, '_blank');
         }
       }
+    } else {
+      alert('Random Character Button: No characters to select from.');
     }
   }
 
   getChatLink(character: Character): string {
     return getEffectiveChatLink(character);
+  }
+
+  resetAllChatLinks(): void {
+    const confirmed = confirm('Are you sure you want to reset all chat links to their defaults?');
+    if (confirmed) {
+      archiveAllChatLinks();
+      alert('All chat links have been reset to their defaults.');
+      this.filters = {
+        activeChats: false,
+        activeNoChats: false,
+        active: true,
+        inactive: false,
+        retired: false,
+        side: false
+      };
+    }
   }
 }

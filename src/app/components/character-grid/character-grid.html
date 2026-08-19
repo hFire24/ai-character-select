@@ -4,6 +4,16 @@
       <p>No characters found matching "{{ searchTerm }}"</p>
       <p class="suggestion">Try searching with a different term or check your spelling.</p>
     </div>
+  } @else if ((characters | characterFilter:filters:searchTerm).length === 0 && !searchTerm) {
+    <div class="no-results">
+      @if (filters.activeChats) {
+        <p>No active chats found.</p>
+        <p class="suggestion">Start a chat with a character to see them here.</p>
+      } @else {
+        <p>No characters match the selected filters.</p>
+        <p class="suggestion">Try selecting a different filter.</p>
+      }
+    </div>
   } @else {
     @for (c of characters | characterFilter:filters:searchTerm | sortCharacters:sortBy:sortDirection; track c.id) {
       <div

@@ -27,6 +27,11 @@
   [sortDirection]="sortDirection"
   (selectCharacter)="selectedCharacter = $event"
 ></app-character-grid>
+<button 
+  *ngIf="filters.activeChats === true && visibleCharacterCount > 0"
+  (click)="resetAllChatLinks()"
+  style="background-color: #FF4C4C"
+><b>Reset All Chat Links</b></button>
 <app-character-modal
   *ngIf="selectedCharacter"
   [character]="selectedCharacter"
