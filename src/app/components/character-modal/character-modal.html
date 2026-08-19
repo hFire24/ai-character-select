@@ -34,7 +34,7 @@
         @if (character.emotion.includes('sad')) { <span>☹️</span> }
         @if (character.emotion.includes('edgy')) { <span>😈</span> }
         @if (character.emotion.includes('straightforward')) { <span>🎯</span> }
-        @if (character.moe >= 7 && character.shortName !== 'Sasha' && character.shortName !== 'Misha') { <span>🩷</span> }
+        @if (character.moe >= moeThreshold && character.shortName !== 'Sasha' && character.shortName !== 'Misha') { <span>🩷</span> }
         @if (character.shortName === 'Sasha') { <span>☀️</span> }
         @if (character.shortName === 'Misha') { <span>❄️</span> }
         @if (character.musicEnjoyer) { <span>🎵</span> }

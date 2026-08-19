@@ -10,6 +10,7 @@ import {
   restoreChatLink as restoreStoredChatLink,
   saveChatLink
 } from '../../utils/chat-link-storage';
+import { MOE_THRESHOLD } from '../../config/character-thresholds';
 
 const FALLBACK_CHARACTER: Character = {
   name: "",
@@ -46,6 +47,7 @@ const FALLBACK_CHARACTER: Character = {
   styleUrl: './character-modal.scss'
 })
 export class CharacterModal {
+  readonly moeThreshold = MOE_THRESHOLD;
   @Input() character: Character = FALLBACK_CHARACTER;
   @Output() close = new EventEmitter<void>();
 

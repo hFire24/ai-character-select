@@ -6,6 +6,7 @@ import { RouterLink } from '@angular/router';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 import { getEffectiveChatLink, getStoredChatLink } from '../../utils/chat-link-storage';
 import { DeviceService } from '../../services/device.service';
+import { MOE_THRESHOLD, NON_MOE_THRESHOLD } from '../../config/character-thresholds';
 
 const FALLBACK_MOOD: Mood = {
   name: "",
@@ -73,7 +74,7 @@ export class MoodModal {
       case 'moe':
         return {
           ...baseOptions,
-          customFilter: (c: Character) => c.moe >= 7 || c.color === 'pink'
+          customFilter: (c: Character) => c.moe >= MOE_THRESHOLD || c.color === 'pink'
         };
       case 'knowledge':
         return {
@@ -108,7 +109,7 @@ export class MoodModal {
       case 'moe0':
         return {
           ...baseOptions,
-          attributes: { moe: { max: 5 } }
+          attributes: { moe: { max: NON_MOE_THRESHOLD } }
         };
       case 'chatted':
         return {

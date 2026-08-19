@@ -6,6 +6,7 @@ import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 import { TextViewer } from '../text-viewer/text-viewer';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 import { SortCharactersPipe, SortField } from '../../pipes/sort-characters.pipe';
+import { MOE_THRESHOLD, NON_MOE_THRESHOLD } from '../../config/character-thresholds';
 
 @Component({
   selector: 'app-tier-list',
@@ -121,11 +122,11 @@ export class TierList {
     }
 
     if (this.characterFilter === 'moe') {
-      return { attributes: { moe: { min: 7, max: 10 } } };
+      return { attributes: { moe: { min: MOE_THRESHOLD, max: 10 } } };
     }
 
     if (this.characterFilter === 'non-moe') {
-      return { attributes: { moe: { min: 1, max: 6 } } };
+      return { attributes: { moe: { min: 1, max: NON_MOE_THRESHOLD } } };
     }
     
     return {}; // Default: no filters
