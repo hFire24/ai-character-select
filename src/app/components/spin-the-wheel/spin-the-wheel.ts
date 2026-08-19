@@ -42,9 +42,9 @@ export class SpinTheWheel {
   
   // Tier filters (dual slider)
   tierThumbA: number = 1;
-  tierThumbB: number = 9;
+  tierThumbB: number = 10;
   tierMin: number = 1;
-  tierMax: number = 9;
+  tierMax: number = 10;
   moeThumbA: number = 1;
   moeThumbB: number = 10;
 

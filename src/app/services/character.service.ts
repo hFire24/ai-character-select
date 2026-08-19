@@ -477,6 +477,42 @@ export class CharacterService {
             }
           );
         }
+
+         // Find and split Nuit and Nacht
+        const nuitNachtIndex = splitCharacters.findIndex(char => 
+          char.shortName === 'Nuit & Nacht' || char.name === 'Nuit & Nacht'
+        );
+        if (nuitNachtIndex !== -1) {
+          const original = splitCharacters[nuitNachtIndex];
+          splitCharacters.splice(nuitNachtIndex, 1,
+            {
+              ...original,
+              shortName: 'Nuit',
+              name: 'Nuit',
+              img: "extended/Nuit.png",
+              id: 145,
+              interests: "Romanticism, baking sweets, dolls",
+              peeves: "Being mistaken for goths, evil, macabre things",
+              purpose: "Dress in gothic lolita fashion; bake sweets",
+              funFact: "Lives in a house-sized Gothic Revival castle with her twin sister Nacht",
+              description: "Nuit is a small girl with long, flowing pink hair and large, luminous pink eyes. She wears burgundy with pink ruffles, roses, and bows. Her elaborate dress, rose-adorned hat, lace, and bodice lacing evokes Gothic Lolita fashion. Nuit is playfully reserved and adores baking sweets and collecting antique European-style dolls. She speaks elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding or macabre."
+            },
+            { 
+              ...original,
+              shortName: 'Nacht',
+              name: 'Nacht',
+              img: "extended/Nacht.png",
+              id: 146,
+              color: "blue",
+              emotion: "serious calm",
+              interests: "Grimms' Fairy Tales, Baroque music, German language",
+              peeves: "Being mistaken for goths, evil, brooding",
+              purpose: "Dress in gothic lolita fashion; read and write stories and poetry",
+              funFact: "Helps her twin sister Nuit bake sweets; macabre things do not disturb her",
+              description: "Nacht is a small girl with long, flowing light-blue hair and large, luminous blue eyes. She wears brown with blue accents. Her elaborate dresses, rose-adorned hats, lace, and bodice lacing evokes Gothic Lolita fashion. Nacht is quieter and more reserved, fascinated by Grimms’ fairy tales, poetry, Baroque music, the violin, and harpsichord. She speaks elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding."
+            }
+          );
+        }
         
         return [splitCharacters];
       })

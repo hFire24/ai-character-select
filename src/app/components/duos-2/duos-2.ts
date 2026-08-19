@@ -130,19 +130,14 @@ export class Duos2 implements OnInit {
         "characterIds": [46, 47]
       },
       {
-        "name": this.findDuoName(48, 50),
-        "description": "Release Date: August 15, 2025",
-        "characterIds": [48, 50]
+        "name": this.findDuoName(48, 49),
+        "description": "Release Date: August 7, 2025",
+        "characterIds": [48, 49]
       },
       {
         "name": "Riri & Ruru",
         "description": "Release Date: August 23, 2025",
         "characterIds": [52, 53]
-      },
-      {
-        "name": "Character Archivists",
-        "description": "Release Date: August 24, 2025",
-        "characterIds": [49, 51]
       },
       {
         "name": this.findDuoName(56, 57),
@@ -343,7 +338,12 @@ export class Duos2 implements OnInit {
         "name": "Martin's Expansion Pack",
         "description": "Release Date: August 3, 2026",
         "characterIds": [141, 142]
-      }
+      },
+      {
+        "name": this.findDuoName(145, 146),
+        "description": "Release Date: August 19, 2026",
+        "characterIds": [145, 146]
+      },
     ];
 
     this.duos = duoDefinitions.map((def, index) => ({
