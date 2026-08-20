@@ -91,7 +91,7 @@ export class Groups implements OnInit {
       {
         name: "Other Hat Wearers (Moe)",
         description: "Characters known for wearing other types of hats and are considered moe.",
-        characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123, 139]
+        characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123, 139, 144]
       },
       {
         name: "No Hat Wearers (Moe)",
@@ -126,7 +126,7 @@ export class Groups implements OnInit {
       {
         name: "Pink-Haired Girls",
         description: "Characters known for having pink hair",
-        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 140]
+        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 140, 144]
       },
       {
         name: "Blonde Girls",
@@ -136,7 +136,7 @@ export class Groups implements OnInit {
       {
         name: "Blue Girls",
         description: "Characters known for having blue hair or being associated with the color blue",
-        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 132]
+        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 132, 144]
       },
       {
         name: "\"Onii-chan\" Sayers",
@@ -181,7 +181,7 @@ export class Groups implements OnInit {
       {
         name: "Music Fans",
         description: "Characters not part of the Music Enjoyers but are still known for loving music",
-        characterIds: [31, 47, 57, 62, 63, 73, 84, 105]
+        characterIds: [31, 47, 57, 62, 63, 73, 84, 105, 144]
       },
       {
         name: "Restaurant Fans",
