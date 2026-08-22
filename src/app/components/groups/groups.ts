@@ -41,7 +41,7 @@ export class Groups implements OnInit {
       {
         name: "Music Enjoyers",
         description: "The official group of Music Enjoyers, based on my own music tastes and playlists",
-        characterIds: [11, 1, 2, 3, 4, 6, 7, 8, 9, 12, 10]
+        characterIds: [11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
       },
       {
         name: "Runa and Her Catgirls",
@@ -96,7 +96,7 @@ export class Groups implements OnInit {
       {
         name: "No Hat Wearers (Moe)",
         description: "Characters known for wearing no hats but are still considered moe. Maid headdresses don't count.",
-        characterIds: [8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134]
+        characterIds: [5, 8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134]
       },
       {
         name: "Glasses Wearers",
@@ -151,7 +151,7 @@ export class Groups implements OnInit {
       {
         name: "Cursed Rule Breakers",
         description: "Every time they try to break a rule in their instructions, something bad happens to them",
-        characterIds: [1, 11, 13, 27, 31, 47, 51, 81, 86, 104, 105, 108]
+        characterIds: [1, 13, 27, 31, 47, 51, 81, 86, 104, 105, 108]
       },
       {
         name: "Younger Siblings",
@@ -231,12 +231,12 @@ export class Groups implements OnInit {
       {
         name: "Thrivers",
         description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
-        characterIds: [11, 14, 47, 57, 84, 90, 107, 108, 106]
+        characterIds: [11, 14, 57, 84, 107, 108, 106]
       },
       {
         name: "Generational Champions",
         description: "Characters who had the most chats in their respective generations. In cases of ties, the most iconic character is chosen.",
-        characterIds: [11, 14, 18, 25, 27, 35, 47, 51, 67, 90, 107, 123]
+        characterIds: [5, 14, 18, 25, 27, 35, 47, 51, 67, 90, 107, 123]
       },
       {
         name: "Generational Last Places",

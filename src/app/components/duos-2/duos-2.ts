@@ -47,7 +47,7 @@ export class Duos2 implements OnInit {
       {
         name: "Music Enjoyers",
         description: "My first set of characters, all inspired by the type of music I listen to.",
-        characterIds: [11, 1, 2, 3, 4, 6, 7, 8, 9, 12, 10]
+        characterIds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
       },
       {
         name: this.findDuoName(13, 14),

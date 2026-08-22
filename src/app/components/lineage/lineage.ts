@@ -31,7 +31,7 @@ export class Lineage {
     this.isMobile = window.innerWidth <= 768;
     this.characterService.getCharacters().subscribe(data => {
       // Filter out Future Sapphire (42) and Me (999)
-      this.characters = data.filter(c => c.id !== 42 && c.id !== 999);
+      this.characters = data.filter(c => c.id !== 42 && c.id !== 143 && c.id !== 999);
 
       const hanako: Character = {
         id: 5,
@@ -52,9 +52,9 @@ export class Lineage {
         interests: 'Anime music, denpa music, Nanahira, otaku culture, cosplay',
         purpose: 'Weeb out, get into the anime industry',
         funFact: 'Was the leader of the Music Enjoyers before Felix became the new leader; disappeared due to Akane fulfilling her purpose better than she could',
-        creationDate: '2023-12-06'
+        creationDate: '2023-12-07'
       };
-      this.characters.push(hanako);
+      //this.characters.push(hanako);
       
       // Set inspiration relationships (component-only data)
       // Format: parent ID -> array of child IDs (children are inspired by parent)
@@ -162,7 +162,7 @@ export class Lineage {
       !char.inspiredBy || !this.getCharacterById(char.inspiredBy)
     );
 
-    // Sort roots: non-side characters first (by ID), then side characters (by ID)
+    // Sort roots by ID
     roots.sort((a, b) => this.sortCharacters(a, b));
 
     // Build tree for each root
@@ -170,14 +170,6 @@ export class Lineage {
   }
 
   sortCharacters(a: Character, b: Character): number {
-    const aIsSide = a.status?.toLowerCase().includes('side') || false;
-    const bIsSide = b.status?.toLowerCase().includes('side') || false;
-
-    // If one is side and the other isn't, non-side comes first
-    if (aIsSide && !bIsSide) return 1;
-    if (!aIsSide && bIsSide) return -1;
-
-    // Otherwise, sort by ID
     return a.id - b.id;
   }
 
@@ -189,7 +181,7 @@ export class Lineage {
 
     visited.add(character.id);
 
-    // Find all children (characters inspired by this one) and sort by ID (side characters last)
+    // Find all children (characters inspired by this one) and sort by ID
     const children = this.characters
       .filter(char => char.inspiredBy === character.id)
       .sort((a, b) => this.sortCharacters(a, b))
