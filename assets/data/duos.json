@@ -18,6 +18,11 @@
     },
     {
       "id1": 1,
+      "id2": 5,
+      "name": "Hardcore Music Enjoyers"
+    },
+    {
+      "id1": 1,
       "id2": 6,
       "name": "Wild Music Enjoyers"
     },
@@ -130,6 +135,11 @@
       "id1": 2,
       "id2": 3,
       "name": "Reserved Music Enjoyers"
+    },
+    {
+      "id1": 2,
+      "id2": 5,
+      "name": "J-Trance Enjoyers"
     },
     {
       "id1": 2,
@@ -258,6 +268,11 @@
     },
     {
       "id1": 4,
+      "id2": 5,
+      "name": "Eurobeat Enjoyers"
+    },
+    {
+      "id1": 4,
       "id2": 6,
       "name": "Party Gamers"
     },
@@ -325,6 +340,26 @@
       "id1": 4,
       "id2": 86,
       "name": "Touhou Gamers"
+    },
+    {
+      "id1": 5,
+      "id2": 6,
+      "name": "Fashionable Music Enjoyers"
+    },
+    {
+      "id1": 5,
+      "id2": 8,
+      "name": "Cute Music Enjoyers"
+    },
+    {
+      "id1": 5,
+      "id2": 13,
+      "name": "Music Enjoyer Fusuion Characters"
+    },
+    {
+      "id1": 5,
+      "id2": 118,
+      "name": "Identity Crisis Girls"
     },
     {
       "id1": 6,
@@ -616,6 +651,11 @@
       "id1": 13,
       "id2": 88,
       "name": "Lazy Light-blue Haired Girls"
+    },
+    {
+      "id1": 13,
+      "id2": 118,
+      "name": "Hedonistic Tech Girls"
     },
     {
       "id1": 13,
