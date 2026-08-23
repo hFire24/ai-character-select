@@ -66,9 +66,17 @@
   @if (!isMobile() && !character.status.includes('side') && character.link) {
     <div class="modalStats">
       @if (!isLastChatWithinDays(7)) {
-        <span class="last-chat-date">
-          <strong>Last Chat:</strong> {{ lastChatDateTitle || "N/A" }}
+        <span class="last-chat-date" [title]="lastChatDateTitle">
+          <strong>Last Chat:</strong> {{ lastChatDate || "N/A" }}
         </span>
+        @if (chatFlavor) {
+          <span
+            class="chat-flavor"
+            [ngClass]="'chat-flavor--' + chatFlavor.className"
+            [title]="chatFlavor.rank + ' of ' + chatFlavor.total + ' characters not chatted with in the last 7 days'">
+            <strong>{{ chatFlavor.label }}</strong> ({{ chatFlavor.rank }}/{{ chatFlavor.total }})
+          </span>
+        }
       }
       @else {
         <span [title]="getWeeklyChatCount(true) + ' ' + (getWeeklyChatCount(true) > 1 ? 'chats' : 'chat') + ' this week. Last: ' + lastChatDateTitle">{{ getWeeklyChatCount(false) }}</span>

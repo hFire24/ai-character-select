@@ -11,6 +11,14 @@ import {
   saveChatLink
 } from '../../utils/chat-link-storage';
 import { MOE_THRESHOLD } from '../../config/character-thresholds';
+import { forkJoin } from 'rxjs';
+
+type ChatFlavor = {
+  label: 'Very Sweet' | 'Sweet' | 'Semi-Sweet' | 'Plain' | 'Semi-Bitter' | 'Bitter' | 'Very Bitter';
+  className: string;
+  rank: number;
+  total: number;
+};
 
 const FALLBACK_CHARACTER: Character = {
   name: "",
@@ -54,6 +62,7 @@ export class CharacterModal {
   chatLink: string = '';
   lastChatDate = 'N/A';
   lastChatDateTitle = 'N/A';
+  chatFlavor: ChatFlavor | null = null;
 
   constructor(private deviceService: DeviceService, private characterService: CharacterService) {}
 
@@ -177,6 +186,72 @@ export class CharacterModal {
       : 'N/A';
   }
 
+  loadChatFlavor(): void {
+    forkJoin({
+      characters: this.characterService.getCharacters(),
+      chatGPT: this.characterService.getChatGPT()
+    }).subscribe(({ characters, chatGPT }) => {
+      const staleCharacters = [...characters, ...chatGPT]
+        .filter(character => character.status === 'active')
+        .map(character => ({
+          character,
+          timestamp: this.getStoredTimestamp(character)
+        }))
+        .filter(item => !item.timestamp || !this.isTimestampWithinDays(item.timestamp, 7))
+        .sort((a, b) => {
+          if (!a.timestamp && !b.timestamp) return a.character.id - b.character.id;
+          if (!a.timestamp) return 1;
+          if (!b.timestamp) return -1;
+          return b.timestamp.getTime() - a.timestamp.getTime();
+        });
+
+      const index = staleCharacters.findIndex(item => item.character.id === this.character.id);
+      this.chatFlavor = index === -1
+        ? null
+        : this.createChatFlavor(index + 1, staleCharacters.length);
+    });
+  }
+
+  private getStoredTimestamp(character: Character): Date | null {
+    const value = localStorage.getItem('chatLinkTimestamp_' + (character.id ?? 'unknown'));
+    if (!value) return null;
+
+    const timestamp = new Date(value);
+    return Number.isNaN(timestamp.getTime()) ? null : timestamp;
+  }
+
+  private isTimestampWithinDays(timestamp: Date, days: number): boolean {
+    const now = new Date();
+    const cutoff = new Date(now);
+    cutoff.setDate(cutoff.getDate() - days);
+    return timestamp >= cutoff && timestamp <= now;
+  }
+
+  private createChatFlavor(rank: number, total: number): ChatFlavor {
+    let label: ChatFlavor['label'];
+
+    if (total === 1) label = 'Plain';
+    else if (rank === 1) label = 'Very Sweet';
+    else if (rank === total) label = 'Very Bitter';
+    else {
+      const sweetBoundary = Math.ceil(total / 3);
+      const bitterBoundary = Math.ceil(total * 2 / 3);
+
+      if (rank < sweetBoundary) label = 'Sweet';
+      else if (rank === sweetBoundary) label = 'Semi-Sweet';
+      else if (rank < bitterBoundary) label = 'Plain';
+      else if (rank === bitterBoundary) label = 'Semi-Bitter';
+      else label = 'Bitter';
+    }
+
+    return {
+      label,
+      className: label.toLowerCase().replaceAll(' ', '-'),
+      rank,
+      total
+    };
+  }
+
   private formatRelativeDate(date: Date): string {
     const now = new Date();
     const dayMilliseconds = 24 * 60 * 60 * 1000;
@@ -184,24 +259,17 @@ export class CharacterModal {
       Date.UTC(value.getFullYear(), value.getMonth(), value.getDate()) / dayMilliseconds;
     const daysAgo = Math.max(0, dayNumber(now) - dayNumber(date));
 
-    let value: number;
-    let unit: Intl.RelativeTimeFormatUnit;
-    if (daysAgo <= 7) {
-      value = -daysAgo;
-      unit = 'day';
-    } else if (daysAgo <= 30) {
-      value = -Math.floor(daysAgo / 7);
-      unit = 'week';
-    } else if (daysAgo < 365) {
-      value = -Math.floor(daysAgo / 30);
-      unit = 'month';
-    } else {
-      value = -Math.floor(daysAgo / 365);
-      unit = 'year';
+    if (daysAgo < 30) {
+      const formatted = new Intl.RelativeTimeFormat(undefined, { numeric: 'auto' })
+        .format(-daysAgo, 'day');
+      return formatted.charAt(0).toUpperCase() + formatted.slice(1);
     }
 
-    const formatted = new Intl.RelativeTimeFormat(undefined, { numeric: 'auto' }).format(value, unit);
-    return formatted.charAt(0).toUpperCase() + formatted.slice(1);
+    return new Intl.DateTimeFormat(undefined, {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }).format(date);
   }
 
   addChatToHistory(): void {
@@ -316,6 +384,7 @@ export class CharacterModal {
     document.addEventListener('mousedown', this.handleClickOutside);
     this.loadChatLink();
     if (!this.isMobile()) this.loadLastChatDate();
+    if (!this.isMobile()) this.loadChatFlavor();
     // Daily cleanup removed - chat links are now only reset manually
   }
 
