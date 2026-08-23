@@ -18,6 +18,7 @@ type ChatFlavor = {
   className: string;
   rank: number;
   total: number;
+  poolDescription: string;
 };
 
 const FALLBACK_CHARACTER: Character = {
@@ -191,8 +192,8 @@ export class CharacterModal {
       characters: this.characterService.getCharacters(),
       chatGPT: this.characterService.getChatGPT()
     }).subscribe(({ characters, chatGPT }) => {
-      const staleCharacters = [...characters, ...chatGPT]
-        .filter(character => character.status === 'active')
+      const pool = this.getChatFlavorPool([...characters, ...chatGPT]);
+      const staleCharacters = pool.characters
         .map(character => ({
           character,
           timestamp: this.getStoredTimestamp(character)
@@ -208,8 +209,41 @@ export class CharacterModal {
       const index = staleCharacters.findIndex(item => item.character.id === this.character.id);
       this.chatFlavor = index === -1
         ? null
-        : this.createChatFlavor(index + 1, staleCharacters.length);
+        : this.createChatFlavor(index + 1, staleCharacters.length, pool.description);
     });
+  }
+
+  private getChatFlavorPool(characters: Character[]): {
+    characters: Character[];
+    description: string;
+  } {
+    if (this.character.status === 'inactive') {
+      return {
+        characters: characters.filter(character => character.status === 'inactive'),
+        description: 'inactive characters not chatted with in the last 7 days'
+      };
+    }
+
+    if (this.character.status === 'retired') {
+      const retiredTiers = this.characterService.getAllowedTiersForStatus('retired');
+      const highestRetiredTier = Math.max(...retiredTiers);
+      const lowestRetiredTier = Math.min(...retiredTiers);
+      return {
+        characters: characters.filter(character =>
+          character.status === 'retired' && character.tier !== highestRetiredTier
+        ),
+        description: `retired tier ${lowestRetiredTier}–${highestRetiredTier - 1} characters not chatted with in the last 7 days`
+      };
+    }
+
+    if (this.character.status === 'active') {
+      return {
+        characters: characters.filter(character => character.status === 'active'),
+        description: 'active characters not chatted with in the last 7 days'
+      };
+    }
+
+    return { characters: [], description: 'characters not chatted with in the last 7 days' };
   }
 
   private getStoredTimestamp(character: Character): Date | null {
@@ -227,7 +261,7 @@ export class CharacterModal {
     return timestamp >= cutoff && timestamp <= now;
   }
 
-  private createChatFlavor(rank: number, total: number): ChatFlavor {
+  private createChatFlavor(rank: number, total: number, poolDescription: string): ChatFlavor {
     let label: ChatFlavor['label'];
 
     if (total === 1) label = 'Plain';
@@ -248,7 +282,8 @@ export class CharacterModal {
       label,
       className: label.toLowerCase().replaceAll(' ', '-'),
       rank,
-      total
+      total,
+      poolDescription
     };
   }
 

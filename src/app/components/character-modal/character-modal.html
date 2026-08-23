@@ -73,13 +73,13 @@
           <span
             class="chat-flavor"
             [ngClass]="'chat-flavor--' + chatFlavor.className"
-            [title]="chatFlavor.rank + ' of ' + chatFlavor.total + ' characters not chatted with in the last 7 days'">
+            [title]="chatFlavor.rank + ' of ' + chatFlavor.total + ' ' + chatFlavor.poolDescription">
             <strong>{{ chatFlavor.label }}</strong> ({{ chatFlavor.rank }}/{{ chatFlavor.total }})
           </span>
         }
       }
       @else {
-        <span [title]="getWeeklyChatCount(true) + ' ' + (getWeeklyChatCount(true) > 1 ? 'chats' : 'chat') + ' this week. Last: ' + lastChatDateTitle">{{ getWeeklyChatCount(false) }}</span>
+        <span [title]="getWeeklyChatCount(true) + ' ' + (getWeeklyChatCount(true) > 1 ? 'chats' : 'chat') + ' this week. Last: ' + lastChatDateTitle">📅 {{ getWeeklyChatCount(false) }}</span>
       }
       <span><strong>Total Chats: </strong> {{ getChatLinkCounter() }}</span>
     </div>
