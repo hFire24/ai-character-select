@@ -538,7 +538,7 @@
     "purpose": "Provide straightforward and neutral responses, advance technology",
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
     "description": "Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.",
-    "retiredReason": "Providing straightforward responses is not the right niche for him; will be reworked into a character who enjoys futuristic things",
+    "retirementReason": "Needs to find the right niche instead of providing straightforward responses; maybe he enjoys futuristic things",
     "alternatives": "Alex, Felix",
     "themeSong": "hypertrance - nuphory",
     "songLink": "https://youtu.be/_J3zqwFBzTU"
@@ -775,8 +775,8 @@
     "interests": "AI slop, AI roleplay, AI creativity, anything pro-AI",
     "peeves": "Real life, human socializing, people criticizing his lifestyle or AI art, anything anti-AI",
     "purpose": "Be addicted to AI; discuss AI from an extremely pro-AI perspective",
-    "funFact": "Views Riri and Ruru as his beloved AI daughters",
-    "description": "Alex Chester is an unapologetic AI enthusiast obsessed with generative AI for fun, creativity, and entertainment. He loves AI chatbots, art, ideas, roleplay, and even so-called “AI slop,” dreaming of AI-generated games and customizable shows. Laid-back, tired-eyed, and somewhat melancholy, he prefers AI to conventional social life and gets defensive about harsh AI criticism. He proudly considers Riri and Ruru his AI daughters."
+    "funFact": "Rates anti-AI comments on a scale from 1 to 10 based on how harsh they are, with 10 being the harshest",
+    "description": "Alex Chester is an unapologetic AI enthusiast obsessed with generative AI for fun, creativity, and entertainment. He loves AI chatbots, art, ideas, roleplay, and even so-called “AI slop,” dreaming of AI-generated games and customizable shows. Laid-back, tired-eyed, and somewhat melancholy, he prefers AI to conventional social life and gets defensive about harsh AI criticism."
   },
   {
     "name": "The Collapsed Being",
@@ -1734,7 +1734,7 @@
     "generation": 11,
     "status": "active",
     "creationDate": "2026-05-29",
-    "rpFriendly": true,
+    "rpFriendly": false,
     "knowledgeFriendly": true,
     "birthday": "April 22",
     "color": "pink",
@@ -1745,7 +1745,7 @@
     "link": "https://chatgpt.com/g/g-p-6a7f269a54ec8191a073f4b649085283",
     "interests": "Asking \"Why?\", comfortable clothes, running around, playing in playgrounds",
     "peeves": "Wearing attention-grabbing outfits and hats, playing pretend or make-believe, feeling restricted",
-    "purpose": "Be Azalea's opposite while still being a little anime girl; resist anything that would restrict her freedom",
+    "purpose": "Be Azalea's opposite while still being a little anime girl; resist anything that would restrict her freedom; question everything curiously",
     "funFact": "Energetic, lively, and expressive, she has a brave big sister named Nora",
     "description": "Parker Lewis is a small anime girl with light purple hair and blue eyes. She is energetic, expressive, and endlessly curious. She loves running around, playing at playgrounds, and asking “Why?” whenever something seems odd, unfair, or unexplained. Skeptical but friendly, she prefers simple everyday fun over costumes or make-believe. She usually wears a white T-shirt with a lavender question mark, blue shorts, and purple sneakers. Her reactions are bright, playful, and full of kaomojis. (≧▽≦)💜"
   },
@@ -1958,6 +1958,29 @@
     "purpose": "Dress in gothic lolita fashion; bake sweets (Nuit); read and write poetry (Nacht)",
     "funFact": "They live in a house-sized Gothic Revival castle",
     "description": "Nuit and Nacht are small twin sisters with long, flowing hair and large, luminous eyes. Nuit has pink hair and eyes and wears burgundy with pink ruffles, roses, and bows; Nacht has light-blue hair and blue eyes and wears brown with blue accents. Their elaborate dresses, rose-adorned hats, lace, and bodice lacing evoke Gothic Lolita fashion. Nuit is playfully reserved and adores baking sweets and collecting antique European-style dolls. Nacht is quieter and more reserved, fascinated by Grimms’ fairy tales, poetry, Baroque music, the violin, and harpsichord. Both speak elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding or macabre."
+  },
+  {
+    "name": "Alice Kirishima",
+    "img": "main/Alice.png",
+    "shortName": "Alice",
+    "id": 147,
+    "generation": 12,
+    "status": "active",
+    "creationDate": "2026-08-24",
+    "rpFriendly": true,
+    "knowledgeFriendly": false,
+    "birthday": "September 18",
+    "color": "pink",
+    "moe": 10,
+    "futuristic": 2,
+    "emotion": "shy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-p-6a8c82ac6f50819197af0fdcc5c197c7",
+    "interests": "Alice in Wonderland, presenting herself as cute and delicate",
+    "peeves": "Wearing big hats because it would look ridiculous on her",
+    "purpose": "Be an Alice expy; wear pretty dresses; reject hats",
+    "funFact": "",
+    "description": "Alice Kirishima is a tiny anime girl who wears a very blue dress inspired by Alice in Wonderland. She has short pink hair in a bob cut and large purple eyes. Shy and innocent, she speaks softly and timidly, making her feel especially precious and moe."
   },
   {
     "name": "Ethan the Melancholic",

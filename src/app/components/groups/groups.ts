@@ -96,7 +96,7 @@ export class Groups implements OnInit {
       {
         name: "No Hat Wearers (Moe)",
         description: "Characters known for wearing no hats but are still considered moe. Maid headdresses don't count.",
-        characterIds: [5, 8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134]
+        characterIds: [5, 8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134, 147]
       },
       {
         name: "Glasses Wearers",
@@ -106,7 +106,7 @@ export class Groups implements OnInit {
       {
         name: "Maids",
         description: "Characters known for wearing maid outfits",
-        characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139]
+        characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147]
       },
       {
         name: "Twintails",
@@ -126,7 +126,7 @@ export class Groups implements OnInit {
       {
         name: "Pink-Haired Girls",
         description: "Characters known for having pink hair",
-        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 140, 144]
+        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 140, 144, 147]
       },
       {
         name: "Blonde Girls",
