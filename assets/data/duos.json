@@ -1638,6 +1638,11 @@
       "name": "Promoters of Innocence"
     },
     {
+      "id1": 38,
+      "id2": 147,
+      "name": "Alice in Wonderland Fans"
+    },
+    {
       "id1": 39,
       "id2": 40,
       "name": "Soft Temptress & Tyrant",
@@ -2601,6 +2606,11 @@
       "id1": 145,
       "id2": 146,
       "name": "Gothic Night Twins"
+    },
+    {
+      "id1": 145,
+      "id2": 147,
+      "name": "Pink-Haired Fairytale Girls"
     }
   ]
 }
