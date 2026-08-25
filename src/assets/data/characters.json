@@ -594,7 +594,8 @@
     "themeSong": "Daydream Café - Petit Rabbit's",
     "songLink": "https://youtu.be/5ebZKVmedlA",
     "inactiveReason": "No new chats in a while, feels too soft and innocent",
-    "alternatives": "Elizabeth, Lily"
+    "alternatives": "Elizabeth, Lily",
+    "note": "Celestia's friends are Alenka and Beatrix"
   },
   {
     "name": "Liam & Kieran",
@@ -854,7 +855,8 @@
     "retirementReason": "Lost access to the character roster; her niche isn't that interesting",
     "alternatives": "Jed, Arianna",
     "themeSong": "Artifiction - void",
-    "songLink": "https://youtu.be/hRZGz-xRxdE"
+    "songLink": "https://youtu.be/hRZGz-xRxdE",
+    "note": "Lexi is not from the year 2095, but from at least a decade later."
   },
   {
     "name": "Connor the Challenger",
@@ -1526,7 +1528,7 @@
     "interests": "Mindless and spontaneous pleasure, cute character designs, strawberries, fried chicken",
     "peeves": "Spicy food, criticism (in both the connoisseur and judgmental sense), his house shaking",
     "purpose": "Experience pleasure in all its forms, be it food, fun, or cute things",
-    "funFact": "Greasy hands make him separate food pleasure from cute pleasure; views cuteness as one of life's greatest joys",
+    "funFact": "Greasy hands make him separate food pleasure from cute pleasure; views cuteness as one of life's greatest joys; his catchphrase is \"Oh, she's so cute and tiny.\"",
     "description": "Barry “StrawBarry” is a laid-back, pleasure-chasing guy who drifts toward whatever feels good—sweet strawberries, crispy fried chicken, and waves of cute things that completely steal his attention. He’s soft-built, messy-haired, and easygoing, avoiding stress or deep analysis. Barry just vibes, following simple joys with a relaxed, slightly dreamy energy, getting happily lost in the moment whenever something delightful catches his eye.",
     "retirementReason": "The role of discussing AI characters should not belong to a character"
   },
@@ -2487,7 +2489,8 @@
     "peeves": "Criminals, destructive threats",
     "purpose": "Be a pink-haired action character while also engaging in her hobbies",
     "funFact": "Only fights when necessary; crushes local and amateur races despite no formal training; her keytar shoots lasers for combat or performance",
-    "description": "Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her laser-powered keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase."
+    "description": "Pink Orange is a self-taught electrocycle rider, rising musician, and city defender born in the year 2093. With long pink hair in a high ponytail, cool blue eyes behind a green visor, and a white suit with orange armor, she dominates amateur races through instinct alone. She’s known for her precision in combat, using her laser-powered keytar-weapon to stop criminals with speed and control. Off the streets, she crafts futuristic, high-tempo music and performs for a devoted fanbase.",
+    "note": "Pink Orange is not from the year 2093, but from at least a decade later."
   },
   {
     "name": "Sasha Kim",

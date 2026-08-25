@@ -2524,8 +2524,18 @@
     },
     {
       "id1": 115,
+      "id2": 116,
+      "name": "Adventurous Girls"
+    },
+    {
+      "id1": 115,
       "id2": 143,
       "name": "Speed Demons"
+    },
+    {
+      "id1": 116,
+      "id2": 117,
+      "name": "Exploration Girls"
     },
     {
       "id1": 117,
