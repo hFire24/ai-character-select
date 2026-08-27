@@ -26,6 +26,7 @@ export class CharacterGrid {
   @Input() sortDirection: SortDirection = 'asc';
   
   characters: Character[] = [];
+  isLoading = true;
 
   constructor(private characterService: CharacterService) {
     this.characterService.getCharacters().subscribe(data => {
@@ -37,6 +38,7 @@ export class CharacterGrid {
         } else {
           this.characters.unshift(chatGPTCharacter);
         }
+        this.isLoading = false;
       });
       
       // Preload all character images
