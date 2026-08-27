@@ -1,7 +1,7 @@
 <main class="history-page">
   <header>
-    <h1>Chat History Spread</h1>
-    <p>Compare the dates recorded in each character's chat-link history.</p>
+    <h1>Chat History Chart</h1>
+    <p>View the charts of each character's chat-link history.</p>
   </header>
 
   <section class="character-picker" aria-label="Add a character">
@@ -24,6 +24,11 @@
         @if (series.length > 0) {
           <button type="button" class="picker-clear-button" (click)="clearCharacters()">
             Clear all
+          </button>
+        }
+        @if (hasCharactersWithoutVisibleHistory) {
+          <button type="button" class="picker-clear-button" (click)="removeCharactersWithoutVisibleHistory()">
+            Clear empty
           </button>
         }
       </div>
@@ -67,35 +72,109 @@
 
   @if (!isLoading && characters.length > 0) {
     <section class="date-range" aria-label="Chart date range">
-      <div class="date-range-fields">
-        <strong>Date range</strong>
-        <label>
-          <span>From</span>
-          <input
-            type="date"
-            [ngModel]="selectedStartDate"
-            [min]="datasetStartDate"
-            [max]="selectedEndDate"
-            (ngModelChange)="updateStartDate($event)"
-          />
-        </label>
-        <label>
-          <span>To</span>
-          <input
-            type="date"
-            [ngModel]="selectedEndDate"
-            [min]="selectedStartDate"
-            [max]="datasetEndDate"
-            (ngModelChange)="updateEndDate($event)"
-          />
-        </label>
+      <strong>Date range</strong>
+      <div class="date-range-presets" aria-label="Chart zoom level">
+        <span class="zoom-label">Zoom</span>
+        @for (days of [7, 15, 30, 60, 120]; track days) {
+          <button
+            type="button"
+            [class.active]="isZoomLevel(days)"
+            [attr.aria-pressed]="isZoomLevel(days)"
+            (click)="setRecentDays(days)"
+          >
+            {{ days }} days
+          </button>
+        }
+        <button
+          type="button"
+          [class.active]="zoomLevel === 'full'"
+          [attr.aria-pressed]="zoomLevel === 'full'"
+          (click)="resetDateRange()"
+        >
+          Full
+        </button>
+        <button
+          type="button"
+          [class.active]="zoomLevel === 'custom'"
+          [attr.aria-pressed]="zoomLevel === 'custom'"
+          (click)="setCustomZoom()"
+        >
+          Custom
+        </button>
       </div>
-      <div class="date-range-presets" aria-label="Date range presets">
-        <button type="button" (click)="setRecentWeek()">Last week</button>
-        <button type="button" (click)="setRecentMonths(1)">Last month</button>
-        <button type="button" (click)="setRecentMonths(3)">Last 3 months</button>
-        <button type="button" (click)="resetDateRange()">All time</button>
-      </div>
+      @if (hasSlidingZoom) {
+        <div class="zoom-window">
+          <label class="zoom-slider">
+            <span>Move date window</span>
+            <input
+              type="range"
+              min="0"
+              [max]="zoomSliderMaximum"
+              step="1"
+              [value]="zoomSliderValue"
+              aria-label="Start date; use arrow keys to move one day or Shift plus arrow keys to move by the zoom level"
+              (input)="updateZoomStart($any($event.target).value)"
+            />
+            <small>{{ formatDate(dateFromSelectedStart) }} &ndash; {{ formatDate(dateFromSelectedEnd) }}</small>
+          </label>
+          <div class="zoom-navigation">
+            <button
+              type="button"
+              class="zoom-step"
+              [disabled]="!canMoveZoomBackward"
+              [attr.aria-label]="'View the previous ' + slidingZoomDays + ' days'"
+              (click)="moveZoomWindow(-1)"
+            >
+              &larr; {{ slidingZoomDays }} days
+            </button>
+            <label class="zoom-start-date">
+              <span>Start date</span>
+              <input
+                type="date"
+                [ngModel]="selectedStartDate"
+                [min]="datasetStartDate"
+                [max]="zoomLatestStartDate"
+                (ngModelChange)="updateZoomStartDate($event)"
+              />
+            </label>
+            <button
+              type="button"
+              class="zoom-step"
+              [disabled]="!canMoveZoomForward"
+              [attr.aria-label]="'View the next ' + slidingZoomDays + ' days'"
+              (click)="moveZoomWindow(1)"
+            >
+              {{ slidingZoomDays }} days &rarr;
+            </button>
+          </div>
+          <small class="zoom-help">
+            Arrow keys move one day. Shift + Left/Right moves {{ slidingZoomDays }} days.
+          </small>
+        </div>
+      } @else if (zoomLevel === 'custom') {
+        <div class="date-range-fields">
+          <label>
+            <span>From</span>
+            <input
+              type="date"
+              [ngModel]="selectedStartDate"
+              [min]="datasetStartDate"
+              [max]="selectedEndDate"
+              (ngModelChange)="updateStartDate($event)"
+            />
+          </label>
+          <label>
+            <span>To</span>
+            <input
+              type="date"
+              [ngModel]="selectedEndDate"
+              [min]="selectedStartDate"
+              [max]="datasetEndDate"
+              (ngModelChange)="updateEndDate($event)"
+            />
+          </label>
+        </div>
+      }
     </section>
   }
 

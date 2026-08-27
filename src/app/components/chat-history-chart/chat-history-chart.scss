@@ -233,9 +233,69 @@ header {
     gap: 12px;
   }
 
+  .date-range-fields {
+    justify-content: center;
+  }
+
+  .zoom-window {
+    display: flex;
+    width: min(620px, 80vw);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .zoom-slider {
+    flex: 1;
+    align-items: stretch;
+
+    input[type='range'] {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      accent-color: #2563eb;
+      cursor: ew-resize;
+    }
+
+    small {
+      color: #64748b;
+      font-size: 0.75rem;
+      text-align: center;
+    }
+  }
+
+  .zoom-start-date {
+    flex: 0 0 auto;
+  }
+
+  .zoom-navigation {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .zoom-step {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .zoom-help {
+    color: #64748b;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
   .date-range-presets {
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+  }
+
+  .zoom-label {
+    align-self: center;
+    color: #334155;
+    font-size: 0.8rem;
   }
 
   label {
@@ -271,6 +331,12 @@ header {
     &:hover:not(:disabled) {
       border-color: #2563eb;
       color: #1d4ed8;
+    }
+
+    &.active {
+      border-color: #2563eb;
+      background: #2563eb;
+      color: white;
     }
 
     &:disabled {

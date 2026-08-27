@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { Character, CharacterService } from '../../services/character.service';
@@ -26,6 +26,8 @@ interface HistoryEra {
 
 type HistorySortField = 'added' | 'name' | 'id' | 'count' | 'first' | 'latest';
 type SortDirection = 'asc' | 'desc';
+type SlidingZoomLevel = 7 | 15 | 30 | 60 | 120;
+type ZoomLevel = SlidingZoomLevel | 'full' | 'custom';
 
 @Component({
   selector: 'app-chat-history-chart',
@@ -49,6 +51,16 @@ export class ChatHistoryChart {
   private displayedSeriesCacheKey = '';
   private histogramMaximumCache = 1;
   private histogramMaximumCacheKey = '';
+  private readonly visibleCountCache = new Map<string, number>();
+  private readonly characterColorCache = new Map<number, string>();
+  private characterColorCacheVersion = -1;
+  private histogramGeometryCacheKey = '';
+  private histogramGeometryCache = { bucketDays: 1, bucketCount: 1, barWidth: 1 };
+  private readonly dateFormatter = new Intl.DateTimeFormat(undefined, {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric'
+  });
   private seriesVersion = 0;
   private datasetDateExtent: [Date, Date] = [new Date(), new Date()];
 
@@ -62,6 +74,7 @@ export class ChatHistoryChart {
   statusFilter = 'all';
   sortBy: HistorySortField = 'added';
   sortDirection: SortDirection = 'asc';
+  zoomLevel: ZoomLevel = 'full';
   series: CharacterHistorySeries[] = [];
   isLoading = true;
 
@@ -108,9 +121,14 @@ export class ChatHistoryChart {
   }
 
   visibleHistoryCount(item: CharacterHistorySeries): number {
-    return item.points
+    const cacheKey = `${item.character.id}|${this.selectedStartDate}|${this.selectedEndDate}`;
+    const cached = this.visibleCountCache.get(cacheKey);
+    if (cached !== undefined) return cached;
+    const count = item.points
       .filter(point => this.isDateVisible(point.date))
       .reduce((total, point) => total + point.count, 0);
+    this.visibleCountCache.set(cacheKey, count);
+    return count;
   }
 
   displayedPoints(item: CharacterHistorySeries): HistoryPoint[] {
@@ -123,7 +141,7 @@ export class ChatHistoryChart {
       return result;
     };
     const inclusiveDays = dayNumber(rangeEnd) - dayNumber(rangeStart) + 1;
-    const bucketDays = Math.floor(inclusiveDays / 60) + 1;
+    const bucketDays = this.histogramBucketDays(inclusiveDays);
     const cacheKey = `${item.character.id}|${this.toDateKey(rangeStart)}|${this.toDateKey(rangeEnd)}|${bucketDays}`;
     const cached = this.displayedPointsCache.get(cacheKey);
     if (cached) return cached;
@@ -206,6 +224,10 @@ export class ChatHistoryChart {
   get availableStatuses(): string[] {
     return Array.from(new Set(this.series.map(item => item.character.status)))
       .sort((a, b) => a.localeCompare(b));
+  }
+
+  get hasCharactersWithoutVisibleHistory(): boolean {
+    return this.series.some(item => this.visibleHistoryCount(item) === 0);
   }
 
   get dateTicks(): Date[] {
@@ -345,50 +367,142 @@ export class ChatHistoryChart {
   }
 
   updateStartDate(value: string) {
+    this.zoomLevel = 'custom';
     this.selectedStartDate = this.clampDateKey(
       value || this.datasetStartDate,
       this.datasetStartDate,
       this.selectedEndDate
     );
-    this.removeCharactersWithoutVisibleHistory();
+    this.invalidateDateRangeCaches();
   }
 
   updateEndDate(value: string) {
+    this.zoomLevel = 'custom';
     this.selectedEndDate = this.clampDateKey(
       value || this.datasetEndDate,
       this.selectedStartDate,
       this.datasetEndDate
     );
-    this.removeCharactersWithoutVisibleHistory();
+    this.invalidateDateRangeCaches();
   }
 
   resetDateRange() {
+    this.zoomLevel = 'full';
     this.selectedStartDate = this.datasetStartDate;
     this.selectedEndDate = this.datasetEndDate;
+    this.invalidateDateRangeCaches();
   }
 
-  setRecentWeek() {
+  setRecentDays(days: number) {
+    this.zoomLevel = days as SlidingZoomLevel;
     const end = this.dateFromKey(this.datasetEndDate);
     const start = new Date(end);
-    start.setDate(start.getDate() - 6);
+    start.setDate(start.getDate() - days + 1);
 
     this.applyRecentDateRange(start);
   }
 
-  setRecentMonths(months: number) {
-    const end = this.dateFromKey(this.datasetEndDate);
-    const start = new Date(end);
-    const targetDay = start.getDate();
-    start.setDate(1);
-    start.setMonth(start.getMonth() - months);
-    const lastDayOfTargetMonth = new Date(
-      start.getFullYear(),
-      start.getMonth() + 1,
-      0
-    ).getDate();
-    start.setDate(Math.min(targetDay, lastDayOfTargetMonth));
+  isZoomLevel(days: number): boolean {
+    return this.zoomLevel === days;
+  }
 
-    this.applyRecentDateRange(start);
+  setCustomZoom() {
+    this.zoomLevel = 'custom';
+  }
+
+  get hasSlidingZoom(): boolean {
+    return typeof this.zoomLevel === 'number';
+  }
+
+  get zoomSliderMaximum(): number {
+    const zoomDays = this.zoomLevel;
+    if (typeof zoomDays !== 'number') return 0;
+    const totalDays = this.calendarDayNumber(this.dateFromKey(this.datasetEndDate)) -
+      this.calendarDayNumber(this.dateFromKey(this.datasetStartDate)) + 1;
+    return Math.max(0, totalDays - zoomDays);
+  }
+
+  get zoomSliderValue(): number {
+    return this.calendarDayNumber(this.dateFromKey(this.selectedStartDate)) -
+      this.calendarDayNumber(this.dateFromKey(this.datasetStartDate));
+  }
+
+  get slidingZoomDays(): number {
+    return typeof this.zoomLevel === 'number' ? this.zoomLevel : 0;
+  }
+
+  get canMoveZoomBackward(): boolean {
+    return this.hasSlidingZoom && this.zoomSliderValue > 0;
+  }
+
+  get canMoveZoomForward(): boolean {
+    return this.hasSlidingZoom && this.zoomSliderValue < this.zoomSliderMaximum;
+  }
+
+  get zoomLatestStartDate(): string {
+    const start = this.dateFromKey(this.datasetStartDate);
+    start.setDate(start.getDate() + this.zoomSliderMaximum);
+    return this.toDateKey(start);
+  }
+
+  updateZoomStart(value: string) {
+    const start = this.dateFromKey(this.datasetStartDate);
+    start.setDate(start.getDate() + Number(value));
+    this.updateSlidingZoomStart(this.toDateKey(start));
+  }
+
+  moveZoomWindow(direction: -1 | 1) {
+    if (!this.hasSlidingZoom) return;
+    this.moveZoomByDays(direction * this.slidingZoomDays);
+  }
+
+  private moveZoomByDays(days: number) {
+    const nextOffset = Math.max(
+      0,
+      Math.min(this.zoomSliderMaximum, this.zoomSliderValue + days)
+    );
+    this.updateZoomStart(String(nextOffset));
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleZoomKeyboard(event: KeyboardEvent) {
+    if (!this.hasSlidingZoom || (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight')) return;
+    const target = event.target as HTMLElement | null;
+    const isSlider = target instanceof HTMLInputElement && target.type === 'range';
+    if (!isSlider && (target?.matches('input, select, textarea') || target?.isContentEditable)) return;
+    event.preventDefault();
+    const direction = event.key === 'ArrowLeft' ? -1 : 1;
+    this.moveZoomByDays(direction * (event.shiftKey ? this.slidingZoomDays : 1));
+  }
+
+  updateZoomStartDate(value: string) {
+    if (!value) return;
+    this.updateSlidingZoomStart(
+      this.clampDateKey(value, this.datasetStartDate, this.zoomLatestStartDate)
+    );
+  }
+
+  private updateSlidingZoomStart(startDateKey: string) {
+    const zoomDays = this.zoomLevel;
+    if (typeof zoomDays !== 'number') return;
+    const start = this.dateFromKey(startDateKey);
+    const end = new Date(start);
+    end.setDate(end.getDate() + zoomDays - 1);
+    this.selectedStartDate = this.toDateKey(start);
+    this.selectedEndDate = this.clampDateKey(
+      this.toDateKey(end),
+      this.selectedStartDate,
+      this.datasetEndDate
+    );
+    this.invalidateDateRangeCaches();
+  }
+
+  get dateFromSelectedStart(): Date {
+    return this.dateFromKey(this.selectedStartDate);
+  }
+
+  get dateFromSelectedEnd(): Date {
+    return this.dateFromKey(this.selectedEndDate);
   }
 
   private applyRecentDateRange(start: Date) {
@@ -399,7 +513,7 @@ export class ChatHistoryChart {
       this.datasetEndDate
     );
     this.selectedEndDate = this.datasetEndDate;
-    this.removeCharactersWithoutVisibleHistory();
+    this.invalidateDateRangeCaches();
   }
 
   isDateVisible(date: Date): boolean {
@@ -431,7 +545,14 @@ export class ChatHistoryChart {
   }
 
   characterColor(characterId: number): string {
-    return this.pointColor(this.series.findIndex(item => item.character.id === characterId));
+    if (this.characterColorCacheVersion !== this.seriesVersion) {
+      this.characterColorCache.clear();
+      this.series.forEach((item, index) => {
+        this.characterColorCache.set(item.character.id, this.pointColor(index));
+      });
+      this.characterColorCacheVersion = this.seriesVersion;
+    }
+    return this.characterColorCache.get(characterId) ?? this.pointColor(0);
   }
 
   iconPath(character: Character): string {
@@ -451,9 +572,7 @@ export class ChatHistoryChart {
 
   histogramBarX(point: HistoryPoint): number {
     const [rangeStart, rangeEnd] = this.dateExtent;
-    const totalDays = this.calendarDayNumber(rangeEnd) - this.calendarDayNumber(rangeStart) + 1;
-    const bucketDays = Math.floor(totalDays / 60) + 1;
-    const bucketCount = Math.ceil(totalDays / bucketDays);
+    const { bucketDays, bucketCount } = this.histogramGeometry(rangeStart, rangeEnd);
     const dayOffset = this.calendarDayNumber(point.date) - this.calendarDayNumber(rangeStart);
     const bucketIndex = Math.floor(dayOffset / bucketDays);
     return this.plotLeft + (bucketIndex / bucketCount) * (this.plotRight - this.plotLeft);
@@ -461,10 +580,7 @@ export class ChatHistoryChart {
 
   histogramBarWidth(_point: HistoryPoint): number {
     const [rangeStart, rangeEnd] = this.dateExtent;
-    const totalDays = this.calendarDayNumber(rangeEnd) - this.calendarDayNumber(rangeStart) + 1;
-    const bucketDays = Math.floor(totalDays / 60) + 1;
-    const bucketCount = Math.ceil(totalDays / bucketDays);
-    return (this.plotRight - this.plotLeft) / bucketCount;
+    return this.histogramGeometry(rangeStart, rangeEnd).barWidth;
   }
 
   histogramBarHeight(point: HistoryPoint): number {
@@ -486,11 +602,7 @@ export class ChatHistoryChart {
   }
 
   formatDate(date: Date): string {
-    return new Intl.DateTimeFormat(undefined, {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric'
-    }).format(date);
+    return this.dateFormatter.format(date);
   }
 
   private get dateExtent(): [Date, Date] {
@@ -500,6 +612,33 @@ export class ChatHistoryChart {
 
   private calendarDayNumber(date: Date): number {
     return Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / (24 * 60 * 60 * 1000);
+  }
+
+  private histogramBucketDays(totalDays: number): number {
+    return Math.max(1, Math.ceil(totalDays / 60));
+  }
+
+  private invalidateDateRangeCaches() {
+    this.displayedPointsCache.clear();
+    this.visibleCountCache.clear();
+    this.histogramMaximumCacheKey = '';
+    this.histogramGeometryCacheKey = '';
+  }
+
+  private histogramGeometry(rangeStart: Date, rangeEnd: Date) {
+    const cacheKey = `${this.toDateKey(rangeStart)}|${this.toDateKey(rangeEnd)}`;
+    if (cacheKey !== this.histogramGeometryCacheKey) {
+      const totalDays = this.calendarDayNumber(rangeEnd) - this.calendarDayNumber(rangeStart) + 1;
+      const bucketDays = this.histogramBucketDays(totalDays);
+      const bucketCount = Math.ceil(totalDays / bucketDays);
+      this.histogramGeometryCache = {
+        bucketDays,
+        bucketCount,
+        barWidth: (this.plotRight - this.plotLeft) / bucketCount
+      };
+      this.histogramGeometryCacheKey = cacheKey;
+    }
+    return this.histogramGeometryCache;
   }
 
   private get displayStateKey(): string {
@@ -547,7 +686,7 @@ export class ChatHistoryChart {
     };
   }
 
-  private removeCharactersWithoutVisibleHistory() {
+  removeCharactersWithoutVisibleHistory() {
     const visibleSeries = this.series.filter(item => this.visibleHistoryCount(item) > 0);
     if (visibleSeries.length !== this.series.length) this.seriesVersion++;
     this.series = visibleSeries;
