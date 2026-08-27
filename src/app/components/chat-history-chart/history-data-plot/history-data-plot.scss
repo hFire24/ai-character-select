@@ -1,0 +1,14 @@
+:host { display:block; }
+.chart-card { overflow-x:auto; border:1px solid #dbe3ee; border-radius:12px; background:white; box-shadow:0 8px 24px rgb(15 23 42 / 8%); }
+.history-chart { display:block; width:100%; min-width:780px; min-height:260px; }
+.row-line,.axis-line { stroke:#cbd5e1; stroke-width:1; }
+.era-band { opacity:.22; }.era-53{fill:#2563eb}.era-55{fill:#7c3aed}.era-56{fill:#059669}
+.era-label,.drought-label { font-size:11px; font-weight:700; text-anchor:middle; }
+.era-label { fill:#334155; }.drought-band{fill:rgb(127 29 29 / 32%)}.drought-label{fill:#7f1d1d}
+.row-label { fill:#334155; font-size:14px; font-weight:600; text-anchor:start; }.row-label.inactive{fill:#999}.row-label.retired{fill:#ef4444}
+.histogram-bar { opacity:.86; rx:2px; }.bar-count{fill:white;font-size:10px;font-weight:700;text-anchor:middle;pointer-events:none}
+.foreground-label { paint-order:stroke; stroke:white; stroke-width:3px; stroke-linejoin:round; pointer-events:none; }
+@media (prefers-color-scheme:dark) {
+  .chart-card{background:#1e293b;border-color:#475569}.row-label{fill:#e2e8f0}.row-label.inactive{fill:#888}.row-label.retired{fill:#f87171}
+  .row-line,.axis-line{stroke:#475569}.drought-band{fill:rgb(153 27 27 / 42%)}.drought-label{fill:#fecaca}.era-band{opacity:.3}.era-label{fill:#f8fafc}.foreground-label{stroke:#1e293b}
+}

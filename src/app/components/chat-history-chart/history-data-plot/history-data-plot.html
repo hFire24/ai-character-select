@@ -1,0 +1,45 @@
+<section class="chart-card" aria-label="Chat history date plot">
+  <svg class="history-chart" [attr.viewBox]="chartViewBox" role="img">
+    <defs>@for (item of chart.displayedSeries; track item.character.id; let rowIndex = $index) {
+      <clipPath [attr.id]="'avatar-clip-' + item.character.id"><rect x="9" [attr.y]="rowY(rowIndex) - 26" width="38" height="38" rx="8" /></clipPath>
+    }</defs>
+    @for (era of visibleEras; track era.label) {
+      <rect class="era-band" [ngClass]="era.className" [attr.x]="eraStartX(era)" [attr.y]="droughtY"
+        [attr.width]="eraEndX(era) - eraStartX(era)" [attr.height]="droughtHeight">
+        <title>{{ era.label }} era: {{ formatDate(era.start) }} through {{ formatDate(era.end) }}</title>
+      </rect>
+    }
+    @if (showDrought) {
+      <rect class="drought-band" [attr.x]="droughtStartX" [attr.y]="droughtY"
+        [attr.width]="droughtEndX - droughtStartX" [attr.height]="droughtHeight">
+        <title>History drought: April 21 through May 6, 2026</title>
+      </rect>
+    }
+    @for (item of chart.displayedSeries; track item.character.id; let rowIndex = $index) {
+      <line class="row-line" [attr.x1]="plotStartX" [attr.x2]="plotEndX" [attr.y1]="rowY(rowIndex)" [attr.y2]="rowY(rowIndex)" />
+      <image x="9" [attr.y]="rowY(rowIndex) - 26" width="38" height="38" [attr.href]="iconPath(item.character)"
+        [attr.clip-path]="'url(#avatar-clip-' + item.character.id + ')'" preserveAspectRatio="xMidYMid slice"
+        (error)="useUnknownIcon($event)" (click)="chart.selectedCharacter = item.character" />
+      <text class="row-label" x="55" [class.inactive]="item.character.status === 'inactive'" [class.retired]="item.character.status === 'retired'"
+        [attr.y]="rowY(rowIndex) - 2" (click)="chart.selectedCharacter = item.character">
+        <tspan [style.text-decoration]="item.character.status === 'retired' ? 'line-through' : 'none'"
+          [style.font-style]="item.character.status === 'inactive' ? 'italic' : 'normal'">{{ item.character.shortName }}</tspan>
+        ({{ visibleCount(item) }})
+      </text>
+      @for (point of displayedPoints(item); track point.dateKey) {
+        <g><title>{{ item.character.name }}: {{ formatPointDate(point) }} ({{ point.count }} chat{{ point.count === 1 ? '' : 's' }})</title>
+          <rect class="histogram-bar" [attr.x]="barX(point)" [attr.y]="rowY(rowIndex) - barHeight(point)"
+            [attr.width]="barWidth" [attr.height]="barHeight(point)" [attr.fill]="color(item.character.id)" />
+          @if (point.count > 1) { <text class="bar-count" [attr.x]="barX(point) + barWidth / 2"
+            [attr.y]="rowY(rowIndex) - 3">{{ point.count }}</text> }
+        </g>
+      }
+    }
+    @for (era of visibleEras; track era.label) {
+      <text class="era-label foreground-label" [attr.x]="(eraStartX(era) + eraEndX(era)) / 2" [attr.y]="droughtLabelY">{{ era.label }}</text>
+    }
+    @if (showDrought) { <text class="drought-label foreground-label" [attr.x]="(droughtStartX + droughtEndX) / 2"
+      [attr.y]="droughtLabelY">History drought</text> }
+    <line class="axis-line" [attr.x1]="plotStartX" [attr.x2]="plotEndX" [attr.y1]="axisY" [attr.y2]="axisY" />
+  </svg>
+</section>

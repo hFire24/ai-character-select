@@ -1,0 +1,38 @@
+<section class="date-range" aria-label="Chart date range">
+  <strong>Date range</strong>
+  <div class="date-range-presets" aria-label="Chart zoom level">
+    <span class="zoom-label">Zoom</span>
+    @for (days of [7, 15, 30, 60, 120]; track days) {
+      <button type="button" [class.active]="isZoomLevel(days)" [attr.aria-pressed]="isZoomLevel(days)" (click)="setRecentDays(days)">{{ days }} days</button>
+    }
+    <button type="button" [class.active]="chart.zoomLevel === 'full'" [attr.aria-pressed]="chart.zoomLevel === 'full'" (click)="reset()">Full</button>
+    <button type="button" [class.active]="chart.zoomLevel === 'custom'" [attr.aria-pressed]="chart.zoomLevel === 'custom'" (click)="setCustom()">Custom</button>
+  </div>
+  @if (hasSlidingZoom) {
+    <div class="zoom-window">
+      <label class="zoom-slider">
+        <span>Move date window</span>
+        <input type="range" min="0" [max]="sliderMaximum" step="1" [value]="sliderValue"
+          aria-label="Start date; use arrow keys to move one day or Shift plus arrow keys to move by the zoom level"
+          (input)="updateSlider($any($event.target).value)" />
+        <small>{{ formatDate(selectedStart) }} &ndash; {{ formatDate(selectedEnd) }}</small>
+      </label>
+      <div class="zoom-navigation">
+        <button type="button" class="zoom-step" [disabled]="!canMoveBackward"
+          [attr.aria-label]="'View the previous ' + slidingZoomDays + ' days'" (click)="moveWindow(-1)">&larr; {{ slidingZoomDays }} days</button>
+        <label class="zoom-start-date"><span>Start date</span><input type="date" [ngModel]="chart.selectedStartDate"
+          [min]="chart.datasetStartDate" [max]="latestStartDate" (ngModelChange)="updateStartDate($event)" /></label>
+        <button type="button" class="zoom-step" [disabled]="!canMoveForward"
+          [attr.aria-label]="'View the next ' + slidingZoomDays + ' days'" (click)="moveWindow(1)">{{ slidingZoomDays }} days &rarr;</button>
+      </div>
+      <small class="zoom-help">Arrow keys move one day. Shift + Left/Right moves {{ slidingZoomDays }} days.</small>
+    </div>
+  } @else if (chart.zoomLevel === 'custom') {
+    <div class="date-range-fields">
+      <label><span>From</span><input type="date" [ngModel]="chart.selectedStartDate" [min]="chart.datasetStartDate"
+        [max]="chart.selectedEndDate" (ngModelChange)="updateCustomStart($event)" /></label>
+      <label><span>To</span><input type="date" [ngModel]="chart.selectedEndDate" [min]="chart.selectedStartDate"
+        [max]="chart.datasetEndDate" (ngModelChange)="updateCustomEnd($event)" /></label>
+    </div>
+  }
+</section>

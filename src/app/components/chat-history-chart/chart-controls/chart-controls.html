@@ -1,0 +1,14 @@
+<section class="chart-controls" aria-label="Filter and sort chart characters">
+  <label><span>Filter by status</span><select [(ngModel)]="chart.statusFilter">
+    <option value="all">All statuses</option>
+    @for (status of chart.availableStatuses; track status) { <option [value]="status">{{ status }}</option> }
+  </select></label>
+  <label><span>Sort by</span><select [(ngModel)]="chart.sortBy">
+    <option value="added">Added order</option><option value="name">Name</option><option value="id">ID</option>
+    <option value="count">Chats in range</option><option value="first">First activity</option><option value="latest">Latest activity</option>
+  </select></label>
+  <button type="button" class="sort-direction" (click)="chart.toggleSortDirection()">
+    {{ chart.sortDirection === 'asc' ? 'Ascending' : 'Descending' }} <span aria-hidden="true">{{ chart.sortDirection === 'asc' ? '↑' : '↓' }}</span>
+  </button>
+  <small>{{ chart.displayedSeries.length }} of {{ chart.series.length }} shown</small>
+</section>

@@ -1,0 +1,37 @@
+<section class="character-picker" aria-label="Add a character">
+  <div class="picker-heading">
+    <div class="picker-copy">
+      <strong>Add characters</strong>
+      <span>Search by short name or enter a complete ID.</span>
+    </div>
+    <div class="picker-actions">
+      @if (chart.availableCharactersWithVisibleHistory.length > 0) {
+        <button class="add-all-button" type="button" [disabled]="chart.isLoading" (click)="chart.addAllCharacters()">Add all characters</button>
+      }
+      @if (chart.series.length > 0) {
+        <button type="button" class="picker-clear-button" (click)="chart.clearCharacters()">Clear all</button>
+      }
+      @if (chart.hasCharactersWithoutVisibleHistory) {
+        <button type="button" class="picker-clear-button" (click)="chart.removeCharactersWithoutVisibleHistory()">Clear empty</button>
+      }
+    </div>
+  </div>
+  <div class="character-search">
+    <input type="search" [(ngModel)]="chart.searchTerm" placeholder="Search by ID or short name"
+      aria-label="Search by character ID or short name" autocomplete="off"
+      [disabled]="chart.isLoading || chart.characters.length === 0" (keydown.enter)="chart.addCharacter()" />
+    @if (chart.searchTerm.trim()) {
+      <div class="search-results">
+        @for (character of chart.searchResults; track character.id) {
+          <button class="search-result" type="button" [class.selected]="chart.isCharacterSelected(character.id)" (click)="chart.addCharacter(character)">
+            <img [src]="iconPath(character)" alt="" (error)="useUnknownIcon($event)" />
+            <span class="result-details"><strong>{{ character.shortName }}</strong><small>ID {{ character.id }} &middot; {{ chart.historyCount(character.id) }} history entries</small></span>
+            <span class="add-icon" aria-hidden="true">{{ chart.isCharacterSelected(character.id) ? '−' : '+' }}</span>
+          </button>
+        } @empty {
+          <p class="no-results">No character with chat history matches that search.</p>
+        }
+      </div>
+    }
+  </div>
+</section>
