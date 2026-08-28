@@ -264,7 +264,17 @@ export class CharacterModal {
   private createChatFlavor(rank: number, total: number, poolDescription: string): ChatFlavor {
     let label: ChatFlavor['label'];
 
-    if (total === 1) label = 'Plain';
+    const smallPoolLabels: Partial<Record<number, ChatFlavor['label'][]>> = {
+      1: ['Bitter'],
+      2: ['Sweet', 'Bitter'],
+      3: ['Sweet', 'Plain', 'Bitter'],
+      4: ['Very Sweet', 'Sweet', 'Bitter', 'Very Bitter'],
+      5: ['Very Sweet', 'Sweet', 'Plain', 'Bitter', 'Very Bitter'],
+      6: ['Very Sweet', 'Sweet', 'Semi-Sweet', 'Semi-Bitter', 'Bitter', 'Very Bitter']
+    };
+    const smallPoolLabel = smallPoolLabels[total]?.[rank - 1];
+
+    if (smallPoolLabel) label = smallPoolLabel;
     else if (rank === 1) label = 'Very Sweet';
     else if (rank === total) label = 'Very Bitter';
     else {

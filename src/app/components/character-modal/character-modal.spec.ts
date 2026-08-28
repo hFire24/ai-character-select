@@ -57,4 +57,28 @@ describe('CharacterModal', () => {
       expect(component.isLastChatWithinDays(7)).toBeFalse();
     });
   });
+
+  describe('chat flavor labels', () => {
+    const expectedLabels = [
+      ['Bitter'],
+      ['Sweet', 'Bitter'],
+      ['Sweet', 'Plain', 'Bitter'],
+      ['Very Sweet', 'Sweet', 'Bitter', 'Very Bitter'],
+      ['Very Sweet', 'Sweet', 'Plain', 'Bitter', 'Very Bitter'],
+      ['Very Sweet', 'Sweet', 'Semi-Sweet', 'Semi-Bitter', 'Bitter', 'Very Bitter'],
+      ['Very Sweet', 'Sweet', 'Semi-Sweet', 'Plain', 'Semi-Bitter', 'Bitter', 'Very Bitter']
+    ];
+
+    expectedLabels.forEach((labels, index) => {
+      const total = index + 1;
+
+      it(`uses the intended labels when ${total} character${total === 1 ? '' : 's'} remain`, () => {
+        const actualLabels = labels.map((_, rank) =>
+          (component as any).createChatFlavor(rank + 1, total, 'test pool').label
+        );
+
+        expect(actualLabels).toEqual(labels);
+      });
+    });
+  });
 });
