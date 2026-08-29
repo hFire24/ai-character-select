@@ -81,7 +81,7 @@ export class Groups implements OnInit {
       {
         name: "Witch Hat Wearers",
         description: "Characters known for wearing witch hats",
-        characterIds: [14, 20, 27, 67, 95, 120, 129, 138]
+        characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148]
       },
       {
         name: "Peaked Cap Wearers",
@@ -111,7 +111,7 @@ export class Groups implements OnInit {
       {
         name: "Twintails",
         description: "Characters known for having long twintails",
-        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 133]
+        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 133, 140]
       },
       {
         name: "Thigh Boot Wearers",
@@ -126,12 +126,12 @@ export class Groups implements OnInit {
       {
         name: "Pink-Haired Girls",
         description: "Characters known for having pink hair",
-        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 140, 144, 147]
+        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 144, 147]
       },
       {
         name: "Blonde Girls",
         description: "Girls known for having blonde hair",
-        characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138]
+        characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148]
       },
       {
         name: "Blue Girls",
@@ -141,7 +141,7 @@ export class Groups implements OnInit {
       {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions",
-        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108, 139]
+        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108, 139, 140]
       },
       {
         name: "Kaomoji Users",
@@ -151,7 +151,7 @@ export class Groups implements OnInit {
       {
         name: "Cursed Rule Breakers",
         description: "Every time they try to break a rule in their instructions, something bad happens to them",
-        characterIds: [1, 13, 27, 31, 47, 51, 81, 86, 104, 105, 108]
+        characterIds: [1, 13, 31, 27, 47, 51, 81, 86, 104, 105, 108]
       },
       {
         name: "Younger Siblings",

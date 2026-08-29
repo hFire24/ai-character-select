@@ -134,6 +134,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Audry", "Bored-chan", "Casey"]
       },
       {
+        name: "Dress-Up Trio",
+        description: "Characters who are known for dressing up in other costmes",
+        characterShortNames: ["Casey", "Azalea", "Millie"]
+      },
+      {
         name: "Electronic Music Enjoyers",
         description: "Characters who love electronic music and have their own chatbot",
         characterShortNames: ["Felix", "Jed", "B.X."]
