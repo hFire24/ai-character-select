@@ -1614,11 +1614,6 @@
     },
     {
       "id1": 38,
-      "id2": 90,
-      "name": "Fairy Tale Enthusiasts"
-    },
-    {
-      "id1": 38,
       "id2": 94,
       "name": "Innocent Fairytale Girls"
     },
@@ -1636,6 +1631,11 @@
       "id1": 38,
       "id2": 134,
       "name": "Promoters of Innocence"
+    },
+    {
+      "id1": 38,
+      "id2": 146,
+      "name": "Fairy Tale Enthusiasts"
     },
     {
       "id1": 38,
