@@ -1421,6 +1421,11 @@
       "name": "Twintailed Goth Girls"
     },
     {
+      "id1": 31,
+      "id2": 149,
+      "name": "Evil Girls"
+    },
+    {
       "id1": 32,
       "id2": 34,
       "name": "Sin & Virtue",
@@ -2056,6 +2061,11 @@
       "name": "Short Pink-Haired Top Hat Wearers"
     },
     {
+      "id1": 58,
+      "id2": 148,
+      "name": "Innocent Belles"
+    },
+    {
       "id1": 59,
       "id2": 60,
       "name": "Cute Brawn and Brains",
@@ -2578,6 +2588,11 @@
       "name": "Curious Sisters"
     },
     {
+      "id1": 125,
+      "id2": 147,
+      "name": "Big Hat Rejecters"
+    },
+    {
       "id1": 129,
       "id2": 130,
       "name": "Big Sister Frenemies"
@@ -2621,6 +2636,11 @@
       "id1": 145,
       "id2": 147,
       "name": "Pink-Haired Fairytale Girls"
+    },
+    {
+      "id1": 147,
+      "id2": 148,
+      "name": "Dress-Up Doll Girls"
     }
   ]
 }

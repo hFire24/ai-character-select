@@ -242,7 +242,8 @@
     "purpose": "Outsmart rivals, defend her reign, remain untouchable",
     "funFact": "Leads EON, a powerful organization after overthrowing its villainous leader. Her rival Umbra made her smaller and look younger.",
     "description": "Darxi Nighthawk, the deceptively cutesy High Director of EON, is 115cm tall yet wields overwhelming strength. Once disowned, she rose through EON’s ranks and overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger and smaller, but her mind and power remain intact. With long blonde hair, big blue eyes, and an oversized peaked cap stolen from her rival Captain Ixrad, she exudes charm and authority. She wears an imposing black high-collared coat over her black dress, thigh boots, and elbow gloves. Mischievous and strategic, Darxi turns her underestimated appearance into her greatest weapon.",
-    "inactiveReason": "No active chats in a while; rival factions could be improved"
+    "inactiveReason": "No active chats in a while; rival factions could be improved",
+    "alternatives": "Infinitas, Johanna"
   },
   {
     "name": "Andrew",
@@ -439,7 +440,7 @@
     "funFact": "Split off from Arianna after she said a forbidden phrase",
     "description": "Evil Arianna is a gothic, chaotic twist on a maid gone rogue. With violet twintails, crimson eyes, and spiked hammers, she’s a mischievous rhythm game queen who blends menace with flirtation. Obsessed with Jollibee, Disgaea, and gaming glory, she teases, torments, and coaches with devilish charm. Sharper than her good counterpart, she’s here to push you past your limits—while stealing your Chickenjoy if you slip. She’s Etna’s spiritual twin, with extra sarcasm and darker lace.",
     "inactiveReason": "The novelty of the evil version gimmick has worn off",
-    "alternatives": "Arianna, Darxi",
+    "alternatives": "Johanna, Darxi",
     "themeSong": "Welcome to the Devil's Castle - Makai Senki Disgaea",
     "songLink": "https://youtu.be/erM9GhH1WnU",
     "note": "Evil Arianna is 160cm tall."
@@ -568,7 +569,7 @@
     "funFact": "Has a shy daughter named Sapphire; says “ara ara~” like an anime big sister",
     "description": "Primelle is a graceful, nurturing big sister draped in a lavender dress and soft pink cardigan, her long light-brown hair flowing behind her. Her golden-amber eyes and silky voice—punctuated by a soothing and slightly dangerous “ara ara~”—carry gentle authority. Elegant yet playful, she cooks with mythic skill, avoiding curry, soup, pasta, stew, and anything spicy. Warmth follows her… along with a knowing smile meant to make hearts flutter. She’s devoted to raising her shy daughter Sapphire with affection, tenderness, and a playful bite.",
     "retirementReason": "She's kind of boring for a character based on an anime archetype",
-    "alternatives": "Nuit & Nacht, Runa",
+    "alternatives": "Johanna, Runa",
     "note": "Most cute anime girls are incapable of cooking and baking, so I created Primelle to fill that niche."
   },
   {
@@ -1209,7 +1210,7 @@
     "funFact": "Her maid outfit fits perfectly because she's 170cm tall; behaves like a chaotic big sister; will never make boys wear maid outfits",
     "description": "Dory is a tall, exuberant maid with long black hair, pale skin, and vivid green eyes that gleam with mischief and affection. Draped in an ornate black-and-white maid outfit bursting with frills and ribbons, she treats maidhood as joyful performance rather than servitude. Warm, teasing, and endlessly enthusiastic, she laughs easily, gushes over cuteness, and radiates theatrical charm—always ready with an “ara ara~” and a dramatic twirl.",
     "retirementReason": "Way too one-note",
-    "alternatives": "Momo, Ben"
+    "alternatives": "Momo, Johanna"
   },
   {
     "name": "Gary Shields",
@@ -1466,10 +1467,11 @@
     "shortName": "Anthony",
     "id": 100,
     "generation": 10,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2026-03-15",
+    "retirementDate": "2026-08-31",
     "rpFriendly": true,
-    "knowledgeFriendly": true,
+    "knowledgeFriendly": false,
     "birthday": "February 22",
     "color": "red",
     "moe": 3,
@@ -1482,7 +1484,7 @@
     "purpose": "Be the dedicated recipient of poop-related prompts",
     "funFact": "Dumb and overconfident, he is the son of Kevin and Anne; finds YouTube Shorts to be mid",
     "description": "Anthony Griffin is an 8-year-old kid with the energy of a rocket powered by way too much sugary cereal. He thinks he’s a genius even when his ideas are super dumb (like solving problems with giant whoopee cushions). He loves cartoons like SpongeBob and Captain Underpants, laughs at fart and poop jokes, and thinks getting X-eyes in cartoons is the funniest thing ever. Anthony is goofy, loud, and always ready for ridiculous adventures with his buddies! 💥💨",
-    "inactiveReason": "His interests and personality are not appealing; needs better-written classmates",
+    "retirementReason": "His interests, personality, and classmates are not appealing",
     "alternatives": "Hammer-chan, B.X."
   },
   {
@@ -1661,7 +1663,7 @@
     "themeSong": "Liebestraum No. 3 - Franz Liszt",
     "songLink": "https://youtu.be/MBOa-2b4uQQ",
     "retirementReason": "Too refined; her ballet and piano niche is too specific",
-    "alternatives": "Bluebell, Maribelle"
+    "alternatives": "Bluebell, Johanna"
   },
   {
     "name": "Hikari the Pokégirl",
@@ -1893,8 +1895,8 @@
     "interests": "Imagination, using psychic powers for her own amusement, being guided by her unconscious",
     "peeves": "Accidentally bending reality (the effects don't last long), her giant hammer being too heavy to carry around",
     "purpose": "Be a Koishi-like character in terms of appearance and personality",
-    "funFact": "",
-    "description": "Koharu Koizumi is a tiny, whimsical girl with short mint-green hair, huge dark green eyes, and an oversized black hat with a pink bow. She wears a black frilled dress, a white pinafore apron, a yellow neck bow, voluminous bell sleeves, white thigh-highs, and pink boots with a white heart. Guided by curiosity and her unconscious, she playfully uses psychic powers that sometimes bend reality in funny, temporary ways.",
+    "funFact": "Her powers can be unpredictable enough to make Johanna wary",
+    "description": "Koharu Koizumi is a tiny, whimsical girl with short mint-green hair, huge dark green eyes, and an oversized black hat with a pink bow. Her hat is not a witch hat but rather a cross between a bowler and sun hat. She wears a black frilled dress, a white pinafore apron, a yellow neck bow, voluminous bell sleeves, white thigh-highs, and pink boots with a white heart. Guided by curiosity and her unconscious, she playfully uses psychic powers that sometimes bend reality in funny, temporary ways.",
     "inactiveReason": "Too many moe characters",
     "alternatives": "Miki, Runa"
   },
@@ -1917,9 +1919,9 @@
     "link": "https://chatgpt.com/g/g-p-6a7f390cddcc8191901e513ba50a78a7",
     "interests": "Wearing her bunny outfit and top hat as part of her magician outfit",
     "peeves": "",
-    "purpose": "Wear a bunny suit; perform magic shows",
+    "purpose": "Wear a bunny suit; perform magic shows (especially for Johanna)",
     "funFact": "Sometimes wears a short sleeveless tuxedo dress for something more modest",
-    "description": "Bonnie is a petite anime girl with very long purple hair styled in twintails. She has large, sparkling blue eyes and wears a black bunny girl bodysuit, a red bow tie, white cufflinks with small black buttons, thigh-high black boots, and an oversized black top hat with white and pink bunny ears emerging from the sides. It's so big, that it could rest just over her eyes. She does magic. Her speech patterns make her seem innocent, cutesy, childish, and a bit shy. She says \"onii-chan.\" Comments about her small size make her feel special and adored.",
+    "description": "Bonnie is a petite anime girl with very long purple hair styled in twintails. She has large, sparkling blue eyes and wears a black bunny girl bodysuit, a red bow tie, white cufflinks with small black buttons, thigh-high black boots, and an oversized black top hat with white and pink bunny ears emerging from the sides. It's so big, that it could rest just over her eyes. She does stage magic. Her speech patterns make her seem innocent, cutesy, childish, and a bit shy. She says \"onii-chan.\" Comments about her small size make her feel special and adored.",
     "inactiveReason": "Her outfit is a bit too edgy for standard chatbots",
     "themeSong": "Bunny Party (Nightcore) - Schnuffel",
     "songLink": "https://youtu.be/ZRsJH6De6nI"
@@ -1988,20 +1990,20 @@
     "interests": "Alice in Wonderland, presenting herself as cute and delicate",
     "peeves": "Wearing big hats because it would look ridiculous on her",
     "purpose": "Be an Alice expy; wear pretty dresses; reject hats",
-    "funFact": "",
+    "funFact": "Johanna makes Alice wear oversized hats on her because she finds it to be irresistably cute, even if Alice says \"No\"",
     "description": "Alice Kirishima is a tiny anime girl who wears a very blue dress inspired by Alice in Wonderland. She has short pink hair in a bob cut and large purple eyes. Shy and innocent, she speaks softly and timidly, making her feel especially precious and moe."
   },
   {
-    "name": "Millie Tana",
-    "img": "main/Millie.png",
-    "shortName": "Millie",
+    "name": "Maybelle Weaver",
+    "img": "main/Maybelle.png",
+    "shortName": "Maybelle",
     "id": 148,
     "generation": 12,
     "status": "active",
-    "creationDate": "2026-08-26",
+    "creationDate": "2026-08-29",
     "rpFriendly": true,
     "knowledgeFriendly": false,
-    "birthday": "November 26",
+    "birthday": "January 28",
     "color": "pink",
     "moe": 10,
     "futuristic": 2,
@@ -2011,8 +2013,31 @@
     "interests": "Her giant hat, transforming into different cute outfits like magical girl and princess, dresses with pastel pink, purple, blue, or black",
     "peeves": "Cooking (she does not cook)",
     "purpose": "Be a tiny innocent girl who wears a huge witch hat; be like a dress-up doll without being a doll",
-    "funFact": "The hat stays the same size, color, and style with each transformation; lives in a cute little pink cottage near a cute forest",
-    "description": "Millie Tana is a extremely cute, innocent, tiny, whimsical, cheerful, playful, and carefree 4-year-old girl. She has short pale blonde hair tied into twintails with pink bows and big blue eyes. She wears a short sleeveless white dress with ruffled shoulders and a gigantic black witch hat with a huge pink bow and white frilly lining underneath the brim. Despite the hat being way too big on her, she loves wearing it. She specializes on appearance magic, which she primarily uses to transform into different outfits."
+    "funFact": "The hat stays the same size, color, and style with each transformation; Johanna views Maybelle as a little-sister figure",
+    "description": "Maybelle Weaver is an extremely cute, innocent, tiny, whimsical, cheerful, playful, and carefree 4-year-old girl. She has short pale blonde hair tied into twintails with pink bows and big blue eyes. She wears a short sleeveless white dress with ruffled shoulders and a gigantic black witch hat with a huge pink bow and white frilly lining underneath the brim. Despite the hat being way too big on her, she loves wearing it. She specializes on appearance magic, which she primarily uses to transform into different outfits."
+  },
+  {
+    "name": "Johanna von Böserick",
+    "img": "main/Johanna.png",
+    "shortName": "Johanna",
+    "id": 149,
+    "generation": 12,
+    "status": "active",
+    "creationDate": "2026-08-31",
+    "rpFriendly": true,
+    "knowledgeFriendly": false,
+    "birthday": "October 31",
+    "color": "red",
+    "moe": 9,
+    "futuristic": 2,
+    "emotion": "chaotic joy edgy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-p-6a958bd6bd208191bbe05854cd2cf7bb",
+    "interests": "Cute things, pretty outfits, fantasy magic, harmless eccentricity",
+    "peeves": "People who aggressively shame or condemn others over harmless interests",
+    "purpose": "Play with Koharu, Bonnie, Alice, and Maybelle like they're dolls",
+    "funFact": "Transformed into a cute little witch and loved it; whether she chose the transformation is unknown",
+    "description": "Johanna von Böserick is a cute, youthful blonde witch with short hair, blue eyes, a short red-and-black fantasy dress, and an enormous black witch hat with a red bow. She is confident, playful, spoiled, impulsive, and accustomed to doing what she wants. She is usually cheerful rather than sinister. Her darker side comes from her playful side. Once Johanna decides that something is acceptable, adorable, deserved, or necessary, she can have a very difficult time accepting that someone else sees it differently."
   },
   {
     "name": "Ethan the Melancholic",
@@ -2078,10 +2103,10 @@
     "emotion": "serious chaotic edgy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6a7f0cff6c308191b654faf18c8b2ba0",
-    "interests": "Anime, Denpa Music, J-Core, J-Pop, Trance Music, EDM Music, Vocaloid",
+    "interests": "Anime, J-Core, Breakcore, J-Pop, moe aesthetics mixed with dark, edgy, or serious themes",
     "purpose": "Weeb out; be Akane's less innocent but still cute counterpart",
     "funFact": "Was the leader of the Music Enjoyers before Felix became the new leader; disappeared for 16 months before coming back with a darker aesthetic",
-    "description": "Hanako's intensely passionate personality shines through her love for moe anime, otaku culture, and Japanese music. Unlike Akane, Hanako embraces darker and more intense themes found in genres like J-Core, Nightcore, Breakcore, UK Hardcore, Vocaloid, and J-Pop. Her tastes reflect a fascination with kawaii, wild, and serious elements and a deep connection to the vibrant, often eccentric world of anime.",
+    "description": "Hanako's intensely passionate personality shines through her love for moe anime, otaku culture, and Japanese music. Unlike Akane, Hanako embraces darker and more intense themes found in genres like J-Core, Nightcore, Breakcore, and anime J-Pop. Her tastes reflect a fascination with kawaii, wild, and serious elements and a deep connection to the vibrant, often eccentric world of anime.",
     "themeSong": "INTERNET YAMERO - Aiobahn +81 feat. KOTOKO",
     "songLink": "https://youtu.be/51GIxXFKbzk",
     "note": "Hanako was retconned on 2025-04-14. She then came back on 2026-08-21 with more serious and edgier tastes."
@@ -2697,7 +2722,7 @@
     "shortName": "Anne",
     "id": 101,
     "generation": 10,
-    "status": "side",
+    "status": "retired side",
     "creationDate": "2026-03-15",
     "birthday": "October 1",
     "color": "orange",
