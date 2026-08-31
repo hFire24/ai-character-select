@@ -138,10 +138,19 @@ describe('CharacterFilterPipe', () => {
     });
 
     it('should filter retired characters', () => {
-      const filters: CharacterFilters = { active: false, inactive: false, retired: true, side: false };
+      const filters: CharacterFilters = { active: false, inactive: false, retired: true, superRetired: false, side: false };
       const result = pipe.transform(mockCharacters, filters);
       expect(result.length).toBe(1);
       expect(result[0].shortName).toBe('Retired1');
+    });
+
+    it('should filter only tier 9 retired characters as super retired', () => {
+      const filters: CharacterFilters = { active: false, inactive: false, retired: false, superRetired: true, side: false };
+      const superRetiredCharacter = {
+        ...mockCharacters[1], id: 5, shortName: 'SuperRetired1', tier: 9
+      };
+      const result = pipe.transform([...mockCharacters, superRetiredCharacter], filters);
+      expect(result.map(character => character.shortName)).toEqual(['SuperRetired1']);
     });
 
     it('should filter side characters', () => {
@@ -200,6 +209,15 @@ describe('CharacterFilterPipe', () => {
       };
       const result = pipe.transform(mockCharacters, options);
       expect(result.length).toBe(3); // Active1, MoeChar, Retired1
+    });
+
+    it('should include tier 9 characters in the advanced retired filter', () => {
+      const tierNineRetired = { ...mockCharacters[1], id: 5, tier: 9 };
+      const result = pipe.transform(
+        [...mockCharacters, tierNineRetired],
+        { status: { retired: true } }
+      );
+      expect(result).toEqual([mockCharacters[1], tierNineRetired]);
     });
 
     it('should filter active characters without stored chats using advanced options', () => {

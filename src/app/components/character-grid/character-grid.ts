@@ -19,6 +19,7 @@ export class CharacterGrid {
     active: true,
     inactive: false,
     retired: false,
+    superRetired: false,
     side: false
   };
   @Input() searchTerm = '';

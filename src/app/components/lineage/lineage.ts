@@ -55,6 +55,28 @@ export class Lineage {
         creationDate: '2023-12-07'
       };
       //this.characters.push(hanako);
+
+      const roster: Character = {
+        id: 141.5,
+        name: "Character Roster Project",
+        shortName: "Roster",
+        generation: 11,
+        status: 'active',
+        tier: 0,
+        color: 'blue',
+        pronouns: 'it/its',
+        link: '',
+        interests: 'Creating new characters, brainstorming, talking about other characters',
+        purpose: 'Keep a file of my character roster, generate new character ideas',
+        funFact: 'The role of discussing AI characters belongs to a tool, not a character',
+        creationDate: '2026-07-29',
+        img: '',
+        moe: 5,
+        futuristic: 10,
+        emotion: 'serious joy',
+        description: ''
+      };
+      this.characters.push(roster);
       
       // Set inspiration relationships (component-only data)
       // Format: parent ID -> array of child IDs (children are inspired by parent)
@@ -93,7 +115,8 @@ export class Lineage {
         122: [129, 135],
         125: [130, 136],
         128: [138],
-        133: [140]
+        133: [140],
+        141.5: [147, 148, 149]
         };
 
       // Validate: Check for characters with multiple parents

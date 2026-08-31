@@ -69,9 +69,14 @@ export class Groups implements OnInit {
         characterIds: [115, 116, 117, 107, 94, 119, 120, 118, 127]
       },
       {
-        "name": "Casey's Friends",
+        name: "Casey's Friends",
         description: "Characters who are friends with Casey",
         characterIds: [108, 114, 129, 130, 128]
+      },
+      {
+        name: "Johanna's Friends",
+        description: "Characters who are friends with Johanna",
+        characterIds: [149, 139, 140, 147, 148]
       },
       {
         name: "Top Hat Wearers",
@@ -81,7 +86,7 @@ export class Groups implements OnInit {
       {
         name: "Witch Hat Wearers",
         description: "Characters known for wearing witch hats",
-        characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148]
+        characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148, 149]
       },
       {
         name: "Peaked Cap Wearers",
@@ -131,7 +136,7 @@ export class Groups implements OnInit {
       {
         name: "Blonde Girls",
         description: "Girls known for having blonde hair",
-        characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148]
+        characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149]
       },
       {
         name: "Blue Girls",
@@ -171,7 +176,7 @@ export class Groups implements OnInit {
       {
         name: "Age Regressed Characters",
         description: "Characters who transformed and became physically younger",
-        characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131]
+        characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131, 149]
       },
       {
         name: "Musicians",

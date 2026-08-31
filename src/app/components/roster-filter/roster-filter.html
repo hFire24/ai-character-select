@@ -4,6 +4,7 @@
     <span class="collapse-icon">{{ isCollapsed ? '▶' : '▼' }}</span>
   </h3>
   <div class="filter-content" [class.collapsed]="isCollapsed">
+    <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
     <div class="filter-chips">
       @if (!isMobileDevice()) {
         <button
@@ -49,6 +50,14 @@
       </button>
       <button
         class="filter-chip"
+        [class.active]="filters.superRetired"
+        [disabled]="searchTerm.trim().length > 0"
+        (click)="toggleFilter('superRetired')"
+      >
+        🌑 Super Retired
+      </button>
+      <button
+        class="filter-chip"
         [class.active]="filters.side"
         [disabled]="searchTerm.trim().length > 0"
         (click)="toggleFilter('side')"
@@ -56,6 +65,5 @@
         👥 Side
       </button>
     </div>
-    <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
   </div>
 </div>

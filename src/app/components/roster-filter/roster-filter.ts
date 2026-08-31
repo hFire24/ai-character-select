@@ -3,7 +3,7 @@ import { CharacterFilters } from '../../pipes/character-filter.pipe';
 import { DeviceService } from '../../services/device.service';
 import { SearchBar } from '../search-bar/search-bar';
 
-type RosterFilterType = 'activeChats' | 'activeNoChats' | 'active' | 'inactive' | 'retired' | 'side';
+type RosterFilterType = 'activeChats' | 'activeNoChats' | 'active' | 'inactive' | 'retired' | 'superRetired' | 'side';
 
 @Component({
   selector: 'app-roster-filter',
@@ -39,6 +39,7 @@ export class RosterFilter {
         newFilters.active = false;
         newFilters.inactive = false;
         newFilters.retired = false;
+        newFilters.superRetired = false;
         newFilters.side = false;
       } else {
         newFilters[filterType] = false;
@@ -50,7 +51,7 @@ export class RosterFilter {
       newFilters[filterType] = !newFilters[filterType];
 
       const hasActiveStatusFilter =
-        newFilters.active || newFilters.inactive || newFilters.retired || newFilters.side;
+        newFilters.active || newFilters.inactive || newFilters.retired || newFilters.superRetired || newFilters.side;
       if (!hasActiveStatusFilter) {
         newFilters[filterType] = true;
       }

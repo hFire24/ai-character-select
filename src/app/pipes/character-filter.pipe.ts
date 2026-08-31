@@ -9,6 +9,7 @@ export interface CharacterFilters {
   active: boolean;
   inactive: boolean;
   retired: boolean;
+  superRetired?: boolean;
   side: boolean;
 }
 
@@ -139,7 +140,8 @@ export class CharacterFilterPipe implements PipeTransform {
     return characters.filter(character => {
       if (character.status === 'active' && filters.active) return true;
       if (character.status === 'inactive' && filters.inactive) return true;
-      if (character.status === 'retired' && filters.retired) return true;
+      if (character.status === 'retired' && character.tier !== 9 && filters.retired) return true;
+      if (character.status === 'retired' && character.tier === 9 && filters.superRetired) return true;
       
       const isMainCharacter = ['active', 'inactive', 'retired'].includes(character.status);
       if (!isMainCharacter && filters.side) return true;

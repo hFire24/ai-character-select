@@ -34,6 +34,7 @@ export class Roster {
     active: true,
     inactive: false,
     retired: false,
+    superRetired: false,
     side: false
   };
 
@@ -77,7 +78,7 @@ export class Roster {
   }
   
   get showingMainCharacters(): boolean {
-    return !!(this.filters.activeChats || this.filters.activeNoChats || this.filters.active || this.filters.inactive || this.filters.retired);
+    return !!(this.filters.activeChats || this.filters.activeNoChats || this.filters.active || this.filters.inactive || this.filters.retired || this.filters.superRetired);
   }
 
   get visibleCharacterCount(): number {
@@ -87,10 +88,6 @@ export class Roster {
 
   displayCharacter() {
     this.selectedCharacter = this.selectedCharacter; // Trigger modal display
-  }
-
-  openTierList() {
-    // Logic to open the tier list modal
   }
 
   onSearchChange(searchTerm: string) {
@@ -171,6 +168,7 @@ export class Roster {
         active: true,
         inactive: false,
         retired: false,
+        superRetired: false,
         side: false
       };
     }
