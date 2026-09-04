@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Character } from '../services/character.service';
 import { getStoredChatLink } from '../utils/chat-link-storage';
+import { MOE_THRESHOLD } from '../config/character-thresholds';
 
 // Simple status filter interface (for backwards compatibility)
 export interface CharacterFilters {
@@ -11,6 +12,11 @@ export interface CharacterFilters {
   retired: boolean;
   superRetired?: boolean;
   side: boolean;
+  rpFriendlyOnly?: boolean;
+  knowledgeFriendlyOnly?: boolean;
+  moeFemale?: boolean;
+  nonMoeFemale?: boolean;
+  male?: boolean;
 }
 
 // Comprehensive filter options interface
@@ -138,15 +144,23 @@ export class CharacterFilterPipe implements PipeTransform {
 
     // Apply filters based on character status
     return characters.filter(character => {
-      if (character.status === 'active' && filters.active) return true;
-      if (character.status === 'inactive' && filters.inactive) return true;
-      if (character.status === 'retired' && character.tier !== 9 && filters.retired) return true;
-      if (character.status === 'retired' && character.tier === 9 && filters.superRetired) return true;
+      let matchesStatus = false;
+      if (character.status === 'active' && filters.active) matchesStatus = true;
+      if (character.status === 'inactive' && filters.inactive) matchesStatus = true;
+      if (character.status === 'retired' && character.tier !== 9 && filters.retired) matchesStatus = true;
+      if (character.status === 'retired' && character.tier === 9 && filters.superRetired) matchesStatus = true;
       
       const isMainCharacter = ['active', 'inactive', 'retired'].includes(character.status);
-      if (!isMainCharacter && filters.side) return true;
-      
-      return false;
+      if (!isMainCharacter && filters.side) matchesStatus = true;
+
+      if (!matchesStatus) return false;
+      if (filters.rpFriendlyOnly && character.rpFriendly !== true) return false;
+      if (filters.knowledgeFriendlyOnly && character.knowledgeFriendly !== true) return false;
+
+      const isFemale = character.pronouns === 'she/her';
+      if (isFemale && character.moe >= MOE_THRESHOLD) return filters.moeFemale !== false;
+      if (isFemale) return filters.nonMoeFemale !== false;
+      return filters.male !== false;
     });
   }
 

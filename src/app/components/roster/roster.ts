@@ -35,7 +35,12 @@ export class Roster {
     inactive: false,
     retired: false,
     superRetired: false,
-    side: false
+    side: false,
+    rpFriendlyOnly: false,
+    knowledgeFriendlyOnly: false,
+    moeFemale: true,
+    nonMoeFemale: true,
+    male: true
   };
 
   // Sorting options
@@ -169,7 +174,12 @@ export class Roster {
         inactive: false,
         retired: false,
         superRetired: false,
-        side: false
+        side: false,
+        rpFriendlyOnly: false,
+        knowledgeFriendlyOnly: false,
+        moeFemale: true,
+        nonMoeFemale: true,
+        male: true
       };
     }
   }
