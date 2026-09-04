@@ -1,6 +1,6 @@
 .filter-section {
   position: relative;
-  z-index: 30;
+  z-index: 10;
   margin-top: 20px;
 	margin-bottom: 10px;
   padding: 15px;
@@ -55,7 +55,7 @@
   z-index: 1;
 
   &[open] {
-    z-index: 100;
+    z-index: 11;
   }
 
   &.disabled {
@@ -84,7 +84,7 @@
 
 .dropdown-panel {
   position: absolute;
-  z-index: 1000;
+  z-index: 12;
   top: calc(100% + 0.35rem);
   left: 0;
   min-width: 220px;

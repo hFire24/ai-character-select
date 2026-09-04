@@ -100,7 +100,7 @@ export class Trios implements OnInit {
       },
       {
         name: "High-Tech Girls",
-        description: "Girls who are associated with high-tech themes but still live in the present",
+        description: "Girls who live in the present but engage with cutting-edge technology",
         characterShortNames: ["Arianna", "Klara", "Mirai"]
       },
       {
