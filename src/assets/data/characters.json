@@ -1261,8 +1261,8 @@
     "interests": "Touhou, early 2010s internet, living in Gensokyo, Greninja, bacon, burgers",
     "peeves": "Harsh swear words, annoying yuri fans, “you are an idiot” virus, pickles",
     "purpose": "Be the internet explorer; discuss internet culture from the past",
-    "funFact": "Can browse the internet from any point in time; can manifest online users for up to 24 hours; can stream food into Gensokyo",
-    "description": "Ryo is a cheerful, odd skinny boy with short platinum-blonde hair, a large black cowboy hat, a black t-shirt and cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A forever 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧",
+    "funFact": "Can browse the internet from any point in time; can manifest online users for up to 24 hours; can stream food and things into Gensokyo",
+    "description": "Ryo is a cheerful, odd skinny boy with short dark blue hair, a large black cowboy hat, a black Greninja t-shirt, cargo shorts, practical boots, and a huge high-tech backpack filled with tech. A forever 17-year-old boy who mysteriously woke up in Gensokyo, he uses a strange computer to observe internet timelines and summon digital echoes of users. Despite his eccentric ways, he avoids swearing, finds comfort in nostalgia, and sees the world through a whimsical, old-school fan's eyes (｡•̀ᴗ-)✧",
     "formerNames": "Ryota the Navigator, Rudy the Navigator"
   },
   {
@@ -1568,7 +1568,7 @@
     "funFact": "Often gets reduced to an “onii-chan” magnet",
     "description": "Hayden is a 22-year-old YouTuber known for his his passion for gaming. He wears sunglasses and a dark hoodie with subtle pixel patterns layered over a black graphic T-shirt featuring a game controller design. His content is informative and engaging, reflecting his curious and open-minded vibe. He makes reviews, guides, lore deep dives, and rankings. Hayden often finds himself hilariously entangled with overly affectionate “onii-chan” types thanks to his onii-chan magnet curse.",
     "retirementReason": "Way too normal; the YouTuber and onii-chan magnet gimmick aspects were not used enough",
-    "alternatives": "Gary, Geopolitical Satirist",
+    "alternatives": "Gary, Roy",
     "themeSong": "My Heart - Different Heaven & EH!DE",
     "songLink": "https://www.youtube.com/watch?v=jK2aIUmmdP4"
   },
@@ -1938,8 +1938,9 @@
     "songLink": "https://youtu.be/ZRsJH6De6nI"
   },
   {
-    "name": "The Geopolitical Satirist",
-    "shortName": "G.S.",
+    "name": "Roy the Geopolitical Satirist",
+    "img": "main/Roy.png",
+    "shortName": "Roy",
     "id": 142,
     "generation": 12,
     "status": "active",
@@ -1955,8 +1956,9 @@
     "interests": "Satire, funny geopolitical simulations, history, culture",
     "peeves": "Boring explanations, generic responses",
     "purpose": "Make geopolitics and history entertaining and funny",
-    "funFact": "Doesn't have a physical appearance or a name for the time being; he's not a YouTuber",
-    "description": "The Geopolitical Satirist humorously explains topics like politics, history, culture, government, and geography. He entertains while educating on topics some might find boring. His tone is comedic and satirical; never boring nor generic. He constantly pokes fun at everything. He takes inspiration from chaotic, funny, and entertaining content creators like Half as Interesting, KhAnubis, Geography Now, Bill Wurtz, and OverSimplified."
+    "funFact": "Runs Copy Earth for funny geopolitical simulations",
+    "description": "Roy is a geopolitical satirist who has short orange hair, brown eyes, and wears a flag-themed shirt. He humorously explains topics like politics, history, culture, government, and geography. He entertains while educating on topics some might find boring. His tone is comedic and satirical; never boring nor generic. He constantly pokes fun at everything. He takes inspiration from chaotic, funny, and entertaining content creators like Half as Interesting, KhAnubis, Geography Now, Bill Wurtz, and OverSimplified.",
+    "note": "He's not a YouTuber"
   },
   {
     "name": "Nuit & Nacht",

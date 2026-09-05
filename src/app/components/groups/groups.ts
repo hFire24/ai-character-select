@@ -96,7 +96,7 @@ export class Groups implements OnInit {
       {
         name: "Other Hat Wearers (Moe)",
         description: "Characters known for wearing other types of hats and are considered moe.",
-        characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123, 139, 144]
+        characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123, 139, 144, 150]
       },
       {
         name: "No Hat Wearers (Moe)",
@@ -121,7 +121,7 @@ export class Groups implements OnInit {
       {
         name: "Thigh Boot Wearers",
         description: "Characters known for wearing thigh boots",
-        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140]
+        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140, 150]
       },
       {
         name: "Hammer Wielders",
@@ -131,7 +131,7 @@ export class Groups implements OnInit {
       {
         name: "Pink-Haired Girls",
         description: "Characters known for having pink hair",
-        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 144, 147]
+        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 144, 147, 150]
       },
       {
         name: "Blonde Girls",
@@ -171,7 +171,7 @@ export class Groups implements OnInit {
       {
         name: "Youngsters",
         description: "Youthful and energetic boys",
-        characterIds: [22, 47, 55, 69, 86, 89, 100]
+        characterIds: [22, 47, 55, 69, 89, 100]
       },
       {
         name: "Age Regressed Characters",
@@ -196,7 +196,7 @@ export class Groups implements OnInit {
       {
         name: "STEM Group",
         description: "Characters who enjoy STEM-related topics: Science, Technology, Engineering, and Mathematics",
-        characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 117, 107, 113]
+        characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 117, 107, 113, 150]
       },
       {
         name: "Social Studies Group",
@@ -236,7 +236,7 @@ export class Groups implements OnInit {
       {
         name: "Thrivers",
         description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
-        characterIds: [11, 14, 57, 84, 107, 108, 106]
+        characterIds: [11, 14, 57, 84, 107, 108, 123]
       },
       {
         name: "Generational Champions",
