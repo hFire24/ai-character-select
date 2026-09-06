@@ -201,7 +201,7 @@ export class Groups implements OnInit {
       {
         name: "Social Studies Group",
         description: "Characters who enjoy discussing topics related to social studies like history, geography, politics, or religion",
-        characterIds: [34, 47, 56, 57, 68, 78, 83, 90, 106, 116, 107, 127, 141, 142]
+        characterIds: [34, 56, 57, 68, 78, 83, 90, 106, 116, 107, 127, 141, 142]
       },
       {
         name: "Anti-Moe Crew",
