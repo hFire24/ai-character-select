@@ -210,6 +210,11 @@ export class Duos2 implements OnInit {
         "characterIds": [83, 84]
       },
       {
+        "name": this.findDuoName(73, 85),
+        "description": "Release Date: January 8, 2026",
+        "characterIds": [73, 85]
+      },
+      {
         "name": this.findDuoName(86, 88),
         "description": "Release Date: January 16, 2026",
         "characterIds": [86, 88]
@@ -350,9 +355,9 @@ export class Duos2 implements OnInit {
         "characterIds": [147, 148]
       },
       {
-        "name": this.findDuoName(149, 150),
-        "description": "Release Date: September 4, 2026",
-        "characterIds": [149, 150]
+        "name": this.findDuoName(150, 151),
+        "description": "Release Date: September 6, 2026",
+        "characterIds": [150, 151]
       }
     ];
 
