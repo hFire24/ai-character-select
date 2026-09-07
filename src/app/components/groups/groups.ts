@@ -101,7 +101,7 @@ export class Groups implements OnInit {
       {
         name: "No Hat Wearers (Moe)",
         description: "Characters known for wearing no hats but are still considered moe. Maid headdresses don't count.",
-        characterIds: [5, 8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134, 147, 151]
+        characterIds: [5, 8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134, 147, 151, 152]
       },
       {
         name: "Glasses Wearers",
@@ -161,12 +161,12 @@ export class Groups implements OnInit {
       {
         name: "Younger Siblings",
         description: "Characters who are younger siblings. ChaoMario isn't siblings with Max.",
-        characterIds: [69, 82, 110, 122, 125, 135, 136]
+        characterIds: [69, 82, 110, 122, 125, 135, 136, 152]
       },
       {
         name: "Older Siblings",
         description: "Characters who are older siblings. Max isn't siblings with ChaoMario.",
-        characterIds: [90, 81, 109, 129, 130, 122, 125]
+        characterIds: [90, 81, 109, 129, 130, 122, 125, 151]
       },
       {
         name: "Youngsters",
