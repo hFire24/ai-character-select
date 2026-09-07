@@ -43,6 +43,7 @@ describe('IdChecker', () => {
       tier: 2,
       color: 'red',
       moe: 3,
+      mature: 8,
       futuristic: 7,
       emotion: 'chaotic joy',
       pronouns: 'he/him',
@@ -50,7 +51,9 @@ describe('IdChecker', () => {
       interests: 'EDM music',
       purpose: 'Discuss music',
       funFact: 'Leader of the Music Enjoyers',
-      description: 'High-energy character'
+      description: 'High-energy character',
+      note: 'Returned as his own character.',
+      knowledgeFriendly: false
     };
 
     spyOn(characterService, 'getCharacter').and.returnValue(of(mockCharacter));
@@ -62,6 +65,15 @@ describe('IdChecker', () => {
     expect(component.character).toEqual(mockCharacter);
     expect(component.notFound).toBe(false);
     expect(component.searched).toBe(true);
+    fixture.detectChanges();
+    const element: HTMLElement = fixture.nativeElement;
+    expect(element.querySelector('.note-text')?.textContent).toContain(mockCharacter.note);
+    expect(element.querySelector('#checker-history')).not.toBeNull();
+    expect(element.textContent).toContain('No');
+
+    component.character = { ...mockCharacter, note: '' };
+    fixture.detectChanges();
+    expect(element.querySelector('#checker-notes')).toBeNull();
   });
 
   it('should handle invalid ID input', () => {

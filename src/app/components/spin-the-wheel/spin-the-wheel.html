@@ -66,6 +66,20 @@
 			</div>
 
 			<div class="filter-section">
+				<h3>Mature Range</h3>
+				<div class="tier-slider-container">
+					<div class="tier-slider-labels">
+						<span>Min: {{ minMature }}</span>
+						<span>Max: {{ maxMature }}</span>
+					</div>
+					<div class="dual-range" [style.--range-start.%]="matureRangeStart" [style.--range-end.%]="matureRangeEnd">
+						<input type="range" [(ngModel)]="matureThumbA" min="1" max="10" class="tier-slider range-thumb-a" aria-label="First mature range handle" />
+						<input type="range" [(ngModel)]="matureThumbB" min="1" max="10" class="tier-slider range-thumb-b" aria-label="Second mature range handle" />
+					</div>
+				</div>
+			</div>
+
+			<div class="filter-section">
 				<h3>Character Types</h3>
 				<div class="filter-checkboxes">
 					<label>

@@ -17,6 +17,8 @@
       <input 
         type="number" 
         [(ngModel)]="searchId" 
+        #idInput
+        (wheel)="idInput.blur()"
         (ngModelChange)="onInputChange()"
         (keyup.enter)="onEnter($event)"
         placeholder="Enter character ID..."
@@ -42,137 +44,199 @@
         </div>
       </div>
 
-      <div class="details-grid">
-        <div class="detail-item">
-          <span class="label">Status:</span>
-          <span class="value" [class]="'status-' + character.status">{{ character.status }}</span>
-        </div>
+      @if ((character.status != null && character.status !== "") || (character.color != null && character.color !== "") || (character.birthday != null && character.birthday !== "") || (character.pronouns != null && character.pronouns !== "")) {
+        <section class="detail-section" aria-labelledby="checker-profile">
+          <h4 id="checker-profile">Profile</h4>
+          <div class="details-grid">
+            <div class="detail-item" *ngIf="character.status !== undefined && character.status !== null && character.status !== ''">
+              <span class="label">Status:</span>
+              <span class="value" [class]="'status-' + character.status">{{ character.status }}</span>
+            </div>
 
-        <div class="detail-item">
-          <span class="label">Generation:</span>
-          <span class="value">{{ character.generation }}</span>
-        </div>
+            <div class="detail-item" *ngIf="character.color !== undefined && character.color !== null && character.color !== ''">
+              <span class="label">Color:</span>
+              <span class="value">
+                <span class="color-indicator" [ngClass]="character.color"></span>
+                {{ character.color }}
+              </span>
+            </div>
 
-        <div class="detail-item">
-          <span class="label">Tier:</span>
-          <span class="value">{{ character.tier }}</span>
-        </div>
+            <div class="detail-item" *ngIf="character.birthday !== undefined && character.birthday !== null && character.birthday !== ''">
+              <span class="label">Birthday:</span>
+              <span class="value">{{ character.birthday || 'Unknown' }}</span>
+            </div>
 
-        <div class="detail-item">
-          <span class="label">Color:</span>
-          <span class="value">
-            <span class="color-indicator" [style.background-color]="character.color"></span>
-            {{ character.color }}
-          </span>
-        </div>
-
-        <div class="detail-item">
-          <span class="label">Birthday:</span>
-          <span class="value">{{ character.birthday || 'Unknown' }}</span>
-        </div>
-
-        <div class="detail-item" *ngIf="character.creationDate">
-          <span class="label">Creation Date:</span>
-          <span class="value">{{ character.creationDate }}</span>
-        </div>
-
-        <div class="detail-item">
-          <span class="label">Pronouns:</span>
-          <span class="value">{{ character.pronouns }}</span>
-        </div>
-
-        <div class="detail-item">
-          <span class="label">Emotion:</span>
-          <span class="value">{{ character.emotion }}</span>
-        </div>
-
-        <div class="detail-item">
-          <span class="label">Moe Level:</span>
-          <span class="value">{{ character.moe }}/10</span>
-        </div>
-
-        <div class="detail-item">
-          <span class="label">Futuristic Level:</span>
-          <span class="value">{{ character.futuristic }}/10</span>
-        </div>
-
-        @if (character.rpFriendly !== undefined) {
-          <div class="detail-item">
-            <span class="label">RP Friendly:</span>
-            <span class="value">{{ character.rpFriendly ? '✓ Yes' : '✗ No' }}</span>
+            <div class="detail-item" *ngIf="character.pronouns !== undefined && character.pronouns !== null && character.pronouns !== ''">
+              <span class="label">Pronouns:</span>
+              <span class="value">{{ character.pronouns }}</span>
+            </div>
           </div>
-        }
-        @if (character.knowledgeFriendly !== undefined) {
-          <div class="detail-item">
-            <span class="label">Answer Friendly:</span>
-            <span class="value">{{ character.knowledgeFriendly ? '✓ Yes' : '✗ No' }}</span>
+        </section>
+      }
+
+      @if (character.tier != null || character.moe != null || character.futuristic != null || character.mature != null) {
+        <section class="detail-section" aria-labelledby="checker-ratings">
+          <h4 id="checker-ratings">Ratings</h4>
+          <div class="details-grid">
+            <div class="detail-item" *ngIf="character.tier !== undefined && character.tier !== null">
+              <span class="label">Tier:</span>
+              <span class="value">{{ character.tier }}</span>
+            </div>
+
+            <div class="detail-item" *ngIf="character.moe !== undefined && character.moe !== null">
+              <span class="label">Moe Level:</span>
+              <span class="value">{{ character.moe }}/10</span>
+            </div>
+
+            <div class="detail-item" *ngIf="character.futuristic !== undefined && character.futuristic !== null">
+              <span class="label">Futuristic Level:</span>
+              <span class="value">{{ character.futuristic }}/10</span>
+            </div>
+
+            <div class="detail-item" *ngIf="character.mature !== undefined && character.mature !== null">
+              <span class="label">Maturity Level:</span>
+              <span class="value">{{ character.mature }}/10</span>
+            </div>
           </div>
-        }
-        <div class="detail-item" *ngIf="character.musicEnjoyer">
-          <span class="label">Music Enjoyer:</span>
-          <span class="value">✓ Yes</span>
-        </div>
+        </section>
+      }
 
-        <div class="detail-item" *ngIf="character.personalityGirl">
-          <span class="label">Personality Girl:</span>
-          <span class="value">✓ Yes</span>
-        </div>
+      @if ((character.emotion != null && character.emotion !== "") || character.rpFriendly != null || character.knowledgeFriendly != null || character.musicEnjoyer != null || character.personalityGirl != null || (character.interests != null && character.interests !== "") || (character.peeves != null && character.peeves !== "") || (character.purpose != null && character.purpose !== "") || (character.funFact != null && character.funFact !== "") || (character.description != null && character.description !== "")) {
+        <section class="detail-section" aria-labelledby="checker-personality">
+          <h4 id="checker-personality">Personality</h4>
+          <div class="details-grid">
+            <div class="detail-row personality-row" *ngIf="character.rpFriendly != null || character.knowledgeFriendly != null || character.musicEnjoyer != null || character.personalityGirl != null">
+              <div class="detail-item" *ngIf="character.rpFriendly != null">
+                  <span class="label">RP Friendly:</span>
+                  <span class="value"><span [class.green]="character.rpFriendly" [class.red]="!character.rpFriendly">{{ character.rpFriendly ? 'Yes' : 'No' }}</span></span>
+                </div>
+  
+              <div class="detail-item" *ngIf="character.knowledgeFriendly != null">
+                  <span class="label">Answer Friendly:</span>
+                  <span class="value"><span [class.green]="character.knowledgeFriendly" [class.red]="!character.knowledgeFriendly">{{ character.knowledgeFriendly ? 'Yes' : 'No' }}</span></span>
+                </div>
+  
+              <div class="detail-item" *ngIf="character.musicEnjoyer != null">
+                <span class="label">Music Enjoyer:</span>
+                <span class="value"><span [class.green]="character.musicEnjoyer" [class.red]="!character.musicEnjoyer">{{ character.musicEnjoyer ? 'Yes' : 'No' }}</span></span>
+              </div>
+  
+              <div class="detail-item" *ngIf="character.personalityGirl != null">
+                <span class="label">Personality Girl:</span>
+                <span class="value"><span [class.green]="character.personalityGirl" [class.red]="!character.personalityGirl">{{ character.personalityGirl ? 'Yes' : 'No' }}</span></span>
+              </div>
+            </div>
 
-        <div class="detail-item full-width" *ngIf="character.interests">
-          <span class="label">Interests:</span>
-          <span class="value">{{ character.interests }}</span>
-        </div>
+            <div class="detail-item single-row" *ngIf="character.emotion !== undefined && character.emotion !== null && character.emotion !== ''">
+              <span class="label">Emotion:</span>
+              <span class="value">{{ character.emotion }}</span>
+            </div>
 
-        <div class="detail-item full-width" *ngIf="character.peeves">
-          <span class="label">Pet Peeves:</span>
-          <span class="value">{{ character.peeves }}</span>
-        </div>
+            <div class="detail-item full-width" *ngIf="character.interests">
+              <span class="label">Interests:</span>
+              <span class="value">{{ character.interests }}</span>
+            </div>
 
-        <div class="detail-item full-width" *ngIf="character.purpose">
-          <span class="label">Purpose:</span>
-          <span class="value">{{ character.purpose }}</span>
-        </div>
+            <div class="detail-item full-width" *ngIf="character.peeves">
+              <span class="label">Dislikes:</span>
+              <span class="value">{{ character.peeves }}</span>
+            </div>
 
-        <div class="detail-item full-width" *ngIf="character.funFact">
-          <span class="label">Fun Fact:</span>
-          <span class="value">{{ character.funFact }}</span>
-        </div>
+            <div class="detail-item full-width" *ngIf="character.purpose">
+              <span class="label">Purpose:</span>
+              <span class="value">{{ character.purpose }}</span>
+            </div>
 
-        <div class="detail-item full-width" *ngIf="character.description">
-          <span class="label">Description:</span>
-          <span class="value description-text">{{ character.description }}</span>
-        </div>
+            <div class="detail-item full-width" *ngIf="character.funFact">
+              <span class="label">Fun Fact:</span>
+              <span class="value">{{ character.funFact }}</span>
+            </div>
 
-        <div class="detail-item full-width" *ngIf="character.themeSong">
-          <span class="label">Theme Song:</span>
-          <span class="value">
-            {{ character.themeSong }}
-            <a *ngIf="character.songLink" [href]="character.songLink" target="_blank" class="song-link">🎵 Listen</a>
-          </span>
-        </div>
+            <div class="detail-item full-width" *ngIf="character.description">
+              <span class="label">Description:</span>
+              <span class="value">{{ character.description }}</span>
+            </div>
+          </div>
+        </section>
+      }
 
-        <div class="detail-item full-width" *ngIf="character.retirementReason">
-          <span class="label">Retirement Reason:</span>
-          <span class="value">{{ character.retirementReason }}</span>
-        </div>
+      @if (character.generation != null || character.spinOffDate || (character.creationDate != null && character.creationDate !== "") || (character.retirementDate != null && character.retirementDate !== "") || (character.retirementReason != null && character.retirementReason !== "") || (character.inactiveReason != null && character.inactiveReason !== "") || (character.alternatives != null && character.alternatives !== "")) {
+        <section class="detail-section" aria-labelledby="checker-history">
+          <h4 id="checker-history">History</h4>
+          <div class="details-grid">
+            <div class="detail-item single-row" *ngIf="character.generation !== undefined && character.generation !== null">
+              <span class="label">Generation:</span>
+              <span class="value">{{ character.generation }}</span>
+            </div>
 
-        <div class="detail-item full-width" *ngIf="character.inactiveReason">
-          <span class="label">Inactive Reason:</span>
-          <span class="value">{{ character.inactiveReason }}</span>
-        </div>
+            <div class="detail-row" *ngIf="character.creationDate || character.spinOffDate || character.retirementDate">
+              <div class="detail-item" *ngIf="character.creationDate">
+                <span class="label">Creation Date:</span>
+                <span class="value">{{ character.creationDate }}</span>
+              </div>
+  
+              <div class="detail-item" *ngIf="character.spinOffDate">
+                <span class="label">Spin-off Date:</span>
+                <span class="value">{{ character.spinOffDate }}</span>
+              </div>
+  
+              <div class="detail-item" *ngIf="character.retirementDate">
+                <span class="label">Retirement Date:</span>
+                <span class="value">{{ character.retirementDate }}</span>
+              </div>
+            </div>
 
-        <div class="detail-item full-width" *ngIf="character.alternatives">
-          <span class="label">Alternatives:</span>
-          <span class="value">{{ character.alternatives }}</span>
-        </div>
+            <div class="detail-item full-width" *ngIf="character.retirementReason">
+              <span class="label">Retirement Reason:</span>
+              <span class="value">{{ character.retirementReason }}</span>
+            </div>
 
-        <div class="detail-item full-width">
-          <span class="label">ChatGPT Link:</span>
-          <span class="value">
-            <a [href]="character.link" target="_blank" class="chat-link">Open Chat →</a>
-          </span>
-        </div>
-      </div>
+            <div class="detail-item full-width" *ngIf="character.inactiveReason">
+              <span class="label">Inactive Reason:</span>
+              <span class="value">{{ character.inactiveReason }}</span>
+            </div>
+
+            <div class="detail-item full-width" *ngIf="character.alternatives">
+              <span class="label">Alternatives:</span>
+              <span class="value">{{ character.alternatives }}</span>
+            </div>
+          </div>
+        </section>
+      }
+
+      @if ((character.note != null && character.note !== "")) {
+        <section class="detail-section" aria-labelledby="checker-notes">
+          <h4 id="checker-notes">Notes</h4>
+          <div class="details-grid">
+            <div class="detail-item full-width" *ngIf="character.note">
+              <span class="label">Notes:</span>
+              <span class="value description-text note-text">{{ character.note }}</span>
+            </div>
+          </div>
+        </section>
+      }
+
+      @if ((character.themeSong != null && character.themeSong !== "") || (character.link != null && character.link !== "")) {
+        <section class="detail-section" aria-labelledby="checker-links">
+          <h4 id="checker-links">Links</h4>
+          <div class="details-grid">
+            <div class="detail-item full-width" *ngIf="character.themeSong">
+              <span class="label">Theme Song:</span>
+              <span class="value">
+                {{ character.themeSong }}
+                <a *ngIf="character.songLink" [href]="character.songLink" target="_blank" class="song-link">🎵 Listen</a>
+              </span>
+            </div>
+
+            <div class="detail-item full-width" *ngIf="character.link !== undefined && character.link !== null && character.link !== ''">
+              <span class="label">ChatGPT Link:</span>
+              <span class="value">
+                <a [href]="character.link" target="_blank" class="chat-link">Open Chat →</a>
+              </span>
+            </div>
+          </div>
+        </section>
+      }
     </div>
   </div>
 </div>

@@ -29,9 +29,9 @@ export class IdChecker {
     }
 
     // IDs that should use non-split twins mode
-    const nonSplitTwinsIds = [43, 96];
+    const nonSplitTwinsIds = [43, 51, 96, 144];
     // IDs that should use split twins mode
-    const splitTwinsIds = [44, 45, 53, 97, 98];
+    const splitTwinsIds = [44, 45, 52, 53, 97, 98, 145, 146];
 
     this.searchInCurrentMode(id, (found) => {
       if (!found) {

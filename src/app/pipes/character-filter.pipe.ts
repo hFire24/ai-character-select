@@ -54,11 +54,17 @@ export interface CharacterFilterOptions {
     min?: number;
     max?: number;
   }
+
+  mature?: {
+    min?: number,
+    max?: number
+  }
   
   // Attribute filters
   attributes?: {
     moe?: { min?: number; max?: number };
     futuristic?: { min?: number; max?: number };
+    mature?: { min?: number; max?: number };
     colors?: string[];   // e.g., ['pink', 'blue', 'red']
     pronouns?: string[]; // e.g., ['he/him', 'she/her']
     musicEnjoyer?: boolean | null; // true = only music enjoyers, false = exclude music enjoyers, null = all
@@ -220,6 +226,11 @@ export class CharacterFilterPipe implements PipeTransform {
         if (!moeMatch) return false;
       }
 
+      if (options.mature) {
+        const matureMatch = this.checkMature(character, options.mature);
+        if (!matureMatch) return false;
+      }
+
       // Attribute filters
       if (options.attributes) {
         const attrMatch = this.checkAttributes(character, options.attributes);
@@ -277,6 +288,15 @@ export class CharacterFilterPipe implements PipeTransform {
     return true;
   }
 
+  private checkMature(character: Character, mature: NonNullable<CharacterFilterOptions['mature']>): boolean {
+    const charMature = character.mature || 0;
+
+    if (mature.min !== undefined && charMature < mature.min) return false;
+    if (mature.max !== undefined && charMature > mature.max) return false;
+
+    return true;
+  }
+
   private checkAttributes(
     character: Character, 
     attrs: NonNullable<CharacterFilterOptions['attributes']>
@@ -293,6 +313,13 @@ export class CharacterFilterPipe implements PipeTransform {
       const charFuturistic = character.futuristic || 0;
       if (attrs.futuristic.min !== undefined && charFuturistic < attrs.futuristic.min) return false;
       if (attrs.futuristic.max !== undefined && charFuturistic > attrs.futuristic.max) return false;
+    }
+
+    // Mature filter
+    if (attrs.mature) {
+      const charMature = character.mature || 0;
+      if (attrs.mature.min !== undefined && charMature < attrs.mature.min) return false;
+      if (attrs.mature.max !== undefined && charMature > attrs.mature.max) return false;
     }
 
     // Color filter

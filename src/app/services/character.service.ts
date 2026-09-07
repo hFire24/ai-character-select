@@ -18,6 +18,7 @@ export type Character = {
   personalityGirl?: boolean; // Optional field for personality girl
   moe: number;
   futuristic: number; // New field for futuristic level
+  mature: number; // New field for maturity level
   emotion: string;
   pronouns: string;
   link: string;
@@ -31,6 +32,7 @@ export type Character = {
   alternatives?: string; // Optional field for alternatives
   birthday?: string; // Optional field for birthday
   creationDate?: string; // Optional field for creation date
+  spinOffDate?: string;
   retirementDate?: string; // Optional field for retirement date
   themeSong?: string; // Optional field for theme song
   songLink?: string; // Optional field for song link
@@ -38,6 +40,7 @@ export type Character = {
   permaSeed?: any; // Optional field for permanent tournament seed
   banReason?: any;
   inspiredBy?: number; // Optional field for character ID that inspired this character
+  note?: string;
 }
 
 export interface DuoPair {
@@ -179,6 +182,7 @@ export class CharacterService {
       tier: 9,
       moe: 0,
       futuristic: 0,
+      mature: 0,
       emotion: '',
       link: '',
       description: '',
@@ -310,6 +314,7 @@ export class CharacterService {
       color: 'blue',
       moe: 5,
       futuristic: 10,
+      mature: 9,
       emotion: 'serious',
       pronouns: 'it/its',
       link: 'https://chatgpt.com',
@@ -343,6 +348,7 @@ export class CharacterService {
       "knowledgeFriendly": false,
       "moe": 1,
       "futuristic": 7,
+      "mature": 10,
       "emotion": "serious strict",
       "pronouns": "it/its",
       "link": "https://chatgpt.com/g/g-68ab9aa397dc8191a6b861031bc718a9",
@@ -380,6 +386,7 @@ export class CharacterService {
               img: "extended/Liam.png",
               id: 44,
               moe: 7,
+              mature: 6,
               emotion: "chaotic joy",
               peeves: "Moral policing, darkness (except for Golden Darkness)",
               funFact: "Loves To Love Ru; plays Muse Dash and dating sims",
@@ -394,6 +401,7 @@ export class CharacterService {
               id: 45,
               color: "red",
               moe: 2,
+              mature: 8,
               emotion: "edgy",
               peeves: "Moral policing, bright colors",
               purpose: "Enjoy questionable anime, obsess over waifus, discuss suspense in fiction",
@@ -430,6 +438,7 @@ export class CharacterService {
               img: "extended/Ruru.png",
               id: 53,
               emotion: "tired",
+              mature: 2,
               interests: "Naps, her giant plush turtle",
               peeves: "Disruptions during nap time",
               purpose: "Love her onii-chan as a twin sister",
@@ -456,6 +465,7 @@ export class CharacterService {
               id: 97,
               birthday: "August 31",
               emotion: "chaotic joy",
+              mature: 3,
               interests: "Cute poses, energetic dancing, rhythm games, frozen custard, rainbow sprinkles, being a cute idol",
               purpose: "Be part of the cutest idol duo with Koko",
               funFact: "Frequently makes playful cat-like expressions and gestures",
@@ -491,6 +501,7 @@ export class CharacterService {
               name: 'Nuit',
               img: "extended/Nuit.png",
               id: 145,
+              mature: 6,
               interests: "Romanticism, baking sweets, dolls",
               peeves: "Being mistaken for goths, evil, macabre things",
               purpose: "Dress in gothic lolita fashion; bake sweets",
@@ -503,6 +514,7 @@ export class CharacterService {
               name: 'Nacht',
               img: "extended/Nacht.png",
               id: 146,
+              mature: 8,
               color: "blue",
               emotion: "serious calm",
               interests: "Grimms' Fairy Tales, Baroque music, German language",

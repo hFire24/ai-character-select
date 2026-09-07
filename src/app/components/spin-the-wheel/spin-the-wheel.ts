@@ -47,16 +47,22 @@ export class SpinTheWheel {
   tierMax: number = 10;
   moeThumbA: number = 1;
   moeThumbB: number = 10;
+  matureThumbA: number = 1;
+  matureThumbB: number = 10;
 
   get minTier(): number { return Math.min(this.tierThumbA, this.tierThumbB); }
   get maxTier(): number { return Math.max(this.tierThumbA, this.tierThumbB); }
   get minMoe(): number { return Math.min(this.moeThumbA, this.moeThumbB); }
   get maxMoe(): number { return Math.max(this.moeThumbA, this.moeThumbB); }
+  get minMature(): number { return Math.min(this.matureThumbA, this.matureThumbB); }
+  get maxMature(): number { return Math.max(this.matureThumbA, this.matureThumbB); }
 
   get tierRangeStart(): number { return this.rangePercent(this.minTier, this.tierMin, this.tierMax); }
   get tierRangeEnd(): number { return this.rangePercent(this.maxTier, this.tierMin, this.tierMax); }
   get moeRangeStart(): number { return this.rangePercent(this.minMoe, 1, 10); }
   get moeRangeEnd(): number { return this.rangePercent(this.maxMoe, 1, 10); }
+  get matureRangeStart(): number { return this.rangePercent(this.minMature, 1, 10); }
+  get matureRangeEnd(): number { return this.rangePercent(this.maxMature, 1, 10); }
 
   private rangePercent(value: number, min: number, max: number): number {
     return ((value - min) / (max - min)) * 100;
@@ -96,6 +102,10 @@ export class SpinTheWheel {
       moe: {
         min: this.minMoe,
         max: this.maxMoe
+      },
+      mature: {
+        min: this.minMature,
+        max: this.maxMature
       },
       attributes: {
         pronouns: this.selectedPronouns.length > 0 ? this.selectedPronouns : undefined
@@ -146,7 +156,13 @@ export class SpinTheWheel {
       : this.characterService.getCharacters();
     
     observable.subscribe(chars => {
-      this.characters = chars;
+      this.characters = chars.map(character => {
+        if (character.id === 135 || character.id === 136) {
+          character.mature = 1;
+        }
+        return character;
+      });
+      
     });
   }
 

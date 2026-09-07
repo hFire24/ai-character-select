@@ -287,6 +287,7 @@ export class ManageTiers {
       'retirementDate',
       'moe',
       'futuristic',
+      'mature',
       'emotion',
       'link',
       'inactiveReason',

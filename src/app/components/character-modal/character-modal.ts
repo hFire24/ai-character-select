@@ -33,6 +33,7 @@ const FALLBACK_CHARACTER: Character = {
   musicEnjoyer: false,
   moe: 1,
   futuristic: 1,
+  mature: 1,
   emotion: "",
   pronouns: "",
   link: "",

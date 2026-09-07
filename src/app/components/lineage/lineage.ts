@@ -45,6 +45,7 @@ export class Lineage {
         color: 'pink',
         moe: 9,
         futuristic: 6,
+        mature: 7,
         emotion: 'chaotic joy',
         pronouns: 'she/her',
         musicEnjoyer: true,
@@ -73,6 +74,7 @@ export class Lineage {
         img: '',
         moe: 5,
         futuristic: 10,
+        mature: 9,
         emotion: 'serious joy',
         description: ''
       };

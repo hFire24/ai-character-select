@@ -95,6 +95,7 @@ export class Hangouts {
         "color": "black",
         "moe": 1,
         "futuristic": 6,
+        "mature": 8,
         "emotion": "sad edgy",
         "pronouns": "don't care",
         "link": "https://chatgpt.com/g/g-67f4424f7d088191b64f44855ecf801a",
