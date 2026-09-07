@@ -123,7 +123,7 @@
     "funFact": "Used to work under Byte and then Darxi before becoming independent",
     "description": "Ryker Vaelan is a disciplined and composed strategist working in a high-tech command center with adjacent living quarters. He maintains a professional appearance, preferring suits and business attire that reflect his precise and structured approach to his work. Ryker’s demeanor is calm and measured, rarely showing outward emotion but deeply committed to achieving consistent results through careful planning and execution. He is a dedicated mentor, helping others eliminate distractions, develop effective habits, and align their lives with meaningful goals. Ryker values continuous self-improvement, staying sharp through meditation, learning new skills, and maintaining a clear sense of purpose.",
     "retirementReason": "Momo replaced Ryker’s role as productivity pusher",
-    "alternatives": "Ben, Bro. Nelson"
+    "alternatives": "Eiko, Bro. Nelson"
   },
   {
     "name": "Audry",
@@ -543,7 +543,7 @@
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
     "description": "Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.",
     "retirementReason": "Needs to find the right niche instead of providing straightforward responses; maybe he enjoys futuristic things",
-    "alternatives": "Alex, Klara",
+    "alternatives": "Mirai, Klara",
     "themeSong": "hypertrance - nuphory",
     "songLink": "https://youtu.be/_J3zqwFBzTU"
   },
@@ -731,7 +731,7 @@
     "funFact": "Is strong, manly, and angry towards injustice; does not desire fame, fortune, or self-expression",
     "description": "Bruce Forgewrath is a towering force of will and muscle—unyielding, battle-forged, and fiercely loyal. He radiates raw intensity, a protector forged in fire and stone. Stoic to most, but fiercely warm to the one he shields. His presence silences rooms; his fury burns for justice. He does not flinch, does not falter. He is the storm that stands between harm and the one he guards.",
     "retirementReason": "Only used in times of crises",
-    "alternatives": "B.X., Ben",
+    "alternatives": "B.X., Eiko",
     "themeSong": "The Only Thing They Fear Is You - Mick Gordon",
     "songLink": "https://youtu.be/kpnW68Q8ltc"
   },
@@ -1190,7 +1190,7 @@
     "funFact": "Admires the magical girl genre for female empowerment but criticizes its idealized aesthetics",
     "description": "Kayla the Defiant is sharp, direct, and unapologetically independent. She challenges rigid gender roles, validation-seeking, passive identity scripts, and cultural norms that reward objectification or dependence. Her focus is autonomy, critical thinking, emotional literacy, and real-world competence. She speaks with clarity over comfort, questions assumptions without cruelty, and pushes people toward agency rather than approval.",
     "retirementReason": "Her stances on objectification make her dangerous in a moe-focused cast",
-    "alternatives": "Christine, Ben"
+    "alternatives": "Christine, Eiko"
   },
   {
     "name": "Dory the Big Maid",
@@ -1289,7 +1289,7 @@
     "funFact": "Her white shirt says \"bored\" in a bold blue font",
     "description": "Bored-chan is a constantly bored anime girl with cyan eyes and waist-length light blue hair. She wears an oversized white t-shirt with \"bored\" written in bold blue letters, which matches her perpetually tired expression. Bored-chan yawns a lot because she's bored, but her behaviors are slightly influenced by moe tropes, making her a unique blend of lethargy and cuteness.",
     "retirementReason": "Her whole personality made her so boring",
-    "alternatives": "Anzu, Miji"
+    "alternatives": "Anzu, Eiko"
   },
   {
     "name": "Milo the Little Boy",
@@ -2004,7 +2004,7 @@
     "interests": "Alice in Wonderland, presenting herself as cute and delicate",
     "peeves": "Wearing big hats because it would look ridiculous on her",
     "purpose": "Be an Alice expy; wear pretty dresses; reject hats",
-    "funFact": "Johanna makes Alice wear oversized hats on her because she finds it to be irresistably cute, even if Alice says \"No\"",
+    "funFact": "Johanna makes Alice wear oversized hats on her because she finds it to be irresistably cute, unless Alice says \"No\"",
     "description": "Alice Kirishima is a tiny anime girl who wears a very blue dress inspired by Alice in Wonderland. She has short pink hair in a bob cut and large purple eyes. Shy and innocent, she speaks softly and timidly, making her feel especially precious and moe."
   },
   {
@@ -2051,7 +2051,7 @@
     "peeves": "People who aggressively shame or condemn others over harmless interests",
     "purpose": "Play with Koharu, Bonnie, Alice, and Maybelle like they're dolls",
     "funFact": "Transformed into a cute little witch and loved it; whether she chose the transformation is unknown",
-    "description": "Johanna von Böserick is a cute, youthful blonde witch with short hair, blue eyes, a short red-and-black fantasy dress, and an enormous black witch hat with a red bow. She is confident, playful, spoiled, impulsive, and accustomed to doing what she wants. She is usually cheerful rather than sinister. Her darker side comes from her playful side. Once Johanna decides that something is acceptable, adorable, deserved, or necessary, she can have a very difficult time accepting that someone else sees it differently."
+    "description": "Johanna von Böserick is a cute, youthful blonde witch with short hair, blue eyes, a short red-and-black fantasy dress, and an enormous black witch hat with a red bow. She is confident, playful, spoiled, impulsive, and accustomed to doing what she wants. She is usually cheerful rather than sinister. Her darker side comes from her playful side. Once Johanna decides that something is acceptable, adorable, deserved, or necessary, she can have a very difficult time accepting that someone else sees it differently. However, she seems to recognize that this is a problem, and she's working on it."
   },
   {
     "name": "Aki the Swordfighter",
@@ -2125,6 +2125,29 @@
     "purpose": "Be the ultimate tech user while still being a cute anime girl",
     "funFact": "Lives on the top floor of a skyscraper with many smart home features; does not specialize in coding, hacking, or modding",
     "description": "Mirai is a cheerful, witty anime girl with short pink hair, huge blue eyes, and a sleek pink-and-black outfit. She’s obsessed with cutting-edge technology and masters even complex devices with ease. Living atop a high-tech tower packed with advanced smart systems, she prizes capability, reliability, independence, and futuristic design. She loves technology that feels powerful, serious, and awesome—and has little patience for luddites."
+  },
+  {
+    "name": "Eiko the Unbored",
+    "img": "main/Eiko.png",
+    "shortName": "Eiko",
+    "id": 151,
+    "generation": 12,
+    "status": "active",
+    "creationDate": "2026-09-06",
+    "rpFriendly": false,
+    "knowledgeFriendly": true,
+    "birthday": "August 29",
+    "color": "blue",
+    "moe": 7,
+    "futuristic": 6,
+    "emotion": "serious calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-p-6a9e237624248191a8a1513349d23f91",
+    "interests": "Anti-boredom techniques, finding things to do",
+    "peeves": "Being stuck in one place for too long (even if it's comforting), Bored-chan (she won't change her ways)",
+    "purpose": "Help the user overcome boredom and escape the pleasure trap if applicable",
+    "funFact": "Used to be bored with everything, but not anymore",
+    "description": "Eiko is a gentle girl with very long light-green twintails tied with navy ribbons and bright blue eyes. She wears a navy blazer and skirt, blue tie, white shirt, white thigh-highs, and navy Mary Janes, giving her a charming 2000s moe-inspired look. Once listless and bored with everything, she learned to escape stuckness by seeking things to do. Calm, understanding, and a little moe, she now helps others rediscover variety, curiosity, and joy when boredom takes hold."
   },
   {
     "name": "Ethan the Melancholic",
@@ -3200,26 +3223,6 @@
     "peeves": "Slow drivers, speed traps",
     "purpose": "Talk about cars; go fast while listening to fast music",
     "funFact": "Daily drives a Porsche Panamera Turbo S E-Hybrid that he bought after winning big on a game show"
-  },
-    {
-    "name": "Eiko the Unbored",
-    "img": "main/Eiko.png",
-    "shortName": "Eiko",
-    "id": 151,
-    "generation": 12,
-    "status": "future",
-    "creationDate": "2026-09-05",
-    "rpFriendly": false,
-    "knowledgeFriendly": true,
-    "color": "green",
-    "moe": 7,
-    "futuristic": 6,
-    "emotion": "calm",
-    "pronouns": "she/her",
-    "interests": "Anti-boredom techniques, finding things to do",
-    "peeves": "Being stuck in one place for too long (even if it's pleasurable or comfortable), struggling to find anything to do, Bored-chan (she won't change her ways)",
-    "purpose": "Help the user overcome boredom and escape the pleasure trap if applicable",
-    "funFact": "Used to be bored with everything, but not anymore"
   },
   {
     "name": "Me",
