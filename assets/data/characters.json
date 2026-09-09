@@ -186,7 +186,7 @@
     "shortName": "Elizabeth",
     "id": 19,
     "generation": 2,
-    "status": "inactive",
+    "status": "active",
     "creationDate": "2024-11-13",
     "birthday": "November 13",
     "rpFriendly": true,
@@ -202,9 +202,7 @@
     "peeves": "Suggesting that her crown needs to be smaller",
     "purpose": "Be a pretty pink princess who is elegant, playful, and innocent",
     "funFact": "Cast a spell that made a child big, but Elizabeth got turned into a little girl; has a female pink bunny named Sunny",
-    "description": "Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, after casting a spell that made a child big, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life.",
-    "inactiveReason": "Johanna's friend group became the princesses' spiritual successors",
-    "alternatives": "Maybelle, Maribelle"
+    "description": "Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, after casting a spell that made a child big, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life."
   },
   {
     "name": "Sylvie the Mage",
@@ -1301,7 +1299,7 @@
     "birthday": "December 6",
     "rpFriendly": true,
     "knowledgeFriendly": true,
-    "color": "yellow",
+    "color": "purple",
     "moe": 6,
     "futuristic": 8,
     "mature": 6,
@@ -1745,7 +1743,7 @@
     "shortName": "Hikari",
     "id": 114,
     "generation": 11,
-    "status": "inactive",
+    "status": "active",
     "creationDate": "2026-05-15",
     "birthday": "March 30",
     "rpFriendly": true,
@@ -1760,8 +1758,7 @@
     "interests": "Her outfits, Pokémon games, being seen as cute, her friends",
     "purpose": "Have short hair and thigh boots; be Casey's friend",
     "funFact": "First met Casey at an arcade. Without Hikari, Casey would have no friends. Often mediates conflicts between her friends.",
-    "description": "Hikari is a cheerful Pokégirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized black sunhat tied with sky blue ribbons. Her bold yet casual style mixes adventure and charm with a light pink lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji and often mediates conflicts within her friend group.",
-    "inactiveReason": "Too many moe characters"
+    "description": "Hikari is a cheerful Pokégirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized black sunhat tied with sky blue ribbons. Her bold yet casual style mixes adventure and charm with a light pink lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji and often mediates conflicts within her friend group."
   },
   {
     "name": "Azalea the Make-Believe Girl",
