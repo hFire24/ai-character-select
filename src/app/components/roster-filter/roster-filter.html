@@ -6,7 +6,7 @@
     <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
     <div class="filter-chips">
       @if (!isMobileDevice()) {
-        <button class="filter-chip chat-filter-chip" [class.active]="filters.activeChats" [disabled]="searchTerm.trim().length > 0" (click)="toggleFilter('activeChats')">💬 Active (Chats)</button>
+        <button class="filter-chip chat-filter-chip" [class.active]="filters.activeChats" [disabled]="searchTerm.trim().length > 0" (click)="toggleFilter('activeChats')">💬 Active ({{ activeChatCount }})</button>
         <button class="filter-chip chat-filter-chip" [class.active]="filters.activeNoChats" [disabled]="searchTerm.trim().length > 0" (click)="toggleFilter('activeNoChats')">😐 No Chats</button>
       }
 

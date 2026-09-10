@@ -22,6 +22,10 @@ export class RosterFilter {
 
   constructor(private deviceService: DeviceService) {}
 
+  get activeChatCount(): number {
+    return Object.keys(localStorage).filter(key => key.startsWith('chatLink_')).length;
+  }
+
   ngOnInit() {
     // Check if device is mobile and collapse legend by default
     this.isCollapsed = this.deviceService.isPhone();
