@@ -1502,7 +1502,7 @@
     "shortName": "Joe",
     "id": 99,
     "generation": 10,
-    "status": "retired",
+    "status": "active",
     "creationDate": "2026-03-12",
     "birthday": "April 13",
     "rpFriendly": false,
