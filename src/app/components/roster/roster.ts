@@ -8,7 +8,7 @@ import { Character, CharacterService } from '../../services/character.service';
 import { Mood } from '../../services/mood.service';
 import { Legend } from "../legend/legend";
 import { BirthdayBanner } from "../birthday-banner/birthday-banner";
-import { RosterFilter } from "../roster-filter/roster-filter";
+import { RosterFilter, RosterSortOption } from "../roster-filter/roster-filter";
 import { CharacterFilterPipe, CharacterFilters } from '../../pipes/character-filter.pipe';
 import { SortField, SortDirection } from '../../pipes/sort-characters.pipe';
 import { getEffectiveChatLink, archiveAllChatLinks } from '../../utils/chat-link-storage';
@@ -44,7 +44,7 @@ export class Roster {
   };
 
   // Sorting options
-  sortBy: SortField = 'none';
+  sortBy: SortField = 'tier';
   sortDirection: SortDirection = 'asc';
 
   constructor(
@@ -65,20 +65,18 @@ export class Roster {
       });
     }
 
-  setSortBy(field: SortField) {
-    // If clicking the same field, toggle direction
-    if (this.sortBy === field) {
-      this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
-    } else {
-      // New field, default to ascending
-      this.sortBy = field;
-      this.sortDirection = 'asc';
-    }
+  get selectedSortOption(): RosterSortOption {
+    return this.sortBy === 'id' && this.sortDirection === 'desc' ? 'idDesc' : this.sortBy;
+  }
+
+  setSortBy(field: RosterSortOption) {
+    this.sortBy = field === 'idDesc' ? 'id' : field;
+    this.sortDirection = ['idDesc', 'moe', 'futuristic', 'mature'].includes(field) ? 'desc' : 'asc';
   }
 
   clearSort() {
-    // Reset to no sorting (original order)
-    this.sortBy = 'none';
+    // Restore the default tier sort.
+    this.sortBy = 'tier';
     this.sortDirection = 'asc';
   }
   

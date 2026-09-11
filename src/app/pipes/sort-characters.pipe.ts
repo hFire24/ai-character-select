@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Character } from '../services/character.service';
 import { getStatusSortRank } from '../utils/status-sort';
 
-export type SortField = 'none' | 'id' | 'name' | 'shortName' | 'status' | 'generation' | 'tier' | 'moe' | 'futuristic' | 'birthday' | 'creationDate';
+export type SortField = 'none' | 'id' | 'name' | 'shortName' | 'status' | 'generation' | 'tier' | 'moe' | 'futuristic' | 'mature' | 'birthday' | 'creationDate';
 export type SortDirection = 'asc' | 'desc';
 
 @Pipe({
@@ -61,6 +61,10 @@ export class SortCharactersPipe implements PipeTransform {
         case 'futuristic':
           valueA = a.futuristic;
           valueB = b.futuristic;
+          break;
+        case 'mature':
+          valueA = a.mature;
+          valueB = b.mature;
           break;
         case 'birthday':
           valueA = a.birthday || '';

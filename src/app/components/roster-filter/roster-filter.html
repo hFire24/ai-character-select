@@ -3,7 +3,7 @@
     Filters <span class="collapse-icon">{{ isCollapsed ? '▶' : '▼' }}</span>
   </h3>
   <div class="filter-content" [class.collapsed]="isCollapsed">
-    <app-search-bar (searchChange)="onSearchChange($event)"></app-search-bar>
+    <app-search-bar (pointerdown)="closeDropdowns()" (focusin)="closeDropdowns()" (searchChange)="onSearchChange($event)"></app-search-bar>
     <div class="filter-chips">
       @if (!isMobileDevice()) {
         <button class="filter-chip chat-filter-chip" [class.active]="filters.activeChats" [disabled]="searchTerm.trim().length > 0" (click)="toggleFilter('activeChats')">💬 Active ({{ activeChatCount }})</button>
@@ -14,6 +14,7 @@
         [open]="activeDropdown === 'status'" (mouseenter)="hoverDropdown('status')" (mouseleave)="hideDropdown('status')">
         <summary (click)="$event.preventDefault(); toggleDropdown('status')">Status</summary>
         <div class="dropdown-panel">
+          <button type="button" class="dropdown-action" (click)="toggleAllStatuses()">{{ allStatusesSelected ? 'Active Only' : 'Select All' }}</button>
           <label><input type="checkbox" [checked]="filters.active" [disabled]="isLastStatus('active')" (change)="toggleFilter('active')" /> ✓ Active (All)</label>
           <label><input type="checkbox" [checked]="filters.inactive" [disabled]="isLastStatus('inactive')" (change)="toggleFilter('inactive')" /> ⏸ Inactive</label>
           <label><input type="checkbox" [checked]="filters.retired" [disabled]="isLastStatus('retired')" (change)="toggleFilter('retired')" /> 🌇 Retired</label>
@@ -45,6 +46,18 @@
           <label><input type="checkbox" [checked]="filters.moeFemale !== false" [disabled]="isLastGender('moeFemale')" (change)="toggleGender('moeFemale')" /> <span class="gender-emoji">🩷</span> Female (Moe 8+)</label>
           <label><input type="checkbox" [checked]="filters.nonMoeFemale !== false" [disabled]="isLastGender('nonMoeFemale')" (change)="toggleGender('nonMoeFemale')" /> <span class="gender-emoji">♀️</span> Female (Moe 1-7)</label>
           <label><input type="checkbox" [checked]="filters.male !== false" [disabled]="isLastGender('male')" (change)="toggleGender('male')" /> <span class="gender-emoji">♂️</span> Male/Other</label>
+        </div>
+      </details>
+
+      <details class="filter-dropdown"
+        [open]="activeDropdown === 'sort'" (mouseenter)="hoverDropdown('sort')" (mouseleave)="hideDropdown('sort')">
+        <summary (click)="$event.preventDefault(); toggleDropdown('sort')">Sort</summary>
+        <div class="dropdown-panel">
+          <button type="button" class="dropdown-action" (click)="sortChange.emit('none')">Clear Sort</button>
+          @for (option of sortOptions; track option.value) {
+            <label><input type="radio" name="roster-sort" [value]="option.value" [checked]="sortBy === option.value" (change)="sortChange.emit(option.value)" /> {{ option.label }}</label>
+          }
+          <p class="filter-help">Tier is the default sort.</p>
         </div>
       </details>
     </div>

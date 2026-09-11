@@ -9,6 +9,8 @@
   <app-roster-filter
     [filters]="filters"
     [searchTerm]="searchTerm"
+    [sortBy]="selectedSortOption"
+    (sortChange)="setSortBy($event)"
     (filtersChange)="filters = $event"
     (searchChange)="onSearchChange($event)"
   ></app-roster-filter>

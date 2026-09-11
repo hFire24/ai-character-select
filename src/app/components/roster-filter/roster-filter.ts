@@ -2,6 +2,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CharacterFilters } from '../../pipes/character-filter.pipe';
 import { DeviceService } from '../../services/device.service';
 import { SearchBar } from '../search-bar/search-bar';
+import { SortField } from '../../pipes/sort-characters.pipe';
+
+export type RosterSortOption = SortField | 'idDesc';
 
 type RosterFilterType = 'activeChats' | 'activeNoChats' | 'active' | 'inactive' | 'retired' | 'superRetired' | 'side';
 
@@ -14,10 +17,21 @@ type RosterFilterType = 'activeChats' | 'activeNoChats' | 'active' | 'inactive' 
 export class RosterFilter {
   @Input({ required: true }) filters!: CharacterFilters;
   @Input() searchTerm = '';
+  @Input() sortBy: RosterSortOption = 'tier';
+  @Output() sortChange = new EventEmitter<RosterSortOption>();
+  readonly sortOptions: { value: RosterSortOption; label: string }[] = [
+    { value: 'tier', label: 'Tier ⬆️' },
+    { value: 'shortName', label: 'Name ⬆️' },
+    { value: 'id', label: 'ID ⬆️' },
+    { value: 'idDesc', label: 'ID ⬇️' },
+    { value: 'moe', label: 'Moe ⬇️' },
+    { value: 'futuristic', label: 'Futuristic ⬇️' },
+    { value: 'mature', label: 'Maturity ⬇️' }
+  ];
   @Output() filtersChange = new EventEmitter<CharacterFilters>();
   @Output() searchChange = new EventEmitter<string>();
   isCollapsed = false;
-  activeDropdown: 'status' | 'purpose' | 'gender' | null = null;
+  activeDropdown: 'status' | 'purpose' | 'gender' | 'sort' | null = null;
   private closeDropdownTimer: ReturnType<typeof setTimeout> | null = null;
 
   constructor(private deviceService: DeviceService) {}
@@ -36,7 +50,15 @@ export class RosterFilter {
     if (this.isCollapsed) this.activeDropdown = null;
   }
 
-  showDropdown(dropdown: 'status' | 'purpose' | 'gender') {
+  closeDropdowns(): void {
+    if (this.closeDropdownTimer) {
+      clearTimeout(this.closeDropdownTimer);
+      this.closeDropdownTimer = null;
+    }
+    this.activeDropdown = null;
+  }
+
+  showDropdown(dropdown: 'status' | 'purpose' | 'gender' | 'sort') {
     if (this.closeDropdownTimer) {
       clearTimeout(this.closeDropdownTimer);
       this.closeDropdownTimer = null;
@@ -44,11 +66,11 @@ export class RosterFilter {
     this.activeDropdown = dropdown;
   }
 
-  hoverDropdown(dropdown: 'status' | 'purpose' | 'gender') {
+  hoverDropdown(dropdown: 'status' | 'purpose' | 'gender' | 'sort') {
     if (!this.deviceService.isMobile()) this.showDropdown(dropdown);
   }
 
-  toggleDropdown(dropdown: 'status' | 'purpose' | 'gender') {
+  toggleDropdown(dropdown: 'status' | 'purpose' | 'gender' | 'sort') {
     if (this.closeDropdownTimer) {
       clearTimeout(this.closeDropdownTimer);
       this.closeDropdownTimer = null;
@@ -56,13 +78,32 @@ export class RosterFilter {
     this.activeDropdown = this.activeDropdown === dropdown ? null : dropdown;
   }
 
-  hideDropdown(dropdown: 'status' | 'purpose' | 'gender') {
+  hideDropdown(dropdown: 'status' | 'purpose' | 'gender' | 'sort') {
     if (!this.deviceService.isMobile() && this.activeDropdown === dropdown) {
       this.closeDropdownTimer = setTimeout(() => {
         if (this.activeDropdown === dropdown) this.activeDropdown = null;
         this.closeDropdownTimer = null;
       }, 200);
     }
+  }
+
+  get allStatusesSelected(): boolean {
+    return !!(this.filters.active && this.filters.inactive && this.filters.retired &&
+      this.filters.superRetired && this.filters.side);
+  }
+
+  toggleAllStatuses(): void {
+    const selectAll = !this.allStatusesSelected;
+    this.filtersChange.emit({
+      ...this.filters,
+      activeChats: false,
+      activeNoChats: false,
+      active: true,
+      inactive: selectAll,
+      retired: selectAll,
+      superRetired: selectAll,
+      side: selectAll
+    });
   }
 
   toggleFilter(filterType: RosterFilterType) {

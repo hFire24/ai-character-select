@@ -2,8 +2,8 @@ const STATUS_SORT_ORDER = [
   'active',
   'inactive',
   'side',
-  'retired',
   'inactive side',
+  'retired',
   'retired side',
   'future'
 ];
