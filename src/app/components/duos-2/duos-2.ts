@@ -23,6 +23,7 @@ export class Duos2 implements OnInit {
   characters: Character[] = [];
   duoPairs: DuoPair[] = [];
   loading = true;
+  loadError = false;
   selectedCharacter: Character | null = null;
 
   constructor(
@@ -33,12 +34,15 @@ export class Duos2 implements OnInit {
     forkJoin({
       characters: this.characterService.getCharactersSplitTwins(),
       duoPairs: this.characterService.getDuos()
-    }).subscribe(({ characters, duoPairs }) => {
+    }).subscribe({ next: ({ characters, duoPairs }) => {
       this.characters = characters;
       this.duoPairs = duoPairs;
       this.initializeDuos();
       this.loading = false;
-    });
+    }, error: () => {
+      this.loading = false;
+      this.loadError = true;
+    }});
   }
 
   private initializeDuos() {

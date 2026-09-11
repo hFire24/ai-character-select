@@ -276,6 +276,7 @@ export class ManageTiers {
       'img',
       'shortName',
       'id',
+      'parentId',
       'generation',
       'color',
       'rpFriendly',

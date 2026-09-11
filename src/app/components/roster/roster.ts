@@ -157,7 +157,7 @@ export class Roster {
   }
 
   getChatLink(character: Character): string {
-    return getEffectiveChatLink(character);
+    return getEffectiveChatLink(character, this.characters);
   }
 
   resetAllChatLinks(): void {

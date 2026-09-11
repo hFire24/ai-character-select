@@ -6,6 +6,8 @@
 
   @if (loading) {
     <div class="loading">Loading duos...</div>
+  } @else if (loadError) {
+    <p role="alert">Unable to load duos. Please refresh to try again.</p>
   } @else {
     <main class="duos-grid">
       @for (duo of duos; track duo.id) {

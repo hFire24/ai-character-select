@@ -154,7 +154,7 @@
 		(click)="showCard = true"
 		[ngStyle]="{cursor: 'pointer'}"/>
 		<p>{{ selectedCharacter.name }}</p>
-		<a id="chat" [href]="getChatLink(selectedCharacter)" target="_blank">Chat</a>
+		<a id="chat" [attr.href]="getChatLink(selectedCharacter) || null" [attr.aria-disabled]="!getChatLink(selectedCharacter)" [attr.tabindex]="getChatLink(selectedCharacter) ? null : -1" target="_blank">Chat</a>
 	</div>
 	<app-character-modal *ngIf="selectedCharacter && showCard" [character]="selectedCharacter" (close)="showCard = false"></app-character-modal>
 </div>

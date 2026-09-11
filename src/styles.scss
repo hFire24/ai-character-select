@@ -370,3 +370,8 @@ footer div {
   button.male { background-color: #2471a3; }
   button.female { background-color: #8e44ad; }
 }
+
+a[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

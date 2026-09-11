@@ -29,6 +29,15 @@
     0 0 0 1px rgba(255, 255, 255, 0.06);
   animation: modalIn 160ms ease-out;
   will-change: opacity, transform;
+
+  &.parent-leaving {
+    animation: modalOut 140ms ease-in both;
+    pointer-events: none;
+  }
+
+  &.parent-entering {
+    animation: modalIn 180ms ease-out both;
+  }
 }
 
 @keyframes modalIn {
@@ -194,6 +203,10 @@ h3.retired-banner {
   margin: 0;
   margin-right: 20px;
   font-size: 1rem;
+}
+
+u {
+  cursor: pointer;
 }
 
 .modalStats {

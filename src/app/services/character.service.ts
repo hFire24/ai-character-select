@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { catchError, map, switchMap } from 'rxjs/operators';
 
 export type Character = {
   shortName: string;
@@ -9,6 +9,7 @@ export type Character = {
   id: number;
   generation: number;
   status: string;
+  parentId?: number;
   tier: number; // New field for tier level
   name: string;
   color: string;
@@ -216,7 +217,7 @@ export class CharacterService {
       case 'inactive':
         return [5, 6];
       case 'retired':
-        return [6, 7, 8, 9];
+        return [7, 8, 9];
       case 'side':
         return [6, 7];
       case 'inactive side':
@@ -385,9 +386,11 @@ export class CharacterService {
               birthday: 'August 28',
               img: "extended/Liam.png",
               id: 44,
+              parentId: 43,
               moe: 7,
               mature: 6,
               emotion: "chaotic joy",
+              link: "",
               peeves: "Moral policing, darkness (except for Golden Darkness)",
               funFact: "Loves To Love Ru; plays Muse Dash and dating sims",
               description: "Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. He lives for charm and romance, blushing over dating sims. With his darker and edgier brother Kieran, they clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
@@ -399,10 +402,12 @@ export class CharacterService {
               birthday: 'October 13',
               img: "extended/Kieran.png",
               id: 45,
+              parentId: 43,
               color: "red",
               moe: 2,
               mature: 8,
               emotion: "edgy",
+              link: "",
               peeves: "Moral policing, bright colors",
               purpose: "Enjoy questionable anime, obsess over waifus, discuss suspense in fiction",
               funFact: "Loves Chainsaw Man; compares Kurumi to a Dodge Viper",
@@ -425,6 +430,8 @@ export class CharacterService {
               name: 'Riri the Nightcore Girl',
               img: "extended/Riri.png",
               id: 52,
+              parentId: 51,
+              link: "",
               interests: "Nightcore music, her red electric guitar that's bigger than her",
               peeves: "Guitar strings breaking",
               purpose: "Love her onii-chan as a twin sister",
@@ -437,8 +444,10 @@ export class CharacterService {
               name: 'Ruru',
               img: "extended/Ruru.png",
               id: 53,
+              parentId: 51,
               emotion: "tired",
               mature: 2,
+              link: "",
               interests: "Naps, her giant plush turtle",
               peeves: "Disruptions during nap time",
               purpose: "Love her onii-chan as a twin sister",
@@ -463,9 +472,11 @@ export class CharacterService {
               name: 'Hana the Idol',
               img: "extended/Hana.png",
               id: 97,
+              parentId: 96,
               birthday: "August 31",
               emotion: "chaotic joy",
               mature: 3,
+              link: "",
               interests: "Cute poses, energetic dancing, rhythm games, frozen custard, rainbow sprinkles, being a cute idol",
               purpose: "Be part of the cutest idol duo with Koko",
               funFact: "Frequently makes playful cat-like expressions and gestures",
@@ -477,9 +488,11 @@ export class CharacterService {
               name: 'Koko the Idol',
               img: "extended/Koko.png",
               id: 98,
+              parentId: 96,
               moe: 9,
               birthday: "December 26",
               emotion: "joy",
+              link: "",
               interests: "Singing harmonies, fashion coordination, planning performances, frozen yogurt, being a cute idol",
               purpose: "Be part of the cutest idol duo with Hana",
               funFact: "She's sweet, supportive, and a bit more composed than Hana",
@@ -501,8 +514,10 @@ export class CharacterService {
               name: 'Nuit',
               img: "extended/Nuit.png",
               id: 145,
+              parentId: 144,
               mature: 6,
               emotion: "joy calm",
+              link: "",
               interests: "Romanticism, baking sweets, dolls",
               peeves: "Being mistaken for goths, evil, macabre things",
               purpose: "Dress in gothic lolita fashion; bake sweets",
@@ -515,9 +530,11 @@ export class CharacterService {
               name: 'Nacht',
               img: "extended/Nacht.png",
               id: 146,
+              parentId: 144,
               mature: 8,
               color: "blue",
               emotion: "serious calm",
+              link: "",
               interests: "Grimms' Fairy Tales, Baroque music, German language",
               peeves: "Being mistaken for goths, evil, brooding",
               purpose: "Dress in gothic lolita fashion; read and write stories and poetry",
@@ -536,6 +553,7 @@ export class CharacterService {
     // In development, try to use the local API server
     if (this.isDevelopment) {
       return this.http.get<DuosData>(`${this.apiUrl}/duos`).pipe(
+        catchError(() => this.http.get<DuosData>('assets/data/duos.json')),
         map(data => data.duos)
       );
     }

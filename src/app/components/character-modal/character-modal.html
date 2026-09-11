@@ -1,4 +1,7 @@
-<div id="characterModal" [class.tall-layout]="useFullbody()">
+<div id="characterModal" [class.tall-layout]="useFullbody()"
+  [class.parent-leaving]="parentTransition === 'leaving'"
+  [class.parent-entering]="parentTransition === 'entering'"
+  (animationend)="onCardAnimationEnd($event)">
   <button id="closeModal" (click)="close.emit()">&times;</button>
   <div class="modalHeader">
     @if (character.img) {
@@ -59,11 +62,14 @@
         @if (character.alternatives) {
           <div id="modalAlternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
         }
+        @if (parentName) {
+          <div id="parentOf"><strong>Main Character</strong>: <u (click)="openParent()">{{ parentName }}</u></div>
+        }
         <div id="modalDescription" style="display: none;">{{character.description}}</div>
       </div>
     </div>
   </div>
-  @if (!isMobile() && !character.status.includes('side') && character.link) {
+  @if (!isMobile() && !statsCharacter.status.includes('side') && statsCharacter.link) {
     <div class="modalStats">
       @if (!isLastChatWithinDays(7)) {
         <span class="last-chat-date" [title]="lastChatDateTitle">

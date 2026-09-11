@@ -65,28 +65,44 @@ export class CharacterModal {
   lastChatDate = 'N/A';
   lastChatDateTitle = 'N/A';
   chatFlavor: ChatFlavor | null = null;
+  parentTransition: 'idle' | 'leaving' | 'entering' = 'idle';
+  loadingParent = false;
+  parentName = '';
+  private parentCharacter: Character | null = null;
+
+  get statsCharacter(): Character {
+    return this.character.parentId != null && this.parentCharacter
+      ? this.parentCharacter
+      : this.character;
+  }
+  private pendingParent: Character | null = null;
 
   constructor(private deviceService: DeviceService, private characterService: CharacterService) {}
 
   loadChatLink() {
-    this.chatLink = getEffectiveChatLink(this.character);
+    this.chatLink = this.chatOwnerReady ? getEffectiveChatLink(this.statsCharacter) : '';
+  }
+
+  private get chatOwnerReady(): boolean {
+    return this.character.parentId == null || this.parentCharacter?.id === this.character.parentId;
   }
 
   updateChatLink() {
+    if (!this.chatOwnerReady) return;
     const oldLink = this.chatLink; // Store the current link before updating
     const newLink = prompt('Enter new chat link:', this.chatLink);
     console.log('New link entered:', newLink);
     if (newLink) {
-      this.chatLink = newLink.trim() || this.character.link;
+      this.chatLink = newLink.trim() || this.statsCharacter.link;
       // Validate and format the chat link
       if (newLink && !this.isValidChatLink(newLink)) {
         alert('Invalid chat link format. Please enter a valid URL starting with https://');
         return;
       }
-      saveChatLink(this.character, this.chatLink);
+      saveChatLink(this.statsCharacter, this.chatLink);
       
       // Update timestamp when chat link is changed (not reset to default)
-      if (this.chatLink !== this.character.link) {
+      if (this.chatLink !== this.statsCharacter.link) {
         const timestampKey = this.getChatLinkTimestampKey();
         const now = new Date().toISOString();
         localStorage.setItem(timestampKey, now);
@@ -101,35 +117,37 @@ export class CharacterModal {
       alert('Chat link updated!');
     } else if (newLink === '') {
       // If the user clears the input, reset to default link
-      this.chatLink = this.character.link;
-      archiveChatLink(this.character);
+      this.chatLink = this.statsCharacter.link;
+      archiveChatLink(this.statsCharacter);
       // Don't update timestamp when resetting to default
       alert('Chat link reset to default.');
     }
   }
 
   resetChatLink() {
+    if (!this.chatOwnerReady) return;
     const confirmed = confirm('Are you sure you want to reset this chat link to the default?');
     if (confirmed) {
-      this.chatLink = this.character.link;
-      archiveChatLink(this.character);
+      this.chatLink = this.statsCharacter.link;
+      archiveChatLink(this.statsCharacter);
       alert('Chat link reset to default.');
     }
   }
 
   restoreChatLink() {
-    if (restoreStoredChatLink(this.character)) {
+    if (!this.chatOwnerReady) return;
+    if (restoreStoredChatLink(this.statsCharacter)) {
       this.loadChatLink();
       alert('Chat link restored.');
     }
   }
 
   hasActiveChatLink(): boolean {
-    return getStoredChatLink(this.character) !== null;
+    return this.chatOwnerReady && getStoredChatLink(this.statsCharacter) !== null;
   }
 
   hasArchivedLink(): boolean {
-    return getArchivedChatLink(this.character) !== null;
+    return this.chatOwnerReady && getArchivedChatLink(this.statsCharacter) !== null;
   }
   
   isValidChatLink(newLink: string): boolean {
@@ -139,26 +157,26 @@ export class CharacterModal {
 
   getChatLinkKey(): string {
     // Use character id for uniqueness
-    return 'chatLink_' + (this.character.id ?? 'unknown');
+    return 'chatLink_' + (this.statsCharacter.id ?? 'unknown');
   }
 
   getChatLinkTimestampKey(): string {
     // Use character id for uniqueness
-    return 'chatLinkTimestamp_' + (this.character.id ?? 'unknown');
+    return 'chatLinkTimestamp_' + (this.statsCharacter.id ?? 'unknown');
   }
 
   getChatLinkCounterKey(): string {
     // Use character id for uniqueness
-    return 'chatLinkCounter_' + (this.character.id ?? 'unknown');
+    return 'chatLinkCounter_' + (this.statsCharacter.id ?? 'unknown');
   }
 
   getChatLinkHistoryKey(): string {
     // Use character id for uniqueness
-    return 'chatLinkHistory_' + (this.character.id ?? 'unknown');
+    return 'chatLinkHistory_' + (this.statsCharacter.id ?? 'unknown');
   }
 
-  getChatLinkHistory(): string[] {
-    const key = this.getChatLinkHistoryKey();
+  getChatLinkHistory(character: Character = this.statsCharacter): string[] {
+    const key = 'chatLinkHistory_' + character.id;
     const history = localStorage.getItem(key);
     if (!history) return [];
     try {
@@ -207,7 +225,7 @@ export class CharacterModal {
           return b.timestamp.getTime() - a.timestamp.getTime();
         });
 
-      const index = staleCharacters.findIndex(item => item.character.id === this.character.id);
+      const index = staleCharacters.findIndex(item => item.character.id === this.statsCharacter.id);
       this.chatFlavor = index === -1
         ? null
         : this.createChatFlavor(index + 1, staleCharacters.length, pool.description);
@@ -218,14 +236,14 @@ export class CharacterModal {
     characters: Character[];
     description: string;
   } {
-    if (this.character.status === 'inactive') {
+    if (this.statsCharacter.status === 'inactive') {
       return {
         characters: characters.filter(character => character.status === 'inactive'),
         description: 'inactive characters not chatted with in the last 7 days'
       };
     }
 
-    if (this.character.status === 'retired') {
+    if (this.statsCharacter.status === 'retired') {
       const retiredTiers = this.characterService.getAllowedTiersForStatus('retired');
       const highestRetiredTier = Math.max(...retiredTiers);
       const lowestRetiredTier = Math.min(...retiredTiers);
@@ -237,7 +255,7 @@ export class CharacterModal {
       };
     }
 
-    if (this.character.status === 'active') {
+    if (this.statsCharacter.status === 'active') {
       return {
         characters: characters.filter(character => character.status === 'active'),
         description: 'active characters not chatted with in the last 7 days'
@@ -378,8 +396,8 @@ export class CharacterModal {
     return latestTimestamp >= cutoff && latestTimestamp <= now;
   }
 
-  getChatLinkCounter(): number {
-    const key = this.getChatLinkCounterKey();
+  getChatLinkCounter(character: Character = this.statsCharacter): number {
+    const key = 'chatLinkCounter_' + character.id;
     const counter = localStorage.getItem(key);
     return counter ? parseInt(counter, 10) : 0;
   }
@@ -391,7 +409,7 @@ export class CharacterModal {
   }
 
   getChatLinkTimestamp(): string | null {
-    const key = this.getChatLinkTimestampKey();
+    const key = 'chatLinkTimestamp_' + this.statsCharacter.id;
     return localStorage.getItem(key);
   }
 
@@ -487,7 +505,78 @@ export class CharacterModal {
   }
 
   hasLink(): boolean {
-    return !!this.displayedCharacter.link;
+    return this.chatOwnerReady && !!this.statsCharacter.link;
+  }
+
+  ngOnChanges(): void {
+    this.loadParentName();
+    this.loadChatLink();
+  }
+
+  private loadParentName(): void {
+    this.parentName = '';
+    this.parentCharacter = null;
+    const parentId = this.character.parentId;
+    if (parentId == null) return;
+
+    this.characterService.getCharacter(parentId).subscribe({
+      next: parent => {
+        if (this.character.parentId === parentId) {
+          this.parentCharacter = parent ?? null;
+          this.loadChatLink();
+          this.parentName = parent?.shortName || 'Parent';
+          if (!this.isMobile()) {
+            this.loadLastChatDate();
+            this.loadChatFlavor();
+          }
+        }
+      },
+      error: () => { /* Keep the link hidden when the parent cannot be resolved. */ }
+    });
+  }
+
+  openParent(): void {
+    const parentId = this.character.parentId;
+    if (parentId == null || this.loadingParent || this.parentTransition !== 'idle') return;
+
+    this.loadingParent = true;
+    this.characterService.getCharacter(parentId).subscribe({
+      next: parent => {
+        this.loadingParent = false;
+        if (!parent) return;
+        this.pendingParent = parent;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          this.showPendingParent();
+        } else {
+          this.parentTransition = 'leaving';
+        }
+      },
+      error: () => { this.loadingParent = false; }
+    });
+  }
+
+  onCardAnimationEnd(event: AnimationEvent): void {
+    if (event.target !== event.currentTarget) return;
+    if (this.parentTransition === 'leaving') {
+      this.showPendingParent();
+      (event.currentTarget as HTMLElement).scrollTop = 0;
+      this.parentTransition = 'entering';
+    } else if (this.parentTransition === 'entering') {
+      this.parentTransition = 'idle';
+    }
+  }
+
+  private showPendingParent(): void {
+      if (!this.pendingParent) return;
+      this.character = this.pendingParent;
+      this.pendingParent = null;
+      this.loadParentName();
+      this.loadChatLink();
+      this.chatFlavor = null;
+      if (!this.isMobile()) {
+        this.loadLastChatDate();
+        this.loadChatFlavor();
+      }
   }
 
   async screenshot(_: string) {

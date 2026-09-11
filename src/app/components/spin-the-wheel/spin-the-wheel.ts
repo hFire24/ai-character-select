@@ -8,6 +8,7 @@ import { DeviceService } from "../../services/device.service";
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
 import { getEffectiveChatLink } from '../../utils/chat-link-storage';
 import { iconAssetPath, useTallIconAssetPath } from '../../utils/character-assets';
+import { forkJoin, of } from 'rxjs';
 
 type FriendlinessFilter = 'all' | 'rp' | 'knowledge' | 'both';
 
@@ -21,6 +22,7 @@ type FriendlinessFilter = 'all' | 'rp' | 'knowledge' | 'both';
 export class SpinTheWheel {
   spotlightIndex: number | null = null;
   characters: Character[] = [];
+  private chatLinkCharacters: Character[] = [];
   excludedCharacters: Character[] = [];
   spinning = false;
   selectedCharacter: Character | null = null;
@@ -155,7 +157,11 @@ export class SpinTheWheel {
       ? this.characterService.getCharactersSplitTwins()
       : this.characterService.getCharacters();
     
-    observable.subscribe(chars => {
+    forkJoin({
+      chars: observable,
+      parents: this.splitTwins ? this.characterService.getCharacters() : of([] as Character[])
+    }).subscribe(({ chars, parents }) => {
+      this.chatLinkCharacters = [...parents, ...chars];
       this.characters = chars.map(character => {
         if (character.id === 135 || character.id === 136) {
           character.mature = 1;
@@ -225,7 +231,7 @@ export class SpinTheWheel {
   }
 
   getChatLink(character: Character): string {
-    return getEffectiveChatLink(character);
+    return getEffectiveChatLink(character, this.chatLinkCharacters);
   }
 
   assetPath(path: string): string {

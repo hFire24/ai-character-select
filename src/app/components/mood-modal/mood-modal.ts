@@ -219,6 +219,6 @@ export class MoodModal {
   }
 
   getChatLink(character: Character): string {
-    return getEffectiveChatLink(character);
+    return getEffectiveChatLink(character, this.characters);
   }
 }

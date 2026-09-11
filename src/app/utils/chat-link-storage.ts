@@ -14,8 +14,21 @@ export const getStoredChatLink = (character: Character): string | null =>
 export const getArchivedChatLink = (character: Character): string | null =>
   localStorage.getItem(getArchivedChatLinkKey(character));
 
-export const getEffectiveChatLink = (character: Character): string =>
-  getStoredChatLink(character) ?? character.link;
+export const getEffectiveChatLink = (character: Character, characters: Character[] = []): string => {
+  const visited = new Set<number>();
+  let current: Character | undefined = character;
+  while (current && !visited.has(current.id)) {
+    visited.add(current.id);
+    const link = getStoredChatLink(current) || current.link;
+    if (link) return link;
+    const parentId: number | undefined = current.parentId;
+    if (parentId == null || visited.has(parentId)) return '';
+    const parentLink = localStorage.getItem(`chatLink_${parentId}`);
+    if (parentLink) return parentLink;
+    current = characters.find(parent => parent.id === parentId);
+  }
+  return '';
+};
 
 export const saveChatLink = (character: Character, chatLink: string): void => {
   localStorage.setItem(getChatLinkKey(character), chatLink);
