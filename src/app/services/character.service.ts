@@ -502,6 +502,7 @@ export class CharacterService {
               img: "extended/Nuit.png",
               id: 145,
               mature: 6,
+              emotion: "joy calm",
               interests: "Romanticism, baking sweets, dolls",
               peeves: "Being mistaken for goths, evil, macabre things",
               purpose: "Dress in gothic lolita fashion; bake sweets",
