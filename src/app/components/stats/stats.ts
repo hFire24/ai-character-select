@@ -44,7 +44,7 @@ export class Stats implements OnInit {
   
   lastChattedCharacters: LastChattedCharacter[] = [];
   neverChattedCharacters: Character[] = [];
-  isDesktop = false;
+  isMobile = true;
 
   constructor(
     private characterService: CharacterService,
@@ -52,9 +52,9 @@ export class Stats implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.isDesktop = this.deviceService.isDesktop();
+    this.isMobile = this.deviceService.isMobile();
     this.calculateStats();
-    if (this.isDesktop) {
+    if (!this.isMobile) {
       this.loadLastChattedCharacters();
     }
   }

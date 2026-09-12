@@ -6,17 +6,17 @@ import { Injectable } from '@angular/core';
 export class DeviceService {
 
   /**
-   * Basic mobile device detection (phones and tablets)
-   * Returns true for any mobile device including tablets
+   * Basic mobile device detection, excluding iPads.
    */
   isMobile(): boolean {
     if (typeof window === 'undefined' || typeof navigator === 'undefined') {
       return false;
     }
     
-    const isMobileWidth = window.innerWidth <= 768;
+    if (this.isIPad()) return false;
+
     const isMobileUserAgent = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    return isMobileWidth || isMobileUserAgent;
+    return isMobileUserAgent;
   }
 
   /**
@@ -27,6 +27,8 @@ export class DeviceService {
     if (typeof window === 'undefined' || typeof navigator === 'undefined') {
       return false;
     }
+
+    if (this.isIPad()) return false;
 
     const userAgent = navigator.userAgent.toLowerCase();
     const isPhone = /android|webos|iphone|blackberry|iemobile|opera mini/i.test(navigator.userAgent);
@@ -50,52 +52,11 @@ export class DeviceService {
     return isPhone || hasPhoneDimensions;
   }
 
-  /**
-   * Detect tablets specifically
-   * Returns true for tablet-sized devices
-   */
-  isTablet(): boolean {
-    if (typeof window === 'undefined' || typeof navigator === 'undefined') {
-      return false;
-    }
-
-    const userAgent = navigator.userAgent.toLowerCase();
-    const isTablet = /ipad|android(?!.*mobile)|tablet/i.test(navigator.userAgent);
-    const isPhone = /android|webos|iphone|blackberry|iemobile|opera mini/i.test(navigator.userAgent);
-    
-    // If explicitly identified as tablet and not phone
-    if (isTablet && !isPhone) {
-      return true;
-    }
-    
-    // Check for tablet-like dimensions (larger than phone but with touch interface)
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    const minDimension = Math.min(screenWidth, screenHeight);
-    
-    // Tablet detection: mobile user agent but larger dimensions
-    const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const hasTabletDimensions = minDimension > 450 && minDimension <= 768;
-    
-    return isMobileUA && hasTabletDimensions;
-  }
-
-  /**
-   * Check if device is desktop
-   * Returns true for desktop/laptop devices
-   */
-  isDesktop(): boolean {
-    return !this.isMobile();
-  }
-
-  /**
-   * Get device type as string
-   * Returns 'phone', 'tablet', or 'desktop'
-   */
-  getDeviceType(): 'phone' | 'tablet' | 'desktop' {
-    if (this.isPhone()) return 'phone';
-    if (this.isTablet()) return 'tablet';
-    return 'desktop';
+  /** Detect iPads, including those using a desktop user agent. */
+  private isIPad(): boolean {
+    if (typeof navigator === 'undefined') return false;
+    return /ipad/i.test(navigator.userAgent) ||
+      (/Macintosh|MacIntel|MacPPC|Mac68K/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
   }
 
   /** Detect iOS devices (iPhone, iPad, iPod) */

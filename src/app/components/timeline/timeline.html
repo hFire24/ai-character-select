@@ -31,6 +31,15 @@
     <div class="timeline-axis"></div>
 
     <div
+      *ngFor="let marker of monthMarkers"
+      class="month-marker"
+      [style.left.px]="marker.position"
+      [attr.title]="marker.fullLabel"
+    >
+      <span>{{ marker.label }}</span>
+    </div>
+
+    <div
       *ngFor="let marker of yearMarkers"
       class="year-marker"
       [style.left.px]="marker.position"

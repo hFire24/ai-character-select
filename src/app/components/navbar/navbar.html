@@ -17,9 +17,9 @@
   </button>
 
   <div id="navbar-menu" class="navbar-menu" [class.open]="isMenuOpen">
-    <section class="nav-category" [class.open]="openCategory === 'groupings'">
-      <button type="button" class="category-toggle" (click)="toggleCategory('groupings')">
-        Groupings <span>{{ openCategory === 'groupings' ? '-' : '+' }}</span>
+    <section class="nav-category" [class.open]="isCategoryOpen('groupings')" (pointerenter)="enterMenu('groupings', $event)" (pointerleave)="leaveMenu('groupings')">
+      <button type="button" class="category-toggle" [attr.aria-expanded]="isCategoryOpen('groupings')" (click)="toggleCategory('groupings')">
+        Groupings <span>{{ isCategoryOpen('groupings') ? '-' : '+' }}</span>
       </button>
       <div class="category-links">
         <a routerLink="/groups" routerLinkActive="active" title="View groups of four or more characters with special connections" (click)="closeMenu()">
@@ -48,9 +48,9 @@
       </div>
     </section>
 
-    <section *ngIf="!isMobile()" class="nav-category" [class.open]="openCategory === 'management'">
-      <button type="button" class="category-toggle" (click)="toggleCategory('management')">
-        Management <span>{{ openCategory === 'management' ? '-' : '+' }}</span>
+    <section *ngIf="!isMobile()" class="nav-category" [class.open]="isCategoryOpen('management')" (pointerenter)="enterMenu('management', $event)" (pointerleave)="leaveMenu('management')">
+      <button type="button" class="category-toggle" [attr.aria-expanded]="isCategoryOpen('management')" (click)="toggleCategory('management')">
+        Management <span>{{ isCategoryOpen('management') ? '-' : '+' }}</span>
       </button>
       <div class="category-links">
         <a routerLink="/stats" routerLinkActive="active" title="View statistics about your character roster" (click)="closeMenu()">
@@ -71,9 +71,9 @@
       </div>
     </section>
 
-    <section class="nav-category" [class.open]="openCategory === 'fun'">
-      <button type="button" class="category-toggle" (click)="toggleCategory('fun')">
-        Fun <span>{{ openCategory === 'fun' ? '-' : '+' }}</span>
+    <section class="nav-category" [class.open]="isCategoryOpen('fun')" (pointerenter)="enterMenu('fun', $event)" (pointerleave)="leaveMenu('fun')">
+      <button type="button" class="category-toggle" [attr.aria-expanded]="isCategoryOpen('fun')" (click)="toggleCategory('fun')">
+        Fun <span>{{ isCategoryOpen('fun') ? '-' : '+' }}</span>
       </button>
       <div class="category-links">
         <a routerLink="/sorter" routerLinkActive="active" title="Compare characters pairwise to determine your rankings" (click)="closeMenu()">
@@ -92,9 +92,9 @@
       </div>
     </section>
 
-    <section class="nav-category" [class.open]="openCategory === 'other'">
-      <button type="button" class="category-toggle" (click)="toggleCategory('other')">
-        Other <span>{{ openCategory === 'other' ? '-' : '+' }}</span>
+    <section class="nav-category" [class.open]="isCategoryOpen('other')" (pointerenter)="enterMenu('other', $event)" (pointerleave)="leaveMenu('other')">
+      <button type="button" class="category-toggle" [attr.aria-expanded]="isCategoryOpen('other')" (click)="toggleCategory('other')">
+        Other <span>{{ isCategoryOpen('other') ? '-' : '+' }}</span>
       </button>
       <div class="category-links">
         <a routerLink="/birthday-calendar" routerLinkActive="active" title="See character birthdays organized by month" (click)="closeMenu()">

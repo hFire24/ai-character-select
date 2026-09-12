@@ -97,11 +97,6 @@
     background: #eef4fb;
   }
 
-  .nav-category:hover .category-links,
-  .nav-category:focus-within .category-links {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .category-links a,

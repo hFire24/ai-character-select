@@ -13,27 +13,29 @@ describe('DeviceService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should detect device types consistently', () => {
-    // The sum of phone + tablet + desktop should equal total device checks
-    const isPhone = service.isPhone();
-    const isTablet = service.isTablet();
-    const isDesktop = service.isDesktop();
-    const isMobile = service.isMobile();
+  for (const width of [390, 1024]) {
+    it(`keeps desktop features available at width ${width}`, () => {
+      spyOnProperty(navigator, 'userAgent', 'get').and.returnValue('Mozilla/5.0 (Windows NT 10.0; Win64; x64)');
+      spyOnProperty(window, 'innerWidth', 'get').and.returnValue(width);
+      expect(service.isMobile()).toBeFalse();
+    });
 
-    // Mobile should be true if either phone or tablet
-    expect(isMobile).toBe(isPhone || isTablet);
+    it(`treats iPhones as mobile at width ${width}`, () => {
+      spyOnProperty(navigator, 'userAgent', 'get').and.returnValue('Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)');
+      spyOnProperty(window, 'innerWidth', 'get').and.returnValue(width);
+      expect(service.isMobile()).toBeTrue();
+      expect(service.isIOS()).toBeTrue();
+    });
 
-    // Desktop should be opposite of mobile
-    expect(isDesktop).toBe(!isMobile);
-
-    // Device type should match individual checks
-    const deviceType = service.getDeviceType();
-    if (isPhone) {
-      expect(deviceType).toBe('phone');
-    } else if (isTablet) {
-      expect(deviceType).toBe('tablet');
-    } else {
-      expect(deviceType).toBe('desktop');
+    for (const userAgent of ['Mozilla/5.0 (iPad; CPU OS 18_0 like Mac OS X)', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15)']) {
+      it(`excludes iPads from mobile at width ${width}: ${userAgent}`, () => {
+        spyOnProperty(navigator, 'userAgent', 'get').and.returnValue(userAgent);
+        spyOnProperty(navigator, 'maxTouchPoints', 'get').and.returnValue(5);
+        spyOnProperty(window, 'innerWidth', 'get').and.returnValue(width);
+        expect(service.isMobile()).toBeFalse();
+        expect(service.isPhone()).toBeFalse();
+        expect(service.isIOS()).toBeTrue();
+      });
     }
-  });
+  }
 });

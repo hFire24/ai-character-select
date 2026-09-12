@@ -32,9 +32,15 @@ export class RosterFilter {
   @Output() searchChange = new EventEmitter<string>();
   isCollapsed = false;
   activeDropdown: 'status' | 'purpose' | 'gender' | 'sort' | null = null;
-  private closeDropdownTimer: ReturnType<typeof setTimeout> | null = null;
+  hoveredMenu: 'status' | 'purpose' | 'gender' | 'sort' | null = null;
+  suppressedMenu: 'status' | 'purpose' | 'gender' | 'sort' | null = null;
+
 
   constructor(private deviceService: DeviceService) {}
+
+  get isIOS(): boolean {
+    return this.deviceService.isIOS();
+  }
 
   get activeChatCount(): number {
     return Object.keys(localStorage).filter(key => key.startsWith('chatLink_')).length;
@@ -47,44 +53,36 @@ export class RosterFilter {
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed;
-    if (this.isCollapsed) this.activeDropdown = null;
+    if (this.isCollapsed) this.closeDropdowns();
   }
 
   closeDropdowns(): void {
-    if (this.closeDropdownTimer) {
-      clearTimeout(this.closeDropdownTimer);
-      this.closeDropdownTimer = null;
-    }
     this.activeDropdown = null;
+    this.suppressedMenu = this.hoveredMenu;
   }
 
-  showDropdown(dropdown: 'status' | 'purpose' | 'gender' | 'sort') {
-    if (this.closeDropdownTimer) {
-      clearTimeout(this.closeDropdownTimer);
-      this.closeDropdownTimer = null;
+  toggleDropdown(menu: 'status' | 'purpose' | 'gender' | 'sort') {
+    if (this.activeDropdown === menu) {
+      this.activeDropdown = null;
+      this.suppressedMenu = menu;
+    } else {
+      this.activeDropdown = menu;
+      this.suppressedMenu = null;
     }
-    this.activeDropdown = dropdown;
   }
 
-  hoverDropdown(dropdown: 'status' | 'purpose' | 'gender' | 'sort') {
-    if (!this.deviceService.isMobile()) this.showDropdown(dropdown);
+  isDropdownOpen(menu: 'status' | 'purpose' | 'gender' | 'sort'): boolean {
+    return this.activeDropdown === menu ||
+      (this.hoveredMenu === menu && this.suppressedMenu !== menu);
   }
 
-  toggleDropdown(dropdown: 'status' | 'purpose' | 'gender' | 'sort') {
-    if (this.closeDropdownTimer) {
-      clearTimeout(this.closeDropdownTimer);
-      this.closeDropdownTimer = null;
-    }
-    this.activeDropdown = this.activeDropdown === dropdown ? null : dropdown;
+  enterMenu(menu: 'status' | 'purpose' | 'gender' | 'sort', event: PointerEvent): void {
+    if (event.pointerType === 'mouse') this.hoveredMenu = menu;
   }
 
-  hideDropdown(dropdown: 'status' | 'purpose' | 'gender' | 'sort') {
-    if (!this.deviceService.isMobile() && this.activeDropdown === dropdown) {
-      this.closeDropdownTimer = setTimeout(() => {
-        if (this.activeDropdown === dropdown) this.activeDropdown = null;
-        this.closeDropdownTimer = null;
-      }, 200);
-    }
+  leaveMenu(menu: 'status' | 'purpose' | 'gender' | 'sort'): void {
+    if (this.hoveredMenu === menu) this.hoveredMenu = null;
+    if (this.suppressedMenu === menu) this.suppressedMenu = null;
   }
 
   get allStatusesSelected(): boolean {

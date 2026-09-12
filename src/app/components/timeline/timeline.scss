@@ -53,6 +53,24 @@
   background: #9eb1c5;
 }
 
+.month-marker {
+  position: absolute;
+  top: 80px;
+  width: 1px;
+  height: 12px;
+  background: #c7d1dc;
+
+  span {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #536577;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
 .year-marker {
   position: absolute;
   top: 108px;
@@ -264,6 +282,7 @@
     background: #4a5568;
   }
 
+  .month-marker,
   .year-marker {
     background: #4a5568;
 

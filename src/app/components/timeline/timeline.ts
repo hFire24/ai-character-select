@@ -27,6 +27,7 @@ export class Timeline implements OnInit, AfterViewInit {
 
   nodes: TimelineNode[] = [];
   yearMarkers: { year: number; position: number }[] = [];
+  monthMarkers: { label: string; fullLabel: string; position: number }[] = [];
   selectedCharacter: Character | null = null;
   activeNodeKey: string | null = null;
   zoom = 5;
@@ -74,6 +75,7 @@ export class Timeline implements OnInit, AfterViewInit {
       if (!sortedGroups.length) {
         this.nodes = [];
         this.yearMarkers = [];
+        this.monthMarkers = [];
         return;
       }
 
@@ -178,6 +180,24 @@ export class Timeline implements OnInit, AfterViewInit {
     });
 
     this.yearMarkers = this.buildYearMarkers(startDate, endDate, totalDays);
+    this.monthMarkers = this.buildMonthMarkers(startDate, endDate, totalDays);
+  }
+
+  private buildMonthMarkers(startDate: Date, endDate: Date, totalDays: number) {
+    const markers: { label: string; fullLabel: string; position: number }[] = [];
+    const month = new Date(startDate.getFullYear(), startDate.getMonth(), 1);
+
+    while (month <= endDate) {
+      const markerDate = month < startDate ? startDate : month;
+      markers.push({
+        label: month.toLocaleDateString(undefined, { month: 'short' }),
+        fullLabel: month.toLocaleDateString(undefined, { month: 'long', year: 'numeric' }),
+        position: 40 + ((this.daysBetween(startDate, markerDate) / totalDays) * (this.timelineWidth - 80))
+      });
+      month.setMonth(month.getMonth() + 1);
+    }
+
+    return markers;
   }
 
   private buildYearMarkers(startDate: Date, endDate: Date, totalDays: number) {

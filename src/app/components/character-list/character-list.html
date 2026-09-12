@@ -1,4 +1,4 @@
-@if (isDesktop && lastChattedCharacters.length > 0) {
+@if (!isMobile) {
   <div class="chatted-section">
     <p>Number of Active Chats: {{ numActiveChats }}</p>
     <p>Note: Only chats made after <b>March 27, 2026</b> are counted for the total.</p>
@@ -126,7 +126,7 @@
   </div>
 }
 
-@if (isDesktop && neverChattedCharacters.length > 0) {
+@if (!isMobile && neverChattedCharacters.length > 0) {
   <div class="chatted-section">
     <h2>Never Chatted (Active)</h2>
     <div class="chatted-list">

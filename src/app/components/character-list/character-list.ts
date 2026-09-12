@@ -36,7 +36,7 @@ export class CharacterList {
 
   @Input() lastChattedCharacters: LastChattedCharacter[] = [];
   @Input() neverChattedCharacters: Character[] = [];
-  @Input() isDesktop = false;
+  @Input() isMobile = true;
   @Output() selectCharacter = new EventEmitter<Character>();
   @Output() refreshData = new EventEmitter<void>();
 

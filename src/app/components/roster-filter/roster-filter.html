@@ -10,9 +10,9 @@
         <button class="filter-chip chat-filter-chip" [class.active]="filters.activeNoChats" [disabled]="searchTerm.trim().length > 0" (click)="toggleFilter('activeNoChats')">😐 No Chats</button>
       }
 
-      <details class="filter-dropdown" [class.disabled]="searchTerm.trim().length > 0"
-        [open]="activeDropdown === 'status'" (mouseenter)="hoverDropdown('status')" (mouseleave)="hideDropdown('status')">
-        <summary (click)="$event.preventDefault(); toggleDropdown('status')">Status</summary>
+      <div class="filter-dropdown" [class.disabled]="searchTerm.trim().length > 0"
+        [class.open]="isDropdownOpen('status')" (pointerenter)="enterMenu('status', $event)" (pointerleave)="leaveMenu('status')">
+        <button type="button" class="dropdown-toggle" [attr.aria-expanded]="isDropdownOpen('status')" (click)="toggleDropdown('status')">Status</button>
         <div class="dropdown-panel">
           <button type="button" class="dropdown-action" (click)="toggleAllStatuses()">{{ allStatusesSelected ? 'Active Only' : 'Select All' }}</button>
           <label><input type="checkbox" [checked]="filters.active" [disabled]="isLastStatus('active')" (change)="toggleFilter('active')" /> ✓ Active (All)</label>
@@ -21,12 +21,12 @@
           <label><input type="checkbox" [checked]="filters.superRetired" [disabled]="isLastStatus('superRetired')" (change)="toggleFilter('superRetired')" /> 🌑 Super Retired</label>
           <label><input type="checkbox" [checked]="filters.side" [disabled]="isLastStatus('side')" (change)="toggleFilter('side')" /> 👥 Side</label>
         </div>
-      </details>
+      </div>
 
       @if (!showingOnlySide) {
-        <details class="filter-dropdown" [class.disabled]="searchTerm.trim().length > 0"
-          [open]="activeDropdown === 'purpose'" (mouseenter)="hoverDropdown('purpose')" (mouseleave)="hideDropdown('purpose')">
-          <summary (click)="$event.preventDefault(); toggleDropdown('purpose')">Purpose</summary>
+        <div class="filter-dropdown" [class.disabled]="searchTerm.trim().length > 0"
+          [class.open]="isDropdownOpen('purpose')" (pointerenter)="enterMenu('purpose', $event)" (pointerleave)="leaveMenu('purpose')">
+          <button type="button" class="dropdown-toggle" [attr.aria-expanded]="isDropdownOpen('purpose')" (click)="toggleDropdown('purpose')">Purpose</button>
           <div class="dropdown-panel">
             <label title="Unchecked includes both RP-friendly and non-RP-friendly characters">
               <input type="checkbox" [checked]="filters.rpFriendlyOnly" (change)="toggleOnly('rpFriendlyOnly')" /> ⚔️ RP
@@ -36,22 +36,22 @@
             </label>
             <p class="filter-help">Unchecked options include both types.</p>
           </div>
-        </details>
+        </div>
       }
 
-      <details class="filter-dropdown" [class.disabled]="searchTerm.trim().length > 0"
-        [open]="activeDropdown === 'gender'" (mouseenter)="hoverDropdown('gender')" (mouseleave)="hideDropdown('gender')">
-        <summary (click)="$event.preventDefault(); toggleDropdown('gender')">Gender</summary>
+      <div class="filter-dropdown" [class.disabled]="searchTerm.trim().length > 0"
+        [class.open]="isDropdownOpen('gender')" (pointerenter)="enterMenu('gender', $event)" (pointerleave)="leaveMenu('gender')">
+        <button type="button" class="dropdown-toggle" [attr.aria-expanded]="isDropdownOpen('gender')" (click)="toggleDropdown('gender')">Gender</button>
         <div class="dropdown-panel">
-          <label><input type="checkbox" [checked]="filters.moeFemale !== false" [disabled]="isLastGender('moeFemale')" (change)="toggleGender('moeFemale')" /> <span class="gender-emoji">🩷</span> Female (Moe 8+)</label>
-          <label><input type="checkbox" [checked]="filters.nonMoeFemale !== false" [disabled]="isLastGender('nonMoeFemale')" (change)="toggleGender('nonMoeFemale')" /> <span class="gender-emoji">♀️</span> Female (Moe 1-7)</label>
-          <label><input type="checkbox" [checked]="filters.male !== false" [disabled]="isLastGender('male')" (change)="toggleGender('male')" /> <span class="gender-emoji">♂️</span> Male/Other</label>
+          <label><input type="checkbox" [checked]="filters.moeFemale !== false" [disabled]="isLastGender('moeFemale')" (change)="toggleGender('moeFemale')" /> @if (!isIOS) { 🩷 } Female (Moe 8+)</label>
+          <label><input type="checkbox" [checked]="filters.nonMoeFemale !== false" [disabled]="isLastGender('nonMoeFemale')" (change)="toggleGender('nonMoeFemale')" /> @if (!isIOS) { ♀️ } Female (Moe 1-7)</label>
+          <label><input type="checkbox" [checked]="filters.male !== false" [disabled]="isLastGender('male')" (change)="toggleGender('male')" /> @if (!isIOS) { ♂️ } Male/Other</label>
         </div>
-      </details>
+      </div>
 
-      <details class="filter-dropdown"
-        [open]="activeDropdown === 'sort'" (mouseenter)="hoverDropdown('sort')" (mouseleave)="hideDropdown('sort')">
-        <summary (click)="$event.preventDefault(); toggleDropdown('sort')">Sort</summary>
+      <div class="filter-dropdown"
+        [class.open]="isDropdownOpen('sort')" (pointerenter)="enterMenu('sort', $event)" (pointerleave)="leaveMenu('sort')">
+        <button type="button" class="dropdown-toggle" [attr.aria-expanded]="isDropdownOpen('sort')" (click)="toggleDropdown('sort')">Sort</button>
         <div class="dropdown-panel">
           <button type="button" class="dropdown-action" (click)="sortChange.emit('none')">Clear Sort</button>
           @for (option of sortOptions; track option.value) {
@@ -59,7 +59,7 @@
           }
           <p class="filter-help">Tier is the default sort.</p>
         </div>
-      </details>
+      </div>
     </div>
   </div>
 </div>
