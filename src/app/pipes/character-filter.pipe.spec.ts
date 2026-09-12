@@ -12,6 +12,7 @@ describe('CharacterFilterPipe', () => {
       {
         id: 1,
         shortName: 'Active1',
+        mature: 5,
         name: 'Active Character',
         status: 'active',
         img: '',
@@ -31,6 +32,7 @@ describe('CharacterFilterPipe', () => {
       {
         id: 2,
         shortName: 'Retired1',
+        mature: 5,
         name: 'Retired Character',
         status: 'retired',
         img: '',
@@ -50,6 +52,7 @@ describe('CharacterFilterPipe', () => {
       {
         id: 3,
         shortName: 'Side1',
+        mature: 5,
         name: 'Side Character',
         status: 'side',
         img: '',
@@ -70,6 +73,7 @@ describe('CharacterFilterPipe', () => {
       {
         id: 4,
         shortName: 'MoeChar',
+        mature: 5,
         name: 'Very Moe Character',
         status: 'active',
         img: '',
@@ -136,6 +140,47 @@ describe('CharacterFilterPipe', () => {
       expect(result.length).toBe(1);
       expect(result[0].shortName).toBe('MoeChar');
     });
+
+    for (const chatMode of ['activeChats', 'activeNoChats'] as const) {
+      describe(`${chatMode} with purpose and gender filters`, () => {
+        let characters: Character[];
+        let filters: CharacterFilters;
+
+        beforeEach(() => {
+          characters = [
+            { ...mockCharacters[0], id: 10, pronouns: 'he/him', rpFriendly: true, knowledgeFriendly: false },
+            { ...mockCharacters[0], id: 11, pronouns: 'she/her', moe: 9, rpFriendly: false, knowledgeFriendly: true },
+            { ...mockCharacters[0], id: 12, pronouns: 'she/her', moe: 1, rpFriendly: true, knowledgeFriendly: true }
+          ];
+          if (chatMode === 'activeChats') {
+            characters.forEach(character => localStorage.setItem(`chatLink_${character.id}`, 'https://example.com/chat'));
+          }
+          filters = { active: false, inactive: false, retired: false, side: false, [chatMode]: true };
+        });
+
+        it('applies each purpose and their intersection', () => {
+          expect(pipe.transform(characters, { ...filters, rpFriendlyOnly: true })).toEqual([characters[0], characters[2]]);
+          expect(pipe.transform(characters, { ...filters, knowledgeFriendlyOnly: true })).toEqual([characters[1], characters[2]]);
+          expect(pipe.transform(characters, { ...filters, rpFriendlyOnly: true, knowledgeFriendlyOnly: true })).toEqual([characters[2]]);
+        });
+
+        it('applies each gender selection', () => {
+          expect(pipe.transform(characters, { ...filters, moeFemale: false, nonMoeFemale: false })).toEqual([characters[0]]);
+          expect(pipe.transform(characters, { ...filters, male: false, nonMoeFemale: false })).toEqual([characters[1]]);
+          expect(pipe.transform(characters, { ...filters, male: false, moeFemale: false })).toEqual([characters[2]]);
+        });
+
+        it('combines chat membership, purpose, and gender', () => {
+          const outsideChatSubset = { ...characters[2], id: 13 };
+          if (chatMode === 'activeNoChats') {
+            localStorage.setItem('chatLink_13', 'https://example.com/chat');
+          }
+          expect(pipe.transform([...characters, outsideChatSubset], {
+            ...filters, rpFriendlyOnly: true, male: false
+          })).toEqual([characters[2]]);
+        });
+      });
+    }
 
     it('should filter retired characters', () => {
       const filters: CharacterFilters = { active: false, inactive: false, retired: true, superRetired: false, side: false };

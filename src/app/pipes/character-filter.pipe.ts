@@ -134,16 +134,16 @@ export class CharacterFilterPipe implements PipeTransform {
       );
     }
 
-    // If active chats filter is enabled, only show characters with active chats
+    // Select the chat subset before applying the shared purpose and gender filters.
     if (filters.activeChats) {
-      return characters.filter(character => {
+      characters = characters.filter(character => {
         return this.hasStoredChatLink(character);
       });
     }
 
     // If active no chats filter is enabled, only show active characters without active chats
-    if (filters.activeNoChats) {
-      return characters.filter(character =>
+    else if (filters.activeNoChats) {
+      characters = characters.filter(character =>
         character.status === 'active' && !this.hasStoredChatLink(character)
       );
     }
@@ -159,7 +159,7 @@ export class CharacterFilterPipe implements PipeTransform {
       const isMainCharacter = ['active', 'inactive', 'retired'].includes(character.status);
       if (!isMainCharacter && filters.side) matchesStatus = true;
 
-      if (!matchesStatus) return false;
+      if (!filters.activeChats && !filters.activeNoChats && !matchesStatus) return false;
       if (filters.rpFriendlyOnly && character.rpFriendly !== true) return false;
       if (filters.knowledgeFriendlyOnly && character.knowledgeFriendly !== true) return false;
 
