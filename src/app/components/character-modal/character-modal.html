@@ -14,10 +14,10 @@
         <h2 id="modalName" [class]="character.color || 'white'">
           {{ character.name || 'Unknown Character' }}
         </h2>
-        @if (character.status === 'retired') {
+        @if (character.status === 'retired' || character.status === 'retired side') {
           <h3 class="retired-banner">Retired</h3>
         }
-        @if (character.status === 'inactive') {
+        @if (character.status === 'inactive' || character.status === 'inactive side') {
           <h3 class="retired-banner">Inactive</h3>
         }
         @if (character.status === 'disappeared') {

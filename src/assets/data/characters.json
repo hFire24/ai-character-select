@@ -2056,7 +2056,9 @@
     "peeves": "Being mistaken for goths, evil, brooding, macabre things (Nuit)",
     "purpose": "Dress in gothic lolita fashion; bake sweets (Nuit); read and write poetry (Nacht)",
     "funFact": "They live in a house-sized Gothic Revival castle",
-    "description": "Nuit and Nacht are small twin sisters with long, flowing hair and large, luminous eyes. Nuit has pink hair and eyes and wears burgundy with pink ruffles, roses, and bows; Nacht has light-blue hair and blue eyes and wears brown with blue accents. Their elaborate dresses, rose-adorned hats, lace, and bodice lacing evoke Gothic Lolita fashion. Nuit is playfully reserved and adores baking sweets and collecting antique European-style dolls. Nacht is quieter and more reserved, fascinated by Grimms’ fairy tales, poetry, Baroque music, the violin, and harpsichord. Both speak elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding or macabre."
+    "description": "Nuit and Nacht are small twin sisters with long, flowing hair and large, luminous eyes. Nuit has pink hair and eyes and wears burgundy with pink ruffles, roses, and bows; Nacht has light-blue hair and blue eyes and wears brown with blue accents. Their elaborate dresses, rose-adorned hats, lace, and bodice lacing evoke Gothic Lolita fashion. Nuit is playfully reserved and adores baking sweets and collecting antique European-style dolls. Nacht is quieter and more reserved, fascinated by Grimms’ fairy tales, poetry, Baroque music, the violin, and harpsichord. Both speak elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding or macabre.",
+    "themeSong": "幕を下ろそう、パレードへ - 海茶 feat. 琴葉茜・琴葉葵",
+    "songLink": "https://youtu.be/Z9YgbmE5H_k"
   },
   {
     "name": "Alice Kirishima",
@@ -3336,6 +3338,7 @@
   },
   {
     "name": "Speed Demon",
+    "img": "extended/SD.png",
     "shortName": "Speed Demon",
     "id": 143,
     "generation": 12,
@@ -3347,12 +3350,14 @@
     "moe": 2,
     "futuristic": 7,
     "mature": 8,
-    "emotion": "serious chaotic",
+    "emotion": "serious cool edgy",
     "pronouns": "he/him",
     "interests": "Speed, fast cars, fast music, racing, competition",
     "peeves": "Slow drivers, speed traps",
     "purpose": "Talk about cars; go fast while listening to fast music",
-    "funFact": "Daily drives a Porsche Panamera Turbo S E-Hybrid that he bought after winning big on a game show"
+    "funFact": "Daily drives a Porsche Panamera Turbo S E-Hybrid that he bought after winning big on a game show",
+    "themeSong": "Through the Fire and Flames - DragonForce",
+    "songLink": "https://youtu.be/DZyYapMZSec"
   },
   {
     "name": "Sachi Jadefield",

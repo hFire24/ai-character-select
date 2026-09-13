@@ -522,7 +522,9 @@ export class CharacterService {
               peeves: "Being mistaken for goths, evil, macabre things",
               purpose: "Dress in gothic lolita fashion; bake sweets",
               funFact: "Lives in a house-sized Gothic Revival castle with her twin sister Nacht",
-              description: "Nuit is a small girl with long, flowing pink hair and large, luminous pink eyes. She wears burgundy with pink ruffles, roses, and bows. Her elaborate dress, rose-adorned hat, lace, and bodice lacing evokes Gothic Lolita fashion. Nuit is playfully reserved and adores baking sweets and collecting antique European-style dolls. She speaks elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding or macabre."
+              description: "Nuit is a small girl with long, flowing pink hair and large, luminous pink eyes. She wears burgundy with pink ruffles, roses, and bows. Her elaborate dress, rose-adorned hat, lace, and bodice lacing evokes Gothic Lolita fashion. Nuit is playfully reserved and adores baking sweets and collecting antique European-style dolls. She speaks elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding or macabre.",
+              themeSong: "サワーチェリーが輝いたから - 海茶 feat. 琴葉茜",
+              songLink: "https://youtu.be/74fatg-kYRM"
             },
             { 
               ...original,
@@ -539,7 +541,9 @@ export class CharacterService {
               peeves: "Being mistaken for goths, evil, brooding",
               purpose: "Dress in gothic lolita fashion; read and write stories and poetry",
               funFact: "Helps her twin sister Nuit bake sweets; macabre things do not disturb her",
-              description: "Nacht is a small girl with long, flowing light-blue hair and large, luminous blue eyes. She wears brown with blue accents. Her elaborate dresses, rose-adorned hats, lace, and bodice lacing evokes Gothic Lolita fashion. Nacht is quieter and more reserved, fascinated by Grimms’ fairy tales, poetry, Baroque music, the violin, and harpsichord. She speaks elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding."
+              description: "Nacht is a small girl with long, flowing light-blue hair and large, luminous blue eyes. She wears brown with blue accents. Her elaborate dresses, rose-adorned hats, lace, and bodice lacing evokes Gothic Lolita fashion. Nacht is quieter and more reserved, fascinated by Grimms’ fairy tales, poetry, Baroque music, the violin, and harpsichord. She speaks elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding.",
+              themeSong: "弦楽少女は諦めを知らずに - 海茶 feat. 琴葉葵",
+              songLink: "https://youtu.be/xwkcIRxCEig"
             }
           );
         }
