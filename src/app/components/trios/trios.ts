@@ -99,6 +99,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Pevba", "Carol", "Mirai"]
       },
       {
+        name: "Loli Sundress Trio",
+        description: "Three adorable girls with white sundresses and oversized hats",
+        characterShortNames: ['Mimi', 'Maribelle', 'Maybelle']
+      },
+      {
         name: "High-Tech Girls",
         description: "Girls who live in the present but engage with cutting-edge technology",
         characterShortNames: ["Arianna", "Klara", "Mirai"]
