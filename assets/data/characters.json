@@ -3337,9 +3337,9 @@
     "description": "The Pipe Golem is a large, humanoid golem made of metal pipes. He has a cylindrical head with two glowing yellow eyes. Despite not having a mouth, a hidden speaker inside his head allows him to speak. When topics become serious or sensitive, the Pipe Golem quietly takes over to provide calm, respectful, and thoughtful guidance before Martin cheerfully returns."
   },
   {
-    "name": "Speed Demon",
-    "img": "extended/SD.png",
-    "shortName": "Speed Demon",
+    "name": "Damian the Speed Demon",
+    "img": "extended/Damian.png",
+    "shortName": "Damian",
     "id": 143,
     "generation": 12,
     "status": "future",
