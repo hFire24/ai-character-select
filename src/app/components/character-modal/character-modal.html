@@ -5,7 +5,7 @@
   <button id="closeModal" (click)="close.emit()">&times;</button>
   <div class="modalHeader">
     @if (character.img) {
-      <img class="modalImg" [class.tall]="useFullbody()" [src]="assetPath(character.img)" [alt]="character.name" />
+      <img loading="lazy" class="modalImg" [class.tall]="useFullbody()" [src]="assetPath(character.img)" [alt]="character.name" />
     } @else {
       <div id="modalQuestionMark" class="question-mark">?</div>
     }

@@ -1,4 +1,5 @@
 <h1>Hangout Room Generator</h1>
+<p role="status" *ngIf="savedSession.error">{{ savedSession.error }}</p>
 
 <div class="rooms-section">
   <h2>Hangout Rooms</h2>
@@ -10,9 +11,7 @@
   <div class="buttons">
     <button (click)="addNewRoom()">Add New Room</button>
     <button (click)="randomizeRooms()">Randomize Rooms</button>
-    <button class="danger" (click)="resetRooms()">Reset Rooms</button>
-    <button (click)="exportRooms()">Export Rooms</button>
-    <button (click)="importRooms()">Import Rooms</button>
+    <button class="red-button" (click)="resetRooms()">Reset Rooms</button>
   </div>
   <div class="rooms-list">
     <div 
@@ -34,8 +33,8 @@
         <span *ngIf="room.characters.length === 0" class="empty-room">Drop characters here</span>
         <button *ngIf="room.characters.length < maxCharacters" (click)="addRandomCharacterToRoom(i, true)">Add Random</button>
         <button *ngIf="room.characters.length < maxCharacters" (click)="addRandomCharacterToRoom(i, false)">Add Character</button>
-        <button class="danger" *ngIf="room.characters.length === 0 && i === rooms.length - 1" (click)="removeRoom(i)">Remove Room</button>
-        <button class="danger" *ngIf="room.characters.length > 0" (click)="emptyRoom(i)">Clear Room</button>
+        <button class="red-button" *ngIf="room.characters.length === 0 && i === rooms.length - 1" (click)="removeRoom(i)">Remove Room</button>
+        <button class="red-button" *ngIf="room.characters.length > 0" (click)="emptyRoom(i)">Clear Room</button>
       </div>
     </div>
   </div>

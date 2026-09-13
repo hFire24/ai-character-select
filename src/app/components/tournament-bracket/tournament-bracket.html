@@ -1,3 +1,37 @@
+<p role="status" *ngIf="savedSession.error">{{ savedSession.error }}</p>
+@if (choosingExclusions) {
+  <section class="overflow-selection">
+    <button type="button" class="red-button" (click)="restartRequested.emit()">Restart</button>
+    <h2>Choose who sits out</h2>
+    <p>{{ overflowCandidates.length }} characters are eligible for 128 places. Select {{ requiredExclusions }} to exclude.</p>
+    <p aria-live="polite">{{ excludedOverflowIds.size }} of {{ requiredExclusions }} selected</p>
+    <label>
+      <input type="checkbox" [checked]="showAllExclusionCandidates"
+        (change)="showAllExclusionCandidates = !showAllExclusionCandidates" />
+      Show all eligible characters
+    </label>
+    @if (!showAllExclusionCandidates) {
+      <p>Showing potential bottom seeds with a moe score of {{ bottomSeedMoe }}.</p>
+      @if (visibleExclusionCandidates.length < requiredExclusions) {
+        <p>There aren't enough characters in this group to make all exclusions. Select “Show all eligible characters” to choose from the full list.</p>
+      }
+    }
+    <div class="overflow-characters">
+      @for (character of visibleExclusionCandidates; track character.id) {
+        <label>
+          <input type="checkbox"
+            [checked]="excludedOverflowIds.has(character.id)"
+            [disabled]="!excludedOverflowIds.has(character.id) && excludedOverflowIds.size >= requiredExclusions"
+            (change)="toggleExclusion(character.id)" />
+          <img loading="lazy" [src]="assetPath(character.img)" alt="" width="48" height="48" />
+          {{ character.shortName }}
+        </label>
+      }
+    </div>
+    <button type="button" [disabled]="excludedOverflowIds.size !== requiredExclusions" (click)="confirmExclusions()">Start Tournament</button>
+  </section>
+} @else {
+  <button type="button" class="red-button" (click)="restartRequested.emit()">Restart</button>
 <main class="tournament-grid" [class.one-column]="bracketSize <= 4" [class.four-columns]="bracketSize > 4">
   @if (!tournamentWinner) {
     @for (column of columns; track $index) {
@@ -8,7 +42,7 @@
               <div class="matchup">
                 <div class="character" [class.win]="isWinner(column[i].id)" (click)="toggleWin(column[i].id)">
                   @if (column[i].img) {
-                    <img [src]="assetPath(column[i].img)" [alt]="column[i].shortName" />
+                    <img loading="lazy" [src]="assetPath(column[i].img)" [alt]="column[i].shortName" />
                   } @else {
                     <div class="question-mark">?</div>
                   }
@@ -17,7 +51,7 @@
                 </div>
                 <div class="character" [class.win]="isWinner(column[i + 1].id)" (click)="toggleWin(column[i + 1].id)">
                   @if (column[i + 1].img) {
-                    <img [src]="assetPath(column[i + 1].img)" [alt]="column[i + 1].shortName" />
+                    <img loading="lazy" [src]="assetPath(column[i + 1].img)" [alt]="column[i + 1].shortName" />
                   } @else {
                     <div class="question-mark">?</div>
                   }
@@ -33,7 +67,7 @@
   } @else {  
     <div class="character-win">
       @if (tournamentWinner.img) {
-        <img class="tall-icon" [src]="tallAssetPath(tournamentWinner.img)" [alt]="tournamentWinner.shortName" (error)="($any($event.target)).src = fallbackAssetPath(tournamentWinner.img)" />
+        <img loading="lazy" class="tall-icon" [src]="tallAssetPath(tournamentWinner.img)" [alt]="tournamentWinner.shortName" (error)="($any($event.target)).src = fallbackAssetPath(tournamentWinner.img)" />
       } @else {
         <div class="question-mark">?</div>
       }
@@ -44,5 +78,7 @@
 <footer>
   @if (!tournamentWinner) {
     <button (click)="createNewBracket()" [disabled]="!allWinnersChosen()" title="Create new bracket with winners">Next Round</button>
+    <button type="button" class="red-button" (click)="restartRequested.emit()">Restart</button>
   }
 </footer>
+}

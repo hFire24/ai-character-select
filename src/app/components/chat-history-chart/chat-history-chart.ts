@@ -30,7 +30,7 @@ export interface HistoryEra {
 type HistorySortField = 'added' | 'name' | 'id' | 'count' | 'first' | 'latest';
 type SortDirection = 'asc' | 'desc';
 type SlidingZoomLevel = 7 | 15 | 30 | 60 | 120;
-type ZoomLevel = SlidingZoomLevel | 'full' | 'custom';
+type ZoomLevel = number | 'full' | 'custom';
 
 @Component({
   selector: 'app-chat-history-chart',

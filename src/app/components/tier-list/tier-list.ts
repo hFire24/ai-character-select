@@ -1,3 +1,4 @@
+import { SavedSession } from '../../utils/saved-session';
 import { Component } from '@angular/core';
 import { CharacterService } from '../../services/character.service';
 import { CommonModule } from '@angular/common';
@@ -15,6 +16,12 @@ import { MOE_THRESHOLD, NON_MOE_THRESHOLD } from '../../config/character-thresho
   styleUrl: './tier-list.scss'
 })
 export class TierList {
+  readonly savedSession = new SavedSession('tier-list', ["tiers","characterFilter","filterTierCharacters","characterSort","splitTwins"]);
+
+  ngDoCheck(): void {
+    this.savedSession.save(this);
+  }
+
   screenshotDataUrl: string | null = null;
   characterFilter: string = 'all';
   filterTierCharacters: boolean = false;
@@ -85,8 +92,12 @@ export class TierList {
       return { status: { inactive: true } };
     }
     
+    if (this.characterFilter === 'superRetired') {
+      return { status: { superRetired: true } };
+    }
+
     if (this.characterFilter === 'retired') {
-      return { status: { retired: true } };
+      return { status: { retired: true, superRetired: false } };
     }
 
     if (this.characterFilter === 'allSide') {
@@ -163,6 +174,7 @@ export class TierList {
   }
 
   constructor(private characterService: CharacterService) {
+    this.savedSession.initialize(this);
     this.loadCharacters();
   }
 

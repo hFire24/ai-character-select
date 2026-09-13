@@ -171,6 +171,9 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+button.red-button {
+  background-color: #DD3333;
+}
 button.chaos {
   background-color: #e74c3c;
 }

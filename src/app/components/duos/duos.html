@@ -17,7 +17,7 @@
         @for (char of filteredCharacters1; track char.id) {
           <li (click)="selectCharacter1(char)">
             @if (char.img) {
-              <img [src]="squareAssetPath(char.img)" [alt]="char.shortName" />
+              <img loading="lazy" [src]="squareAssetPath(char.img)" [alt]="char.shortName" />
             }
             <span>{{ char.name }}</span>
           </li>
@@ -42,7 +42,7 @@
         @for (char of filteredCharacters2; track char.id) {
           <li (click)="selectCharacter2(char)">
             @if (char.img) {
-              <img [src]="squareAssetPath(char.img)" [alt]="char.shortName" />
+              <img loading="lazy" [src]="squareAssetPath(char.img)" [alt]="char.shortName" />
             }
             <span>{{ char.name }}</span>
           </li>
@@ -58,7 +58,7 @@
     (click)="openCharacterModal(character1)"
   >
     @if (character1.img) {
-      <img class="tall-icon" [src]="assetPath(character1.img)" [alt]="character1.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character1.img)" />
+      <img loading="lazy" class="tall-icon" [src]="assetPath(character1.img)" [alt]="character1.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character1.img)" />
     } @else {
       <div class="question-mark">?</div>
     }
@@ -70,7 +70,7 @@
     (click)="openCharacterModal(character2)"
   >
     @if (character2.img) {
-      <img class="tall-icon" [src]="assetPath(character2.img)" [alt]="character2.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character2.img)" />
+      <img loading="lazy" class="tall-icon" [src]="assetPath(character2.img)" [alt]="character2.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character2.img)" />
     } @else {
       <div class="question-mark">?</div>
     }

@@ -24,7 +24,7 @@
       <div class="search-results">
         @for (character of chart.searchResults; track character.id) {
           <button class="search-result" type="button" [class.selected]="chart.isCharacterSelected(character.id)" (click)="chart.addCharacter(character)">
-            <img [src]="iconPath(character)" alt="" (error)="useUnknownIcon($event)" />
+            <img loading="lazy" [src]="iconPath(character)" alt="" (error)="useUnknownIcon($event)" />
             <span class="result-details"><strong>{{ character.shortName }}</strong><small>ID {{ character.id }} &middot; {{ chart.historyCount(character.id) }} history entries</small></span>
             <span class="add-icon" aria-hidden="true">{{ chart.isCharacterSelected(character.id) ? '−' : '+' }}</span>
           </button>

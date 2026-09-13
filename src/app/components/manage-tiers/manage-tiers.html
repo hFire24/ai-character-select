@@ -121,7 +121,7 @@
       @for (character of filteredCharacters; track character.id) {
         <article class="character-row">
           <div class="identity">
-            <img
+            <img loading="lazy"
               [src]="'assets/Icons/' + (character.img || 'extended/Unknown.png')"
               [alt]="character.shortName"
               (click)="selectedCharacter = character"

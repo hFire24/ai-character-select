@@ -28,7 +28,7 @@
         (click)="selectCharacter.emit(c)"
       >
         @if (c.img && c.shortName !== 'ChatGPT') {
-          <img class="tall-icon" [src]="assetPath(c.img)" [alt]="c.shortName" (error)="($any($event.target)).src = fallbackAssetPath(c.img)" />
+          <img loading="lazy" class="tall-icon" [src]="assetPath(c.img)" [alt]="c.shortName" (error)="($any($event.target)).src = fallbackAssetPath(c.img)" />
         } @else {
           <div class="question-mark">?</div>
         }

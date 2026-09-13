@@ -1,3 +1,4 @@
+import { SavedSession } from '../../utils/saved-session';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -5,7 +6,7 @@ import { CharacterService } from '../../services/character.service';
 import { Character } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
 import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
-import { iconAssetPath } from '../../utils/character-assets';
+import { iconAssetPath, useTallIconAssetPath } from '../../utils/character-assets';
 import html2canvas from 'html2canvas';
 
 @Component({
@@ -15,12 +16,24 @@ import html2canvas from 'html2canvas';
   styleUrl: './sorter.scss'
 })
 export class Sorter implements OnInit, OnDestroy {
+  readonly savedSession = new SavedSession('sorter', ["characters","sortMode","isSorting","currentPair","sortedCharacters","progress","totalComparisons","tieGroups","comparisonHistory","mergeQueue","nextQueue","currentMerge","kingOfTheHillWinner","currentKing","remainingCharacters","history","genderFilter","includeActive","includeInactive","includeSide","includeRetired","includeSuperRetired","includeMe","includeBonus"]);
+
+  restartSession(): void {
+    if (!confirm('Restart and discard saved progress?')) return;
+    this.savedSession.restart(this);
+  }
+
+  ngDoCheck(): void {
+    this.savedSession.save(this);
+  }
+
   characters: Character[] = [];
   genderFilter: string = 'all';
   includeActive: boolean = true;
   includeInactive: boolean = true;
   includeSide: boolean = true;
   includeRetired: boolean = true;
+  includeSuperRetired = false;
   includeMe: boolean = false;
   includeBonus: boolean = false;
   isIOS: boolean = false;
@@ -74,6 +87,7 @@ export class Sorter implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.savedSession.initialize(this);
     this.isIOS = this.deviceService.isIOS();
     this.setGenderLabels();
     document.body.classList.add('no-body-padding');
@@ -447,6 +461,7 @@ export class Sorter implements OnInit, OnDestroy {
         inactive: this.includeInactive,
         side: this.includeSide,
         retired: this.includeRetired,
+        superRetired: this.includeSuperRetired,
         me: this.includeMe,
         bonus: this.includeBonus
       }
@@ -555,10 +570,7 @@ export class Sorter implements OnInit, OnDestroy {
   assetPath(path: string): string {
     if (!path) return '';
 
-    const [, ...rest] = path.split('/');
-    const filename = rest.join('/');
-
-    return filename ? `assets/Icons/tall/${filename}` : iconAssetPath(path);
+    return useTallIconAssetPath(path);
   }
 
   squareAssetPath(path: string): string {

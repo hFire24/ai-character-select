@@ -26,7 +26,7 @@
                 title="Click to view {{ character.shortName }}"
               >
                 @if (character.img) {
-                  <img class="tall-icon" [src]="assetPath(character.img)" [alt]="character.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character.img)" />
+                  <img loading="lazy" class="tall-icon" [src]="assetPath(character.img)" [alt]="character.shortName" (error)="($any($event.target)).src = fallbackAssetPath(character.img)" />
                 } @else {
                   <div class="question-mark">?</div>
                 }

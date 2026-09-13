@@ -11,7 +11,13 @@ import type { ChatHistoryChart } from '../chat-history-chart';
 export class HistoryDateRange {
   @Input({ required: true }) chart!: ChatHistoryChart;
 
-  isZoomLevel(days: number) { return this.chart.zoomLevel === days; }
+  readonly durationPresets = [7, 15, 30, 60, 120];
+  get durationPreset() { return this.durationPresets.includes(this.slidingZoomDays) ? this.slidingZoomDays : ''; }
+  private firstHandleIsStart = true;
+  get firstHandleValue() { return this.firstHandleIsStart ? this.sliderValue : this.endSliderValue; }
+  get secondHandleValue() { return this.firstHandleIsStart ? this.endSliderValue : this.sliderValue; }
+  get firstHandleDate() { return this.firstHandleIsStart ? this.chart.selectedStartDate : this.chart.selectedEndDate; }
+  get secondHandleDate() { return this.firstHandleIsStart ? this.chart.selectedEndDate : this.chart.selectedStartDate; }
   get hasSlidingZoom() { return typeof this.chart.zoomLevel === 'number'; }
   get slidingZoomDays() { return typeof this.chart.zoomLevel === 'number' ? this.chart.zoomLevel : 0; }
 
@@ -36,12 +42,36 @@ export class HistoryDateRange {
   get selectedEnd() { return this.fromKey(this.chart.selectedEndDate); }
 
   setRecentDays(days: number) {
-    this.chart.zoomLevel = days as 7 | 15 | 30 | 60 | 120;
-    const end = this.fromKey(this.chart.datasetEndDate);
-    const start = new Date(end);
-    start.setDate(start.getDate() - days + 1);
-    this.chart.selectedStartDate = this.clamp(this.toKey(start), this.chart.datasetStartDate, this.chart.datasetEndDate);
-    this.chart.selectedEndDate = this.chart.datasetEndDate;
+    this.chart.zoomLevel = days;
+    this.updateStartDate(this.chart.selectedStartDate || this.chart.datasetStartDate);
+  }
+
+  setDurationMode() { if (!this.hasSlidingZoom) this.setRecentDays(30); }
+
+  updateDuration(value: number) {
+    if (Number.isFinite(value) && value >= 1) this.setRecentDays(Math.min(this.totalDays + 1, Math.floor(value)));
+  }
+
+  get totalDays() {
+    return Math.max(0, this.dayNumber(this.fromKey(this.chart.datasetEndDate)) - this.dayNumber(this.fromKey(this.chart.datasetStartDate)));
+  }
+  get endSliderValue() {
+    return this.dayNumber(this.selectedEnd) - this.dayNumber(this.fromKey(this.chart.datasetStartDate));
+  }
+  get rangeStartPercent() { return this.totalDays ? this.sliderValue / this.totalDays * 100 : 0; }
+  get rangeEndPercent() { return this.totalDays ? this.endSliderValue / this.totalDays * 100 : 0; }
+
+  updateRangeSlider(value: string, handle: 'first' | 'second') {
+    const date = this.fromKey(this.chart.datasetStartDate);
+    date.setDate(date.getDate() + Math.max(0, Math.min(this.totalDays, Number(value))));
+    const key = this.toKey(date);
+    const movingStart = handle === 'first' ? this.firstHandleIsStart : !this.firstHandleIsStart;
+    const stationary = movingStart ? this.chart.selectedEndDate : this.chart.selectedStartDate;
+    this.chart.selectedStartDate = key < stationary ? key : stationary;
+    this.chart.selectedEndDate = key > stationary ? key : stationary;
+    if ((movingStart && key > stationary) || (!movingStart && key < stationary)) {
+      this.firstHandleIsStart = !this.firstHandleIsStart;
+    }
   }
 
   reset() {

@@ -231,7 +231,7 @@
   },
   {
     "name": "Darxi Nighthawk",
-    "img": "main/Darxi.png",
+    "img": "extended/Darxi.png",
     "shortName": "Darxi",
     "id": 21,
     "generation": 2,
@@ -597,7 +597,7 @@
   },
   {
     "name": "Celestia Hart",
-    "img": "main/Celestia.png",
+    "img": "extended/Celestia.png",
     "shortName": "Celestia",
     "id": 38,
     "generation": 5,
@@ -652,7 +652,7 @@
   },
   {
     "name": "Mark the Moderate",
-    "img": "main/Mark.png",
+    "img": "extended/Mark.png",
     "shortName": "Mark",
     "id": 9,
     "generation": 6,
@@ -682,7 +682,7 @@
   },
   {
     "name": "Princess Lily",
-    "img": "main/Lily.png",
+    "img": "extended/Lily.png",
     "shortName": "Lily",
     "id": 46,
     "generation": 6,
@@ -708,7 +708,7 @@
   },
   {
     "name": "Martin Gaffney",
-    "img": "main/Martin.png",
+    "img": "extended/Martin.png",
     "shortName": "Martin",
     "id": 47,
     "generation": 6,
@@ -1130,7 +1130,7 @@
   },
   {
     "name": "Princess Dahlia \"Infinitas\"",
-    "img": "main/Infinitas.png",
+    "img": "extended/Infinitas.png",
     "shortName": "Infinitas",
     "id": 72,
     "generation": 8,
@@ -1680,7 +1680,7 @@
   },
   {
     "name": "Princess Janice \"Bluebell\"",
-    "img": "main/Bluebell.png",
+    "img": "extended/Bluebell.png",
     "shortName": "Bluebell",
     "id": 106,
     "generation": 10,
@@ -1809,7 +1809,7 @@
   },
   {
     "name": "Parker Lewis",
-    "img": "main/Parker.png",
+    "img": "extended/Parker.png",
     "shortName": "Parker",
     "id": 125,
     "generation": 11,
@@ -1933,7 +1933,7 @@
   },
   {
     "name": "Diana the Mage",
-    "img": "main/Diana.png",
+    "img": "extended/Diana.png",
     "shortName": "Diana",
     "id": 138,
     "generation": 11,
@@ -1958,7 +1958,7 @@
   },
   {
     "name": "Koharu Koizumi",
-    "img": "main/Koharu.png",
+    "img": "extended/Koharu.png",
     "shortName": "Koharu",
     "id": 139,
     "generation": 11,
@@ -1984,7 +1984,7 @@
   },
   {
     "name": "Bonnie the Bunny Magician",
-    "img": "main/Bonnie.png",
+    "img": "extended/Bonnie.png",
     "shortName": "Bonnie",
     "id": 140,
     "generation": 11,

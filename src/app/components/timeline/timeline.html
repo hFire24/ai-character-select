@@ -72,7 +72,7 @@
           class="tooltip-character"
           (click)="openCharacter(character); $event.stopPropagation()"
         >
-          <img [src]="'assets/Icons/' + character.img" [alt]="character.shortName" />
+          <img loading="lazy" [src]="'assets/Icons/' + character.img" [alt]="character.shortName" />
           <span>{{ character.shortName }}</span>
         </span>
       </span>

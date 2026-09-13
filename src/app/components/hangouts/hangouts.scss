@@ -65,12 +65,9 @@ button {
   }
 }
 
-button.danger {
-  background-color: #e74c3c;
-  color: white;
-
+button.red-button {
   &:hover {
-    background-color: #c0392b;
+    background-color: #BB2222;
   }
 }
 
@@ -124,7 +121,7 @@ input[type="number"] {
 
 .banned-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 10px;
   text-align: left;
 }

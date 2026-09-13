@@ -42,13 +42,6 @@ export class CharacterGrid {
         this.isLoading = false;
       });
       
-      // Preload all character images
-      this.characters.forEach(character => {
-        if (character.img) {
-          const img = new Image();
-          img.src = this.assetPath(character.img);
-        }
-      });
     });
   }
 

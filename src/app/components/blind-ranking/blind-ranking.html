@@ -30,6 +30,7 @@
         <label><input type="checkbox" [(ngModel)]="includeInactive"> Inactive Characters</label>
         <label><input type="checkbox" [(ngModel)]="includeSide"> Side Characters</label>
         <label><input type="checkbox" [(ngModel)]="includeRetired"> Retired Characters</label>
+        <label><input type="checkbox" [(ngModel)]="includeSuperRetired"> Super Retired Characters</label>
         <label><input type="checkbox" [(ngModel)]="includeMe"> Me</label>
         <label><input type="checkbox" [(ngModel)]="includeBonus"> Bonus Characters</label>
       </div>
@@ -47,7 +48,7 @@
       <div class="current-character" (click)="revealCharacterModal()">
         @if (currentCharacter) {
           <h2>Rank this character (1-5):</h2>
-          <img class="tall-icon" [src]="assetPath(currentCharacter.img)" [alt]="currentCharacter.name"
+          <img loading="lazy" class="tall-icon" [src]="assetPath(currentCharacter.img)" [alt]="currentCharacter.name"
             (error)="($any($event.target)).src = fallbackAssetPath(currentCharacter.img)"/>
           <p>{{ currentCharacter.name }}</p>
         }
@@ -64,7 +65,7 @@
              (click)="placeInRank($index)">
           <div class="rank-number">{{ $index + 1 }}</div>
           @if (character) {
-            <img [src]="assetPath(character.img)" [alt]="character.name"
+            <img loading="lazy" [src]="assetPath(character.img)" [alt]="character.name"
               width="100" height="150"
               (error)="($any($event.target)).src = fallbackAssetPath(character.img)"/>
             <p>{{ character.name }}</p>
@@ -82,6 +83,9 @@
     }
 
     <button (click)="takeScreenshot()">Take Screenshot</button>
+    <button (click)="restartSession()" class="red-button">Restart</button>
+    <p role="status" *ngIf="savedSession.error">{{ savedSession.error }}</p>
+
   </div>
   @if (gameComplete) {
     <div class="game-complete">

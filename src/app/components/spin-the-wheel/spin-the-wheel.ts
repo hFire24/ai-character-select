@@ -37,6 +37,7 @@ export class SpinTheWheel {
     active: true,
     inactive: true,
     retired: true,
+    superRetired: false,
     side: true,
     me: false,
     future: false
@@ -147,6 +148,7 @@ export class SpinTheWheel {
     this.statusFilters.active = newValue;
     this.statusFilters.inactive = newValue;
     this.statusFilters.retired = newValue;
+    this.statusFilters.superRetired = newValue;
     this.statusFilters.side = newValue;
     this.statusFilters.me = newValue;
     this.statusFilters.future = newValue;

@@ -1,9 +1,10 @@
+import { LazySvgIcon } from '../../../directives/lazy-svg-icon';
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Character } from '../../../services/character.service';
 import type { CharacterHistorySeries, HistoryEra, HistoryPoint, ChatHistoryChart } from '../chat-history-chart';
 
-@Component({ selector: 'app-history-data-plot', imports: [CommonModule], templateUrl: './history-data-plot.html', styleUrl: './history-data-plot.scss' })
+@Component({ selector: 'app-history-data-plot', imports: [CommonModule, LazySvgIcon], templateUrl: './history-data-plot.html', styleUrl: './history-data-plot.scss' })
 export class HistoryDataPlot {
   @Input({ required: true }) chart!: ChatHistoryChart;
   private readonly chartWidth=1100; private readonly plotLeft=200; private readonly plotRight=1070;

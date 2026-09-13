@@ -30,6 +30,8 @@ export interface CharacterFilterOptions {
     active?: boolean;
     inactive?: boolean;
     retired?: boolean;
+    // When specified, tier 9 retired characters are controlled separately.
+    superRetired?: boolean;
     side?: boolean;
     me?: boolean;
     future?: boolean;
@@ -253,6 +255,9 @@ export class CharacterFilterPipe implements PipeTransform {
   }
 
   private checkStatus(character: Character, status: NonNullable<CharacterFilterOptions['status']>): boolean {
+    if (character.status.toLowerCase() === 'retired' && character.tier === 9 && status.superRetired !== undefined) {
+      return status.superRetired;
+    }
     const hasAnyFilter = Object.values(status).some(v => v === true);
     if (!hasAnyFilter) return true; // No status filters active
 

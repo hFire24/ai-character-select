@@ -17,7 +17,7 @@
     }
     @for (item of chart.displayedSeries; track item.character.id; let rowIndex = $index) {
       <line class="row-line" [attr.x1]="plotStartX" [attr.x2]="plotEndX" [attr.y1]="rowY(rowIndex)" [attr.y2]="rowY(rowIndex)" />
-      <image x="9" [attr.y]="rowY(rowIndex) - 26" width="38" height="38" [attr.href]="iconPath(item.character)"
+      <image x="9" [attr.y]="rowY(rowIndex) - 26" width="38" height="38" [lazyIconSrc]="iconPath(item.character)"
         [attr.clip-path]="'url(#avatar-clip-' + item.character.id + ')'" preserveAspectRatio="xMidYMid slice"
         (error)="useUnknownIcon($event)" (click)="chart.selectedCharacter = item.character" />
       <text class="row-label" x="55" [class.inactive]="item.character.status === 'inactive'" [class.retired]="item.character.status === 'retired'"

@@ -1,3 +1,4 @@
+import { useTallIconAssetPath } from '../../utils/character-assets';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Character, CharacterService } from '../../services/character.service';
 import { DeviceService } from '../../services/device.service';
@@ -470,9 +471,7 @@ export class CharacterModal {
   assetPath(path: string) {
     if (!path) return '';
     // Expecting formats like "main/xyz" or "extended/xyz"
-    const parts = path.split('/');
-    const rest = parts.slice(1).join('/');
-    const fullbodyPath = `assets/Icons/tall/${rest}`;
+    const fullbodyPath = useTallIconAssetPath(path);
 
     if (this.assetExists(fullbodyPath)) {
       return fullbodyPath;
@@ -483,9 +482,7 @@ export class CharacterModal {
 
   useFullbody(): boolean {
     if (!this.character.img) return false;
-    const parts = this.character.img.split('/');
-    const rest = parts.slice(1).join('/');
-    const fullbodyPath = `assets/Icons/tall/${rest}`;
+    const fullbodyPath = useTallIconAssetPath(this.character.img);
     return this.assetExists(fullbodyPath);
   }
 

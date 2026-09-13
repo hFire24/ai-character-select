@@ -22,6 +22,7 @@
 						<input type="checkbox" [(ngModel)]="statusFilters.retired" />
 						Retired
 					</label>
+                    <label><input type="checkbox" [(ngModel)]="statusFilters.superRetired" /> Super Retired</label>
 					<label>
 						<input type="checkbox" [(ngModel)]="statusFilters.side" />
 						Side
@@ -148,7 +149,7 @@
 	<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
 	<div *ngIf="selectedCharacter" class="result">
 		<h3>Selected Character:</h3>
-		<img class="tall-icon" [src]="assetPath(selectedCharacter.img)" [alt]="selectedCharacter.name"
+		<img loading="lazy" class="tall-icon" [src]="assetPath(selectedCharacter.img)" [alt]="selectedCharacter.name"
 		width="128" height="192"
 		(error)="($any($event.target)).src = fallbackAssetPath(selectedCharacter.img)" 
 		(click)="showCard = true"

@@ -66,8 +66,11 @@
   margin-top: 0.5rem;
 }
 
-button.red-button {
-  background-color: #DD3333;
+.tier-settings-new {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
 }
 
 .material-icons {

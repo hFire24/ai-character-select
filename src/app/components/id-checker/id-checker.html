@@ -25,7 +25,7 @@
         class="id-input"
       />
       <button (click)="searchById()" class="search-button">Search</button>
-      <button (click)="clearSearch()" class="clear-button" *ngIf="searched">Clear</button>
+      <button (click)="clearSearch()" class="red-button" *ngIf="searched">Clear</button>
     </div>
   </div>
 
@@ -36,7 +36,7 @@
 
     <div class="character-details" *ngIf="character">
       <div class="character-header">
-        <img [src]="'assets/Icons/' + (character.img ? character.img : 'extended/Unknown.png')" [alt]="character.name" class="character-image" />
+        <img loading="lazy" [src]="'assets/Icons/' + (character.img ? character.img : 'extended/Unknown.png')" [alt]="character.name" class="character-image" />
         <div class="header-info">
           <h3>{{ character.name }}</h3>
           <p class="short-name">Short Name: {{ character.shortName }}</p>

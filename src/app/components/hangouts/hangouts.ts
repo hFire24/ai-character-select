@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { CharacterService, Character } from "../../services/character.service";
+import { SavedSession } from '../../utils/saved-session';
 
 interface Room {
   name: string;
@@ -15,6 +16,12 @@ interface Room {
   styleUrl: './hangouts.scss'
 })
 export class Hangouts {
+  readonly savedSession = new SavedSession('hangouts', ['rooms', 'maxCharacters']);
+
+  ngDoCheck(): void {
+    this.savedSession.save(this);
+  }
+
   allCharacters: Character[] = [];
   bannedCharacters: Character[] = [];
   rooms: Room[] = [];
@@ -41,6 +48,7 @@ export class Hangouts {
   ) {}
 
   ngOnInit() {
+    this.savedSession.initialize(this);
     this.loadCharacters();
   }
 
@@ -318,8 +326,14 @@ export class Hangouts {
   }
 
   resetRooms() {
-    if (confirm("This will clear all rooms, and you will lose all unsaved changes to your rooms. Are you sure you want to continue?")) {
+    if (confirm("Delete all rooms and their saved arrangements?")) {
       this.rooms = [];
+      this.draggedCharacter = null;
+      this.dragSource = null;
+      this.selectedPoolCharIdx = null;
+      this.selectedRoomChar = null;
+      // Persist the empty arrangement immediately so reload cannot restore deleted rooms.
+      this.savedSession.save(this);
     }
   }
 
@@ -342,54 +356,5 @@ export class Hangouts {
         this.rooms[roomIndex].characters.push(character);
       }
     });
-  }
-
-  exportRooms() {
-    // Convert rooms to a simplified format with only character IDs
-    const exportData = this.rooms.map(room => ({
-      name: room.name,
-      characterIds: room.characters.map(c => c.id)
-    }));
-    
-    const data = JSON.stringify(exportData, null, 2);
-    const blob = new Blob([data], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'rooms.json';
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-
-  importRooms() {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'application/json';
-    input.onchange = (event: any) => {
-      const file = event.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = (e: any) => {
-        try {
-          const importedData = JSON.parse(e.target.result);
-          if (!Array.isArray(importedData)) {
-            alert("Invalid file format.");
-            return;
-          }
-          
-          // Reconstruct rooms with full character objects from IDs
-          this.rooms = importedData.map(roomData => ({
-            name: roomData.name,
-            characters: roomData.characterIds
-              .map((id: number) => this.allCharacters.find(c => c.id === id))
-              .filter((c: Character | undefined): c is Character => c !== undefined)
-          }));
-        } catch (error) {
-          alert("Error reading file.");
-        }
-      };
-      reader.readAsText(file);
-    };
-    input.click();
   }
 }

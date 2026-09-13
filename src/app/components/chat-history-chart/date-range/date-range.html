@@ -1,14 +1,23 @@
 <section class="date-range" aria-label="Chart date range">
   <strong>Date range</strong>
-  <div class="date-range-presets" aria-label="Chart zoom level">
-    <span class="zoom-label">Zoom</span>
-    @for (days of [7, 15, 30, 60, 120]; track days) {
-      <button type="button" [class.active]="isZoomLevel(days)" [attr.aria-pressed]="isZoomLevel(days)" (click)="setRecentDays(days)">{{ days }} days</button>
-    }
-    <button type="button" [class.active]="chart.zoomLevel === 'full'" [attr.aria-pressed]="chart.zoomLevel === 'full'" (click)="reset()">Full</button>
-    <button type="button" [class.active]="chart.zoomLevel === 'custom'" [attr.aria-pressed]="chart.zoomLevel === 'custom'" (click)="setCustom()">Custom</button>
+  <div class="date-range-presets" aria-label="Date range mode">
+    <button type="button" [class.active]="chart.zoomLevel === 'full'" [attr.aria-pressed]="chart.zoomLevel === 'full'" (click)="reset()">Full Range</button>
+    <button type="button" [class.active]="hasSlidingZoom" [attr.aria-pressed]="hasSlidingZoom" (click)="setDurationMode()">Start + Duration</button>
+    <button type="button" [class.active]="chart.zoomLevel === 'custom'" [attr.aria-pressed]="chart.zoomLevel === 'custom'" (click)="setCustom()">Start + End</button>
   </div>
   @if (hasSlidingZoom) {
+    <div class="date-range-presets" aria-label="Duration in days">
+      <label><span>Duration (days)</span><input type="number" min="1" [max]="totalDays + 1"
+        [ngModel]="slidingZoomDays" (ngModelChange)="updateDuration($event)" /></label>
+      <label><span>Duration preset</span>
+        <select [ngModel]="durationPreset" (ngModelChange)="$event !== '' && setRecentDays($event)">
+          <option [ngValue]="''" disabled>Custom</option>
+          @for (days of durationPresets; track days) {
+            <option [ngValue]="days">{{ days }} days</option>
+          }
+        </select>
+      </label>
+    </div>
     <div class="zoom-window">
       <label class="zoom-slider">
         <span>Move date window</span>
@@ -28,6 +37,14 @@
       <small class="zoom-help">Arrow keys move one day. Shift + Left/Right moves {{ slidingZoomDays }} days.</small>
     </div>
   } @else if (chart.zoomLevel === 'custom') {
+    <div class="dual-range" [style.--range-start.%]="rangeStartPercent" [style.--range-end.%]="rangeEndPercent">
+      <input class="range-thumb-a" type="range" min="0" [max]="totalDays" step="1" [value]="firstHandleValue"
+        [disabled]="totalDays === 0" aria-label="First date handle" [attr.aria-valuetext]="firstHandleDate"
+        (input)="updateRangeSlider($any($event.target).value, 'first')" />
+      <input class="range-thumb-b" type="range" min="0" [max]="totalDays" step="1" [value]="secondHandleValue"
+        [disabled]="totalDays === 0" aria-label="Second date handle" [attr.aria-valuetext]="secondHandleDate"
+        (input)="updateRangeSlider($any($event.target).value, 'second')" />
+    </div>
     <div class="date-range-fields">
       <label><span>From</span><input type="date" [ngModel]="chart.selectedStartDate" [min]="chart.datasetStartDate"
         [max]="chart.selectedEndDate" (ngModelChange)="updateCustomStart($event)" /></label>

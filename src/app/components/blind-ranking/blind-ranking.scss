@@ -36,6 +36,14 @@ button {
   }
 }
 
+button.red-button {
+  background-color: #DD3333;
+
+  &:hover {
+    background-color: #BB2222;
+  }
+}
+
 .screenshot-area {
   padding: 20px;
   border-radius: 8px;

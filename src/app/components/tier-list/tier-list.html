@@ -1,3 +1,4 @@
+<p role="status" *ngIf="savedSession.error">{{ savedSession.error }}</p>
 <h1>Tier List Maker</h1>
 <div class="tier-list">
   <div *ngFor="let tier of tiers; let i = index" class="tier-row"
@@ -35,7 +36,7 @@
           (dragover)="onDragOver($event)"
           (drop)="onCharacterDrop($event, i, j)"
           (click)="(selectedPoolCharIdx !== null || selectedTierCharIdx !== null) ? placeSelectedCharacterInTierAtIndex(i, j) : toggleTierCharacterSelection(i, j); $event.stopPropagation()">
-          <img [src]="char.img" [alt]="char.name" class="character-img" />
+          <img loading="lazy" [src]="char.img" [alt]="char.name" class="character-img" />
           <div class="character-name">{{ char.name }}</div>
         </div>
       </ng-container>
@@ -82,7 +83,7 @@
       (dragstart)="onPoolDragStart($event, j)"
       (click)="selectedTierCharIdx !== null ? moveSelectedTierCharacterToPool(j) : togglePoolCharacterSelection(j)">
       <ng-container *ngIf="char.img; else noImg">
-        <img [src]="char.img" [alt]="char.name" class="character-img" />
+        <img loading="lazy" [src]="char.img" [alt]="char.name" class="character-img" />
       </ng-container>
       <ng-template #noImg>
         <div class="character-img no-img">?</div>
@@ -99,6 +100,7 @@
     <option value="inactiveRetired">Inactive & Retired</option>
     <option value="inactive">Inactive Characters</option>
     <option value="retired">Retired Characters</option>
+    <option value="superRetired">Super Retired Characters</option>
     <option value="allSide">All Side Characters</option>
     <option value="music">Music Enjoyers</option>
     <option value="personality">Personality Girls</option>
@@ -123,8 +125,8 @@
   <input type="checkbox" id="splitTwins" (change)="onSplitTwinsChange($event)">
 </div>
 <footer>
-  <button (click)="clear()" [style.background]="'#DD3333'" title="Clear all character selections">Clear</button>
-  <button (click)="reset()" [style.background]="'#DD3333'" title="Reset all changes">Reset</button>
+  <button (click)="clear()" class="red-button" title="Clear all character selections">Clear</button>
+  <button (click)="reset()" class="red-button" title="Reset all changes">Reset</button>
   <button (click)="import()" title="Import a tier list from JSON file">Import</button>
   <button (click)="export()" title="Export current tier list as image">Export</button>
   <button (click)="saveMetadataJSON()" title="Export tier list data as JSON">Export JSON</button>

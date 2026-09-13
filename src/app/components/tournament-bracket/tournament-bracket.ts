@@ -1,5 +1,6 @@
+import { SavedSession } from '../../utils/saved-session';
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Character, CharacterService } from '../../services/character.service';
 import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
@@ -10,9 +11,17 @@ import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
   styleUrl: './tournament-bracket.scss'
 })
 export class TournamentBracket implements OnInit {
+  readonly savedSession = new SavedSession('tournament-bracket', ["bracketSize","selectedIds","seedPreference","players","tournamentSeeds","winners","columns","round","tournamentWinner","overflowCandidates","excludedOverflowIds","choosingExclusions","showAllExclusionCandidates","pendingCharacters"]);
+
+  ngDoCheck(): void {
+    // Do not replace a saved bracket while the initial roster request is pending.
+    if (this.pendingCharacters.length > 0) this.savedSession.save(this);
+  }
+
   @Input() bracketSize: number = 64;
   @Input() selectedIds: number[] = [];
   @Input() seedPreference: 'high' | 'low' = 'high';
+  @Output() restartRequested = new EventEmitter<void>();
   
   constructor(private characterService: CharacterService) {}
   players: Character[] = [];
@@ -21,13 +30,62 @@ export class TournamentBracket implements OnInit {
   columns: Character[][] = []; // Organized characters in columns
   round: number = 1;
   tournamentWinner: Character | null = null;
+  overflowCandidates: Character[] = [];
+  excludedOverflowIds = new Set<number>();
+  choosingExclusions = false;
+  showAllExclusionCandidates = false;
+  private pendingCharacters: Character[] = [];
+
+  get bottomSeedMoe(): number {
+    return this.seedPreference === 'high' ? 1 : 10;
+  }
+
+  get visibleExclusionCandidates(): Character[] {
+    return this.showAllExclusionCandidates
+      ? this.overflowCandidates
+      : this.overflowCandidates.filter(character => character.moe === this.bottomSeedMoe);
+  }
+
+  get requiredExclusions(): number {
+    return this.overflowCandidates.length - 128;
+  }
+
+  toggleExclusion(id: number): void {
+    if (this.excludedOverflowIds.has(id)) {
+      this.excludedOverflowIds.delete(id);
+    } else if (this.excludedOverflowIds.size < this.requiredExclusions) {
+      this.excludedOverflowIds.add(id);
+    }
+  }
+
+  confirmExclusions(): void {
+    if (!this.choosingExclusions || this.excludedOverflowIds.size !== this.requiredExclusions) return;
+    this.choosingExclusions = false;
+    this.buildBracket(this.pendingCharacters);
+  }
   
   ngOnInit() {
+    if (this.savedSession.initialize(this)) return;
     // Inject the character service to get characters
     this.characterService.getCharactersSplitTwins().subscribe(characters => {
       const normalizedCharacters = this.normalizeShadowSelfTier([...characters]);
+      this.pendingCharacters = normalizedCharacters;
+      const eligible = this.eligibleCharacters(normalizedCharacters);
+      if (+this.bracketSize === 128 && eligible.length > 128) {
+        this.overflowCandidates = [...eligible].sort((a, b) => a.shortName.localeCompare(b.shortName));
+        this.choosingExclusions = true;
+        return;
+      }
       this.buildBracket(normalizedCharacters);
     });
+  }
+
+  private eligibleCharacters(characters: Character[]): Character[] {
+    const highestTier = Math.max(...characters.map(c => c.tier));
+    return characters
+      .filter(c => c.tier !== highestTier)
+      .filter(c => c.status !== 'future' && !(c.status === 'retired' && c.tier === 9))
+      .filter(c => !this.selectedIds.includes(c.id));
   }
 
   private buildBracket(characters: Character[]) {
@@ -35,9 +93,8 @@ export class TournamentBracket implements OnInit {
     const fallbackTier = highestTier;
 
     // Filter out highest-tier characters and any excluded IDs, then sort by moe (high-to-low or low-to-high)
-    const available = characters
-      .filter(c => c.tier !== highestTier)
-      .filter(c => !this.selectedIds.includes(c.id));
+    const available = this.eligibleCharacters(characters)
+      .filter(c => !this.excludedOverflowIds.has(c.id));
     // Group by moe value and shuffle within each group, order groups by moe
     const moeGroups = new Map<number, Character[]>();
     for (const c of available) {

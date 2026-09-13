@@ -1,3 +1,4 @@
+import { SavedSession } from '../../utils/saved-session';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CharacterService, Character } from '../../services/character.service';
@@ -5,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { TierScreenshot } from '../tier-screenshot/tier-screenshot';
 import { CharacterModal } from '../character-modal/character-modal';
 import { CharacterFilterOptions, CharacterFilterPipe } from '../../pipes/character-filter.pipe';
-import { iconAssetPath } from '../../utils/character-assets';
+import { iconAssetPath, useTallIconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-blind-ranking',
@@ -14,6 +15,19 @@ import { iconAssetPath } from '../../utils/character-assets';
   styleUrl: './blind-ranking.scss'
 })
 export class BlindRanking {
+  readonly savedSession = new SavedSession('blind-ranking', ["title","rankingStarted","availableCharacters","currentCharacter","rankedCharacters","temporaryPlacement","gameComplete","genderFilter","includeActive","includeInactive","includeSide","includeRetired","includeSuperRetired","includeMe","includeBonus"]);
+
+  restartSession(): void {
+    if (!confirm('Restart and discard saved progress?')) return;
+    this.savedSession.restart(this);
+    this.showCard = false;
+    this.screenshotDataUrl = null;
+  }
+
+  ngDoCheck(): void {
+    this.savedSession.save(this);
+  }
+
   title: string = "Blind Ranking";
   rankingStarted: boolean = false;
   allCharacters: Character[] = [];
@@ -28,6 +42,7 @@ export class BlindRanking {
   includeInactive = true;
   includeSide = true;
   includeRetired = true;
+  includeSuperRetired = false;
   includeMe = false;
   includeBonus = false;
   genderAllLabel = 'All';
@@ -38,6 +53,7 @@ export class BlindRanking {
   showCard: boolean = false;
 
   constructor() {
+    this.savedSession.initialize(this);
     this.characterService.getCharactersSplitTwins().subscribe((characters: Character[]) => {
       this.allCharacters = [...characters, ...this.characterService.getBonusCharacters()];
     });
@@ -146,6 +162,7 @@ export class BlindRanking {
         inactive: this.includeInactive,
         side: this.includeSide,
         retired: this.includeRetired,
+        superRetired: this.includeSuperRetired,
         me: this.includeMe,
         bonus: this.includeBonus
       }
@@ -194,10 +211,7 @@ export class BlindRanking {
   assetPath(path: string): string {
     if (!path) return '';
 
-    const [, ...rest] = path.split('/');
-    const filename = rest.join('/');
-
-    return filename ? `assets/Icons/tall/${filename}` : iconAssetPath(path);
+    return useTallIconAssetPath(path);
   }
 
   squareAssetPath(path: string): string {

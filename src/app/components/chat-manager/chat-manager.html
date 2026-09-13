@@ -25,7 +25,7 @@
             <input type="checkbox" [checked]="chat.selected" (change)="toggleSelection(chat)">
           </div>
           
-          <img [src]="'assets/Icons/' + (chat.character.img || 'extended/Unknown.png')" 
+          <img loading="lazy" [src]="'assets/Icons/' + (chat.character.img || 'extended/Unknown.png')" 
                [alt]="chat.character.shortName" 
                class="character-icon">
           
@@ -55,7 +55,7 @@
       <div class="chat-list">
         @for (chat of archivedChats; track chat.character.id) {
           <div class="chat-row archived-chat-row">
-            <img [src]="'assets/Icons/' + (chat.character.img || 'extended/Unknown.png')"
+            <img loading="lazy" [src]="'assets/Icons/' + (chat.character.img || 'extended/Unknown.png')"
                  [alt]="chat.character.shortName"
                  class="character-icon">
 
