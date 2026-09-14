@@ -63,6 +63,8 @@ export class ChatHistoryChart {
   statusFilter = 'all';
   sortBy: HistorySortField = 'added';
   sortDirection: SortDirection = 'asc';
+  dynamicSorting = true;
+  private manualOrder: number[] = [];
   zoomLevel: ZoomLevel = 'full';
   series: CharacterHistorySeries[] = [];
   isLoading = true;
@@ -126,16 +128,44 @@ export class ChatHistoryChart {
     const cacheKey = this.displayStateKey;
     if (cacheKey === this.displayedSeriesCacheKey) return this.displayedSeriesCache;
 
-    const filtered = this.series.filter(item =>
+    const ordered = this.dynamicSorting ? this.sortedSeries() : this.manuallyOrderedSeries();
+    this.displayedSeriesCache = ordered.filter(item =>
       this.statusFilter === 'all' || item.character.status === this.statusFilter
     );
+    this.displayedSeriesCacheKey = cacheKey;
+    return this.displayedSeriesCache;
+  }
+
+  setDynamicSorting(enabled: boolean) {
+    if (!enabled && this.dynamicSorting) this.manualOrder = this.sortedSeries().map(item => item.character.id);
+    this.dynamicSorting = enabled;
+    this.displayedSeriesCacheKey = '';
+  }
+
+  sortNow() {
+    this.manualOrder = this.sortedSeries().map(item => item.character.id);
+    this.displayedSeriesCacheKey = '';
+  }
+
+  private manuallyOrderedSeries(): CharacterHistorySeries[] {
+    const items = new Map(this.series.map(item => [item.character.id, item]));
+    const ordered: CharacterHistorySeries[] = [];
+    for (const id of this.manualOrder) {
+      const item = items.get(id);
+      if (item) { ordered.push(item); items.delete(id); }
+    }
+    ordered.push(...items.values());
+    this.manualOrder = ordered.map(item => item.character.id);
+    return ordered;
+  }
+
+  private sortedSeries(): CharacterHistorySeries[] {
+    const filtered = this.series;
     if (this.sortBy === 'added') {
-      this.displayedSeriesCache = this.sortDirection === 'asc' ? filtered : [...filtered].reverse();
-      this.displayedSeriesCacheKey = cacheKey;
-      return this.displayedSeriesCache;
+      return this.sortDirection === 'asc' ? [...filtered] : [...filtered].reverse();
     }
 
-    this.displayedSeriesCache = [...filtered].sort((a, b) => {
+    return [...filtered].sort((a, b) => {
       let result = 0;
       switch (this.sortBy) {
         case 'name': result = a.character.shortName.localeCompare(b.character.shortName); break;
@@ -147,8 +177,6 @@ export class ChatHistoryChart {
       return (this.sortDirection === 'asc' ? result : -result) ||
         a.character.shortName.localeCompare(b.character.shortName);
     });
-    this.displayedSeriesCacheKey = cacheKey;
-    return this.displayedSeriesCache;
   }
 
   get availableStatuses(): string[] {
@@ -224,7 +252,8 @@ export class ChatHistoryChart {
       this.selectedEndDate,
       this.statusFilter,
       this.sortBy,
-      this.sortDirection
+      this.sortDirection,
+      this.dynamicSorting
     ].join('|');
   }
 

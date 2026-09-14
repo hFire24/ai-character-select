@@ -8,6 +8,7 @@ import type { CharacterHistorySeries, HistoryEra, HistoryPoint, ChatHistoryChart
 export class HistoryDataPlot {
   @Input({ required: true }) chart!: ChatHistoryChart;
   private readonly chartWidth=1100; private readonly plotLeft=200; private readonly plotRight=1070;
+  private readonly barGap=2;
   private readonly rowHeight=60; private readonly firstRowHeight=70; private readonly topPadding=52; private readonly bottomPadding=24;
   private readonly droughtStart=new Date('2026-04-21T12:00:00'); private readonly droughtEnd=new Date('2026-05-06T12:00:00');
   private readonly pointsCache=new Map<string,HistoryPoint[]>();
@@ -31,8 +32,8 @@ export class HistoryDataPlot {
   rowY(index:number){return this.topPadding+this.firstRowHeight/2+index*this.rowHeight}
   eraStartX(era:HistoryEra){return Math.max(this.plotLeft,this.dayBoundaryX(era.start))}
   eraEndX(era:HistoryEra){return era.end>=this.fromKey(this.chart.datasetEndDate)?this.plotRight:Math.min(this.plotRight,this.dayBoundaryX(era.end))}
-  barX(point:HistoryPoint){const [start]=this.extent;const {bucketDays,bucketCount}=this.geometry;const index=Math.floor((this.dayNumber(point.date)-this.dayNumber(start))/bucketDays);return this.plotLeft+index/bucketCount*(this.plotRight-this.plotLeft)}
-  get barWidth(){return (this.plotRight-this.plotLeft)/this.geometry.bucketCount}
+  barX(point:HistoryPoint){const [start]=this.extent;const {bucketDays,bucketCount}=this.geometry;const index=Math.floor((this.dayNumber(point.date)-this.dayNumber(start))/bucketDays);return this.plotLeft+index/bucketCount*(this.plotRight-this.plotLeft)+this.barGap/2}
+  get barWidth(){return (this.plotRight-this.plotLeft)/this.geometry.bucketCount-this.barGap}
   barHeight(point:HistoryPoint){return Math.max(7,point.count/this.maximum*34)}
   color(id:number){const key=this.chart.series.map(item=>item.character.id).join(',');if(key!==this.colorKey){this.colors.clear();const palette=['#2563eb','#db2777','#059669','#d97706','#7c3aed','#0891b2','#dc2626'];this.chart.series.forEach((item,index)=>this.colors.set(item.character.id,palette[index%palette.length]));this.colorKey=key}return this.colors.get(id)??'#2563eb'}
   iconPath(character:Character){return character.img?`assets/Icons/${character.img}`:'assets/Icons/extended/Unknown.png'}

@@ -46,7 +46,12 @@ export class HistoryDateRange {
     this.updateStartDate(this.chart.selectedStartDate || this.chart.datasetStartDate);
   }
 
-  setDurationMode() { if (!this.hasSlidingZoom) this.setRecentDays(30); }
+  setDurationMode() {
+    if (!this.hasSlidingZoom) {
+      this.chart.zoomLevel = 30;
+      this.updateStartDate(this.latestStartDate);
+    }
+  }
 
   updateDuration(value: number) {
     if (Number.isFinite(value) && value >= 1) this.setRecentDays(Math.min(this.totalDays + 1, Math.floor(value)));

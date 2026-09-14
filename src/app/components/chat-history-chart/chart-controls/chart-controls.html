@@ -1,4 +1,5 @@
 <section class="chart-controls" aria-label="Filter and sort chart characters">
+  <div class="controls-row">
   <label><span>Filter by status</span><select [(ngModel)]="chart.statusFilter">
     <option value="all">All statuses</option>
     @for (status of chart.availableStatuses; track status) { <option [value]="status">{{ status }}</option> }
@@ -10,5 +11,11 @@
   <button type="button" class="sort-direction" (click)="chart.toggleSortDirection()">
     {{ chart.sortDirection === 'asc' ? 'Ascending' : 'Descending' }} <span aria-hidden="true">{{ chart.sortDirection === 'asc' ? '↑' : '↓' }}</span>
   </button>
+  @if (!chart.dynamicSorting) {
+    <button type="button" (click)="chart.sortNow()">Sort</button>
+  }
   <small>{{ chart.displayedSeries.length }} of {{ chart.series.length }} shown</small>
+  </div>
+  <label class="dynamic-sorting"><input type="checkbox" [ngModel]="chart.dynamicSorting"
+    (ngModelChange)="chart.setDynamicSorting($event)" /><span>Dynamic sorting</span></label>
 </section>

@@ -1,6 +1,8 @@
 :host { display:block; }
-.chart-controls { display:flex; width:fit-content; align-items:flex-end; gap:10px; margin:0 auto 16px; padding:12px 14px; border:1px solid #dbe3ee; border-radius:12px; background:#f8fafc; }
+.chart-controls { display:flex; flex-direction:column; width:fit-content; max-width:100%; box-sizing:border-box; align-items:center; gap:10px; margin:0 auto 16px; padding:12px 14px; border:1px solid #dbe3ee; border-radius:12px; background:#f8fafc; }
+.controls-row { display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-end; gap:10px; max-width:100%; }
 label { display:flex; flex-direction:column; gap:3px; }
+.dynamic-sorting { flex-direction:row; align-items:center; gap:6px; cursor:pointer; }
 span,small { color:#64748b; font-size:.75rem; font-weight:600; }
 select,button { height:36px; padding:0 10px; border:1px solid #cbd5e1; border-radius:8px; background:white; color:#334155; font:inherit; }
 button { cursor:pointer; }
