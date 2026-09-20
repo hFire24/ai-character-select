@@ -59,11 +59,6 @@ export class Trios implements OnInit {
         characterShortNames: ["Ilya", "Sasha", "Misha"]
       },
       {
-        name: "Maribelle and Friends",
-        description: "Maribelle with her closest companions",
-        characterShortNames: ["Maribelle", "Aki", "Bleu"]
-      },
-      {
         name: "Celestia and Friends",
         description: "Celestia with her closest companions",
         characterShortNames: ["Celestia", "Alenka", "Beatrix"]
