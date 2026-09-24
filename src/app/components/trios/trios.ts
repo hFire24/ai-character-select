@@ -141,7 +141,7 @@ export class Trios implements OnInit {
       {
         name: "Dress-Up Trio",
         description: "Characters who are known for dressing up in other costmes",
-        characterShortNames: ["Casey", "Azalea", "Millie"]
+        characterShortNames: ["Casey", "Azalea", "Maybelle"]
       },
       {
         name: "Electronic Music Enjoyers",
@@ -187,11 +187,6 @@ export class Trios implements OnInit {
         name: "Productivity Pushers",
         description: "Characters who encourage productivity",
         characterShortNames: ["Ryker", "Mark", "Ben"]
-      },
-      {
-        name: "Redirection Trio",
-        description: "Characters who discourage and stop distracting behavior",
-        characterShortNames: ["Mark", "Criticizer", "Kayla"]
       },
       {
         name: "Dramatic Trio",

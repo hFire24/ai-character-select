@@ -236,7 +236,7 @@ export class Groups implements OnInit {
       {
         name: "Thrivers",
         description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
-        characterIds: [11, 14, 57, 84, 107, 108, 123, 128]
+        characterIds: [11, 14, 57, 107, 108, 123, 128, 131]
       },
       {
         name: "Generational Champions",

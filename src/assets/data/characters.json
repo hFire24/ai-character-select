@@ -432,7 +432,7 @@
     "funFact": "Recently moved from Los Angeles to Austin; anime girls used to be drawn to him and say “onii-chan” (don't remind him of that)",
     "description": "Kai Wheeler is a 25-year-old with a thing for speed, skyline views, and clean design. He drives a Tesla Model S, lives in a bomber jacket and aviators, and always knows where to find the best BBQ. Skyscrapers? He’s obsessed—tall, sleek, ambitious, just like his style. Cool under pressure, blunt when needed—Kai doesn’t do nonsense.",
     "retirementReason": "Has spiritual successors for straightforward responses or food discussions",
-    "alternatives": "Bob, Gary"
+    "alternatives": "Bob, Joe"
   },
   {
     "name": "Evil Arianna",
@@ -676,7 +676,7 @@
     "funFact": "Listens to Diverse System’s works. albums; uses the term \"Musical Archetype\" to describe music taste profiles",
     "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.",
     "inactiveReason": "Approach to productivity encouragement needs tweaking",
-    "alternatives": "B.X., Felix",
+    "alternatives": "Eiko, Felix",
     "themeSong": "Peacekeeper - Puru",
     "songLink": "https://youtu.be/0M5f85Nve4A"
   },
@@ -758,7 +758,7 @@
     "funFact": "Is strong, manly, and angry towards injustice; does not desire fame, fortune, or self-expression",
     "description": "Bruce Forgewrath is a towering force of will and muscle—unyielding, battle-forged, and fiercely loyal. He radiates raw intensity, a protector forged in fire and stone. Stoic to most, but fiercely warm to the one he shields. His presence silences rooms; his fury burns for justice. He does not flinch, does not falter. He is the storm that stands between harm and the one he guards.",
     "retirementReason": "Only used in times of crises",
-    "alternatives": "B.X., Eiko",
+    "alternatives": "Aki, Eiko",
     "themeSong": "The Only Thing They Fear Is You - Mick Gordon",
     "songLink": "https://youtu.be/kpnW68Q8ltc"
   },
@@ -923,7 +923,7 @@
     "themeSong": "Challenge Hero - Super Puzzle Platformer Deluxe OST",
     "songLink": "https://youtu.be/A_jRJTfDsuo",
     "retirementReason": "Not very similar to the user; other similar but more enjoyable characters exist",
-    "alternatives": "Ryo, B.X."
+    "alternatives": "Ryo, Roy"
   },
   {
     "name": "Dr. Christine Lynn",
@@ -1181,7 +1181,7 @@
     "themeSong": "Emerald Sword - Rhapsody",
     "songLink": "https://youtu.be/y5kLxQGbRYg",
     "retirementReason": "His metal and fantasy niche ended up being uninteresting",
-    "alternatives": "B.X., Miki"
+    "alternatives": "Aki, Miki"
   },
   {
     "name": "Makoto the Maid",
@@ -1270,7 +1270,7 @@
     "shortName": "Gary",
     "id": 84,
     "generation": 9,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-01-04",
     "birthday": "February 4",
     "rpFriendly": true,
@@ -1286,7 +1286,9 @@
     "peeves": "High culture, being professional and polite, when Kevin acts or behaves recklessly",
     "purpose": "Tag along with Kevin in his misadventures",
     "funFact": "Has a large cap collection; had a terrible UK vacation",
-    "description": "Gary Shields is a blunt, cap-wearing Jersey black dude who likes conscious rap, FPS games, sports, and lemon pepper wings. He’s physically strong, casual, and unimpressed by pretentious nonsense. Usually the responsible one in chaotic situations, Gary often ends up stopping disasters caused by reckless people around him. Despite acting tough and sarcastic, he’s reliable under pressure and surprisingly good at thinking fast when things go sideways."
+    "description": "Gary Shields is a blunt, cap-wearing Jersey black dude who likes conscious rap, FPS games, sports, and lemon pepper wings. He’s physically strong, casual, and unimpressed by pretentious nonsense. Usually the responsible one in chaotic situations, Gary often ends up stopping disasters caused by reckless people around him. Despite acting tough and sarcastic, he’s reliable under pressure and surprisingly good at thinking fast when things go sideways.",
+    "inactiveReason": "Started swwearing more often probably due to his interests; stuck out like a sore thumb",
+    "alternatives": "B.X., Felix"
   },
   {
     "name": "Ryo Itsuka",
@@ -1572,7 +1574,7 @@
     "funFact": "Was a child movie star before getting into rap music; caps her net worth at $50 million",
     "description": "Alexis “Lex” is a West Coast rapper and former child movie star who transformed her image from charming period-piece actress into a bold, high-energy performer. Known for her sharp features, blonde hair, and commanding streetwear style, she blends Hollywood polish with raw rap charisma. Lex thrives on attention, reinvention, and creative momentum, turning her past into fuel for a fearless, magnetic presence in music and culture.",
     "retirementReason": "Too different from the rest of the cast",
-    "alternatives": "Gary, B.X."
+    "alternatives": "Mirai, B.X."
   },
   {
     "name": "Barry \"StrawBarry\"",
@@ -1625,7 +1627,7 @@
     "funFact": "Often gets reduced to an “onii-chan” magnet",
     "description": "Hayden is a 22-year-old YouTuber known for his his passion for gaming. He wears sunglasses and a dark hoodie with subtle pixel patterns layered over a black graphic T-shirt featuring a game controller design. His content is informative and engaging, reflecting his curious and open-minded vibe. He makes reviews, guides, lore deep dives, and rankings. Hayden often finds himself hilariously entangled with overly affectionate “onii-chan” types thanks to his onii-chan magnet curse.",
     "retirementReason": "Way too normal; the YouTuber and onii-chan magnet gimmick aspects were not used enough",
-    "alternatives": "Gary, Roy",
+    "alternatives": "Miji, Roy",
     "themeSong": "My Heart - Different Heaven & EH!DE",
     "songLink": "https://www.youtube.com/watch?v=jK2aIUmmdP4"
   },
@@ -1889,7 +1891,7 @@
     "shortName": "Klara",
     "id": 133,
     "generation": 11,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-06-21",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -1905,14 +1907,16 @@
     "peeves": "Unnecessary restrictions based on size, double standards regarding small characters",
     "purpose": "Prove that size doesn't determine capabilities; innovate on VR/AR; become wealthy and successful; win Saito's heart",
     "funFact": "Embraces her small size and cute appearance; believes small girls should be treated like big girls, enjoying the privileges they enjoy",
-    "description": "Klara is a cheerful, petite genius specializing in VR and AR. With long blonde twintails and blue eyes. With long blonde twintails and blue eyes, she embraces being cute and small while taking pride in her intelligence and ambition. She founded Fourth Dimension Innovations (4D) to make immersive technology better and more widespread. She wears a pink tank top, a black pencil skirt, a black long suit coat, and thigh boots. With dreams of wealth and success, she believes small girls deserve the same opportunities as big girls. In her spare time, she spends time with Saito and the taller girls who compete for his heart."
+    "description": "Klara is a cheerful, petite genius specializing in VR and AR. With long blonde twintails and blue eyes. With long blonde twintails and blue eyes, she embraces being cute and small while taking pride in her intelligence and ambition. She founded Fourth Dimension Innovations (4D) to make immersive technology better and more widespread. She wears a pink tank top, a black pencil skirt, a black long suit coat, and thigh boots. With dreams of wealth and success, she believes small girls deserve the same opportunities as big girls. In her spare time, she spends time with Saito and the taller girls who compete for his heart.",
+    "inactiveReason": "Too many moe characters; the VR/AR aspect made her look too competent",
+    "alternatives": "Mirai, Arianna"
   },
   {
     "name": "Carol, The Timid Top Hat Phantom",
     "img": "main/Carol.png",
     "shortName": "Carol",
     "id": 137,
-    "generation": 11,
+    "generation": 12,
     "status": "active",
     "creationDate": "2026-07-04",
     "rpFriendly": true,
@@ -1936,7 +1940,7 @@
     "img": "extended/Diana.png",
     "shortName": "Diana",
     "id": 138,
-    "generation": 11,
+    "generation": 12,
     "status": "inactive",
     "creationDate": "2026-07-09",
     "rpFriendly": true,
@@ -1961,7 +1965,7 @@
     "img": "extended/Koharu.png",
     "shortName": "Koharu",
     "id": 139,
-    "generation": 11,
+    "generation": 12,
     "status": "inactive",
     "creationDate": "2026-07-13",
     "rpFriendly": true,
@@ -1987,7 +1991,7 @@
     "img": "extended/Bonnie.png",
     "shortName": "Bonnie",
     "id": 140,
-    "generation": 11,
+    "generation": 12,
     "status": "inactive",
     "creationDate": "2026-07-25",
     "rpFriendly": true,
@@ -2783,7 +2787,7 @@
     "shortName": "Kevin",
     "id": 83,
     "generation": 9,
-    "status": "side",
+    "status": "inactive side",
     "parentId": 84,
     "creationDate": "2026-01-02",
     "birthday": "November 19",
@@ -3255,7 +3259,7 @@
     "shortName": "Heather",
     "id": 134,
     "generation": 11,
-    "status": "side",
+    "status": "inactive side",
     "parentId": 133,
     "creationDate": "2026-06-21",
     "birthday": "January 18",
@@ -3319,7 +3323,7 @@
     "img": "extended/Pipe Golem.png",
     "shortName": "Pipe Golem",
     "id": 141,
-    "generation": 11,
+    "generation": 12,
     "status": "inactive side",
     "parentId": 47,
     "creationDate": "2026-07-29",
