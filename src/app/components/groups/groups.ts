@@ -101,7 +101,7 @@ export class Groups implements OnInit {
       {
         name: "No Hat Wearers (Moe)",
         description: "Characters known for wearing no hats but are still considered moe. Maid headdresses don't count.",
-        characterIds: [5, 8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134, 147, 151, 152]
+        characterIds: [5, 8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134, 147, 151, 152, 153, 154]
       },
       {
         name: "Glasses Wearers",
@@ -121,7 +121,7 @@ export class Groups implements OnInit {
       {
         name: "Thigh Boot Wearers",
         description: "Characters known for wearing thigh boots",
-        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140, 150]
+        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140, 150, 154]
       },
       {
         name: "Hammer Wielders",
@@ -141,7 +141,7 @@ export class Groups implements OnInit {
       {
         name: "Blue Girls",
         description: "Characters known for having blue hair or being associated with the color blue",
-        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 132, 144]
+        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 132, 144, 153]
       },
       {
         name: "\"Onii-chan\" Sayers",
@@ -196,7 +196,7 @@ export class Groups implements OnInit {
       {
         name: "STEM Group",
         description: "Characters who enjoy STEM-related topics: Science, Technology, Engineering, and Mathematics",
-        characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 117, 107, 113, 150]
+        characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 117, 107, 113, 150, 153]
       },
       {
         name: "Social Studies Group",
