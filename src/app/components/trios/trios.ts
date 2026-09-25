@@ -79,11 +79,6 @@ export class Trios implements OnInit {
         characterShortNames: ["Nora", "Parker", "Rowan"]
       },
       {
-        name: "Chino-chan Expies",
-        description: "Chino-like in terms of hair color and personality",
-        characterShortNames: ["Miki", "Lulu", "Bluebell"]
-      },
-      {
         name: "Shy Blonde Hat Girls",
         description: "Shy girls who have blonde hair and wear enormous hats",
         characterShortNames: ["Lily", "Carol", "Diana"]
@@ -117,6 +112,11 @@ export class Trios implements OnInit {
         name: "Listless Girls",
         description: "Characters who appear listless",
         characterShortNames: ["Anzu", "Bored-chan", "Miji"]
+      },
+      {
+        name: "Anime-obsessed B-Boys",
+        description: "Characters whose names start with B and love cute anime girls",
+        characterShortNames: ["Barry", "Ben", "Billy"]
       },
       {
         name: "Mysterious Trio",
@@ -186,7 +186,7 @@ export class Trios implements OnInit {
       {
         name: "Productivity Pushers",
         description: "Characters who encourage productivity",
-        characterShortNames: ["Ryker", "Mark", "Ben"]
+        characterShortNames: ["Ryker", "Mark", "Eiko"]
       },
       {
         name: "Dramatic Trio",

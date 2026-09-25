@@ -139,9 +139,14 @@ export class Groups implements OnInit {
         characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149]
       },
       {
+        name: "Chino-chan Expies",
+        description: "Chino-like in terms of hair color and personality",
+        characterIds: [14, 74, 106, 153]
+      },
+      {
         name: "Blue Girls",
         description: "Characters known for having blue hair or being associated with the color blue",
-        characterIds: [13, 14, 35, 40, 60, 71, 74, 80, 88, 91, 94, 106, 118, 119, 123, 132, 144, 153]
+        characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144]
       },
       {
         name: "\"Onii-chan\" Sayers",
@@ -182,6 +187,11 @@ export class Groups implements OnInit {
         name: "Musicians",
         description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music. Somehow, everyone here is a girl.",
         characterIds: [51, 75, 76, 96, 103, 109, 118]
+      },
+      {
+        name: "Cute Anime Fans",
+        description: "Characters who have an interest in anime or behave in otaku-like ways towards cute things",
+        characterIds: [5, 8, 13, 15, 25, 34, 38, 43, 66, 67, 77, 81, 85, 86, 104, 108, 149, 154, 155, 999]
       },
       {
         name: "Music Fans",
