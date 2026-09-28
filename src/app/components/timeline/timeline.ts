@@ -250,7 +250,8 @@ export class Timeline implements OnInit, AfterViewInit {
     const generations = Array.from(
       new Set(
         characters
-          .map(character => character.generation)
+          // Timeline-only overrides; keep the stored character generations unchanged.
+          .map(character => character.id === 59 || character.id === 60 ? 7 : character.generation)
           .filter((generation): generation is number => Number.isInteger(generation))
       )
     );

@@ -157,6 +157,14 @@
     background: #9c27b0;
     box-shadow: 0 0 0 1px rgba(156, 39, 176, 0.8), 0 2px 7px rgba(156, 39, 176, 0.3);
   }
+  &.gen12 {
+    background: #009688;
+    box-shadow: 0 0 0 1px rgba(0, 150, 136, 0.8), 0 2px 7px rgba(0, 150, 136, 0.3);
+  }
+  &.gen13 {
+    background: #e91e63;
+    box-shadow: 0 0 0 1px rgba(233, 30, 99, 0.8), 0 2px 7px rgba(233, 30, 99, 0.3);
+  }
 
   &.mixed {
     background: linear-gradient(135deg, #d94f70 0 50%, #2f80ed 50% 100%);

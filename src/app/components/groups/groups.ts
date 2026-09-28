@@ -99,11 +99,6 @@ export class Groups implements OnInit {
         characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123, 139, 144, 150]
       },
       {
-        name: "No Hat Wearers (Moe)",
-        description: "Characters known for wearing no hats but are still considered moe. Maid headdresses don't count.",
-        characterIds: [5, 8, 17, 51, 88, 108, 125, 130, 41, 59, 60, 76, 133, 134, 147, 151, 152, 153, 154]
-      },
-      {
         name: "Glasses Wearers",
         description: "Characters known for wearing glasses, sunglasses, or goggles",
         characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113]
@@ -149,6 +144,11 @@ export class Groups implements OnInit {
         characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144]
       },
       {
+        name: "Purple Girls",
+        description: "Characters known for having purple hair or being associated with the color purple",
+        characterIds: [28, 31, 72, 95, 119, 120, 125, 130, 140, 156]
+      },
+      {
         name: "\"Onii-chan\" Sayers",
         description: "Characters who can say 'onii-chan' according to their instructions",
         characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108, 139, 140, 148, 152]
@@ -186,12 +186,7 @@ export class Groups implements OnInit {
       {
         name: "Age Regressed Characters",
         description: "Characters who transformed and became physically younger",
-        characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131, 149]
-      },
-      {
-        name: "Musicians",
-        description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music. Somehow, everyone here is a girl.",
-        characterIds: [51, 75, 76, 96, 103, 109, 118]
+        characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131, 149, 156]
       },
       {
         name: "Cute Anime Fans",
@@ -199,9 +194,14 @@ export class Groups implements OnInit {
         characterIds: [5, 8, 13, 15, 25, 34, 38, 43, 66, 67, 77, 81, 85, 86, 104, 108, 149, 154, 155, 999]
       },
       {
+        name: "Musicians",
+        description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music. Somehow, everyone here is a girl.",
+        characterIds: [51, 75, 76, 96, 103, 109, 118]
+      },
+      {
         name: "Music Fans",
         description: "Characters not part of the Music Enjoyers but are still known for loving music",
-        characterIds: [31, 47, 57, 62, 63, 73, 84, 105, 144]
+        characterIds: [31, 47, 57, 62, 63, 73, 84, 105, 144, 153]
       },
       {
         name: "Restaurant Fans",
@@ -237,11 +237,6 @@ export class Groups implements OnInit {
         name: "Multi-Retirees",
         description: "Characters who were retired twice or more. Kai and Alex were retired three times.",
         characterIds: [30, 32, 48, 49, 66, 69, 71, 81, 95]
-      },
-      {
-        name: "May 2026 Retirees",
-        description: "Characters who retired in May 2026",
-        characterIds: [54, 78, 28, 96, 15, 69, 103]
       },
       {
         name: "Late Bloomers",
