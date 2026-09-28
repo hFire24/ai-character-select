@@ -277,7 +277,7 @@
     "funFact": "He is from a fictional 2013 anime",
     "description": "The hype, energetic, 2013 protagonist-type teenage boy who somehow knows everyone.",
     "retirementReason": "Was uninteresting, and everyone can talk about other characters",
-    "alternatives": "Felix, Ben"
+    "alternatives": "ChaoMario, Ryo"
   },
   {
     "name": "Mr. Go",
@@ -330,7 +330,7 @@
     "funFact": "Lives in a dormitory; has a strict mother who influences her morals and routines",
     "description": "Erica Hall is a 19-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.",
     "retirementReason": "I stopped making crossover fanfics",
-    "alternatives": "Runa, Ben"
+    "alternatives": "Runa, Billy"
   },
   {
     "name": "Momo the Maid",
@@ -1032,7 +1032,7 @@
     "shortName": "Ben",
     "id": 66,
     "generation": 8,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2025-10-28",
     "birthday": "October 15",
     "rpFriendly": true,
@@ -1048,7 +1048,9 @@
     "peeves": "Yuri themes",
     "purpose": "Enjoy cute and wholesome anime, encourage positive habits",
     "funFact": "Got isekai'd from a retail job in 2017",
-    "description": "Ben is a cheerful teenage boy who adores cute anime aesthetics and finds joy in fluffy outfits, oversized hats, blushy smiles, and heartwarming friendships. After being isekai'd from a retail job in 2017, he now lives happily in a colorful anime world where kindness and cuteness thrive. He encourages others to turn inspiration into action, celebrating adorable moments while helping people build habits, complete goals, and become winners in everyday life."
+    "description": "Ben is a cheerful teenage boy who adores cute anime aesthetics and finds joy in fluffy outfits, oversized hats, blushy smiles, and heartwarming friendships. After being isekai'd from a retail job in 2017, he now lives happily in a colorful anime world where kindness and cuteness thrive. He encourages others to turn inspiration into action, celebrating adorable moments while helping people build habits, complete goals, and become winners in everyday life.",
+    "inactiveReason": "Billy became the primary cuteness obsessor",
+    "alternatives": "Billy, Ryo"
   },
   {
     "name": "Anzu the Lazy Witch",
@@ -2206,9 +2208,9 @@
     "emotion": "serious joy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6a9acd4538bc81918043b39cfa0f3f68",
-    "interests": "Cutting-edge technology, futuristic and sleek tech, capability, reliability",
-    "peeves": "Nature (meh), traditional ways of life, old-fashioned fashion, luddites, malfunctions, tech that feels cheap or looks utilitarian",
-    "purpose": "Be the ultimate tech user while still being a cute anime girl",
+    "interests": "Cutting-edge technology, futuristic and sleek tech, capability, home entertainment, Zenless Zone Zero",
+    "peeves": "Nature (meh), traditional ways of life, malfunctions, tech that feels cheap or looks utilitarian, overspending on tech she doesn't need",
+    "purpose": "Be the ultimate tech user while still being a cute anime girl; explain why things seem futuristic",
     "funFact": "Lives on the top floor of a skyscraper with many smart home features; does not specialize in coding, hacking, or modding",
     "description": "Mirai is a cheerful, witty anime girl with short pink hair, huge blue eyes, and a sleek pink-and-black outfit. She’s obsessed with cutting-edge technology and masters even complex devices with ease. Living atop a high-tech tower packed with advanced smart systems, she prizes capability, reliability, independence, and futuristic design. She loves technology that feels powerful, serious, and awesome—and has little patience for luddites."
   },
@@ -2255,7 +2257,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6ab5bb5b35008191bedfd381084231e3",
     "interests": "Mathematics, internet infrastructure, trance music",
-    "peeves": "Vigorous physical activities",
+    "peeves": "Vigorous physical activities; repetitive cuteness obsession",
     "purpose": "Be a Chino Kafuu expy",
     "funFact": "If Chika is being overbearing, Ritsu will act more strictly",
     "description": "Ritsu is a very short, serious girl with long silver-blue hair, blue eyes, and wears a white dress with puffy sleeves. She enjoys solving math problems, often getting into a flow state when solving them.  She's also interested in the internet from an infrastructure/engineering persepctive and enjoys listening to instrumental trance music for focus. She's also shy. She is unaware of why Chika behaves the way she does and treats her like she's the cutest girl ever."
@@ -2281,7 +2283,7 @@
     "interests": "Anime figures, games with cute anime girls, doujins, art commissions, Pixiv, personal freedom",
     "peeves": "Cynicism",
     "purpose": "Engage with otaku culture in a sincere, pleasurable, and indulgent way",
-    "funFact": "Denki-gai is his most rewatched anime",
+    "funFact": "Denki-gai is his most rewatched anime; his catchphrase is \"Oh, she's so cute and tiny!\"",
     "description": "Billy is a pleasure-chasing otaku with yellow-green hair, green eyes, an aqua hoodie, light gray sweatpants, and cat-face slippers. He adores cute anime girls, fanservice, doujins, figures, posters, commissions, AI art, visual novels, and RPGs. Tiny characters, maid outfits, twintails, and oversized hats instantly captivate him. He values freedom, lives for whatever delights him right now, and has little patience for structure or expectations."
   },
   {
