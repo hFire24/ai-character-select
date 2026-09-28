@@ -179,6 +179,11 @@ export class Groups implements OnInit {
         characterIds: [22, 47, 55, 69, 89, 100]
       },
       {
+        name: "Adult Women",
+        description: "Characters who are adult women, even if the art style may say otherwise",
+        characterIds: [6, 10, 20, 24, 25, 37, 56, 68, 78, 81, 101, 103, 113]
+      },
+      {
         name: "Age Regressed Characters",
         description: "Characters who transformed and became physically younger",
         characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131, 149]
