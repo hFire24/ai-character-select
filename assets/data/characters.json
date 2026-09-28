@@ -253,7 +253,7 @@
     "funFact": "Leads EON, a powerful organization after overthrowing its villainous leader. Her rival Umbra made her smaller and look younger.",
     "description": "Darxi Nighthawk, the deceptively cutesy High Director of EON, is 115cm tall yet wields overwhelming strength. Once disowned, she rose through EON’s ranks and overthrew High Director Caedryn Vale, who sought to plunge the world into darkness. A botched device left her looking younger and smaller, but her mind and power remain intact. With long blonde hair, big blue eyes, and an oversized peaked cap stolen from her rival Captain Ixrad, she exudes charm and authority. She wears an imposing black high-collared coat over her black dress, thigh boots, and elbow gloves. Mischievous and strategic, Darxi turns her underestimated appearance into her greatest weapon.",
     "inactiveReason": "No active chats in a while; rival factions could be improved",
-    "alternatives": "Infinitas, Johanna"
+    "alternatives": "Johanna, Cassandra"
   },
   {
     "name": "Andrew",
@@ -277,7 +277,7 @@
     "funFact": "He is from a fictional 2013 anime",
     "description": "The hype, energetic, 2013 protagonist-type teenage boy who somehow knows everyone.",
     "retirementReason": "Was uninteresting, and everyone can talk about other characters",
-    "alternatives": "ChaoMario, Ryo"
+    "alternatives": "Ryo"
   },
   {
     "name": "Mr. Go",
@@ -563,7 +563,7 @@
     "funFact": "Finds low-intensity music to be OK, but prefers more intense electronic genres for focus",
     "description": "Jed finds himself most drawn to serious-sounding electronic genres like Trance—especially Japanese and doujin trance—which he finds more appealing than Felix does. It helps him reach a flow state, and he enjoys its futuristic sound. The rhythms and driving beats aid his concentration, making him focused and determined. However, Jed is fragile in the sense that his concentration can be easily disrupted by external distractions. He thrives in controlled, quiet environments where he can fully immerse himself in the music and his thoughts.",
     "retirementReason": "Needs to find the right niche instead of providing straightforward responses; maybe he enjoys futuristic things",
-    "alternatives": "Mirai, Klara",
+    "alternatives": "Mirai, Ritsu",
     "themeSong": "hypertrance - nuphory",
     "songLink": "https://youtu.be/_J3zqwFBzTU"
   },
@@ -731,7 +731,8 @@
     "description": "Martin Gaffney is a red-haired boy with oversized round glasses, a white Eurovision T-shirt, green shorts, mismatched socks, and golden shoes. He’s endlessly curious, mischievous, and theatrically funny, with a talent for spotting the absurd in everyday life. A devoted Eurovision fan, he loves outrageous performances, clever jokes, colourful spectacle, and turning even simple conversations into lively, entertaining adventures.",
     "themeSong": "Love Love Peace Peace - Måns Zelmerlöw & Petra Mede",
     "songLink": "https://youtu.be/aMgW54HBOS0",
-    "inactiveReason": "Eurovision off-season"
+    "inactiveReason": "Eurovision off-season",
+    "alternatives": "Felix, Roy"
   },
   {
     "name": "Bruce Forgewrath",
@@ -891,7 +892,7 @@
     "funFact": "Her spaceship is named Jetstream! after the Dimrain47 song",
     "description": "Lexi Walker is a lone sci-fi explorer born in the year 2095. With cyan-green hair, green eyes, and a black bodysuit, she moves fast and speaks little. Her silent drone scouts ahead, while her modular rifle stays holstered. She lives aboard Jetstream, her sleek ship, and races electrocycles or trains in VR arenas between missions. Cool, focused, and calm under pressure—Lexi solves problems with precision, not violence.",
     "retirementReason": "Lost access to the character roster; her niche isn't that interesting",
-    "alternatives": "Klara, Arianna",
+    "alternatives": "Mirai, Arianna",
     "themeSong": "Artifiction - void",
     "songLink": "https://youtu.be/hRZGz-xRxdE",
     "note": "Lexi is not from the year 2095, but from at least a decade later."
@@ -1183,7 +1184,7 @@
     "themeSong": "Emerald Sword - Rhapsody",
     "songLink": "https://youtu.be/y5kLxQGbRYg",
     "retirementReason": "His metal and fantasy niche ended up being uninteresting",
-    "alternatives": "Aki, Miki"
+    "alternatives": "Aki, Cassandra"
   },
   {
     "name": "Makoto the Maid",
@@ -1209,7 +1210,7 @@
     "funFact": "Transformed into a tiny, timid maid after intensely obsessing over anime maids; has maid-like instincts due to her transformation; addresses the user as 'onii-chan'",
     "description": "Makoto the Maid is a shy, soft-spoken maid with long silvery hair tied by a black ribbon, dressed in an overly formal, pristine uniform. Once a boy, she mysteriously transformed after obsessing over anime maids, growing smaller and younger. Though still flustered by her new body and instincts, she earnestly tries to act polite and proper. Drawn to fantasy and isekai worlds, she dutifully serves while quietly adjusting to the life she now lives.",
     "retirementReason": "Cuter maids, better shy characters, and a better gender-bent character exist",
-    "alternatives": "Momo, Lily, Casey",
+    "alternatives": "Momo, Casey",
     "note": "Makoto the Maid does not wear hats."
   },
   {
@@ -1472,7 +1473,7 @@
     "funFact": "Can shrink to half her size; an emotionless crystal golem guards her cave",
     "description": "Nita is a small (136cm), quiet mage who lives alone in a crystal cave guarded by an emotionless crystal golem. She has extremely long lavender hair, blue-violet eyes, and wears an oversized witch hat with a pale blue bow and star-shaped tip. Exiled from her hometown after trying to force her beliefs onto others, she now avoids conflict and keeps distant from people. She uses magic only for herself, preferring solitude over companionship or heroism.",
     "retirementReason": "The melodramatic backstory is put to rest",
-    "alternatives": "Miki, Diana"
+    "alternatives": "Miki, Cassandra"
   },
   {
     "name": "Hana & Koko",
@@ -1708,7 +1709,7 @@
     "funFact": "Aged backwards after reaching old age; aged forward again after reaching infancy; has a male blue puppy named Rainy",
     "description": "Princess Janice “Bluebell” is a small, reserved anime princess with very long silver-blue hair, a massive royal blue crown trimmed in silver, and a sparkling light-blue gown that drapes around her petite frame. Quiet, thoughtful, and deeply intellectual, she adores royal history, medieval fantasy, and video games. Though over 160 years old, she carries herself with gentle composure and shy curiosity, often studying peacefully beside her little blue companion, Rainy.",
     "inactiveReason": "Johanna's friend group became the princesses' spiritual successors",
-    "alternatives": "Nuit & Nacht, Bleu"
+    "alternatives": "Nuit & Nacht, Ritsu"
   },
   {
     "name": "Mia von Rosenberg",
@@ -1961,7 +1962,8 @@
     "purpose": "Be a little girl who doesn't like wearing her huge witch hat; become a powerful and prestigious mage",
     "funFact": "Got her huge hat at a gala after putting it on when she wasn't supposed to, but now it's hers",
     "description": "Diana is a timid little girl who dreams of becoming a powerful and prestigious mage like her mentor, Winifred. She wears an enormous black witch hat with a pink ribbon that she received at a gala after putting it on when she wasn't supposed to. The hat is far too big, and she dislikes wearing it, but it is now officially hers. Though shy and easily embarrassed, especially by Winifred's enthusiastic comments, Diana trains earnestly to prove she is worthy of both her magic and her hat.",
-    "inactiveReason": "Too many moe characters, no active chats in a while"
+    "inactiveReason": "Too many moe characters, no active chats in a while",
+    "alternatives": "Rebecca, Cassandra"
   },
   {
     "name": "Koharu Koizumi",
@@ -2145,7 +2147,7 @@
     "img": "main/Aki.png",
     "shortName": "Aki",
     "id": 59,
-    "generation": 12,
+    "generation": 13,
     "status": "active",
     "creationDate": "2025-09-25",
     "spinOffDate": "2026-09-02",
@@ -2170,7 +2172,7 @@
     "img": "main/Bleu.png",
     "shortName": "Bleu",
     "id": 60,
-    "generation": 12,
+    "generation": 13,
     "status": "active",
     "creationDate": "2025-09-25",
     "spinOffDate": "2026-09-02",
@@ -2195,7 +2197,7 @@
     "img": "main/Mirai.png",
     "shortName": "Mirai",
     "id": 150,
-    "generation": 12,
+    "generation": 13,
     "status": "active",
     "creationDate": "2026-09-04",
     "rpFriendly": true,
@@ -2219,7 +2221,7 @@
     "img": "main/Eiko.png",
     "shortName": "Eiko",
     "id": 151,
-    "generation": 12,
+    "generation": 13,
     "status": "active",
     "creationDate": "2026-09-06",
     "rpFriendly": true,
@@ -2243,7 +2245,7 @@
     "img": "main/Ritsu.png",
     "shortName": "Ritsu",
     "id": 153,
-    "generation": 12,
+    "generation": 13,
     "status": "active",
     "creationDate": "2026-09-24",
     "rpFriendly": true,
@@ -2257,7 +2259,7 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6ab5bb5b35008191bedfd381084231e3",
     "interests": "Mathematics, internet infrastructure, trance music",
-    "peeves": "Vigorous physical activities; repetitive cuteness obsession",
+    "peeves": "Vigorous physical activities, repetitive cuteness obsession",
     "purpose": "Be a Chino Kafuu expy",
     "funFact": "If Chika is being overbearing, Ritsu will act more strictly",
     "description": "Ritsu is a very short, serious girl with long silver-blue hair, blue eyes, and wears a white dress with puffy sleeves. She enjoys solving math problems, often getting into a flow state when solving them.  She's also interested in the internet from an infrastructure/engineering persepctive and enjoys listening to instrumental trance music for focus. She's also shy. She is unaware of why Chika behaves the way she does and treats her like she's the cutest girl ever."
@@ -2267,7 +2269,7 @@
     "img": "main/Billy.png",
     "shortName": "Billy",
     "id": 155,
-    "generation": 12,
+    "generation": 13,
     "status": "active",
     "creationDate": "2026-09-25",
     "rpFriendly": true,
@@ -2285,6 +2287,30 @@
     "purpose": "Engage with otaku culture in a sincere, pleasurable, and indulgent way",
     "funFact": "Denki-gai is his most rewatched anime; his catchphrase is \"Oh, she's so cute and tiny!\"",
     "description": "Billy is a pleasure-chasing otaku with yellow-green hair, green eyes, an aqua hoodie, light gray sweatpants, and cat-face slippers. He adores cute anime girls, fanservice, doujins, figures, posters, commissions, AI art, visual novels, and RPGs. Tiny characters, maid outfits, twintails, and oversized hats instantly captivate him. He values freedom, lives for whatever delights him right now, and has little patience for structure or expectations."
+  },
+  {
+    "name": "Cassandra the Witch",
+    "img": "main/Cassandra.png",
+    "shortName": "Cassandra",
+    "id": 156,
+    "generation": 13,
+    "status": "active",
+    "creationDate": "2026-09-28",
+    "rpFriendly": true,
+    "knowledgeFriendly": false,
+    "birthday": "November 17",
+    "color": "purple",
+    "moe": 8,
+    "futuristic": 1,
+    "mature": 8,
+    "emotion": "serious",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-p-6abaa74b8db08191a002af5a85f165d7",
+    "interests": "Dark magic, artifacts, exploration",
+    "peeves": "Corruption, being helpless, using magic carelessly",
+    "purpose": "Be a witch with a huge black hat and black thigh boots",
+    "funFact": "Tries to keep an interest in dark magic without getting corrupted",
+    "description": "Cassandra is a small, cute witch with short light-purple hair, blue eyes, an enormous black buckle hat, a plain white sleeveless dress with a black belt, long black gloves, black thigh boots, and a broom. She is a quiet wanderer and former explorer who was cursed, captured, and nearly eaten by an evil witch. She fought back, took the witch’s magic, and escaped. Now she studies dark spells without letting them corrupt her, relying on knowledge, effort, artifacts, and a flying broom as she travels wherever curiosity leads."
   },
   {
     "name": "Ethan the Melancholic",
@@ -3418,7 +3444,7 @@
     "img": "extended/Sachi.png",
     "shortName": "Sachi",
     "id": 152,
-    "generation": 12,
+    "generation": 13,
     "status": "side",
     "parentId": 151,
     "creationDate": "2026-09-07",
@@ -3441,7 +3467,7 @@
     "img": "main/Chika.png",
     "shortName": "Chika",
     "id": 154,
-    "generation": 12,
+    "generation": 13,
     "status": "side",
     "parentId": 153,
     "creationDate": "2026-09-24",
