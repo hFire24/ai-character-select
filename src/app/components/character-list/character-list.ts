@@ -55,14 +55,14 @@ export class CharacterList {
 
   get thisWeekChattedCharacters(): LastChattedCharacter[] {
     const oneWeekAgo = this.getOneWeekAgo();
-    const inactiveCharacterIds = this.inactiveChattedCharacterIds;
+    const separatedCharacterIds = this.separatedChattedCharacterIds;
     
     return this.sortCharacters(
       this.lastChattedCharacters.filter(item => {
         const chatDate = new Date(item.timestamp);
         chatDate.setHours(0, 0, 0, 0);
         return !this.hasActiveChat(item.character) &&
-          !inactiveCharacterIds.has(item.character.id) &&
+          !separatedCharacterIds.has(item.character.id) &&
           chatDate.getTime() >= oneWeekAgo.getTime();
       })
     );
@@ -70,40 +70,56 @@ export class CharacterList {
 
   get olderChattedCharacters(): LastChattedCharacter[] {
     const oneWeekAgo = this.getOneWeekAgo();
-    const inactiveCharacterIds = this.inactiveChattedCharacterIds;
+    const separatedCharacterIds = this.separatedChattedCharacterIds;
     
     return this.sortCharacters(
       this.lastChattedCharacters.filter(item => {
         const chatDate = new Date(item.timestamp);
         chatDate.setHours(0, 0, 0, 0);
         return !this.hasActiveChat(item.character) &&
-          !inactiveCharacterIds.has(item.character.id) &&
+          !separatedCharacterIds.has(item.character.id) &&
           chatDate.getTime() < oneWeekAgo.getTime();
       })
     );
   }
 
-  get inactiveChattedCharacters(): LastChattedCharacter[] {
+  get retiredChattedCharacters(): LastChattedCharacter[] {
+    const inactiveIds = new Set(this.inactiveChattedCharacters.map(item => item.character.id));
     const oldestFirst = [...this.lastChattedCharacters].sort(
       (a, b) => a.timestamp.getTime() - b.timestamp.getTime()
     );
-    const inactiveCharacters: LastChattedCharacter[] = [];
+    const retiredCharacters: LastChattedCharacter[] = [];
 
     for (const item of oldestFirst) {
       if (item.character.status !== 'retired' && item.character.status !== 'inactive') break;
-      if (!this.hasActiveChat(item.character)) inactiveCharacters.unshift(item);
+      if (!this.hasActiveChat(item.character) && !inactiveIds.has(item.character.id)) {
+        retiredCharacters.unshift(item);
+      }
     }
 
-    return inactiveCharacters;
+    return retiredCharacters;
+  }
+
+  get inactiveChattedCharacters(): LastChattedCharacter[] {
+    const oldestInactive = Math.min(...this.lastChattedCharacters
+      .filter(item => item.character.status === 'inactive')
+      .map(item => item.timestamp.getTime()));
+    const oldestActive = Math.min(...this.lastChattedCharacters
+      .filter(item => item.character.status === 'active')
+      .map(item => item.timestamp.getTime()));
+
+    if (!Number.isFinite(oldestInactive) || !Number.isFinite(oldestActive)) return [];
+
+    return this.sortCharacters(this.lastChattedCharacters.filter(item =>
+      !this.hasActiveChat(item.character) &&
+      item.timestamp.getTime() >= oldestInactive &&
+      item.timestamp.getTime() < oldestActive
+    ));
   }
 
   get combinedChattedCharacters(): LastChattedCharacter[] {
     if (this.sortType === 'totalCount') {
-      return this.sortCharacters([
-        ...this.activeChattedCharacters,
-        ...this.thisWeekChattedCharacters,
-        ...this.olderChattedCharacters
-      ]);
+      return this.sortCharacters(this.lastChattedCharacters);
     }
 
     if (this.sortType === 'weeklyCount') {
@@ -116,8 +132,11 @@ export class CharacterList {
     return [];
   }
 
-  private get inactiveChattedCharacterIds(): Set<number> {
-    return new Set(this.inactiveChattedCharacters.map(item => item.character.id));
+  private get separatedChattedCharacterIds(): Set<number> {
+    return new Set([
+      ...this.retiredChattedCharacters,
+      ...this.inactiveChattedCharacters
+    ].map(item => item.character.id));
   }
 
   private getOneWeekAgo(): Date {

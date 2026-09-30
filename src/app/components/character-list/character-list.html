@@ -108,10 +108,26 @@
       }
     }
 
-    @if (inactiveChattedCharacters.length > 0) {
+    @if (sortType !== 'totalCount' && inactiveChattedCharacters.length > 0) {
       <h2>Inactive</h2>
       <div class="chatted-list">
         @for (item of inactiveChattedCharacters; track item.character.id) {
+          <app-character-item
+            [character]="item.character"
+            [timestamp]="item.timestamp"
+            [chatCount]="item.chatCount"
+            [weeklyChatCount]="item.weeklyChatCount"
+            [showChatInfo]="true"
+            (characterClick)="onCharacterClick($event)">
+          </app-character-item>
+        }
+      </div>
+    }
+
+    @if (sortType !== 'totalCount' && retiredChattedCharacters.length > 0) {
+      <h2>Retired</h2>
+      <div class="chatted-list">
+        @for (item of retiredChattedCharacters; track item.character.id) {
           <app-character-item 
             [character]="item.character" 
             [timestamp]="item.timestamp" 
