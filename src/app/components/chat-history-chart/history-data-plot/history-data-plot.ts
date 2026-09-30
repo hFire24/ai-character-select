@@ -35,6 +35,7 @@ export class HistoryDataPlot {
   barX(point:HistoryPoint){const [start]=this.extent;const {bucketDays,bucketCount}=this.geometry;const index=Math.floor((this.dayNumber(point.date)-this.dayNumber(start))/bucketDays);return this.plotLeft+index/bucketCount*(this.plotRight-this.plotLeft)+this.barGap/2}
   get barWidth(){return (this.plotRight-this.plotLeft)/this.geometry.bucketCount-this.barGap}
   barHeight(point:HistoryPoint){return Math.max(7,point.count/this.maximum*34)}
+  showBarCount(point:HistoryPoint){return point.count>1&&!(this.maximum===6&&point.count===2)}
   color(id:number){const key=this.chart.series.map(item=>item.character.id).join(',');if(key!==this.colorKey){this.colors.clear();const palette=['#2563eb','#db2777','#059669','#d97706','#7c3aed','#0891b2','#dc2626'];this.chart.series.forEach((item,index)=>this.colors.set(item.character.id,palette[index%palette.length]));this.colorKey=key}return this.colors.get(id)??'#2563eb'}
   iconPath(character:Character){return character.img?`assets/Icons/${character.img}`:'assets/Icons/extended/Unknown.png'}
   useUnknownIcon(event:Event){(event.currentTarget as SVGImageElement).setAttribute('href','assets/Icons/extended/Unknown.png')}

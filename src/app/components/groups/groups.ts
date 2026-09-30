@@ -61,7 +61,7 @@ export class Groups implements OnInit {
       {
         name: "Corona Islanders",
         description: "Characters who live on Corona Island",
-        characterIds: [92, 113, 131, 132]
+        characterIds: [92, 113, 157, 131, 132]
       },
       {
         name: "Personality Girls",

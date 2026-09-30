@@ -30,7 +30,7 @@
         <g><title>{{ item.character.name }}: {{ formatPointDate(point) }} ({{ point.count }} chat{{ point.count === 1 ? '' : 's' }})</title>
           <rect class="histogram-bar" [attr.x]="barX(point)" [attr.y]="rowY(rowIndex) - barHeight(point)"
             [attr.width]="barWidth" [attr.height]="barHeight(point)" [attr.fill]="color(item.character.id)" />
-          @if (point.count > 1) { <text class="bar-count" [attr.x]="barX(point) + barWidth / 2"
+          @if (showBarCount(point)) { <text class="bar-count" [attr.x]="barX(point) + barWidth / 2"
             [attr.y]="rowY(rowIndex) - 3">{{ point.count }}</text> }
         </g>
       }

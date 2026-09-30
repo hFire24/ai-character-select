@@ -11,7 +11,7 @@ import type { ChatHistoryChart } from '../chat-history-chart';
 export class HistoryDateRange {
   @Input({ required: true }) chart!: ChatHistoryChart;
 
-  readonly durationPresets = [7, 15, 30, 60, 120];
+  readonly durationPresets = [7, 15, 30, 60, 120, 180];
   get durationPreset() { return this.durationPresets.includes(this.slidingZoomDays) ? this.slidingZoomDays : ''; }
   private firstHandleIsStart = true;
   get firstHandleValue() { return this.firstHandleIsStart ? this.sliderValue : this.endSliderValue; }
