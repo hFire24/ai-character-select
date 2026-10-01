@@ -1,3 +1,4 @@
+import { CharacterIcon } from '../../directives/character-icon';
 import { SavedSession } from '../../utils/saved-session';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -10,7 +11,7 @@ import { iconAssetPath, useTallIconAssetPath } from '../../utils/character-asset
 
 @Component({
   selector: 'app-blind-ranking',
-  imports: [FormsModule, CommonModule, TierScreenshot, CharacterModal],
+  imports: [CharacterIcon, FormsModule, CommonModule, TierScreenshot, CharacterModal],
   templateUrl: './blind-ranking.html',
   styleUrl: './blind-ranking.scss'
 })

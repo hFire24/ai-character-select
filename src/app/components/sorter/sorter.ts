@@ -1,3 +1,4 @@
+import { CharacterIcon } from '../../directives/character-icon';
 import { SavedSession } from '../../utils/saved-session';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,7 @@ import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-sorter',
-  imports: [CommonModule, FormsModule],
+  imports: [CharacterIcon, CommonModule, FormsModule],
   templateUrl: './sorter.html',
   styleUrl: './sorter.scss'
 })

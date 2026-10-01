@@ -272,36 +272,17 @@ export class ManageTiers {
   }
 
   private createTrimmedCharactersText(characters: ManagedCharacter[]): string {
-    const fieldsToRemove = new Set([
-      'img',
-      'shortName',
-      'id',
-      'parentId',
-      'generation',
-      'color',
-      'rpFriendly',
-      'knowledgeFriendly',
-      'musicEnjoyer',
-      'personalityGirl',
-      'status',
-      'pronouns',
-      'retirementDate',
-      'moe',
-      'futuristic',
-      'mature',
-      'emotion',
-      'link',
-      'inactiveReason',
-      'retirementReason',
-      'alternatives',
-      'tier',
-      'themeSong',
-      'songLink',
-      'defaultTier',
-      'chatCount',
-      'weeklyChatCount',
-      'timestamp'
-    ]);
+    const fieldsToInclude = [
+      'name',
+      'creationDate',
+      'birthday',
+      'interests',
+      'peeves',
+      'purpose',
+      'funFact',
+      'description',
+      'note'
+    ] as const;
 
     return [...characters]
       .sort((a, b) =>
@@ -310,8 +291,9 @@ export class ManageTiers {
         a.id - b.id
       )
       .map(character => {
-        return Object.entries(character)
-          .filter(([key, value]) => !fieldsToRemove.has(key) && value !== undefined && value !== null && value !== '')
+        return fieldsToInclude
+          .map(key => [key, character[key]] as const)
+          .filter(([, value]) => value !== undefined && value !== null && value !== '')
           .map(([key, value]) => {
             const formattedKey = key.toLowerCase() === 'name' ? 'Name' : this.formatTextExportKey(key);
             return `${formattedKey}: ${value}`;

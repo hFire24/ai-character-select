@@ -1,3 +1,4 @@
+import { CharacterIcon } from '../../directives/character-icon';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Character, DuoPair, RelationshipPair } from '../../services/character.service';
@@ -9,7 +10,7 @@ import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-duos',
-  imports: [CommonModule, FormsModule, CharacterModal],
+  imports: [CharacterIcon, CommonModule, FormsModule, CharacterModal],
   templateUrl: './duos.html',
   styleUrl: './duos.scss'
 })

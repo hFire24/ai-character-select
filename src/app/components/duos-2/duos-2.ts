@@ -1,3 +1,4 @@
+import { CharacterIcon } from '../../directives/character-icon';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterModal } from '../character-modal/character-modal';
@@ -14,7 +15,7 @@ interface Duo {
 
 @Component({
   selector: 'app-duos-2',
-  imports: [CommonModule, CharacterModal],
+  imports: [CharacterIcon, CommonModule, CharacterModal],
   templateUrl: './duos-2.html',
   styleUrl: './duos-2.scss'
 })

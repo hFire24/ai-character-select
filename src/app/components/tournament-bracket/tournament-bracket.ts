@@ -1,3 +1,4 @@
+import { CharacterIcon } from '../../directives/character-icon';
 import { SavedSession } from '../../utils/saved-session';
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
@@ -6,7 +7,7 @@ import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 @Component({
   selector: 'app-tournament-bracket',
-  imports: [CommonModule],
+  imports: [CharacterIcon, CommonModule],
   templateUrl: './tournament-bracket.html',
   styleUrl: './tournament-bracket.scss'
 })

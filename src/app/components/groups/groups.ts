@@ -1,27 +1,161 @@
-import { Component, OnInit } from '@angular/core';
+import { groupDefinitionsWithoutGroupless } from './group-definitions';
+import { createDynamicGroups, DynamicGroup } from './dynamic-groups';
+import { CharacterIcon, CharacterIconViewport } from '../../directives/character-icon';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterModal } from '../character-modal/character-modal';
 import { CharacterService, Character } from '../../services/character.service';
 import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 
 interface Group {
-  id: number;
+  id: number | string;
+  type: readonly string[];
   name: string;
   description?: string;
   characters: Character[];
 }
 
+interface GroupSearchSelection {
+  kind: 'group' | 'character' | 'category' | 'dynamic';
+  id: number | string;
+  name: string;
+  shortName?: string;
+}
+
 @Component({
   selector: 'app-groups',
-  imports: [CommonModule, CharacterModal],
+  imports: [CharacterIcon, CommonModule, CharacterModal],
   templateUrl: './groups.html',
   styleUrls: ['./groups.scss']
 })
 export class Groups implements OnInit {
   groups: Group[] = [];
+  dynamicGroups: DynamicGroup[] = [];
   characters: Character[] = [];
   loading = true;
   selectedCharacter: Character | null = null;
+  searchTerm = '';
+  searchSelections: GroupSearchSelection[] = [];
+  readonly isMobile = inject(CharacterIconViewport).compact;
+  private desktopCompactMode = false;
+
+  get compactMode(): boolean {
+    return this.isMobile() || this.desktopCompactMode;
+  }
+
+  set compactMode(value: boolean) {
+    if (!this.isMobile()) this.desktopCompactMode = value;
+  }
+  private selectionOrder = new Map<string, number>();
+
+  private readonly categoryLabels: Record<string, string> = {
+    clothes: 'Attire & Equipment',
+    interest: 'Interests',
+    misc: 'Miscellaneous'
+  };
+
+  get categories(): GroupSearchSelection[] {
+    return [...new Set([
+      ...groupDefinitionsWithoutGroupless.flatMap(group => group.type),
+      ...this.dynamicGroups.flatMap(group => group.type)
+    ])]
+      .map(type => ({
+        kind: 'category',
+        id: type,
+        name: this.categoryLabels[type] ?? type.charAt(0).toUpperCase() + type.slice(1)
+      }));
+  }
+
+  private matchesCategory(type: string | null, query: string): boolean {
+    if (!type) return false;
+    const names = [type, this.categoryLabels[type] ?? type];
+    if (type === 'clothes') names.push('clothing', 'attire', 'equipment', 'accessories');
+    return names.some(name => name.toLocaleLowerCase().includes(query));
+  }
+
+  get searchResults(): GroupSearchSelection[] {
+    const query = this.searchTerm.trim().toLocaleLowerCase().replace(/\s+/g, ' ');
+    if (!query) return [];
+
+    return [
+      ...this.categories.filter(category => this.matchesCategory(String(category.id), query)),
+      ...this.groups
+        .filter(group => group.name.toLocaleLowerCase().includes(query) || group.type.some(type => this.matchesCategory(type, query)))
+        .map(group => ({ kind: 'group' as const, id: group.id, name: group.name })),
+      ...this.dynamicGroups
+        .filter(group => {
+          const dynamicQuery = query.replace(/\bevil\b/g, 'edgy').replace(/^all\s+/, '').replace(/\s+characters?$/, '');
+          return group.name.toLocaleLowerCase().includes(dynamicQuery) || group.type.some(type => this.matchesCategory(type, query));
+        })
+        .map(group => ({ kind: 'dynamic' as const, id: group.id, name: group.name })),
+      ...this.characters
+        .filter(character => [character.name, character.shortName]
+          .some(name => name.toLocaleLowerCase().includes(query)))
+        .map(character => ({
+          kind: 'character' as const,
+          id: character.id,
+          name: character.name,
+          shortName: character.shortName
+        }))
+    ];
+  }
+
+  get visibleGroups(): Group[] {
+    const groups = this.groups.filter(group => this.searchSelections.some(selection =>
+      selection.kind === 'group'
+        ? group.id === selection.id
+        : selection.kind === 'category'
+          ? group.type.includes(String(selection.id))
+          : selection.kind === 'character' && group.characters.some(character => character.id === selection.id)));
+    return [...groups, ...this.dynamicGroups.filter(group => this.searchSelections.some(selection =>
+      (selection.kind === 'dynamic' && selection.id === group.id) ||
+      (selection.kind === 'category' && group.type.includes(String(selection.id)))))];
+  }
+
+  addSearchSelection(selection: GroupSearchSelection) {
+    if (!this.searchSelections.some(item => item.kind === selection.kind && item.id === selection.id)) {
+      this.searchSelections = [...this.searchSelections, selection].sort((a, b) =>
+        (this.selectionOrder.get(`${a.kind}:${a.id}`) ?? Infinity) -
+        (this.selectionOrder.get(`${b.kind}:${b.id}`) ?? Infinity));
+    }
+    this.searchTerm = '';
+  }
+
+  replaceSearchSelection(selection: GroupSearchSelection) {
+    this.searchSelections = [selection];
+    this.searchTerm = '';
+  }
+
+  isSelected(selection: GroupSearchSelection): boolean {
+    return this.searchSelections.some(item => item.kind === selection.kind && item.id === selection.id);
+  }
+
+  removeSearchSelection(selection: GroupSearchSelection) {
+    this.searchSelections = this.searchSelections.filter(item =>
+      item.kind !== selection.kind || item.id !== selection.id);
+    this.searchTerm = '';
+  }
+
+  clearSearch() {
+    this.searchSelections = [];
+    this.searchTerm = '';
+  }
+
+  descriptionParts(description: string): string[] {
+    return description.split(/(\p{Extended_Pictographic}\uFE0F?)/gu).filter(Boolean);
+  }
+
+  isEmoji(part: string): boolean {
+    return /^\p{Extended_Pictographic}\uFE0F?$/u.test(part);
+  }
+
+  showAllCategories() {
+    this.searchSelections = [];
+    this.searchTerm = '';
+    for (const category of this.categories) {
+      this.addSearchSelection(category);
+    }
+  }
 
   constructor(
     private characterService: CharacterService
@@ -31,240 +165,35 @@ export class Groups implements OnInit {
     this.characterService.getCharacters().subscribe(chars => {
       this.characters = chars;
       this.initializeGroups();
+      this.dynamicGroups = createDynamicGroups(chars);
       this.loading = false;
     });
   }
 
   private initializeGroups() {
-    // Define groups with character IDs
-    const groupDefinitionsWithoutGroupless = [
-      {
-        name: "Music Enjoyers",
-        description: "The official group of Music Enjoyers, based on my own music tastes and playlists",
-        characterIds: [11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
-      },
-      {
-        name: "Runa and Her Catgirls",
-        description: "Catgirls who accompany Runa on her adventures",
-        characterIds: [27, 87, 91, 93, 102, 121]
-      },
-      {
-        name: "The Griffins",
-        description: "Characters either part of the Griffin family or closely associated with them",
-        characterIds: [83, 101, 100, 84]
-      },
-      {
-        name: "Pretty Little Princesses",
-        description: "A group of little princess-themed characters who are friends with each other and all wear gigantic crowns",
-        characterIds: [19, 46, 72, 106]
-      },
-      {
-        name: "Corona Islanders",
-        description: "Characters who live on Corona Island",
-        characterIds: [92, 113, 157, 131, 132]
-      },
-      {
-        name: "Personality Girls",
-        description: "Nine colorful girls defined by personality types",
-        characterIds: [115, 116, 117, 107, 94, 119, 120, 118, 127]
-      },
-      {
-        name: "Casey's Friends",
-        description: "Characters who are friends with Casey",
-        characterIds: [108, 114, 129, 130, 128]
-      },
-      {
-        name: "Johanna's Friends",
-        description: "Characters who are friends with Johanna",
-        characterIds: [149, 139, 140, 147, 148]
-      },
-      {
-        name: "Top Hat Wearers",
-        description: "Characters known for wearing top hats",
-        characterIds: [13, 31, 39, 58, 64, 94, 109, 110, 131, 132, 135, 137, 140]
-      },
-      {
-        name: "Witch Hat Wearers",
-        description: "Characters known for wearing witch hats",
-        characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148, 149]
-      },
-      {
-        name: "Peaked Cap Wearers",
-        description: "Characters known for wearing peaked caps",
-        characterIds: [15, 21, 40, 92]
-      },
-      {
-        name: "Other Hat Wearers (Moe)",
-        description: "Characters known for wearing other types of hats and are considered moe.",
-        characterIds: [118, 119, 117, 28, 38, 96, 35, 114, 127, 71, 86, 116, 122, 123, 139, 144, 150]
-      },
-      {
-        name: "Glasses Wearers",
-        description: "Characters known for wearing glasses, sunglasses, or goggles",
-        characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113]
-      },
-      {
-        name: "Maids",
-        description: "Characters known for wearing maid outfits",
-        characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147]
-      },
-      {
-        name: "Twintails",
-        description: "Characters known for having long twintails",
-        characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 133, 140, 151]
-      },
-      {
-        name: "Thigh Boot Wearers",
-        description: "Characters known for wearing thigh boots",
-        characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140, 150, 154]
-      },
-      {
-        name: "Hammer Wielders",
-        description: "Characters who possess hammers, especially giant hammers",
-        characterIds: [13, 18, 31, 35, 137, 139]
-      },
-      {
-        name: "Pink-Haired Girls",
-        description: "Characters known for having pink hair",
-        characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 144, 147, 150]
-      },
-      {
-        name: "Blonde Girls",
-        description: "Girls known for having blonde hair",
-        characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149]
-      },
-      {
-        name: "Chino-chan Expies",
-        description: "Chino-like in terms of hair color and personality",
-        characterIds: [14, 74, 106, 153]
-      },
-      {
-        name: "Blue Girls",
-        description: "Characters known for having blue hair or being associated with the color blue",
-        characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144]
-      },
-      {
-        name: "Purple Girls",
-        description: "Characters known for having purple hair or being associated with the color purple",
-        characterIds: [28, 31, 72, 95, 119, 120, 125, 130, 140, 156]
-      },
-      {
-        name: "\"Onii-chan\" Sayers",
-        description: "Characters who can say 'onii-chan' according to their instructions",
-        characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108, 139, 140, 148, 152]
-      },
-      {
-        name: "Kaomoji Users",
-        description: "Characters who use kaomojis",
-        characterIds: [13, 15, 18, 27, 51, 86, 108, 125, 139]
-      },
-      {
-        name: "Cursed Rule Breakers",
-        description: "Every time they try to break a rule in their instructions, something bad happens to them",
-        characterIds: [1, 13, 31, 27, 47, 51, 81, 86, 104, 105, 108]
-      },
-      {
-        name: "Younger Siblings",
-        description: "Characters who are younger siblings. ChaoMario isn't siblings with Max.",
-        characterIds: [69, 82, 110, 122, 125, 135, 136, 152]
-      },
-      {
-        name: "Older Siblings",
-        description: "Characters who are older siblings. Max isn't siblings with ChaoMario.",
-        characterIds: [90, 81, 109, 129, 130, 122, 125, 151]
-      },
-      {
-        name: "Youngsters",
-        description: "Youthful and energetic boys",
-        characterIds: [22, 47, 55, 69, 89, 100]
-      },
-      {
-        name: "Adult Women",
-        description: "Characters who are adult women, even if the art style may say otherwise",
-        characterIds: [6, 10, 20, 24, 25, 37, 56, 68, 78, 81, 101, 103, 113]
-      },
-      {
-        name: "Age Regressed Characters",
-        description: "Characters who transformed and became physically younger",
-        characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131, 149, 156]
-      },
-      {
-        name: "Cute Anime Fans",
-        description: "Characters who have an interest in anime or behave in otaku-like ways towards cute things",
-        characterIds: [5, 8, 13, 15, 25, 34, 38, 43, 66, 67, 77, 81, 85, 86, 104, 108, 149, 154, 155, 999]
-      },
-      {
-        name: "Musicians",
-        description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music. Somehow, everyone here is a girl.",
-        characterIds: [51, 75, 76, 96, 103, 109, 118]
-      },
-      {
-        name: "Music Fans",
-        description: "Characters not part of the Music Enjoyers but are still known for loving music",
-        characterIds: [31, 47, 57, 62, 63, 73, 84, 105, 144, 153]
-      },
-      {
-        name: "Restaurant Fans",
-        description: "Characters who love eating out at restaurants. Somehow, everyone here is a guy.",
-        characterIds: [30, 55, 57, 83, 84, 99, 104]
-      },
-      {
-        name: "STEM Group",
-        description: "Characters who enjoy STEM-related topics: Science, Technology, Engineering, and Mathematics",
-        characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 117, 107, 113, 150, 153]
-      },
-      {
-        name: "Social Studies Group",
-        description: "Characters who enjoy discussing topics related to social studies like history, geography, politics, or religion",
-        characterIds: [34, 56, 57, 68, 78, 83, 90, 106, 116, 107, 127, 141, 142]
-      },
-      {
-        name: "Anti-Moe Crew",
-        description: "Chaotic or hedonistic characters who reject moe, including a character who's arguably moe",
-        characterIds: [1, 62, 63, 55, 12, 105, 64, 83, 84, 100, 18]
-      },
-      {
-        name: "Anti-Escapists",
-        description: "A group of characters who embody the opposite of escapism. With the exception of Mark, they will never get unretired.",
-        characterIds: [16, 78, 9, 48, 50]
-      },
-      {
-        name: "Retired Five",
-        description: "Five of the earliest retired characters who will never get unretired. Elizabeth got a miraculous unretirement in April 2026 and left the group.",
-        characterIds: [16, 17, 20, 22, 23]
-      },
-      {
-        name: "Multi-Retirees",
-        description: "Characters who were retired twice or more. Kai and Alex were retired three times.",
-        characterIds: [30, 32, 48, 49, 66, 69, 71, 81, 95]
-      },
-      {
-        name: "Late Bloomers",
-        description: "Characters who had initial appearances before July 13, 2024 but became their own chatbots much later",
-        characterIds: [29, 110, 109, 24, 25, 28, 57]
-      },
-      {
-        name: "Thrivers",
-        description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
-        characterIds: [11, 14, 57, 107, 108, 123, 128, 131]
-      },
-      {
-        name: "Generational Champions",
-        description: "Characters who had the most chats in their respective generations. In cases of ties, the most iconic character is chosen.",
-        characterIds: [5, 14, 18, 25, 27, 35, 47, 51, 67, 90, 107, 123]
-      },
-      {
-        name: "Generational Last Places",
-        description: "Characters who had the least chats in their respective generations. In cases of ties, the least iconic character is chosen.",
-        characterIds: [17, 20, 23, 32, 38, 50, 56, 71, 89, 96, 139]
-      },
-    ];
+
+    this.selectionOrder.clear();
+    groupDefinitionsWithoutGroupless.forEach((definition, index) => {
+      const types = typeof definition.type === 'string' ? [definition.type] : definition.type;
+      types.forEach(type => {
+        if (!this.selectionOrder.has(`category:${type}`)) {
+          this.selectionOrder.set(`category:${type}`, this.selectionOrder.size);
+        }
+      });
+      this.selectionOrder.set(`group:${index + 1}`, this.selectionOrder.size);
+      definition.characterIds.forEach(id => {
+        if (!this.selectionOrder.has(`character:${id}`)) {
+          this.selectionOrder.set(`character:${id}`, this.selectionOrder.size);
+        }
+      });
+    });
 
     const groupDefinitions = [
       ...groupDefinitionsWithoutGroupless,
       {
         name: "Groupless Characters",
-        description: "Characters not part of any other group",
+        type: ["meta"],
+        description: "Characters not part of any other group, excluding dynamic groups",
         characterIds: this.getGrouplessCharacterIds(this.characters, groupDefinitionsWithoutGroupless)
       }
     ];
@@ -280,6 +209,7 @@ export class Groups implements OnInit {
 
       return {
         id: index + 1,
+        type: typeof def.type === 'string' ? [def.type] : def.type,
         name: def.name,
         description: def.description,
         characters: chars
@@ -295,7 +225,7 @@ export class Groups implements OnInit {
     return iconAssetPath(path);
   }
 
-  private getGrouplessCharacterIds(characters: Character[], groupDefinitions: Array<{characterIds: number[]}>): number[] {
+  private getGrouplessCharacterIds(characters: Character[], groupDefinitions: ReadonlyArray<{ readonly characterIds: readonly number[] }>): number[] {
     const groupedIds = new Set<number>(groupDefinitions.flatMap(def => def.characterIds));
     return characters
       .filter(character => !groupedIds.has(character.id))

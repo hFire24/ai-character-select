@@ -1,3 +1,4 @@
+import { CharacterIcon } from '../../directives/character-icon';
 ﻿import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
@@ -16,7 +17,7 @@ type FriendlinessFilter = 'all' | 'rp' | 'knowledge' | 'both';
   selector: "app-spin-the-wheel",
   templateUrl: "./spin-the-wheel.html",
   styleUrl: "./spin-the-wheel.scss",
-  imports: [CommonModule, FormsModule, CharacterModal, CharacterFilterPipe],
+  imports: [CharacterIcon, CommonModule, FormsModule, CharacterModal, CharacterFilterPipe],
   standalone: true
 })
 export class SpinTheWheel {

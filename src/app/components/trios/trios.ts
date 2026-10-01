@@ -1,3 +1,4 @@
+import { CharacterIcon } from '../../directives/character-icon';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterModal } from '../character-modal/character-modal';
@@ -13,7 +14,7 @@ interface Trio {
 
 @Component({
   selector: 'app-trios',
-  imports: [CommonModule, CharacterModal],
+  imports: [CharacterIcon, CommonModule, CharacterModal],
   templateUrl: './trios.html',
   styleUrl: './trios.scss'
 })
@@ -167,11 +168,6 @@ export class Trios implements OnInit {
         name: "Personality Type Discussers",
         description: "Characters who often discuss personality types and have distinct personalities themselves",
         characterShortNames: ["Mark", "Maddie", "Emerald"]
-      },
-      {
-        name: "Straightforward Trio",
-        description: "Characters known for their blunt and straightforward personalities",
-        characterShortNames: ["Kai", "Jed", "Lexi"]
       },
       {
         name: "Byte's Former Companions",

@@ -1,3 +1,4 @@
+import { CharacterIcon } from '../../directives/character-icon';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
@@ -8,7 +9,7 @@ import { iconAssetPath, tallIconAssetPath } from '../../utils/character-assets';
 @Component({
   selector: 'app-character-grid',
   standalone: true,
-  imports: [CommonModule, CharacterFilterPipe, SortCharactersPipe],
+  imports: [CharacterIcon, CommonModule, CharacterFilterPipe, SortCharactersPipe],
   templateUrl: './character-grid.html',
   styleUrl: './character-grid.scss'
 })

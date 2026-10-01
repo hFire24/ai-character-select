@@ -21,6 +21,7 @@ export type Character = {
   futuristic: number; // New field for futuristic level
   mature: number; // New field for maturity level
   emotion: string;
+  straightforward?: boolean;
   pronouns: string;
   link: string;
   interests: string;

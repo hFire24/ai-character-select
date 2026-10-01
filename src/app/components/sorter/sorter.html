@@ -84,7 +84,7 @@
 
   <div class="comparison">
     <div class="character-option" (click)="choose(currentPair[0])">
-      <img loading="lazy" class="tall-icon" [src]="assetPath(currentPair[0].img)" [alt]="currentPair[0].name" (error)="($any($event.target)).src = fallbackAssetPath(currentPair[0].img)">
+      <img loading="lazy" class="tall-icon" [appCharacterIcon]="currentPair[0].img" [alt]="currentPair[0].name">
       <h3>{{currentPair[0].shortName || currentPair[0].name}}</h3>
     </div>
 
@@ -94,7 +94,7 @@
     </div>
 
     <div class="character-option" (click)="choose(currentPair[1])">
-      <img loading="lazy" class="tall-icon" [src]="assetPath(currentPair[1].img)" [alt]="currentPair[1].name" (error)="($any($event.target)).src = fallbackAssetPath(currentPair[1].img)">
+      <img loading="lazy" class="tall-icon" [appCharacterIcon]="currentPair[1].img" [alt]="currentPair[1].name">
       <h3>{{currentPair[1].shortName || currentPair[1].name}}</h3>
     </div>
   </div>
@@ -120,7 +120,7 @@
 
 <!-- King of the Hill Winner -->
 <div *ngIf="kingOfTheHillWinner" class="character-win">
-  <img loading="lazy" class="tall-icon" [src]="assetPath(kingOfTheHillWinner.img)" [alt]="kingOfTheHillWinner.name" (error)="($any($event.target)).src = fallbackAssetPath(kingOfTheHillWinner.img)">
+  <img loading="lazy" class="tall-icon" [appCharacterIcon]="kingOfTheHillWinner.img" [alt]="kingOfTheHillWinner.name">
   <h2>Champion: {{kingOfTheHillWinner.name}}</h2>
   <button (click)="resetKingOfTheHill()" class="red-button">Start Over</button>
 </div>
