@@ -11,72 +11,26 @@
 				<h3>Status <button (click)="toggleAllStatuses()" class="select-all-btn">Toggle All</button></h3>
 				<div class="filter-checkboxes">
 					<label>
-						<input type="checkbox" [(ngModel)]="statusFilters.active" />
-						Active
+						<input type="checkbox" [(ngModel)]="statusFilters.active" />Active
 					</label>
 					<label>
-						<input type="checkbox" [(ngModel)]="statusFilters.inactive" />
-						Inactive
+						<input type="checkbox" [(ngModel)]="statusFilters.inactive" />Inactive
 					</label>
 					<label>
-						<input type="checkbox" [(ngModel)]="statusFilters.retired" />
-						Retired
+						<input type="checkbox" [(ngModel)]="statusFilters.retired" />Retired
 					</label>
-                    <label><input type="checkbox" [(ngModel)]="statusFilters.superRetired" /> Super Retired</label>
-					<label>
-						<input type="checkbox" [(ngModel)]="statusFilters.side" />
-						Side
+          <label>
+						<input type="checkbox" [(ngModel)]="statusFilters.superRetired" /> Super Retired
 					</label>
 					<label>
-						<input type="checkbox" [(ngModel)]="statusFilters.me" />
-						Me
+						<input type="checkbox" [(ngModel)]="statusFilters.side" />Side
 					</label>
 					<label>
-						<input type="checkbox" [(ngModel)]="statusFilters.future" />
-						Future
+						<input type="checkbox" [(ngModel)]="statusFilters.me" />Me
 					</label>
-				</div>
-			</div>
-
-			<div class="filter-section">
-				<h3>Tier Range</h3>
-				<div class="tier-slider-container">
-					<div class="tier-slider-labels">
-						<span>Min: Tier {{ minTier }}</span>
-						<span>Max: Tier {{ maxTier }}</span>
-					</div>
-					<div class="dual-range" [style.--range-start.%]="tierRangeStart" [style.--range-end.%]="tierRangeEnd">
-						<input type="range" [(ngModel)]="tierThumbA" [min]="tierMin" [max]="tierMax" class="tier-slider range-thumb-a" aria-label="First tier range handle" />
-						<input type="range" [(ngModel)]="tierThumbB" [min]="tierMin" [max]="tierMax" class="tier-slider range-thumb-b" aria-label="Second tier range handle" />
-					</div>
-				</div>
-			</div>
-
-			<div class="filter-section">
-				<h3>Moe Range</h3>
-				<div class="tier-slider-container">
-					<div class="tier-slider-labels">
-						<span>Min: {{ minMoe }}</span>
-						<span>Max: {{ maxMoe }}</span>
-					</div>
-					<div class="dual-range" [style.--range-start.%]="moeRangeStart" [style.--range-end.%]="moeRangeEnd">
-						<input type="range" [(ngModel)]="moeThumbA" min="1" max="10" class="tier-slider range-thumb-a" aria-label="First moe range handle" />
-						<input type="range" [(ngModel)]="moeThumbB" min="1" max="10" class="tier-slider range-thumb-b" aria-label="Second moe range handle" />
-					</div>
-				</div>
-			</div>
-
-			<div class="filter-section">
-				<h3>Mature Range</h3>
-				<div class="tier-slider-container">
-					<div class="tier-slider-labels">
-						<span>Min: {{ minMature }}</span>
-						<span>Max: {{ maxMature }}</span>
-					</div>
-					<div class="dual-range" [style.--range-start.%]="matureRangeStart" [style.--range-end.%]="matureRangeEnd">
-						<input type="range" [(ngModel)]="matureThumbA" min="1" max="10" class="tier-slider range-thumb-a" aria-label="First mature range handle" />
-						<input type="range" [(ngModel)]="matureThumbB" min="1" max="10" class="tier-slider range-thumb-b" aria-label="Second mature range handle" />
-					</div>
+					<label>
+						<input type="checkbox" [(ngModel)]="statusFilters.future" />Future
+					</label>
 				</div>
 			</div>
 
@@ -127,6 +81,36 @@
 						<input type="checkbox" [(ngModel)]="skipAnimation" />
 						Skip Animation
 					</label>
+				</div>
+			</div>
+
+			<div class="filter-section range-filter-section">
+				<h3>Tier Range <span class="tier-range-display">({{ minTier }} - {{ maxTier }})</span></h3>
+				<div class="tier-slider-container">
+					<div class="dual-range" [style.--range-start.%]="tierRangeStart" [style.--range-end.%]="tierRangeEnd">
+						<input type="range" [(ngModel)]="tierThumbA" [min]="tierMin" [max]="tierMax" class="tier-slider range-thumb-a" aria-label="First tier range handle" />
+						<input type="range" [(ngModel)]="tierThumbB" [min]="tierMin" [max]="tierMax" class="tier-slider range-thumb-b" aria-label="Second tier range handle" />
+					</div>
+				</div>
+			</div>
+
+			<div class="filter-section range-filter-section">
+				<h3>Moe Range <span class="tier-range-display">({{ minMoe }} - {{ maxMoe }})</span></h3>
+				<div class="tier-slider-container">
+					<div class="dual-range" [style.--range-start.%]="moeRangeStart" [style.--range-end.%]="moeRangeEnd">
+						<input type="range" [(ngModel)]="moeThumbA" min="1" max="10" class="tier-slider range-thumb-a" aria-label="First moe range handle" />
+						<input type="range" [(ngModel)]="moeThumbB" min="1" max="10" class="tier-slider range-thumb-b" aria-label="Second moe range handle" />
+					</div>
+				</div>
+			</div>
+
+			<div class="filter-section range-filter-section">
+				<h3>Mature Range <span class="tier-range-display">({{ minMature }} - {{ maxMature }})</span></h3>
+				<div class="tier-slider-container">
+					<div class="dual-range" [style.--range-start.%]="matureRangeStart" [style.--range-end.%]="matureRangeEnd">
+						<input type="range" [(ngModel)]="matureThumbA" min="1" max="10" class="tier-slider range-thumb-a" aria-label="First mature range handle" />
+						<input type="range" [(ngModel)]="matureThumbB" min="1" max="10" class="tier-slider range-thumb-b" aria-label="Second mature range handle" />
+					</div>
 				</div>
 			</div>
 		</div>

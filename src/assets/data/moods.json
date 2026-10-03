@@ -1,14 +1,16 @@
 [
-  { "name": "RP Friendly", "emoji": "⚔️", "arg": "rp", "color":"#FF4C4C", "description": "These characters are great for role-playing interactions." },
-  { "name": "Knowledge Friendly", "emoji": "🧠", "arg": "knowledge", "color":"#3B4CCA", "description": "Characters who are designed for answering questions." },
-  { "name": "Futuristic", "emoji": "🤖", "arg": "futuristic", "color":"#34495e", "description": "They live in the future, engage with cutting-edge technology, or embrace futuristic aesthetics." },
-  { "name": "Traditional", "emoji": "🌳", "arg": "traditional", "color":"#d35400", "description": "They live in the past, prefer traditional ways of life, or embrace old-fashioned aesthetics." },
-  { "name": "Has Chat", "emoji": "💬", "arg": "chatted", "color":"#27ae60", "description": "You have an active chat with these characters." },
-  { "name": "Not Chatted", "emoji": "❌💬", "arg": "chatted0", "color":"#95a5a6", "description": "You have no active chats with these characters." },
-  { "name": "Not Moe", "emoji": "🚫🩷", "arg": "moe0", "color":"#6c757d", "description": "Characters who are not cute in the moe sense." },
-  { "name": "Moe", "emoji": "🩷", "arg": "moe", "color":"pink", "description": "Characters who are so cute in the moe sense." },
-  { "name": "Male", "emoji": "♂️", "arg": "male", "color":"#2980b9", "description": "The boys are back in town!" },
-  { "name": "Female", "emoji": "♀️", "arg": "female", "color":"#9b59b6", "description": "Girls just want to have fun!" },
-  { "name": "Favorites", "emoji": "⭐", "arg": "favorites", "color":"#2ecc71", "description": "" },
-  { "name": "All", "emoji": "❓", "arg": "none", "description": "Click on the random button to go to a random character. Anyone can be selected." }
+  { "name": "RP Friendly", "emoji": "⚔️", "arg": "rp", "color":"#FF4C4C", "description": "These characters are great for role-playing interactions.", "selectable": false },
+  { "name": "Knowledge Friendly", "emoji": "🧠", "arg": "knowledge", "color":"#3B4CCA", "description": "Characters who are designed for answering questions.", "selectable": false },
+  { "name": "Futuristic", "emoji": "🤖", "arg": "futuristic", "color":"#34495e", "description": "They live in the future, engage with cutting-edge technology, or embrace futuristic aesthetics.", "selectable": true },
+  { "name": "Traditional", "emoji": "🌳", "arg": "traditional", "color":"#d35400", "description": "They live in the past, prefer traditional ways of life, or embrace old-fashioned aesthetics.", "selectable": true },
+  { "name": "Childish", "emoji": "👧", "arg": "immature", "color":"#f1c40f", "description": "These characters are childish or innocent.", "selectable": true },
+  { "name": "Mature", "emoji": "🧑", "arg": "mature", "color":"#8e44ad", "description": "These characters are mature, grown-up, or have a mature demeanor.", "selectable": true },
+  { "name": "Has Chat", "emoji": "💬", "arg": "chatted", "color":"#27ae60", "description": "You have an active chat with these characters.", "selectable": false },
+  { "name": "Not Chatted", "emoji": "❌💬", "arg": "chatted0", "color":"#95a5a6", "description": "You have no active chats with these characters.", "selectable": false },
+  { "name": "Not Moe", "emoji": "🚫🩷", "arg": "moe0", "color":"#6c757d", "description": "Characters who are not cute in the moe sense.", "selectable": false },
+  { "name": "Moe", "emoji": "🩷", "arg": "moe", "color":"pink", "description": "Characters who are so cute in the moe sense.", "selectable": false },
+  { "name": "Male", "emoji": "♂️", "arg": "male", "color":"#2980b9", "description": "The boys are back in town!", "selectable": false },
+  { "name": "Female", "emoji": "♀️", "arg": "female", "color":"#9b59b6", "description": "Girls just want to have fun!", "selectable": false },
+  { "name": "Favorites", "emoji": "⭐", "arg": "favorites", "color":"#2ecc71", "description": "", "selectable": true },
+  { "name": "All", "emoji": "❓", "arg": "none", "description": "Click on the random button to go to a random character. Anyone can be selected.", "selectable": false }
 ]  

@@ -97,18 +97,7 @@ label {
 	}
 }
 
-.tier-slider-container {
-	background: white;
-	padding: 1rem;
-	border-radius: 8px;
-	border: 1px solid #ddd;
-}
-
-.tier-slider-labels {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 0.75rem;
-	font-weight: 600;
+.tier-range-display {
 	color: #4a90e2;
 }
 
@@ -117,7 +106,6 @@ label {
 	--range-end: 100%;
 	position: relative;
 	height: 18px;
-	margin-bottom: 0.75rem;
 	background: linear-gradient(to right, #ddd 0 var(--range-start), #4a90e2 var(--range-start) var(--range-end), #ddd var(--range-end) 100%);
 	background-size: 100% 6px;
 	background-position: center;
@@ -363,12 +351,7 @@ label {
 		}
 	}
 	
-	.tier-slider-container {
-		background: #2d3236;
-		border-color: #444;
-	}
-	
-	.tier-slider-labels {
+	.tier-range-display {
 		color: #5ba3ff;
 	}
 	

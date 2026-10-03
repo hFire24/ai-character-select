@@ -1,17 +1,16 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Mood } from '../../services/mood.service';
+import { Mood, MoodService } from '../../services/mood.service';
 import { CommonModule } from '@angular/common';
 import { CharacterService, Character } from '../../services/character.service';
 import { RouterLink } from '@angular/router';
-import { CharacterFilterPipe, CharacterFilterOptions } from '../../pipes/character-filter.pipe';
-import { getEffectiveChatLink, getStoredChatLink } from '../../utils/chat-link-storage';
+import { getEffectiveChatLink } from '../../utils/chat-link-storage';
 import { DeviceService } from '../../services/device.service';
-import { MOE_THRESHOLD, NON_MOE_THRESHOLD } from '../../config/character-thresholds';
 
 const FALLBACK_MOOD: Mood = {
   name: "",
   emoji: "",
   arg: "",
+  selectable: false,
   description: ""
 };
 
@@ -31,7 +30,8 @@ export class MoodModal {
 
   constructor(
     private characterService: CharacterService,
-    private deviceService: DeviceService
+    private deviceService: DeviceService,
+    private moodService: MoodService
   ) {
     this.characterService.getCharacters().subscribe(data => {
       this.characters = data;
@@ -46,102 +46,8 @@ export class MoodModal {
     });
   }
 
-  private getStatusFilter(): CharacterFilterOptions['status'] {
-    const statusFilter: any = {};
-    if (this.showInactive) {
-      statusFilter.active = true;
-      statusFilter.inactive = true;
-    } else {
-      statusFilter.active = true;
-    }
-    if (this.showRetired) {
-      statusFilter.retired = true;
-    }
-    return statusFilter;
-  }
-
-  private hasActiveChat(character: Character): boolean {
-    return getStoredChatLink(character) !== null;
-  }
-
-  private getFilterOptions(): CharacterFilterOptions {
-    const baseOptions: CharacterFilterOptions = {
-      status: this.getStatusFilter(),
-      tier: { max: 8 } // tier < 9
-    };
-
-    switch (this.mood.arg) {
-      case 'moe':
-        return {
-          ...baseOptions,
-          customFilter: (c: Character) => c.moe >= MOE_THRESHOLD || c.color === 'pink'
-        };
-      case 'knowledge':
-        return {
-          ...baseOptions,
-          knowledgeFriendly: true
-        };
-      case 'rp':
-        return {
-          ...baseOptions,
-          rpFriendly: true
-        };
-      case 'futuristic':
-        return {
-          ...baseOptions,
-          attributes: { futuristic: { min: 7 } }
-        };
-      case 'traditional':
-        return {
-          ...baseOptions,
-          attributes: { futuristic: { max: 4 } }
-        };
-      case 'male':
-        return {
-          ...baseOptions,
-          attributes: { pronouns: ['he/him'] }
-        };
-      case 'female':
-        return {
-          ...baseOptions,
-          attributes: { pronouns: ['she/her'] }
-        };
-      case 'moe0':
-        return {
-          ...baseOptions,
-          attributes: { moe: { max: NON_MOE_THRESHOLD } }
-        };
-      case 'chatted':
-        return {
-          activeChats: true,
-          customFilter: (c: Character) => !c.status.includes('side')
-        };
-      case 'chatted0':
-        return {
-          ...baseOptions,
-          customFilter: (c: Character) => !this.hasActiveChat(c)
-        };
-      case 'favorites':
-        return {
-          tier: { favorite: true } // tier <= 3
-        };
-      default:
-        return {
-          ...baseOptions
-        };
-    }
-  }
-
   get filteredCharacters(): Character[] {
-    const pipe = new CharacterFilterPipe();
-    const filtered = pipe.transform(this.characters, this.getFilterOptions());
-    
-    // Special case: favorites should be sorted by tier
-    if (this.mood.arg === 'favorites') {
-      return filtered.sort((a, b) => a.tier - b.tier);
-    }
-    
-    return filtered;
+    return this.moodService.filterCharacters(this.characters, this.displayedMood, this);
   }
 
   ngOnInit() {
@@ -175,12 +81,10 @@ export class MoodModal {
   @Output() selectCharacter = new EventEmitter<Character>();
 
   selectRandomCharacter() {
-    let sourceCharacters = (this.filteredCharacters && this.filteredCharacters.length > 0)
-      ? this.filteredCharacters
-      : (() => {
-          const pipe = new CharacterFilterPipe();
-          return pipe.transform(this.characters, { status: this.getStatusFilter() });
-        })();
+    const filtered = this.filteredCharacters;
+    const sourceCharacters = filtered.length > 0
+      ? filtered
+      : this.moodService.filterCharactersByStatus(this.characters, this);
     // Create weighted array based on tier
     const weightedCharacters: Character[] = [];
     sourceCharacters.forEach(character => {
