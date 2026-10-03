@@ -253,6 +253,7 @@ export class CharacterService {
   }
 
   private applyTierRules(characters: Character[]): Character[] {
+    characters = this.applyInheritedSideStatuses(characters);
     const overrides = this.getTierOverrides();
 
     return characters.map(character => {
@@ -265,6 +266,45 @@ export class CharacterService {
 
       return { ...character, tier };
     });
+  }
+
+  private applyInheritedSideStatuses(characters: Character[]): Character[] {
+    const charactersById = new Map(characters.map(character => [character.id, character]));
+    const resolvedStatuses = new Map<number, string>();
+
+    const resolveStatus = (character: Character, resolving = new Set<number>()): string => {
+      const cachedStatus = resolvedStatuses.get(character.id);
+      if (cachedStatus) return cachedStatus;
+
+      const storedStatus = character.status.toLowerCase();
+      const isSideCharacter = storedStatus === 'side' || storedStatus.endsWith(' side');
+      if (!isSideCharacter || character.parentId == null || resolving.has(character.id)) {
+        const status = isSideCharacter ? 'side' : storedStatus;
+        resolvedStatuses.set(character.id, status);
+        return status;
+      }
+
+      const parent = charactersById.get(character.parentId);
+      if (!parent) {
+        resolvedStatuses.set(character.id, 'side');
+        return 'side';
+      }
+
+      const nextResolving = new Set(resolving).add(character.id);
+      const parentStatus = resolveStatus(parent, nextResolving);
+      const status = parentStatus === 'retired' || parentStatus === 'retired side'
+        ? 'retired side'
+        : parentStatus === 'inactive' || parentStatus === 'inactive side'
+          ? 'inactive side'
+          : 'side';
+      resolvedStatuses.set(character.id, status);
+      return status;
+    };
+
+    return characters.map(character => ({
+      ...character,
+      status: resolveStatus(character)
+    }));
   }
 
   saveTierOverride(characterId: number, tier: number): void {
@@ -297,7 +337,7 @@ export class CharacterService {
 
   getDefaultCharacters(): Observable<Character[]> {
     return this.http.get<Character[]>('assets/data/characters.json').pipe(
-      map(characters => characters.map(character => ({
+      map(characters => this.applyInheritedSideStatuses(characters).map(character => ({
         ...character,
         tier: this.getDefaultTierForCharacter(character)
       })))

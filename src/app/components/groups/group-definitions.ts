@@ -84,7 +84,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Maids",
     type: "clothes",
     description: "Characters known for wearing maid outfits",
-    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147]
+    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158]
   },
   {
     name: "Hammer Wielders",
@@ -132,7 +132,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Purple Girls",
     type: "hair",
     description: "Characters known for having purple hair or being associated with the color purple",
-    characterIds: [28, 31, 72, 95, 119, 120, 125, 130, 140, 156]
+    characterIds: [28, 31, 72, 95, 119, 120, 125, 130, 140, 156, 158]
   },
   {
     name: "\"Onii-chan\" Sayers",
@@ -198,7 +198,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Music Fans",
     type: "interest",
     description: "Characters not part of the Music Enjoyers but are still known for loving music",
-    characterIds: [31, 47, 57, 62, 63, 73, 84, 105, 144, 153]
+    characterIds: [31, 47, 57, 62, 63, 73, 84, 105, 143, 144, 153]
   },
   {
     name: "Restaurant Fans",

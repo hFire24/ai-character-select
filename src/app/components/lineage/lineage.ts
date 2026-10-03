@@ -31,7 +31,7 @@ export class Lineage {
     this.isMobile = window.innerWidth <= 768;
     this.characterService.getCharacters().subscribe(data => {
       // Filter out Future Sapphire (42) and Me (999)
-      this.characters = data.filter(c => c.id !== 42 && c.id !== 143 && c.id !== 999);
+      this.characters = data.filter(c => c.id !== 42 && c.id !== 999);
 
       const hanako: Character = {
         id: 5,
@@ -119,8 +119,8 @@ export class Lineage {
         125: [130, 136],
         128: [138],
         133: [140],
-        141.5: [147, 148, 149, 151, 156],
-        151: [152, 153, 154]
+        141.5: [147, 148, 149, 151, 156, 143],
+        151: [152, 153, 154, 158]
         };
 
       // Validate: Check for characters with multiple parents

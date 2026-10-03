@@ -6,8 +6,19 @@
     *ngIf="!isSmallMobile()" 
     class="view-toggle-button" 
     (click)="toggleView()"
+    style="margin-right: 8px;"
   >
     Switch to {{ viewMode === 'calendar' ? 'List' : 'Calendar' }} View
+  </button>
+
+  <button
+    type="button"
+    class="retired-filter"
+    [class.active]="hideRetired"
+    [attr.aria-pressed]="hideRetired"
+    (click)="setHideRetired(!hideRetired)"
+  >
+    {{ hideRetired ? 'Show' : 'Hide' }} retired characters and their side characters
   </button>
 
   <!-- Calendar View -->

@@ -4,6 +4,7 @@ import { DeviceService } from '../../services/device.service';
 import { CharacterModal } from '../character-modal/character-modal';
 import { CommonModule } from '@angular/common';
 import { DaysUntilBirthdayPipe } from '../../pipes/days-until-birthday.pipe';
+import { forkJoin } from 'rxjs';
 
 interface CalendarDay {
   date: number;
@@ -26,6 +27,8 @@ interface BirthdayCharacter {
 })
 export class BirthdayCalendar implements OnInit {
   characters: Character[] = [];
+  hideRetired = false;
+  private allCharacters: Character[] = [];
   originalCharacters: Character[] = []; // Store original characters for modal display
   viewMode: 'calendar' | 'list';
   currentDate = new Date();
@@ -59,11 +62,45 @@ export class BirthdayCalendar implements OnInit {
   }
 
   loadCharacters() {
-    this.characterService.getCharactersSplitTwins().subscribe(characters => {     
-      this.characters = characters.filter(char => char.birthday && char.birthday.toLowerCase() !== 'unknown');
-      this.generateCalendar();
-      this.generateSortedList();
+    forkJoin({
+      original: this.characterService.getCharacters(),
+      split: this.characterService.getCharactersSplitTwins()
+    }).subscribe(({ original, split }) => {
+      this.originalCharacters = original;
+      this.allCharacters = split;
+      this.applyBirthdayFilters();
     });
+  }
+
+  setHideRetired(hideRetired: boolean) {
+    this.hideRetired = hideRetired;
+    this.applyBirthdayFilters();
+  }
+
+  private applyBirthdayFilters() {
+    const charactersById = new Map(
+      [...this.originalCharacters, ...this.allCharacters].map(character => [character.id, character])
+    );
+    this.characters = this.allCharacters.filter(character => {
+      if (!character.birthday || character.birthday.toLowerCase() === 'unknown') return false;
+      if (!this.hideRetired) return true;
+      if (character.status.includes('retired')) return false;
+      if (!character.status.includes('side')) return true;
+
+      // Keep parents without birthdays available when checking side characters.
+      const visited = new Set<number>([character.id]);
+      let parentId = character.parentId;
+      while (parentId != null && !visited.has(parentId)) {
+        visited.add(parentId);
+        const parent = charactersById.get(parentId);
+        if (!parent) break;
+        if (parent.status.includes('retired')) return false;
+        parentId = parent.parentId;
+      }
+      return true;
+    });
+    this.generateCalendar();
+    this.generateSortedList();
   }
 
   toggleView() {
