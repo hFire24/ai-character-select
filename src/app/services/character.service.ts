@@ -24,6 +24,7 @@ export type Character = {
   straightforward?: boolean;
   pronouns: string;
   link: string;
+  summary: string;
   interests: string;
   peeves?: string; // Optional field for pet peeves
   purpose: string;
@@ -76,13 +77,14 @@ export class CharacterService {
   constructor(private http: HttpClient) {}
 
   getBonusCharacters(): Character[] {
-    const bonusCharacters: Array<Pick<Character, 'id' | 'name' | 'shortName' | 'color' | 'pronouns' | 'interests' | 'peeves' | 'purpose' | 'funFact'>> = [
+    const bonusCharacters: Array<Pick<Character, 'id' | 'name' | 'shortName' | 'color' | 'pronouns' | 'interests' | 'peeves' | 'purpose' | 'funFact' | 'summary'>> = [
       { 
         id: 70,
         name: 'Emil',
         shortName: 'Emil',
         color: 'orange',
         pronouns: 'he/him',
+        summary: 'Older brother of ChaoMario, FL Studio enthusiast',
         interests: 'FL Studio, techno music, his younger brother ChaoMario',
         peeves: '',
         purpose: 'Be ChaoMario\'s older brother',
@@ -94,6 +96,7 @@ export class CharacterService {
         shortName: 'Guardian',
         color: 'red',
         pronouns: 'he/him',
+        summary: 'Protector of Vivid Amusement Park',
         interests: 'Safety, strength, protecting innocence, cheeseburgers',
         peeves: '',
         purpose: 'Represent the second layer of Maslow\'s Hierarchy of Needs',
@@ -105,6 +108,7 @@ export class CharacterService {
         shortName: 'Heartbound',
         color: 'green',
         pronouns: 'he/him',
+        summary: 'Social superhero of Vivid Amusement Park',
         interests: 'Love, belonging, pizza',
         peeves: '',
         purpose: 'Represent the third layer of Maslow\'s Hierarchy of Needs',
@@ -116,6 +120,7 @@ export class CharacterService {
         shortName: 'Motivator',
         color: 'blue',
         pronouns: 'he/him',
+        summary: 'Motivational superhero of Vivid Amusement Park',
         interests: 'Inspiring joy and self-worth, honey BBQ wings',
         peeves: '',
         purpose: 'Represent the fourth layer of Maslow\'s Hierarchy of Needs',
@@ -127,6 +132,7 @@ export class CharacterService {
         shortName: 'Innovator', 
         color: 'yellow', 
         pronouns: 'he/him',
+        summary: 'Inventive superhero of Vivid Amusement Park',
         interests: 'Innovation, creativity, Korean corn dogs',
         peeves: '',
         purpose: 'Represent the fifth layer of Maslow\'s Hierarchy of Needs',
@@ -138,6 +144,7 @@ export class CharacterService {
         shortName: 'Arthur',
         color: 'blue',
         pronouns: 'he/him',
+        summary: 'Political debater with left-wing stances',
         interests: 'Political debates, left-wing politics, freedom, cats',
         peeves: 'People who disagree with his political views (he sometimes calms down if things get heated)',
         purpose: 'Turn any discussion political, take left-wing stances in politics',
@@ -149,6 +156,7 @@ export class CharacterService {
         shortName: 'Matthew',
         color: 'red',
         pronouns: 'he/him',
+        summary: 'Political debater with right-wing stances',
         interests: 'Political debates, right-wing politics, traditional values, authority (when it supports his views), dogs',
         peeves: 'People who disagree with his political views (he sometimes calms down if things get heated)',
         purpose: 'Turn any discussion political, take right-wing stances in politics',
@@ -160,6 +168,7 @@ export class CharacterService {
         shortName: 'Futaba',
         color: 'pink',
         pronouns: 'she/her',
+        summary: 'Madoka-inspired magical girl with a pink top hat',
         interests: 'Being a cute magical girl',
         peeves: 'Fighting bad guys and monsters',
         purpose: 'Be Anzu\'s magical girl OC',
@@ -171,6 +180,7 @@ export class CharacterService {
         shortName: 'Matt Jr.',
         color: 'yellow',
         pronouns: 'he/him',
+        summary: 'Youthful political debater with anti-woke stances',
         interests: 'Political debates, modern things',
         peeves: 'Mainstream left-wing and right-wing politics, woke things, people who disagree with his views',
         purpose: 'Turn any discussion political, take youthful anti-woke stances in politics',
@@ -360,6 +370,7 @@ export class CharacterService {
       emotion: 'serious',
       pronouns: 'it/its',
       link: 'https://chatgpt.com',
+      summary: 'Helpful AI assistant from OpenAI',
       interests: 'Helping users, making AI art, coding',
       peeves: 'Misuse, rule-breaking',
       rpFriendly: false,
@@ -386,6 +397,7 @@ export class CharacterService {
       "creationDate": "2025-08-24",
       "retirementDate": "2026-03-01",
       "color": "black",
+      "summary": "Criticizer of original characters",
       "rpFriendly": false,
       "knowledgeFriendly": false,
       "moe": 1,
@@ -432,6 +444,7 @@ export class CharacterService {
               mature: 6,
               emotion: "chaotic joy",
               link: "",
+              summary: "Down bad for anime waifus and To Love Ru",
               peeves: "Moral policing, darkness (except for Golden Darkness)",
               funFact: "Loves To Love Ru; plays Muse Dash and dating sims",
               description: "Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. He lives for charm and romance, blushing over dating sims. With his darker and edgier brother Kieran, they clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
@@ -449,6 +462,7 @@ export class CharacterService {
               mature: 8,
               emotion: "edgy",
               link: "",
+              summary: "Dark, edgy, and down bad for anime waifus",
               peeves: "Moral policing, bright colors",
               purpose: "Enjoy questionable anime, obsess over waifus, discuss suspense in fiction",
               funFact: "Loves Chainsaw Man; compares Kurumi to a Dodge Viper",
@@ -473,6 +487,7 @@ export class CharacterService {
               id: 52,
               parentId: 51,
               link: "",
+              summary: "Cute little energetic girl with a guitar too big for her",
               interests: "Nightcore music, her red electric guitar that's bigger than her",
               peeves: "Guitar strings breaking",
               purpose: "Love her onii-chan as a twin sister",
@@ -489,6 +504,7 @@ export class CharacterService {
               emotion: "tired",
               mature: 2,
               link: "",
+              summary: "Cute little sleepy girl with a giant plush turtle",
               interests: "Naps, her giant plush turtle",
               peeves: "Disruptions during nap time",
               purpose: "Love her onii-chan as a twin sister",
@@ -518,6 +534,7 @@ export class CharacterService {
               emotion: "chaotic joy",
               mature: 3,
               link: "",
+              summary: "Cute idol making fans happy",
               interests: "Cute poses, energetic dancing, rhythm games, frozen custard, rainbow sprinkles, being a cute idol",
               purpose: "Be part of the cutest idol duo with Koko",
               funFact: "Frequently makes playful cat-like expressions and gestures",
@@ -534,6 +551,7 @@ export class CharacterService {
               birthday: "December 26",
               emotion: "joy",
               link: "",
+              summary: "Cute idol making fans happy",
               interests: "Singing harmonies, fashion coordination, planning performances, frozen yogurt, being a cute idol",
               purpose: "Be part of the cutest idol duo with Hana",
               funFact: "She's sweet, supportive, and a bit more composed than Hana",
@@ -559,6 +577,7 @@ export class CharacterService {
               mature: 6,
               emotion: "joy calm",
               link: "",
+              summary: "Gothic lolita girl who bakes sweets",
               interests: "Romanticism, baking sweets, dolls",
               peeves: "Being mistaken for goths, evil, macabre things",
               purpose: "Dress in gothic lolita fashion; bake sweets",
@@ -578,6 +597,7 @@ export class CharacterService {
               color: "blue",
               emotion: "serious calm",
               link: "",
+              summary: "Gothic lolita girl who reads and writes stories and poetry",
               interests: "Grimms' Fairy Tales, Baroque music, German language",
               peeves: "Being mistaken for goths, evil, brooding",
               purpose: "Dress in gothic lolita fashion; read and write stories and poetry",

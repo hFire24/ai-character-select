@@ -23,27 +23,28 @@
         @if (character.status === 'disappeared') {
           <h3 class="retired-banner">Removed</h3>
         }
-      </div>
-      <div class="flags">
-        @if (character.emotion.includes('serious')) { <span>🤔</span> }
-        @if (character.emotion.includes('chaotic')) { <span>🤪</span> }
-        @if (character.emotion.includes('joy')) { <span>😀</span> }
-        @if (character.emotion.includes('cool')) { <span>😎</span> }
-        @if (character.emotion.includes('strict')) { <span>😤</span> }
-        @if (character.emotion.includes('angry')) { <span>😠</span> }
-        @if (character.emotion.includes('shy')) { <span>🫣</span> }
-        @if (character.emotion.includes('calm')) { <span>😌</span> }
-        @if (character.emotion.includes('tired')) { <span>🥱</span> }
-        @if (character.emotion.includes('sad')) { <span>☹️</span> }
-        @if (character.emotion.includes('edgy')) { <span>😈</span> }
-        @if (character.straightforward) { <span>🎯</span> }
-        @if (character.moe >= moeThreshold && character.shortName !== 'Sasha' && character.shortName !== 'Misha') { <span>🩷</span> }
-        @if (character.shortName === 'Sasha') { <span>☀️</span> }
-        @if (character.shortName === 'Misha') { <span>❄️</span> }
-        @if (character.musicEnjoyer) { <span>🎵</span> }
-        @if (character.tier === 1) { <span>💛</span> }
-        @if (character.tier === 2) { <span>🩶</span> }
-        @if (character.tier === 3) { <span>🤎</span> }
+        <div id="modalSummary">{{character.summary}}</div>
+        <div class="flags">
+          @if (character.emotion.includes('serious')) { <span>🤔</span> }
+          @if (character.emotion.includes('chaotic')) { <span>🤪</span> }
+          @if (character.emotion.includes('joy')) { <span>😀</span> }
+          @if (character.emotion.includes('cool')) { <span>😎</span> }
+          @if (character.emotion.includes('strict')) { <span>😤</span> }
+          @if (character.emotion.includes('angry')) { <span>😠</span> }
+          @if (character.emotion.includes('shy')) { <span>🫣</span> }
+          @if (character.emotion.includes('calm')) { <span>😌</span> }
+          @if (character.emotion.includes('tired')) { <span>🥱</span> }
+          @if (character.emotion.includes('sad')) { <span>☹️</span> }
+          @if (character.emotion.includes('edgy')) { <span>😈</span> }
+          @if (character.straightforward) { <span>🎯</span> }
+          @if (character.moe >= moeThreshold && character.shortName !== 'Sasha' && character.shortName !== 'Misha') { <span>🩷</span> }
+          @if (character.shortName === 'Sasha') { <span>☀️</span> }
+          @if (character.shortName === 'Misha') { <span>❄️</span> }
+          @if (character.musicEnjoyer) { <span>🎵</span> }
+          @if (character.tier === 1) { <span>💛</span> }
+          @if (character.tier === 2) { <span>🩶</span> }
+          @if (character.tier === 3) { <span>🤎</span> }
+        </div>
       </div>
       <div class="modalBody-inline">
         <div id="modalInterests"><strong>Interests</strong>: {{character.interests}}</div>

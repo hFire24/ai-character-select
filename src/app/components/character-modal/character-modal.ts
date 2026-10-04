@@ -38,6 +38,7 @@ const FALLBACK_CHARACTER: Character = {
   emotion: "",
   pronouns: "",
   link: "",
+  summary: "",
   interests: "",
   peeves: "",
   purpose: "",
@@ -707,6 +708,7 @@ export class CharacterModal {
     }
 
     const rows = [
+      grabRow('modalSummary'),
       grabRow('modalInterests'),
       grabRow('modalPeeves'),
       grabRow('modalPurpose'),

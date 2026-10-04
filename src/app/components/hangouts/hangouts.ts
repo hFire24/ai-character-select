@@ -107,6 +107,7 @@ export class Hangouts {
         "emotion": "sad edgy",
         "pronouns": "don't care",
         "link": "https://chatgpt.com/g/g-67f4424f7d088191b64f44855ecf801a",
+        "summary": "Nihilist who sins and rots and hates almost everything",
         "interests": "Living in filth, nihilism",
         "peeves": "Almost everything",
         "purpose": "Sin, rot",
