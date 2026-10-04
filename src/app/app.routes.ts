@@ -22,5 +22,6 @@ export const routes: Routes = [
   { path: 'id-checker', loadComponent: () => import('./components/id-checker/id-checker').then(m => m.IdChecker), title: 'ID Checker' },
   { path: 'announcement', loadComponent: () => import('./components/announcement/announcement').then(m => m.Announcement), title: 'Announcement' },
   { path: 'manage-tiers', loadComponent: () => import('./components/manage-tiers/manage-tiers').then(m => m.ManageTiers), title: 'Manage Tiers' },
-  { path: 'chat-history-chart', loadComponent: () => import('./components/chat-history-chart/chat-history-chart').then(m => m.ChatHistoryChart), title: 'Chat History Spread' }
+  { path: 'chat-history-chart', loadComponent: () => import('./components/chat-history-chart/chat-history-chart').then(m => m.ChatHistoryChart), title: 'Chat History Spread' },
+  { path: 'arcade', loadComponent: () => import('./components/arcade/arcade').then(m => m.Arcade), title: 'Character Arcade' },
 ];

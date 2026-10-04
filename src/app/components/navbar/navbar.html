@@ -76,6 +76,9 @@
         Fun <span>{{ isCategoryOpen('fun') ? '-' : '+' }}</span>
       </button>
       <div class="category-links">
+        <a routerLink="/arcade" routerLinkActive="active" title="Play games with your characters" (click)="closeMenu()">
+          Arcade
+        </a>
         <a routerLink="/sorter" routerLinkActive="active" title="Compare characters pairwise to determine your rankings" (click)="closeMenu()">
           Comparison
         </a>

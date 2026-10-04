@@ -1,0 +1,62 @@
+<main class="arcade">
+  <header><p class="eyebrow">CHARACTER ARCADE</p><h1>A little luck. A lot of personality.</h1><p>Your favorite characters, gathered around the game table.</p></header>
+  @if (!playing) {
+    <section class="panel lobby">
+      <div class="game-heading"><span class="game-icon" aria-hidden="true">⚄</span><div><h2>Farkle</h2><p>Keep the points. Or push your luck.</p></div><span class="badge">2–4 players</span></div>
+      @if (loading) { <p role="status">Loading your characters…</p> }
+      <div class="select-title"><h2>CHOOSE YOUR CHARACTER</h2><span>{{ seatLabel(selectionSeat) }} SELECT</span></div>
+      <div class="fighter-seats" aria-label="Choose which player to edit">
+        @for (id of seats; track $index; let i = $index) {
+          <button class="fighter-seat" [class.editing]="selectionSeat === i" [class.cpu]="i > 0" [attr.aria-pressed]="selectionSeat === i" (click)="selectSeat(i)">
+            <span class="seat-tag">{{ seatLabel(i) }}</span>
+            @if (characterFor(id); as c) { <img [src]="portrait(c.img)" (error)="useUnknownIcon($event)" alt=""><strong>{{ c.shortName || c.name }}</strong> }
+            @else { <span class="random-mark">?</span><strong>RANDOM</strong> }
+            <small>{{ selectionSeat === i ? 'SELECTING' : 'EDIT SEAT' }}</small>
+          </button>
+        }
+      </div>
+      <p class="muted">Choose a player seat. Hover or focus a portrait to preview; click or press Enter to select.</p>
+      <div class="fighter-select">
+        <aside class="fighter-preview" aria-live="polite">
+          <span class="seat-tag">{{ seatLabel(selectionSeat) }}</span>
+          @if (preview; as c) { <img [src]="portrait(c.img)" (error)="useUnknownIcon($event)" [alt]="c.name"><h3>{{ c.name }}</h3><p>{{ c.summary }}</p> }
+          @else { <span class="preview-random">?</span><h3>Random opponent</h3><p>A different roster character joins each game.</p> }
+        </aside>
+        <div class="roster-picker">
+          <label class="roster-search">Find a character<input type="search" [(ngModel)]="search" placeholder="Search the roster…"></label>
+          <div class="fighter-grid" aria-label="Character roster">
+            @if (selectionSeat > 0) { <button class="fighter-tile random-tile" [class.picked]="seats[selectionSeat] === -1" (mouseenter)="hoveredId = -1" (focus)="hoveredId = -1" (click)="choose(-1)" [attr.aria-pressed]="seats[selectionSeat] === -1"><b>?</b><span>RANDOM</span></button> }
+            @for (c of visibleCharacters; track c.id) {
+              <button class="fighter-tile" [class.picked]="seats[selectionSeat] === c.id" [class.taken]="taken(c.id)" [attr.aria-disabled]="taken(c.id)" [attr.aria-pressed]="seats[selectionSeat] === c.id" [attr.aria-label]="c.name + (taken(c.id) ? ', assigned to another seat' : '')" (mouseenter)="hoveredId = c.id" (focus)="hoveredId = c.id" (click)="choose(c.id)">
+                <img [src]="portrait(c.img)" (error)="useUnknownIcon($event)" alt="" loading="lazy"><span>{{ c.shortName || c.name }}</span>
+                @if (seats.includes(c.id)) { <b class="assigned">{{ seatLabel(seats.indexOf(c.id)) }}</b> }
+              </button>
+            }
+          </div>
+          @if (!visibleCharacters.length && !loading) { <p>No characters match your search.</p> }
+        </div>
+      </div>
+      <div class="options"><label>Opponents<select [ngModel]="opponentIds.length" (ngModelChange)="setOpponentCount($event)"><option [ngValue]="1">1</option><option [ngValue]="2">2</option><option [ngValue]="3">3</option></select></label><label>Target score<select [(ngModel)]="target"><option [ngValue]="5000">5,000 · quick game</option><option [ngValue]="10000">10,000 · full game</option></select></label><label class="checkbox"><input type="checkbox" [(ngModel)]="dialogue"> Character reactions</label></div>
+      <p class="muted">{{ dialogueStatus }}</p>
+      @if (error) { <p role="alert">{{ error }}</p> }
+      <button class="primary ready-button" (click)="start()" [disabled]="loading || !characters.length">READY TO PLAY · FARKLE →</button>
+    </section>
+  } @else {
+    <div class="game-layout">
+      <section class="panel table">
+        <div class="game-heading"><h2>Farkle</h2><span class="badge">First to {{ target | number }}</span><button (click)="lobby()">Back to setup</button></div>
+        <div class="scoreboard">@for (p of players; track $index; let i = $index) { <article [class.active]="active === i && !winner"><div class="avatar"><img [src]="portrait(p.character.img)" (error)="useUnknownIcon($event)" alt=""></div><strong>{{ p.name }}</strong><b>{{ p.score | number }}</b><small>{{ i === 0 ? 'You' : 'Computer' }}</small></article> }</div>
+        <p class="announcement" role="status" aria-live="polite">{{ message }}</p>
+        @if (finalTurns !== null && !winner) { <p class="badge">Final round · {{ finalTurns }} turns remaining</p> }
+        @if (!winner) {
+          <p>Turn points <strong>{{ turnPoints | number }}</strong> · {{ remaining }} dice available</p>
+          <div class="dice">@for (die of dice; track $index; let i = $index) { <button class="die" [class.selected]="selected.includes(i)" [disabled]="!humanTurn" [attr.aria-pressed]="selected.includes(i)" [attr.aria-label]="'Die ' + (i + 1) + ': ' + die" (click)="toggle(i)">{{ faces[die - 1] }}</button> }</div>
+          @if (humanTurn) { <p class="muted">{{ dice.length ? 'Select scoring dice to keep.' : 'Roll to start your turn.' }} Selected: {{ selectionScore }} points</p><div class="actions"><button class="primary" (click)="roll()" [disabled]="dice.length > 0 && !selectionScore">{{ dice.length ? 'Keep & roll again' : 'Roll dice' }}</button><button (click)="bank()" [disabled]="!canBank">Bank {{ turnPoints + selectionScore | number }}</button></div> }
+          @else { <p class="muted">{{ current.name }} is taking a turn…</p> }
+        } @else { <button class="primary" (click)="start()">Play again</button> }
+      </section>
+      <aside class="panel chatter"><h2>At the table</h2><p class="muted">{{ dialogueStatus }}</p>@if (!history.length) { <p>The table is quiet… for now.</p> }@for (line of history; track line) { <article><strong>{{ line.name }}</strong><small>{{ line.ai ? 'AI dialogue' : 'Game reaction' }}</small><p>{{ line.text }}</p></article> }</aside>
+    </div>
+  }
+  <details class="panel rules"><summary>How to play · Arcade house rules</summary><p>Roll six dice. Select at least one scoring die or combination. Bank to save your turn points, or roll the remaining dice. A roll with no scoring dice is a Farkle: you lose all points from that turn.</p><ul><li>Single 1: 100. Single 5: 50.</li><li>Three 1s: 1,000. Three of any other number: that number × 100.</li><li>Four, five, or six of a kind: double the triple score for each extra die.</li><li>A six-die straight or three pairs: 1,500.</li><li>Combinations must come from the same roll. Every selected die must score.</li><li>Score all available dice for “hot dice,” then roll all six again.</li><li>No minimum opening score. Once someone reaches the target, every other player gets one final turn. Highest score wins; ties favor the first player to reach that score.</li></ul></details>
+</main>
