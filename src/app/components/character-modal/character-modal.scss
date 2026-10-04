@@ -353,26 +353,40 @@ u {
   }
 }
 
-/* === Responsive: keep the image beside the header on narrow screens === */
+/* === Responsive: stack the image above the content on narrow screens === */
 @media (max-width: 560px) {
   .modalHeader {
-    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "img"
+      "content";
     gap: 0.75rem;
   }
 
-  .modalImg,
-  #modalQuestionMark {
-    width: 72px;
-    height: 72px;
-  }
-
-  .modalImg.tall,
-  #modalQuestionMark {
-    height: 108px;
-  }
-
   .nameRow {
-    column-gap: 0.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "name"
+      "status"
+      "summary"
+      "flags";
+    gap: 0;
+  }
+
+  .retired-banner {
+    justify-self: start;
+    text-align: left;
+  }
+
+  h3.retired-banner,
+  .flags {
+    margin-right: 0;
+  }
+
+  .flags {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
   }
 
   #modalName {
