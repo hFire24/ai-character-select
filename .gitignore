@@ -41,9 +41,3 @@ testem.log
 .DS_Store
 Thumbs.db
 *.lscache
-
-# User-specific files
-New Text Document.txt
-
-# Not yet ready
-/src/app/components/race
