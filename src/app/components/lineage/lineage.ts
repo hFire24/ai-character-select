@@ -122,7 +122,8 @@ export class Lineage {
         128: [138],
         133: [140],
         141.5: [147, 148, 149, 151, 156, 143],
-        151: [152, 153, 154, 158]
+        151: [152, 153, 154],
+        152: [158, 159]
         };
 
       // Validate: Check for characters with multiple parents

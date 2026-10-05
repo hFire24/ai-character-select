@@ -57,6 +57,12 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     characterIds: [149, 139, 140, 147, 148]
   },
   {
+    name: "Sachi's Friends",
+    type: "canon",
+    description: "Characters who are friends or family with Sachi",
+    characterIds: [151, 152, 158, 159]
+  },
+  {
     name: "Top Hat Wearers",
     type: ["clothes", "hats"],
     description: "Characters known for wearing top hats",
@@ -84,7 +90,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Maids",
     type: "clothes",
     description: "Characters known for wearing maid outfits",
-    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158]
+    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158, 159]
   },
   {
     name: "Hammer Wielders",
@@ -102,7 +108,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Twintails",
     type: "hair",
     description: "Characters known for having long twintails",
-    characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 133, 140, 151]
+    characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 133, 140, 151, 159]
   },
   {
     name: "Pink-Haired Girls",
