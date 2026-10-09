@@ -368,15 +368,16 @@ u {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "name"
-      "status"
       "summary"
       "flags";
     gap: 0;
   }
 
   .retired-banner {
-    justify-self: start;
-    text-align: left;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    text-align: right;
   }
 
   h3.retired-banner,

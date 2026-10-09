@@ -621,18 +621,6 @@ export class CharacterModal {
 
     const titleSize = parseFloat((nameCS?.fontSize || '32px'));
 
-    const retiredBannerEl = modalEl?.querySelector('.retired-banner') as HTMLElement | null;
-
-    const retiredBannerCS = retiredBannerEl ? getComputedStyle(retiredBannerEl) : null;
-
-    const RETIRED_TEXT  = retiredBannerEl?.innerText || '';   // usually "Retired"
-    const RETIRED_COLOR = retiredBannerCS?.color     || '#fff';
-    const RETIRED_FONT  = [
-      retiredBannerCS?.fontWeight || '700',
-      retiredBannerCS?.fontSize   || '20px',
-      retiredBannerCS?.fontFamily || 'system-ui, sans-serif'
-    ].join(' ');
-
     function wrapText(
       ctx: CanvasRenderingContext2D,
       text: string,
@@ -676,7 +664,7 @@ export class CharacterModal {
       return lines.length ? lines : [''];
     }
 
-    // --- BODY ROWS: Interests / Peeves / Best For / Fun Fact ---
+    // --- BODY ROWS: Interests / Dislikes / Purpose / Fun Fact ---
     function grabRow(id: string) {
       const el = document.getElementById(id) as HTMLElement | null;
       if (!el) return null;
@@ -714,8 +702,6 @@ export class CharacterModal {
       grabRow('modalPeeves'),
       grabRow('modalPurpose'),
       grabRow('modalFact'),
-      grabRow('modalRetirement'),
-      grabRow('modalInactive'),
       grabRow('modalDescription')
     ].filter(r => r && r.value && r.value.trim().length > 0) as Array<ReturnType<typeof grabRow>>;
 
@@ -889,18 +875,6 @@ export class CharacterModal {
     ctx.font = TITLE_FONT;
     ctx.fillText(name, textX, y);
     y += titleSize + titleGap;
-
-    // retired text
-    if (RETIRED_TEXT) {
-      ctx.textAlign = 'right';
-
-      // Banner (e.g. "Retired")
-      ctx.fillStyle = RETIRED_COLOR;
-      ctx.font = RETIRED_FONT;
-      ctx.fillText(RETIRED_TEXT, W - P, P);
-
-      ctx.textAlign = 'left'; // reset for the rest
-    }
 
     for (const r of preparedRows) {
       if (!r) continue;
