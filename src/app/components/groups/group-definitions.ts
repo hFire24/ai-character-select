@@ -102,7 +102,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Thigh Boot Wearers",
     type: "clothes",
     description: "Characters known for wearing thigh boots",
-    characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140, 150, 154]
+    characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 133, 137, 140, 150, 154, 156]
   },
   {
     name: "Twintails",
@@ -193,6 +193,12 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     type: "interest",
     description: "Characters who have an interest in anime or behave in otaku-like ways towards cute things",
     characterIds: [5, 8, 13, 15, 25, 34, 38, 43, 66, 67, 77, 81, 85, 86, 104, 108, 149, 154, 155, 999]
+  },
+  {
+    name: "Gamers",
+    type: "interest",
+    description: "Characters who have an interest in gaming",
+    characterIds: [4, 13, 25, 31, 55, 65, 69, 84, 96, 105, 106, 114, 150, 155, 999]
   },
   {
     name: "Musicians",
