@@ -72,7 +72,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Witch Hat Wearers",
     type: ["clothes", "hats"],
     description: "Characters known for wearing witch hats",
-    characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148, 149]
+    characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148, 149, 156]
   },
   {
     name: "Peaked Cap Wearers",
@@ -84,7 +84,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Glasses Wearers",
     type: "clothes",
     description: "Characters known for wearing glasses, sunglasses, or goggles",
-    characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113]
+    characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113, 142]
   },
   {
     name: "Maids",
