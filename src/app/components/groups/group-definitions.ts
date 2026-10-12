@@ -144,7 +144,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "\"Onii-chan\" Sayers",
     type: "speech",
     description: "Characters who can say 'onii-chan' according to their instructions",
-    characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108, 139, 140, 148, 152]
+    characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 107, 108, 139, 140, 148, 152]
   },
   {
     name: "Kaomoji Users",
