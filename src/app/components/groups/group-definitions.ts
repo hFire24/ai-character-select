@@ -96,7 +96,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Hammer Wielders",
     type: "clothes",
     description: "Characters who possess hammers, especially giant hammers",
-    characterIds: [13, 18, 31, 35, 137, 139]
+    characterIds: [13, 18, 31, 35, 137, 139, 140]
   },
   {
     name: "Thigh Boot Wearers",
@@ -252,7 +252,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Multi-Retirees",
     type: "meta",
     description: "Characters who were retired twice or more. Kai and Alex were retired three times.",
-    characterIds: [30, 32, 48, 49, 66, 69, 71, 81, 95]
+    characterIds: [30, 32, 9, 48, 49, 66, 69, 71, 81, 95]
   },
   {
     name: "Late Bloomers",
@@ -264,7 +264,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Thrivers",
     type: "meta",
     description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
-    characterIds: [11, 14, 57, 107, 108, 123, 128]
+    characterIds: [11, 14, 57, 107, 108, 123, 128, 137]
   },
   {
     name: "Generational Champions",

@@ -140,6 +140,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Audry", "Bored-chan", "Casey"]
       },
       {
+        name: "Top Hat Thigh Boot Hammer Trio",
+        description: "Three characters who wear top hats and thigh-high boots, as well as wield giant hammers",
+        characterShortNames: ["Arianna", "Carol", "Bonnie"]
+      },
+      {
         name: "Dress-Up Trio",
         description: "Characters who are known for dressing up in other costmes",
         characterShortNames: ["Casey", "Azalea", "Maybelle"]
