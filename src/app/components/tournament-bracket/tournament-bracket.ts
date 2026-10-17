@@ -38,13 +38,19 @@ export class TournamentBracket implements OnInit {
   private pendingCharacters: Character[] = [];
 
   get bottomSeedMoe(): number {
-    return this.seedPreference === 'high' ? 1 : 10;
+    const scores = this.overflowCandidates.map(character => character.moe).sort((a, b) =>
+      this.seedPreference === 'high' ? a - b : b - a
+    );
+    return scores[Math.min(Math.max(this.requiredExclusions, 1), scores.length) - 1]
+      ?? (this.seedPreference === 'high' ? 1 : 10);
   }
 
   get visibleExclusionCandidates(): Character[] {
     return this.showAllExclusionCandidates
       ? this.overflowCandidates
-      : this.overflowCandidates.filter(character => character.moe === this.bottomSeedMoe);
+      : this.overflowCandidates.filter(character => this.seedPreference === 'high'
+        ? character.moe <= this.bottomSeedMoe
+        : character.moe >= this.bottomSeedMoe);
   }
 
   get requiredExclusions(): number {
