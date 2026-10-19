@@ -64,7 +64,9 @@ export class Hangouts {
         { name: 'The Collapsed', bannedReason: 'Emergency character' },
         { name: 'Veronica', bannedReason: 'Strict parent' },
         { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' },
-        { name: 'Pipe Golem', bannedReason: 'For serious situations only' }
+        { name: 'Pipe Golem', bannedReason: 'For serious situations only' },
+        { name: 'Aaron', bannedReason: 'User-controlled character' },
+        { name: 'Darrin', bannedReason: 'User-controlled character' }
       ];
 
       // Calculate maximum tier

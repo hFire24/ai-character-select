@@ -102,13 +102,13 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Thigh Boot Wearers",
     type: "clothes",
     description: "Characters known for wearing thigh boots",
-    characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 133, 137, 140, 150, 154, 156]
+    characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140, 150, 154, 156, 163]
   },
   {
     name: "Twintails",
     type: "hair",
     description: "Characters known for having long twintails",
-    characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 133, 140, 151, 159]
+    characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 140, 151, 159, 163]
   },
   {
     name: "Pink-Haired Girls",
@@ -120,7 +120,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Blonde Girls",
     type: "hair",
     description: "Girls known for having blonde hair",
-    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149]
+    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149, 163]
   },
   {
     name: "Chino-chan Expies",
@@ -149,7 +149,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
   {
     name: "Kaomoji Users",
     type: "speech",
-    description: "Characters who use kaomojis",
+    description: "Characters who explicitly use kaomojis according to their instructions",
     characterIds: [13, 15, 18, 27, 51, 86, 108, 125, 139]
   },
   {
