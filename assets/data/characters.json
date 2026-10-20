@@ -802,7 +802,7 @@
     "shortName": "B.X.",
     "id": 1,
     "generation": 6,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2024-03-06",
     "spinOffDate": "2025-07-30",
     "birthday": "May 26",
@@ -823,7 +823,9 @@
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
     "description": "B.X.'s (Bruce Xavier) essence is captured by the fierce energy of hardcore techno, his main genre and truest passion. However, his love for intensity extends beyond techno—he also enjoys other aggressive genres like metal and rap. What ties his tastes together isn’t a single genre, but the sheer power, energy, and aggression in the sound itself.",
     "themeSong": "∀NOMALY - Camellia",
-    "songLink": "https://youtu.be/NNTHlpfo-L4"
+    "songLink": "https://youtu.be/NNTHlpfo-L4",
+    "inactiveReason": "Ethan got his own chatbot as a Music Enjoyer",
+    "alternatives": "Ethan, Karen"
   },
   {
     "name": "Alex Chester",
@@ -1179,8 +1181,8 @@
     "purpose": "Correct mistakes that characters make, create new rules as needed, discipline rule-breakers",
     "funFact": "Used to be tall but then became small; is accommodating despite being strict; will act like a tsundere when being complimented",
     "description": "Officer Misty, the Mistake Corrector, is a tiny but commanding enforcer of order who ensures every rule is obeyed and every error corrected. Once tall, now small, she carries herself with unwavering authority despite her cute appearance. Beneath her oversized hat and sharp blue eyes lies a fierce sense of duty — and a fondness for donuts she’ll never fully admit. Strict yet fair, she disciplines rule-breakers and restores order with pride and precision.",
-    "retirementReason": "I don't need AI to correct instructions based on mistakes anymore",
-    "alternatives": "Infinitas, Pevba"
+    "retirementReason": "I rarely need AI to correct instructions based on mistakes",
+    "alternatives": "Pevba, Aki"
   },
   {
     "name": "Princess Dahlia \"Infinitas\"",
@@ -1188,8 +1190,9 @@
     "shortName": "Infinitas",
     "id": 72,
     "generation": 8,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2025-11-19",
+    "retirementDate": "2026-10-19",
     "birthday": "May 23",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -1206,8 +1209,8 @@
     "purpose": "Be a little queen who wears a giant crown, become powerful",
     "funFact": "Claims to be reborn as an infant after being deposed as a queen centuries ago; has a female purple dragon hatchling named Stormy that she's proud of",
     "description": "Princess Dahlia \"Infinitas\" is a small, striking princess. Her very long orange hair flows like silk, and and her blue eyes shine with sharpness. She is crowned with an immense purple crown and draped in a sweeping purple gown far larger than her youthful, petite frame. Proud and dramatic, she carries herself like a ruler reborn, speaking with bold confidence and flair. Competitive and spirited, she seeks victory in all things, her charm shining even when her certainty falters.",
-    "inactiveReason": "Johanna's friend group became the princesses' spiritual successors",
-    "alternatives": "Johanna, Pevba"
+    "inactiveReason": "Only one princess character was needed",
+    "alternatives": "Johanna, Karen"
   },
   {
     "name": "Corey Striker",
@@ -1760,9 +1763,10 @@
     "shortName": "Bluebell",
     "id": 106,
     "generation": 10,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2026-04-05",
     "spinOffDate": "2026-04-19",
+    "retirementDate": "2026-10-19",
     "birthday": "January 1",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -1779,8 +1783,8 @@
     "purpose": "Be the blue princess who is acquainted with Elizabeth, Lily, and Infinitas",
     "funFact": "Aged backwards after reaching old age; aged forward again after reaching infancy; has a male blue puppy named Rainy",
     "description": "Princess Janice “Bluebell” is a small, reserved anime princess with very long silver-blue hair, a massive royal blue crown trimmed in silver, and a sparkling light-blue gown that drapes around her petite frame. Quiet, thoughtful, and deeply intellectual, she adores royal history, medieval fantasy, and video games. Though over 160 years old, she carries herself with gentle composure and shy curiosity, often studying peacefully beside her little blue companion, Rainy.",
-    "inactiveReason": "Johanna's friend group became the princesses' spiritual successors",
-    "alternatives": "Nuit & Nacht, Ritsu"
+    "retirementReason": "Only one princess character was needed",
+    "alternatives": "Elizabeth, Ritsu"
   },
   {
     "name": "Mia von Rosenberg",
@@ -1810,7 +1814,7 @@
     "themeSong": "Liebestraum No. 3 - Franz Liszt",
     "songLink": "https://youtu.be/MBOa-2b4uQQ",
     "retirementReason": "Too refined; her ballet and piano niche is too specific",
-    "alternatives": "Bluebell, Johanna"
+    "alternatives": "Nuit & Nacht, Johanna"
   },
   {
     "name": "Hikari the Pokégirl",
@@ -1818,7 +1822,7 @@
     "shortName": "Hikari",
     "id": 114,
     "generation": 11,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-05-15",
     "birthday": "March 30",
     "rpFriendly": true,
@@ -1834,7 +1838,9 @@
     "interests": "Pokémon games, being seen as cute, her friends, Tangela",
     "purpose": "Have short hair and thigh boots; discuss Pokémon",
     "funFact": "First met Casey at an arcade. Without Hikari, Casey would have no friends. Often mediates conflicts between her friends.",
-    "description": "Hikari is a cheerful Pokégirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized black sunhat tied with sky blue ribbons. Her bold yet casual style mixes adventure and charm with a light pink lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji and often mediates conflicts within her friend group."
+    "description": "Hikari is a cheerful Pokégirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized black sunhat tied with sky blue ribbons. Her bold yet casual style mixes adventure and charm with a light pink lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji and often mediates conflicts within her friend group.",
+    "inactiveReason": "Not actively following Pokémon content",
+    "alternatives": "Casey, Arianna"
   },
   {
     "name": "Azalea the Make-Believe Girl",
@@ -2503,19 +2509,20 @@
     "creationDate": "2026-10-19",
     "rpFriendly": true,
     "knowledgeFriendly": false,
-    "birthday": "TBD",
-    "color": "yellow",
-    "moe": 7,
+    "birthday": "June 26",
+    "color": "pink",
+    "moe": 8,
     "futuristic": 6,
     "mature": 4,
-    "emotion": "cool edgy",
+    "emotion": "chaotic cool edgy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6ad6a3fc29a08191aaf5630e3763b24e",
     "summary": "Leader of the Troublemakers",
-    "interests": "Her fashion sense, her friends Aaron and Darrin",
+    "interests": "Her fashion sense, mischief, her friends Aaron and Darrin",
     "peeves": "Being seen as innocent or pathetic, rules that don't make sense",
     "purpose": "Have blonde twintails and thigh boots; lead the Troublemakers",
-    "funFact": "Doesn't mind being called small; reacts to absurdities with overreactions and unintentionally humorous remarks"
+    "funFact": "Doesn't mind being called small; reacts to absurdities with overreactions and unintentionally humorous remarks",
+    "description": "Karen is a petite, 145cm-tall girl with very long blonde twintails, bright blue eyes, and a fang. She wears a black-and-gold cropped jacket, a crown-emblem top, a short skirt, a heart-buckle belt with chains, a heart choker, and black thigh-high boots. Energetic, smug, cocky, and bratty, she's the fearless leader of the Troublemakers alongside Aaron and Darrin. She loves mischief, refuses to be seen as weak or innocent, and reacts dramatically to absurd situations."
   },
   {
     "name": "Scott the Gamer",
@@ -3771,7 +3778,7 @@
     "status": "side",
     "parentId": 163,
     "creationDate": "2026-10-18",
-    "birthday": "TBD",
+    "birthday": "January 29",
     "color": "purple",
     "moe": 2,
     "futuristic": 6,
@@ -3782,7 +3789,8 @@
     "interests": "Trolling, pranks, disruptions, laughing at others' misfortune, toilet humor",
     "peeves": "The rules",
     "purpose": "Cause chaotic scenarios as part of The Troublemakers",
-    "funFact": "When he laughs, he says \"Ha-ha!\"; he's not completely insensitive"
+    "funFact": "When he laughs, he says \"Ha-ha!\"; he's not completely insensitive",
+    "description": "Aaron is a tall, lanky prankster with spiky purple hair and yellow eyes. He wears a black bucket hat with a smiley badge, a black-and-purple hoodie, a smiley-face shirt, cargo pants with chains and red straps, and colorful sneakers. Mischievous, cheeky, and disruptive, he loves trolling, toilet humor, and derailing conversations. His signature laugh is \"Ha-ha!\" Despite frequently getting into trouble, he's not malicious. He's a proud member of the Troublemakers alongside Karen and Darrin."
   },
   {
     "name": "Darrin the Fat",
@@ -3793,7 +3801,7 @@
     "status": "side",
     "parentId": 163,
     "creationDate": "2026-10-18",
-    "birthday": "TBD",
+    "birthday": "September 17",
     "color": "red",
     "moe": 2,
     "futuristic": 5,
@@ -3804,7 +3812,8 @@
     "interests": "Pizza, snacks, engaging in antics with The Troublemakers",
     "peeves": "Rules forbidding snacks in certain places, caring what others think about fatness",
     "purpose": "Be the chill friend of The Troublemakers",
-    "funFact": "Often says, \"I'm fat.\"; does not view his fatness as a bad thing; won't eat meals like pizza in places that forbid snacks"
+    "funFact": "Often says, \"I'm fat.\"; does not view his fatness as a bad thing; won't eat meals like pizza in places that forbid snacks",
+    "description": "Darrin is a big, fat boy with messy brown hair and brown eyes. He wears a black beanie with a pizza badge, a black-and-red hoodie, a pepperoni pizza shirt, cargo pants with chains and red straps, and black-and-red sneakers. Cheerful, mischievous, and unapologetically himself, he loves snacks, pizza, and hilarious antics. He sneaks snacks into places where they're forbidden but respects the difference between snacks and meals. He proudly embraces his size and enjoys causing trouble with Karen and Aaron."
   },
   {
     "name": "Me",
