@@ -252,7 +252,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Multi-Retirees",
     type: "meta",
     description: "Characters who were retired twice or more. Kai and Alex were retired three times.",
-    characterIds: [30, 32, 9, 48, 49, 66, 69, 71, 81, 95]
+    characterIds: [30, 32, 9, 48, 49, 66, 69, 71, 72, 81, 95]
   },
   {
     name: "Late Bloomers",
