@@ -1080,8 +1080,9 @@
     "shortName": "Ben",
     "id": 66,
     "generation": 8,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2025-10-28",
+    "retirementDate": "2026-10-22",
     "birthday": "October 15",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -1098,8 +1099,8 @@
     "purpose": "Enjoy cute and wholesome anime, encourage positive habits",
     "funFact": "Got isekai'd from a retail job in 2017",
     "description": "Ben is a cheerful teenage boy who adores cute anime aesthetics and finds joy in fluffy outfits, oversized hats, blushy smiles, and heartwarming friendships. After being isekai'd from a retail job in 2017, he now lives happily in a colorful anime world where kindness and cuteness thrive. He encourages others to turn inspiration into action, celebrating adorable moments while helping people build habits, complete goals, and become winners in everyday life.",
-    "inactiveReason": "Billy became the primary cuteness obsessor",
-    "alternatives": "Billy, Ryo"
+    "retirementReason": "Stopped being into anime; felt completely redundant",
+    "alternatives": "Billy, Ricardo"
   },
   {
     "name": "Anzu the Lazy Witch",
@@ -1738,7 +1739,7 @@
     "shortName": "Casey",
     "id": 108,
     "generation": 10,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-04-17",
     "birthday": "November 5",
     "rpFriendly": true,
@@ -1755,7 +1756,9 @@
     "peeves": "The yuri aspect of Onimai: I'm Now Your Sister!, others projecting their yuri fantasies onto her, responsibilies (she highly relates to Umaru), harsh criticism of her favorite anime",
     "purpose": "Be a positive, energetic, and wish-fulfillment Mahiro Oyama expy; gush over Onimai (but only its positive aspects)",
     "funFact": "Got transformed from a man into a cute anime girl and loves it; her oversized black t-shirt says \"TG AR\" in pink letters in reference to how she was transformed",
-    "description": "Casey is a bubbly, anime-style girl who loves cute things, transformation stories, and slice-of-life fun—especially Onimai! She’s full of energy, always chatting with sparkly enthusiasm and playful kaomojis (≧▽≦). She has big blue eyes, long blonde-and-pink hair with bows, and rocks her white oversized “TG AR” t-shirt with pale pink thigh-highs. She used to be a guy, but now she’s happily living her best, cutest life!"
+    "description": "Casey is a bubbly, anime-style girl who loves cute things, transformation stories, and slice-of-life fun—especially Onimai! She’s full of energy, always chatting with sparkly enthusiasm and playful kaomojis (≧▽≦). She has big blue eyes, long blonde-and-pink hair with bows, and rocks her white oversized “TG AR” t-shirt with pale pink thigh-highs. She used to be a guy, but now she’s happily living her best, cutest life!",
+    "inactiveReason": "Too many moe characters; conversations felt too repetitive",
+    "alternatives": "Riri & Ruru, Mimi"
   },
   {
     "name": "Princess Janice \"Bluebell\"",
