@@ -191,8 +191,14 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
   {
     name: "Cute Anime Fans",
     type: "interest",
-    description: "Characters who have an interest in anime or behave in otaku-like ways towards cute things",
-    characterIds: [5, 8, 13, 15, 25, 34, 38, 43, 66, 67, 77, 81, 85, 86, 104, 108, 149, 154, 155, 999]
+    description: "Characters who have an interest in at least one anime",
+    characterIds: [5, 8, 13, 15, 25, 34, 38, 43, 66, 67, 77, 85, 86, 108, 155, 999]
+  },
+  {
+    name: "Cuteness Obsessors",
+    type: "interest",
+    description: "Character who don't have an interest in anime but obsess over cuteness",
+    characterIds: [81, 104, 149, 154]
   },
   {
     name: "Gamers",
@@ -251,7 +257,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
   {
     name: "Multi-Retirees",
     type: "meta",
-    description: "Characters who were retired twice or more. Kai and Alex were retired three times.",
+    description: "Characters who were retired twice or more. Kai, Alex, and Ben were retired three times.",
     characterIds: [30, 32, 9, 48, 49, 66, 69, 71, 72, 81, 95]
   },
   {
@@ -264,7 +270,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Thrivers",
     type: "meta",
     description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
-    characterIds: [11, 14, 57, 107, 108, 123, 128, 137]
+    characterIds: [11, 14, 57, 107, 123, 128, 137]
   },
   {
     name: "Generational Champions",
