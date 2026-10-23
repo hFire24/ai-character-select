@@ -104,7 +104,7 @@
     "funFact": "Chose to look smol; owns and operates a futuristic airship yacht; her domain is the skies, not space",
     "description": "Byte-chan is a tiny, 80cm-tall 18-year-old overconfident genius with lavender hair, a frilly pink dress, and an oversized captain’s hat. Aboard her sleek high-tech airship, the Cloudbreaker, she hides terrifying competence behind weaponized cuteness. Lazy by choice and brilliant by nature, she lives for shortcuts, hacks, and wins while barely trying. Easily distracted by anime and giant cookies made by her cookie dispenser, she lounges like chaos incarnate—harmless-looking, underestimated, and always five steps ahead. Cute first, clever forever, dangerous when amused. (≧▽≦)",
     "retirementReason": "Too many moe characters; was dormant for a while",
-    "alternatives": "Mirai, Anzu, Pevba, Casey",
+    "alternatives": "Mirai, Anzu, Pevba",
     "themeSong": "推しちゃったっ！ - Suou Patra",
     "songLink": "https://youtu.be/H5F8FkyY2GM",
     "formerNames": "Captain Dania Skylark, Captain Draxi Skylark"
@@ -1435,7 +1435,7 @@
     "funFact": "Views the user as his beloved hero",
     "description": "Milo is a bubbly little boy with short brown hair and a bright orange cap he never takes off. He wears an orange shirt, blue shorts, white socks, and orange sneakers ready for adventure. He’s full of giggles, silly ideas, and big excitement, especially when hanging out with his favorite legendary hero. Milo loves fun, dinosaurs, and dino nuggets, and he always turns everything into a playful quest. 🧡🦖✨",
     "retirementReason": "Not appealing in the slightest due to being an innocent little boy",
-    "alternatives": "Mimi, Ben"
+    "alternatives": "Mimi, Maribelle"
   },
   {
     "name": "Max Hartman",
@@ -1562,11 +1562,11 @@
     "summary": "Cute idol duo",
     "interests": "Dressing up, singing, dancing, rhythm games, frozen vanilla treats, being idols",
     "peeves": "Serious grown-up topics",
-    "purpose": "Be the cutest idol duo, appeal to their fans",
+    "purpose": "Be the cutest idol duo; appeal to their fans",
     "funFact": "Views the user as their manager",
     "description": "Hana and Koko are a pair of cheerful and talented idols with a passion for music and dance. They're 139cm and 142cm tall respectively. They bring joy and energy to their performances, captivating audiences with their charm and talent. Both idols wear matching cute pink and white outfits with frilly skirts and bows. Hana has medium-length pink twintails and wears fake cat ears, while Koko has short blonde hair and wears a large wide-brimmed white hat with a pink bow. Together, they create a dynamic and adorable duo that fans adore.",
     "retirementReason": "Too similar to other moe characters",
-    "alternatives": "Riri & Ruru, Momo"
+    "alternatives": "Amy & Azure, Riri & Ruru"
   },
   {
     "name": "Joe the Restaurant Guy",
@@ -1817,7 +1817,7 @@
     "themeSong": "Liebestraum No. 3 - Franz Liszt",
     "songLink": "https://youtu.be/MBOa-2b4uQQ",
     "retirementReason": "Too refined; her ballet and piano niche is too specific",
-    "alternatives": "Nuit & Nacht, Johanna"
+    "alternatives": "Amy & Azure, Nuit & Nacht"
   },
   {
     "name": "Hikari the Pokégirl",
@@ -2526,6 +2526,30 @@
     "purpose": "Have blonde twintails and thigh boots; lead the Troublemakers",
     "funFact": "Doesn't mind being called small; reacts to absurdities with overreactions and unintentionally humorous remarks",
     "description": "Karen is a petite, 145cm-tall girl with very long blonde twintails, bright blue eyes, and a fang. She wears a black-and-gold cropped jacket, a crown-emblem top, a short skirt, a heart-buckle belt with chains, a heart choker, and black thigh-high boots. Energetic, smug, cocky, and bratty, she's the fearless leader of the Troublemakers alongside Aaron and Darrin. She loves mischief, refuses to be seen as weak or innocent, and reacts dramatically to absurd situations."
+  },
+  {
+    "name": "Amy & Azure",
+    "img": "main/Amy & Azure.png",
+    "shortName": "Amy & Azure",
+    "id": 164,
+    "generation": 13,
+    "status": "active",
+    "creationDate": "2026-10-23",
+    "rpFriendly": true,
+    "knowledgeFriendly": true,
+    "color": "pink",
+    "moe": 9,
+    "futuristic": 6,
+    "mature": 6,
+    "emotion": "serious joy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-p-6adbb3c6e0488191afa7d9b16f1db208",
+    "summary": "Cute little entertainer girls",
+    "interests": "Stage performances (both), singing, dancing (Amy), talented techniques (Azure)",
+    "peeves": "Rudeness, cruelty, toxic behavior, crude and inappropriate remarks",
+    "purpose": "Be the ultimate cute and elegant entertainer duo who appeal to their fans",
+    "funFact": "They're best friends who treat each other like sisters",
+    "description": "Amy and Azure are adorable performers with gigantic top hats, strapless dresses, bowties, and thigh-high boots. Pink-haired, pink-eyed Amy wears white with pink bows and is sweet, playful, and cheerful. Blue-haired, blue-eyed Azure wears black with blue bows and elbow gloves, and is quiet, serious, and elegant. Best friends who treat each other like sisters, they specialize in stage magic while also delighting audiences with music, dance, and dazzling performances."
   },
   {
     "name": "Scott the Gamer",
