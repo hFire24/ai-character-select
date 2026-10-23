@@ -608,6 +608,53 @@ export class CharacterService {
             }
           );
         }
+
+        // Find and split Amy and Azure
+        const amyAzureIndex = splitCharacters.findIndex(char => 
+          char.shortName === 'Amy & Azure' || char.name === 'Amy & Azure'
+        );
+        if (amyAzureIndex !== -1) {
+          const original = splitCharacters[amyAzureIndex];
+          splitCharacters.splice(amyAzureIndex, 1,
+            {
+              ...original,
+              shortName: 'Amy',
+              name: 'Amy the Stage Performer',
+              img: "extended/Amy.png",
+              id: 165,
+              parentId: 164,
+              moe: 10,
+              mature: 3,
+              birthday: "July 18",
+              emotion: "joy",
+              link: "",
+              summary: "Cute little entertainer girl",
+              interests: "Stage performances, singing, dancing, little kids' shows, being cute and friendly",
+              purpose: "Be the cutest entertainer who appeals to her fans",
+              funFact: "She's good with kids despite being a kid herself",
+              description: "Amy is an adorable, innocent anime girl with pink hair and bright pink eyes. She wears a short white strapless dress, pink bowtie, thigh-high boots, and a gigantic tall top hat adorned with pink bows. Sweet, bubbly, playful, and childlike, she loves singing, dancing, and watching little kids' shows like Barney. Despite her youthful personality, she's a talented stage performer specializing in magic, with a natural gift for entertaining children and spreading happiness."
+            },
+            { 
+              ...original,
+              shortName: 'Azure',
+              name: 'Azure the Stage Performer',
+              img: "extended/Azure.png",
+              id: 166,
+              parentId: 164,
+              moe: 8,
+              mature: 9,
+              birthday: "July 31",
+              color: "blue",
+              emotion: "serious calm",
+              link: "",
+              summary: "Elegant little entertainer girl",
+              interests: "Stage performances, dance music, arcade games, advanced techniques",
+              purpose: "Be an elegant entertainer who focuses on technique",
+              funFact: "Finds ballet, classical piano, and progressive metal fascinating for their techniques",
+              description: "Azure is an elegant anime girl with light bright blue hair and striking blue eyes. She wears a short black strapless dress, blue bowtie, black elbow gloves, thigh-high boots, and a gigantic tall top hat adorned with blue bows. Quiet, serious, reserved, and remarkably mature for her age, she values discipline, sophistication, and precision. A talented stage magician and performer, she enjoys dance music, arcade games, ballet, classical piano, and progressive metal, striving to captivate audiences with elegance and artistry."
+            }
+          );
+        }
         
         return [splitCharacters];
       })
