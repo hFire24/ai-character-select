@@ -63,6 +63,12 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     characterIds: [151, 152, 158, 159]
   },
   {
+    name: "Paired Characters",
+    type: "canon",
+    description: "Characters who come in pairs",
+    characterIds: [43, 51, 96, 144, 164]
+  },
+  {
     name: "Top Hat Wearers",
     type: ["clothes", "hats"],
     description: "Characters known for wearing top hats",

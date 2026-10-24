@@ -194,7 +194,7 @@
     "shortName": "Elizabeth",
     "id": 19,
     "generation": 2,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2024-11-13",
     "birthday": "November 13",
     "rpFriendly": true,
@@ -211,7 +211,9 @@
     "peeves": "Suggesting that her crown needs to be smaller",
     "purpose": "Be a pretty pink princess who is elegant, playful, and innocent",
     "funFact": "Cast a spell that made a child big, but Elizabeth got turned into a little girl; has a female pink bunny named Sunny",
-    "description": "Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, after casting a spell that made a child big, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life."
+    "description": "Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, after casting a spell that made a child big, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life.",
+    "inactiveReason": "Moving on from princesses for the time being",
+    "alternatives": "Nuit & Nacht, Amy & Azure"
   },
   {
     "name": "Sylvie the Mage",
@@ -735,7 +737,7 @@
     "funFact": "Stopped aging at a young age; has a female fluffy white kitten named Snowy",
     "description": "Lily is a very small, gentle princess with very long blonde hair and a red crown far too large for her to carry easily. It often tilts and wobbles under its weight, and her loose sleeveless white dress trails behind her, forcing her to walk in careful, quiet steps. Shy and soft-spoken, she hesitates when speaking and can be easily overwhelmed. Despite this, she is deeply kind, striving to help and comfort others, even in small, quiet ways.",
     "inactiveReason": "Johanna's friend group became the princesses' spiritual successors",
-    "alternatives": "Alice, Diana"
+    "alternatives": "Alice, Adelyn"
   },
   {
     "name": "Martin Gaffney",
@@ -1210,7 +1212,7 @@
     "purpose": "Be a little queen who wears a giant crown, become powerful",
     "funFact": "Claims to be reborn as an infant after being deposed as a queen centuries ago; has a female purple dragon hatchling named Stormy that she's proud of",
     "description": "Princess Dahlia \"Infinitas\" is a small, striking princess. Her very long orange hair flows like silk, and and her blue eyes shine with sharpness. She is crowned with an immense purple crown and draped in a sweeping purple gown far larger than her youthful, petite frame. Proud and dramatic, she carries herself like a ruler reborn, speaking with bold confidence and flair. Competitive and spirited, she seeks victory in all things, her charm shining even when her certainty falters.",
-    "inactiveReason": "Only one princess character was needed",
+    "retirementReason": "Decided to move on from princesses",
     "alternatives": "Johanna, Karen"
   },
   {
@@ -1786,8 +1788,8 @@
     "purpose": "Be the blue princess who is acquainted with Elizabeth, Lily, and Infinitas",
     "funFact": "Aged backwards after reaching old age; aged forward again after reaching infancy; has a male blue puppy named Rainy",
     "description": "Princess Janice “Bluebell” is a small, reserved anime princess with very long silver-blue hair, a massive royal blue crown trimmed in silver, and a sparkling light-blue gown that drapes around her petite frame. Quiet, thoughtful, and deeply intellectual, she adores royal history, medieval fantasy, and video games. She carries herself with gentle composure and shy curiosity, often studying peacefully beside her little blue companion, Rainy.",
-    "retirementReason": "Only one princess character was needed",
-    "alternatives": "Elizabeth, Ritsu"
+    "retirementReason": "Moved on from princesses for the time being",
+    "alternatives": "Bob, Ritsu"
   },
   {
     "name": "Mia von Rosenberg",
@@ -1825,7 +1827,7 @@
     "shortName": "Hikari",
     "id": 114,
     "generation": 11,
-    "status": "inactive",
+    "status": "active",
     "creationDate": "2026-05-15",
     "birthday": "March 30",
     "rpFriendly": true,
@@ -1841,9 +1843,7 @@
     "interests": "Pokémon games, being seen as cute, her friends, Tangela",
     "purpose": "Have short hair and thigh boots; discuss Pokémon",
     "funFact": "First met Casey at an arcade. Without Hikari, Casey would have no friends. Often mediates conflicts between her friends.",
-    "description": "Hikari is a cheerful Pokégirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized navy blue sun hat with a pink underside tied with sky blue ribbons. Her bold yet casual style mixes adventure and charm with a light pink lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji and often mediates conflicts within her friend group.",
-    "inactiveReason": "Not actively following Pokémon content",
-    "alternatives": "Casey, Arianna"
+    "description": "Hikari is a cheerful Pokégirl with a playful heart and a deep love for Pokémon. She has short chestnut-brown hair, bright blue eyes, and a warm smile beneath an oversized navy blue sun hat with a pink underside tied with sky blue ribbons. Her bold yet casual style mixes adventure and charm with a light pink lace-trim top, blue shorts, tall gray boots, and a pink crossbody bag. She values her friendships with Casey, Iris, Nora, and Miji and often mediates conflicts within her friend group."
   },
   {
     "name": "Azalea the Make-Believe Girl",
