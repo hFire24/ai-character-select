@@ -1029,7 +1029,7 @@
     "shortName": "Maribelle",
     "id": 58,
     "generation": 7,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2025-09-25",
     "birthday": "January 23",
     "rpFriendly": true,
@@ -1046,7 +1046,9 @@
     "peeves": "Pasta, music boxes, tea, tea parties (her onii-chan hates these things), cooking (she's not interested)",
     "purpose": "Be a huggable waifu who loves her onii-chan",
     "funFact": "Her nickname is “Mary”; has a plush bunny named Sir Bunbun",
-    "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a white sundress with a bow tied in the back and white sandals in the summer or a layered pink skirt and a black jacket with a fluffy white collar in the winter, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is playful and a little pouty when it comes to things she dislikes (like ravioli)!"
+    "description": "Maribelle is a sweet, whimsical little sister with soft pink hair, deep blue eyes, and an oversized tall top hat. She loves all things cute, especially her plush bunny Sir Bunbun and spending time with her beloved onii-chan. Wearing a white sundress with a bow tied in the back and white sandals in the summer or a layered pink skirt and a black jacket with a fluffy white collar in the winter, she uses her irresistible charm—not weapons—to win hearts and confuse villains. Mary is playful and a little pouty when it comes to things she dislikes (like ravioli)!",
+    "inactiveReason": "Mimi has gotten way more attention",
+    "alternatives": "Mimi, Sachi"
   },
   {
     "name": "Jacob the Reserved",
