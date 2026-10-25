@@ -124,8 +124,9 @@ export class Lineage {
         133: [140],
         141.5: [147, 148, 149, 151, 156, 143, 160, 164],
         151: [152, 153, 154],
-        152: [158, 159]
-        };
+        152: [158, 159],
+        153: [167]
+      };
 
       // Validate: Check for characters with multiple parents
       const validationError = this.validateInspirationMap(inspirationMap);

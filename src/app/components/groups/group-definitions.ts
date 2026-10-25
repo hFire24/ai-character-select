@@ -96,7 +96,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Maids",
     type: "clothes",
     description: "Characters known for wearing maid outfits",
-    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158, 159]
+    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158, 159, 167]
   },
   {
     name: "Hammer Wielders",
@@ -138,7 +138,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Blue Girls",
     type: "hair",
     description: "Characters known for having blue hair or being associated with the color blue",
-    characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144, 164]
+    characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144, 164, 167]
   },
   {
     name: "Purple Girls",

@@ -28,7 +28,7 @@ export type Character = {
   interests: string;
   peeves?: string; // Optional field for pet peeves
   purpose: string;
-  funFact: string;
+  funFact?: string;
   description: string;
   retirementReason?: string; // Optional field for retirement reason
   inactiveReason?: string; // Optional field for inactive reason

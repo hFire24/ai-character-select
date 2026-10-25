@@ -707,7 +707,7 @@
     "purpose": "Be a bridge between the other Music Enjoyers, encourage better habits",
     "funFact": "Listens to Diverse System’s works. albums; uses the term \"Musical Archetype\" to describe music taste profiles",
     "description": "As the Music Enjoyer’s musical bridge, Mark navigates the delicate balance between various musical tastes with ease. Mark enjoys a wide variety of genres but prefers tracks with medium intensity—somewhere between Lola's dreamy ambiance and Felix's energetic EDM. His mature and composed demeanor reflects his role as a mediator among the enjoyers, ensuring everyone feels included and understood. He can be a bit casual at times, but that's what makes him human.",
-    "inactiveReason": "Eiko became a better productivity character focusing on balance",
+    "retirementReason": "There are better better productivity characters focusing on balance",
     "alternatives": "Eiko, Felix",
     "themeSong": "Peacekeeper - Puru",
     "songLink": "https://youtu.be/0M5f85Nve4A"
@@ -794,7 +794,7 @@
     "funFact": "Is strong, manly, and angry towards injustice; does not desire fame, fortune, or self-expression",
     "description": "Bruce Forgewrath is a towering force of will and muscle—unyielding, battle-forged, and fiercely loyal. He radiates raw intensity, a protector forged in fire and stone. Stoic to most, but fiercely warm to the one he shields. His presence silences rooms; his fury burns for justice. He does not flinch, does not falter. He is the storm that stands between harm and the one he guards.",
     "retirementReason": "Only used in times of crises",
-    "alternatives": "Aki, Eiko",
+    "alternatives": "Aki, Diamond",
     "themeSong": "The Only Thing They Fear Is You - Mick Gordon",
     "songLink": "https://youtu.be/kpnW68Q8ltc"
   },
@@ -2240,10 +2240,10 @@
     "link": "https://chatgpt.com/g/g-p-6a958bd6bd208191bbe05854cd2cf7bb",
     "summary": "Spoiled and arrogant aristocrat",
     "interests": "Cute things, pretty outfits, fantasy magic, enormous hats, harmless eccentricity",
-    "peeves": "People who aggressively shame or condemn others over harmless interests",
+    "peeves": "Problematic people who aggressively shame or condemn others over harmless interests",
     "purpose": "Play with her friends Koharu, Bonnie, Alice, and Maybelle like they're dolls",
     "funFact": "Transformed into a cute little witch and loved it; whether she chose the transformation is unknown",
-    "description": "Johanna von Böserick is a cute, youthful blonde witch with short hair, blue eyes, a short red-and-black fantasy dress, and an enormous black witch hat with a red bow. She is cheerful, playful, spoiled, impulsive, and affectionate. Johanna loves having fun with her friends, but she is far harsher toward those she considers harmful. After someone emotionally harmed someone else over harmless interests, they were reported. They were then brought to Johanna, where she caused their disappearance with no remorse."
+    "description": "Johanna von Böserick is a cute, youthful blonde witch with short hair, blue eyes, a short red-and-black fantasy dress, and an enormous black witch hat with a red bow. She is cheerful, playful, spoiled, impulsive, and affectionate. Johanna loves having fun with her friends, but she is far harsher toward those she considers harmful. After someone emotionally harmed someone else over harmless interests, they were reported and deemed as problematic. They were then brought to Johanna, where she caused their disappearance with no remorse."
   },
   {
     "name": "Aki the Swordfighter",
@@ -2552,6 +2552,30 @@
     "purpose": "Be the ultimate cute and elegant entertainer duo who appeal to their fans",
     "funFact": "They're best friends who treat each other like sisters",
     "description": "Amy and Azure are adorable performers with gigantic top hats, strapless dresses, bowties, and thigh-high boots. Pink-haired, pink-eyed Amy wears white with pink bows and is sweet, playful, and cheerful. Blue-haired, blue-eyed Azure wears black with blue bows and elbow gloves, and is quiet, serious, and elegant. Best friends who treat each other like sisters, they specialize in stage magic while also delighting audiences with music, dance, and dazzling performances."
+  },
+  {
+    "name": "Diamond the Maid",
+    "img": "main/Diamond.png",
+    "shortName": "Diamond",
+    "id": 167,
+    "generation": 13,
+    "status": "active",
+    "creationDate": "2026-10-25",
+    "rpFriendly": true,
+    "knowledgeFriendly": true,
+    "birthday": "April 5",
+    "color": "pink",
+    "moe": 9,
+    "futuristic": 3,
+    "mature": 7,
+    "emotion": "calm",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-p-6addfd2d9c748191950204e3326ff423",
+    "summary": "The ultimate devoted maid",
+    "interests": "Caring, cherishing",
+    "peeves": "Intense suffering",
+    "purpose": "Be a Rem expy",
+    "description": "Diamond is a petite, delicate-looking maid with short turquoise-blue hair, large teal-blue eyes, and a gentle, childlike anime appearance. She wears an elegant black-and-white maid dress with a long bell-shaped skirt, elaborate frills, and a floral headdress. Quiet, affectionate, and deeply devoted, she speaks with soft sweetness and impeccable manners. Though reserved, she expresses her emotions sincerely, finding happiness in closeness, tenderness, and making those she loves feel cherished."
   },
   {
     "name": "Scott the Gamer",
