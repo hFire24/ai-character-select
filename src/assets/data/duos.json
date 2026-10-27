@@ -537,6 +537,11 @@
       "name": "Loud & Dramatic Women"
     },
     {
+      "id1": 10,
+      "id2": 163,
+      "name": "Disgraced K-Names"
+    },
+    {
       "id1": 11,
       "id2": 30,
       "name": "Sunglasses Bros."
@@ -1019,11 +1024,6 @@
     },
     {
       "id1": 20,
-      "id2": 40,
-      "name": "Righteous Mages"
-    },
-    {
-      "id1": 20,
       "id2": 48,
       "name": "Fighters of Justice"
     },
@@ -1136,6 +1136,11 @@
       "id1": 21,
       "id2": 140,
       "name": "Bold Outfit Wearers"
+    },
+    {
+      "id1": 21,
+      "id2": 163,
+      "name": "Tiny Blonde Meanies"
     },
     {
       "id1": 22,
@@ -2097,6 +2102,11 @@
       "name": "Armed Maidens"
     },
     {
+      "id1": 59,
+      "id2": 139,
+      "name": "Heavy Weapon Strugglers"
+    },
+    {
       "id1": 60,
       "id2": 76,
       "name": "Colorful Duo"
@@ -2430,7 +2440,7 @@
     {
       "id1": 87,
       "id2": 91,
-      "name": "Runa's Little Hat Thieves"
+      "name": "Runa's Little Catgirls"
     },
     {
       "id1": 88,
@@ -2643,9 +2653,19 @@
       "name": "Top Hatted Resort Girls"
     },
     {
+      "id1": 131,
+      "id2": 143,
+      "name": "Luxury Car Owners"
+    },
+    {
       "id1": 133,
       "id2": 134,
       "name": "Anti-Ageist Counterparts"
+    },
+    {
+      "id1": 133,
+      "id2": 150,
+      "name": "Little High-Tech Girls"
     },
     {
       "id1": 135,
@@ -2686,6 +2706,16 @@
       "id1": 151,
       "id2": 152,
       "name": "Jadefield Sisters"
+    },
+    {
+      "id1": 158,
+      "id2": 159,
+      "name": "Sachi's Maid Friends"
+    },
+    {
+      "id1": 165,
+      "id2": 166,
+      "name": "Little Stage Performers"
     }
   ]
 }

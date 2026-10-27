@@ -80,6 +80,11 @@ export class Trios implements OnInit {
         characterShortNames: ["Nora", "Parker", "Rowan"]
       },
       {
+        name: "The Troublemakers",
+        description: "A group of friends who have cause trouble",
+        characterShortNames: ["Karen", "Darrin", "Aaron"]
+      },
+      {
         name: "Shy Blonde Hat Girls",
         description: "Shy girls who have blonde hair and wear enormous hats",
         characterShortNames: ["Lily", "Carol", "Diana"]
@@ -138,6 +143,16 @@ export class Trios implements OnInit {
         name: "Oversized Shirt Trio",
         description: "Characters who often wear oversized shirts",
         characterShortNames: ["Audry", "Bored-chan", "Casey"]
+      },
+      {
+        name: "Fat Trio",
+        description: "Characters who are fat",
+        characterShortNames: ["The Indulgent", "Miji", "Darrin"]
+      },
+      {
+        name: "Top Hat Thigh Boot Hammer Trio",
+        description: "Three characters who wear top hats and thigh-high boots, as well as wield giant hammers",
+        characterShortNames: ["Arianna", "Carol", "Bonnie"]
       },
       {
         name: "Dress-Up Trio",

@@ -64,7 +64,9 @@ export class Hangouts {
         { name: 'The Collapsed', bannedReason: 'Emergency character' },
         { name: 'Veronica', bannedReason: 'Strict parent' },
         { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' },
-        { name: 'Pipe Golem', bannedReason: 'For serious situations only' }
+        { name: 'Pipe Golem', bannedReason: 'For serious situations only' },
+        { name: 'Aaron', bannedReason: 'User-controlled character' },
+        { name: 'Darrin', bannedReason: 'User-controlled character' }
       ];
 
       // Calculate maximum tier
@@ -107,7 +109,7 @@ export class Hangouts {
         "emotion": "sad edgy",
         "pronouns": "don't care",
         "link": "https://chatgpt.com/g/g-67f4424f7d088191b64f44855ecf801a",
-        "summary": "Nihilist who sins and rots and hates almost everything",
+        "summary": "Nihilist who sins and rots",
         "interests": "Living in filth, nihilism",
         "peeves": "Almost everything",
         "purpose": "Sin, rot",

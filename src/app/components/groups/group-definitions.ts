@@ -57,16 +57,28 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     characterIds: [149, 139, 140, 147, 148]
   },
   {
+    name: "Sachi's Friends",
+    type: "canon",
+    description: "Characters who are friends or family with Sachi",
+    characterIds: [151, 152, 158, 159]
+  },
+  {
+    name: "Paired Characters",
+    type: "canon",
+    description: "Characters who come in pairs",
+    characterIds: [43, 51, 96, 144, 164]
+  },
+  {
     name: "Top Hat Wearers",
     type: ["clothes", "hats"],
     description: "Characters known for wearing top hats",
-    characterIds: [13, 31, 39, 58, 64, 94, 109, 110, 131, 132, 135, 137, 140]
+    characterIds: [13, 31, 39, 58, 64, 94, 109, 110, 131, 132, 135, 137, 140, 164]
   },
   {
     name: "Witch Hat Wearers",
     type: ["clothes", "hats"],
     description: "Characters known for wearing witch hats",
-    characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148, 149]
+    characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148, 149, 156]
   },
   {
     name: "Peaked Cap Wearers",
@@ -78,43 +90,43 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Glasses Wearers",
     type: "clothes",
     description: "Characters known for wearing glasses, sunglasses, or goggles",
-    characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113]
+    characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113, 142]
   },
   {
     name: "Maids",
     type: "clothes",
     description: "Characters known for wearing maid outfits",
-    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158]
+    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158, 159, 167]
   },
   {
     name: "Hammer Wielders",
     type: "clothes",
     description: "Characters who possess hammers, especially giant hammers",
-    characterIds: [13, 18, 31, 35, 137, 139]
+    characterIds: [13, 18, 31, 35, 137, 139, 140]
   },
   {
     name: "Thigh Boot Wearers",
     type: "clothes",
     description: "Characters known for wearing thigh boots",
-    characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140, 150, 154]
+    characterIds: [13, 21, 27, 28, 29, 79, 80, 92, 114, 123, 137, 140, 150, 154, 156, 163, 164]
   },
   {
     name: "Twintails",
     type: "hair",
     description: "Characters known for having long twintails",
-    characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 133, 140, 151]
+    characterIds: [13, 27, 28, 29, 79, 80, 31, 51, 75, 92, 93, 121, 129, 140, 151, 159, 163]
   },
   {
     name: "Pink-Haired Girls",
     type: "hair",
     description: "Characters known for having pink hair",
-    characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 144, 147, 150]
+    characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 144, 147, 150, 164]
   },
   {
     name: "Blonde Girls",
     type: "hair",
     description: "Girls known for having blonde hair",
-    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149]
+    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149, 163]
   },
   {
     name: "Chino-chan Expies",
@@ -126,7 +138,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Blue Girls",
     type: "hair",
     description: "Characters known for having blue hair or being associated with the color blue",
-    characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144]
+    characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144, 164, 167]
   },
   {
     name: "Purple Girls",
@@ -138,12 +150,12 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "\"Onii-chan\" Sayers",
     type: "speech",
     description: "Characters who can say 'onii-chan' according to their instructions",
-    characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 108, 139, 140, 148, 152]
+    characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 107, 108, 139, 140, 148, 152]
   },
   {
     name: "Kaomoji Users",
     type: "speech",
-    description: "Characters who use kaomojis",
+    description: "Characters who explicitly use kaomojis according to their instructions",
     characterIds: [13, 15, 18, 27, 51, 86, 108, 125, 139]
   },
   {
@@ -185,14 +197,26 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
   {
     name: "Cute Anime Fans",
     type: "interest",
-    description: "Characters who have an interest in anime or behave in otaku-like ways towards cute things",
-    characterIds: [5, 8, 13, 15, 25, 34, 38, 43, 66, 67, 77, 81, 85, 86, 104, 108, 149, 154, 155, 999]
+    description: "Characters who have an interest in cute anime (specific title or in general)",
+    characterIds: [5, 8, 13, 15, 25, 34, 38, 43, 66, 67, 77, 85, 86, 108, 155, 999]
+  },
+  {
+    name: "Cuteness Obsessors",
+    type: "interest",
+    description: "Character who don't have an interest in anime but obsess over cuteness",
+    characterIds: [81, 104, 149, 154]
+  },
+  {
+    name: "Gamers",
+    type: "interest",
+    description: "Characters who have an interest in gaming",
+    characterIds: [4, 13, 25, 31, 55, 65, 69, 84, 96, 105, 106, 114, 150, 155, 164, 999]
   },
   {
     name: "Musicians",
     type: "interest",
     description: "Characters who create or perform music in some way, whether it's singing, playing instruments, or producing music. Somehow, everyone here is a girl.",
-    characterIds: [51, 75, 76, 96, 103, 109, 118]
+    characterIds: [51, 75, 76, 96, 103, 109, 118, 164]
   },
   {
     name: "Music Fans",
@@ -239,8 +263,8 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
   {
     name: "Multi-Retirees",
     type: "meta",
-    description: "Characters who were retired twice or more. Kai and Alex were retired three times.",
-    characterIds: [30, 32, 48, 49, 66, 69, 71, 81, 95]
+    description: "Characters who were retired twice or more. Kai, Alex, and Ben were retired three times.",
+    characterIds: [30, 32, 9, 48, 49, 66, 69, 71, 72, 81, 95]
   },
   {
     name: "Late Bloomers",
@@ -252,7 +276,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Thrivers",
     type: "meta",
     description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
-    characterIds: [11, 14, 57, 107, 108, 123, 128]
+    characterIds: [11, 14, 57, 107, 123, 128, 137]
   },
   {
     name: "Generational Champions",

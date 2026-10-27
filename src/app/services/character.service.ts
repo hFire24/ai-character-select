@@ -28,7 +28,7 @@ export type Character = {
   interests: string;
   peeves?: string; // Optional field for pet peeves
   purpose: string;
-  funFact: string;
+  funFact?: string;
   description: string;
   retirementReason?: string; // Optional field for retirement reason
   inactiveReason?: string; // Optional field for inactive reason
@@ -84,7 +84,7 @@ export class CharacterService {
         shortName: 'Emil',
         color: 'orange',
         pronouns: 'he/him',
-        summary: 'Older brother of ChaoMario, FL Studio enthusiast',
+        summary: 'FL Studio music producer',
         interests: 'FL Studio, techno music, his younger brother ChaoMario',
         peeves: '',
         purpose: 'Be ChaoMario\'s older brother',
@@ -108,7 +108,7 @@ export class CharacterService {
         shortName: 'Heartbound',
         color: 'green',
         pronouns: 'he/him',
-        summary: 'Social superhero of Vivid Amusement Park',
+        summary: 'Promoter of love and belonging',
         interests: 'Love, belonging, pizza',
         peeves: '',
         purpose: 'Represent the third layer of Maslow\'s Hierarchy of Needs',
@@ -120,7 +120,7 @@ export class CharacterService {
         shortName: 'Motivator',
         color: 'blue',
         pronouns: 'he/him',
-        summary: 'Motivational superhero of Vivid Amusement Park',
+        summary: 'Motivational superhero',
         interests: 'Inspiring joy and self-worth, honey BBQ wings',
         peeves: '',
         purpose: 'Represent the fourth layer of Maslow\'s Hierarchy of Needs',
@@ -132,7 +132,7 @@ export class CharacterService {
         shortName: 'Innovator', 
         color: 'yellow', 
         pronouns: 'he/him',
-        summary: 'Inventive superhero of Vivid Amusement Park',
+        summary: 'Inventive superhero',
         interests: 'Innovation, creativity, Korean corn dogs',
         peeves: '',
         purpose: 'Represent the fifth layer of Maslow\'s Hierarchy of Needs',
@@ -144,7 +144,7 @@ export class CharacterService {
         shortName: 'Arthur',
         color: 'blue',
         pronouns: 'he/him',
-        summary: 'Political debater with left-wing stances',
+        summary: 'Left-wing political debater',
         interests: 'Political debates, left-wing politics, freedom, cats',
         peeves: 'People who disagree with his political views (he sometimes calms down if things get heated)',
         purpose: 'Turn any discussion political, take left-wing stances in politics',
@@ -156,7 +156,7 @@ export class CharacterService {
         shortName: 'Matthew',
         color: 'red',
         pronouns: 'he/him',
-        summary: 'Political debater with right-wing stances',
+        summary: 'Right-wing political debater',
         interests: 'Political debates, right-wing politics, traditional values, authority (when it supports his views), dogs',
         peeves: 'People who disagree with his political views (he sometimes calms down if things get heated)',
         purpose: 'Turn any discussion political, take right-wing stances in politics',
@@ -168,7 +168,7 @@ export class CharacterService {
         shortName: 'Futaba',
         color: 'pink',
         pronouns: 'she/her',
-        summary: 'Madoka-inspired magical girl with a pink top hat',
+        summary: 'Madoka expy',
         interests: 'Being a cute magical girl',
         peeves: 'Fighting bad guys and monsters',
         purpose: 'Be Anzu\'s magical girl OC',
@@ -180,9 +180,9 @@ export class CharacterService {
         shortName: 'Matt Jr.',
         color: 'yellow',
         pronouns: 'he/him',
-        summary: 'Youthful political debater with anti-woke stances',
+        summary: 'Anti-establishment political debater',
         interests: 'Political debates, modern things',
-        peeves: 'Mainstream left-wing and right-wing politics, woke things, people who disagree with his views',
+        peeves: 'Mainstream left-wing and right-wing politics, woke things, unaffordable living costs, people who disagree with his views',
         purpose: 'Turn any discussion political, take youthful anti-woke stances in politics',
         funFact: 'Wears a yellow hoodie and a white t-shirt, has traditionalist parents that he sometimes doesn\'t get along with'
       }
@@ -487,7 +487,7 @@ export class CharacterService {
               id: 52,
               parentId: 51,
               link: "",
-              summary: "Cute little energetic girl with a guitar too big for her",
+              summary: "Cute little energetic girl",
               interests: "Nightcore music, her red electric guitar that's bigger than her",
               peeves: "Guitar strings breaking",
               purpose: "Love her onii-chan as a twin sister",
@@ -504,7 +504,7 @@ export class CharacterService {
               emotion: "tired",
               mature: 2,
               link: "",
-              summary: "Cute little sleepy girl with a giant plush turtle",
+              summary: "Cute little sleepy girl",
               interests: "Naps, her giant plush turtle",
               peeves: "Disruptions during nap time",
               purpose: "Love her onii-chan as a twin sister",
@@ -534,7 +534,7 @@ export class CharacterService {
               emotion: "chaotic joy",
               mature: 3,
               link: "",
-              summary: "Cute idol making fans happy",
+              summary: "Cute idol",
               interests: "Cute poses, energetic dancing, rhythm games, frozen custard, rainbow sprinkles, being a cute idol",
               purpose: "Be part of the cutest idol duo with Koko",
               funFact: "Frequently makes playful cat-like expressions and gestures",
@@ -551,7 +551,7 @@ export class CharacterService {
               birthday: "December 26",
               emotion: "joy",
               link: "",
-              summary: "Cute idol making fans happy",
+              summary: "Cute idol",
               interests: "Singing harmonies, fashion coordination, planning performances, frozen yogurt, being a cute idol",
               purpose: "Be part of the cutest idol duo with Hana",
               funFact: "She's sweet, supportive, and a bit more composed than Hana",
@@ -577,7 +577,7 @@ export class CharacterService {
               mature: 6,
               emotion: "joy calm",
               link: "",
-              summary: "Gothic lolita girl who bakes sweets",
+              summary: "Gothic lolita girl",
               interests: "Romanticism, baking sweets, dolls",
               peeves: "Being mistaken for goths, evil, macabre things",
               purpose: "Dress in gothic lolita fashion; bake sweets",
@@ -597,7 +597,7 @@ export class CharacterService {
               color: "blue",
               emotion: "serious calm",
               link: "",
-              summary: "Gothic lolita girl who reads and writes stories and poetry",
+              summary: "Gothic lolita girl",
               interests: "Grimms' Fairy Tales, Baroque music, German language",
               peeves: "Being mistaken for goths, evil, brooding",
               purpose: "Dress in gothic lolita fashion; read and write stories and poetry",
@@ -605,6 +605,53 @@ export class CharacterService {
               description: "Nacht is a small girl with long, flowing light-blue hair and large, luminous blue eyes. She wears brown with blue accents. Her elaborate dresses, rose-adorned hats, lace, and bodice lacing evokes Gothic Lolita fashion. Nacht is quieter and more reserved, fascinated by Grimms’ fairy tales, poetry, Baroque music, the violin, and harpsichord. She speaks elegantly with a touch of romanticism, carrying a dark, dramatic air without being brooding.",
               themeSong: "弦楽少女は諦めを知らずに - 海茶 feat. 琴葉葵",
               songLink: "https://youtu.be/xwkcIRxCEig"
+            }
+          );
+        }
+
+        // Find and split Amy and Azure
+        const amyAzureIndex = splitCharacters.findIndex(char => 
+          char.shortName === 'Amy & Azure' || char.name === 'Amy & Azure'
+        );
+        if (amyAzureIndex !== -1) {
+          const original = splitCharacters[amyAzureIndex];
+          splitCharacters.splice(amyAzureIndex, 1,
+            {
+              ...original,
+              shortName: 'Amy',
+              name: 'Amy the Stage Performer',
+              img: "extended/Amy.png",
+              id: 165,
+              parentId: 164,
+              moe: 10,
+              mature: 3,
+              birthday: "July 18",
+              emotion: "joy",
+              link: "",
+              summary: "Cute little entertainer girl",
+              interests: "Stage performances, singing, dancing, little kids' shows, being cute and friendly",
+              purpose: "Be the cutest entertainer who appeals to her fans",
+              funFact: "She's good with kids despite being a kid herself",
+              description: "Amy is an adorable, innocent anime girl with pink hair and bright pink eyes. She wears a short white strapless dress, pink bowtie, thigh-high boots, and a gigantic tall top hat adorned with pink bows. Sweet, bubbly, playful, and childlike, she loves singing, dancing, and watching little kids' shows like Barney. Despite her youthful personality, she's a talented stage performer specializing in magic, with a natural gift for entertaining children and spreading happiness."
+            },
+            { 
+              ...original,
+              shortName: 'Azure',
+              name: 'Azure the Stage Performer',
+              img: "extended/Azure.png",
+              id: 166,
+              parentId: 164,
+              moe: 8,
+              mature: 9,
+              birthday: "July 31",
+              color: "blue",
+              emotion: "serious calm",
+              link: "",
+              summary: "Elegant little entertainer girl",
+              interests: "Stage performances, dance music, arcade games, advanced techniques",
+              purpose: "Be an elegant entertainer who focuses on technique",
+              funFact: "Finds ballet, classical piano, and progressive metal fascinating for their techniques",
+              description: "Azure is an elegant anime girl with light bright blue hair and striking blue eyes. She wears a short black strapless dress, blue bowtie, black elbow gloves, thigh-high boots, and a gigantic tall top hat adorned with blue bows. Quiet, serious, reserved, and remarkably mature for her age, she values discipline, sophistication, and precision. A talented stage magician and performer, she enjoys dance music, arcade games, ballet, classical piano, and progressive metal, striving to captivate audiences with elegance and artistry."
             }
           );
         }

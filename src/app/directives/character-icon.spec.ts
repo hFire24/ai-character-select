@@ -4,11 +4,12 @@ import { CharacterIcon } from './character-icon';
 
 @Component({
   imports: [CharacterIcon],
-  template: '<img [appCharacterIcon]="path" [compactIcon]="compact" />'
+  template: '<img [appCharacterIcon]="path" [compactIcon]="compact" [alwaysTallIcon]="alwaysTall" />'
 })
 class IconHost {
   path = 'main/example.png';
   compact = false;
+  alwaysTall = false;
 }
 
 describe('CharacterIcon', () => {
@@ -55,6 +56,15 @@ describe('CharacterIcon', () => {
     expect(source()).toBe('assets/Icons/tall/example.png');
     resize(true);
     expect(source()).toBe('assets/Icons/main/example.png');
+  });
+
+  it('keeps tall assets on mobile when requested', () => {
+    fixture.componentInstance.alwaysTall = true;
+    resize(true);
+    expect(source()).toBe('assets/Icons/tall/example.png');
+    resize(false);
+    resize(true);
+    expect(source()).toBe('assets/Icons/tall/example.png');
   });
 
   it('falls back once and selects the correct asset when the character changes', () => {

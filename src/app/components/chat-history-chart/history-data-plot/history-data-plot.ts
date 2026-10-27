@@ -24,7 +24,8 @@ export class HistoryDataPlot {
   get visibleEras():HistoryEra[]{const [start,end]=this.extent;return [
     {label:'5.3',start:this.fromKey(this.chart.datasetStartDate),end:new Date('2026-04-21T12:00:00'),className:'era-53'},
     {label:'5.5',start:new Date('2026-05-06T12:00:00'),end:new Date('2026-08-06T12:00:00'),className:'era-55'},
-    {label:'5.6',start:new Date('2026-08-06T12:00:00'),end:this.fromKey(this.chart.datasetEndDate),className:'era-56'}
+    {label:'5.6',start:new Date('2026-08-06T12:00:00'),end:new Date('2026-10-08T12:00:00'),className:'era-56'},
+    {label:'6',start:new Date('2026-10-08T12:00:00'),end:this.fromKey(this.chart.datasetEndDate),className:'era-6'}
   ].filter(era=>era.start<=end&&era.end>=start)}
 
   displayedPoints(item:CharacterHistorySeries):HistoryPoint[]{const [start,end]=this.extent;const total=this.dayNumber(end)-this.dayNumber(start)+1;const days=Math.max(1,Math.ceil(total/60));const key=`${item.character.id}|${this.chart.selectedStartDate}|${this.chart.selectedEndDate}|${days}`;const cached=this.pointsCache.get(key);if(cached)return cached;if(this.pointsCache.size>this.chart.displayedSeries.length*3)this.pointsCache.clear();const buckets=new Map<number,HistoryPoint>();item.points.filter(p=>this.isVisible(p.date)).forEach(point=>{const index=Math.floor((this.dayNumber(point.date)-this.dayNumber(start))/days);const bucketStart=new Date(start);bucketStart.setDate(bucketStart.getDate()+index*days);const proposed=new Date(bucketStart);proposed.setDate(proposed.getDate()+days-1);const bucketEnd=proposed>end?new Date(end):proposed;const existing=buckets.get(index);if(existing)existing.count+=point.count;else buckets.set(index,{date:bucketStart,endDate:bucketEnd,dateKey:`${this.toKey(bucketStart)}-${this.toKey(bucketEnd)}`,count:point.count})});const points=[...buckets.values()];this.pointsCache.set(key,points);return points}

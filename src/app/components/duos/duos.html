@@ -58,7 +58,7 @@
     (click)="openCharacterModal(character1)"
   >
     @if (character1.img) {
-      <img loading="lazy" class="tall-icon" [appCharacterIcon]="character1.img" [alt]="character1.shortName" />
+      <img loading="lazy" class="tall-icon" [alwaysTallIcon]="true" [appCharacterIcon]="character1.img" [alt]="character1.shortName" />
     } @else {
       <div class="question-mark">?</div>
     }
@@ -70,7 +70,7 @@
     (click)="openCharacterModal(character2)"
   >
     @if (character2.img) {
-      <img loading="lazy" class="tall-icon" [appCharacterIcon]="character2.img" [alt]="character2.shortName" />
+      <img loading="lazy" class="tall-icon" [alwaysTallIcon]="true" [appCharacterIcon]="character2.img" [alt]="character2.shortName" />
     } @else {
       <div class="question-mark">?</div>
     }

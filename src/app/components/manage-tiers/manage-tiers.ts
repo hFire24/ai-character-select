@@ -276,6 +276,7 @@ export class ManageTiers {
       'name',
       'creationDate',
       'birthday',
+      'summary',
       'interests',
       'peeves',
       'purpose',

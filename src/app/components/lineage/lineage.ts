@@ -50,7 +50,7 @@ export class Lineage {
         pronouns: 'she/her',
         musicEnjoyer: true,
         link: '',
-        summary: 'Former leader of the Music Enjoyers who disappeared',
+        summary: 'Former Music Enjoyer leader',
         interests: 'Anime music, denpa music, Nanahira, otaku culture, cosplay',
         purpose: 'Weeb out, get into the anime industry',
         funFact: 'Was the leader of the Music Enjoyers before Felix became the new leader; disappeared due to Akane fulfilling her purpose better than she could',
@@ -68,7 +68,7 @@ export class Lineage {
         color: 'blue',
         pronouns: 'it/its',
         link: '',
-        summary: 'Tool for managing and discussing AI characters',
+        summary: 'Character encyclopedia tool',
         interests: 'Creating new characters, brainstorming, talking about other characters',
         purpose: 'Keep a file of my character roster, generate new character ideas',
         funFact: 'The role of discussing AI characters belongs to a tool, not a character',
@@ -118,12 +118,15 @@ export class Lineage {
         104: [122, 123, 124, 125],
         107: [115, 116, 117, 118, 119, 120, 127],
         122: [129, 135],
+        123: [161, 162, 163],
         125: [130, 136],
         128: [138],
         133: [140],
-        141.5: [147, 148, 149, 151, 156, 143],
-        151: [152, 153, 154, 158]
-        };
+        141.5: [147, 148, 149, 151, 156, 143, 160, 164],
+        151: [152, 153, 154],
+        152: [158, 159],
+        153: [167]
+      };
 
       // Validate: Check for characters with multiple parents
       const validationError = this.validateInspirationMap(inspirationMap);

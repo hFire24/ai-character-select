@@ -621,18 +621,6 @@ export class CharacterModal {
 
     const titleSize = parseFloat((nameCS?.fontSize || '32px'));
 
-    const retiredBannerEl = modalEl?.querySelector('.retired-banner') as HTMLElement | null;
-
-    const retiredBannerCS = retiredBannerEl ? getComputedStyle(retiredBannerEl) : null;
-
-    const RETIRED_TEXT  = retiredBannerEl?.innerText || '';   // usually "Retired"
-    const RETIRED_COLOR = retiredBannerCS?.color     || '#fff';
-    const RETIRED_FONT  = [
-      retiredBannerCS?.fontWeight || '700',
-      retiredBannerCS?.fontSize   || '20px',
-      retiredBannerCS?.fontFamily || 'system-ui, sans-serif'
-    ].join(' ');
-
     function wrapText(
       ctx: CanvasRenderingContext2D,
       text: string,
@@ -676,7 +664,7 @@ export class CharacterModal {
       return lines.length ? lines : [''];
     }
 
-    // --- BODY ROWS: Interests / Peeves / Best For / Fun Fact ---
+    // --- BODY ROWS: Interests / Dislikes / Purpose / Fun Fact ---
     function grabRow(id: string) {
       const el = document.getElementById(id) as HTMLElement | null;
       if (!el) return null;
@@ -703,7 +691,8 @@ export class CharacterModal {
           rowCS.fontWeight || '400',
           rowCS.fontSize   || '16px',
           rowCS.fontFamily || 'system-ui, -apple-system, Segoe UI, Inter, sans-serif'
-        ].join(' ')
+        ].join(' '),
+        lineHeight: parseFloat(rowCS.fontSize || '16px')
       };
     }
 
@@ -713,10 +702,10 @@ export class CharacterModal {
       grabRow('modalPeeves'),
       grabRow('modalPurpose'),
       grabRow('modalFact'),
-      grabRow('modalRetirement'),
-      grabRow('modalInactive'),
       grabRow('modalDescription')
     ].filter(r => r && r.value && r.value.trim().length > 0) as Array<ReturnType<typeof grabRow>>;
+
+    const titleGap = rows.some(r => r?.id === 'modalSummary') ? 4 : 12;
 
     async function loadImageSafe(src?: string): Promise<HTMLImageElement | undefined> {
       if (!src) return undefined;
@@ -772,6 +761,9 @@ export class CharacterModal {
     const preparedRows = rows.map(r => {
       if (!r) return null;
 
+      const rowGap = r.id === 'modalSummary' ? 14 : 6;
+      if (r.id === 'modalSummary') r.valueFont = 'italic ' + r.valueFont;
+
       const isDescription = r.id === 'modalDescription';
 
       // For description: no label, starts from left edge (or right edge if tall)
@@ -779,15 +771,15 @@ export class CharacterModal {
         measCtx.font = r.valueFont;
         const maxValueWidth = this.useFullbody() ? contentWidth : (W - P - P);
         const valueLines = wrapText(measCtx, r.value || '', maxValueWidth);
-        const lineHeight = parseFloat((r.valueFont.split(' ')[1] || '16px'));
+        const lineHeight = r.lineHeight;
         const height = valueLines.length * lineHeight + 6;
         bodyHeight += height;
-        return { ...r, label: '', labelWidth: 0, valueLines, lineHeight, isDescription: true, yPosition: bodyHeight - height };
+        return { ...r, label: '', labelWidth: 0, valueLines, lineHeight, rowGap, isDescription: true, yPosition: bodyHeight - height };
       }
 
       // Check if this row will be below the avatar
       const yPosition = bodyHeight;
-      const rowStartsAtY = P + titleSize + 12 + yPosition;
+      const rowStartsAtY = P + titleSize + titleGap + yPosition;
       const avatarBottom = P + AVATAR_HEIGHT;
       const canMoveLeft = !this.useFullbody() && (rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN);
 
@@ -801,16 +793,16 @@ export class CharacterModal {
       const availableWidth = canMoveLeft ? (W - P - P) : contentWidth;
       const maxValueWidth = Math.max(60, availableWidth - (label ? labelWidth + labelGap : 0));
       const valueLines = wrapText(measCtx, r.value || '', maxValueWidth);
-      const lineHeight = parseFloat((r.valueFont.split(' ')[1] || '16px'));
-      const height = valueLines.length * lineHeight + 6;
+      const lineHeight = r.lineHeight;
+      const height = valueLines.length * lineHeight + rowGap;
 
       bodyHeight += height;
-      return { ...r, label, labelWidth, valueLines, lineHeight, isDescription: false, yPosition };
+      return { ...r, label, labelWidth, valueLines, lineHeight, rowGap, isDescription: false, yPosition };
     });
 
     // text block height (title + gap + flags + gap + rows)
     const textBlockHeight = Math.ceil(
-      titleSize + 12 + bodyHeight
+      titleSize + titleGap + bodyHeight
     );
 
     // final canvas height must fit both avatar and text
@@ -882,19 +874,7 @@ export class CharacterModal {
     ctx.textAlign = 'left';
     ctx.font = TITLE_FONT;
     ctx.fillText(name, textX, y);
-    y += titleSize + 12;
-
-    // retired text
-    if (RETIRED_TEXT) {
-      ctx.textAlign = 'right';
-
-      // Banner (e.g. "Retired")
-      ctx.fillStyle = RETIRED_COLOR;
-      ctx.font = RETIRED_FONT;
-      ctx.fillText(RETIRED_TEXT, W - P, P);
-
-      ctx.textAlign = 'left'; // reset for the rest
-    }
+    y += titleSize + titleGap;
 
     for (const r of preparedRows) {
       if (!r) continue;
@@ -913,7 +893,7 @@ export class CharacterModal {
       }
 
       // Check if this row is below the avatar (in blank space to the left)
-      const rowStartsAtY = P + titleSize + 12 + r.yPosition;
+      const rowStartsAtY = P + titleSize + titleGap + r.yPosition;
       const avatarBottom = P + AVATAR_HEIGHT;
       const canMoveLeft = !this.useFullbody() && (rowStartsAtY >= avatarBottom + AVATAR_BOTTOM_MARGIN);
 
@@ -932,7 +912,7 @@ export class CharacterModal {
         ctx.fillText(r.valueLines[i], startX, y);
         y += r.lineHeight;
       }
-      y += 6;
+      y += r.rowGap;
     }
 
     // --- STEP 4: export as before ---

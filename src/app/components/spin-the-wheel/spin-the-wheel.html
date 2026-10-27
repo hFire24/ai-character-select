@@ -133,7 +133,7 @@
 	<button (click)="spinWheel()" [disabled]="spinning">{{ spinning ? 'Spinning...' : (skipAnimation ? 'Pick' : 'Spin') }}</button>
 	<div *ngIf="selectedCharacter" class="result">
 		<h3>Selected Character:</h3>
-		<img loading="lazy" class="tall-icon" [appCharacterIcon]="selectedCharacter.img" [alt]="selectedCharacter.name"
+		<img loading="lazy" class="tall-icon" [alwaysTallIcon]="true" [appCharacterIcon]="selectedCharacter.img" [alt]="selectedCharacter.name"
 		width="128" height="192" 
 		(click)="showCard = true"
 		[ngStyle]="{cursor: 'pointer'}"/>

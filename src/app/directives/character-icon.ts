@@ -28,12 +28,13 @@ export class CharacterIconViewport {
 export class CharacterIcon {
   readonly appCharacterIcon = input.required<string>();
   readonly compactIcon = input(false);
+  readonly alwaysTallIcon = input(false);
   private readonly viewport = inject(CharacterIconViewport);
   private readonly failedTallPath = signal<string | null>(null);
   readonly src = computed(() => {
     const path = this.appCharacterIcon();
     const tall = useTallIconAssetPath(path);
-    return this.compactIcon() || this.viewport.compact() || this.failedTallPath() === tall
+    return (!this.alwaysTallIcon() && (this.compactIcon() || this.viewport.compact())) || this.failedTallPath() === tall
       ? iconAssetPath(path) : tall;
   });
 

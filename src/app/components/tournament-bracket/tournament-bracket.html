@@ -11,10 +11,7 @@
       Show all eligible characters
     </label>
     @if (!showAllExclusionCandidates) {
-      <p>Showing potential bottom seeds with a moe score of {{ bottomSeedMoe }}.</p>
-      @if (visibleExclusionCandidates.length < requiredExclusions) {
-        <p>There aren't enough characters in this group to make all exclusions. Select “Show all eligible characters” to choose from the full list.</p>
-      }
+      <p>Showing potential bottom seeds with moe scores {{ seedPreference === 'high' ? 'at or below' : 'at or above' }} {{ bottomSeedMoe }}.</p>
     }
     <div class="overflow-characters">
       @for (character of visibleExclusionCandidates; track character.id) {
