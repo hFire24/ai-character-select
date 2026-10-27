@@ -1,0 +1,75 @@
+<section class="matchup" aria-label="Character matchup">
+  @for (fighter of fighters(); track $index) {
+    <article class="fighter" [attr.aria-label]="fighter.label">
+      <h2 class="character-name">{{fighter.character.name}}</h2>
+      <div class="stats">
+        <div class="stat hp">
+          <div class="stat-label"><span>HP</span><span>{{ fighter.hp }} / {{ fighter.stats.hp }}</span></div>
+          <progress [value]="fighter.hp" [max]="fighter.stats.hp" [attr.aria-label]="fighter.label + ' HP'"></progress>
+        </div>
+        <div class="stat mp">
+          <div class="stat-label"><span>MP</span><span>{{ fighter.mp }} / {{ fighter.stats.mp }}</span></div>
+          <progress [value]="fighter.mp" [max]="fighter.stats.mp" [attr.aria-label]="fighter.label + ' MP'"></progress>
+        </div>
+      </div>
+      <div class="combat-statuses" aria-live="polite">
+        <div class="status-slot buff-slot"><strong>Buff</strong>
+          @if (statuses()[$index].buff; as buff) {
+            <span>{{ buff.type === 'mana-regeneration' ? 'Mana Regen' : buff.type === 'evasiveness-boost' ? 'Evade Up' : buff.type === 'accuracy-boost' ? 'Acc Up' : buff.label }}</span>
+          } @else { <span>None</span> }
+        </div>
+        <div class="status-slot debuff-slot"><strong>Debuff</strong>
+          @if (statuses()[$index].debuff; as debuff) {
+            <span>{{ debuff.type === 'evasiveness-lower' ? 'Evade Down' : debuff.type === 'accuracy-lower' ? 'Acc Down' : debuff.label }}</span>
+          } @else { <span>None</span> }
+        </div>
+      </div>
+      @if (statuses()[$index].buff?.ally; as ally) {
+        <div class="summoned-clone" aria-label="Summoned ally">
+          <img [src]="tallPortrait(ally.img)" (error)="useUnknownIcon($event)" [alt]="ally.name">
+          <span>{{ ally.shortName || ally.name }}</span>
+        </div>
+      }
+      <img [src]="tallPortrait(fighter.character.img)" (error)="useUnknownIcon($event)" [alt]="fighter.character.name">
+    </article>
+    @if ($first) {
+      <div class="turn-counter" role="status" aria-label="Turn counter">
+        <span>TURNS</span>
+        <strong>{{ completedMoves() }}</strong>
+      </div>
+    }
+  }
+</section>
+
+<div class="battle-message" role="status" aria-live="polite" aria-atomic="true">
+  @for (line of messageLines(); track $index) {
+    <div class="message-line">@for (part of line; track $index) {<span [class.hit-result]="part.hit" [class.miss-result]="part.miss">{{ part.text }}</span>}</div>
+  }
+</div>
+
+@if (isOver()) {
+  <div class="battle-actions single-action">
+    <button (click)="newGame.emit()">New Game</button>
+  </div>
+} @else if (!yourTurn()) {
+  <div class="battle-actions single-action" role="status">
+    <button (click)="opponentTurn()">Opponent&#39;s Turn</button>
+  </div>
+} @else {
+<nav class="battle-actions" aria-label="Your actions">
+  <button (click)="chooseAction('fight')">Fight</button>
+  <button (click)="chooseAction('guard')">Guard</button>
+  <button (click)="chooseAction('focus')">Focus</button>
+</nav>
+  @if (isSilenced(0)) { <p role="status">Silenced: special attacks are disabled.</p> }
+  <section id="special-attacks" class="special-attacks" aria-label="Special attacks">
+    @for (special of playerConfig().specials; track $index) {
+      <button (click)="chooseSpecial(special)" [disabled]="isSilenced(0) || fighters()[0].mp < specialAttackRule(special.effect).cost">
+        {{ special.name }}
+        <span>{{ specialAttackRule(special.effect).cost }} MP</span>
+      </button>
+    }
+  </section>
+}
+
+<button class="exit-button red-button" (click)="back.emit()">Exit</button>

@@ -11,7 +11,7 @@ This project keeps a character roster in one searchable, visual place. The main 
 The website includes:
 
 - A searchable character roster with profile cards and character metadata
-- An Arcade with playable Farkle, selectable characters, and random computer opponents
+- An Arcade character selection screen with player and computer opponent seats
 - Random character selection for roleplay-friendly characters, answer-friendly characters, or the full roster
 - Ranking tools including a tier list, comparison sorter, tournament bracket, and blind ranking
 - Character relationship pages for duos, trios, groups, and lineage
@@ -51,15 +51,7 @@ The backend runs on [http://localhost:3001/](http://localhost:3001/).
 
 ## Arcade
 
-Open `/arcade` to play Farkle. The default player is the roster's **Me** (ID 999), with two distinct random character opponents. Select a player or CPU seat, hover or focus portraits to preview them, then click or press Enter to choose. CPU seats also offer a Random tile. Choose one to three opponents and a 5,000 or 10,000 point target. The rules panel lists this Arcade's scoring variant.
-
-Games work without an AI connection. To enable generated character reactions locally, set `OPENAI_API_KEY` and `ARCADE_DIALOGUE_MODEL` in the backend process environment, then run `npm run dev`. Choose a text model available to your API account. Never put the key in frontend files. Requests send the reacting character's name, description, interests, game event, and scoreboard. Dialogue does not control dice, scoring, or computer decisions.
-
-The dialogue endpoint accepts loopback requests in Development only. GitHub Pages uses built-in reactions; generated dialogue on a published site needs a separately hosted, authenticated backend. Built-in reactions also appear when the AI service fails.
-
-Integration reference: [OpenAI Responses API](https://developers.openai.com/api/reference/resources/responses/methods/create).
-
-Run `npm run check:arcade` for scoring and turn-transition checks.
+Open `/arcade` to select characters. The default player is **The Developer** (ID 999), whose name you can change on the arcade screen. Choose your player and one computer opponent, search the roster, hover or focus portraits to preview them, then click or press Enter to choose. The CPU seat also offers a Random tile. Both seats can use the same character. Click Fight to show your character on the left and the opponent on the right with tall portraits. Random opponents are chosen when you click Fight.
 
 ## Useful Commands
 

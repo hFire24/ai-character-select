@@ -1,0 +1,98 @@
+<main class="rules">
+  <header>
+    <div><h1>Rules</h1><p>Build your character and choose your opponent.</p></div>
+    <a routerLink="/arcade" class="back-button">Back to Arcade</a>
+  </header>
+  <section>
+    <h2>Choose your characters</h2>
+    <p>Select your player and one computer opponent. The Developer is the default player character; rename that character using the name field on the arcade screen. The name is saved in this browser. Both sides may use the same character. Choose Random for the opponent to pick a character when you press Start Duel.</p>
+    <p>Hover or focus a portrait to preview a character. Click a portrait or press Enter to assign it to the selected seat.</p>
+  </section>
+  <section>
+    <h2>HP and MP</h2>
+    <p>Each character has 150 points split between HP and MP. Each value ranges from 40 to 110 in steps of 10. Increasing one decreases the other.</p>
+    <dl class="hp-mp">
+      <div><dt>HP</dt><dd>How much health you have. If it reaches 0 or below, game over.</dd></div>
+      <div><dt>MP</dt><dd>How much mana you have. Special attacks use mana. Focusing restores MP.</dd></div>
+    </dl>
+  </section>
+  <section>
+    <h2>Character stats</h2>
+    <p>Each base stat ranges from 3 to 7. Their combined total cannot exceed 21. Generated characters use all 21 points; saved custom characters may use fewer. Combat effects can temporarily change these values.</p>
+    <dl class="stats">
+      <div><dt>Attack</dt><dd>How much damage you do to your opponent.</dd></div>
+      <div><dt>Defense</dt><dd>How much you resist attacks from your opponent.</dd></div>
+      <div><dt>Accuracy</dt><dd>How easy it is to hit your opponent.</dd></div>
+      <div><dt>Evade</dt><dd>How hard it is for your opponent to hit you.</dd></div>
+    </dl>
+    <p>Use Edit Stats to customize a character. Totals above 21 must be reduced before saving. Saving below 21 asks you to confirm unused points. A successful save returns to the arcade.</p>
+    <p>Saved settings apply to that character on either side and stay in this browser. Hidden stats are visible in the editor, but do not appear on the matchup screen.</p>
+  </section>
+  <section>
+    <h2>Actions and turns</h2>
+    <p>During your turn, Fight, Guard, Focus, and your four special attacks appear below the characters. During the computer's turn, these are replaced by an Opponent's Turn button. Click it to let the AI take its move. When the game ends, New Game returns to character selection. Exit also returns to character selection.</p>
+    <p>Guard temporarily adds 3 to Defense and Evade. It lasts through the opponent's next move, then wears off, even if that move is Guard or a missed attack. Guard boosts do not change saved stats.</p>
+    <p>Fight rolls D20 + Accuracy. It hits only if the result is greater than 7 + the opponent's Evade. A tie misses and deals no damage.</p>
+    <p>On a hit, damage is 1 + D10 + Attack - the opponent's Defense, with a minimum of 0. Damage reduces the opponent's HP. D20 means a roll from 1 to 20; D10 means a roll from 1 to 10.</p>
+    <p>Focus restores one-fifth of maximum MP, up to the maximum, and uses your turn.</p>
+    <p>After your move, including a special attack, click Opponent's Turn. The turn counter starts at 1 and advances after each fighter's move. The AI uses Focus when its MP is below 20, unless Mana Drain or Charge makes it Fight instead. Otherwise, it randomly selects Fight, Guard, or an affordable special attack. It avoids unnecessary healing and uses Fight instead of replacing an existing buff. Silence prevents special attacks, and Confusion can override the selected move. Your turn resumes afterward if neither character has been defeated. A character reaching 0 HP loses.</p>
+  </section>
+  <section>
+    <h2>Special Attacks</h2>
+    <p>Each character has four special attacks. Customize their names and descriptions in Edit Stats, choosing a different type for each slot.</p>
+    <p>Attack bonuses apply only to that attack. MP is spent even on a miss, and each special uses a turn.</p>
+    <h3>Accurate Attack</h3>
+    <p>10 MP. Adds 3 Accuracy to the attack.</p>
+    <h3>Powerful Attack</h3>
+    <p>10 MP. Adds 3 Attack to the attack.</p>
+    <h3>Reckless Attack</h3>
+    <p>10 MP. Adds 5 Attack and reduces Accuracy by 2 for the attack.</p>
+    <h3>Overwhelming Attack</h3>
+    <p>20 MP. Adds 4 Attack and 3 Accuracy to the attack.</p>
+    <h3>Heal</h3>
+    <p>Heal costs 20 MP and restores 4 + D10 HP, capped at maximum HP. It uses a turn without an attack roll and does not replace buffs or debuffs.</p>
+    <p>The AI only considers Heal when missing at least 10 HP. For example, at 50 maximum HP it can heal at 40 HP or less, but not at 41 HP or more. Confusion may still force Heal regardless of this preference.</p>
+
+  </section>
+  <section>
+    <h2>Debuffs</h2>
+    <p>Each character has one buff slot and one debuff slot. Both sides' moves count toward durations, but timed effects are removed only during the affected fighter's own turn, before their move if already expired, or after it if the timer expires during that move. A new debuff replaces the previous debuff without removing the buff; a new buff replaces only the buff. Guard is separate from both slots. It can coexist with a buff and a debuff, and still expires after the opponent completes a move.</p>
+    <h3>Poison</h3>
+    <p>Poisoning Attack costs 20 MP and uses the normal attack rolls. A hit poisons the target, even when direct damage is 0. Before each move, a poisoned character takes D6 damage. A knockout from poison prevents the move and spends no MP.</p>
+    <p>Poison expires after five subsequent completed moves, counting both sides. Applying poison again refreshes its duration. The status slots display active effect names.</p>
+    <h3>Confusion</h3>
+    <p>Confusing Attack costs 20 MP. A hit applies Confusion, replacing the existing debuff. It lasts six subsequent completed moves, counting both sides.</p>
+    <p>When a confused character moves, roll a D10: 1 does nothing, 2-7 selects a random move, and 8-10 uses the intended move. Random choices include Fight, Guard, Focus, and all four of that character's special attacks, even moves the AI would normally avoid.</p>
+    <p>If the random move costs more MP than the character has, the move fails and the turn is spent without consuming MP. Skipped and failed moves count toward status durations.</p>
+    <h3>Silence</h3>
+    <p>Silencing Attack costs 20 MP and applies Silence on a hit, replacing the existing debuff. Silence lasts four subsequent completed moves, counting both sides, and disables every special attack.</p>
+    <p>A silenced character can still Fight, Guard, and Focus. The silenced AI chooses only Fight or Guard, or Focus if its MP is below 20.</p>
+    <h3>Mana Drain</h3>
+    <p>Mana Drain costs 20 MP and applies on a hit, replacing the previous debuff. It lasts 12 subsequent completed moves, counting both sides.</p>
+    <p>Before each of the affected character's own moves, they lose 10% of maximum MP, stopping at 0. No MP is drained during the other fighter's turn. A special chosen before the drain may become unaffordable: it fails, spends no additional MP, and wastes the turn.</p>
+    <p>When afflicted with Mana Drain, the AI uses Fight instead of Focus if its MP is below 20 when choosing a move. At 20 or more, it chooses normally before the drain is applied.</p>
+    <h3>Stat-lowering attacks</h3>
+    <p>Defense Lower, Attack Lower, Accuracy Lower, and Evasiveness Lower cost 20 MP. On a hit, they lower Defense, Attack, Accuracy, or Evade respectively by 2 for six subsequent completed moves, counting both sides.</p>
+    <p>The new effect replaces the current debuff without stacking. It does not remove Guard or a buff, and it never changes saved stats. The status slot shows the effect name; debug formulas show the reduction.</p>
+
+  </section>
+  <section>
+    <h2>Buffs</h2>
+    <p>A new buff replaces only the current buff. Guard remains separate. Buff effects resolve before debuff effects.</p>
+    <h3>Stat boosts</h3>
+    <p>Defense Boost, Attack Boost, Accuracy Boost, and Evasiveness Boost cost 10 MP. They add 2 to the respective stat for six subsequent completed moves, counting both sides. They apply to the user without a hit roll and consume the turn.</p>
+    <p>A boost replaces only the current buff and can coexist with Guard and a debuff. If the AI already has a buff and selects another buffing move, it uses Fight instead without spending MP. Confusion can still force a random buffing move. Bonuses and reductions combine. Timed buffs expire only during the affected fighter's own turn.</p>
+    <h3>Mana Regeneration</h3>
+    <p>Mana Regeneration costs 10 MP and occupies the buff slot for 12 subsequent completed moves, counting both sides. Before each of the user's own moves, it restores 10% of maximum MP, capped at maximum. The first restoration happens on the user's next move. The buff slot displays this as Mana Regen.</p>
+    <p>Buffs resolve before debuffs. With both Mana Regeneration and Mana Drain, MP is restored and capped first, then drained. Timed effects expire only on the affected fighter's turn.</p>
+    <h3>Charge</h3>
+    <p>Charge costs 20 MP and replaces the current buff. If the AI would Focus while Charge is active, it uses Fight instead. It lasts two subsequent completed moves, counting both sides, and doubles the next attack's final damage. Fight and damaging specials consume Charge, including on a miss or a zero-damage hit.</p>
+    <p>Guard, Focus, Heal, and non-attacking buffs do not consume Charge or trigger doubled damage. Using a different buff replaces Charge. Expiry occurs only on the affected fighter's turn.</p>
+    <h3>Summon Ally</h3>
+    <p>Summon Ally costs 20 MP and summons a random roster character by default. Choose a specific ally in Edit Stats to use that character instead. Random allies are selected when the special is cast. It occupies the buff slot for 10 subsequent completed moves, counting both sides, and starts attacking on the caster's next move.</p>
+    <p>The ally attacks automatically after buff and debuff effects, before the caster's action. It has fixed Accuracy 5 and Attack 3. Its D20 + 5 must exceed 8 + the opponent's Evade; damage is 1 + D10 + 3 - Defense, with a minimum of 0. Guard protects against both attacks.</p>
+    <p>The ally uses no additional MP and has no separate HP or turn. Its attack still happens if Confusion later skips the caster's action. A knockout caused by the ally ends the duel before the caster acts. Replacing the buff dismisses the ally.</p>
+
+  </section>
+  <div class="bottom-actions"><a routerLink="/arcade" class="back-button">Back to Arcade</a></div>
+</main>

@@ -2,7 +2,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddHttpClient("ArcadeDialogue", client => client.Timeout = TimeSpan.FromSeconds(7));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

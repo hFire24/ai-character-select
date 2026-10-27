@@ -1,0 +1,76 @@
+<section class="editor" aria-labelledby="edit-heading">
+  <h1 id="edit-heading">Edit Stats</h1>
+  <label>Character
+    <select [ngModel]="characterId" (ngModelChange)="load($event)" [disabled]="dirty">
+      @for (character of characters(); track character.id) {
+        <option [ngValue]="character.id">{{ character.shortName || character.name }}</option>
+      }
+    </select>
+  </label>
+  <p class="edit-hint" [style.visibility]="dirty ? 'visible' : 'hidden'">Save or discard your changes before switching characters.</p>
+  <div class="stat-sections">
+  <fieldset>
+    <legend>HP and MP: {{ resourceTotal }} / 150</legend>
+    @for (key of resourceKeys; track key) {
+      <label class="slider-row">
+        <input type="range" min="40" max="110" step="10" [ngModel]="draft.stats[key]" (ngModelChange)="changeStat(key, $event)">
+        <span>{{ key.toUpperCase() }}: {{ draft.stats[key] }}</span>
+      </label>
+    }
+    <p>40-110 each, in steps of 10. Increasing one decreases the other. Combined total: 150.</p>
+  </fieldset>
+  <fieldset>
+    <legend>Stats: {{ hiddenTotal }} / 21</legend>
+    @for (key of hiddenKeys; track key) {
+      <label class="slider-row">
+        <input type="range" min="3" max="7" step="1" [ngModel]="draft.stats[key]" (ngModelChange)="changeStat(key, $event)">
+        <span>{{ key === 'evade' ? 'Evade' : key.charAt(0).toUpperCase() + key.slice(1) }}: {{ draft.stats[key] }}</span>
+      </label>
+    }
+    <p class="stat-help" [class.stat-warning]="hiddenTotal > 21" aria-live="polite">
+      @if (hiddenTotal > 21) {
+        Total {{ hiddenTotal }}/21. Lower stats to save.
+      } @else {
+        3-7 each. Combined maximum: 21.
+      }
+    </p>
+  </fieldset>
+  </div>
+  <h2>Special attacks</h2>
+  <p>Give each attack a name and description. All four types must be different.</p>
+  <div class="attacks">
+    @for (special of draft.specials; track $index; let i = $index) {
+      <fieldset>
+        <legend>Attack {{ i + 1 }}</legend>
+        <label>Name<input type="text" [(ngModel)]="special.name" (ngModelChange)="changed()" required></label>
+        <label>Description<textarea [(ngModel)]="special.description" (ngModelChange)="changed()" rows="3"></textarea></label>
+        <label>Type<select [attr.aria-describedby]="'type-description-' + i" [(ngModel)]="special.effect" (ngModelChange)="changed()">
+          @for (group of effectGroups; track group.label) {
+            <optgroup [label]="group.label">
+              @for (effect of group.effects; track effect.value) {
+                <option [ngValue]="effect.value" [disabled]="typeTaken(effect.value, i)">{{ effect.label }}</option>
+              }
+            </optgroup>
+          }
+        </select></label>
+        <p class="type-description" [id]="'type-description-' + i" aria-live="polite"><strong>Type Description</strong><br>{{ specialEffects[special.effect].description }}</p>
+      </fieldset>
+    }
+  </div>
+  <label>Summoned Ally
+    <select [(ngModel)]="draft.allyId" (ngModelChange)="changed()">
+      <option [ngValue]="null">Random character</option>
+      @for (character of sortedAllies(); track character.id) {
+        <option [ngValue]="character.id">{{ character.shortName || character.name }}</option>
+      }
+    </select>
+  </label>
+  @if (error) { <p role="alert">{{ error }}</p> }
+  <p role="status">{{ message }}</p>
+  <div class="editor-actions">
+    <button (click)="save()" [disabled]="hiddenTotal > 21">Save</button>
+    @if (dirty) { <button (click)="load(characterId)">Discard changes</button> }
+    <button (click)="close.emit()">{{ dirty ? 'Cancel' : 'Done' }}</button>
+  </div>
+  <p>Changes are saved in this browser for each character.</p>
+</section>

@@ -2,7 +2,6 @@
   "name": "character-select",
   "version": "0.0.0",
   "scripts": {
-    "check:arcade": "node scripts/check-arcade.cjs",
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
     "start:backend": "cd backend && dotnet run",
