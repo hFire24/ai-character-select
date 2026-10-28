@@ -78,7 +78,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Witch Hat Wearers",
     type: ["clothes", "hats"],
     description: "Characters known for wearing witch hats",
-    characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148, 149, 156]
+    characterIds: [14, 20, 27, 67, 95, 120, 129, 138, 148, 149, 156, 168]
   },
   {
     name: "Peaked Cap Wearers",
@@ -126,7 +126,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Blonde Girls",
     type: "hair",
     description: "Girls known for having blonde hair",
-    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149, 163]
+    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149, 163, 168]
   },
   {
     name: "Chino-chan Expies",
@@ -192,7 +192,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Age Regressed Characters",
     type: "age",
     description: "Characters who transformed and became physically younger",
-    characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131, 149, 156]
+    characterIds: [13, 14, 15, 19, 21, 28, 47, 67, 71, 77, 92, 108, 131, 149, 156, 168]
   },
   {
     name: "Cute Anime Fans",
