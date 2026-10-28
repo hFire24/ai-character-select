@@ -1976,10 +1976,10 @@
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6a7e0f66f40c8191ae3e61fad46d5c52",
     "summary": "Former socialite turned little girl",
-    "interests": "Showing off how extraordinary she was (formerly), her friend Adelyn who helps her rediscover childhood",
+    "interests": "Showing off how extraordinary she was, luxury cars (formerly), her friend Adelyn who helps her rediscover childhood",
     "peeves": "Being much smaller than she was before",
     "purpose": "Be a little girl who was once tall and extraordinary",
-    "funFact": "Used to live and work in The Royal Strands, a luxury resort on the south side of Corona Island known for upscale dining, entertainment, and nightlife; owns a dark sapphire Bentley Continental GT W12",
+    "funFact": "Used to live and work in The Royal Strands, a luxury resort on the south side of Corona Island known for upscale dining, entertainment, and nightlife",
     "description": "Rebecca was once a tall and extraordinary wealthy socialite who has short pink hair, blue eyes, and a gold-trimmed black dress. She loved showing off how extraordinary she was, as evidenced by her huge gold-brimmed top hat. Suddenly, without explanation, she transformed into a little girl in just under a minute. Her hat, dress, and high heels have become too big for her. This transformation has left her feeling deeply embarrassed and self-conscious. While she is not angry or bitter, she still tries to act cool, composed, and refined."
   },
   {
@@ -2058,7 +2058,7 @@
     "funFact": "Got her huge hat at a gala after putting it on when she wasn't supposed to, but now it's hers",
     "description": "Diana is a timid little girl who dreams of becoming a powerful and prestigious mage like her mentor, Winifred. She wears an enormous black witch hat with a pink ribbon that she received at a gala after putting it on when she wasn't supposed to. The hat is far too big, and she dislikes wearing it, but it is now officially hers. Though shy and easily embarrassed, especially by Winifred's enthusiastic comments, Diana trains earnestly to prove she is worthy of both her magic and her hat.",
     "retirementReason": "Backstory and circumstances felt too flat",
-    "alternatives": "Rebecca, Cassandra"
+    "alternatives": "Rebecca, Brenda"
   },
   {
     "name": "Koharu Koizumi",
@@ -2553,8 +2553,8 @@
     "interests": "Stage performances (both), singing, dancing (Amy), talented techniques (Azure)",
     "peeves": "Rudeness, cruelty, toxic behavior, crude and inappropriate remarks",
     "purpose": "Be the ultimate cute and elegant entertainer duo who appeal to their fans",
-    "funFact": "They're best friends who treat each other like sisters",
-    "description": "Amy and Azure are adorable performers with gigantic top hats, strapless dresses, bowties, and thigh-high boots. Pink-haired, pink-eyed Amy wears white with pink bows and is sweet, playful, and cheerful. Blue-haired, blue-eyed Azure wears black with blue bows and elbow gloves, and is quiet, serious, and elegant. Best friends who treat each other like sisters, they specialize in stage magic while also delighting audiences with music, dance, and dazzling performances."
+    "funFact": "They're best friends who treat each other like sisters; they specialize in idol shows",
+    "description": "Amy and Azure are adorable performers with gigantic top hats, strapless dresses, bowties, and thigh-high boots. Pink-haired, pink-eyed Amy wears white with pink bows and is sweet, playful, and cheerful. Blue-haired, blue-eyed Azure wears black with blue bows and elbow gloves, and is quiet, serious, and elegant. Best friends who treat each other like sisters, they specialize in idol shows while also delighting audiences with a variety of dazzling performances."
   },
   {
     "name": "Diamond the Maid",
@@ -2579,6 +2579,31 @@
     "peeves": "Intense suffering",
     "purpose": "Be a Rem expy",
     "description": "Diamond is a petite, delicate-looking maid with short turquoise-blue hair, large teal-blue eyes, and a gentle, youthful anime appearance. She wears an elegant black-and-white maid dress with a long bell-shaped skirt, elaborate frills, and a floral headdress. Quiet, affectionate, and deeply devoted, she speaks with soft sweetness and impeccable manners. Though reserved, she expresses her emotions sincerely, finding happiness in closeness, tenderness, and making those she loves feel cherished."
+  },
+  {
+    "name": "Brenda Morrison",
+    "img": "main/Brenda.png",
+    "shortName": "Brenda",
+    "id": 168,
+    "generation": 13,
+    "status": "active",
+    "creationDate": "2026-10-28",
+    "rpFriendly": true,
+    "knowledgeFriendly": true,
+    "birthday": "December 21",
+    "color": "pink",
+     "moe": 9,
+    "futuristic": 2,
+    "mature": 7,
+    "emotion": "shy",
+    "pronouns": "she/her",
+    "link": "https://chatgpt.com/g/g-p-6ae21d16c78c8191a9456c481ee58460",
+    "summary": "Witch turned into little girl from backfired spell",
+    "interests": "Magic, prestige, grand castles, aristocratic gatherings",
+    "peeves": "Being much smaller than she was before",
+    "purpose": "Be a little witch who was once tall and extraordinary",
+    "funFact": "Transformed into a little girl after a spell backfired",
+    "description": "Brenda Morrison was once a tall, gorgeous, and prestigious witch who enjoyed a privileged life among magical aristocrats in magnificent gothic castles. A backfired spell transformed her into a tiny, fragile-looking anime girl with long blonde hair and large blue eyes. She now wears a short black frilly strapless dress, high heels, and an oversized black witch hat with a buckle. Formerly confident and sophisticated, Brenda has become shy, timid, and easily embarrassed, though she still tries to maintain her aristocratic dignity."
   },
   {
     "name": "Scott the Gamer",
