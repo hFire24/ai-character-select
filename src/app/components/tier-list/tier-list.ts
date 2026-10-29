@@ -16,7 +16,7 @@ import { MOE_THRESHOLD, NON_MOE_THRESHOLD } from '../../config/character-thresho
   styleUrl: './tier-list.scss'
 })
 export class TierList {
-  readonly savedSession = new SavedSession('tier-list', ["tiers","characterFilter","filterTierCharacters","characterSort","splitTwins"]);
+  readonly savedSession = new SavedSession('tier-list', ["tiers","characterFilter","filterTierCharacters","characterSort","splitTwins","creationDateStart","creationDateEnd"]);
 
   ngDoCheck(): void {
     this.savedSession.save(this);
@@ -27,6 +27,48 @@ export class TierList {
   filterTierCharacters: boolean = false;
   characterSort: SortField = 'none';
   splitTwins: boolean = false;
+  characterPoolCollapsed = false;
+  creationDates: string[] = [];
+  creationDateStart: string | null = null;
+  creationDateEnd: string | null = null;
+
+  get creationDateMax(): number { return Math.max(0, this.creationDates.length - 1); }
+  get creationDateStartIndex(): number {
+    if (!this.creationDateStart) return 0;
+    const index = this.creationDates.findIndex(date => date >= this.creationDateStart!);
+    return index < 0 ? this.creationDateMax : index;
+  }
+  get creationDateEndIndex(): number {
+    if (!this.creationDateEnd) return this.creationDateMax;
+    const index = this.creationDates.findIndex(date => date > this.creationDateEnd!);
+    return index < 0 ? this.creationDateMax : Math.max(0, index - 1);
+  }
+
+  onCreationDateChange(handle: 'start' | 'end', event: Event): void {
+    const index = Number((event.target as HTMLInputElement).value);
+    const start = handle === 'start' ? index : this.creationDateStartIndex;
+    const end = handle === 'end' ? index : this.creationDateEndIndex;
+    this.creationDateStart = this.creationDates[Math.min(start, end)] ?? null;
+    this.creationDateEnd = this.creationDates[Math.max(start, end)] ?? null;
+    if (Math.min(start, end) === 0) this.creationDateStart = null;
+    if (Math.max(start, end) === this.creationDateMax) this.creationDateEnd = null;
+    this.selectedPoolCharIdx = null;
+    this.selectedTierCharIdx = null;
+  }
+
+  resetCreationDateRange(): void {
+    this.creationDateStart = null;
+    this.creationDateEnd = null;
+    this.selectedPoolCharIdx = null;
+    this.selectedTierCharIdx = null;
+  }
+
+  private isInCreationDateRange(character: any): boolean {
+    if (!this.creationDateStart && !this.creationDateEnd) return true;
+    const date = character.creationDate;
+    return !!date && (!this.creationDateStart || date >= this.creationDateStart)
+      && (!this.creationDateEnd || date <= this.creationDateEnd);
+  }
   router: any;
   selectedPoolCharIdx: number | null = null;
   selectedTierCharIdx: { tierIdx: number; charIdx: number } | null = null;
@@ -62,7 +104,7 @@ export class TierList {
         assigned.add(char.name);
       }
     }
-    const unassigned = this.allCharacters.filter(c => !assigned.has(c.name));
+    const unassigned = this.allCharacters.filter(c => !assigned.has(c.name) && this.isInCreationDateRange(c));
     
     // Build filter options based on selected filter
     const filterOptions = this.getFilterOptions();
@@ -144,7 +186,7 @@ export class TierList {
   }
 
   isTierCharacterVisible(character: any): boolean {
-    if (!this.filterTierCharacters || this.characterFilter === 'all') {
+    if (!this.filterTierCharacters) {
       return true;
     }
 
@@ -152,8 +194,10 @@ export class TierList {
     // the fully populated pool record so every filter has the fields it needs.
     const filterableCharacter = this.allCharacters.find(c => c.id === character.id);
     if (!filterableCharacter) {
-      return false;
+      return this.characterFilter === 'all' && !this.creationDateStart && !this.creationDateEnd;
     }
+
+    if (!this.isInCreationDateRange(filterableCharacter)) return false;
 
     return new CharacterFilterPipe().transform(
       [filterableCharacter],
@@ -203,9 +247,12 @@ export class TierList {
             moe: c.moe,
             musicEnjoyer: c.musicEnjoyer,
             personalityGirl: c.personalityGirl,
-            pronouns: c.pronouns
+            pronouns: c.pronouns,
+            creationDate: c.creationDate
           };
         });
+        this.creationDates = [...new Set(data.map(c => c.creationDate)
+          .filter((date): date is string => !!date && !Number.isNaN(Date.parse(date))))].sort();
         resolve();
       });
     });
@@ -579,6 +626,8 @@ export class TierList {
         }
       }
       this.filterTierCharacters = metadata.filterTierCharacters === true;
+      this.creationDateStart = typeof metadata.creationDateStart === 'string' ? metadata.creationDateStart : null;
+      this.creationDateEnd = typeof metadata.creationDateEnd === 'string' ? metadata.creationDateEnd : null;
       // Check and update Split Twins setting before loading characters
       let needsCharacterReload = false;
       if (metadata.splitTwins !== undefined && this.splitTwins !== metadata.splitTwins) {
@@ -658,6 +707,8 @@ export class TierList {
       exportDate: new Date().toISOString(),
       characterFilter: this.characterFilter,
       filterTierCharacters: this.filterTierCharacters,
+      creationDateStart: this.creationDateStart,
+      creationDateEnd: this.creationDateEnd,
       splitTwins: this.splitTwins,
       tiers: this.tiers.map(tier => ({
         name: tier.name,

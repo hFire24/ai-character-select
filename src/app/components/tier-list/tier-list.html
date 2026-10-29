@@ -75,8 +75,13 @@
 <div class="character-pool"
   (dragover)="onDragOver($event)"
   (drop)="onPoolDrop($event)">
-  <h2>Character Pool</h2>
-  <div class="character-pool-list">
+  <h2>
+    <button class="character-pool-toggle" (click)="characterPoolCollapsed = !characterPoolCollapsed"
+      [attr.aria-expanded]="!characterPoolCollapsed" aria-controls="characterPoolList">
+      <span aria-hidden="true">{{ characterPoolCollapsed ? '▸' : '▾' }}</span> Character Pool
+    </button>
+  </h2>
+  <div id="characterPoolList" class="character-pool-list" [hidden]="characterPoolCollapsed">
     <div *ngFor="let char of characterPool; let j = index" class="tier-character"
       [class.selected]="selectedPoolCharIdx === j"
       draggable="true"
@@ -93,6 +98,25 @@
   </div>
 </div>
 <div class="filter-section">
+  <div *ngIf="filterTierCharacters" class="creation-date-filter" role="group" aria-labelledby="creationDateLabel">
+    <div class="creation-date-labels">
+      <span>{{ creationDates[creationDateStartIndex] || 'No creation dates' }}</span>
+      <span id="creationDateLabel">Creation Date Range</span>
+      <span>{{ creationDates[creationDateEndIndex] }}</span>
+    </div>
+    <div class="dual-range"
+      [style.--range-start]="(creationDateStartIndex / (creationDateMax || 1) * 100) + '%'"
+      [style.--range-end]="(creationDateEndIndex / (creationDateMax || 1) * 100) + '%'">
+      <input type="range" class="range-thumb-a" min="0" [max]="creationDateMax" step="1"
+        [value]="creationDateStartIndex" [disabled]="creationDates.length < 2"
+        aria-label="Earliest creation date" [attr.aria-valuetext]="creationDates[creationDateStartIndex]"
+        (input)="onCreationDateChange('start', $event)">
+      <input type="range" class="range-thumb-b" min="0" [max]="creationDateMax" step="1"
+        [value]="creationDateEndIndex" [disabled]="creationDates.length < 2"
+        aria-label="Latest creation date" [attr.aria-valuetext]="creationDates[creationDateEndIndex]"
+        (input)="onCreationDateChange('end', $event)">
+    </div>
+  </div>
   <label for="characterFilter">Filter:</label>
   <select id="characterFilter" (change)="onFilterChange($event)">
     <option value="all">All characters</option>
@@ -116,10 +140,11 @@
     <option value="id">ID</option>
     <option value="shortName">Name</option>
     <option value="status">Status</option>
+    <option value="creationDate">Date</option>
   </select>
   <br>
   <label for="filterTierCharacters">Hide filtered characters in tier list: </label>
-  <input type="checkbox" id="filterTierCharacters" [checked]="filterTierCharacters" (change)="filterTierCharacters = $any($event.target).checked">
+  <input type="checkbox" id="filterTierCharacters" [checked]="filterTierCharacters" (change)="filterTierCharacters = $any($event.target).checked; !filterTierCharacters && resetCreationDateRange()">
   <br>
   <label for="splitTwins">Split Twins:</label>
   <input type="checkbox" id="splitTwins" (change)="onSplitTwinsChange($event)">
