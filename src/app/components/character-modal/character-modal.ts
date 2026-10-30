@@ -70,6 +70,8 @@ export class CharacterModal {
   parentTransition: 'idle' | 'leaving' | 'entering' = 'idle';
   loadingParent = false;
   parentName = '';
+  relatedCharacters: Character[] = [];
+  alternativeCharacters: { name: string; character?: Character }[] = [];
   private parentCharacter: Character | null = null;
 
   get statsCharacter(): Character {
@@ -508,7 +510,65 @@ export class CharacterModal {
 
   ngOnChanges(): void {
     this.loadParentName();
+    this.loadRelatedCharacters();
     this.loadChatLink();
+  }
+
+  private loadRelatedCharacters(): void {
+    const characterId = this.character.id;
+    this.relatedCharacters = [];
+    this.alternativeCharacters = (this.character.alternatives ?? '')
+      .split(',')
+      .map(name => ({ name: name.trim() }))
+      .filter(alternative => alternative.name.length > 0);
+    forkJoin({
+      characters: this.characterService.getCharacters(),
+      splitCharacters: this.characterService.getCharactersSplitTwins()
+    }).subscribe(({ characters, splitCharacters }) => {
+      if (this.character.id !== characterId) return;
+      const sideCharacters = characters.filter(character => character.parentId === characterId);
+      const rosterIds = new Set(characters.map(character => character.id));
+      const individualCharacters = splitCharacters.filter(character =>
+        character.parentId === characterId && !rosterIds.has(character.id)
+      );
+      const availableCharacters = new Map(
+        [...splitCharacters, ...characters].map(character => [character.id, character])
+      );
+      const charactersByName = new Map<string, Character>();
+      for (const character of availableCharacters.values()) {
+        charactersByName.set(character.name.trim().toLowerCase(), character);
+        charactersByName.set(character.shortName.trim().toLowerCase(), character);
+      }
+      this.alternativeCharacters = this.alternativeCharacters.map(alternative => ({
+        ...alternative,
+        character: charactersByName.get(alternative.name.toLowerCase())
+      }));
+      const relatedIds = new Set([
+        this.character.parentId,
+        ...sideCharacters.map(character => character.id),
+        ...individualCharacters.map(character => character.id),
+        ...(this.character.relatedIds ?? [])
+      ]);
+      this.relatedCharacters = [...relatedIds]
+        .filter(id => id != null && id !== characterId)
+        .map(id => availableCharacters.get(id!))
+        .filter((character): character is Character => character != null)
+        .sort((a, b) => {
+          if (a.id === this.character.parentId) return -1;
+          if (b.id === this.character.parentId) return 1;
+          return a.id - b.id;
+        });
+    });
+  }
+
+  openRelatedCharacter(character: Character): void {
+    if (this.loadingParent || this.parentTransition !== 'idle') return;
+    this.pendingParent = character;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.showPendingParent();
+    } else {
+      this.parentTransition = 'leaving';
+    }
   }
 
   private loadParentName(): void {
@@ -569,6 +629,7 @@ export class CharacterModal {
       this.character = this.pendingParent;
       this.pendingParent = null;
       this.loadParentName();
+      this.loadRelatedCharacters();
       this.loadChatLink();
       this.chatFlavor = null;
       if (!this.isMobile()) {

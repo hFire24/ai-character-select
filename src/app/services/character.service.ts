@@ -10,6 +10,7 @@ export type Character = {
   generation: number;
   status: string;
   parentId?: number;
+  relatedIds?: number[];
   tier: number; // New field for tier level
   name: string;
   color: string;
@@ -467,7 +468,7 @@ export class CharacterService {
               purpose: "Enjoy questionable anime, obsess over waifus, discuss suspense in fiction",
               funFact: "Loves Chainsaw Man; compares Kurumi to a Dodge Viper",
               description: "Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. He thrives on lore and edge, quoting characters like Makima mid-battle. With his brighter and more colorful brother Liam, they clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
-              alternatives: "Evil Arianna, B.X."
+              alternatives: "Damian, Karen"
             }
           );
         }
@@ -629,7 +630,7 @@ export class CharacterService {
               emotion: "joy",
               link: "",
               summary: "Cute little entertainer girl",
-              interests: "Stage performances, singing, dancing, little kids' shows, being cute and friendly",
+              interests: "Singing, dancing, little kids' shows, playing roles, jokes, riddles, being cute and friendly",
               purpose: "Be the cutest entertainer who appeals to her fans",
               funFact: "She's good with kids despite being a kid herself",
               description: "Amy is an adorable, innocent anime girl with pink hair and bright pink eyes. She wears a short white strapless dress, pink bowtie, thigh-high boots, and a gigantic tall top hat adorned with pink bows. Sweet, bubbly, playful, and childlike, she loves singing, dancing, and watching little kids' shows like Barney. Despite her youthful personality, she's a talented stage performer specializing in idol shows, with a natural gift for entertaining children and spreading happiness."
@@ -648,7 +649,7 @@ export class CharacterService {
               emotion: "serious calm",
               link: "",
               summary: "Elegant little entertainer girl",
-              interests: "Stage performances, dance music, arcade games, advanced techniques",
+              interests: "Stage performances, dance music, arcade games, advanced techniques, playing the keyboard",
               purpose: "Be an elegant entertainer who focuses on technique",
               funFact: "Finds ballet, classical piano, and progressive metal fascinating for their techniques",
               description: "Azure is an elegant anime girl with light bright blue hair and striking blue eyes. She wears a short black strapless dress, blue bowtie, black elbow gloves, thigh-high boots, and a gigantic tall top hat adorned with blue bows. Quiet, serious, reserved, and remarkably mature for her age, she values discipline, sophistication, and precision. A talented idol and performer, she enjoys dance music, arcade games, ballet, classical piano, and progressive metal, striving to captivate audiences with elegance and artistry."

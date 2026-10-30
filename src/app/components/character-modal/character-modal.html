@@ -61,10 +61,10 @@
           <div id="modalInactive"><strong>Inactive Reason</strong>: {{character.inactiveReason}}</div>
         }
         @if (character.alternatives) {
-          <div id="modalAlternatives"><strong>Alternatives</strong>: {{character.alternatives}}</div>
+          <div id="modalAlternatives"><strong>Alternatives</strong>: @for (alternative of alternativeCharacters; track $index; let last = $last) {@if (alternative.character; as target) {<a href="#" (click)="$event.preventDefault(); openRelatedCharacter(target)">{{ alternative.name }}</a>} @else {{{ alternative.name }}}@if (!last) {, }}</div>
         }
-        @if (parentName) {
-          <div id="parentOf"><strong>Main Character</strong>: <u (click)="openParent()">{{ parentName }}</u></div>
+        @if (relatedCharacters.length) {
+          <div id="relatedCharacters"><strong>Related Characters</strong>: @for (related of relatedCharacters; track related.id; let last = $last) {<a href="#" (click)="$event.preventDefault(); openRelatedCharacter(related)">@if (related.id === character.parentId) {<strong>{{ related.shortName }}</strong>} @else {{{ related.shortName }}}</a>@if (!last) {, }}</div>
         }
         <div id="modalDescription" style="display: none;">{{character.description}}</div>
       </div>
