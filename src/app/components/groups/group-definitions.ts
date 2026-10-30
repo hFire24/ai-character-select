@@ -282,24 +282,24 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Generational Champions",
     type: "generational",
     description: "Characters who had the most chats in their respective generations. In cases of ties, the most iconic character is chosen.",
-    characterIds: [5, 14, 18, 25, 27, 35, 47, 51, 67, 90, 107, 123, 142]
+    characterIds: [5, 14, 18, 25, 27, 35, 47, 51, 67, 90, 107, 123, 151, 153]
   },
   {
     name: "Generational Last Places",
     type: "generational",
     description: "Characters who had the least chats in their respective generations. In cases of ties, the least iconic character is chosen.",
-    characterIds: [17, 20, 23, 32, 38, 50, 56, 71, 89, 96, 125, 140]
+    characterIds: [17, 20, 23, 32, 38, 50, 56, 71, 89, 96, 125, 147, 167]
   },
   {
     name: "Generational Cutest",
     type: "generational",
     description: "The cutest main character from each generation, selected manually. There were some really close calls.",
-    characterIds: [15, 19, 26, 27, 35, 46, 58, 67, 92, 94, 122, 148]
+    characterIds: [15, 19, 26, 27, 35, 46, 58, 67, 92, 94, 122, 148, 164]
   },
   {
     name: "Generational Least Cute",
     type: "generational",
     description: "The least cute main character from each generation, selected manually.",
-    characterIds: [16, 20, 23, 32, 2, 50, 56, 78, 84, 103, 128, 142]
+    characterIds: [16, 20, 23, 32, 2, 50, 56, 78, 84, 103, 128, 142, 143]
   },
 ];
