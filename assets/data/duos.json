@@ -974,6 +974,12 @@
     },
     {
       "id1": 19,
+      "id2": 26,
+      "name": "Pink-Haired Princess-Maid Duo",
+      "altName": "Pink-Haired Maid-Princess Duo"
+    },
+    {
+      "id1": 19,
       "id2": 29,
       "name": "Pink Girly Girls"
     },
@@ -2345,7 +2351,13 @@
     {
       "id1": 74,
       "id2": 106,
-      "name": "Chino-chan Expies"
+      "name": "Light Blue-Haired Maid-Princess Duo",
+      "altName": "Light Blue-Haired Princess-Maid Duo"
+    },
+    {
+      "id1": 74,
+      "id2": 167,
+      "name": "Light Blue-Haired Maids"
     },
     {
       "id1": 75,
@@ -2723,6 +2735,11 @@
       "name": "Jadefield Sisters"
     },
     {
+      "id1": 152,
+      "id2": 153,
+      "name": "Cute Scene Reenactors"
+    },
+    {
       "id1": 153,
       "id2": 167,
       "name": "Chino-rem Expy Duo"
@@ -2741,16 +2758,6 @@
       "id1": 165,
       "id2": 166,
       "name": "Little Stage Performers"
-    },
-    {
-      "id1": 167,
-      "id2": 74,
-      "name": "Light Blue-Haired Maids"
-    },
-    {
-      "id1": 167,
-      "id2": 74,
-      "name": "Light Blue-Haired Maids"
     }
   ]
 }
