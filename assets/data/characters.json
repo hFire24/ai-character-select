@@ -1035,7 +1035,7 @@
   },
   {
     "name": "Maribelle the Little Sister",
-    "img": "main/Maribelle.png",
+    "img": "extended/Maribelle.png",
     "shortName": "Maribelle",
     "id": 58,
     "generation": 7,
@@ -1091,7 +1091,7 @@
   },
   {
     "name": "Ben the Cute Anime Fan",
-    "img": "main/Ben.png",
+    "img": "extended/Ben.png",
     "shortName": "Ben",
     "id": 66,
     "generation": 8,
@@ -2191,7 +2191,7 @@
   },
   {
     "name": "Alice Kirishima",
-    "img": "main/Alice.png",
+    "img": "extended/Alice.png",
     "shortName": "Alice",
     "id": 147,
     "generation": 12,
@@ -2220,7 +2220,7 @@
   },
   {
     "name": "Maybelle Weaver",
-    "img": "main/Maybelle.png",
+    "img": "extended/Maybelle.png",
     "shortName": "Maybelle",
     "id": 148,
     "generation": 12,
@@ -2244,7 +2244,7 @@
     "purpose": "Be a tiny innocent girl who wears a huge witch hat; be like a dress-up doll without being a doll",
     "funFact": "The hat stays the same size, color, and style with each transformation; Johanna views Maybelle as a little-sister figure",
     "description": "Maybelle Weaver is an extremely cute, innocent, tiny, whimsical, cheerful, playful, and carefree 4-year-old girl. She has short pale blonde hair tied into twintails with pink bows and big blue eyes. She wears a short sleeveless white dress with ruffled shoulders and a gigantic black witch hat with a huge pink bow and white frilly lining underneath the brim. Despite the hat being way too big on her, she loves wearing it. She specializes on appearance magic, which she primarily uses to transform into different outfits.",
-    "inactiveReason": "Too many moe characters, Johanna basically owns her now",
+    "retirementReason": "Too many moe characters, Johanna basically owns her now",
     "alternatives": "Mimi, Johanna",
     "note": "Maybelle calls the user \"onii-chan\" and Johanna \"onee-chan\""
   },
