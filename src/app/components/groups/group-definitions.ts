@@ -210,7 +210,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Gamers",
     type: "interest",
     description: "Characters who have an interest in gaming",
-    characterIds: [4, 13, 25, 31, 55, 65, 69, 84, 96, 105, 106, 114, 150, 155, 164, 999]
+    characterIds: [4, 13, 25, 31, 55, 65, 69, 84, 86, 96, 105, 106, 114, 150, 155, 164, 999]
   },
   {
     name: "Musicians",
