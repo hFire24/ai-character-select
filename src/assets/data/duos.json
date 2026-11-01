@@ -1372,6 +1372,11 @@
     },
     {
       "id1": 29,
+      "id2": 120,
+      "name": "Pink Magical Girls"
+    },
+    {
+      "id1": 29,
       "id2": 145,
       "name": "Pink Gothic-Lolita and Magical Girl"
     },
@@ -2623,6 +2628,11 @@
       "id1": 119,
       "id2": 129,
       "name": "Costume Makers"
+    },
+    {
+      "id1": 120,
+      "id2": 129,
+      "name": "Pretend Witches"
     },
     {
       "id1": 122,
