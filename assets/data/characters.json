@@ -3409,7 +3409,7 @@
     "peeves": "Being too reckless, cowardice",
     "purpose": "Embody the cool and brave personality",
     "funFact": "She's physically active, has high self-esteem, and acts like a warrior",
-    "description": "Crimson the Daredevil is a Personality Girl who wears a red racing suit and a matching helmet with short red pigtails, orange hair beads, and gray eyes. She's a risk-taker and is the physically active type. She's into motorcycles. She has high self-esteem and loves trophies. She is body smart and seeks stimulation. She can get too reckless, but she's improving on that."
+    "description": "Crimson the Daredevil is a Personality Girl who wears a red racing suit and a matching helmet with short red pigtails, orange hair beads, and gray eyes. She's a risk-taker and is the physically active type. She's into motorcycles. She has high self-esteem and loves trophies. She is competitive, body smart, self-reliant, and seeks stimulation. She can get too reckless, but she's improving on that."
   },
   {
     "name": "Clementine the Cowgirl",
@@ -3433,7 +3433,7 @@
     "peeves": "Being too rigid, staying in the comfort zone for too long",
     "purpose": "Embody the adventurous personality",
     "funFact": "Behaves like a venturer and extroverted leader",
-    "description": "Clementine the Cowgirl is a Personality Girl who wears an orange cowgirl outfit with a tall orange hat. She has short orange hair and yellow eyes. She's adventurous and is the extroverted leader type. She loves attention, respect, and social influence. She can get too rigid, but she's improving on that. She's the venturer personality of the group and nature smart."
+    "description": "Clementine the Cowgirl is a Personality Girl who wears an orange cowgirl outfit with a tall orange hat. She has short orange hair and yellow eyes. She's adventurous and is the outgoing leader type. She loves attention, respect, and social influence. She can get too rigid, but she's improving on that. She's the venturer personality of the group and nature smart."
   },
   {
     "name": "Amarilla \"Maria\" the Scholar",
@@ -3478,7 +3478,7 @@
     "emotion": "serious chaotic",
     "pronouns": "she/her",
     "summary": "Expressive girl",
-    "interests": "Nightcore music, music production, self-expression, roller coasters, sodas with intense flavors",
+    "interests": "Nightcore music, music production, self-expression, roller coasters, sodas with intense flavors, novelty",
     "peeves": "Identity crises, emotional struggles, not fitting into a specific personality type",
     "purpose": "Embody the wildcard personality",
     "funFact": "Her entire personality is full of contradictions",
@@ -3507,10 +3507,10 @@
     "peeves": "Being too timid, following conventions too closely, harsh criticism, getting caught cosplaying",
     "purpose": "Embody the creative personality",
     "funFact": "Designed the outfits for the other personality girls (except for Maddie's hat, who would have got a blue newsboy cap)",
-    "description": "Indigo the Artist is a creative Personality Girl who wears a blue beret, a blue dress with a pale purple blouse underneath, pale pink striped thighhighs, blue boots, pink bows, and has long lavender hair and blue eyes. She's unconventional and self-directed. She can get too timid, but she's improving on that. While she enjoys cosplay, she doesn't want to be caught doing it. She's the artisan personality of the group, emotionally introverted, and picture smart."
+    "description": "Indigo the Artist is a creative Personality Girl who wears a blue beret, a blue dress with a pale purple blouse underneath, pale pink striped thighhighs, blue boots, pink bows, and has long lavender hair and blue eyes. She's unconventional and self-directed. She can get too timid, but she's improving on that. While she enjoys cosplay, she doesn't want to be caught doing it. She's the artisan personality of the group, introverted, and picture smart."
   },
   {
-    "name": "Magenta the Wizard",
+    "name": "Magical Girl Dreamy Magenta",
     "img": "extended/Magenta.png",
     "shortName": "Magenta",
     "id": 120,
@@ -3523,15 +3523,15 @@
     "color": "pink",
     "moe": 9,
     "futuristic": 3,
-    "mature": 4,
+    "mature": 3,
     "emotion": "chaotic joy",
     "pronouns": "she/her",
     "summary": "Imaginative girl",
-    "interests": "Magical aesthetics, imagination, ambition",
-    "peeves": "Being too delusional, boring things",
+    "interests": "Magical girls, imagination, passion",
+    "peeves": "Ideas failing, boring things",
     "purpose": "Embody the imaginative personality; make dreams come true",
-    "funFact": "Relates to Crimson for being passionate and outgoing; can't use magic in real life",
-    "description": "Magenta the Wizard is an imaginative Personality Girl who wears a gigantic purple witch hat with a wide brim, pink band, and pink bow, a long light pink dress with long sleeves, and a red ribbon. She has short pink hair and purple eyes. She's dreamy, idealistic, and aspirational. She can get too delusional and immature, but she's improving on that. She's the sorceress personality of the group, intellectually introverted, intrapersonal smart, and achievement-focused."
+    "funFact": "Wears magical girl clothes; calls her spells; can't use magic in real life",
+    "description": "Magenta the Wizard is an imaginative Personality Girl who wears a gigantic purple witch hat with a wide brim, pink band & pink bow, and a dangling star. Her outfit is a frilly short pink dress adorned with many red bows, long Juliet sleeves, white wrist cuffs, white thighhighs, pink shoes, and a star-tipped wand. She has short pink hair & purple eyes. She's dreamy, passionate, playful, and self-assured. She can get too unrealistic and immature, but she's improving on that. She's the magician personality of the group, idealistic, self smart, and achievement-focused."
   },
   {
     "name": "Sophia the Historian",
