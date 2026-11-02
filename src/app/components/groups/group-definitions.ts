@@ -69,6 +69,18 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     characterIds: [43, 51, 96, 144, 164]
   },
   {
+    name: "Separate Paired Characters",
+    type: "canon",
+    description: "Characters who also come in pairs but don't have a combined character card",
+    characterIds: [131, 132, 151, 152, 153, 154, 167, 171]
+  },
+  {
+    name: "Gemstone Names",
+    type: "name",
+    description: "Characters who are named after gemstones",
+    characterIds: [41, 107, 167, 171]
+  },
+  {
     name: "Top Hat Wearers",
     type: ["clothes", "hats"],
     description: "Characters known for wearing top hats",
@@ -96,7 +108,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Maids",
     type: "clothes",
     description: "Characters known for wearing maid outfits",
-    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158, 159, 167]
+    characterIds: [13, 26, 74, 75, 85, 77, 81, 107, 139, 147, 158, 159, 167, 171]
   },
   {
     name: "Hammer Wielders",
@@ -120,7 +132,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Pink-Haired Girls",
     type: "hair",
     description: "Characters known for having pink hair",
-    characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 144, 147, 150, 164]
+    characterIds: [17, 19, 26, 29, 39, 51, 58, 67, 76, 96, 120, 121, 131, 134, 144, 147, 150, 164, 171]
   },
   {
     name: "Blonde Girls",

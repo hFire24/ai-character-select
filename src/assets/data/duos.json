@@ -1300,6 +1300,11 @@
       "name": "Shy Formal Pink-Haired Girls"
     },
     {
+      "id1": 26,
+      "id2": 171,
+      "name": "Pink-Haired Maids"
+    },
+    {
       "id1": 27,
       "id2": 52,
       "name": "Interdimensional Summoners"
@@ -1756,11 +1761,6 @@
     },
     {
       "id1": 41,
-      "id2": 107,
-      "name": "Gemstone Girls"
-    },
-    {
-      "id1": 41,
       "id2": 110,
       "name": "Shy Girls of Elegant Ladies"
     },
@@ -1768,11 +1768,6 @@
       "id1": 42,
       "id2": 80,
       "name": "Miku Cosplayers"
-    },
-    {
-      "id1": 42,
-      "id2": 107,
-      "name": "Future Gemstone Girls"
     },
     {
       "id1": 44,
@@ -2695,6 +2690,11 @@
       "name": "Regressed Socialites"
     },
     {
+      "id1": 131,
+      "id2": 171,
+      "name": "Sad Pink-Haired Girls"
+    },
+    {
       "id1": 132,
       "id2": 138,
       "name": "Shy Unwanted Hat Wearers"
@@ -2783,6 +2783,11 @@
       "id1": 165,
       "id2": 166,
       "name": "Little Stage Performers"
+    },
+    {
+      "id1": 167,
+      "id2": 171,
+      "name": "Gemstone Twin Maids"
     },
     {
       "id1": 169,

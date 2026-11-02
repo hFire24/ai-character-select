@@ -87,6 +87,7 @@ export class Lineage {
       const inspirationMap: { [key: number]: number[] } = {
         1: [62, 63],
         2: [54],
+        3: [171],
         5: [11, 12, 1, 7, 24, 25, 28, 13, 14, 57],  // Hanako inspires these
         11: [19, 30, 74, 75],
         13: [15, 16, 23, 26, 27, 31, 150],

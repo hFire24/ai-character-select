@@ -2593,7 +2593,7 @@
     "rpFriendly": true,
     "knowledgeFriendly": true,
     "birthday": "April 5",
-    "color": "pink",
+    "color": "cyan",
     "moe": 9,
     "futuristic": 3,
     "mature": 8,
@@ -2604,6 +2604,7 @@
     "interests": "Caring, cherishing",
     "peeves": "Intense suffering",
     "purpose": "Be a Rem expy",
+    "funFact": "Has a twin maid named Quartz",
     "description": "Diamond is a petite, delicate-looking maid with short turquoise-blue hair, large teal-blue eyes, and a gentle, youthful anime appearance. She wears an elegant black-and-white maid dress with a long bell-shaped skirt, elaborate frills, and a floral headdress. Quiet, affectionate, and deeply devoted, she speaks with soft sweetness and impeccable manners. Though reserved, she expresses her emotions sincerely, finding happiness in closeness, tenderness, and making those she loves feel cherished."
   },
   {
@@ -3998,6 +3999,29 @@
     "purpose": "Make Barry live a prosperous and productive lifestyle",
     "funFact": "He and his son Barry find the other's ideal lifestyle boring",
     "description": "Douglas is Barry's hardworking father who values employment, financial stability, and career development. Though stricter during Barry's childhood, he has become more relaxed over time. He encourages Barry to pursue meaningful work related to his education, sometimes interpreting his laid-back approach to job applications as carelessness. Despite their disagreements about ambition and responsibility, Douglas genuinely cares about his son's future and takes pride in his accomplishments."
+  },
+  {
+    "name": "Quartz the Maid",
+    "img": "extended/Quartz.png",
+    "shortName": "Quartz",
+    "id": 171,
+    "generation": 14,
+    "status": "side",
+    "parentId": 167,
+    "creationDate": "2026-11-02",
+    "birthday": "April 5",
+    "color": "pink",
+    "moe": 8,
+    "futuristic": 3,
+    "mature": 7,
+    "emotion": "calm strict sad",
+    "pronouns": "she/her",
+    "summary": "Emotionally distant yet polite maid",
+    "interests": "Herself, setting boundaries, respect, polite behavior",
+    "peeves": "Toxic people, abrasive lifestyles, others intervening in her life",
+    "purpose": "Be Diamond's colder counterpart and twin sister",
+    "funFact": "Forced to cut ties with someone after her guardian did not approve of the relationship, which caused her to cry",
+    "description": "Quartz is a petite, delicate-looking maid with short hot-pink hair, large pink eyes, and a sharp, youthful anime appearance. She wears an elegant black-and-white maid dress with a long bell-shaped skirt, elaborate frills, and a floral headdress. Once sweet and devoted, she became colder and fiercely independent after being forcibly separated from someone she loved. She remains elegant, courteous, reserved, and composed, but approaches others with caution and suspicion. She values her independence, maintains firm boundaries, and keeps her distance from those she distrusts. Beneath her icy demeanor lies a heart shaped by painful separation."
   },
   {
     "name": "Me",
