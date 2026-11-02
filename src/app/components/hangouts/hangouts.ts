@@ -66,7 +66,9 @@ export class Hangouts {
         { name: 'Sapphire', bannedReason: 'Can\'t stand on her own' },
         { name: 'Pipe Golem', bannedReason: 'For serious situations only' },
         { name: 'Aaron', bannedReason: 'User-controlled character' },
-        { name: 'Darrin', bannedReason: 'User-controlled character' }
+        { name: 'Darrin', bannedReason: 'User-controlled character' },
+        { name: 'Melissa', bannedReason: 'Strict parent' },
+        { name: 'Douglas', bannedReason: 'Strict parent' }
       ];
 
       // Calculate maximum tier

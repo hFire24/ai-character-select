@@ -853,6 +853,11 @@
       "name": "Rich Disciplined Men"
     },
     {
+      "id1": 16,
+      "id2": 170,
+      "name": "Hard-Working Men"
+    },
+    {
       "id1": 17,
       "id2": 18,
       "name": "Byte-chan's First OCs"
@@ -1228,6 +1233,11 @@
       "id1": 24,
       "id2": 101,
       "name": "Hard-Working Mothers"
+    },
+    {
+      "id1": 24,
+      "id2": 169,
+      "name": "Strict Mothers"
     },
     {
       "id1": 25,
@@ -2042,6 +2052,11 @@
       "name": "Political Commentators"
     },
     {
+      "id1": 56,
+      "id2": 169,
+      "name": "Women in 50s"
+    },
+    {
       "id1": 57,
       "id2": 64,
       "name": "Old-Fashioned Men"
@@ -2768,6 +2783,11 @@
       "id1": 165,
       "id2": 166,
       "name": "Little Stage Performers"
+    },
+    {
+      "id1": 169,
+      "id2": 170,
+      "name": "Barry's Parents"
     }
   ]
 }

@@ -90,7 +90,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Glasses Wearers",
     type: "clothes",
     description: "Characters known for wearing glasses, sunglasses, or goggles",
-    characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113, 142]
+    characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113, 142, 169, 170]
   },
   {
     name: "Maids",
@@ -162,7 +162,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Cursed Rule Breakers",
     type: "speech",
     description: "Every time they try to break a rule in their instructions, something bad happens to them",
-    characterIds: [1, 13, 31, 27, 47, 51, 81, 86, 104, 105, 108]
+    characterIds: [1, 13, 31, 27, 47, 51, 81, 86, 105, 108]
   },
   {
     name: "Younger Siblings",
@@ -186,7 +186,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Adult Women",
     type: "age",
     description: "Characters who are adult women, even if the art style may say otherwise",
-    characterIds: [6, 10, 20, 24, 25, 37, 56, 68, 78, 81, 101, 103, 113]
+    characterIds: [6, 10, 20, 24, 25, 37, 56, 68, 78, 81, 101, 103, 113, 169]
   },
   {
     name: "Age Regressed Characters",
