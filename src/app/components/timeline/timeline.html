@@ -1,84 +1,128 @@
-<h1>Character Timeline</h1>
+<header class="timeline-heading">
+  <h1>Character Timeline</h1>
+  <details #about class="timeline-help" (keydown.escape)="about.open = false">
+    <summary aria-label="About the timeline" title="About the timeline">i</summary>
+    <div class="timeline-help-popup">
+      <strong>About the timeline</strong>
+      <p>The top timeline shows when characters were created. Select a generation below to expand its creation dates, then hover or select a date to see its characters and position above. Generation badges show the number of dates and characters (dates/characters). Hover over a generation to see its date range, and use the arrows to scroll through the timeline.</p>
+    </div>
+  </details>
+</header>
 
-<section class="timeline-controls">
-  <div class="timeline-summary">
-    <strong>{{ totalCharacters }}</strong>
-    characters across
-    <strong>{{ nodes.length }}</strong>
-    creation dates
+<ng-container *ngIf="nodes.length; else emptyTimeline">
+<div class="timeline-search">
+  <div id="timeline-search-panel" class="search-panel">
+    <label for="timeline-character-search">Search characters</label>
+    <input id="timeline-character-search" type="search" autocomplete="off" [value]="searchQuery"
+      (input)="updateSearch($any($event.target).value)" placeholder="Search by name" />
+    <ul *ngIf="searchResults.length" class="search-results" aria-label="Matching characters">
+      <li *ngFor="let character of searchResults">
+        <button type="button" (click)="selectSearchResult(character)">
+          <img *ngIf="character.img" loading="lazy" [src]="'assets/Icons/' + character.img" alt="" />
+          <span>{{ character.name || character.shortName }}</span>
+        </button>
+      </li>
+    </ul>
+    <p *ngIf="searchQuery.trim() && !searchResults.length" class="search-empty">No matching characters with creation dates.</p>
   </div>
-
-  <label class="zoom-control">
-    <span>Zoom</span>
-    <input
-      type="range"
-      min="0.75"
-      max="5"
-      step="0.25"
-      [value]="zoom"
-      (input)="onZoomChange($any($event.target).value)"
-    />
-    <span>{{ zoom }}x</span>
-  </label>
+</div>
+<section class="timeline-scroll timeline-overview" aria-label="Dynamic date overview">
+  <div class="overview-track">
+    <div class="timeline-axis"></div>
+    <span *ngFor="let character of overviewCharacters" class="overview-character node-dot"
+      [ngClass]="character.generationClass" [style.left.%]="character.position" aria-hidden="true"></span>
+    <ng-container *ngIf="highlightedGeneration as group">
+      <div *ngFor="let section of group.sections" class="overview-range"
+        [style.left.%]="section.start" [style.width.%]="section.end - section.start"
+        aria-hidden="true">
+        <span class="range-color node-dot" [ngClass]="section.generationClass"></span>
+      </div>
+      <div class="overview-range-description" aria-live="polite">
+        <span *ngFor="let section of group.sections">{{ section.label }}: {{ section.dateRange }}</span>
+      </div>
+    </ng-container>
+    <ng-container *ngFor="let marker of yearMarkers">
+      <div *ngIf="marker.year !== 2023" class="year-marker" [style.left.%]="marker.position">
+        <span>{{ marker.year }}</span>
+      </div>
+    </ng-container>
+    <div *ngIf="highlightedNode as highlighted" class="overview-highlight"
+      [style.left.%]="highlighted.overviewPosition"
+      [class.align-left]="highlighted.overviewPosition < 20"
+      [class.align-right]="highlighted.overviewPosition > 80">
+      <span>{{ highlighted.characters.length > 1 ? highlighted.characters.length + ' characters' : highlighted.characters[0].shortName }} · {{ highlighted.label }}</span>
+    </div>
+  </div>
 </section>
-
-<section #timelineScroll class="timeline-scroll" *ngIf="nodes.length; else emptyTimeline" (click)="clearActiveNode()">
+<div class="timeline-viewport">
+<section #timelineScroll class="timeline-scroll timeline-detail" (click)="clearActiveNode()" (scroll)="updateTimelineScroll()">
   <div
     class="timeline-canvas"
     [style.width.px]="timelineWidth"
     [style.height.px]="getTimelineHeight()"
   >
-    <div class="timeline-axis"></div>
-
-    <div
-      *ngFor="let marker of monthMarkers"
-      class="month-marker"
-      [style.left.px]="marker.position"
-      [attr.title]="marker.fullLabel"
-    >
-      <span>{{ marker.label }}</span>
-    </div>
-
-    <div
-      *ngFor="let marker of yearMarkers"
-      class="year-marker"
-      [style.left.px]="marker.position"
-    >
-      <span>{{ marker.year }}</span>
-    </div>
+    <div class="timeline-axis" [style.width.px]="timelineWidth - 80" [style.top.px]="axisY" style="right: auto"></div>
 
     <button
-      *ngFor="let node of nodes"
+      *ngFor="let node of equalNodes"
       type="button"
       class="timeline-node"
+      [class.generation-button]="node.collapsed"
+      [style.width.px]="node.collapsed ? node.layoutWidth : null"
+      [class.generation-tint]="node.collapsed"
+      [style.background]="node.collapsed ? generationBackground(node.colorClasses ?? []) : null"
       [class.active]="isNodeActive(node)"
       [style.left.px]="node.position"
       [style.top.px]="axisY"
-      [attr.aria-label]="node.label + ': ' + node.generationLabel + ', ' + node.characters.length + ' character(s)'"
+      [attr.aria-label]="node.label + ': ' + node.characters.length + ' character(s), ' + node.generationLabel + (node.collapsed ? ', click to expand' : '')"
+      [attr.aria-expanded]="node.collapsed ? false : isNodeActive(node)"
+      (mouseenter)="hoveredNode = node"
+      (mouseleave)="leaveNode($event)"
+      (focus)="focusedNode = node"
+      (blur)="focusedNode = null"
       (click)="toggleNode(node, $event)"
     >
-      <span class="node-dot" [ngClass]="node.generationClass"></span>
+      <span *ngIf="!node.collapsed" class="node-dot" [ngClass]="node.generationClass"></span>
+      <span *ngIf="node.collapsed" class="collapsed-label">{{ node.generationLabel }}</span>
+      <span *ngIf="node.collapsed" class="node-count generation-count" [attr.aria-label]="node.nodeCount + ' creation-day nodes, ' + node.characters.length + ' characters'">{{ node.nodeCount }}/{{ node.characters.length }}</span>
+      <span *ngIf="!node.collapsed && node.characters.length > 1" class="node-count" aria-hidden="true">{{ node.characters.length }}</span>
 
-      <span
-        class="node-tooltip"
-        [class.align-left]="node.popupAlignment === 'left'"
-        [class.align-right]="node.popupAlignment === 'right'"
-        (click)="$event.stopPropagation()"
-      >
-        <strong>{{ node.label }}</strong>
-        <span class="generation-label">{{ node.generationLabel }}</span>
-        <span
-          *ngFor="let character of node.characters"
-          class="tooltip-character"
-          (click)="openCharacter(character); $event.stopPropagation()"
-        >
-          <img loading="lazy" [src]="'assets/Icons/' + character.img" [alt]="character.shortName" />
-          <span>{{ character.shortName }}</span>
-        </span>
-      </span>
+    </button>
+    <button *ngFor="let group of expandedGenerationControls; trackBy: trackGeneration" type="button"
+      class="below-collapse generation-tint" [style.left.px]="group.position"
+      [style.width.px]="group.width"
+      [style.top.px]="group.top"
+      [style.background]="generationBackground(group.colorClasses)"
+      [attr.aria-label]="'Collapse ' + group.label"
+      (mouseenter)="hoveredGenerationKey = group.key" (mouseleave)="hoveredGenerationKey = null"
+      (focus)="focusedGenerationKey = group.key" (blur)="focusedGenerationKey = null"
+      (click)="toggleGeneration(group.key); $event.stopPropagation()">
+      Collapse
     </button>
   </div>
 </section>
+<div *ngIf="highlightedNode as node" class="node-tooltip" [style.left.px]="tooltipLeft(node)"
+  [style.top.px]="axisY + 11" (mouseenter)="hoveredNode = node"
+  (mouseleave)="leaveNode($event)" (click)="$event.stopPropagation()">
+  <strong>{{ node.label }}</strong>
+  <span class="generation-label">{{ node.generationLabel }}</span>
+  <button type="button" *ngFor="let character of node.characters" class="tooltip-character"
+    (click)="openCharacter(character)">
+    <img loading="lazy" [src]="'assets/Icons/' + character.img" [alt]="character.shortName" />
+    <span>{{ character.shortName }}</span>
+  </button>
+</div>
+<button *ngIf="hasScrollOverflow" type="button" class="scroll-arrow scroll-arrow-left" aria-label="Scroll timeline left"
+  (mouseenter)="startArrowScroll(-1)" (mouseleave)="stopArrowScroll()"
+  (click)="scrollByArrow(-1)"><span aria-hidden="true">&#8249;</span></button>
+<button *ngIf="hasScrollOverflow" type="button" class="scroll-arrow scroll-arrow-right" aria-label="Scroll timeline right"
+  (mouseenter)="startArrowScroll(1)" (mouseleave)="stopArrowScroll()"
+  (click)="scrollByArrow(1)"><span aria-hidden="true">&#8250;</span></button>
+</div>
+<div *ngIf="expandedGenerationControls.length > 1" class="timeline-actions">
+  <button type="button" (click)="collapseAllGenerations()" class="red-button">Collapse all</button>
+</div>
+</ng-container>
 
 <ng-template #emptyTimeline>
   <p class="empty-state">No creation dates found.</p>

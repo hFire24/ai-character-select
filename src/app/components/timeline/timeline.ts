@@ -1,9 +1,14 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, NgZone, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Character, CharacterService } from '../../services/character.service';
 import { CharacterModal } from '../character-modal/character-modal';
 
 interface TimelineNode {
+  collapsed?: boolean;
+  nodeCount?: number;
+  colorClasses?: string[];
+  layoutWidth?: number;
+  overviewPosition: number;
   date: Date;
   dateKey: string;
   label: string;
@@ -16,34 +21,66 @@ interface TimelineNode {
   popupAlignment: 'left' | 'center' | 'right';
 }
 
+interface GenerationSection {
+  label: string;
+  generationClass: string;
+  start: number;
+  end: number;
+  dateRange: string;
+}
+
 @Component({
   selector: 'app-timeline',
   imports: [CommonModule, CharacterModal],
   templateUrl: './timeline.html',
   styleUrl: './timeline.scss'
 })
-export class Timeline implements OnInit, AfterViewInit {
-  @ViewChild('timelineScroll') private timelineScroll?: ElementRef<HTMLElement>;
+export class Timeline implements OnInit, AfterViewInit, OnDestroy {
+  private timelineScroll?: ElementRef<HTMLElement>;
+  private resizeObserver?: ResizeObserver;
+  @ViewChild('timelineScroll') set scrollContainer(element: ElementRef<HTMLElement> | undefined) {
+    this.resizeObserver?.disconnect();
+    this.timelineScroll = element;
+    if (element && typeof ResizeObserver !== 'undefined') {
+      this.resizeObserver = new ResizeObserver(() => this.zone.run(() => this.updateScrollOverflow()));
+      this.resizeObserver.observe(element.nativeElement);
+      const canvas = element.nativeElement.firstElementChild;
+      if (canvas) this.resizeObserver.observe(canvas);
+    }
+    if (!element) this.hasScrollOverflow = false;
+  }
 
   nodes: TimelineNode[] = [];
+  equalNodes: TimelineNode[] = [];
+  hoveredNode: TimelineNode | null = null;
+  focusedNode: TimelineNode | null = null;
+  hoveredGenerationKey: string | null = null;
+  focusedGenerationKey: string | null = null;
+  overviewCharacters: { position: number; generationClass: string; generation: TimelineNode['generation']; label: string }[] = [];
   yearMarkers: { year: number; position: number }[] = [];
   monthMarkers: { label: string; fullLabel: string; position: number }[] = [];
   selectedCharacter: Character | null = null;
+  searchQuery = '';
+  searchResults: Character[] = [];
   activeNodeKey: string | null = null;
-  zoom = 5;
+  timelineScrollLeft = 0;
+  collapsedGenerations = new Set<string>();
+  generationGroups: { key: string; label: string; count: number; nodeCount: number; colorClasses: string[]; dateRange: string; start: number; end: number; sections: GenerationSection[] }[] = [];
   timelineWidth = 900;
+  hasScrollOverflow = false;
+  expandedGenerationControls: { key: string; label: string; nodeCount: number; position: number; top: number; width: number; colorClasses: string[] }[] = [];
   totalCharacters = 0;
   startDate: Date | null = null;
   endDate: Date | null = null;
 
   private readonly baseWidth = 900;
-  private readonly dayWidth = 2.8;
-  readonly axisY = 96;
+  private scrollAnimation: number | null = null;
+  readonly axisY = 70;
   private readonly genOneCutoff = new Date('2024-10-01T00:00:00');
   private readonly genFiveStart = new Date('2025-05-01T00:00:00');
   private readonly genFiveEnd = new Date('2025-06-30T23:59:59');
 
-  constructor(private characterService: CharacterService) {}
+  constructor(private characterService: CharacterService, private zone: NgZone) {}
 
   ngOnInit() {
     this.loadCharacters();
@@ -51,6 +88,73 @@ export class Timeline implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.scheduleScrollToRight();
+  }
+
+  ngOnDestroy() {
+    this.stopArrowScroll();
+    this.resizeObserver?.disconnect();
+  }
+
+  updateScrollOverflow() {
+    const element = this.timelineScroll?.nativeElement;
+    this.hasScrollOverflow = !!element && element.scrollWidth > element.clientWidth;
+    if (!this.hasScrollOverflow) this.stopArrowScroll();
+  }
+
+  startArrowScroll(direction: -1 | 1) {
+    this.stopArrowScroll();
+    const scroll = () => {
+      const element = this.timelineScroll?.nativeElement;
+      if (!element) {
+        this.scrollAnimation = null;
+        return;
+      }
+      const previous = element.scrollLeft;
+      element.scrollLeft += direction * 3;
+      if (element.scrollLeft === previous) {
+        this.scrollAnimation = null;
+        return;
+      }
+      this.scrollAnimation = requestAnimationFrame(scroll);
+    };
+    this.scrollAnimation = requestAnimationFrame(scroll);
+  }
+
+  stopArrowScroll() {
+    if (this.scrollAnimation !== null) cancelAnimationFrame(this.scrollAnimation);
+    this.scrollAnimation = null;
+  }
+
+  scrollByArrow(direction: -1 | 1) {
+    const element = this.timelineScroll?.nativeElement;
+    if (element) element.scrollLeft += direction * element.clientWidth * 0.7;
+  }
+
+  updateSearch(query: string) {
+    this.searchQuery = query;
+    const term = query.trim().toLowerCase();
+    this.searchResults = term ? this.nodes.flatMap(node => node.characters)
+      .filter(character => (character.name || '').toLowerCase().includes(term)
+        || (character.shortName || '').toLowerCase().includes(term)) : [];
+  }
+
+  selectSearchResult(character: Character) {
+    const node = this.nodes.find(item => item.characters.some(candidate => candidate.id === character.id));
+    if (!node) return;
+    const key = this.generationKey(node);
+    if (this.collapsedGenerations.delete(key)) this.layoutGenerations();
+    this.hoveredNode = null;
+    this.focusedNode = null;
+    this.hoveredGenerationKey = null;
+    this.focusedGenerationKey = null;
+    this.activeNodeKey = node.dateKey;
+    this.searchQuery = '';
+    this.searchResults = [];
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const element = this.timelineScroll?.nativeElement;
+      const target = this.equalNodes.find(item => item.dateKey === node.dateKey && !item.collapsed);
+      if (element && target) element.scrollLeft = Math.max(0, target.position - element.clientWidth / 2);
+    }));
   }
 
   loadCharacters() {
@@ -74,6 +178,15 @@ export class Timeline implements OnInit, AfterViewInit {
 
       if (!sortedGroups.length) {
         this.nodes = [];
+        this.equalNodes = [];
+        this.generationGroups = [];
+        this.expandedGenerationControls = [];
+        this.overviewCharacters = [];
+        this.hoveredGenerationKey = null;
+        this.focusedGenerationKey = null;
+        this.activeNodeKey = null;
+        this.hoveredNode = null;
+        this.focusedNode = null;
         this.yearMarkers = [];
         this.monthMarkers = [];
         return;
@@ -86,11 +199,36 @@ export class Timeline implements OnInit, AfterViewInit {
     });
   }
 
-  onZoomChange(value: string) {
+  toggleGeneration(key: string) {
     const rightOffset = this.getRightScrollOffset();
-    this.zoom = Number(value);
-    this.recalculateTimeline();
+    if (this.collapsedGenerations.has(key)) this.collapsedGenerations.delete(key);
+    else this.collapsedGenerations.add(key);
+    this.layoutGenerations();
     this.scheduleScrollToRightOffset(rightOffset);
+  }
+
+  collapseAllGenerations() {
+    const rightOffset = this.getRightScrollOffset();
+    this.collapsedGenerations = new Set(this.generationGroups.map(group => group.key));
+    this.layoutGenerations();
+    this.scheduleScrollToRightOffset(rightOffset);
+  }
+
+  trackGeneration(_index: number, group: { key: string }): string {
+    return group.key;
+  }
+
+  generationBackground(classes: string[]): string {
+    const palette: Record<string, string> = {
+      gen1: '#d94f70', gen2: '#4caf50', gen3: '#ff9800', gen4: '#9c27b0',
+      gen5: '#2196f3', gen6: '#f44336', gen7: '#9c27b0', gen8: '#ff5722',
+      gen9: '#673ab7', gen10: '#fbc02d', gen11: '#9c27b0', gen12: '#009688', gen13: '#e91e63', gen14: '#3f51b5'
+    };
+    const colors = classes.length ? classes.map(color => palette[color] ?? '#7d8794') : ['#7d8794'];
+    const stops = colors.flatMap((color, index) => [
+      `${color} ${index / colors.length * 100}%`, `${color} ${(index + 1) / colors.length * 100}%`
+    ]);
+    return `linear-gradient(var(--generation-tint-overlay, #ffffffcc), var(--generation-tint-overlay, #ffffffcc)), linear-gradient(90deg, ${stops.join(', ')})`;
   }
 
   openCharacter(character: Character) {
@@ -99,6 +237,10 @@ export class Timeline implements OnInit, AfterViewInit {
 
   toggleNode(node: TimelineNode, event: MouseEvent) {
     event.stopPropagation();
+    if (node.collapsed) {
+      this.toggleGeneration(this.generationKey(node));
+      return;
+    }
     this.activeNodeKey = this.activeNodeKey === node.dateKey ? null : node.dateKey;
   }
 
@@ -110,24 +252,39 @@ export class Timeline implements OnInit, AfterViewInit {
     return this.activeNodeKey === node.dateKey;
   }
 
+  get highlightedNode(): TimelineNode | null {
+    const node = this.hoveredNode ?? this.focusedNode
+      ?? this.equalNodes.find(node => this.isNodeActive(node)) ?? null;
+    return node?.collapsed || this.highlightedGeneration ? null : node;
+  }
+
+  get highlightedGeneration() {
+    const node = this.hoveredNode ?? this.focusedNode;
+    const key = this.hoveredGenerationKey ?? (node?.collapsed ? this.generationKey(node) : null)
+      ?? (this.hoveredNode ? null : this.focusedGenerationKey);
+    return this.generationGroups.find(group => group.key === key) ?? null;
+  }
+
   closeCharacterModal() {
     this.selectedCharacter = null;
   }
 
   getTimelineHeight(): number {
-    return 430;
+    return Math.max(150, ...this.expandedGenerationControls.map(control => control.top + 42));
   }
 
-  private recalculateTimeline() {
-    if (!this.nodes.length || !this.startDate || !this.endDate) return;
+  updateTimelineScroll() {
+    this.timelineScrollLeft = this.timelineScroll?.nativeElement.scrollLeft ?? 0;
+  }
 
-    const groups = this.nodes.map(node => ({
-      date: node.date,
-      dateKey: node.dateKey,
-      characters: node.characters
-    }));
+  tooltipLeft(node: TimelineNode): number {
+    const width = this.timelineScroll?.nativeElement.clientWidth ?? 0;
+    return Math.max(0, Math.min(node.position - this.timelineScrollLeft - 127, width - 254));
+  }
 
-    this.buildTimeline(groups);
+  leaveNode(event: MouseEvent) {
+    const next = event.relatedTarget as HTMLElement | null;
+    if (!next?.closest('.node-tooltip')) this.hoveredNode = null;
   }
 
   private getRightScrollOffset(): number {
@@ -152,6 +309,8 @@ export class Timeline implements OnInit, AfterViewInit {
 
         const maxScrollLeft = Math.max(0, scrollElement.scrollWidth - scrollElement.clientWidth);
         scrollElement.scrollLeft = Math.max(0, maxScrollLeft - rightOffset);
+        this.updateTimelineScroll();
+        this.updateScrollOverflow();
       });
     });
   }
@@ -159,12 +318,16 @@ export class Timeline implements OnInit, AfterViewInit {
   private buildTimeline(groups: { date: Date; dateKey: string; characters: Character[] }[]) {
     const startDate = groups[0].date;
     const endDate = groups[groups.length - 1].date;
-    const totalDays = Math.max(1, this.daysBetween(startDate, endDate));
-    this.timelineWidth = Math.max(this.baseWidth, totalDays * this.dayWidth * this.zoom);
+    const totalDays = this.daysBetween(startDate, endDate);
+    this.timelineWidth = this.baseWidth;
+    const positionForDate = (date: Date): number => {
+      if (!totalDays) return 40;
+      return 40 + this.daysBetween(startDate, date) / totalDays * (this.timelineWidth - 80);
+    };
 
     this.nodes = groups.map(group => {
       const offsetDays = this.daysBetween(startDate, group.date);
-      const position = 40 + ((offsetDays / totalDays) * (this.timelineWidth - 80));
+      const position = positionForDate(group.date);
       const generation = this.getNodeGeneration(group.date, group.characters);
 
       return {
@@ -175,15 +338,138 @@ export class Timeline implements OnInit, AfterViewInit {
         generationClass: this.getGenerationClass(generation),
         offsetDays,
         position,
+        overviewPosition: (position - 40) / (this.timelineWidth - 80) * 100,
         popupAlignment: this.getPopupAlignment(position)
       };
     });
 
-    this.yearMarkers = this.buildYearMarkers(startDate, endDate, totalDays);
-    this.monthMarkers = this.buildMonthMarkers(startDate, endDate, totalDays);
+    this.overviewCharacters = this.nodes.flatMap(node => node.characters.map(character => {
+      const generation = this.getNodeGeneration(node.date, [character]);
+      return { position: node.overviewPosition, generation,
+        generationClass: this.getGenerationClass(generation), label: node.label };
+    }));
+
+    this.yearMarkers = this.buildYearMarkers(startDate, endDate, positionForDate);
+    this.monthMarkers = this.buildMonthMarkers(startDate, endDate, positionForDate)
+      .reduce<typeof this.monthMarkers>((markers, marker) => {
+        if (!markers.length || marker.position - markers[markers.length - 1].position >= 36) {
+          markers.push(marker);
+        }
+        return markers;
+      }, []);
+
+    // Normalize the date scale to the width of the overview.
+    this.yearMarkers = this.yearMarkers.map(marker => ({
+      ...marker, position: (marker.position - 40) / (this.timelineWidth - 80) * 100
+    }));
+    this.collapsedGenerations = new Set(this.nodes.map(node => this.generationKey(node)));
+    this.layoutGenerations();
   }
 
-  private buildMonthMarkers(startDate: Date, endDate: Date, totalDays: number) {
+  private generationKey(node: TimelineNode): string {
+    if (node.generation === 13 || node.generation === 14) return '13-14';
+    if (node.generation === 5 || node.generation === 6) return '5-6';
+    return typeof node.generation === 'number' && node.generation >= 2 && node.generation <= 4
+      ? '2-4' : String(node.generation);
+  }
+
+  private groupLabel(key: string, node: TimelineNode): string {
+    if (key === '13-14') return 'Gens 13–14';
+    return key === '2-4' ? 'Gens 2–4' : key === '5-6' ? 'Gens 5–6' : node.generationLabel;
+  }
+
+  private layoutGenerations() {
+    const groups = new Map<string, TimelineNode[]>();
+    this.nodes.forEach(node => {
+      const key = this.generationKey(node);
+      groups.set(key, [...(groups.get(key) ?? []), node]);
+    });
+    this.generationGroups = [...groups].map(([key, nodes]) => ({
+      key,
+      label: this.groupLabel(key, nodes[0]),
+      dateRange: nodes[0].label === nodes[nodes.length - 1].label ? nodes[0].label : `${nodes[0].label} – ${nodes[nodes.length - 1].label}`,
+      start: nodes[0].overviewPosition,
+      end: nodes[nodes.length - 1].overviewPosition,
+      count: nodes.reduce((sum, node) => sum + node.characters.length, 0),
+      nodeCount: nodes.length,
+      colorClasses: [...new Set(nodes.map(node => node.generationClass))],
+      sections: [...new Set(nodes.flatMap(node => node.characters.map(character => this.getNodeGeneration(node.date, [character]))))]
+        .map(generation => {
+          const markers = nodes.flatMap(node => node.characters
+            .filter(character => this.getNodeGeneration(node.date, [character]) === generation)
+            .map(() => node));
+          const first = markers[0];
+          const last = markers[markers.length - 1];
+          return { label: this.getGenerationLabel(generation), generationClass: this.getGenerationClass(generation),
+            start: first.overviewPosition, end: last.overviewPosition,
+            dateRange: first.label === last.label ? first.label : `${first.label} – ${last.label}` };
+        })
+    }));
+    const seen = new Set<string>();
+    const visible: TimelineNode[] = [];
+    this.nodes.forEach(node => {
+      const key = this.generationKey(node);
+      if (!this.collapsedGenerations.has(key)) {
+        visible.push(node);
+      } else if (!seen.has(key)) {
+        seen.add(key);
+        const members = groups.get(key)!;
+        const last = members[members.length - 1];
+        visible.push({
+          ...node,
+          collapsed: true,
+          nodeCount: members.length,
+          dateKey: `generation:${key}`,
+          label: node.label === last.label ? node.label : `${node.label} – ${last.label}`,
+          generationLabel: this.groupLabel(key, node),
+          characters: members.flatMap(member => member.characters),
+          overviewPosition: (node.overviewPosition + last.overviewPosition) / 2,
+          colorClasses: [...new Set(members.map(member => member.generationClass))]
+        });
+      }
+    });
+    // Use the same 12px visual gap everywhere, allowing for wider generation buttons.
+    const widths = visible.map(node => node.collapsed
+      ? Math.max(72, node.generationLabel.length * 7 + 12) : 12);
+    let nextLeft = 40;
+    const positions = visible.map((_node, index) => {
+      const position = nextLeft + widths[index] / 2;
+      nextLeft += widths[index] + 12;
+      return position;
+    });
+    this.timelineWidth = nextLeft + 28;
+    this.equalNodes = visible.map((node, index) => {
+      const position = positions[index];
+      return {
+        ...node,
+        layoutWidth: widths[index],
+        position,
+        popupAlignment: this.getPopupAlignment(position)
+      };
+    });
+    const rowEnds: number[] = [];
+    this.expandedGenerationControls = this.generationGroups
+      .filter(group => !this.collapsedGenerations.has(group.key))
+      .map(group => {
+        const members = this.equalNodes.filter(node => this.generationKey(node) === group.key);
+        const width = 80;
+        const position = Math.max(width / 2 + 8, (members[0].position + members[members.length - 1].position) / 2);
+        let row = rowEnds.findIndex(end => end + 8 <= position - width / 2);
+        if (row < 0) row = rowEnds.length;
+        rowEnds[row] = position + width / 2;
+        return { key: group.key, label: group.label, nodeCount: group.nodeCount, colorClasses: group.colorClasses,
+          position, width, top: 94 + row * 44 };
+      });
+    this.timelineWidth = Math.max(this.timelineWidth, ...rowEnds.map(end => end + 8));
+    // Removed controls do not reliably emit mouseleave/blur when collapsed.
+    this.hoveredGenerationKey = null;
+    this.focusedGenerationKey = null;
+    this.hoveredNode = null;
+    this.focusedNode = null;
+    this.activeNodeKey = null;
+  }
+
+  private buildMonthMarkers(startDate: Date, endDate: Date, positionForDate: (date: Date) => number) {
     const markers: { label: string; fullLabel: string; position: number }[] = [];
     const month = new Date(startDate.getFullYear(), startDate.getMonth(), 1);
 
@@ -192,7 +478,7 @@ export class Timeline implements OnInit, AfterViewInit {
       markers.push({
         label: month.toLocaleDateString(undefined, { month: 'short' }),
         fullLabel: month.toLocaleDateString(undefined, { month: 'long', year: 'numeric' }),
-        position: 40 + ((this.daysBetween(startDate, markerDate) / totalDays) * (this.timelineWidth - 80))
+        position: positionForDate(markerDate)
       });
       month.setMonth(month.getMonth() + 1);
     }
@@ -200,7 +486,7 @@ export class Timeline implements OnInit, AfterViewInit {
     return markers;
   }
 
-  private buildYearMarkers(startDate: Date, endDate: Date, totalDays: number) {
+  private buildYearMarkers(startDate: Date, endDate: Date, positionForDate: (date: Date) => number) {
     const markers: { year: number; position: number }[] = [];
     const startYear = startDate.getFullYear();
     const endYear = endDate.getFullYear();
@@ -208,10 +494,9 @@ export class Timeline implements OnInit, AfterViewInit {
     for (let year = startYear; year <= endYear; year++) {
       const markerDate = new Date(year, 0, 1);
       const clampedDate = markerDate < startDate ? startDate : markerDate;
-      const offsetDays = this.daysBetween(startDate, clampedDate);
       markers.push({
         year,
-        position: 40 + ((offsetDays / totalDays) * (this.timelineWidth - 80))
+        position: positionForDate(clampedDate)
       });
     }
 
