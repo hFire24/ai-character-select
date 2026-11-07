@@ -6,7 +6,7 @@
 @for (id of winners; track id) {
   <article class="character-result" [style.--character-color]="characters[id].color">
     <div class="portrait">
-      <img [src]="'assets/Icons/' + characters[id].art" [alt]="characters[id].canonicalName" />
+      <img [appCharacterIcon]="characters[id].art" [alwaysTallIcon]="true" [alt]="characters[id].canonicalName" />
       <h3>{{ characters[id].name }}</h3>
       <p>{{ characters[id].canonicalName }}</p>
     </div>

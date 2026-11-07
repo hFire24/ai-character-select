@@ -27,6 +27,37 @@ describe('Personality quiz UI', () => {
     expect(el.textContent).toContain('Question 2 of 35');
   });
 
+  it('opens each result with Shift+A–I and resumes the untouched quiz attempt', () => {
+    const component = fixture.componentInstance;
+    const session = component.session;
+    session.choose(session.options[0].id);
+    session.next();
+    const before = { ...session.responses };
+    for (const shortcut of component.resultShortcuts) {
+      document.dispatchEvent(new KeyboardEvent('keydown', { key: shortcut.letter, shiftKey: true, bubbles: true }));
+      fixture.detectChanges();
+      const el: HTMLElement = fixture.nativeElement;
+      expect(el.querySelector('.portrait h3')!.textContent).toBe(shortcut.name);
+      expect(el.textContent).toContain('Sample 50/50 profile');
+    }
+    (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>('.phase-note button')!.click();
+    fixture.detectChanges();
+    expect(session.responses).toEqual(before);
+    expect(session.currentIndex).toBe(1);
+    expect(component.previewResult).toBeNull();
+    expect(fixture.nativeElement.textContent).toContain('Question 2 of 35');
+  });
+
+  it('ignores plain letters, modified combinations, and typing in an editable field', () => {
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A' }));
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'A', shiftKey: true, ctrlKey: true }));
+    const input = document.createElement('input');
+    fixture.nativeElement.appendChild(input);
+    input.dispatchEvent(new KeyboardEvent('keydown', { key: 'A', shiftKey: true, bubbles: true }));
+    expect(fixture.componentInstance.previewResult).toBeNull();
+    input.remove();
+  });
+
   it('renders only four exploration answers without character-name hints', () => {
     const session = fixture.componentInstance.session;
     // Production placeholder bank is binary. Fill Foundation with actual option IDs.

@@ -1,27 +1,35 @@
 import { BipolarQuestion, CharacterId, CharacterIdentity, CHARACTER_IDS, QuizContent, SCALE_IDS, ScaleDefinition } from './personality-quiz.types';
 import { AUTHOR_CONTENT } from './personality-quiz.author';
+import roster from '../../../assets/data/characters.json';
 
 // Framework slots and identity metadata. Editorial copy lives in personality-quiz.author.ts.
-// These identities reference the existing roster artwork, not generated substitutes.
-export const CHARACTERS: Record<CharacterId, CharacterIdentity> = {
-  crimson: { id: 'crimson', name: 'Crimson', canonicalName: 'Crimson the Daredevil', art: 'extended/Crimson.png', color: '#c83445', scale: 'CARE', pole: 0 },
-  clementine: { id: 'clementine', name: 'Clementine', canonicalName: 'Clementine the Cowgirl', art: 'extended/Clementine.png', color: '#c66916', scale: 'SOCIAL', pole: 0 },
-  maria: { id: 'maria', name: 'Maria', canonicalName: 'Amarilla "Maria" the Scholar', art: 'extended/Maria.png', color: '#a17c0b', scale: 'IDEAS', pole: 0 },
-  emerald: { id: 'emerald', name: 'Emerald', canonicalName: 'Emerald "Emmy" the Future Nurse', art: 'main/Emmy.png', color: '#23864c', scale: 'CARE', pole: 1 },
-  maddie: { id: 'maddie', name: 'Maddie', canonicalName: 'Maddie the Luminary', art: 'main/Maddie.png', color: '#377da8', scale: 'HEART', pole: 1 },
-  indigo: { id: 'indigo', name: 'Indigo', canonicalName: 'Indigo the Artist', art: 'extended/Indigo.png', color: '#6a58ab', scale: 'SOCIAL', pole: 1 },
-  magenta: { id: 'magenta', name: 'Magenta', canonicalName: 'Magical Girl Dreamy Magenta', art: 'extended/Magenta.png', color: '#b23a8d', scale: 'IDEAS', pole: 1 },
-  cyan: { id: 'cyan', name: 'Cyan', canonicalName: 'Cyan the DJ', art: 'extended/Cyan.png', color: '#147b87', scale: 'CHANGE', pole: 1 },
-  sophia: { id: 'sophia', name: 'Sophia', canonicalName: 'Sophia the Historian', art: 'extended/Sophia.png', color: '#906345', scale: 'CHANGE', pole: 0 }
+// Keep quiz colors and scoring associations here; the roster owns names and art.
+const CHARACTER_CONFIG: Record<CharacterId, Pick<CharacterIdentity, 'color' | 'scale' | 'pole'> & { rosterId: number }> = {
+  crimson: { rosterId: 115, color: '#c83445', scale: 'CARE', pole: 0 },
+  clementine: { rosterId: 116, color: '#c66916', scale: 'SOCIAL', pole: 0 },
+  maria: { rosterId: 117, color: '#a17c0b', scale: 'IDEAS', pole: 0 },
+  emerald: { rosterId: 107, color: '#23864c', scale: 'CARE', pole: 1 },
+  maddie: { rosterId: 94, color: '#377da8', scale: 'HEART', pole: 1 },
+  indigo: { rosterId: 119, color: '#6a58ab', scale: 'SOCIAL', pole: 1 },
+  magenta: { rosterId: 120, color: '#b23a8d', scale: 'IDEAS', pole: 1 },
+  cyan: { rosterId: 118, color: '#147b87', scale: 'CHANGE', pole: 1 },
+  sophia: { rosterId: 127, color: '#906345', scale: 'CHANGE', pole: 0 }
 };
 
+export const CHARACTERS = Object.fromEntries(CHARACTER_IDS.map(id => {
+  const { rosterId, ...config } = CHARACTER_CONFIG[id];
+  const character = roster.find(entry => entry.id === rosterId);
+  if (!character) throw new Error(`Missing roster character ${rosterId} for quiz result ${id}`);
+  return [id, { id, ...config, name: character.shortName, canonicalName: character.name, art: character.img }];
+})) as Record<CharacterId, CharacterIdentity>;
+
 export const SCALES: ScaleDefinition[] = [
-  { id: 'CARE', left: 'Crimson', right: 'Emerald' },
-  { id: 'SOCIAL', left: 'Clementine', right: 'Indigo' },
-  { id: 'IDEAS', left: 'Maria', right: 'Magenta' },
-  { id: 'CHANGE', left: 'Sophia', right: 'Cyan' },
+  { id: 'CARE', left: CHARACTERS.crimson.name, right: CHARACTERS.emerald.name },
+  { id: 'SOCIAL', left: CHARACTERS.clementine.name, right: CHARACTERS.indigo.name },
+  { id: 'IDEAS', left: CHARACTERS.maria.name, right: CHARACTERS.magenta.name },
+  { id: 'CHANGE', left: CHARACTERS.sophia.name, right: CHARACTERS.cyan.name },
   // The lower HEART pole is not a character or personality label.
-  { id: 'HEART', left: 'Lower Maddie affinity', right: 'Maddie' }
+  { id: 'HEART', left: `Lower ${CHARACTERS.maddie.name} affinity`, right: CHARACTERS.maddie.name }
 ];
 
 const todo = (slot: string) => `TODO: author content — ${slot}`;

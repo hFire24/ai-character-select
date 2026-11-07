@@ -6,6 +6,12 @@
 <aside class="preview-banner">
   <strong>Authoring preview</strong>
   <p>Question wording, answers, and result descriptions are awaiting the owner's content. These placeholders do not form a finished personality quiz.</p>
+  <details class="result-shortcuts">
+    <summary>Result shortcuts: Shift + A–I</summary>
+    <ul>@for (shortcut of resultShortcuts; track shortcut.id) {
+      <li><kbd>Shift + {{ shortcut.letter }}</kbd> — {{ shortcut.name }}</li>
+    }</ul>
+  </details>
   <details>
     <summary>Content readiness: {{ readiness.pending.length }} unfinished slots</summary>
     <p>{{ readiness.errors.length }} structure errors. Publication is blocked until all author content is complete.</p>
@@ -18,10 +24,16 @@
   </div>
 } @else {
   <section class="quiz-panel" aria-label="Personality Girls Quiz">
-    @if (session.mode === 'results' && session.result) {
+    @if (displayedResult; as result) {
       <h2 #resultHeading tabindex="-1" class="sr-only">Quiz results</h2>
-      <app-personality-quiz-result [result]="session.result" [winners]="session.winners"
-        [content]="content" [votes]="session.votes" (retake)="move('restart')" (review)="move('review')" />
+      @if (previewCharacter) {
+        <div class="phase-note" role="status">
+          <p>Result preview · Sample 50/50 profile. No quiz result was calculated.</p>
+          <button type="button" class="secondary" (click)="move('review')">Return to quiz</button>
+        </div>
+      }
+      <app-personality-quiz-result [result]="result" [winners]="displayedWinners"
+        [content]="content" [votes]="previewCharacter ? null : session.votes" (retake)="move('restart')" (review)="move('review')" />
     } @else {
       <div class="progress-label" aria-live="polite">
         <span>{{ session.phaseName }}</span>

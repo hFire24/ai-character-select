@@ -6,7 +6,7 @@ const root = path.resolve(__dirname, '../src/app/components/quizzes');
 require.extensions['.ts'] = (module, filename) => {
   if (!filename.startsWith(root + path.sep)) throw new Error('Unexpected TypeScript source');
   const source = fs.readFileSync(filename, 'utf8');
-  const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } });
+  const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, esModuleInterop: true } });
   module._compile(compiled.outputText, filename);
 };
 const { QUIZ_CONTENT } = require(path.join(root, 'personality-quiz.content.ts'));

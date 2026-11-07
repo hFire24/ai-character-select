@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
+import { CharacterIcon } from '../../directives/character-icon';
 import { CHARACTERS, SCORING_CONFIG, SCALES } from './personality-quiz.content';
 import { CharacterId, QuizContent, QuizResult } from './personality-quiz.types';
 
 @Component({
   selector: 'app-personality-quiz-result',
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, CharacterIcon],
   templateUrl: './personality-quiz-result.html',
   styleUrl: './personality-quiz-result.scss'
 })

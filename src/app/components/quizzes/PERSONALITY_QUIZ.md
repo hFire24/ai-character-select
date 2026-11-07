@@ -2,6 +2,8 @@
 
 The Angular route `/quizzes/personality-girls` runs without an API. Each attempt lives in component memory. Back/Next and Review preserve responses and seeded answer order; leaving/reloading the route starts a new attempt. Retake also starts a fresh attempt.
 
+Use Shift+A–I to preview results: A Crimson, B Clementine, C Maria, D Emerald, E Maddie, F Indigo, G Magenta, H Cyan, I Sophia. These shortcuts display a labeled sample 50/50 profile and preserve the current attempt; Return to quiz resumes it. Shortcuts ignore text fields and combinations with Ctrl/Alt/Meta.
+
 ## Author content
 
 Edit `personality-quiz.author.ts`. It provides typed, stable slots; omitted fields retain `TODO: author content` placeholders. No assistant-written question bank or result narrative is approved content.
@@ -29,7 +31,7 @@ Omit the midpoint for a two-response item. Keep option IDs stable and unique wit
 
 Character-keyed slots accept `{ prompt, answers: { crimson, clementine, maria, emerald, maddie, indigo, magenta, cyan, sophia } }`; values are owner-authored strings. Fields may be filled incrementally, but all nine answers must be complete before publication. Do not use the rough concept examples as final copy.
 
-`personality-quiz.content.ts` holds canonical identities, existing art paths, scale labels, and the provisional `SCORING_CONFIG.explorationPointWeight = 1`. It also assembles the authoring slots; `personality-quiz.types.ts` defines the data contract. Test fixtures are in `personality-quiz.fixtures.ts` and are never imported by the application.
+`personality-quiz.content.ts` maps quiz IDs to stable roster IDs in `characters.json`, using its `shortName`, `name`, and `img` for display names, canonical names, and artwork. Quiz colors and scoring associations stay in the quiz configuration, alongside scale labels and the provisional `SCORING_CONFIG.explorationPointWeight = 1`. It also assembles the authoring slots; `personality-quiz.types.ts` defines the data contract. Test fixtures are in `personality-quiz.fixtures.ts` and are never imported by the application.
 
 ## Mechanics
 
