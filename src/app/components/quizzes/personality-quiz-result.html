@@ -1,0 +1,62 @@
+<div class="result-heading">
+  <p class="eyebrow">Authoring preview · Result</p>
+  <h2>{{ winners.length > 1 ? 'You match more than one Personality Girl' : 'Your Personality Girl Is…' }}</h2>
+  @if (winners.length > 1) { <p>Five tie-breakers left a joint match. A single-winner rule is awaiting owner approval.</p> }
+</div>
+@for (id of winners; track id) {
+  <article class="character-result" [style.--character-color]="characters[id].color">
+    <div class="portrait">
+      <img [src]="'assets/Icons/' + characters[id].art" [alt]="characters[id].canonicalName" />
+      <h3>{{ characters[id].name }}</h3>
+      <p>{{ characters[id].canonicalName }}</p>
+    </div>
+    <div class="narrative">
+      <p class="archetype">{{ content.results[id].archetype }}</p>
+      <p>{{ content.results[id].narrative }}</p>
+      <h4>Strengths</h4><p>{{ content.results[id].strengths }}</p>
+      <h4>Challenges</h4><p>{{ content.results[id].challenges }}</p>
+    </div>
+  </article>
+}
+<section class="profile" aria-labelledby="profile-title">
+  <h3 id="profile-title">Your five-dimensional profile</h3>
+  <p>Each pair sums to 100%. Only Foundation and Refinement answers set these positions.</p>
+  @for (scale of scales; track scale.id) {
+    <div class="scale">
+      <div class="scale-labels">
+        <span>{{ scale.left }} {{ (1 - result.scales[scale.id]) * 100 | number:'1.0-0' }}%</span>
+        <span>{{ scale.right }} {{ result.scales[scale.id] * 100 | number:'1.0-0' }}%</span>
+      </div>
+      <div class="scale-track" role="meter" [attr.aria-label]="scale.left + ' to ' + scale.right"
+        aria-valuemin="0" aria-valuemax="100" [attr.aria-valuenow]="result.scales[scale.id] * 100"
+        [attr.aria-valuetext]="scale.left + ' ' + ((1 - result.scales[scale.id]) * 100).toFixed(0) + ' percent, ' + scale.right + ' ' + (result.scales[scale.id] * 100).toFixed(0) + ' percent'">
+        <span [style.left.%]="result.scales[scale.id] * 100"></span>
+      </div>
+    </div>
+  }
+  <p class="note">Lower Maddie affinity is not a character result or a moral judgment. This is an entertainment quiz, not a validated psychological test.</p>
+</section>
+@if (votes) {
+  <section aria-labelledby="votes-title">
+    <h3 id="votes-title">Tie-break votes</h3>
+    <ul>@for (id of result.tied; track id) { <li>{{ characters[id].name }}: {{ votes[id] }}</li> }</ul>
+    <p class="note">These votes resolve the original tie. They do not change ranking points or profile bars.</p>
+  </section>
+}
+<section aria-labelledby="secondary-title">
+  <h3 id="secondary-title">Secondary matches</h3>
+  <ul>@for (entry of secondary; track entry.id) {
+    <li>{{ characters[entry.id].name }} · {{ entry.rankingScore }} ranking points</li>
+  }</ul>
+  <details>
+    <summary>How ranking points work</summary>
+    <p>Base affinity (0–100 points) plus Exploration choices, at {{ config.explorationPointWeight }} point per choice. This weight is provisional. Ranking points are not percentages or probabilities.</p>
+    <ul>@for (entry of result.ranking; track entry.id) {
+      <li>{{ characters[entry.id].name }}: {{ entry.baseScore }} base + {{ entry.explorationCount * config.explorationPointWeight }} Exploration = {{ entry.rankingScore }} points</li>
+    }</ul>
+  </details>
+</section>
+<div class="actions">
+  <button type="button" (click)="retake.emit()">Retake quiz</button>
+  <button type="button" class="secondary" (click)="review.emit()">Review answers</button>
+</div>

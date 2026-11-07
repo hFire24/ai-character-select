@@ -1,0 +1,74 @@
+﻿<a class="back-link" routerLink="/quizzes">&larr; Back to quizzes</a>
+<header>
+  <h1>Personality Girls Quiz</h1>
+  <p>Choose the answer that fits you best.</p>
+</header>
+<aside class="preview-banner">
+  <strong>Authoring preview</strong>
+  <p>Question wording, answers, and result descriptions are awaiting the owner's content. These placeholders do not form a finished personality quiz.</p>
+  <details>
+    <summary>Content readiness: {{ readiness.pending.length }} unfinished slots</summary>
+    <p>{{ readiness.errors.length }} structure errors. Publication is blocked until all author content is complete.</p>
+    <ul>@for (slot of readiness.pending; track slot) { <li>{{ slot }}</li> }</ul>
+  </details>
+</aside>
+@if (readiness.errors.length) {
+  <div role="alert"><p>Quiz content needs repair before preview.</p>
+    <ul>@for (error of readiness.errors; track $index) { <li>{{ error }}</li> }</ul>
+  </div>
+} @else {
+  <section class="quiz-panel" aria-label="Personality Girls Quiz">
+    @if (session.mode === 'results' && session.result) {
+      <h2 #resultHeading tabindex="-1" class="sr-only">Quiz results</h2>
+      <app-personality-quiz-result [result]="session.result" [winners]="session.winners"
+        [content]="content" [votes]="session.votes" (retake)="move('restart')" (review)="move('review')" />
+    } @else {
+      <div class="progress-label" aria-live="polite">
+        <span>{{ session.phaseName }}</span>
+        <span>{{ session.mode === 'tie' ? 'Tie-breaker ' + (session.tieIndex + 1) + ' of 5' : 'Question ' + (session.currentIndex + 1) + ' of 35' }}</span>
+      </div>
+      <progress [value]="session.mode === 'tie' ? session.tieIndex : session.answeredCount"
+        [max]="session.mode === 'tie' ? 5 : 35"
+        [attr.aria-label]="session.mode === 'tie' ? 'Tie-breakers completed' : 'Main questions answered'"></progress>
+      @if (session.mode === 'tie') {
+        <p class="phase-note">Your top scores are exactly tied. Five additional questions will help separate the tied matches.</p>
+      } @else if (session.currentIndex === 20) {
+        <p class="phase-note">Foundation complete. Exploration offers four choices based on your first 20 answers.</p>
+      } @else if (session.currentIndex === 30) {
+        <p class="phase-note">Exploration complete. Five final questions refine your profile.</p>
+      }
+      @if (session.notice) { <p class="phase-note" role="status">{{ session.notice }}</p> }
+      <h2 #questionHeading tabindex="-1" id="question-title">{{ session.question.prompt }}</h2>
+      <fieldset #answerGroup [disabled]="session.pendingOption !== null" aria-labelledby="question-title">
+        <div class="answers">
+          @for (option of session.options; track option.id) {
+            <label class="answer" [class.selected]="session.selected === option.id">
+              <input type="radio" [name]="session.question.id" [value]="option.id"
+                [checked]="session.selected === option.id" (change)="choose(option.id)" />
+              <span>{{ option.text }}</span>
+              <span class="selection-mark" aria-hidden="true">{{ session.selected === option.id ? '✓' : '' }}</span>
+            </label>
+          }
+        </div>
+      </fieldset>
+      @if (session.pendingOption !== null) {
+        <div class="change-warning" role="alert">
+          <h3>Change your Foundation answer?</h3>
+          <p>This changes your four Exploration choices. Continuing will clear Exploration, Refinement, and tie-breaker answers.</p>
+          <div class="confirmation-actions">
+            <button #confirmButton type="button" class="primary" (click)="resolveChange(true)">Change and clear answers</button>
+            <button type="button" class="secondary" (click)="resolveChange(false)">Keep previous answer</button>
+          </div>
+        </div>
+      }
+      <nav class="question-navigation" aria-label="Question navigation">
+        <button type="button" class="secondary"
+          [disabled]="session.pendingOption !== null || (session.mode === 'main' && session.currentIndex === 0)"
+          (click)="move('back')">Previous</button>
+        <button type="button" class="primary" [disabled]="!session.selected || session.pendingOption !== null" (click)="move('next')">
+          {{ (session.mode === 'main' && session.currentIndex === 34) || (session.mode === 'tie' && session.tieIndex === 4) ? 'See results' : 'Next' }} <span aria-hidden="true">&rarr;</span>
+        </button>
+      </nav>
+    }
+  </section>
+}

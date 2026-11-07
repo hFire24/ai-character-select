@@ -1,0 +1,68 @@
+:host {
+  display: block;
+  max-width: 900px;
+  margin: 24px auto;
+  color: #2c3e50;
+  text-align: left;
+}
+
+.back-link { color: #6550bd; font-weight: 600; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+header { margin: 32px 0; text-align: center; }
+h1 { margin-bottom: 12px; font-size: clamp(26px, 4vw, 36px); }
+header p { color: #667084; line-height: 1.6; }
+.quiz-panel { padding: 36px; background: #fff; border: 1px solid #dce0eb; border-radius: 24px; box-shadow: 0 8px 28px #17213b0d; }
+.progress-label { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; font-weight: 600; }
+progress { display: block; appearance: none; width: 100%; height: 8px; margin: 14px 0 36px; border: 0; border-radius: 8px; overflow: hidden; background: #ece9f6; }
+progress::-webkit-progress-bar { background: #ece9f6; }
+progress::-webkit-progress-value { background: #6550bd; border-radius: 8px; }
+progress::-moz-progress-bar { background: #6550bd; border-radius: 8px; }
+fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+h2 { margin: 0 0 24px; font-size: 26px; overflow-wrap: anywhere; }
+.preview-banner { padding: 20px; margin-bottom: 24px; border: 1px solid #d8c89c; border-radius: 16px; background: #fff9e8; font-size: 14px; line-height: 1.6; }
+.preview-banner p { margin: 8px 0; }
+.preview-banner ul { max-height: 180px; overflow: auto; }
+summary { cursor: pointer; }
+.phase-note { padding: 14px; background: #f3f0fc; border-radius: 10px; line-height: 1.6; }
+.change-warning { padding: 20px; border: 2px solid #ad791c; border-radius: 12px; margin-top: 24px; }
+.confirmation-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.answers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.answer { display: flex; align-items: center; gap: 12px; position: relative; min-height: 120px; padding: 20px; box-sizing: border-box; border: 2px solid #dce0eb; border-radius: 18px; cursor: pointer; font-size: 18px; font-weight: 600; overflow-wrap: anywhere; transition: transform 160ms ease, border-color 160ms ease, background 160ms ease; }
+input { flex-shrink: 0; width: 20px; height: 20px; margin: 0; accent-color: #6550bd; }
+.selection-mark { margin-left: auto; color: #6550bd; }
+.answer.selected { border-color: #6550bd; background: #f3f0fc; }
+.question-navigation { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; padding-top: 24px; border-top: 1px solid #e6e8ef; }
+button { min-height: 48px; padding: 12px 24px; border: 1px solid transparent; border-radius: 12px; font: inherit; font-weight: 700; cursor: pointer; transition: transform 160ms ease, box-shadow 160ms ease; }
+.primary { background: #6550bd; color: #fff; }
+.secondary { background: transparent; border-color: #dce0eb; color: inherit; }
+button:disabled { opacity: .45; cursor: default; }
+.answer:active, button:enabled:active { transform: scale(.98); }
+a:focus-visible, button:focus-visible, .answer:has(input:focus-visible) { outline: 3px solid #9180d4; outline-offset: 4px; }
+@media (hover: hover) {
+  .answer:hover { transform: translateY(-3px); border-color: #9180d4; }
+  button:enabled:hover { box-shadow: 0 4px 12px #6550bd33; }
+}
+@media (max-width: 600px) {
+  .quiz-panel { padding: 24px 18px; }
+  .answers { grid-template-columns: 1fr; }
+  .answer { min-height: 90px; }
+  .progress-label { font-size: 12px; }
+  button { padding: 12px 18px; }
+}
+@media (prefers-color-scheme: dark) {
+  :host { color: #e2e8f0; }
+  h1 { color: #f1f5f9; }
+  .back-link { color: #b8a8ff; }
+  header p { color: #b0bbca; }
+  .quiz-panel { background: #20252b; border-color: #39424d; }
+  .preview-banner { background: #332c1d; border-color: #746135; }
+  .phase-note { background: #352e50; }
+  .answer, .secondary, .question-navigation { border-color: #485262; }
+  .answer.selected { background: #352e50; border-color: #b8a8ff; }
+  .selection-mark { color: #b8a8ff; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .answer, button { transition: none; }
+  .answer:hover, .answer:active, button:enabled:active { transform: none; }
+}

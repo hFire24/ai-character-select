@@ -25,4 +25,7 @@ export const routes: Routes = [
   { path: 'chat-history-chart', loadComponent: () => import('./components/chat-history-chart/chat-history-chart').then(m => m.ChatHistoryChart), title: 'Chat History Spread' },
   { path: 'arcade/rules', loadComponent: () => import('./components/arcade/rules/rules').then(m => m.ArcadeRules), title: 'Arcade Rules' },
   { path: 'arcade', loadComponent: () => import('./components/arcade/arcade').then(m => m.Arcade), title: 'Character Arcade' },
+  { path: 'quizzes/personality-girls', loadComponent: () => import('./components/quizzes/personality-girls-quiz').then(m => m.PersonalityGirlsQuiz), title: 'Personality Girls Quiz' },
+  { path: 'quizzes/music-enjoyers', loadComponent: () => import('./components/quizzes/quiz-page').then(m => m.QuizPage), title: 'Music Enjoyers Quiz', data: { title: 'Music Enjoyers Quiz' } },
+  { path: 'quizzes', loadComponent: () => import('./components/quizzes/quizzes').then(m => m.Quizzes), title: 'Quizzes' }
 ];
