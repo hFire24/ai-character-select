@@ -138,7 +138,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Blonde Girls",
     type: "hair",
     description: "Girls known for having blonde hair",
-    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149, 163, 168]
+    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149, 163, 168, 172]
   },
   {
     name: "Chino-chan Expies",
@@ -162,7 +162,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "\"Onii-chan\" Sayers",
     type: "speech",
     description: "Characters who can say 'onii-chan' according to their instructions",
-    characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 107, 108, 139, 140, 148, 152]
+    characterIds: [14, 26, 35, 51, 58, 74, 75, 77, 95, 107, 108, 139, 140, 148, 152, 172]
   },
   {
     name: "Kaomoji Users",
@@ -222,7 +222,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Gamers",
     type: "interest",
     description: "Characters who have an interest in gaming",
-    characterIds: [4, 13, 25, 31, 55, 65, 69, 84, 86, 96, 105, 106, 114, 150, 155, 164, 999]
+    characterIds: [4, 13, 25, 31, 55, 65, 69, 84, 86, 96, 105, 106, 114, 150, 155, 164, 172, 999]
   },
   {
     name: "Musicians",
