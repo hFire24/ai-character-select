@@ -12,4 +12,4 @@
   <app-stats-container [stats]="stats"></app-stats-container>
 </div>
 
-<app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (close)="selectedCharacter = null"></app-character-modal>
+<app-character-modal *ngIf="selectedCharacter" [character]="selectedCharacter" (chatUpdated)="loadLastChattedCharacters()" (close)="selectedCharacter = null"></app-character-modal>

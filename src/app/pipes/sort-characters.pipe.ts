@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Character } from '../services/character.service';
 import { getStatusSortRank } from '../utils/status-sort';
 
-export type SortField = 'none' | 'id' | 'name' | 'shortName' | 'status' | 'generation' | 'tier' | 'moe' | 'futuristic' | 'mature' | 'birthday' | 'creationDate';
+export type SortField = 'none' | 'id' | 'name' | 'shortName' | 'status' | 'generation' | 'tier' | 'moe' | 'futuristic' | 'mature' | 'birthday' | 'creationDate' | 'timestamp';
 export type SortDirection = 'asc' | 'desc';
 
 @Pipe({
@@ -30,6 +30,16 @@ export class SortCharactersPipe implements PipeTransform {
       let valueB: any;
 
       switch (field) {
+        case 'timestamp': {
+          const timestamp = (character: Character): number | null => {
+            const stored = localStorage.getItem('chatLinkTimestamp_' + (character.parentId ?? character.id));
+            const value = stored ? new Date(stored).getTime() : NaN;
+            return Number.isFinite(value) ? value : null;
+          };
+          valueA = timestamp(a);
+          valueB = timestamp(b);
+          break;
+        }
         case 'id':
           valueA = a.id;
           valueB = b.id;

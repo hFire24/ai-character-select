@@ -23,7 +23,7 @@ describe('RelativeDatePipe', () => {
   });
 
   it('should return formatted date for dates beyond yesterday', () => {
-    const pastDate = new Date('2024-01-15');
+    const pastDate = new Date(2024, 0, 15);
     const result = pipe.transform(pastDate);
     expect(result).toContain('Jan');
     expect(result).toContain('15');

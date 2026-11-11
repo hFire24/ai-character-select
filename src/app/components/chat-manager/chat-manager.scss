@@ -73,7 +73,7 @@
 
 .restore-button {
   padding: 10px 18px;
-  background-color: #8b5cf6;
+  background-color: #15803d;
   color: white;
   border: none;
   border-radius: 8px;
@@ -81,7 +81,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #7c3aed;
+    background-color: #166534;
   }
 }
 
@@ -254,5 +254,133 @@
 
   .chat-link {
     word-break: break-all;
+  }
+}
+
+.chat-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+
+  button {
+    padding: 8px 12px;
+    border: 1px solid #c4b5fd;
+    border-radius: 6px;
+    background: #f5f3ff;
+    color: #5b21b6;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    &:hover { background: #ede9fe; }
+    &:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 2px; }
+  }
+  .undo-button {
+    background: #dc2626;
+    border-color: #dc2626;
+    color: white;
+    &:hover { background: #b91c1c; }
+  }
+}
+
+.chat-info { min-width: 0; }
+.chat-link { overflow-wrap: anywhere; }
+
+@media (prefers-color-scheme: dark) {
+  .chat-actions button:not(.undo-button):not(.archive-button) {
+    background: #31264d;
+    border-color: #6d5299;
+    color: #e9ddff;
+    &:hover { background: #443364; }
+  }
+}
+
+.chat-actions .restore-button {
+  background: #15803d;
+  border-color: #15803d;
+  color: white;
+
+  &:hover { background: #166534; }
+}
+
+.chat-actions .archive-button {
+  background: #facc15;
+  border-color: #eab308;
+  color: #422006;
+
+  &:hover { background: #eab308; }
+}
+
+.timestamp-dialog {
+  position: fixed;
+
+  .timestamp-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+    &:hover { opacity: 0.7; }
+  }
+
+  h2 { padding-right: 20px; }
+  &[open] {
+    animation: timestampDialogIn 160ms ease-out;
+  }
+  border: 1px solid #c4b5fd;
+  border-radius: 12px;
+  padding: 24px;
+  width: min(360px, calc(100vw - 64px));
+  box-shadow: 0 20px 60px #0004;
+  &::backdrop { background: #0008; }
+  h2 { margin: 0 0 8px; }
+  p { margin: 0 0 20px; }
+  label { display: block; margin-bottom: 8px; }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+  }
+  .chat-actions { justify-content: flex-end; margin-top: 20px; }
+}
+
+@keyframes timestampDialogIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timestamp-dialog[open] { animation: none; }
+}
+@media (prefers-color-scheme: dark) {
+  .timestamp-dialog {
+    background: #23272a;
+    color: #e0e0e0;
+    color-scheme: dark;
+    h2 { color: inherit; }
+  }
+}
+
+.timestamp-dialog .chat-actions {
+  .cancel-button {
+    background: #dc2626;
+    border-color: #dc2626;
+    color: white;
+    &:hover { background: #b91c1c; }
+  }
+  .save-button {
+    background: #15803d;
+    border-color: #15803d;
+    color: white;
+    &:hover { background: #166534; }
   }
 }

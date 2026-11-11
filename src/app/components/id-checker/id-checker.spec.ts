@@ -52,6 +52,7 @@ describe('IdChecker', () => {
       purpose: 'Discuss music',
       funFact: 'Leader of the Music Enjoyers',
       description: 'High-energy character',
+      summary: 'High-energy character',
       note: 'Returned as his own character.',
       knowledgeFriendly: false
     };

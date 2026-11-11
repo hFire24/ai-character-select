@@ -16,7 +16,7 @@ describe('MoodService', () => {
     id: 1, name: 'Test', shortName: 'Test', img: '', generation: 1,
     status: 'active', tier: 4, color: 'blue', moe: 1, futuristic: 1,
     mature: 1, emotion: '', pronouns: 'he/him', link: '', interests: '',
-    purpose: '', funFact: '', description: '', ...overrides
+    purpose: '', funFact: '', description: '', summary: '', ...overrides
   });
 
   beforeEach(() => {

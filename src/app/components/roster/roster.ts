@@ -66,10 +66,16 @@ export class Roster {
     }
 
   get selectedSortOption(): RosterSortOption {
+    if (this.sortBy === 'timestamp') return this.sortDirection === 'desc' ? 'recent' : 'recentDesc';
     return this.sortBy === 'id' && this.sortDirection === 'desc' ? 'idDesc' : this.sortBy;
   }
 
   setSortBy(field: RosterSortOption) {
+    if (field === 'recent' || field === 'recentDesc') {
+      this.sortBy = 'timestamp';
+      this.sortDirection = field === 'recent' ? 'desc' : 'asc'; // 'recentDesc' corresponds to ascending order
+      return;
+    }
     this.sortBy = field === 'idDesc' ? 'id' : field;
     this.sortDirection = ['idDesc', 'moe', 'futuristic', 'mature'].includes(field) ? 'desc' : 'asc';
   }

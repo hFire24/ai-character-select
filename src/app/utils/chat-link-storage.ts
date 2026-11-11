@@ -30,9 +30,13 @@ export const getEffectiveChatLink = (character: Character, characters: Character
   return '';
 };
 
-export const saveChatLink = (character: Character, chatLink: string): void => {
+export const saveChatLink = (character: Character, chatLink: string, archivePrevious = false): void => {
+  if (archivePrevious) {
+    const previous = getStoredChatLink(character);
+    if (previous && previous !== chatLink) archiveChatLink(character);
+  }
   localStorage.setItem(getChatLinkKey(character), chatLink);
-  localStorage.removeItem(getArchivedChatLinkKey(character));
+  if (!archivePrevious) localStorage.removeItem(getArchivedChatLinkKey(character));
 };
 
 export const archiveChatLink = (character: Character): boolean => {

@@ -1,3 +1,6 @@
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BlindRanking } from './blind-ranking';
@@ -8,6 +11,7 @@ describe('BlindRanking', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([])],
       imports: [BlindRanking]
     })
     .compileComponents();
@@ -27,8 +31,9 @@ describe('BlindRanking', () => {
       inactive: true,
       side: true,
       retired: true,
+      superRetired: false,
       me: false,
-      bonus: true
+      bonus: false
     });
   });
 

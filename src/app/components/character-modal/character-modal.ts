@@ -62,6 +62,7 @@ export class CharacterModal {
   readonly moeThreshold = MOE_THRESHOLD;
   @Input() character: Character = FALLBACK_CHARACTER;
   @Output() close = new EventEmitter<void>();
+  @Output() chatUpdated = new EventEmitter<void>();
 
   chatLink: string = '';
   lastChatDate = 'N/A';
@@ -103,7 +104,7 @@ export class CharacterModal {
         alert('Invalid chat link format. Please enter a valid URL starting with https://');
         return;
       }
-      saveChatLink(this.statsCharacter, this.chatLink);
+      saveChatLink(this.statsCharacter, this.chatLink, true);
       
       // Update timestamp when chat link is changed (not reset to default)
       if (this.chatLink !== this.statsCharacter.link) {
@@ -118,12 +119,14 @@ export class CharacterModal {
         }
       }
       
+      this.chatUpdated.emit();
       alert('Chat link updated!');
     } else if (newLink === '') {
       // If the user clears the input, reset to default link
       this.chatLink = this.statsCharacter.link;
       archiveChatLink(this.statsCharacter);
       // Don't update timestamp when resetting to default
+      this.chatUpdated.emit();
       alert('Chat link reset to default.');
     }
   }
@@ -134,6 +137,7 @@ export class CharacterModal {
     if (confirmed) {
       this.chatLink = this.statsCharacter.link;
       archiveChatLink(this.statsCharacter);
+      this.chatUpdated.emit();
       alert('Chat link reset to default.');
     }
   }
@@ -142,6 +146,7 @@ export class CharacterModal {
     if (!this.chatOwnerReady) return;
     if (restoreStoredChatLink(this.statsCharacter)) {
       this.loadChatLink();
+      this.chatUpdated.emit();
       alert('Chat link restored.');
     }
   }
@@ -240,6 +245,7 @@ export class CharacterModal {
     characters: Character[];
     description: string;
   } {
+    characters = characters.filter(character => character.id !== 0);
     if (this.statsCharacter.status === 'inactive') {
       return {
         characters: characters.filter(character => character.status === 'inactive'),

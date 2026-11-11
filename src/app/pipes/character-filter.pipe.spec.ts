@@ -27,6 +27,7 @@ describe('CharacterFilterPipe', () => {
         interests: 'testing',
         purpose: 'test',
         funFact: 'fact',
+        summary: '',
         description: 'desc'
       },
       {
@@ -47,6 +48,7 @@ describe('CharacterFilterPipe', () => {
         interests: 'resting',
         purpose: 'test',
         funFact: 'fact',
+        summary: '',
         description: 'desc'
       },
       {
@@ -67,6 +69,7 @@ describe('CharacterFilterPipe', () => {
         interests: 'supporting',
         purpose: 'test',
         funFact: 'fact',
+        summary: '',
         description: 'desc',
         musicEnjoyer: true
       },
@@ -88,6 +91,7 @@ describe('CharacterFilterPipe', () => {
         interests: 'being cute',
         purpose: 'test',
         funFact: 'fact',
+        summary: '',
         description: 'desc'
       }
     ];

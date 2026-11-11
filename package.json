@@ -10,6 +10,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "test:check": "ng test --watch=false --browsers=ChromeHeadless",
     "deploy": "python id_checker.py && ng build --configuration production && npx angular-cli-ghpages --dir=dist/browser"
   },
   "prettier": {

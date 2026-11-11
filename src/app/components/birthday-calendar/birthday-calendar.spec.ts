@@ -12,7 +12,7 @@ describe('BirthdayCalendar', () => {
     id, name: `Character ${id}`, shortName: `Character ${id}`, img: '', generation: 1,
     status: 'active', tier: 4, color: 'blue', moe: 1, futuristic: 1, mature: 1,
     emotion: '', pronouns: 'he/him', link: '', interests: '', purpose: '',
-    funFact: '', description: '', birthday: 'October 3', ...overrides
+    funFact: '', description: '', summary: '', birthday: 'October 3', ...overrides
   });
   const characters = [
     character(1),

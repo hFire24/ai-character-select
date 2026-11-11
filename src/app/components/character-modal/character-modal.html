@@ -97,7 +97,7 @@
         @if (hasActiveChatLink()) {
           <button id="resetChatLink" (click)="resetChatLink()">Reset Chat Link 🔄️</button>
         }
-        @if (hasArchivedLink()) {
+        @else if (hasArchivedLink()) {
           <button id="restoreChatLink" (click)="restoreChatLink()">Restore Chat Link 🔄️</button>
         }
       </div>

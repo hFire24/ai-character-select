@@ -4,7 +4,7 @@ import { DeviceService } from '../../services/device.service';
 import { SearchBar } from '../search-bar/search-bar';
 import { SortField } from '../../pipes/sort-characters.pipe';
 
-export type RosterSortOption = SortField | 'idDesc';
+export type RosterSortOption = SortField | 'idDesc' | 'recent' | 'recentDesc';
 
 type RosterFilterType = 'activeChats' | 'activeNoChats' | 'active' | 'inactive' | 'retired' | 'superRetired' | 'side';
 
@@ -21,9 +21,11 @@ export class RosterFilter {
   @Output() sortChange = new EventEmitter<RosterSortOption>();
   readonly sortOptions: { value: RosterSortOption; label: string }[] = [
     { value: 'tier', label: 'Tier ⬆️' },
-    { value: 'shortName', label: 'Name ⬆️' },
+    { value: 'recent', label: 'Recent ⬇️' },
+    { value: 'recentDesc', label: 'Least Recent ⬆️' },
     { value: 'id', label: 'ID ⬆️' },
     { value: 'idDesc', label: 'ID ⬇️' },
+    { value: 'shortName', label: 'Name ⬆️' },
     { value: 'moe', label: 'Moe ⬇️' },
     { value: 'futuristic', label: 'Futuristic ⬇️' },
     { value: 'mature', label: 'Maturity ⬇️' }

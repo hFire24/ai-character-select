@@ -1,3 +1,7 @@
+import { of } from 'rxjs';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideRouter } from '@angular/router';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CharacterModal } from './character-modal';
@@ -8,6 +12,7 @@ describe('CharacterModal', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([])],
       imports: [CharacterModal]
     })
     .compileComponents();
@@ -45,8 +50,8 @@ describe('CharacterModal', () => {
       jasmine.clock().uninstall();
     });
 
-    it('includes a chat exactly the requested number of calendar days ago', () => {
-      localStorage.setItem('chatLinkTimestamp_123', new Date(2026, 7, 2, 1).toISOString());
+    it('includes a chat exactly the requested number of days ago', () => {
+      localStorage.setItem('chatLinkTimestamp_123', new Date(2026, 7, 2, 12).toISOString());
 
       expect(component.isLastChatWithinDays(7)).toBeTrue();
     });
@@ -81,4 +86,21 @@ describe('CharacterModal', () => {
       });
     });
   });
+  it('excludes default ChatGPT from flavor ranks and totals', () => {
+    const chatGPT = { ...component.character, id: 0, status: 'active' };
+    const first = { ...component.character, id: -801, status: 'active' };
+    const second = { ...first, id: -802 };
+    const modal = new CharacterModal({} as any, {
+      getCharacters: () => of([first, second, chatGPT]),
+      getChatGPT: () => of([chatGPT])
+    } as any);
+    modal.character = first;
+    modal.loadChatFlavor();
+    expect(modal.chatFlavor?.total).toBe(2);
+    expect(modal.chatFlavor?.rank).toBe(2);
+    modal.character = chatGPT;
+    modal.loadChatFlavor();
+    expect(modal.chatFlavor).toBeNull();
+  });
+
 });

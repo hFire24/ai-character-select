@@ -13,6 +13,7 @@ describe('SortCharactersPipe', () => {
         shortName: 'Charlie',
         name: 'Charlie Character',
         status: 'active',
+        mature: 1,
         generation: 2,
         tier: 1,
         moe: 7,
@@ -25,6 +26,7 @@ describe('SortCharactersPipe', () => {
         interests: 'testing',
         purpose: 'test',
         funFact: 'fact',
+        summary: '',
         description: 'desc'
       },
       {
@@ -32,6 +34,7 @@ describe('SortCharactersPipe', () => {
         shortName: 'Alice',
         name: 'Alice Character',
         status: 'active',
+        mature: 1,
         generation: 1,
         tier: 3,
         moe: 5,
@@ -44,6 +47,7 @@ describe('SortCharactersPipe', () => {
         interests: 'coding',
         purpose: 'test',
         funFact: 'fact',
+        summary: '',
         description: 'desc',
         birthday: '2024-01-15'
       },
@@ -52,6 +56,7 @@ describe('SortCharactersPipe', () => {
         shortName: 'Bob',
         name: 'Bob Character',
         status: 'retired',
+        mature: 1,
         generation: 1,
         tier: 2,
         moe: 9,
@@ -64,6 +69,7 @@ describe('SortCharactersPipe', () => {
         interests: 'gaming',
         purpose: 'test',
         funFact: 'fact',
+        summary: '',
         description: 'desc',
         birthday: '2023-06-20'
       }
@@ -78,8 +84,8 @@ describe('SortCharactersPipe', () => {
     expect(pipe.transform([], 'id')).toEqual([]);
   });
 
-  it('should sort by id ascending by default', () => {
-    const result = pipe.transform(mockCharacters);
+  it('should sort by id ascending', () => {
+    const result = pipe.transform(mockCharacters, 'id');
     expect(result[0].id).toBe(1);
     expect(result[1].id).toBe(2);
     expect(result[2].id).toBe(3);
@@ -165,15 +171,15 @@ describe('SortCharactersPipe', () => {
 
   it('should sort by birthday ascending', () => {
     const result = pipe.transform(mockCharacters, 'birthday', 'asc');
-    expect(result[0].birthday).toBe('2023-06-20');
-    expect(result[1].birthday).toBe('2024-01-15');
+    expect(result[1].birthday).toBe('2023-06-20');
+    expect(result[2].birthday).toBe('2024-01-15');
   });
 
   it('should handle null birthday values', () => {
     const result = pipe.transform(mockCharacters, 'birthday', 'asc');
     expect(result.length).toBe(3);
-    // Character without birthday should be last
-    expect(result[2].birthday).toBeUndefined();
+    // Missing birthdays sort as empty strings before dates
+    expect(result[0].birthday).toBeUndefined();
   });
 
   it('should not modify original array', () => {

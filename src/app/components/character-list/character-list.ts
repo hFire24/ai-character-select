@@ -132,6 +132,17 @@ export class CharacterList {
     return [];
   }
 
+  get displayedOlderChattedCharacters(): LastChattedCharacter[] {
+    return this.inactiveChattedCharacters.length < 4 ? [] : this.olderChattedCharacters;
+  }
+
+  get displayedInactiveChattedCharacters(): LastChattedCharacter[] {
+    const inactive = this.inactiveChattedCharacters;
+    return inactive.length < 4
+      ? this.sortCharacters([...inactive, ...this.olderChattedCharacters])
+      : inactive;
+  }
+
   private get separatedChattedCharacterIds(): Set<number> {
     return new Set([
       ...this.retiredChattedCharacters,
