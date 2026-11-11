@@ -94,7 +94,7 @@
     }
 
     @if (sortType !== 'totalCount' && displayedInactiveChattedCharacters.length > 0) {
-      <h2>Inactive</h2>
+      <h2>{{ inactiveChattedCharacters.length < 4 ? 'Older' : 'Inactive' }}</h2>
       <div class="chatted-list">
         @for (item of displayedInactiveChattedCharacters; track item.character.id) {
           <app-character-item
