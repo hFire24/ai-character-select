@@ -3,9 +3,7 @@
     <p>Number of Active Chats: {{ numActiveChats }}</p>
     <p>Note: Only chats made after <b>March 27, 2026</b> are counted for the total.</p>
     <div class="button-group">
-      <button class="manage-button" routerLink="/manage-tiers">Manage Tiers</button>
       @if (numActiveChats > 0) {
-        <button class="manage-button" routerLink="/chat-manager">Chat Manager</button>
         <button class="reset-all-button" (click)="resetAllChatLinks()">Reset All Chat Links</button>
       }
       <select class="sort-dropdown" [(ngModel)]="sortType">
@@ -13,19 +11,6 @@
         <option value="totalCount">Count (Total)</option>
         <option value="weeklyCount">Count (Weekly)</option>
       </select>
-    </div>
-
-    <div class="data-controls">
-      <button class="data-button" routerLink="/chat-history-chart">Chat History Chart</button>
-      <button class="data-button" (click)="exportData()">Export Data</button>
-      <button class="data-button" (click)="importInput.click()">Import Data</button>
-      <input
-        #importInput
-        type="file"
-        accept="application/json,.json"
-        hidden
-        (change)="importData($event)"
-      />
     </div>
 
     @if (sortType === 'totalCount' && combinedChattedCharacters.length > 0) {

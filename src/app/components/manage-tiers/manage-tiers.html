@@ -4,6 +4,12 @@
     <p>Adjust the tiers of your characters.</p>
   </header>
 
+  <div class="actions">
+    <button type="button" class="secondary-button" (click)="exportText()">Export Text File</button>
+    <button type="button" class="secondary-button map-button" (click)="exportTierMap()">Export Tiers</button>
+    <button type="button" class="secondary-button map-button" (click)="importTierMap()">Import Tiers</button>
+  </div>
+
   <section class="controls" aria-label="Tier management controls">
     <div class="database-toolbar">
       <label class="search-control">
@@ -12,25 +18,25 @@
       </label>
 
       <div class="filter-builder" aria-label="Filters">
-        <label class="filter-pill">
-          <span>Status</span>
-          <select [(ngModel)]="statusFilter">
-            <option value="all">Any</option>
-            @for (status of statusOptions; track status) {
-              <option [value]="status">{{ status }}</option>
+        <details #filterDropdown class="filter-pill" name="tier-management-filters">
+          <summary>Status <span>{{ selectedStatuses.length ? selectedStatuses.length + ' selected' : 'Any' }}</span></summary>
+          <div class="filter-checklist" role="group" aria-label="Statuses">
+            <label><input type="checkbox" [checked]="!selectedStatuses.length" (change)="selectedStatuses = []">Any status</label>
+            @for (status of statusOptions; track status.value) {
+              <label><input type="checkbox" [checked]="selectedStatuses.includes(status.value)" (change)="toggleStatusFilter(status.value)">{{ status.label }}</label>
             }
-          </select>
-        </label>
+          </div>
+        </details>
 
-        <label class="filter-pill">
-          <span>Tier</span>
-          <select [(ngModel)]="tierFilter">
-            <option value="all">Any</option>
+        <details #filterDropdown class="filter-pill" name="tier-management-filters">
+          <summary>Tier <span>{{ selectedTiers.length ? selectedTiers.length + ' selected' : 'Any' }}</span></summary>
+          <div class="filter-checklist" role="group" aria-label="Tiers">
+            <label><input type="checkbox" [checked]="!selectedTiers.length" (change)="selectedTiers = []">Any tier</label>
             @for (tier of tierOptions; track tier) {
-              <option [value]="tier">Tier {{ tier }}</option>
+              <label><input type="checkbox" [checked]="selectedTiers.includes(tier)" (change)="toggleTierFilter(tier)">Tier {{ tier }}</label>
             }
-          </select>
-        </label>
+          </div>
+        </details>
       </div>
 
       <div class="filter-summary" aria-live="polite">
@@ -47,8 +53,14 @@
     </div>
 
     <div class="sort-section">
+      <div class="sort-presets" role="group" aria-label="Sort presets">
+        @for (preset of sortPresets; track preset.value) {
+          <button type="button" class="sort-toggle" [attr.aria-pressed]="activeSortPreset === preset.value"
+                  (click)="applySortPreset(preset.value)">{{ preset.label }}</button>
+        }
+      </div>
       <div class="sort-summary">
-        <button type="button" class="sort-toggle" (click)="toggleSortOptions()">
+        <button type="button" class="sort-toggle" [attr.aria-expanded]="showSortOptions" aria-controls="sort-editor" (click)="toggleSortOptions()">
           Sort options
         </button>
 
@@ -62,49 +74,40 @@
       </div>
 
       @if (showSortOptions) {
-      <div class="advanced-sort">
-        @for (sortLevel of sortLevels; track sortLevel.level) {
-          <label>
-            <span>{{ sortLevel.fieldLabel }}</span>
-            <select
-              [ngModel]="getSortField(sortLevel.level)"
-              (ngModelChange)="updateSortField(sortLevel.level, $event)"
-            >
-              @for (option of sortOptions; track option.value) {
-                <option [value]="option.value">{{ option.label }}</option>
-              }
-            </select>
-          </label>
-
-          <label>
-            <span>Direction</span>
-            <select
-              [ngModel]="getSortDirection(sortLevel.level)"
-              (ngModelChange)="updateSortDirection(sortLevel.level, $event)"
-            >
-              <option value="asc">Ascending</option>
-              <option value="desc">Descending</option>
-            </select>
-          </label>
-        }
-
-        <div class="sort-actions">
-          <button
-            type="button"
-            class="clear-sort-btn"
-            (click)="clearSort()"
-          >
-            Reset sort
-          </button>
+        <div class="advanced-sort" id="sort-editor" aria-label="Sort order">
+          @for (sort of sorts; track sort; let index = $index) {
+            <div class="sort-rule">
+              <label class="sort-field">
+                <span>{{ index === 0 ? 'Sort by' : 'Then by' }}</span>
+                <select [ngModel]="sort.field" (ngModelChange)="updateSortField(index, $event)">
+                  @for (option of availableSortOptions(index); track option.value) {
+                    <option [value]="option.value">{{ option.label }}</option>
+                  }
+                </select>
+              </label>
+                <select [attr.aria-label]="'Direction for sort ' + (index + 1)" [ngModel]="sort.direction" (ngModelChange)="updateSortDirection(index, $event)">
+                  <option value="asc">Ascending</option>
+                  <option value="desc">Descending</option>
+                </select>
+              <div class="sort-rule-actions">
+                <button type="button" class="sort-toggle" [disabled]="index === 0"
+                        [attr.aria-label]="'Move sort ' + (index + 1) + ' up'" (click)="moveSort(index, -1)">&#8593;</button>
+                <button type="button" class="sort-toggle" [disabled]="index === sorts.length - 1"
+                        [attr.aria-label]="'Move sort ' + (index + 1) + ' down'" (click)="moveSort(index, 1)">&#8595;</button>
+                <button type="button" class="clear-sort-btn" [attr.aria-label]="'Remove sort ' + (index + 1)"
+                        (click)="removeSort(index)">Remove</button>
+              </div>
+            </div>
+          } @empty {
+            <p>No sorts added. Add a sort or choose a preset.</p>
+          }
+          <div class="sort-actions">
+            <button type="button" class="sort-toggle" [disabled]="sorts.length === sortOptions.length"
+                    (click)="addSort()">Add sort</button>
+            <button type="button" class="clear-sort-btn" (click)="clearSort()">Reset sort</button>
+          </div>
         </div>
-      </div>
       }
-    </div>
-
-    <div class="actions">
-      <button type="button" class="secondary-button" (click)="exportText()">Export Text</button>
-      <button type="button" class="secondary-button" (click)="exportTierMap()">Export Map</button>
-      <button type="button" class="secondary-button" (click)="importTierMap()">Import Map</button>
     </div>
   </section>
 

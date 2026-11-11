@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
@@ -14,7 +14,7 @@ type ManagedCharacter = Character & {
   timestamp: Date | null;
 };
 
-type ManageTiersSortField = 'none' | 'tier' | 'name' | 'id' | 'status' | 'totalChats' | 'weeklyChats' | 'lastChat';
+type ManageTiersSortField = 'tier' | 'name' | 'id' | 'status' | 'totalChats' | 'weeklyChats' | 'lastChat';
 type SortDirection = 'asc' | 'desc';
 
 type SortOption = {
@@ -22,9 +22,9 @@ type SortOption = {
   label: string;
 };
 
-type SortLevel = {
-  level: 1 | 2 | 3;
-  fieldLabel: string;
+type SortRule = {
+  field: ManageTiersSortField;
+  direction: SortDirection;
 };
 
 @Component({
@@ -34,20 +34,44 @@ type SortLevel = {
   styleUrl: './manage-tiers.scss'
 })
 export class ManageTiers {
+  @ViewChildren('filterDropdown') private filterDropdowns!: QueryList<ElementRef<HTMLDetailsElement>>;
+
+  @HostListener('document:click', ['$event'])
+  closeFiltersOnOutsideClick(event: MouseEvent): void {
+    this.filterDropdowns.forEach(({ nativeElement: dropdown }) => {
+      if (!dropdown.contains(event.target as Node)) dropdown.open = false;
+    });
+  }
+
   characters: ManagedCharacter[] = [];
   selectedCharacter: Character | null = null;
   searchTerm = '';
-  statusFilter = 'all';
-  tierFilter = 'all';
-  sortBy: ManageTiersSortField = 'tier';
-  sortDirection: SortDirection = 'asc';
-  secondarySortBy: ManageTiersSortField = 'status';
-  secondarySortDirection: SortDirection = 'asc';
-  tertiarySortBy: ManageTiersSortField = 'id';
-  tertiarySortDirection: SortDirection = 'asc';
+  selectedStatuses: string[] = [];
+  selectedTiers: number[] = [];
   showSortOptions = false;
+  readonly sortPresets = [
+    {
+      value: 'default',
+      label: 'Sort Preset 1',
+      sorts: [
+        { field: 'tier', direction: 'asc' },
+        { field: 'status', direction: 'asc' },
+        { field: 'id', direction: 'asc' }
+      ]
+    },
+    {
+      value: 'activity',
+      label: 'Sort Preset 2',
+      sorts: [
+        { field: 'weeklyChats', direction: 'desc' },
+        { field: 'lastChat', direction: 'desc' },
+        { field: 'tier', direction: 'asc' },
+        { field: 'status', direction: 'asc' },
+        { field: 'id', direction: 'asc' }
+      ]
+    }
+  ] as const;
   sortOptions: SortOption[] = [
-    { value: 'none', label: 'None' },
     { value: 'tier', label: 'Tier' },
     { value: 'name', label: 'Name' },
     { value: 'id', label: 'ID' },
@@ -56,20 +80,22 @@ export class ManageTiers {
     { value: 'totalChats', label: 'Total' },
     { value: 'lastChat', label: 'Last' }
   ];
-  sortLevels: SortLevel[] = [
-    { level: 1, fieldLabel: 'First by' },
-    { level: 2, fieldLabel: 'Then by' },
-    { level: 3, fieldLabel: 'Then by' }
-  ];
+  sorts: SortRule[] = this.sortPresets[0].sorts.map(sort => ({ ...sort }));
   isLoading = true;
 
   constructor(private characterService: CharacterService) {
     this.loadCharacters();
   }
 
-  get statusOptions(): string[] {
-    return Array.from(new Set(this.characters.map(character => character.status))).sort();
-  }
+  readonly statusOptions = [
+    { value: 'active', label: 'Active' },
+    { value: 'inactive', label: 'Inactive' },
+    { value: 'side', label: 'Side' },
+    { value: 'inactive side', label: 'Inactive Side' },
+    { value: 'retired', label: 'Retired' },
+    { value: 'retired side', label: 'Retired Side' },
+    { value: 'other', label: 'Other' }
+  ];
 
   get tierOptions(): number[] {
     return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -83,8 +109,9 @@ export class ManageTiers {
         character.name.toLowerCase().includes(search) ||
         character.shortName.toLowerCase().includes(search) ||
         String(character.id).includes(search);
-      const matchesStatus = this.statusFilter === 'all' || character.status === this.statusFilter;
-      const matchesTier = this.tierFilter === 'all' || character.tier === Number(this.tierFilter);
+      const status = ['future', 'me'].includes(character.status) ? 'other' : character.status;
+      const matchesStatus = !this.selectedStatuses.length || this.selectedStatuses.includes(status);
+      const matchesTier = !this.selectedTiers.length || this.selectedTiers.includes(character.tier);
 
       return matchesSearch && matchesStatus && matchesTier;
     });
@@ -94,8 +121,8 @@ export class ManageTiers {
 
   get hasActiveFilters(): boolean {
     return this.searchTerm.trim().length > 0 ||
-      this.statusFilter !== 'all' ||
-      this.tierFilter !== 'all';
+      this.selectedStatuses.length > 0 ||
+      this.selectedTiers.length > 0;
   }
 
   get activeFilterLabels(): string[] {
@@ -103,14 +130,17 @@ export class ManageTiers {
     const search = this.searchTerm.trim();
 
     if (search) labels.push(`Search: ${search}`);
-    if (this.statusFilter !== 'all') labels.push(`Status: ${this.statusFilter}`);
-    if (this.tierFilter !== 'all') labels.push(`Tier: ${this.tierFilter}`);
+    if (this.selectedStatuses.length > 0) {
+      const statuses = this.statusOptions.filter(option => this.selectedStatuses.includes(option.value));
+      labels.push(`Status: ${statuses.map(option => option.label).join(', ')}`);
+    }
+    if (this.selectedTiers.length > 0) labels.push(`Tier: ${this.selectedTiers.join(', ')}`);
 
     return labels;
   }
 
   get sortSummaryLabels(): string[] {
-    return this.getSortChain().map(sort => {
+    return this.sorts.map(sort => {
       const option = this.sortOptions.find(sortOption => sortOption.value === sort.field);
       return `${option?.label ?? sort.field} ${sort.direction === 'asc' ? 'Asc' : 'Desc'}`;
     });
@@ -121,12 +151,20 @@ export class ManageTiers {
   }
 
   clearSort(): void {
-    this.sortBy = 'tier';
-    this.sortDirection = 'asc';
-    this.secondarySortBy = 'status';
-    this.secondarySortDirection = 'asc';
-    this.tertiarySortBy = 'id';
-    this.tertiarySortDirection = 'asc';
+    this.applySortPreset('default');
+  }
+
+  get activeSortPreset(): string | undefined {
+    return this.sortPresets.find(preset =>
+      preset.sorts.length === this.sorts.length && preset.sorts.every((sort, index) =>
+        this.sorts[index].field === sort.field && this.sorts[index].direction === sort.direction
+      )
+    )?.value;
+  }
+
+  applySortPreset(value: 'default' | 'activity'): void {
+    const preset = this.sortPresets.find(preset => preset.value === value)!;
+    this.sorts = preset.sorts.map(sort => ({ ...sort }));
   }
 
   toggleSortOptions(): void {
@@ -135,44 +173,50 @@ export class ManageTiers {
 
   clearFilters(): void {
     this.searchTerm = '';
-    this.statusFilter = 'all';
-    this.tierFilter = 'all';
+    this.selectedStatuses = [];
+    this.selectedTiers = [];
   }
 
-  updateSortField(level: 1 | 2 | 3, field: string): void {
-    const sortField = this.toSortField(field);
-
-    if (level === 1) {
-      this.sortBy = sortField;
-    } else if (level === 2) {
-      this.secondarySortBy = sortField;
-    } else {
-      this.tertiarySortBy = sortField;
-    }
+  toggleStatusFilter(status: string): void {
+    this.selectedStatuses = this.selectedStatuses.includes(status)
+      ? this.selectedStatuses.filter(value => value !== status)
+      : [...this.selectedStatuses, status];
   }
 
-  updateSortDirection(level: 1 | 2 | 3, direction: string): void {
-    const sortDirection = direction === 'desc' ? 'desc' : 'asc';
-
-    if (level === 1) {
-      this.sortDirection = sortDirection;
-    } else if (level === 2) {
-      this.secondarySortDirection = sortDirection;
-    } else {
-      this.tertiarySortDirection = sortDirection;
-    }
+  toggleTierFilter(tier: number): void {
+    this.selectedTiers = this.selectedTiers.includes(tier)
+      ? this.selectedTiers.filter(value => value !== tier)
+      : [...this.selectedTiers, tier];
   }
 
-  getSortField(level: 1 | 2 | 3): ManageTiersSortField {
-    if (level === 1) return this.sortBy;
-    if (level === 2) return this.secondarySortBy;
-    return this.tertiarySortBy;
+  availableSortOptions(index: number): SortOption[] {
+    return this.sortOptions.filter(option =>
+      !this.sorts.some((sort, sortIndex) => sortIndex !== index && sort.field === option.value)
+    );
   }
 
-  getSortDirection(level: 1 | 2 | 3): SortDirection {
-    if (level === 1) return this.sortDirection;
-    if (level === 2) return this.secondarySortDirection;
-    return this.tertiarySortDirection;
+  addSort(): void {
+    const option = this.availableSortOptions(-1)[0];
+    if (option) this.sorts.push({ field: option.value, direction: 'asc' });
+  }
+
+  removeSort(index: number): void {
+    if (index >= 0 && index < this.sorts.length) this.sorts.splice(index, 1);
+  }
+
+  moveSort(index: number, offset: -1 | 1): void {
+    const target = index + offset;
+    if (index < 0 || index >= this.sorts.length || target < 0 || target >= this.sorts.length) return;
+    [this.sorts[index], this.sorts[target]] = [this.sorts[target], this.sorts[index]];
+  }
+
+  updateSortField(index: number, field: string): void {
+    const option = this.availableSortOptions(index).find(option => option.value === field);
+    if (this.sorts[index] && option) this.sorts[index].field = option.value;
+  }
+
+  updateSortDirection(index: number, direction: string): void {
+    if (this.sorts[index]) this.sorts[index].direction = direction === 'desc' ? 'desc' : 'asc';
   }
 
   updateTier(character: ManagedCharacter, tier: string | number): void {
@@ -313,7 +357,7 @@ export class ManageTiers {
   }
 
   private sortCharacters(characters: ManagedCharacter[]): ManagedCharacter[] {
-    const sortChain = this.getSortChain();
+    const sortChain = this.sorts;
     if (sortChain.length === 0) return characters;
 
     return [...characters].sort((a, b) => {
@@ -325,21 +369,6 @@ export class ManageTiers {
       }
 
       return a.shortName.localeCompare(b.shortName);
-    });
-  }
-
-  private getSortChain(): { field: ManageTiersSortField; direction: SortDirection }[] {
-    const seenFields = new Set<ManageTiersSortField>();
-
-    return [
-      { field: this.sortBy, direction: this.sortDirection },
-      { field: this.secondarySortBy, direction: this.secondarySortDirection },
-      { field: this.tertiarySortBy, direction: this.tertiarySortDirection }
-    ].filter(sort => {
-      if (sort.field === 'none' || seenFields.has(sort.field)) return false;
-
-      seenFields.add(sort.field);
-      return true;
     });
   }
 
@@ -367,12 +396,6 @@ export class ManageTiers {
       default:
         return 0;
     }
-  }
-
-  private toSortField(field: string): ManageTiersSortField {
-    return this.sortOptions.some(option => option.value === field)
-      ? field as ManageTiersSortField
-      : 'none';
   }
 
   private applyImportedTierMap(tierMap: Record<string, unknown>): void {

@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 import { Character } from '../../services/character.service';
 import { CharacterItem } from '../character-item/character-item';
 import { archiveAllChatLinks, getStoredChatLink } from '../../utils/chat-link-storage';
@@ -13,27 +12,13 @@ interface LastChattedCharacter {
   weeklyChatCount: number;
 }
 
-interface CharacterListBackup {
-  version: 1;
-  exportedAt: string;
-  localStorage: Record<string, string>;
-}
-
 @Component({
   selector: 'app-character-list',
-  imports: [CommonModule, FormsModule, RouterLink, CharacterItem],
+  imports: [CommonModule, FormsModule, CharacterItem],
   templateUrl: 'character-list.html',
   styleUrl: 'character-list.scss'
 })
 export class CharacterList {
-  private readonly storageKeyPrefixes = [
-    'chatLink_',
-    'archivedChatLink_',
-    'chatLinkTimestamp_',
-    'chatLinkCounter_',
-    'chatLinkHistory_'
-  ];
-
   @Input() lastChattedCharacters: LastChattedCharacter[] = [];
   @Input() neverChattedCharacters: Character[] = [];
   @Input() isMobile = true;
@@ -177,88 +162,6 @@ export class CharacterList {
 
   onCharacterClick(character: Character) {
     this.selectCharacter.emit(character);
-  }
-
-  exportData() {
-    const storedData: Record<string, string> = {};
-
-    Object.keys(localStorage)
-      .filter(key => this.isCharacterListStorageKey(key))
-      .sort()
-      .forEach(key => {
-        const value = localStorage.getItem(key);
-        if (value !== null) storedData[key] = value;
-      });
-
-    const backup: CharacterListBackup = {
-      version: 1,
-      exportedAt: new Date().toISOString(),
-      localStorage: storedData
-    };
-    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `character-list-data-${new Date().toISOString().slice(0, 10)}.json`;
-    link.click();
-    URL.revokeObjectURL(url);
-  }
-
-  importData(event: Event) {
-    const input = event.target as HTMLInputElement;
-    const file = input.files?.[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = () => {
-      try {
-        const backup = JSON.parse(String(reader.result)) as Partial<CharacterListBackup>;
-        if (!this.isValidBackup(backup)) {
-          throw new Error('The selected file is not a valid character-list backup.');
-        }
-
-        Object.keys(localStorage)
-          .filter(key => this.isCharacterListStorageKey(key))
-          .forEach(key => localStorage.removeItem(key));
-
-        Object.entries(backup.localStorage).forEach(([key, value]) => {
-          localStorage.setItem(key, value);
-        });
-
-        this.refreshData.emit();
-        alert('Character-list data imported successfully.');
-      } catch (error) {
-        const message = error instanceof Error ? error.message : 'Unable to import the file.';
-        alert(message);
-      } finally {
-        input.value = '';
-      }
-    };
-    reader.onerror = () => {
-      alert('Unable to read the selected file.');
-      input.value = '';
-    };
-    reader.readAsText(file);
-  }
-
-  private isCharacterListStorageKey(key: string): boolean {
-    return this.storageKeyPrefixes.some(prefix => key.startsWith(prefix));
-  }
-
-  private isValidBackup(backup: Partial<CharacterListBackup>): backup is CharacterListBackup {
-    if (
-      backup.version !== 1 ||
-      typeof backup.exportedAt !== 'string' ||
-      !backup.localStorage ||
-      typeof backup.localStorage !== 'object' ||
-      Array.isArray(backup.localStorage)
-    ) {
-      return false;
-    }
-
-    return Object.entries(backup.localStorage).every(
-      ([key, value]) => this.isCharacterListStorageKey(key) && typeof value === 'string'
-    );
   }
 
   resetAllChatLinks() {

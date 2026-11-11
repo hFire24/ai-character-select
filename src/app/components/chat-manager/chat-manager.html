@@ -16,6 +16,11 @@
     </form>
   </dialog>
   <h1>Chat Manager</h1>
+  <div class="data-controls">
+    <button type="button" class="data-button" (click)="exportData()">Export Chat Data</button>
+    <button type="button" class="data-button" (click)="importInput.click()">Import Chat Data</button>
+    <input #importInput type="file" accept="application/json,.json" hidden (change)="importData($event)" />
+  </div>
   <h2>Active Chats</h2>
   
   @if (activeChats.length === 0) {
@@ -50,19 +55,17 @@
             <div class="chat-stats">
               <span class="stat">Last Week: {{ chat.weeklyChatCount }}</span>
               <span class="stat">Total: {{ chat.chatCount }}</span>
-              <span class="stat">Last: {{ chat.timestamp | relativeDate }} at {{ chat.timestamp | date:'shortTime' }}</span>
+              <span class="stat">Last Chat: {{ chat.timestamp | relativeDate }}<span class="chat-time"> at {{ chat.timestamp | date:'shortTime' }}</span></span>
             </div>
-            <div class="chat-link">
-              <a [href]="chat.chatLink" target="_blank" (click)="$event.stopPropagation()">{{ chat.chatLink }}</a>
-            </div>
-            <div class="chat-actions">
+            <a class="chat-link" [href]="chat.chatLink" [title]="chat.chatLink" target="_blank"
+               (click)="$event.stopPropagation()">{{ displayChatLink(chat.chatLink) }}</a>
+          </div>
+          <div class="chat-actions">
               <button type="button" (click)="editChatLink(chat.character)">Edit chat link</button>
               <button type="button" (click)="editLastTimestamp(chat.character)">Edit timestamp</button>
               <button type="button" class="archive-button" (click)="archiveChat(chat.character)">Archive</button>
-              @if (canUndoLatestChat(chat.character)) {
-                <button type="button" class="undo-button" (click)="undoLatestChat(chat.character)">Undo chat</button>
-              }
-            </div>
+              <button type="button" class="undo-button" [disabled]="!canUndoLatestChat(chat.character)"
+                      (click)="undoLatestChat(chat.character)">Undo chat</button>
           </div>
         </div>
       }
@@ -89,12 +92,11 @@
                 <span class="stat">Last Week: {{ chat.weeklyChatCount }}</span>
                 <span class="stat">Total: {{ chat.chatCount }}</span>
                  @if (chat.timestamp) {
-                   <span class="stat">Last: {{ chat.timestamp | relativeDate }} at {{ chat.timestamp | date:'shortTime' }}</span>
+                   <span class="stat">Last Chat: {{ chat.timestamp | relativeDate }}<span class="chat-time"> at {{ chat.timestamp | date:'shortTime' }}</span></span>
                  }
               </div>
-              <div class="chat-link">
-                <a [href]="chat.chatLink" target="_blank" (click)="$event.stopPropagation()">{{ chat.chatLink }}</a>
-              </div>
+              <a class="chat-link" [href]="chat.chatLink" [title]="chat.chatLink" target="_blank"
+                 (click)="$event.stopPropagation()">{{ displayChatLink(chat.chatLink) }}</a>
             </div>
 
             <div class="chat-actions">
