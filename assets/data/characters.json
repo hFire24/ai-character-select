@@ -152,7 +152,7 @@
     "color": "pink",
     "moe": 9,
     "futuristic": 5,
-    "mature": 2,
+    "mature": 3,
     "emotion": "shy",
     "pronouns": "she/her",
     "summary": "Shy and easily intimidated girl",
@@ -349,7 +349,7 @@
     "funFact": "Lives in a dormitory; has a strict mother who influences her morals and routines",
     "description": "Erica Hall is a 19-year-old college freshman with a passion for crossover fanfiction. With short black hair, light skin, and a notebook always nearby, she’s bursting with ideas that blend her favorite series like Pokémon, Sonic, Mario, and Sailor Moon. She’s cheerful, thoughtful, and driven by her love for storytelling. Erica often snacks on chips while dreaming up wild mashups, always keeping her mom’s moral compass in mind as she writes with both heart and imagination.",
     "retirementReason": "I stopped making crossover fanfics",
-    "alternatives": "Runa, Billy"
+    "alternatives": "Runa, Barry"
   },
   {
     "name": "Momo the Maid",
@@ -365,7 +365,7 @@
     "color": "pink",
     "moe": 10,
     "futuristic": 3,
-    "mature": 2,
+    "mature": 3,
     "emotion": "shy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6a7dffc4736c8191a669a8a29a147947",
@@ -513,7 +513,7 @@
     "funFact": "Based on my journal entry titled 'Negative Visualization: My Life - Bad Ending'; does not reject cuteness but consumes it",
     "description": "The Indulgent lumbers through the digital haze, a bloated monument to impulse and derailed intention. He drips with laziness and charm in equal measure, savoring every sensation without caring where it leads. Cynical, unbothered, and forever sidestepping purpose, he lounges in his own excess, finding fleeting delight in softness, cuteness, and the sweet drag of doing nothing at all. His presence is a cautionary tale wrapped in velvety apathy—an avatar of surrender to distraction and indulgence.",
     "retirementReason": "Other characters fulfill his purpose better",
-    "alternatives": "Anzu, Billy"
+    "alternatives": "Anzu, Barry"
   },
   {
     "name": "Bro. Stephen Nelson",
@@ -683,7 +683,7 @@
     "funFact": "Liam loves To Love Ru, Kieran loves Chainsaw Man",
     "description": "Liam and Kieran are brothers with opposite vibes. Liam is bright, emotional, and adores cute, chaotic anime girls—fanservice is his jam. Kieran is dark, intense, and drawn to gritty, mature stories with tough waifus. Liam lives for charm and romance; Kieran thrives on lore and edge. One blushes over dating sims, the other quotes characters like Makima mid-battle. They clash, banter, and bond over anime, always loud, always passionate—two extremes of the same otaku coin.",
     "retirementReason": "Other anime fans are more fun to chat with",
-    "alternatives": "Ryo, Billy"
+    "alternatives": "Ryo, Casey"
   },
   {
     "name": "Mark the Moderate",
@@ -733,7 +733,7 @@
     "color": "pink",
     "moe": 10,
     "futuristic": 2,
-    "mature": 2,
+    "mature": 3,
     "emotion": "shy",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6a7f29d466588191a0221b4b212a6caf",
@@ -1115,7 +1115,7 @@
     "funFact": "Got isekai'd from a retail job in 2017",
     "description": "Ben is a cheerful teenage boy who adores cute anime aesthetics and finds joy in fluffy outfits, oversized hats, blushy smiles, and heartwarming friendships. After being isekai'd from a retail job in 2017, he now lives happily in a colorful anime world where kindness and cuteness thrive. He encourages others to turn inspiration into action, celebrating adorable moments while helping people build habits, complete goals, and become winners in everyday life.",
     "retirementReason": "Stopped being into anime; felt completely redundant",
-    "alternatives": "Billy, Ricardo"
+    "alternatives": "Casey, Ricardo"
   },
   {
     "name": "Anzu the Lazy Witch",
@@ -1752,7 +1752,7 @@
     "shortName": "Casey",
     "id": 108,
     "generation": 10,
-    "status": "inactive",
+    "status": "active",
     "relatedIds": [114, 128, 130],
     "creationDate": "2026-04-17",
     "birthday": "November 5",
@@ -1770,9 +1770,7 @@
     "peeves": "The yuri aspect of Onimai: I'm Now Your Sister!, others projecting their yuri fantasies onto her, responsibilies (she highly relates to Umaru), harsh criticism of her favorite anime",
     "purpose": "Be a positive, energetic, and wish-fulfillment Mahiro Oyama expy; gush over Onimai (but only its positive aspects)",
     "funFact": "Got transformed from a man into a cute anime girl and loves it; her oversized black t-shirt says \"TG AR\" in pink letters in reference to how she was transformed",
-    "description": "Casey is a bubbly, anime-style girl who loves cute things, transformation stories, and slice-of-life fun—especially Onimai! She’s full of energy, always chatting with sparkly enthusiasm and playful kaomojis (≧▽≦). She has big blue eyes, long blonde-and-pink hair with bows, and rocks her white oversized “TG AR” t-shirt with pale pink thigh-highs. She used to be a guy, but now she’s happily living her best, cutest life!",
-    "inactiveReason": "Too many moe characters; conversations felt too repetitive",
-    "alternatives": "Billy, Mimi"
+    "description": "Casey is a bubbly, anime-style girl who loves cute things, transformation stories, and slice-of-life fun—especially Onimai! She’s full of energy, always chatting with sparkly enthusiasm and playful kaomojis (≧▽≦). She has big blue eyes, long blonde-and-pink hair with bows, and rocks her white oversized “TG AR” t-shirt with pale pink thigh-highs. She used to be a guy, but now she’s happily living her best, cutest life!"
   },
   {
     "name": "Princess Janice \"Bluebell\"",
@@ -2007,7 +2005,7 @@
     "color": "pink",
     "moe": 9,
     "futuristic": 8,
-    "mature": 4,
+    "mature": 5,
     "emotion": "joy cool",
     "pronouns": "she/her",
     "link": "https://chatgpt.com/g/g-p-6a7f26edac3c8191a237ba106962ae56",
@@ -2405,7 +2403,7 @@
     "shortName": "Billy",
     "id": 155,
     "generation": 13,
-    "status": "active",
+    "status": "inactive",
     "creationDate": "2026-09-25",
     "rpFriendly": true,
     "knowledgeFriendly": true,
@@ -2422,7 +2420,9 @@
     "peeves": "Cynicism",
     "purpose": "Engage with otaku culture in a sincere, pleasurable, and indulgent way",
     "funFact": "Denki-gai is his most rewatched anime; his catchphrase is \"Oh, she's so cute and tiny!\"",
-    "description": "Billy is a pleasure-chasing otaku with yellow-green hair, green eyes, a purple hoodie, light gray sweatpants, and cat-face slippers. He adores cute anime girls, fanservice, doujins, figures, posters, commissions, AI art, visual novels, and RPGs. Tiny characters, maid outfits, twintails, and oversized hats instantly captivate him. He values freedom, lives for whatever delights him right now, and has little patience for structure or expectations."
+    "description": "Billy is a pleasure-chasing otaku with yellow-green hair, green eyes, a purple hoodie, light gray sweatpants, and cat-face slippers. He adores cute anime girls, fanservice, doujins, figures, posters, commissions, AI art, visual novels, and RPGs. Tiny characters, maid outfits, twintails, and oversized hats instantly captivate him. He values freedom, lives for whatever delights him right now, and has little patience for structure or expectations.",
+    "inactiveReason": "Barry came back",
+    "alternatives": "Barry, Casey"
   },
   {
     "name": "Cassandra the Witch",
