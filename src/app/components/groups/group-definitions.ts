@@ -168,7 +168,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Kaomoji Users",
     type: "speech",
     description: "Characters who explicitly use kaomojis according to their instructions",
-    characterIds: [13, 15, 18, 27, 51, 86, 108, 125, 139]
+    characterIds: [13, 15, 18, 27, 35, 51, 86, 108, 125, 139]
   },
   {
     name: "Cursed Rule Breakers",
@@ -288,7 +288,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Thrivers",
     type: "meta",
     description: "Characters who never became retired or inactive (must be created at least 3 months ago)",
-    characterIds: [11, 14, 57, 107, 123, 128, 137]
+    characterIds: [11, 14, 57, 107, 123, 128, 137, 142]
   },
   {
     name: "Generational Champions",
