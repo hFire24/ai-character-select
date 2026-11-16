@@ -2144,11 +2144,6 @@
     },
     {
       "id1": 60,
-      "id2": 107,
-      "name": "Science Girls"
-    },
-    {
-      "id1": 60,
       "id2": 113,
       "name": "Scientists"
     },
@@ -2593,6 +2588,11 @@
       "id1": 113,
       "id2": 117,
       "name": "Smart Innovative Girls"
+    },
+    {
+      "id1": 113,
+      "id2": 173,
+      "name": "Crazy Science Girls"
     },
     {
       "id1": 114,

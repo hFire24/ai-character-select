@@ -102,7 +102,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Glasses Wearers",
     type: "clothes",
     description: "Characters known for wearing glasses, sunglasses, or goggles",
-    characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113, 142, 169, 170]
+    characterIds: [6, 11, 12, 23, 24, 25, 30, 47, 56, 57, 60, 83, 90, 105, 113, 142, 169, 170, 173]
   },
   {
     name: "Maids",
@@ -114,7 +114,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Hammer Wielders",
     type: "clothes",
     description: "Characters who possess hammers, especially giant hammers",
-    characterIds: [13, 18, 31, 35, 137, 139, 140]
+    characterIds: [13, 18, 31, 35, 137, 139, 140, 172]
   },
   {
     name: "Thigh Boot Wearers",
@@ -198,7 +198,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Adult Women",
     type: "age",
     description: "Characters who are adult women, even if the art style may say otherwise",
-    characterIds: [6, 10, 20, 24, 25, 37, 56, 68, 78, 81, 101, 103, 113, 169]
+    characterIds: [6, 10, 20, 24, 25, 37, 56, 68, 78, 81, 101, 103, 113, 169, 173]
   },
   {
     name: "Age Regressed Characters",
@@ -246,7 +246,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "STEM Group",
     type: "interest",
     description: "Characters who enjoy STEM-related topics: Science, Technology, Engineering, and Mathematics",
-    characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 117, 107, 113, 150, 153]
+    characterIds: [2, 13, 15, 28, 49, 54, 76, 60, 86, 117, 107, 113, 150, 153, 173]
   },
   {
     name: "Social Studies Group",
@@ -275,7 +275,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
   {
     name: "Multi-Retirees",
     type: "meta",
-    description: "Characters who were retired twice or more. Kai, Alex, and Ben were retired three times.",
+    description: "Characters who were retired more than once. Kai, Alex, and Ben were retired three times.",
     characterIds: [30, 32, 9, 48, 49, 66, 69, 71, 72, 81, 95]
   },
   {

@@ -98,6 +98,9 @@ ol {
 .orange {
   color: #f97316;
 }
+.brown {
+  color: #a0522d;
+}
 .yellow {
   color: #facc15;
 }
@@ -160,6 +163,9 @@ a {
 }
 .cardBg-black {
   background-color: #c2c2c2;
+}
+.cardBg-brown {
+  background-color: #d9c2b3;
 }
 button {
   padding: 10px 20px;
@@ -356,6 +362,7 @@ footer div {
   .cardBg-purple { background-color: #392c4b; }
   .cardBg-orange { background-color: #4b392c; }
   .cardBg-black { background-color: #2c2c2c; }
+  .cardBg-brown { background-color: #4b3a2c; }
   @media (max-width: 800px) {
     .character h2,
     .character h3,
