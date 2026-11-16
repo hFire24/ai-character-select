@@ -811,7 +811,7 @@
     "shortName": "B.X.",
     "id": 1,
     "generation": 6,
-    "status": "inactive",
+    "status": "active",
     "relatedIds": [2, 3, 8, 9, 11],
     "creationDate": "2024-03-06",
     "spinOffDate": "2025-07-30",
@@ -833,9 +833,7 @@
     "funFact": "Enjoys Camellia and t+pazolite, except for their cute tracks",
     "description": "B.X.'s (Bruce Xavier) essence is captured by the fierce energy of hardcore techno, his main genre and truest passion. However, his love for intensity extends beyond techno—he also enjoys other aggressive genres like metal and rap. What ties his tastes together isn’t a single genre, but the sheer power, energy, and aggression in the sound itself.",
     "themeSong": "∀NOMALY - Camellia",
-    "songLink": "https://youtu.be/NNTHlpfo-L4",
-    "inactiveReason": "Ethan got his own chatbot as a Music Enjoyer",
-    "alternatives": "Ethan, Karen"
+    "songLink": "https://youtu.be/NNTHlpfo-L4"
   },
   {
     "name": "Alex Chester",
