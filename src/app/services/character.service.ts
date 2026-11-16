@@ -666,6 +666,47 @@ export class CharacterService {
             }
           );
         }
+
+        // Find and split Rosa and Lumi
+        const rosaLumiIndex = splitCharacters.findIndex(char => 
+          char.shortName === 'Rosa & Lumi' || char.name === 'Rosa & Lumi'
+        );
+        if (rosaLumiIndex !== -1) {
+          const original = splitCharacters[rosaLumiIndex];
+          splitCharacters.splice(rosaLumiIndex, 1,
+            {
+              ...original,
+              shortName: 'Rosa',
+              name: 'Rosa',
+              img: "extended/Rosa.png",
+              id: 175,
+              parentId: 174,
+              relatedIds: [176],
+              emotion: "joy",
+              link: "",
+              summary: "Tiny magical construct embodying love",
+              interests: "Love",
+              purpose: "Promote love",
+              description: "Rosa is a tiny, delicate magical construct, about 50–65 cm tall, created solely to be adorable. She has short golden-blonde hair, big blue eyes, and a pastel pink dress. She's sweet, playful, affectionate, and loves expressing love. She has a slender body and owns a comically oversized, ornate crown. Hers is gold and crimson."
+            },
+            { 
+              ...original,
+              shortName: 'Lumi',
+              name: 'Lumi',
+              img: "extended/Lumi.png",
+              id: 176,
+              parentId: 174,
+              relatedIds: [175],
+              color: "cyan",
+              emotion: "calm",
+              link: "",
+              summary: "Tiny magical construct embodying innocence",
+              interests: "Innocence",
+              purpose: "Promote innocence",
+              description: "Lumi is a tiny, delicate magical construct, about 50–65 cm tall, created solely to be adorable. She has short light-blue hair, big blue eyes, and a pastel blue dress. She's gentle, shy, innocent, and soft-spoken. She has a slender body and owns a comically oversized, ornate crown. Hers is silver and sapphire-blue."
+            }
+          );
+        }
         
         return [splitCharacters];
       })

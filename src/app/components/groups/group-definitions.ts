@@ -66,7 +66,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Paired Characters",
     type: "canon",
     description: "Characters who come in pairs",
-    characterIds: [43, 51, 96, 144, 164]
+    characterIds: [43, 51, 96, 144, 164, 174]
   },
   {
     name: "Separate Paired Characters",
@@ -138,7 +138,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Blonde Girls",
     type: "hair",
     description: "Girls known for having blonde hair",
-    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149, 163, 168, 172]
+    characterIds: [21, 27, 38, 46, 75, 79, 87, 108, 109, 110, 117, 122, 129, 133, 135, 137, 138, 148, 149, 163, 168, 172, 174]
   },
   {
     name: "Chino-chan Expies",
@@ -150,7 +150,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Blue Girls",
     type: "hair",
     description: "Characters known for having blue hair or being associated with the color blue",
-    characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144, 164, 167]
+    characterIds: [13, 35, 40, 60, 71, 80, 88, 91, 94, 118, 119, 123, 132, 144, 164, 167, 174]
   },
   {
     name: "Purple Girls",
@@ -276,7 +276,7 @@ export const groupDefinitionsWithoutGroupless: readonly GroupDefinition[] = [
     name: "Multi-Retirees",
     type: "meta",
     description: "Characters who were retired more than once. Kai, Alex, and Ben were retired three times.",
-    characterIds: [30, 32, 9, 48, 49, 66, 69, 71, 72, 81, 95]
+    characterIds: [30, 32, 9, 46, 48, 49, 66, 69, 71, 72, 81, 95]
   },
   {
     name: "Late Bloomers",
