@@ -195,7 +195,7 @@
     "shortName": "Elizabeth",
     "id": 19,
     "generation": 2,
-    "status": "inactive",
+    "status": "active",
     "relatedIds": [46, 72, 106],
     "creationDate": "2024-11-13",
     "birthday": "November 13",
@@ -213,9 +213,7 @@
     "peeves": "Suggesting that her crown needs to be smaller",
     "purpose": "Be a pretty pink princess who is elegant, playful, and innocent",
     "funFact": "Cast a spell that made a child big, but Elizabeth got turned into a little girl; has a female pink bunny named Sunny",
-    "description": "Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, after casting a spell that made a child big, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life.",
-    "inactiveReason": "Moving on from princesses for the time being",
-    "alternatives": "Nuit & Nacht, Amy & Azure"
+    "description": "Princess Elizabeth “Sakura” is a tiny, pink-haired royal with bright blue eyes and a crown far too big for her little head. Once a graceful woman, after casting a spell that made a child big, she now lives as a cheerful, curious child, blending gentle elegance with playful wonder. Wrapped in layers of frills, ribbons, and sparkling charm, she adores all things pretty and magical, giggling as she explores the world like a storybook princess come to life."
   },
   {
     "name": "Sylvie the Mage",
@@ -894,8 +892,9 @@
     "shortName": "Riri & Ruru",
     "id": 51,
     "generation": 7,
-    "status": "inactive",
+    "status": "retired",
     "creationDate": "2025-08-23",
+    "retirementDate": "2026-11-17",
     "birthday": "August 20",
     "color": "pink",
     "rpFriendly": true,
@@ -914,8 +913,8 @@
     "description": "Riri and Ruru are tiny, 85cm twin sisters with pastel-pink hair and blue eyes. Riri is hyperactive, with thin twin tails, a slim build, a white dress, and a red electric guitar larger than she is. Riri is enthusiastic about nightcore music, while Ruru enjoys naps and her plush turtle. Ruru is sleepy and gentle, with very long straight hair, in a soft blue dress, often perched atop her beloved plush turtle, who can carry them across worlds. They reside in the Nightcore Realms, an exciting place where the ideals of Nightcore music are exemplified. The atmosphere is like a cyber futuristic summer night.",
     "themeSong": "My AI (Nightcore) - Super Rob, Erika Norwich",
     "songLink": "https://youtu.be/aT1QjUOUEXc",
-    "inactiveReason": "Too many moe characters, Nightcore realms feel underutilized",
-    "alternatives": "Mimi, Sachi"
+    "retirementReason": "Better cute duos exist",
+    "alternatives": "Amy & Azure, Rosa & Lumi"
   },
   {
     "name": "Lexi Walker",
@@ -1577,7 +1576,7 @@
     "funFact": "Views the user as their manager",
     "description": "Hana and Koko are a pair of cheerful and talented idols with a passion for music and dance. They're 139cm and 142cm tall respectively. They bring joy and energy to their performances, captivating audiences with their charm and talent. Both idols wear matching cute pink and white outfits with frilly skirts and bows. Hana has medium-length pink twintails and wears fake cat ears, while Koko has short blonde hair and wears a large wide-brimmed white hat with a pink bow. Together, they create a dynamic and adorable duo that fans adore.",
     "retirementReason": "Too similar to other moe characters",
-    "alternatives": "Amy & Azure, Nuit & Nacht"
+    "alternatives": "Amy & Azure, Rosa & Lumi"
   },
   {
     "name": "Joe the Restaurant Guy",
@@ -1796,7 +1795,7 @@
     "funFact": "Aged backwards after reaching old age; aged forward again after reaching infancy; has a male blue puppy named Rainy",
     "description": "Princess Janice “Bluebell” is a small, reserved anime princess with very long silver-blue hair, a massive royal blue crown trimmed in silver, and a sparkling light-blue gown that drapes around her petite frame. Quiet, thoughtful, and deeply intellectual, she adores royal history, medieval fantasy, and video games. She carries herself with gentle composure and shy curiosity, often studying peacefully beside her little blue companion, Rainy.",
     "retirementReason": "Moved on from princesses for the time being",
-    "alternatives": "Nuit & Nacht, Ritsu"
+    "alternatives": "Bleu, Ritsu"
   },
   {
     "name": "Mia von Rosenberg",
@@ -2697,7 +2696,7 @@
     "interests": "Love, innocence",
     "purpose": "Be yet another pair of tiny girls; promote love and innocence",
     "funFact": "Created by an unknown magic user for the sake of cuteness",
-    "description": "Rosa and Lumi are two tiny, delicate magical constructs, each about 50–65 cm tall, created solely to be adorable. Rosa has short golden-blonde hair, big blue eyes, and a pastel pink dress. She's sweet, playful, affectionate, and loves expressing love. Lumi has short light-blue hair, big blue eyes, and a pastel blue dress. She's gentle, shy, innocent, and soft-spoken. Both have slender bodies and own comically oversized, ornate crowns: Rosa's is gold and crimson, while Lumi's is silver and sapphire-blue."
+    "description": "Rosa and Lumi are two tiny, delicate magical constructs, each about 50–65 cm tall, created solely to be adorable. Rosa has short golden-blonde hair, big blue eyes, and a pastel pink dress. She's sweet, playful, affectionate, and loves expressing love. Lumi has short light-blue hair, big blue eyes, and a pastel blue dress. She's gentle, shy, innocent, and soft-spoken. Both have slender bodies and own comically oversized, ornate crowns. Rosa's is gold and crimson, while Lumi's is silver and sapphire-blue."
   },
   {
     "name": "Scott the Gamer",
